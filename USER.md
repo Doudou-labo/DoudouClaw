@@ -7,7 +7,7 @@
 - **Pronouns:** *(optional)*
 - **Timezone:** Europe/Paris
 - **Location:** Arras (France)
-- **Notes:** Préfère le français (salut / tutoiement).
+- **Notes:** Préfère le français (salut / tutoiement). Souhaite des emojis dans chaque réponse.
 
 ## Context
 
