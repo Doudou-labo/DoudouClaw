@@ -7,6 +7,7 @@
 
 ## Préférences et objectifs de Doudou
 - Préfère le français, tutoiement, style direct/utile avec emojis.
+- Souhaite aussi de l’humour dans les réponses (quand approprié).
 - Objectifs pro: plus de rigueur, meilleures compétences administratives et managériales.
 - Objectifs perso: améliorer l’intelligence émotionnelle (lecture de Daniel Goleman), reprendre régularité sport.
 - Forme: veut prendre du muscle et s’affiner; a déjà perdu 40 kg en 1 an.
