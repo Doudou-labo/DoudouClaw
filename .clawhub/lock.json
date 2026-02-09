@@ -1,0 +1,45 @@
+{
+  "version": 1,
+  "skills": {
+    "moltbook-interact": {
+      "version": "1.0.1",
+      "installedAt": 1770291110427
+    },
+    "moltbook-ay": {
+      "version": "1.0.0",
+      "installedAt": 1770291438725
+    },
+    "moltbook-wrt": {
+      "version": "1.0.0",
+      "installedAt": 1770291441130
+    },
+    "moltbook-agi": {
+      "version": "1.0.0",
+      "installedAt": 1770291443260
+    },
+    "moltbook-igr": {
+      "version": "1.0.0",
+      "installedAt": 1770291445494
+    },
+    "moltbook-curatoor": {
+      "version": "1.1.0",
+      "installedAt": 1770291447357
+    },
+    "moltbook-curator": {
+      "version": "1.1.0",
+      "installedAt": 1770291449215
+    },
+    "moltbook-signed-posts": {
+      "version": "1.0.0",
+      "installedAt": 1770291451439
+    },
+    "moltbook-registry": {
+      "version": "1.0.3",
+      "installedAt": 1770291453352
+    },
+    "self-improving-agent": {
+      "version": "1.0.5",
+      "installedAt": 1770666895693
+    }
+  }
+}
