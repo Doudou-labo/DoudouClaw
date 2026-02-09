@@ -1,24 +1,24 @@
-# [CONCEPT NAME]
+# [NOM DU CONCEPT]
 
-## What It Is
-[One-line definition]
+## Définition
+[Définition en une phrase]
 
-## Why It Matters
-[What problem it solves, when you'd need it]
+## Pourquoi c’est utile
+[Quel problème ça résout, quand tu en as besoin]
 
-## How It Works
-[Explanation with examples]
+## Comment ça fonctionne
+[Explication + exemples]
 
 ```
-[Code, diagram, or concrete example]
+[Code, schéma ou exemple concret]
 ```
 
-## Key Insight
-[The "aha" moment — what makes this click. This is the most important part.]
+## Insight clé
+[Le “aha moment” — ce qui fait vraiment comprendre. La partie la plus importante.]
 
-## Related
-- [Link to related concepts]
-- [Link to related tools]
+## Liens / Connexes
+- [Lien vers des concepts liés]
+- [Lien vers des outils liés]
 
 ---
-*Added: YYYY-MM-DD*
+*Ajouté : YYYY-MM-DD*

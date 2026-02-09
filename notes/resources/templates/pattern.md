@@ -1,28 +1,28 @@
-# [PATTERN NAME]
+# [NOM DU PATTERN]
 
-## Problem
-[What situation triggers this pattern]
+## Problème
+[Quelle situation déclenche ce pattern]
 
 ## Solution
-[The approach]
+[L’approche]
 
 ```
-[Code, pseudocode, or step-by-step if relevant]
+[Code, pseudo-code, ou pas-à-pas si pertinent]
 ```
 
-## Trade-offs
-**Pros:**
-- [Why this works]
+## Compromis
+**Avantages :**
+- [Pourquoi ça marche]
 
-**Cons:**
-- [Limitations, when NOT to use it]
+**Inconvénients :**
+- [Limites, quand NE PAS l’utiliser]
 
-## Example
-[Concrete implementation or real-world use case]
+## Exemple
+[Implémentation concrète ou cas réel]
 
-## Related
-- [Similar patterns]
-- [Patterns this builds on]
+## Liens / Connexes
+- [Patterns similaires]
+- [Patterns sur lesquels celui-ci s’appuie]
 
 ---
-*Added: YYYY-MM-DD*
+*Ajouté : YYYY-MM-DD*

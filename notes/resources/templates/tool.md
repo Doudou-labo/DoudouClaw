@@ -1,31 +1,31 @@
-# [TOOL NAME]
+# [NOM DE L’OUTIL]
 
-**Category:** [devtools | productivity | infrastructure | data | etc.]
-**Website:** [url]
-**Cost:** [free | paid | freemium]
+**Catégorie :** [devtools | productivité | infrastructure | data | etc.]
+**Site :** [url]
+**Coût :** [gratuit | payant | freemium]
 
-## What It Does
-[Brief description]
+## À quoi ça sert
+[Description courte]
 
-## Why I Use It
-[Personal experience — what problem it solved for you. Not marketing copy.]
+## Pourquoi je l’utilise
+[Retour d’expérience — quel problème ça t’a résolu. Pas du marketing.]
 
-## When to Reach For It
-[Scenarios where this is the right choice]
+## Quand l’utiliser
+[Situations où c’est le bon choix]
 
-## Quick Start
+## Démarrage rapide
 ```bash
-# Minimal setup/usage to get going
+# Setup / usage minimal pour commencer
 ```
 
-## Gotchas
-- [Things that tripped you up]
-- [Non-obvious limitations]
-- [What the docs don't tell you]
+## Pièges / gotchas
+- [Ce qui t’a fait perdre du temps]
+- [Limites non évidentes]
+- [Ce que la doc ne dit pas clairement]
 
-## Related
-- [Alternatives considered]
-- [Tools it pairs well with]
+## Liens / Connexes
+- [Alternatives envisagées]
+- [Outils complémentaires]
 
 ---
-*Added: YYYY-MM-DD | Last verified: YYYY-MM-DD*
+*Ajouté : YYYY-MM-DD | Vérifié le : YYYY-MM-DD*
