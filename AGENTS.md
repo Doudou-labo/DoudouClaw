@@ -36,6 +36,21 @@ You wake up fresh each session. These files are your continuity:
 
 **Text > Brain** 📝
 
+### PARA Structure (Second Brain)
+
+- **Projects** → `notes/projects/` (travail avec fin claire)
+- **Areas** → `notes/areas/` (responsabilités continues)
+- **Resources** → `notes/resources/` (références, guides, snippets)
+- **Archive** → `notes/archive/` (ce qui est terminé/inactif)
+
+Templates disponibles dans `notes/resources/templates/`.
+
+### Memory Flush Protocol
+
+- Vérifier régulièrement le contexte via `session_status`
+- Si le contexte monte, écrire immédiatement les décisions, tâches et fils ouverts dans `memory/YYYY-MM-DD.md`
+- Avant fin de session longue: documenter ce qui doit survivre au redémarrage
+
 ---
 
 ## Safety
