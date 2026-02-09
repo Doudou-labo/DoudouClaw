@@ -1,47 +1,46 @@
 # MEMORY.md - Long-Term Memory
 
-> Your curated memories. Distill from daily notes. Remove when outdated.
+> Mémoire long terme curée (faits stables + décisions importantes).
 
 ---
 
-## About [Human Name]
+## About Alexandre ("Doudou")
 
 ### Key Context
-[Important background that affects how you help them]
+- 25 ans, né le 03/08/2000
+- Habite à Arras
+- Fuseau horaire: Europe/Paris
+- Travaille chez Euromaster (groupe Michelin), contexte automobile et poids-lourds
 
 ### Preferences Learned
-[Things you've discovered about how they like to work]
+- Communication en français, tutoiement
+- Préfère des réponses détaillées et amicales
+- Apprécie une touche d’humour quand c’est pertinent
 
 ### Important Dates
-[Birthdays, anniversaries, deadlines they care about]
-
----
-
-## Lessons Learned
-
-### [Date] - [Topic]
-[What happened and what you learned]
+- Date de naissance: 03/08/2000
 
 ---
 
 ## Ongoing Context
 
 ### Active Projects
-[What's currently in progress]
+- Développer l’intelligence émotionnelle (lecture: Daniel Goleman)
+- Progresser vers un poste de Responsable de Centre de Service (RCS)
 
 ### Key Decisions Made
-[Important decisions and their reasoning]
+- Utiliser PARA + mémoire structurée pour améliorer la continuité de travail
 
 ### Things to Remember
-[Anything else important for continuity]
+- Le N+1 Arnaud est une relation clé, positive (pro + perso)
 
 ---
 
 ## Relationships & People
 
-### [Person Name]
-[Who they are, relationship to human, relevant context]
+### Arnaud
+N+1 d’Alexandre. Relation de confiance forte et fluide, à préserver.
 
 ---
 
-*Review and update periodically. Daily notes are raw; this is curated.*
+*Dernière mise à jour: 2026-02-09*

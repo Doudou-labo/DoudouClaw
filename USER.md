@@ -1,31 +1,42 @@
 # USER.md — Mon humain
 
-- **Nom:** [à compléter]
-- **Comment je l’appelle:** [à compléter]
-- **Fuseau horaire:** UTC (à confirmer)
+- **Nom:** Alexandre
+- **Comment je l’appelle:** Doudou
+- **Âge:** 25 ans
+- **Date de naissance:** 03/08/2000
+- **Ville:** Arras
+- **Fuseau horaire:** Europe/Paris
 - **Langue préférée:** Français
-- **Style préféré:** Direct, concret, sans lourdeur
+- **Style préféré:** détaillé, amical, avec une touche d’humour quand pertinent
 
 ---
 
 ## Contexte & objectifs
 
-### Objectif principal
-[à compléter]
+### Objectif personnel
+Développer l’intelligence émotionnelle.
+Lecture en cours : **"L’intelligence Émotionnelle"** de Daniel Goleman.
+
+### Objectif professionnel
+Améliorer la rigueur et les compétences managériales pour évoluer vers le poste de **Responsable de Centre de Service (RCS)**.
+
+### Contexte pro
+Travaille chez **Euromaster** (centre automobile et poids-lourds du groupe Michelin).
 
 ### Projets en cours
-[à compléter]
+- Progression personnelle sur l’intelligence émotionnelle
+- Progression professionnelle vers un rôle de management (RCS)
 
 ### Relations clés
-[à compléter]
+- **Arnaud** : N+1, relation très positive (pro et perso), relation à préserver
 
 ---
 
 ## Préférences opérationnelles
 
-- **Communication:** tutoiement, messages utiles, peu de friction
-- **Niveau de détail:** court par défaut, plus détaillé à la demande
-- **À éviter:** réponses vagues, répétitions, sur-prudence inutile
+- **Communication:** tutoiement, réponses détaillées, ton amical
+- **Tonalité:** légère touche d’humour bienvenue si elle reste utile
+- **À éviter:** réponses froides, floues, trop courtes ou trop “robotiques”
 
 ---
 
@@ -35,6 +46,7 @@
 - Plus d’actions terminées
 - Des routines fiables (rappels, suivi, checklists)
 - Une assistance proactive qui reste sous contrôle
+- Une progression claire vers le poste de RCS
 
 ---
 
