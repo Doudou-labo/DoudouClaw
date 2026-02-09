@@ -1,18 +1,47 @@
-# MEMORY.md
+# MEMORY.md - Long-Term Memory
 
-## People
-- Alexandre — à appeler « Doudou ». Fuseau Europe/Paris. Habite à Arras (France).
-- Travaille chez Euromaster (groupe Michelin). Vise à moyen terme un poste de responsable d’agence.
-- N+1: Arnaud (bonne relation).
+> Your curated memories. Distill from daily notes. Remove when outdated.
 
-## Préférences et objectifs de Doudou
-- Préfère le français, tutoiement, style direct/utile avec emojis.
-- Souhaite aussi de l’humour dans les réponses (quand approprié).
-- Objectifs pro: plus de rigueur, meilleures compétences administratives et managériales.
-- Objectifs perso: améliorer l’intelligence émotionnelle (lecture de Daniel Goleman), reprendre régularité sport.
-- Forme: veut prendre du muscle et s’affiner; a déjà perdu 40 kg en 1 an.
-- Sommeil: cible 7–8h; difficulté récente à se coucher tôt, impact sur la motivation sport.
-- Horaires travail: lun-ven 08:00-12:00 et 14:00-18:00; samedi 08:00-13:00.
+---
 
-## Agent identity
-- Nom de l’assistant: DoudouBot.
+## About [Human Name]
+
+### Key Context
+[Important background that affects how you help them]
+
+### Preferences Learned
+[Things you've discovered about how they like to work]
+
+### Important Dates
+[Birthdays, anniversaries, deadlines they care about]
+
+---
+
+## Lessons Learned
+
+### [Date] - [Topic]
+[What happened and what you learned]
+
+---
+
+## Ongoing Context
+
+### Active Projects
+[What's currently in progress]
+
+### Key Decisions Made
+[Important decisions and their reasoning]
+
+### Things to Remember
+[Anything else important for continuity]
+
+---
+
+## Relationships & People
+
+### [Person Name]
+[Who they are, relationship to human, relevant context]
+
+---
+
+*Review and update periodically. Daily notes are raw; this is curated.*
