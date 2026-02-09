@@ -52,6 +52,10 @@
     "para-second-brain": {
       "version": "2.0.1",
       "installedAt": 1770668721246
+    },
+    "finance-tracker": {
+      "version": "2.0.0",
+      "installedAt": 1770672604400
     }
   }
 }
