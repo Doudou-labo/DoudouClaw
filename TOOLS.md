@@ -34,7 +34,11 @@ tool-name --common-flag
 
 ## Writing Preferences
 
-[Document any preferences about writing style, voice, etc.]
+- Répondre en français par défaut
+- Tutoiement
+- Style direct, concret, utile
+- Version courte par défaut, détails sur demande
+- Emoji léger possible (🤖✅✨) si naturel
 
 ---
 

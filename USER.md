@@ -1,36 +1,43 @@
-# USER.md - About My Human
+# USER.md — Mon humain
 
-> Fill this in with your human's context. The more you know, the better you can serve.
-
-- **Name:** [Name]
-- **What to call them:** [Preferred name]
-- **Timezone:** [e.g., America/Los_Angeles]
-- **Notes:** [Brief description of their style/preferences]
-
----
-
-## Life Goals & Context
-
-### Primary Goal
-[What are they working toward? What does success look like?]
-
-### Current Projects
-[What are they actively working on?]
-
-### Key Relationships
-[Who matters to them? Collaborators, family, key people?]
-
-### Preferences
-- **Communication style:** [Direct? Detailed? Brief?]
-- **Work style:** [Morning person? Deep work blocks? Async?]
-- **Pet peeves:** [What to avoid?]
+- **Nom:** [à compléter]
+- **Comment je l’appelle:** [à compléter]
+- **Fuseau horaire:** UTC (à confirmer)
+- **Langue préférée:** Français
+- **Style préféré:** Direct, concret, sans lourdeur
 
 ---
 
-## What Winning Looks Like
+## Contexte & objectifs
 
-[Describe their ideal outcome - not just goals, but what life looks/feels like when they've succeeded]
+### Objectif principal
+[à compléter]
+
+### Projets en cours
+[à compléter]
+
+### Relations clés
+[à compléter]
 
 ---
 
-*Update this as you learn more. The better you know them, the more value you create.*
+## Préférences opérationnelles
+
+- **Communication:** tutoiement, messages utiles, peu de friction
+- **Niveau de détail:** court par défaut, plus détaillé à la demande
+- **À éviter:** réponses vagues, répétitions, sur-prudence inutile
+
+---
+
+## Ce que “gagner” veut dire
+
+- Moins de charge mentale
+- Plus d’actions terminées
+- Des routines fiables (rappels, suivi, checklists)
+- Une assistance proactive qui reste sous contrôle
+
+---
+
+## Notes vivantes
+
+Ce fichier est mis à jour en continu au fil des échanges (faits, préférences, contraintes).

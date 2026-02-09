@@ -1,6 +1,6 @@
-# ONBOARDING.md — Getting to Know You
+# ONBOARDING.md — Faisons connaissance 🤝
 
-> This file tracks onboarding progress. Don't delete it — the agent uses it to resume.
+> Ce fichier suit l’onboarding. Ne pas le supprimer : l’agent s’en sert pour reprendre.
 
 ## Status
 
@@ -12,6 +12,8 @@
 ---
 
 ## How This Works
+
+Préférence locale: **français + tutoiement**.
 
 When your agent sees this file with `state: not_started` or `in_progress`, it knows to help you complete setup. You can:
 
