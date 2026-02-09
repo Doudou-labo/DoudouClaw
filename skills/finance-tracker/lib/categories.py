@@ -7,9 +7,9 @@ CATEGORIES = {
     # Food & Dining
     "food": {
         "emoji": "🍔",
-        "name": "Food & Dining",
+        "name": "Alimentation & Restauration",
         "keywords": [
-            "food", "lunch", "dinner", "breakfast", "meal", "restaurant", 
+            "food", "lunch", "dinner", "breakfast", "meal", "restaurant", "repas", "déjeuner", "dîner", "petit-déjeuner", "resto", 
             "cafe", "coffee", "snack", "grocery", "groceries", "supermarket",
             "eat", "eating", "pizza", "burger", "sushi", "takeout", "delivery",
             "ovqat", "tushlik", "nonushta", "kechki", "choy", "restoran"
@@ -19,9 +19,9 @@ CATEGORIES = {
     # Transportation
     "transport": {
         "emoji": "🚗",
-        "name": "Transportation",
+        "name": "Transport",
         "keywords": [
-            "taxi", "uber", "yandex", "bus", "metro", "subway", "train",
+            "taxi", "uber", "yandex", "bus", "metro", "subway", "train", "essence", "péage", "parking", "tram",
             "transport", "fuel", "gas", "petrol", "benzin", "parking",
             "fare", "ride", "driving", "car", "avtobuz", "taksi", "marshrutka"
         ]
@@ -30,9 +30,9 @@ CATEGORIES = {
     # Shopping & Clothes
     "shopping": {
         "emoji": "🛍️",
-        "name": "Shopping",
+        "name": "Achats",
         "keywords": [
-            "clothes", "clothing", "shirt", "pants", "jeans", "shoes", 
+            "clothes", "clothing", "shirt", "pants", "jeans", "shoes", "vêtements", "chaussures", "magasin", 
             "jacket", "coat", "dress", "shopping", "mall", "store",
             "kiyim", "oyoq kiyim", "ko'ylak", "shim", "kurtka"
         ]
@@ -41,9 +41,9 @@ CATEGORIES = {
     # Technology
     "tech": {
         "emoji": "📱",
-        "name": "Technology",
+        "name": "Technologie",
         "keywords": [
-            "phone", "laptop", "computer", "headphones", "earbuds", "cable",
+            "phone", "laptop", "computer", "headphones", "earbuds", "cable", "téléphone", "ordinateur", "logiciel",
             "charger", "tech", "electronics", "gadget", "software", "app",
             "subscription", "iphone", "android", "macbook", "tablet", "ipad"
         ]
@@ -52,9 +52,9 @@ CATEGORIES = {
     # Entertainment
     "entertainment": {
         "emoji": "🎮",
-        "name": "Entertainment",
+        "name": "Divertissement",
         "keywords": [
-            "movie", "movies", "cinema", "game", "games", "gaming", "concert",
+            "movie", "movies", "cinema", "game", "games", "gaming", "concert", "film", "cinéma", "sortie",
             "netflix", "spotify", "youtube", "premium", "fun", "party",
             "club", "bar", "entertainment", "stream", "kino", "o'yin"
         ]
@@ -63,9 +63,9 @@ CATEGORIES = {
     # Education
     "education": {
         "emoji": "📚",
-        "name": "Education",
+        "name": "Éducation",
         "keywords": [
-            "book", "books", "course", "courses", "school", "university",
+            "book", "books", "course", "courses", "school", "university", "livre", "formation", "école", "université",
             "education", "learning", "class", "tutor", "tutoring", "lesson",
             "study", "studying", "exam", "test", "kitob", "darslik", "kurs",
             "o'qish", "ta'lim", "maktab", "universitet"
@@ -75,9 +75,9 @@ CATEGORIES = {
     # Health & Medical
     "health": {
         "emoji": "💊",
-        "name": "Health & Medical",
+        "name": "Santé & Médical",
         "keywords": [
-            "medicine", "pharmacy", "doctor", "hospital", "clinic", "health",
+            "medicine", "pharmacy", "doctor", "hospital", "clinic", "health", "médecin", "pharmacie", "hôpital", "santé",
             "medical", "prescription", "pills", "vitamins", "gym", "fitness",
             "workout", "dori", "apteka", "shifoxona", "doktor", "vrach"
         ]
@@ -86,9 +86,9 @@ CATEGORIES = {
     # Home & Utilities
     "home": {
         "emoji": "🏠",
-        "name": "Home & Utilities",
+        "name": "Maison & Charges",
         "keywords": [
-            "rent", "utility", "utilities", "electricity", "water", "gas",
+            "rent", "utility", "utilities", "electricity", "water", "gas", "loyer", "électricité", "eau", "gaz",
             "internet", "wifi", "furniture", "home", "house", "apartment",
             "cleaning", "repair", "maintenance", "uy", "kvartira", "ijara",
             "kommunal", "elektr", "suv"
@@ -98,9 +98,9 @@ CATEGORIES = {
     # Personal Care
     "personal": {
         "emoji": "💇",
-        "name": "Personal Care",
+        "name": "Soins personnels",
         "keywords": [
-            "haircut", "barber", "salon", "spa", "massage", "grooming",
+            "haircut", "barber", "salon", "spa", "massage", "grooming", "coiffeur", "barbier", "soin",
             "cosmetics", "makeup", "skincare", "personal", "beauty",
             "sartarosh", "soch", "salon"
         ]
@@ -109,9 +109,9 @@ CATEGORIES = {
     # Gifts & Donations
     "gifts": {
         "emoji": "🎁",
-        "name": "Gifts & Donations",
+        "name": "Cadeaux & Dons",
         "keywords": [
-            "gift", "gifts", "present", "birthday", "wedding", "donation",
+            "gift", "gifts", "present", "birthday", "wedding", "donation", "cadeau", "anniversaire", "mariage", "don",
             "charity", "tip", "tips", "sovg'a", "tug'ilgan kun", "to'y"
         ]
     },
@@ -119,9 +119,9 @@ CATEGORIES = {
     # Subscriptions
     "subscriptions": {
         "emoji": "🔄",
-        "name": "Subscriptions",
+        "name": "Abonnements",
         "keywords": [
-            "subscription", "monthly", "annual", "yearly", "membership",
+            "subscription", "monthly", "annual", "yearly", "membership", "abonnement", "mensuel", "annuel",
             "premium", "pro", "plus", "obuna"
         ]
     },
@@ -131,7 +131,7 @@ CATEGORIES = {
         "emoji": "📞",
         "name": "Communication",
         "keywords": [
-            "phone bill", "mobile", "sim", "data", "minutes", "sms",
+            "phone bill", "mobile", "sim", "data", "minutes", "sms", "forfait", "appel",
             "call", "calling", "telefon", "aloqa", "mobil"
         ]
     },
@@ -139,9 +139,9 @@ CATEGORIES = {
     # Travel
     "travel": {
         "emoji": "✈️",
-        "name": "Travel",
+        "name": "Voyage",
         "keywords": [
-            "travel", "trip", "flight", "hotel", "hostel", "airbnb",
+            "travel", "trip", "flight", "hotel", "hostel", "airbnb", "voyage", "vol", "hôtel",
             "vacation", "holiday", "tourism", "tourist", "sayohat",
             "mehmonxona", "parvoz", "samolyot"
         ]
@@ -150,9 +150,9 @@ CATEGORIES = {
     # Finance & Banking
     "finance": {
         "emoji": "🏦",
-        "name": "Finance & Banking",
+        "name": "Finance & Banque",
         "keywords": [
-            "bank", "fee", "fees", "transfer", "atm", "commission",
+            "bank", "fee", "fees", "transfer", "atm", "commission", "banque", "frais", "virement", "carte",
             "interest", "loan", "credit", "debit", "bank xizmati"
         ]
     },
@@ -160,7 +160,7 @@ CATEGORIES = {
     # Other
     "other": {
         "emoji": "❓",
-        "name": "Other",
+        "name": "Autres",
         "keywords": []  # Default category
     }
 }
@@ -197,7 +197,7 @@ def get_name(category: str) -> str:
 
 def list_categories() -> str:
     """Return formatted list of all categories."""
-    lines = ["📋 Available Categories:", ""]
+    lines = ["📋 Catégories disponibles:", ""]
     for key, data in CATEGORIES.items():
         lines.append(f"  {data['emoji']} {data['name']} ({key})")
     return "\n".join(lines)
