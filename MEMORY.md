@@ -11,6 +11,7 @@
 - Habite à Arras
 - Fuseau horaire: Europe/Paris
 - Travaille chez Euromaster (groupe Michelin), contexte automobile et poids-lourds
+- Poste actuel: Assistant Commercial Sédentaire (ACS)
 
 ### Preferences Learned
 - Communication en français, tutoiement
@@ -28,6 +29,7 @@
 ### Active Projects
 - Développer l’intelligence émotionnelle (lecture: Daniel Goleman)
 - Progresser vers un poste de Responsable de Centre de Service (RCS)
+- Préparer l’entretien individuel à venir avec Arnaud
 
 ### Key Decisions Made
 - Utiliser PARA + mémoire structurée pour améliorer la continuité de travail
@@ -40,7 +42,7 @@
 ## Relationships & People
 
 ### Arnaud
-N+1 d’Alexandre. Relation de confiance forte et fluide, à préserver.
+N+1 d’Alexandre (poste: Responsable de Zone, RZ). Relation de confiance forte et fluide, à préserver.
 
 ---
 

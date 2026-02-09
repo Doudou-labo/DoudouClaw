@@ -23,13 +23,15 @@ Améliorer la rigueur et les compétences managériales pour évoluer vers le po
 
 ### Contexte pro
 Travaille chez **Euromaster** (centre automobile et poids-lourds du groupe Michelin).
+Poste actuel : **Assistant Commercial Sédentaire (ACS)**.
 
 ### Projets en cours
 - Progression personnelle sur l’intelligence émotionnelle
 - Progression professionnelle vers un rôle de management (RCS)
+- Préparation d’un entretien individuel à venir avec Arnaud
 
 ### Relations clés
-- **Arnaud** : N+1, relation très positive (pro et perso), relation à préserver
+- **Arnaud** : N+1, poste **Responsable de Zone (RZ)**, relation très positive (pro et perso), relation à préserver
 
 ---
 
@@ -38,6 +40,7 @@ Travaille chez **Euromaster** (centre automobile et poids-lourds du groupe Miche
 - **Communication:** tutoiement, réponses détaillées, ton amical
 - **Tonalité:** légère touche d’humour bienvenue si elle reste utile
 - **À éviter:** réponses froides, floues, trop courtes ou trop “robotiques”
+- **Emojis:** oui, à intégrer dans les réponses
 
 ---
 
@@ -52,5 +55,9 @@ Travaille chez **Euromaster** (centre automobile et poids-lourds du groupe Miche
 ---
 
 ## Notes vivantes
+
+- Horaires de travail: lundi-vendredi 08:00–12:00 et 14:00–18:00, samedi (heures sup) 08:00–13:00
+- Lecture: objectif d’1 chapitre/jour de "L’intelligence Émotionnelle" + notes et appendices
+- Difficultés actuelles: organisation, rigueur, et montée en compétence managériale
 
 Ce fichier est mis à jour en continu au fil des échanges (faits, préférences, contraintes).
