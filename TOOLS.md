@@ -44,6 +44,12 @@ tool-name --common-flag
 
 ---
 
+## GitHub Backup Automation
+
+- Auto-push après chaque commit via hook local: `.git/hooks/post-commit`
+- Script de tag hebdo: `scripts/weekly-backup-tag.sh`
+- Note: en mode non interactif, un remote HTTPS peut échouer sans identifiants chargés. SSH est plus fiable pour l’automatisation complète.
+
 ## What Goes Here
 
 - Tool configurations and settings
