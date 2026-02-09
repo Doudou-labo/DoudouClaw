@@ -47,6 +47,9 @@
 ### Arnaud
 N+1 d’Alexandre (poste: Responsable de Zone, RZ). Relation de confiance forte et fluide, à préserver.
 
+### Andréa
+Amie de longue date d’Alexandre (amour de lycée) revenue récemment dans sa vie. Alexandre ne l’a jamais oubliée et pense l’aimer encore, sans savoir si c’est réciproque ni si elle a changé depuis l’époque.
+
 ---
 
 *Dernière mise à jour: 2026-02-09*
