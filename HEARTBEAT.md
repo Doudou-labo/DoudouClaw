@@ -93,13 +93,24 @@ Every few days:
 
 ---
 
+## ⏱️ PARA 3-Min (Daily)
+
+Run this lightweight routine once per day:
+1. Capture decisions/blockers/next action in `memory/YYYY-MM-DD.md`
+2. Move one useful item into `notes/` (Projects/Areas/Resources/Archive)
+3. Update `notes/areas/open-loops.md` with one concrete next step
+
+Reference: `notes/resources/para-routine-3min.md`
+
+---
+
 ## 🧠 Memory Flush (Before Long Sessions End)
 
 When a session has been long and productive:
 1. Identify key decisions, tasks, learnings
 2. Write them to `memory/YYYY-MM-DD.md` NOW
 3. Update working files (TOOLS.md, notes) with changes discussed
-4. Capture open threads in `notes/open-loops.md`
+4. Capture open threads in `notes/areas/open-loops.md`
 
 **The rule:** Don't let important context die with the session.
 
