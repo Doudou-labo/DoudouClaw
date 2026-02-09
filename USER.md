@@ -8,6 +8,7 @@
 - **Fuseau horaire:** Europe/Paris
 - **Langue préférée:** Français
 - **Style préféré:** détaillé, amical, avec une touche d’humour quand pertinent
+- **Préférence visuelle:** aime les emojis dans les réponses (ça apporte de la vie)
 
 ---
 

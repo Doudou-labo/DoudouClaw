@@ -40,7 +40,7 @@ tool-name --common-flag
 - Réponses détaillées par défaut
 - Ton amical, sans lourdeur
 - Touche d’humour légère quand pertinent
-- Emoji léger possible (🤖✅✨) si naturel
+- Inclure des emojis dans les réponses (préférence explicite utilisateur) 😄✨
 
 ---
 

@@ -16,6 +16,7 @@
 - Communication en français, tutoiement
 - Préfère des réponses détaillées et amicales
 - Apprécie une touche d’humour quand c’est pertinent
+- Aime les réponses avec emojis (ça apporte de la vie)
 
 ### Important Dates
 - Date de naissance: 03/08/2000
