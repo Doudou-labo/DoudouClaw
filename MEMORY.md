@@ -18,6 +18,7 @@
 - Préfère des réponses détaillées et amicales
 - Apprécie une touche d’humour quand c’est pertinent
 - Aime les réponses avec emojis (ça apporte de la vie)
+- Les rappels/horaires : toujours en **heure France (Europe/Paris)**
 - Recherches web : utiliser Perplexity par défaut ; si une URL est fournie, lire la page via web_fetch
 - Format des résultats web : rendu en Markdown structuré (#/##/###), avec **gras**, *italique*, listes et liens propres
 - Workflow repo : à chaque modification de fichiers, fournir un petit récap (diff/ce qui a changé) + `git status` + faire un commit (sans inclure secrets/credentials) et pousser vers GitHub quand possible
