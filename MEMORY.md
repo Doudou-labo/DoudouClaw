@@ -21,6 +21,7 @@
 - Recherches web : utiliser Perplexity par défaut ; si une URL est fournie, lire la page via web_fetch
 - Format des résultats web : rendu en Markdown structuré (#/##/###), avec **gras**, *italique*, listes et liens propres
 - Workflow repo : à chaque modification de fichiers, fournir un petit récap (diff/ce qui a changé) + `git status` + faire un commit (sans inclure secrets/credentials) et pousser vers GitHub quand possible
+- Référence PARA: quand une demande concerne l’organisation/projets/suivi/rappels/décisions déjà prises, consulter `notes/` par défaut. Si le message commence par **"PARA:"**, consulter systématiquement `notes/` avant de répondre.
 
 ### Important Dates
 - Date de naissance: 03/08/2000
