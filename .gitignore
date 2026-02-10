@@ -2,3 +2,7 @@
 # CRM plaintext (never commit)
 crm/data/*.json
 crm/data/*.bak
+
+# Python
+__pycache__/
+*.pyc
