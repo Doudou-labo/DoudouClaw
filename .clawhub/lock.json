@@ -60,6 +60,18 @@
     "perplexity": {
       "version": "1.0.0",
       "installedAt": 1770676245149
+    },
+    "api-gateway": {
+      "version": "1.0.21",
+      "installedAt": 1770755578406
+    },
+    "google-calendar-api": {
+      "version": "1.0.5",
+      "installedAt": 1770756038300
+    },
+    "google-tasks-api": {
+      "version": "1.0.2",
+      "installedAt": 1770756490161
     }
   }
 }

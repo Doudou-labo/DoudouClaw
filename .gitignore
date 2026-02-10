@@ -3,6 +3,20 @@
 crm/data/*.json
 crm/data/*.bak
 
+# CRM encrypted data (personal) — keep local
+crm/data/*.age
+
+# Local secrets / creds
+.credentials/
+.secrets/
+
+# OpenClaw caches / temp
+.tmp-skillinfo/
+.clawdhub/
+
+# Local data mapping (can include identifiers)
+data/crm_google_tasks_map.json
+
 # Python
 __pycache__/
 *.pyc
