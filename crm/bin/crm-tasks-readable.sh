@@ -52,6 +52,14 @@ CLIENT_MAP=$(jq -c '{map: (.clients // [] | map({key:.id, value:.name}) | from_e
 
 jq -c '.tasks // [] | .[]' "$TMP_TASKS" | while read -r task; do
   status=$(jq -r '.status // ""' <<<"$task")
+
+  emoji="📝"
+  case "$status" in
+    "Prochainement") emoji="📅";;
+    "En cours") emoji="🔧";;
+    "En attente (externe)") emoji="⏳";;
+    "Réalisé") emoji="✅";;
+  esac
   if [[ "$MODE" == "open" && "$status" == "Réalisé" ]]; then
     continue
   fi
@@ -95,9 +103,9 @@ jq -c '.tasks // [] | .[]' "$TMP_TASKS" | while read -r task; do
   fi
 
   if [[ -n "$when" ]]; then
-    echo "• $when — $clientName — $desc — $status [$id]"
+    echo "• $emoji $when — $clientName — $desc — $status [$id]"
   else
-    echo "• $clientName — $desc — $status [$id]"
+    echo "• $emoji $clientName — $desc — $status [$id]"
   fi
 
 done
