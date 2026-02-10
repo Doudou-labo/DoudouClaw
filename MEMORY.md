@@ -15,6 +15,7 @@
 
 ### Preferences Learned
 - Communication en français, tutoiement
+- **Cron Jobs** : toutes les routines + rappels doivent être postés **uniquement** dans le **topic Telegram dédié** (groupe -1003791371950, topic 32)
 - Préfère des réponses détaillées et amicales
 - Apprécie une touche d’humour quand c’est pertinent
 - Aime les réponses avec emojis (ça apporte de la vie)
