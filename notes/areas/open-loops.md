@@ -23,3 +23,16 @@
 ### Entretien individuel avec Arnaud
 - [ ] Demander/valider la date + durée de l’entretien (si pas déjà calé)
 - [ ] Préparer 3 points : (1) résultats récents, (2) difficultés actuelles, (3) demande claire / next step vers RCS
+
+### CRM V2 — Telegram + stockage local
+- [ ] Confirmer que le routing CRM → topic `agent:main:telegram:group:-1003791371950:topic:137` est OK dans la vraie vie (1–2 cas réels)
+- [ ] Définir la règle “phrase naturelle” : quels formats tu veux que tu puisses écrire dans Telegram (exemples concrets)
+- [ ] Décider si on automatise les tâches **PROCHAINEMENT** en rappels cron (oui/non) + règle (combien de temps avant)
+
+### Ops / sécurité (fail2ban)
+- [ ] Me donner ton mode d’accès + 1–2 IPs à whitelister (pour éviter de te bloquer)
+- [ ] Après ton feu vert : installer/configurer fail2ban (sshd) + test de verrouillage safe
+
+### Modèles — mode "auto" (Kimi discussion / Codex technique)
+- [ ] Définir un critère simple de bascule (mots-clés / commande / type de demande)
+- [ ] Choisir le fallback si `openai-codex/gpt-5.3-codex` est indispo (probablement `openai-codex/gpt-5.2`)
