@@ -20,11 +20,11 @@ if [[ -z "$TASK_ID" || -z "$STATUS" ]]; then
 fi
 
 case "$STATUS" in
-  "Réalisé"|"En attente (externe)")
+  "Réalisé"|"En attente (externe)"|"Prochainement"|"En cours")
     ;;
   *)
     echo "ERROR: statut invalide: $STATUS" >&2
-    echo "Statuts autorisés: \"Réalisé\", \"En attente (externe)\"" >&2
+    echo "Statuts autorisés: \"Réalisé\", \"En attente (externe)\", \"Prochainement\", \"En cours\"" >&2
     exit 2
     ;;
 esac

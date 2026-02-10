@@ -12,8 +12,10 @@ Ce dossier fournit un mini-CRM orienté **suivi client / relances / commandes / 
 - `crm/data/tasks.json.age` — tâches & relances (chiffré)
 
 ### Statuts des tâches
-- **Réalisé**
+- **Prochainement** (quand c’est planifié)
+- **En cours**
 - **En attente (externe)**
+- **Réalisé**
 
 ## Sécurité
 
