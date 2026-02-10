@@ -29,6 +29,7 @@ Scripts:
 - `crm/bin/crm-encrypt.sh` — chiffre les JSON -> `*.age` puis supprime les fichiers en clair
 - `crm/bin/crm-decrypt.sh` — déchiffre `*.age` -> JSON en clair (à utiliser temporairement)
 - `crm/bin/crm-task-set-status.sh` — change le statut d'une tâche (sans laisser de JSON en clair)
+- `crm/bin/crm-tasks-readable.sh` — affiche les tâches en format "naturel" (sans laisser de JSON en clair)
 
 Exemples:
 ```bash
