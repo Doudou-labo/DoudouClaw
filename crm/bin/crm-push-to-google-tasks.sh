@@ -55,7 +55,7 @@ export TMP_TASKS="$TMP_TASKS"
 export TMP_CLIENTS="$TMP_CLIENTS"
 export OPENCLAW_LIST_ID="$OPENCLAW_LIST_ID"
 
-python3 - <<'PY'
+LINK_JSON=$(python3 - <<'PY'
 import os, json, urllib.request
 
 task_id = os.environ['CRM_TASK_ID']
@@ -65,36 +65,32 @@ list_id = os.environ['OPENCLAW_LIST_ID']
 maton = os.environ['MATON_API_KEY']
 
 with open(key_tasks,'r',encoding='utf-8') as f:
-    tasks = json.load(f).get('tasks',[])
+    doc_tasks = json.load(f)
+    tasks = doc_tasks.get('tasks',[])
 with open(key_clients,'r',encoding='utf-8') as f:
     clients = {c.get('id'): c.get('name') for c in json.load(f).get('clients',[])}
 
 t = next(x for x in tasks if x.get('id')==task_id)
 client_name = clients.get(t.get('clientId'), t.get('clientId',''))
 
-desc = t.get('description','').strip()
+desc = (t.get('description') or '').strip()
 due_at = t.get('dueAt')
 
-# Title: "<Client> — <short desc>" (keep it readable)
-# If no client name, just use description.
+# Title: "<Client> — <desc>" (keep it readable)
 if client_name and client_name != 'null':
     title = f"{client_name} — {desc}" if desc else client_name
 else:
     title = desc or f"CRM {task_id}"
 
-notes_lines = [
-    f"CRM: {task_id}",
-]
+notes_lines = [f"CRM: {task_id}"]
 if client_name:
     notes_lines.append(f"Client: {client_name}")
 status = t.get('status')
 if status:
     notes_lines.append(f"Statut CRM: {status}")
-
 notes = "\n".join(notes_lines)
 
 payload = {"title": title, "notes": notes}
-# If no due date, omit it (Google Tasks allows tasks without due)
 if due_at:
     payload["due"] = due_at
 
@@ -106,9 +102,24 @@ req.add_header('Content-Type', 'application/json')
 with urllib.request.urlopen(req) as resp:
     data = json.load(resp)
 
-print(json.dumps({
+link = {
+    "listId": list_id,
     "taskId": data.get('id'),
     "webViewLink": data.get('webViewLink'),
-    "listId": list_id,
-}, indent=2))
+}
+
+# Write back linkage into the temp tasks JSON (caller re-encrypts)
+t["googleTasks"] = link
+
+with open(key_tasks,'w',encoding='utf-8') as f:
+    json.dump(doc_tasks, f, ensure_ascii=False, indent=2)
+
+print(json.dumps(link, ensure_ascii=False))
 PY
+)
+
+# Re-encrypt updated temp tasks back to tasks.json.age
+PUB=$(cat "$PUB_FILE")
+age -r "$PUB" -o "$TASKS_AGE" "$TMP_TASKS"
+
+echo "$LINK_JSON"
