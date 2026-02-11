@@ -32,6 +32,7 @@ Scripts:
 - `crm/bin/crm-tasks-readable.sh` — affiche les tâches en format "naturel" + emojis selon statut (sans laisser de JSON en clair)
 - `crm/bin/crm-push-to-google-tasks.sh` — pousse 1 tâche CRM vers Google Tasks (liste OpenClaw) et stocke le lien
 - `crm/bin/crm-sync-google-tasks.sh` — pousse toutes les tâches CRM non liées vers Google Tasks
+- `crm/bin/crm-add-task.sh` — ajoute une tâche CRM **et** la pousse automatiquement dans Google Tasks
 - `crm/bin/crm-sync-google-tasks-bidir.sh` — synchro bidirectionnelle (création) CRM <-> Google Tasks
 - `crm/bin/crm-sync-google-tasks-statuses.sh` — synchro bidirectionnelle des statuts (Réalisé <-> completed)
 
