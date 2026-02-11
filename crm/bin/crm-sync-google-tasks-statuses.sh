@@ -42,6 +42,7 @@ import os, json, urllib.request
 MATON=os.environ['MATON_API_KEY']
 INP=os.environ['CRM_TASKS_IN']
 OUT=os.environ['CRM_TASKS_OUT']
+OPENCLAW_LIST_ID='MTY0NDM2ODc0NzI3NjY0NDY3OTk6MDow'
 
 with open(INP,'r',encoding='utf-8') as f:
     doc=json.load(f)
@@ -56,7 +57,8 @@ for t in tasks:
     gt = t.get('googleTasks') or {}
     list_id = gt.get('listId')
     task_id = gt.get('taskId')
-    if not list_id or not task_id:
+    # IMPORTANT: only sync tasks in OpenClaw list
+    if list_id != OPENCLAW_LIST_ID or not task_id:
         continue
 
     # Fetch Google Task

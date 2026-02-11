@@ -96,10 +96,11 @@ def make_cli_id(n):
 def make_tsk_id(n):
     return f"tsk_{n:03d}"
 
-# List google tasks (pagination)
+# List google tasks from OpenClaw list ONLY (pagination)
 google_items=[]
 page=None
 while True:
+    # IMPORTANT: only fetch from OpenClaw list
     url=f'https://gateway.maton.ai/google-tasks/tasks/v1/lists/{list_id}/tasks?maxResults=100&showCompleted=true&showHidden=true'
     if page:
         url += f'&pageToken={page}'
