@@ -44,25 +44,28 @@ if ! jq -e --arg id "$TASK_ID" '.tasks | any(.id == $id)' "$TMP_TASKS" >/dev/nul
   exit 1
 fi
 
-# If already linked, no-op
+# If already linked, we UPDATE the existing Google Task (title/notes/due)
+ALREADY_LINKED="0"
 if jq -e --arg id "$TASK_ID" '(.tasks[] | select(.id==$id) | has("googleTasks"))' "$TMP_TASKS" >/dev/null; then
-  echo "SKIP: $TASK_ID already linked to Google Tasks"
-  exit 0
+  ALREADY_LINKED="1"
 fi
 
 export CRM_TASK_ID="$TASK_ID"
 export TMP_TASKS="$TMP_TASKS"
 export TMP_CLIENTS="$TMP_CLIENTS"
 export OPENCLAW_LIST_ID="$OPENCLAW_LIST_ID"
+export ALREADY_LINKED="$ALREADY_LINKED"
 
 LINK_JSON=$(python3 - <<'PY'
 import os, json, urllib.request
+from datetime import datetime, timezone
 
 task_id = os.environ['CRM_TASK_ID']
 key_tasks = os.environ['TMP_TASKS']
 key_clients = os.environ['TMP_CLIENTS']
 list_id = os.environ['OPENCLAW_LIST_ID']
 maton = os.environ['MATON_API_KEY']
+already_linked = os.environ.get('ALREADY_LINKED','0') == '1'
 
 with open(key_tasks,'r',encoding='utf-8') as f:
     doc_tasks = json.load(f)
@@ -74,13 +77,27 @@ t = next(x for x in tasks if x.get('id')==task_id)
 client_name = clients.get(t.get('clientId'), t.get('clientId',''))
 
 desc = (t.get('description') or '').strip()
-due_at = t.get('dueAt')
+due_at_raw = t.get('dueAt')
 
-# Title: "<Client> — <desc>" (keep it readable)
-if client_name and client_name != 'null':
-    title = f"{client_name} — {desc}" if desc else client_name
+# Convert local ISO dueAt (with offset) to UTC RFC3339 timestamp
+# NOTE: Google Tasks often stores due as date-only (00:00Z). We still send it.
+if due_at_raw:
+    dt = datetime.fromisoformat(due_at_raw)
+    due = dt.astimezone(timezone.utc).isoformat().replace('+00:00','Z')
+    # Use LOCAL time string in the TITLE to compensate (HH:MM)
+    local_hhmm = dt.strftime('%H:%M')
 else:
-    title = desc or f"CRM {task_id}"
+    due = None
+    local_hhmm = None
+
+# Title includes HH:MM prefix when available
+base_title = None
+if client_name and client_name != 'null':
+    base_title = f"{client_name} — {desc}" if desc else client_name
+else:
+    base_title = desc or f"CRM {task_id}"
+
+title = f"{local_hhmm} — {base_title}" if local_hhmm else base_title
 
 notes_lines = [f"CRM: {task_id}"]
 if client_name:
@@ -91,30 +108,48 @@ if status:
 notes = "\n".join(notes_lines)
 
 payload = {"title": title, "notes": notes}
-if due_at:
-    payload["due"] = due_at
+if due is not None:
+    payload["due"] = due
 
-url = f"https://gateway.maton.ai/google-tasks/tasks/v1/lists/{list_id}/tasks"
-body = json.dumps(payload).encode('utf-8')
-req = urllib.request.Request(url, data=body, method='POST')
-req.add_header('Authorization', f'Bearer {maton}')
-req.add_header('Content-Type', 'application/json')
-with urllib.request.urlopen(req) as resp:
-    data = json.load(resp)
-
-link = {
-    "listId": list_id,
-    "taskId": data.get('id'),
-    "webViewLink": data.get('webViewLink'),
+headers = {
+    'Authorization': f'Bearer {maton}',
+    'Content-Type': 'application/json',
 }
 
-# Write back linkage into the temp tasks JSON (caller re-encrypts)
-t["googleTasks"] = link
+if already_linked and isinstance(t.get('googleTasks'), dict) and t['googleTasks'].get('taskId'):
+    gt_task_id = t['googleTasks']['taskId']
+    url = f"https://gateway.maton.ai/google-tasks/tasks/v1/lists/{list_id}/tasks/{gt_task_id}"
+    body = json.dumps(payload).encode('utf-8')
+    req = urllib.request.Request(url, data=body, method='PATCH')
+    for k,v in headers.items():
+        req.add_header(k,v)
+    with urllib.request.urlopen(req) as resp:
+        data = json.load(resp)
+    link = {
+        "listId": list_id,
+        "taskId": data.get('id', gt_task_id),
+        "webViewLink": data.get('webViewLink') or t['googleTasks'].get('webViewLink'),
+    }
+    t["googleTasks"] = link
+else:
+    url = f"https://gateway.maton.ai/google-tasks/tasks/v1/lists/{list_id}/tasks"
+    body = json.dumps(payload).encode('utf-8')
+    req = urllib.request.Request(url, data=body, method='POST')
+    for k,v in headers.items():
+        req.add_header(k,v)
+    with urllib.request.urlopen(req) as resp:
+        data = json.load(resp)
+    link = {
+        "listId": list_id,
+        "taskId": data.get('id'),
+        "webViewLink": data.get('webViewLink'),
+    }
+    t["googleTasks"] = link
 
 with open(key_tasks,'w',encoding='utf-8') as f:
     json.dump(doc_tasks, f, ensure_ascii=False, indent=2)
 
-print(json.dumps(link, ensure_ascii=False))
+print(json.dumps(t["googleTasks"], ensure_ascii=False))
 PY
 )
 
