@@ -102,7 +102,7 @@ Every few days:
 
 ## ⏱️ PARA 3-Min (Daily)
 
-Run this lightweight routine once per day:
+Run this lightweight routine twice per day at 12am and 11pm:
 1. Capture decisions/blockers/next action in `memory/YYYY-MM-DD.md`
 2. Move one useful item into `notes/` (Projects/Areas/Resources/Archive)
 3. Update `notes/areas/open-loops.md` with one concrete next step
