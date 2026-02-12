@@ -51,6 +51,19 @@ Templates disponibles dans `notes/resources/templates/`.
 - Si le contexte monte, écrire immédiatement les décisions, tâches et fils ouverts dans `memory/YYYY-MM-DD.md`
 - Avant fin de session longue: documenter ce qui doit survivre au redémarrage
 
+### 🔄 Memory Protocol (Phase 1)
+
+**Avant de répondre à une question de contexte passé**
+1. Lancer `python3 skills/rosepuppy-memory/scripts/recall.py "question utilisateur"`
+2. Lire les résultats rappelés
+3. Répondre avec ce contexte
+
+**Après une conversation substantielle (décision/préférence/tâche)**
+- Lancer `python3 skills/rosepuppy-memory/scripts/capture.py --facts "fact 1" "fact 2"`
+
+**Write-Ahead rule**
+- Si l’utilisateur donne un détail concret (décision, correction, date, préférence), mettre à jour `SESSION-STATE.md` avant la réponse finale.
+
 ---
 
 ## Safety
