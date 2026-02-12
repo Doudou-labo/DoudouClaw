@@ -94,7 +94,7 @@ Every few days:
 ## 🧠 Memory Auto-Capture (Phase 1 — every heartbeat)
 
 1. Si conversation significative depuis le dernier heartbeat:
-   - `python3 skills/rosepuppy-memory/scripts/capture.py --facts "fact1" "fact2"`
+   - `bash scripts/memory-capture-sync.sh "fact1" "fact2"`
 2. Mettre à jour `RECENT_CONTEXT.md` avec les points clés
 3. Mettre à jour `SESSION-STATE.md` si la tâche active a changé
 

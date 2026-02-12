@@ -59,7 +59,7 @@ Templates disponibles dans `notes/resources/templates/`.
 3. Répondre avec ce contexte
 
 **Après une conversation substantielle (décision/préférence/tâche)**
-- Lancer `python3 skills/rosepuppy-memory/scripts/capture.py --facts "fact 1" "fact 2"`
+- Lancer `bash scripts/memory-capture-sync.sh "fact 1" "fact 2"`
 
 **Write-Ahead rule**
 - Si l’utilisateur donne un détail concret (décision, correction, date, préférence), mettre à jour `SESSION-STATE.md` avant la réponse finale.
