@@ -102,5 +102,11 @@ Déployer proprement le skill **proactive-agent** (mode safe: backup + merge) sa
 - Wrappers ajoutés: `scripts/context-compress-preview.sh` et `scripts/context-compress-apply.sh`.
 - Garde-fou apply: confirmation explicite obligatoire (`RESET_OK`).
 
+## New Input (2026-02-13 22:11 UTC)
+- Correction utilisateur explicite: je dois appliquer plus strictement le skill `context-manager` (format/listing attendu) et fournir une version française de `skills/context-manager/SKILL.md` pour usage quotidien.
+
+## Decision (2026-02-13 22:11 UTC)
+- Créer une traduction dédiée `skills/context-manager/SKILL.fr.md` (sans écraser l’original anglais) pour préserver compatibilité + améliorer l’usage avec Alexandre.
+
 ## Last Updated
-2026-02-13 21:56 UTC
+2026-02-13 22:11 UTC
