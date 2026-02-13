@@ -54,5 +54,10 @@ Déployer proprement le skill **proactive-agent** (mode safe: backup + merge) sa
 ## New Input (2026-02-13 20:05 UTC)
 - Clarification utilisateur: utiliser d’abord le local (notamment memory skills), mais vérifier GitHub si doute ou info introuvable car des changements peuvent être faits directement côté GitHub.
 
+## New Decision (2026-02-13 20:23 UTC)
+- Alexandre valide la passe **full compliance proactive-agent v3.1**.
+- Application effectuée sur `main` via cherry-pick du commit preview `53b0804` → commit local `65b553f`.
+- Fichiers appliqués: `AGENTS.md`, `HEARTBEAT.md`, `notes/resources/proactive-agent-v3.1-merge-preview.md`.
+
 ## Last Updated
-2026-02-13 20:05 UTC
+2026-02-13 20:24 UTC
