@@ -72,5 +72,14 @@ Déployer proprement le skill **proactive-agent** (mode safe: backup + merge) sa
 - 4 crons mis à jour pour publier via `delivery.mode=announce` (au lieu d’appels `message` internes) vers `-1003791371950:topic:32`.
 - Validation run forcé: le cron PARA midi publie désormais bien un résumé complet.
 
+## New Input (2026-02-13 21:15 UTC)
+- Alexandre demande un test manuel immédiat de l’automatisation PARA du soir.
+
+## Implementation Update (2026-02-13 21:16 UTC)
+- Job `PARA Auto - 3min soir (git sync)` déclenché en force avec succès.
+- Commit généré par le script: `f28e06d`.
+- Confirmation Telegram envoyée dans topic 32 (message id `676`).
+- Anomalie reproductible identifiée: `message.send` échoue avec `target=-100...:topic:32`; format fiable observé: `target=-100...` + `threadId=32`.
+
 ## Last Updated
-2026-02-13 21:24 UTC
+2026-02-13 21:16 UTC
