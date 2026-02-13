@@ -9,26 +9,24 @@ Chat history is a BUFFER. This file is STORAGE.
 ---
 
 ## Current Task
-Mettre en place la Phase 1 du système mémoire et synchroniser les changements sur GitHub.
+Fiabiliser les points de séance bourse avec une stack **API-first gratuite** (anti-bot), puis brancher tous les crons bourse dessus.
 
 ## Immediate Context
-- Skill `rosepuppy-memory` installé dans `skills/rosepuppy-memory`.
-- Plugin `memory-lancedb` activé et chargé.
-- Alexandre veut une traçabilité complète sur le repo GitHub.
+- Alexandre a signalé des erreurs d’accès sources (anti-bot, JS, 401) + timeouts récurrents en cron.
+- Objectif validé: option B sans coût initial (0€), plus robuste que le scraping de pages web.
+- Les 6 crons bourse doivent continuer d’envoyer dans le topic Telegram `-1003791371950:3`.
 
 ## Key Decisions
-- Démarrage en **Phase 1 minimale** (simple, efficace, sans surcharge).
-- Synchronisation GitHub demandée pour garder historique et visibilité.
+- Nouveau script local: `scripts/market_brief.py` (sources API/flux légers: Stooq CSV + Yahoo Finance API + RSS).
+- Tous les crons bourse EU/US (ouverture, mi-séance, clôture) appellent désormais ce script.
+- Timeout réduit à 120s et fallback explicite `non disponible` quand une donnée échoue.
 
 ## Key Files
-- `AGENTS.md`
-- `HEARTBEAT.md`
+- `scripts/market_brief.py`
 - `SESSION-STATE.md`
-- `RECENT_CONTEXT.md`
-- `memory/2026-02-12.md`
 
 ## Open Questions
-- Valider ensuite si passage en phase plus avancée (capture/consolidation renforcées).
+- Ajouter ensuite une API news/quotes dédiée (clé optionnelle) pour encore plus de stabilité/latence.
 
 ## Last Updated
-2026-02-12 21:37 UTC
+2026-02-13 19:22 UTC
