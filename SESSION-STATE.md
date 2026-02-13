@@ -20,6 +20,7 @@ Fiabiliser les points de séance bourse avec une stack **API-first gratuite** (a
 - Nouveau script local: `scripts/market_brief.py` (sources API/flux légers: Stooq CSV + Yahoo Finance API + RSS).
 - Tous les crons bourse EU/US (ouverture, mi-séance, clôture) appellent désormais ce script.
 - Timeout réduit à 120s et fallback explicite `non disponible` quand une donnée échoue.
+- Demande utilisateur ajoutée: enrichir le commentaire analytique (biais, leadership, volatilité, plan de séance).
 
 ## Key Files
 - `scripts/market_brief.py`

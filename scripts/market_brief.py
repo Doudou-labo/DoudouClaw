@@ -123,6 +123,53 @@ def sort_movers(quotes):
     return gainers, losers
 
 
+def build_analysis_lines(region: str, session: str, index_quotes: list, stock_quotes: list, vix_quote: dict | None = None):
+    lines = ["\n🧠 Commentaire d’analyse"]
+
+    idx_valid = [q for q in index_quotes if q.get("pct") is not None]
+    stk_valid = [q for q in stock_quotes if q.get("pct") is not None]
+
+    if not idx_valid:
+        lines.append("- Lecture: non disponible (pas assez de données indices)")
+        return lines
+
+    up_idx = sum(1 for q in idx_valid if q.get("pct", 0) > 0)
+    down_idx = sum(1 for q in idx_valid if q.get("pct", 0) < 0)
+    avg_idx = sum(q.get("pct", 0) for q in idx_valid) / len(idx_valid)
+    avg_stk = (sum(q.get("pct", 0) for q in stk_valid) / len(stk_valid)) if stk_valid else 0.0
+
+    if up_idx >= max(2, len(idx_valid) - 1) and avg_stk > 0:
+        bias = "haussier"
+    elif down_idx >= max(2, len(idx_valid) - 1) and avg_stk < 0:
+        bias = "baissier"
+    else:
+        bias = "neutre à mixte"
+
+    lines.append(f"- Biais court terme: **{bias}** (indices verts: {up_idx}/{len(idx_valid)}, moyenne indices {avg_idx:+.2f}%)")
+
+    if stk_valid:
+        best = max(stk_valid, key=lambda x: x.get("pct", -999))
+        worst = min(stk_valid, key=lambda x: x.get("pct", 999))
+        lines.append(
+            f"- Leadership: **{best.get('label', best.get('symbol','?'))}** mène ({best.get('pct',0):+.2f}%) ; "
+            f"**{worst.get('label', worst.get('symbol','?'))}** pèse ({worst.get('pct',0):+.2f}%)"
+        )
+
+    if region == "us" and vix_quote and vix_quote.get("price") is not None:
+        vpct = vix_quote.get("pct")
+        vpct_s = "n/d" if vpct is None else f"{vpct:+.2f}%"
+        lines.append(f"- Volatilité: VIX {vix_quote.get('price'):.2f} ({vpct_s})")
+
+    if session == "open":
+        lines.append("- Plan ouverture: surveiller la tenue de la direction dans la 1re heure avant de valider le scénario.")
+    elif session == "mid":
+        lines.append("- Plan mi-séance: confirmer la tendance avec volumes ; sans confirmation, privilégier prudence et sélectivité.")
+    else:
+        lines.append("- Plan clôture: noter les leaders/faiblesse du jour pour préparer le biais de demain.")
+
+    return lines
+
+
 def fetch_rss_titles(url: str, limit: int = 2):
     try:
         root = ET.fromstring(http_get(url, timeout=8))
@@ -186,11 +233,14 @@ def build_brief(region: str, session: str, shares: int):
             ("Netflix", "NFLX.US"),
         ]
 
+    index_quotes = []
     lines.append("\n📊 Indices")
     for label, s1, s2 in indices:
         q = get_quote(s1, providers=("stooq", "yahoo"))
         if q.get("price") is None:
             q = get_quote(s2, providers=("yahoo", "stooq"))
+        q["label"] = label
+        index_quotes.append(q)
         lines.append(fmt_quote(label, q))
 
     stock_quotes = []
@@ -226,6 +276,14 @@ def build_brief(region: str, session: str, shares: int):
         pct_s = "n/d" if ml.get("pct") is None else f"{ml['pct']:+.2f}%"
         lines.append(f"- Cours ML: {ml['price']:.2f} ({pct_s}) [{ml.get('source')}]")
         lines.append(f"- Valeur 111 actions: {value:,.2f}".replace(",", " "))
+
+    vix_quote = None
+    if region == "us":
+        vix_quote = get_quote("^vix", providers=("stooq", "yahoo"))
+        if vix_quote.get("price") is None:
+            vix_quote = get_quote("^VIX", providers=("yahoo", "stooq"))
+
+    lines.extend(build_analysis_lines(region, session, index_quotes, stock_quotes, vix_quote=vix_quote))
 
     news = []
     if region == "eu":
