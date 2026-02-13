@@ -30,3 +30,5 @@
 
 ## Règle opératoire
 - Toute évolution de cron doit être mise à jour ici + commit/push GitHub.
+- Rendu attendu de chaque automation: message de synthèse (Résultats + Points à retenir + commit).
+- Transport recommandé pour ces crons: `delivery.mode=announce` vers le topic Telegram dédié.

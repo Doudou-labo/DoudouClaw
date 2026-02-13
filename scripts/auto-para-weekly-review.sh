@@ -47,10 +47,18 @@ echo "- ${TODAY} ${NOW} UTC | Projects:${PROJECTS_COUNT} Areas:${AREAS_COUNT} Re
   echo "- Action: revue hebdo effectuée + trace ajoutée dans notes/areas/proactive-tracker.md"
 } >> "$MEM_FILE"
 
+COMMIT_SHA="none"
 git add "$TRACKER" "$MEM_FILE"
 if ! git diff --cached --quiet; then
   git commit -m "chore(para): weekly review snapshot ${TODAY}"
   git push
-else
-  echo "No changes to commit."
+  COMMIT_SHA="$(git rev-parse --short HEAD)"
 fi
+
+echo "Résultats PARA (revue hebdo)"
+echo "- Snapshot: P=${PROJECTS_COUNT} A=${AREAS_COUNT} R=${RESOURCES_COUNT} Ar=${ARCHIVE_COUNT}"
+echo "- Open loops actifs: ${OPEN_COUNT}"
+echo "- commit: ${COMMIT_SHA}"
+echo "Points à retenir"
+echo "- Si OpenLoops > 10: prioriser une purge/tri cette semaine"
+echo "- Trace GitHub: synchronisée"

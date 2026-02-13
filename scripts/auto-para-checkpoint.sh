@@ -57,14 +57,29 @@ fi
 echo "- [ ] [AUTO ${TODAY} ${WINDOW}] Checkpoint 3-min fait. Next: ${NEXT_ACTION}" >> "$OPEN_LOOPS"
 
 if [[ "$DRY_RUN" == "--dry-run" ]]; then
-  echo "[dry-run] Files updated locally without git push."
+  echo "Résultats PARA (${WINDOW})"
+  echo "- memory: ${MEM_FILE} mis à jour"
+  echo "- open-loops: ${OPEN_LOOPS} mis à jour"
+  echo "Points à retenir"
+  echo "- Next action: ${NEXT_ACTION}"
+  echo "- Mode: dry-run (pas de commit/push)"
   exit 0
 fi
+
+COMMIT_SHA="none"
+
 
 git add "$MEM_FILE" "$OPEN_LOOPS"
 if ! git diff --cached --quiet; then
   git commit -m "chore(para): auto 3-min checkpoint (${WINDOW}) ${TODAY}"
   git push
-else
-  echo "No changes to commit."
+  COMMIT_SHA="$(git rev-parse --short HEAD)"
 fi
+
+echo "Résultats PARA (${WINDOW})"
+echo "- memory: ${MEM_FILE} mis à jour"
+echo "- open-loops: ${OPEN_LOOPS} mis à jour"
+echo "- commit: ${COMMIT_SHA}"
+echo "Points à retenir"
+echo "- Next action: ${NEXT_ACTION}"
+echo "- Trace GitHub: synchronisée"

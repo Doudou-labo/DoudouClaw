@@ -64,5 +64,13 @@ Déployer proprement le skill **proactive-agent** (mode safe: backup + merge) sa
 - Exigence explicite: chaque automatisation doit conserver une **trace GitHub** (commit/push).
 - Mise en place effectuée: 3 scripts d’automatisation + 4 crons `isolated/agentTurn` vers topic Telegram `-1003791371950:topic:32`.
 
+## New Input (2026-02-13 21:20 UTC)
+- Demande utilisateur: les automatisations doivent aussi fournir un retour **résultats + points à retenir** dans la réponse Telegram, pas uniquement écrire local + sync GitHub.
+
+## Implementation Update (2026-02-13 21:24 UTC)
+- Scripts d’automatisation enrichis pour produire un résumé stdout structuré (Résultats + Points à retenir + commit).
+- 4 crons mis à jour pour publier via `delivery.mode=announce` (au lieu d’appels `message` internes) vers `-1003791371950:topic:32`.
+- Validation run forcé: le cron PARA midi publie désormais bien un résumé complet.
+
 ## Last Updated
-2026-02-13 21:06 UTC
+2026-02-13 21:24 UTC

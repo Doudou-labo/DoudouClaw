@@ -92,6 +92,10 @@ scripts/auto-self-improve-review.sh      # revue hebdo self-improving (.learning
 - Chaque script fait `git add` ciblé + `git commit` + `git push`
 - Objectif: aucune perte de trace entre local et GitHub
 
+**Retour utilisateur intégré (Telegram):**
+- Chaque automation renvoie désormais un résumé: **Résultats + Points à retenir + commit**
+- Mise en œuvre cron: `delivery.mode=announce` (évite les échecs `message.send` sur target topic)
+
 **Crons créés:**
 - `PARA Auto - 3min midi (git sync)`
 - `PARA Auto - 3min soir (git sync)`

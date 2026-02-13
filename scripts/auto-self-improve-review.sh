@@ -69,10 +69,24 @@ CORRECTION_HITS=$(grep -HnEi 'correction|corrig|pas ça|non c|actually|wrong' "$
   echo "- Traces mises à jour: .learnings/ERRORS.md + .learnings/LEARNINGS.md"
 } >> "$MEM_FILE"
 
+COMMIT_SHA="none"
 git add "$ERRORS_FILE" "$LEARNINGS_FILE" "$FEATURES_FILE" "$MEM_FILE"
 if ! git diff --cached --quiet; then
   git commit -m "chore(self-improve): weekly auto review ${TODAY}"
   git push
-else
-  echo "No changes to commit."
+  COMMIT_SHA="$(git rev-parse --short HEAD)"
 fi
+
+ERR_FLAG="non"
+CORR_FLAG="non"
+[[ -n "$ERROR_HITS" ]] && ERR_FLAG="oui"
+[[ -n "$CORRECTION_HITS" ]] && CORR_FLAG="oui"
+
+echo "Résultats Self-Improving (revue hebdo)"
+echo "- Patterns erreurs: ${ERR_FLAG}"
+echo "- Corrections utilisateur: ${CORR_FLAG}"
+echo "- commit: ${COMMIT_SHA}"
+echo "Points à retenir"
+echo "- Si erreurs=oui: ajouter/mettre à jour un gotcha TOOLS.md"
+echo "- Si corrections=oui: promouvoir une règle AGENTS.md"
+echo "- Trace GitHub: synchronisée"
