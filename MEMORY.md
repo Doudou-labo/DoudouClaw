@@ -23,6 +23,8 @@
 - Recherches web : utiliser Perplexity par défaut ; si une URL est fournie, lire la page via web_fetch
 - Format des résultats web : rendu en Markdown structuré (#/##/###), avec **gras**, *italique*, listes et liens propres
 - Workflow repo : à chaque modification de fichiers, fournir un petit récap (diff/ce qui a changé) + `git status` + faire un commit (sans inclure secrets/credentials) et pousser vers GitHub quand possible
+- Exigence stricte (2026-02-13) : toute modif/ajout de fichiers faite par l’agent doit être reflétée sur le repo GitHub (éviter divergence local vs remote)
+- Source d’info prioritaire : s’appuyer sur le repo/workspace versionné pour retrouver le contexte avant d’inférer
 - Référence PARA: quand une demande concerne l’organisation/projets/suivi/rappels/décisions déjà prises, consulter `notes/` par défaut. Si le message commence par **"PARA:"**, consulter systématiquement `notes/` avant de répondre.
 
 ### Important Dates

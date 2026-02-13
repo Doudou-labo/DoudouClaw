@@ -42,10 +42,13 @@ Déployer proprement le skill **proactive-agent** (mode safe: backup + merge) sa
 - Demande utilisateur: push GitHub + ajout doc repo sans suppression.
 - Documentation ajoutée/complétée: `README.md`, `TOOLS.md`, `.gitignore`, `memory/2026-02-13.md`.
 
-## New Input (2026-02-13 19:53 UTC)
-- Correction utilisateur: la section "mises à jour récentes" du README n’est pas utile.
-- Attendu README: expliquer **le fonctionnement du repo GitHub** + **où retrouver les fichiers**.
-- Action à faire: refactor README orienté usage (structure, navigation, workflow Git, où écrire quoi).
+## New Input (2026-02-13 20:01 UTC)
+- Exigence utilisateur explicite: **toute modification/ajout de fichiers faite par l’agent doit être reflétée sur le repo GitHub**.
+- Exigence utilisateur explicite: **utiliser le repo comme source de vérité pour récupérer les infos/contexte** quand nécessaire.
+
+## Operational Rule (active)
+- Après chaque changement fichier: `git status` → commit ciblé → `git push` → confirmation à l’utilisateur.
+- Éviter toute divergence locale non expliquée.
 
 ## Last Updated
-2026-02-13 19:53 UTC
+2026-02-13 20:02 UTC
