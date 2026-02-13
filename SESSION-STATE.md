@@ -59,5 +59,10 @@ Déployer proprement le skill **proactive-agent** (mode safe: backup + merge) sa
 - Application effectuée sur `main` via cherry-pick du commit preview `53b0804` → commit local `65b553f`.
 - Fichiers appliqués: `AGENTS.md`, `HEARTBEAT.md`, `notes/resources/proactive-agent-v3.1-merge-preview.md`.
 
+## New Decision (2026-02-13 21:03 UTC)
+- Alexandre demande l’automatisation complète de l’exploitation PARA + self-improving, avec **4 crons**.
+- Exigence explicite: chaque automatisation doit conserver une **trace GitHub** (commit/push).
+- Mise en place effectuée: 3 scripts d’automatisation + 4 crons `isolated/agentTurn` vers topic Telegram `-1003791371950:topic:32`.
+
 ## Last Updated
-2026-02-13 20:24 UTC
+2026-02-13 21:06 UTC

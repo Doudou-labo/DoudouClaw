@@ -77,6 +77,27 @@ openclaw gateway restart
 - Test `memory_store` + `memory_recall` OK
 - Note: `openclaw status` peut parfois afficher `Memory ... unavailable` de façon transitoire malgré des tools mémoire fonctionnels.
 
+## PARA + Self-Improving automations
+
+**Status:** ✅ Working (setup 2026-02-13)
+
+**Scripts:**
+```bash
+scripts/auto-para-checkpoint.sh          # checkpoint PARA 3-min (midi/soir)
+scripts/auto-para-weekly-review.sh       # revue hebdo PARA (snapshot)
+scripts/auto-self-improve-review.sh      # revue hebdo self-improving (.learnings)
+```
+
+**Traçabilité GitHub intégrée:**
+- Chaque script fait `git add` ciblé + `git commit` + `git push`
+- Objectif: aucune perte de trace entre local et GitHub
+
+**Crons créés:**
+- `PARA Auto - 3min midi (git sync)`
+- `PARA Auto - 3min soir (git sync)`
+- `PARA Auto - revue hebdo (git sync)`
+- `Self-Improve Auto - revue hebdo (git sync)`
+
 ## What Goes Here
 
 - Tool configurations and settings
