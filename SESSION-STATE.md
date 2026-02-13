@@ -91,5 +91,11 @@ Déployer proprement le skill **proactive-agent** (mode safe: backup + merge) sa
   - `PARA Auto - revue hebdo (git sync)`
 - Payloads adaptés pour éviter `message.send` interne et renvoyer directement un résumé structuré.
 
+## Emergency Context Flush (2026-02-13 21:36 UTC)
+- Demande utilisateur explicite: exécuter la procédure de réduction du risque contexte immédiatement.
+- Statut observé: contexte session à 100% (272k/272k).
+- Action appliquée: flush durable dans `memory/2026-02-13.md` + sync GitHub.
+- Point important: la réduction immédiate du contexte chargé nécessite ensuite une nouvelle session/reprise après compaction; le flush protège la continuité.
+
 ## Last Updated
-2026-02-13 21:26 UTC
+2026-02-13 21:36 UTC
