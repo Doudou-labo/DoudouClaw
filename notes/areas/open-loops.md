@@ -10,6 +10,7 @@
 - [ ] J+7 (16/02) : créer 1 objectif d’épargne + 1 récurrence (ex : Spotify) et valider que ça tient dans ta vraie vie
 
 ### Stack skills OpenClaw (maintenance)
+- [ ] Rattrapage `proactive-agent` (retard depuis le 10/02) : faire la revue courte `SKILL.md` + `SKILL-v3-draft.md`, puis décider ce qu’on garde
 - [ ] Relire `AGENTS.md` + `HEARTBEAT.md` : vérifier que c’est clair et “FR-friendly”, puis lister 1 amélioration max (pas plus)
 - [ ] Mettre à jour `USER.md` : ajouter 1 objectif pro + 1 objectif perso + 1 contrainte de rythme (pour que je te suive mieux)
 - [ ] Planifier une mini revue hebdo (10 min) : décider “on garde / on retire” pour 1 skill (pas plus)

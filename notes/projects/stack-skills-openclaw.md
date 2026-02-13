@@ -1,7 +1,7 @@
 # Stack de skills OpenClaw actif
 
 **Statut:** En cours
-**Mis à jour:** 2026-02-09T20:29:59Z
+**Mis à jour:** 2026-02-13T20:12:00Z
 
 ## Objectif
 Avoir une vue claire des skills installés, de leur statut (actif / en attente), et des prochaines actions.
@@ -10,7 +10,8 @@ Avoir une vue claire des skills installés, de leur statut (actif / en attente),
 
 ### ✅ Actifs
 - **proactive-agent**
-  - Installé et activé complètement (templates appliqués + onboarding en place)
+  - Installé et activé en mode safe (backup + merge des éléments utiles)
+  - Bootstrap effectué le 2026-02-13 (working-buffer + trackers + crons hebdo proactifs)
   - Point d’attention: rester pragmatique, éviter la surcharge de process
 
 - **para-second-brain**
@@ -32,6 +33,8 @@ Avoir une vue claire des skills installés, de leur statut (actif / en attente),
 - On garde une activation “à la carte”: on prend les bonnes briques, pas l’idéologie complète.
 - `memory-setup` reste en pause jusqu’à validation explicite.
 - PARA est la base organisationnelle actuelle.
+- (2026-02-13) Le déploiement `proactive-agent` est fait en **mode safe** (backup + merge), sans écraser les fichiers cœur personnalisés.
+- (2026-02-13) Règle opérationnelle validée: **chaque modif fichier doit être commitée et pushée** vers GitHub pour éviter toute divergence local/remote.
 
 ## Prochaines actions
 - [ ] **Rattrapage `proactive-agent` (prévu le 10/02, en retard)**
