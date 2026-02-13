@@ -20,3 +20,6 @@ data/crm_google_tasks_map.json
 # Python
 __pycache__/
 *.pyc
+
+# Local runtime backups (safe restore points)
+backups/

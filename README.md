@@ -87,6 +87,26 @@ bash scripts/weekly-backup-tag.sh
 
 ---
 
+## 🆕 Mises à jour récentes (2026-02-13)
+
+### Déploiement skill `proactive-agent` (mode safe)
+- Backup local créé avant changements: `backups/proactive-agent-20260213-193228/`
+- Fichiers proactive initialisés:
+  - `memory/working-buffer.md`
+  - `notes/areas/proactive-tracker.md`
+  - `notes/areas/recurring-patterns.md`
+  - `notes/areas/outcome-journal.md`
+- 2 crons proactifs hebdo activés (topic Telegram `-1003791371950:topic:32`):
+  - Reverse prompting hebdo
+  - Revue outcomes hebdo (>7j)
+
+### Correctif mémoire LanceDB
+- Dépendance `@lancedb/lancedb` installée dans l’environnement OpenClaw
+- Redémarrage gateway effectué
+- Vérification: `memory_store` / `memory_recall` fonctionnels
+
+---
+
 ## ℹ️ Note
 
 Ce repo est orienté continuité, fiabilité et réduction de charge mentale.

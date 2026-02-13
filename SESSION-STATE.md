@@ -30,7 +30,17 @@ Déployer proprement le skill **proactive-agent** (mode safe: backup + merge) sa
 - `notes/areas/outcome-journal.md`
 
 ## Open Questions
-- Souhait utilisateur: veux-tu qu’on active ensuite des crons proactifs (reverse prompting hebdo + revue outcomes) ?
+- Aucune bloquante sur la mise en place proactive de base.
+
+## New Decisions (2026-02-13 19:35 UTC)
+- Alexandre a confirmé: **"Va s’y également"** → activation immédiate des 2 crons proactifs hebdo.
+- Cron ajouté: `Proactive - Reverse prompting hebdo` (mercredi 19:10 Europe/Paris) → topic Telegram `-1003791371950:topic:32`.
+- Cron ajouté: `Proactive - Revue outcomes hebdo (>7j)` (dimanche 18:00 Europe/Paris) → topic Telegram `-1003791371950:topic:32`.
+
+## Latest Actions (2026-02-13 19:51 UTC)
+- Correctif LanceDB appliqué et validé via `memory_store` + `memory_recall`.
+- Demande utilisateur: push GitHub + ajout doc repo sans suppression.
+- Documentation ajoutée/complétée: `README.md`, `TOOLS.md`, `.gitignore`, `memory/2026-02-13.md`.
 
 ## Last Updated
-2026-02-13 19:33 UTC
+2026-02-13 19:51 UTC

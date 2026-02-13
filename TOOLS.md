@@ -50,6 +50,33 @@ tool-name --common-flag
 - Script de tag hebdo: `scripts/weekly-backup-tag.sh`
 - Note: en mode non interactif, un remote HTTPS peut échouer sans identifiants chargés. SSH est plus fiable pour l’automatisation complète.
 
+## LanceDB / Memory plugin (OpenClaw)
+
+**Status:** ✅ Working (corrigé le 2026-02-13)
+
+**Symptôme rencontré:**
+- `memory_store` en erreur: `Cannot find module '@lancedb/lancedb'`
+
+**Diagnostic utile:**
+```bash
+openclaw status
+openclaw ltm list
+```
+
+**Correctif appliqué:**
+```bash
+# Installer la dépendance là où OpenClaw la résout
+cd /usr/lib/node_modules/openclaw
+npm i @lancedb/lancedb
+
+# Redémarrer le gateway
+openclaw gateway restart
+```
+
+**Validation:**
+- Test `memory_store` + `memory_recall` OK
+- Note: `openclaw status` peut parfois afficher `Memory ... unavailable` de façon transitoire malgré des tools mémoire fonctionnels.
+
 ## What Goes Here
 
 - Tool configurations and settings
