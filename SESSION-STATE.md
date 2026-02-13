@@ -81,5 +81,15 @@ Déployer proprement le skill **proactive-agent** (mode safe: backup + merge) sa
 - Confirmation Telegram envoyée dans topic 32 (message id `676`).
 - Anomalie reproductible identifiée: `message.send` échoue avec `target=-100...:topic:32`; format fiable observé: `target=-100...` + `threadId=32`.
 
+## New Input (2026-02-13 21:25 UTC)
+- Correction utilisateur explicite: le flux PARA (discussion + retours d’automatisation) doit rester dans le topic **35**.
+
+## Implementation Update (2026-02-13 21:26 UTC)
+- 3 crons PARA migrés vers le topic 35 avec `delivery.mode=announce`:
+  - `PARA Auto - 3min midi (git sync)`
+  - `PARA Auto - 3min soir (git sync)`
+  - `PARA Auto - revue hebdo (git sync)`
+- Payloads adaptés pour éviter `message.send` interne et renvoyer directement un résumé structuré.
+
 ## Last Updated
-2026-02-13 21:16 UTC
+2026-02-13 21:26 UTC
