@@ -9,25 +9,28 @@ Chat history is a BUFFER. This file is STORAGE.
 ---
 
 ## Current Task
-Fiabiliser les points de séance bourse avec une stack **API-first gratuite** (anti-bot), puis brancher tous les crons bourse dessus.
+Déployer proprement le skill **proactive-agent** (mode safe: backup + merge) sans casser la config personnalisée existante.
 
 ## Immediate Context
-- Alexandre a signalé des erreurs d’accès sources (anti-bot, JS, 401) + timeouts récurrents en cron.
-- Objectif validé: option B sans coût initial (0€), plus robuste que le scraping de pages web.
-- Les 6 crons bourse doivent continuer d’envoyer dans le topic Telegram `-1003791371950:3`.
+- L’utilisateur (.Hadoux / Alexandre) a validé explicitement: **"On lance ton plan"** (2026-02-13 19:32 UTC).
+- Le skill est déjà installé dans `skills/proactive-agent/` (v3.1.0).
+- Les fichiers cœur (`AGENTS.md`, `SOUL.md`, `USER.md`, `MEMORY.md`, `HEARTBEAT.md`, `TOOLS.md`) existent déjà et sont personnalisés.
+- Fichiers manquants détectés côté proactive stack: `memory/working-buffer.md`, `notes/areas/proactive-tracker.md`, `notes/areas/recurring-patterns.md`, `notes/areas/outcome-journal.md`.
 
 ## Key Decisions
-- Nouveau script local: `scripts/market_brief.py` (sources API/flux légers: Stooq CSV + Yahoo Finance API + RSS).
-- Tous les crons bourse EU/US (ouverture, mi-séance, clôture) appellent désormais ce script.
-- Timeout réduit à 120s et fallback explicite `non disponible` quand une donnée échoue.
-- Demande utilisateur ajoutée: enrichir le commentaire analytique (biais, leadership, volatilité, plan de séance).
+- Exécution en **mode safe**: backup horodaté avant changements.
+- Pas d’écrasement brut des fichiers d’identité/préférences.
+- Initialisation des fichiers manquants de la stack proactive.
 
 ## Key Files
-- `scripts/market_brief.py`
-- `SESSION-STATE.md`
+- `backups/proactive-agent-20260213-193228/`
+- `memory/working-buffer.md`
+- `notes/areas/proactive-tracker.md`
+- `notes/areas/recurring-patterns.md`
+- `notes/areas/outcome-journal.md`
 
 ## Open Questions
-- Ajouter ensuite une API news/quotes dédiée (clé optionnelle) pour encore plus de stabilité/latence.
+- Souhait utilisateur: veux-tu qu’on active ensuite des crons proactifs (reverse prompting hebdo + revue outcomes) ?
 
 ## Last Updated
-2026-02-13 19:22 UTC
+2026-02-13 19:33 UTC
