@@ -49,6 +49,10 @@ Déployer proprement le skill **proactive-agent** (mode safe: backup + merge) sa
 ## Operational Rule (active)
 - Après chaque changement fichier: `git status` → commit ciblé → `git push` → confirmation à l’utilisateur.
 - Éviter toute divergence locale non expliquée.
+- Recherche d’info: prioriser local (workspace + memory/skills), puis **fallback GitHub** en cas de doute / info manquante / possible modif distante par Alexandre.
+
+## New Input (2026-02-13 20:05 UTC)
+- Clarification utilisateur: utiliser d’abord le local (notamment memory skills), mais vérifier GitHub si doute ou info introuvable car des changements peuvent être faits directement côté GitHub.
 
 ## Last Updated
-2026-02-13 20:02 UTC
+2026-02-13 20:05 UTC
