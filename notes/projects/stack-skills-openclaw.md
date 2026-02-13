@@ -34,6 +34,12 @@ Avoir une vue claire des skills installés, de leur statut (actif / en attente),
 - PARA est la base organisationnelle actuelle.
 
 ## Prochaines actions
+- [ ] **Rattrapage `proactive-agent` (prévu le 10/02, en retard)**
+  - [ ] Lire `skills/proactive-agent/SKILL.md` et `SKILL-v3-draft.md`
+  - [ ] Décider: garder la version actuelle ou migrer des blocs utiles du draft v3
+  - [ ] Mettre à jour `skills/proactive-agent/assets/AGENTS.md` et `HEARTBEAT.md` avec une version courte/pragmatique
+  - [ ] Tester 1 cycle complet: heartbeat → capture mémoire → suggestion proactive
+  - [ ] Documenter le résultat dans ce fichier (section "Décisions prises")
 - [ ] Finaliser le polish FR de `AGENTS.md` et `HEARTBEAT.md` si besoin
 - [ ] Compléter `USER.md` (nom, objectifs, projets)
 - [ ] Revue hebdo des skills actifs (garder / retirer)
