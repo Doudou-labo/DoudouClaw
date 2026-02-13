@@ -77,6 +77,30 @@ openclaw gateway restart
 - Test `memory_store` + `memory_recall` OK
 - Note: `openclaw status` peut parfois afficher `Memory ... unavailable` de façon transitoire malgré des tools mémoire fonctionnels.
 
+## Context Manager (safe compression)
+
+**Status:** ✅ Installed (2026-02-13)
+
+**Source:**
+- `skills/context-manager/` (importé depuis openclaw/skills: plgonzalezrx8/context-manager)
+
+**Compat patch local:**
+- Support des fichiers session suffixés topic (`<sessionId>-topic-<id>.jsonl`)
+- Conversion CRLF → LF sur les fichiers shell
+
+**Procédure safe (2 étapes):**
+```bash
+# 1) Preview (read-only, aucun reset)
+bash scripts/context-compress-preview.sh 'agent:main:telegram:group:-1003791371950:topic:37'
+
+# 2) Apply (destructif: reset + inject) avec confirmation explicite
+bash scripts/context-compress-apply.sh 'agent:main:telegram:group:-1003791371950:topic:37' RESET_OK
+```
+
+**Traçabilité GitHub:**
+- Les scripts preview/apply ajoutent une trace dans `memory/YYYY-MM-DD.md`
+- Commit + push automatiques des artefacts utiles (summary + backup)
+
 ## PARA + Self-Improving automations
 
 **Status:** ✅ Working (setup 2026-02-13)

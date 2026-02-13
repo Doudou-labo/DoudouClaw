@@ -97,5 +97,10 @@ Déployer proprement le skill **proactive-agent** (mode safe: backup + merge) sa
 - Action appliquée: flush durable dans `memory/2026-02-13.md` + sync GitHub.
 - Point important: la réduction immédiate du contexte chargé nécessite ensuite une nouvelle session/reprise après compaction; le flush protège la continuité.
 
+## New Decision (2026-02-13 21:55 UTC)
+- Intégration du skill `context-manager` validée pour un mode **safe** (preview puis apply confirmé).
+- Wrappers ajoutés: `scripts/context-compress-preview.sh` et `scripts/context-compress-apply.sh`.
+- Garde-fou apply: confirmation explicite obligatoire (`RESET_OK`).
+
 ## Last Updated
-2026-02-13 21:36 UTC
+2026-02-13 21:56 UTC
