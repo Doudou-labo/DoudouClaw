@@ -133,6 +133,16 @@ Once a week, ask your human:
 
 ---
 
+
+## 🧩 Proactive v3.1 Compliance Check (every heartbeat)
+
+- [ ] WAL: `SESSION-STATE.md` est à jour avec les dernières décisions/corrections
+- [ ] Danger zone: si contexte >60%, `memory/working-buffer.md` actif et alimenté
+- [ ] Recovery ready: en cas de compaction, buffer + session-state exploitables
+- [ ] Crons: vérifier que les tâches autonomes importantes sont en `isolated/agentTurn`
+- [ ] Verify mechanism: si un changement de fonctionnement a été fait, confirmer le comportement réel (pas juste la config)
+- [ ] Repo parity: toute modif locale utile est commitée/pushée
+
 ## 📊 Proactive Work
 
 Things to check periodically:

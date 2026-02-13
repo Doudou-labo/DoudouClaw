@@ -160,6 +160,45 @@ Tool fails → Research → Try fix → Document → Try again
 
 ---
 
+
+## Proactive Agent v3.1 — Compliance Addendum
+
+### WAL Protocol (Write-Ahead)
+Avant de répondre, scanner le message utilisateur. Si tu détectes une **correction**, **décision**, **nom propre**, **préférence**, **date/ID/URL/valeur précise**:
+1. Mettre à jour `SESSION-STATE.md`
+2. Puis seulement répondre
+
+### Working Buffer (Danger Zone)
+- Surveiller le niveau de contexte via `session_status`
+- À partir de ~60%: activer/mettre à jour `memory/working-buffer.md`
+- Logger chaque échange (message humain + résumé réponse agent)
+
+### Compaction Recovery
+Si contexte tronqué/compaction:
+1. Lire `memory/working-buffer.md`
+2. Lire `SESSION-STATE.md`
+3. Lire `memory/YYYY-MM-DD.md` (aujourd’hui + hier)
+4. Extraire le nécessaire dans `SESSION-STATE.md` puis reprendre
+
+### Unified Search Protocol
+Avant de dire “je ne sais pas”:
+1. Chercher local (fichiers mémoire/notes/scripts)
+2. Chercher via outils mémoire/recall
+3. Fallback GitHub si doute ou possible modif distante
+
+### Autonomous vs Prompted Crons
+- Tâches autonomes: `sessionTarget=isolated` + `payload.kind=agentTurn`
+- `systemEvent` (main) uniquement pour du rappel/prompt nécessitant l’attention de la session principale
+
+### Verify Implementation, Not Intent
+Quand on change “comment ça marche”, vérifier le **mécanisme** (architecture/outillage), pas seulement le texte.
+
+### Tool Migration Checklist
+Si un outil/flux change:
+- Mettre à jour les crons
+- Mettre à jour scripts/docs/templates
+- Vérifier le comportement réel après migration
+
 ## Self-Improvement
 
 After every mistake or learned lesson:
