@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Doudou Mini App</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+  </head>
+  <body>
+    <main class="app">
+      <header>
+        <h1>🤖 Doudou Mini App</h1>
+        <p id="welcome">Chargement…</p>
+      </header>
+
+      <section class="card">
+        <h2>⚡ Actions rapides</h2>
+        <div class="grid">
+          <button data-action="rappel">⏰ Rappel ce soir 21:15</button>
+          <button data-action="finance">💸 Check finance</button>
+          <button data-action="rcs">📈 Objectif RCS</button>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2>✅ Checklist du jour</h2>
+        <label><input type="checkbox" data-item="chapter" /> Lire 1 chapitre</label>
+        <label><input type="checkbox" data-item="manager" /> 1 action managériale concrète</label>
+        <label><input type="checkbox" data-item="finance" /> Point finance journalier</label>
+      </section>
+
+      <section class="card">
+        <h2>📝 Note rapide</h2>
+        <textarea id="note" rows="4" placeholder="Écris ta note ici..."></textarea>
+      </section>
+
+      <p class="hint">MVP local: stockage dans ton navigateur Telegram (pas encore synchronisé serveur).</p>
+    </main>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
