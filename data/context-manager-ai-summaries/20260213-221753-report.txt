@@ -1,0 +1,19 @@
+Sessions >80%: 22
+
+[1/22] 100.0% 272000/272000 agent:main:cron:fafa8c4c-e442-4375-960c-f27113cbcb9a:run:65505523-aa37-4685-9299-383145db3dc9
+EXIT=5 DURATION=35.7s
+--- STDOUT ---
+[1;33m🧠 Requesting AI summary for session: agent:main:cron:fafa8c4c-e442-4375-960c-f27113cbcb9a:run:65505523-aa37-4685-9299-383145db3dc9[0m
+  Session ID: 65505523-aa37-4685-9299-383145db3dc9
+
+
+
+[2/22] 100.0% 256000/256000 agent:main:cron:fafa8c4c-e442-4375-960c-f27113cbcb9a:run:4f0ba1e7-af3d-4a8e-95a3-eddaeb8bcd54
+EXIT=5 DURATION=33.4s
+--- STDOUT ---
+[1;33m🧠 Requesting AI summary for session: agent:main:cron:fafa8c4c-e442-4375-960c-f27113cbcb9a:run:4f0ba1e7-af3d-4a8e-95a3-eddaeb8bcd54[0m
+  Session ID: 4f0ba1e7-af3d-4a8e-95a3-eddaeb8bcd54
+
+
+
+[3/22] 100.0% 272000/272000 agent:main:cron:fafa8c4c-e442-4375-960c-f27113cbcb9a:run:21d1d13d-0a71-4d94-996e-c350fef52d9c
