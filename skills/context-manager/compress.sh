@@ -747,24 +747,29 @@ Format this as a clear, structured summary that could be used to continue this w
     
     # Call the agent with the summarization prompt
     # Note: redirect stderr to /dev/null to avoid Node deprecation warnings breaking JSON
-    local response
-    response=$(openclaw agent --session-id "$SESSION_ID" -m "$prompt" --json 2>/dev/null)
+    local response_raw response_json
+    response_raw=$(openclaw agent --session-id "$SESSION_ID" -m "$prompt" --json 2>/dev/null)
     local exit_code=$?
-    
+
     if [[ $exit_code -ne 0 ]]; then
         echo -e "${RED}Error: Failed to get AI summary (exit code: $exit_code)${NC}" >&2
-        echo "$response" >&2
+        echo "$response_raw" >&2
         return 1
     fi
-    
+
+    # Certains plugins peuvent écrire une ligne non-JSON sur stdout
+    # (ex: "[plugins] ...") avant le payload JSON. On garde uniquement
+    # le bloc à partir de la première ligne qui commence par "{".
+    response_json=$(echo "$response_raw" | awk 'BEGIN{p=0} /^\{/ {p=1} p{print}')
+
     # Extract the response text from openclaw agent --json output
     # Structure: { result: { payloads: [{ text: "..." }] } }
     local summary_text
-    summary_text=$(echo "$response" | jq -r '.result.payloads[0].text // .message.content[0].text // .content // .text // empty' 2>/dev/null)
-    
+    summary_text=$(echo "$response_json" | jq -r '.result.payloads[0].text // .message.content[0].text // .content // .text // empty' 2>/dev/null)
+
     if [[ -z "$summary_text" ]]; then
         echo -e "${YELLOW}Raw response:${NC}"
-        echo "$response"
+        echo "$response_raw"
         return 1
     fi
     
