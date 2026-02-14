@@ -72,6 +72,10 @@
     "google-tasks-api": {
       "version": "1.0.2",
       "installedAt": 1770756490161
+    },
+    "clawpod": {
+      "version": "0.1.2",
+      "installedAt": 1771088729364
     }
   }
 }
