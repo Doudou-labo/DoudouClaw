@@ -108,5 +108,10 @@ Déployer proprement le skill **proactive-agent** (mode safe: backup + merge) sa
 ## Decision (2026-02-13 22:11 UTC)
 - Créer une traduction dédiée `skills/context-manager/SKILL.fr.md` (sans écraser l’original anglais) pour préserver compatibilité + améliorer l’usage avec Alexandre.
 
+## New Decisions (2026-02-15 18:15 UTC)
+- Règle validée avec Alexandre: **ne pas installer ni utiliser `apply_patch`** sur cet environnement pour éviter les risques; rester sur les outils `edit`/`write`.
+- Règle process validée: quand le sujet est financier (dépenses, abonnements, paiements, revenus, objectifs), passer systématiquement par le skill **finance-tracker**.
+- Demande explicite: journaliser cette contrainte dans `TOOLS.md`.
+
 ## Last Updated
-2026-02-13 22:11 UTC
+2026-02-15 18:15 UTC

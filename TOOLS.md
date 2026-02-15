@@ -141,6 +141,20 @@ rg -n "finance"
 rg --files
 ```
 
+## OpenClaw editing policy (stabilité)
+
+**Status:** ✅ Active (2026-02-15)
+
+**Contrainte validée avec Alexandre:**
+- Ne pas utiliser/installer `apply_patch` dans cet environnement.
+- Utiliser uniquement les outils natifs `edit` et `write` pour les modifications de fichiers.
+
+**Pourquoi:**
+- `apply_patch` n’est pas disponible ici (`command not found`) et son installation n’est pas nécessaire.
+- Le flux `edit`/`write` est plus stable et réduit le risque de casser le setup.
+
+---
+
 ## What Goes Here
 
 - Tool configurations and settings
