@@ -2,6 +2,29 @@
 
 > Ce fichier sert à garder un contexte stable sur les relations importantes (pro/perso) pour pouvoir y faire référence facilement.
 
+## Arnaud (N+1 — RZ)
+- N+1 d’Alexandre (poste : Responsable de Zone, RZ).
+- Relation pro + perso positive, levier important pour progresser vers RCS.
+- Contexte perso : **la fille d’Arnaud est l’ex d’Alexandre** → rester strictement pro, éviter toute ambiguïté.
+
+### Objectif
+- Préserver la confiance + fluidité.
+- Obtenir du feedback régulier.
+- S’appuyer sur lui pour monter en compétences / évoluer vers RCS.
+
+### Ce qui marche bien (à compléter)
+- Style de communication qui passe le mieux : …
+- Rythme des points : …
+
+### Points de vigilance
+- Ne pas mélanger sujets perso/pro.
+- Rester factuel, cadré, et anticiper les zones sensibles.
+
+### Prochaines actions (à compléter)
+- Prochain échange : 1) résultats (faits/chiffres) 2) progression 3) demande claire.
+
+---
+
 ## Andréa (amour de lycée)
 - Amie de longue date d’Alexandre (« Doudou »), amour de lycée.
 - Revenue récemment dans sa vie.
