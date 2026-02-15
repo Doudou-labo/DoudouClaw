@@ -1,66 +1,161 @@
-# Affaire Epstein — personnalités liées (synthèse prudente)
+# Affaire Epstein — personnalités publiques mentionnées (liste élargie)
 
-> ⚠️ **Important**
-> - Cette liste est **non exhaustive**.
-> - Être « lié » peut vouloir dire des choses très différentes (contact social, vol enregistré, mention dans un carnet d’adresses, témoignage, procédure civile, condamnation pénale, etc.).
-> - **Mention dans des documents publics ≠ culpabilité**.
-> - Je distingue ci-dessous les niveaux de lien pour éviter les amalgames.
+Source principale: [Wikipedia — List of people named in the Epstein files](https://en.wikipedia.org/wiki/List_of_people_named_in_the_Epstein_files) (extraction technique le 2026-02-15).
 
----
+⚠️ **Important**: apparaître dans des documents/fichiers/contacts/vols **ne prouve pas une culpabilité pénale**.
 
-## 1) Personnes condamnées / implication pénale établie
+⚠️ Cette liste est une compilation **documentaire** (mentions publiques), pas une liste de personnes condamnées.
 
-- **Jeffrey Epstein** — condamné (2008, Floride) pour infractions sexuelles ; de nouveau poursuivi en 2019 (trafic sexuel fédéral) avant son décès.
-- **Ghislaine Maxwell** — condamnée au pénal (fédéral, USA) pour recrutement et trafic de mineures liées à Epstein.
 
----
+Total extrait: **147** entrées.
 
-## 2) Personnes poursuivies / fortement citées dans des procédures (sans condamnation finale équivalente à Maxwell)
 
-- **Jean‑Luc Brunel** — agent de mannequins, mis en examen en France dans un dossier lié ; décédé en détention préventive.
-- **Prince Andrew** — visé dans une procédure civile (Virginia Giuffre), dossier réglé à l’amiable (settlement), sans reconnaissance de culpabilité pénale.
+## Liste
 
----
-
-## 3) Personnalités publiques citées dans des documents (vols, carnets, photos, témoignages, etc.)
-
-> ⚠️ Cette section ne signifie **pas** implication criminelle.
-
-Exemples régulièrement cités dans les médias / documents publics :
-- **Bill Clinton**
-- **Donald Trump**
-- **Alan Dershowitz**
-- **Ehud Barak**
-- **Naomi Campbell**
-- **Glenn Dubin**
-- **Leslie Wexner**
-
----
-
-## 4) Victimes / plaignantes connues publiquement
-
-- **Virginia Giuffre**
-- **Sarah Ransome**
-- **Maria Farmer**
-- **Annie Farmer**
-
----
-
-## 5) Comment lire ce fichier sans se tromper
-
-1. **Condamnation pénale** = niveau de preuve juridique le plus élevé.
-2. **Procédure civile / settlement** = différent du pénal.
-3. **Nom dans un carnet/manifest de vol/photo** = peut indiquer un contact, pas une infraction.
-
----
-
-## 6) Si tu veux une version plus “propre”
-
-Je peux te faire une version en tableau avec colonnes :
-- **Nom**
-- **Type de lien** (condamnation / procédure civile / mention documentaire)
-- **Source**
-- **Statut juridique**
-- **Niveau de fiabilité**
-
-Comme ça tu auras une base plus rigoureuse et exploitable. ✅
+- Woody Allen
+- Anil Ambani
+- Eva Andersson-Dubin
+- Dan Ariely
+- Peter Attia
+- José María Aznar
+- Joscha Bach
+- Steve Bannon
+- Ehud Barak
+- Tom Barrack
+- Sergei Belyakov
+- Leon Black
+- Todd Boehly
+- Leon Botstein
+- Ana Botella
+- Edward Boyden
+- Richard Branson
+- Børge Brende
+- Flavio Briatore
+- Sergey Brin
+- John Brockman
+- David Brooks
+- Jean-Luc Brunel
+- William Burns
+- Naomi Campbell <span class="anchor" id="Campbell">
+- Nick Candy <span class="anchor" id="Candy">
+- Fidel Castro
+- Frédéric Chaslin
+- Noam Chomsky
+- Deepak Chopra
+- George Church
+- Vitaly Churkin
+- Bill Clinton
+- David Copperfield
+- Bill Cosby
+- Dalai Lama
+- Richard Dawkins
+- Alan Dershowitz
+- Maria Drokova
+- Glenn Dubin
+- Andrew Farkas
+- Sarah Ferguson
+- Bill Gates
+- David Gelernter
+- Joe Gibbs
+- Tenzin Gyatso
+- Jonathan Haidt
+- Josh Harris
+- Sam Harris
+- Stephen Hawking
+- Reid Hoffman
+- Jack Horner
+- Joi Ito
+- Michael Jackson
+- Thorbjørn Jagland
+- Jay-Z
+- John de Jongh Jr.
+- Nicole Junkermann
+- Mona Juul
+- Dean Kamen
+- Brad S. Karp
+- Robert F. Kennedy Jr.
+- Jeff Koons
+- Stephen Kosslyn
+- Bobby Kotick
+- Lawrence Krauss
+- Miroslav Lajčák
+- Guy Laliberté
+- Caroline Lang
+- Jack Lang
+- Ronald Lauder
+- Sergey Lavrov
+- Howard Lutnick
+- Peter Mandelson
+- Nadia Marcinko
+- Ashley Massaro
+- Ghislaine Maxwell
+- Robert Maxwell
+- Mette-Marit, Crown Princess of Norway
+- Marvin Minsky
+- George J. Mitchell
+- Andrew Mountbatten-Windsor
+- Robert Mugabe
+- Elon Musk
+- Kimbal Musk
+- Mira Nair
+- Annabelle Neilson
+- Elisa New
+- Boris Nikolic
+- Martin Nowak
+- Hans Ulrich Obrist
+- Mehmet Oz
+- Andrés Pastrana Arango
+- Jean Pigozzi
+- Steven Pinker
+- John Phelan
+- Stacey Plaskett
+- Christopher Poole
+- Soon-Yi Previn
+- Penny Pritzker
+- Tom Pritzker
+- Hardeep Singh Puri
+- Pusha T
+- Vladimir Putin
+- Joshua Cooper Ramo
+- Brett Ratner
+- Terje Rød-Larsen
+- David A. Ross
+- Ariane de Rothschild
+- Lynn Forester de Rothschild
+- Marc Rowan
+- Kathryn Ruemmler
+- Mohammed bin Salman
+- David Schoen
+- Al Seckel
+- Andres Serrano
+- Karyna Shuliak
+- Peggy Siegal
+- Princess Sofia, Duchess of Värmland
+- Kevin Spacey
+- Jes Staley
+- Ken Starr
+- Sultan Ahmed bin Sulayem
+- Larry Summers
+- David Tang
+- Corina Tarnita
+- Peter Thiel
+- Amanda Thirsk
+- Jess Ting
+- Steve Tisch
+- Jean Todt
+- Mark Tramo
+- Robert Trivers
+- Donald Trump
+- Donald Trump Jr. and Eric Trump
+- Melania Trump
+- Paul Tweed
+- Brian Vickers
+- Karim Wade
+- Michael Waltrip
+- Casey Wasserman
+- Harvey Weinstein
+- Les Wexner
+- Nathan Wolfe
+- Michael Wolff
+- Mark Zuckerberg
+- Jacob Zuma
