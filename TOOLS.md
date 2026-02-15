@@ -126,6 +126,21 @@ scripts/auto-self-improve-review.sh      # revue hebdo self-improving (.learning
 - `PARA Auto - revue hebdo (git sync)`
 - `Self-Improve Auto - revue hebdo (git sync)`
 
+## ripgrep pour les recherches
+
+**Status:** ✅ installé (15 février 2026)
+
+**Pourquoi:** On voulait l’utiliser pour chercher rapidement dans les fichiers (`rg -n "finance"`), mais la commande n’était pas disponible par défaut. Je l’ai installée via `apt-get install ripgrep`.
+
+**Gotchas:**
+- Le dépôt tiers `https://repository.monarx.com/repository/ubuntu-questing` retournait un 404 et bloquait `apt update`. Pour régler ça, j’ai renommé `/etc/apt/sources.list.d/monarx.list` en `.disabled`, ce qui évite l’erreur à l’avenir.
+
+**Commandes utiles:**
+```bash
+rg -n "finance"
+rg --files
+```
+
 ## What Goes Here
 
 - Tool configurations and settings
