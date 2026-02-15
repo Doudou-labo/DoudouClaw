@@ -47,14 +47,27 @@ fi
   echo "- Objectif: garder une seule prochaine action claire à exécuter maintenant."
 } >> "$MEM_FILE"
 
-if ! grep -q '^## Auto-checkpoints$' "$OPEN_LOOPS"; then
-  {
-    echo ""
-    echo "## Auto-checkpoints"
-  } >> "$OPEN_LOOPS"
-fi
+AUTO_ENTRY="- [ ] [AUTO ${TODAY} ${WINDOW}] Checkpoint 3-min fait. Next: ${NEXT_ACTION}"
 
-echo "- [ ] [AUTO ${TODAY} ${WINDOW}] Checkpoint 3-min fait. Next: ${NEXT_ACTION}" >> "$OPEN_LOOPS"
+OPEN_LOOPS_PATH="$OPEN_LOOPS" AUTO_ENTRY="$AUTO_ENTRY" python3 <<'PY'
+import os
+from pathlib import Path
+
+path = Path(os.environ["OPEN_LOOPS_PATH"])
+entry = os.environ["AUTO_ENTRY"]
+new_section = f"## Auto-checkpoints\n{entry}\n\n"
+text = path.read_text()
+header = "## Auto-checkpoints"
+if header in text:
+    start = text.index(header)
+    next_idx = text.find("\n## ", start + len(header))
+    tail = text[next_idx:] if next_idx != -1 else ""
+    head = text[:start]
+    text = head.rstrip() + "\n\n" + new_section + tail.lstrip("\n")
+else:
+    text = text.rstrip() + "\n\n" + new_section
+path.write_text(text)
+PY
 
 if [[ "$DRY_RUN" == "--dry-run" ]]; then
   echo "Résultats PARA (${WINDOW})"
