@@ -68,6 +68,11 @@ Templates disponibles dans `notes/resources/templates/`.
 
 ## Git Workflow (Non négociable)
 
+**Auth Git imposée (bot) :**
+- Utiliser le compte bot `DoudouClaw` pour les commits/push
+- Utiliser le token stocké dans `.credentials/github-token.txt` via `gh auth login --with-token`
+- Remote `origin` en HTTPS (`https://github.com/...`), **pas SSH**
+
 **Après CHAQUE modification de fichier** (création, édition, suppression) :
 
 1. `git add <fichiers modifiés>` (ou `git add .` si plusieurs fichiers)

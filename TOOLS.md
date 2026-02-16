@@ -65,8 +65,10 @@ tool-name --common-flag
 - `scripts/auto-self-improve-review.sh` — revue self-improving avec commit/push
 
 **Note technique :**
-- Remote HTTPS peut échouer en mode non interactif sans credentials
-- SSH plus fiable pour automatisation complète
+- Mode retenu: **HTTPS + token bot** (compte `DoudouClaw`)
+- Token source: `.credentials/github-token.txt` (gitignored)
+- Login recommandé: `gh auth login --with-token < .credentials/github-token.txt`
+- Le remote Git doit rester en HTTPS (`https://github.com/...`), pas SSH
 - Hook fonctionne en mode interactif (sessions agent OpenClaw)
 
 **4 méthodes en place (verrouillage anti-oubli commit/push) :**
