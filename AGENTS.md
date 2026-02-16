@@ -83,10 +83,17 @@ Templates disponibles dans `notes/resources/templates/`.
 - Backup automatique en temps réel
 
 **En pratique :**
-- Fichiers mémoire modifiés → commit + push
+- Fichiers mémoire modifiés (`memory/*.md`, `MEMORY.md`, `SESSION-STATE.md`, `RECENT_CONTEXT.md`) → commit + push
 - Notes PARA ajoutées/modifiées → commit + push
 - Scripts créés/édités → commit + push
 - Configuration changée → commit + push
+- Opérations mémoire tool (`memory_store` / `memory_forget`) → journaliser la décision dans un fichier de mémoire local puis commit + push
+
+**4 méthodes d’ancrage (obligatoires) :**
+1. Règle explicite dans `AGENTS.md` (ce bloc)
+2. Principe identitaire dans `SOUL.md` (documenté ET versionné)
+3. Documentation d’exploitation dans `TOOLS.md`
+4. Hook Git `.git/hooks/post-commit` (auto-push)
 
 **Hook automatique :** Un hook `post-commit` pousse automatiquement après chaque commit (voir `.git/hooks/post-commit`).
 

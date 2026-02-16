@@ -69,6 +69,15 @@ tool-name --common-flag
 - SSH plus fiable pour automatisation complète
 - Hook fonctionne en mode interactif (sessions agent OpenClaw)
 
+**4 méthodes en place (verrouillage anti-oubli commit/push) :**
+1. `AGENTS.md` → workflow Git non négociable
+2. `SOUL.md` → principe "documenté ET versionné"
+3. `TOOLS.md` → procédure opérationnelle centralisée
+4. `.git/hooks/post-commit` → auto-push systématique
+
+**Règle mémoire (ajout 2026-02-16) :**
+- Si une mémoire est ajoutée/supprimée via tools (`memory_store` / `memory_forget`), consigner la trace utile dans un fichier mémoire local (`memory/YYYY-MM-DD.md` ou `MEMORY.md`) puis commit + push.
+
 ## LanceDB / Memory plugin (OpenClaw)
 
 **Status:** ✅ Working (corrigé le 2026-02-13)
