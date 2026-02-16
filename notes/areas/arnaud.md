@@ -20,6 +20,8 @@
 - **Direct et clair** : pas de flou, dit les choses
 - **Confiance établie** : pas de demandes particulières lors de l'entretien du 16/02/2026
 - **Accessible** : relation pro + perso fluide
+- **Accompagnement actif** : aide déjà Alexandre à monter en compétences RCS au quotidien
+- **Reconnaissance** : a dit en entretien qu'Alexandre "outrepasse sa fonction" (validation positive)
 
 ---
 
@@ -36,13 +38,20 @@
 
 ---
 
-## 🎯 Ce qu'Arnaud attend (à affiner)
+## 🎯 Ce qu'Arnaud attend
 
-### Points à clarifier lors des prochains échanges
-- Compétences/comportements prioritaires pour être prêt RCS
-- Indicateurs de progression attendus
-- Accompagnement/formation prévue
-- Format et fréquence des points de suivi
+**Axes prioritaires identifiés (16/02/2026) :**
+1. **Posture managériale** : développer les capacités existantes
+2. **Rigueur** : structurer pour gérer la surcharge + sollicitations
+3. **Continuer à "outrepasser"** : monter en compétences RCS tout en étant ACS
+
+**Accompagnement prévu :**
+- Mix formation / tutorat / immersion
+- Déjà en cours au quotidien avec Arnaud
+
+**Format points de suivi :**
+- Hebdo 15 min (mois 1–2)
+- Puis mensuel (mois 3–6)
 
 ---
 
@@ -50,9 +59,11 @@
 
 ### 16/02/2026 - Entretien individuel
 - **Sujet** : Bilan + évolution
-- **Résultat** : Évolution RCS confirmée (6 mois–2 ans)
-- **Actions** : Plan de montée en compétence à mettre en place
-- **Prochain point** : À définir (suggéré : mensuel pendant 6 mois)
+- **Résultat** : Évolution RCS confirmée (6 mois–2 ans selon assessment RCS Adjointe Lens)
+- **Point fort identifié** : Alexandre "outrepasse sa fonction" (dit par Arnaud)
+- **Points d'amélioration** : Posture managériale + rigueur (dans contexte de surcharge)
+- **Actions** : Plan de montée en compétence finalisé
+- **Prochain point** : Proposer hebdo 15 min pendant 1 mois, puis mensuel
 
 ---
 
