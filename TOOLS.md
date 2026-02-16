@@ -198,6 +198,8 @@ Skills define *how* tools work. This file is for *your* specifics - the stuff th
 - Token stocké dans `.credentials/github-token.txt` (gitignored)
 - Accès API REST direct via `curl`
 - Permissions : repo, project, workflow, admin:repo_hook, admin:org_hook, write:discussion
+- Compte bot actif pour opérations GitHub: `DoudouClaw`
+- Politique validée avec Alexandre: commits/push code via identité bot (`git user.name=DoudouClaw`)
 
 **Test de connexion:**
 ```bash
