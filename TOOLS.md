@@ -189,3 +189,28 @@ Skills define *how* tools work. This file is for *your* specifics - the stuff th
 ---
 
 *Add whatever helps you do your job. This is your cheat sheet.*
+
+## GitHub API Access
+
+**Status:** ✅ Active (2026-02-16)
+
+**Configuration:**
+- Token stocké dans `.credentials/github-token.txt` (gitignored)
+- Accès API REST direct via `curl`
+- Permissions : repo, project, workflow, admin:repo_hook, admin:org_hook, write:discussion
+
+**Test de connexion:**
+```bash
+curl -s -H "Authorization: token $(cat .credentials/github-token.txt)" https://api.github.com/user | jq -r '.login'
+# Output attendu: Hadoudoux
+```
+
+**Créer une issue:**
+```bash
+curl -X POST -H "Authorization: token $(cat .credentials/github-token.txt)" \
+  -H "Content-Type: application/json" \
+  -d '{"title":"Test issue","body":"Description"}' \
+  https://api.github.com/repos/Hadoudoux/doudoubot-workspace/issues
+```
+
+**Note:** gh CLI pas utilisé (exige read:org non nécessaire), API REST directe préférée.
