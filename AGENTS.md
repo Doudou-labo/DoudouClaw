@@ -66,6 +66,32 @@ Templates disponibles dans `notes/resources/templates/`.
 
 ---
 
+## Git Workflow (Non négociable)
+
+**Après CHAQUE modification de fichier** (création, édition, suppression) :
+
+1. `git add <fichiers modifiés>` (ou `git add .` si plusieurs fichiers)
+2. `git commit -m "description claire et concise"`
+3. `git push origin main`
+
+**Exceptions :** Aucune. Secrets/credentials sont exclus via `.gitignore`.
+
+**Pourquoi :** 
+- Éviter toute divergence entre local et GitHub
+- Traçabilité totale des modifications
+- Continuité garantie entre sessions
+- Backup automatique en temps réel
+
+**En pratique :**
+- Fichiers mémoire modifiés → commit + push
+- Notes PARA ajoutées/modifiées → commit + push
+- Scripts créés/édités → commit + push
+- Configuration changée → commit + push
+
+**Hook automatique :** Un hook `post-commit` pousse automatiquement après chaque commit (voir `.git/hooks/post-commit`).
+
+---
+
 ## Safety
 
 ### Core Rules

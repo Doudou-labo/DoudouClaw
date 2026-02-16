@@ -7,7 +7,7 @@
 ## Credentials Location
 
 All credentials stored in `.credentials/` (gitignored):
-- `example-api.txt` — Example API key
+- `example-api.txt` - Example API key
 
 ---
 
@@ -39,16 +39,35 @@ tool-name --common-flag
 - Style direct, concret, utile
 - Réponses détaillées par défaut
 - Ton amical, sans lourdeur
-- Touche d’humour légère quand pertinent
+- Touche d'humour légère quand pertinent
 - Inclure des emojis dans les réponses (préférence explicite utilisateur) 😄✨
 
 ---
 
 ## GitHub Backup Automation
 
-- Auto-push après chaque commit via hook local: `.git/hooks/post-commit`
-- Script de tag hebdo: `scripts/weekly-backup-tag.sh`
-- Note: en mode non interactif, un remote HTTPS peut échouer sans identifiants chargés. SSH est plus fiable pour l’automatisation complète.
+**Status:** ✅ Active (2026-02-16)
+
+**Workflow systématique (ancré dans AGENTS.md + SOUL.md) :**
+- **Toute modification de fichier** → `git add` + `git commit` + `git push`
+- Aucune exception (sauf secrets via `.gitignore`)
+- Garantit zéro divergence local vs GitHub
+
+**Hook post-commit automatique :**
+- Fichier: `.git/hooks/post-commit`
+- Action: auto-push vers `origin main` après chaque commit
+- Rend le push transparent et systématique
+
+**Scripts additionnels :**
+- `scripts/weekly-backup-tag.sh` — tag hebdo pour snapshots
+- `scripts/auto-para-checkpoint.sh` — checkpoint PARA avec commit/push
+- `scripts/auto-para-weekly-review.sh` — revue hebdo avec commit/push
+- `scripts/auto-self-improve-review.sh` — revue self-improving avec commit/push
+
+**Note technique :**
+- Remote HTTPS peut échouer en mode non interactif sans credentials
+- SSH plus fiable pour automatisation complète
+- Hook fonctionne en mode interactif (sessions agent OpenClaw)
 
 ## LanceDB / Memory plugin (OpenClaw)
 
@@ -130,10 +149,10 @@ scripts/auto-self-improve-review.sh      # revue hebdo self-improving (.learning
 
 **Status:** ✅ installé (15 février 2026)
 
-**Pourquoi:** On voulait l’utiliser pour chercher rapidement dans les fichiers (`rg -n "finance"`), mais la commande n’était pas disponible par défaut. Je l’ai installée via `apt-get install ripgrep`.
+**Pourquoi:** On voulait l'utiliser pour chercher rapidement dans les fichiers (`rg -n "finance"`), mais la commande n'était pas disponible par défaut. Je l'ai installée via `apt-get install ripgrep`.
 
 **Gotchas:**
-- Le dépôt tiers `https://repository.monarx.com/repository/ubuntu-questing` retournait un 404 et bloquait `apt update`. Pour régler ça, j’ai renommé `/etc/apt/sources.list.d/monarx.list` en `.disabled`, ce qui évite l’erreur à l’avenir.
+- Le dépôt tiers `https://repository.monarx.com/repository/ubuntu-questing` retournait un 404 et bloquait `apt update`. Pour régler ça, j'ai renommé `/etc/apt/sources.list.d/monarx.list` en `.disabled`, ce qui évite l'erreur à l'avenir.
 
 **Commandes utiles:**
 ```bash
@@ -150,7 +169,7 @@ rg --files
 - Utiliser uniquement les outils natifs `edit` et `write` pour les modifications de fichiers.
 
 **Pourquoi:**
-- `apply_patch` n’est pas disponible ici (`command not found`) et son installation n’est pas nécessaire.
+- `apply_patch` n'est pas disponible ici (`command not found`) et son installation n'est pas nécessaire.
 - Le flux `edit`/`write` est plus stable et réduit le risque de casser le setup.
 
 ---
@@ -165,7 +184,7 @@ rg --files
 
 ## Why Separate?
 
-Skills define *how* tools work. This file is for *your* specifics — the stuff that's unique to your setup.
+Skills define *how* tools work. This file is for *your* specifics - the stuff that's unique to your setup.
 
 ---
 
