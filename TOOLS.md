@@ -208,10 +208,12 @@ Skills define *how* tools work. This file is for *your* specifics - the stuff th
 
 **Configuration:**
 - Token stocké dans `.credentials/github-token.txt` (gitignored)
-- Accès API REST direct via `curl`
+- Accès API REST/GraphQL via `curl` ou `gh`
 - Permissions : repo, project, workflow, admin:repo_hook, admin:org_hook, write:discussion
 - Compte bot actif pour opérations GitHub: `DoudouClaw`
 - Politique validée avec Alexandre: commits/push code via identité bot (`git user.name=DoudouClaw`)
+- Repo de référence (depuis 2026-02-16): `https://github.com/Doudou-labo/DoudouClaw`
+- Organisation de référence: `Doudou-labo` (issues/projects/kanban centralisés)
 
 **Test de connexion:**
 ```bash

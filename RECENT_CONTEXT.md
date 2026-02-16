@@ -8,20 +8,26 @@
 ## Latest Session
 
 ### Topic
-Activation d’un système mémoire fiable + sécurisation/suivi plugins + sync GitHub.
+Stabilisation du modèle Sonnet + migration complète GitHub vers organisation `Doudou-labo`.
 
 ### Key Points
-- Plugin MemOS Cloud installé puis désactivé à la demande d’Alexandre.
-- Plugin `memory-lancedb` activé avec succès.
-- Skill `rosepuppy-memory` installé pour protocole mémoire (capture/recall/consolidation).
-- Alexandre demande que tout soit synchronisé sur le repo GitHub.
+- Incident de switch modèle diagnostiqué:
+  - `google-antigravity/claude-sonnet-4-5` en erreur 403 (service disabled / ToS)
+  - failover provoquait des bascules inattendues (opus/codex) et confusion UI.
+- Correctifs appliqués:
+  - aliases explicites (`sonnet-a`, `sonnet-g`, `haiku`, `opus`, `opus45`)
+  - retrait des modèles `google-antigravity/*` des fallbacks.
+- GitHub:
+  - org créée: `Doudou-labo`
+  - repo cible validé: `Doudou-labo/DoudouClaw`
+  - project org créé: `https://github.com/orgs/Doudou-labo/projects/1`
+  - issues migrées et liées au project.
 
 ### Status
-- [x] Activation memory-lancedb
-- [x] Installation skill rosepuppy-memory
-- [x] Mise en place Phase 1 (fichiers/protocole)
-- [ ] Commit + push des changements
+- [x] Modèle Sonnet stabilisé après nettoyage fallback
+- [x] Repo GitHub cible basculé sur `Doudou-labo/DoudouClaw`
+- [x] Project + issues opérationnels sur l'org
 
 ---
 
-*Last auto-update: 2026-02-12 21:37 UTC*
+*Last auto-update: 2026-02-16 23:10 UTC*

@@ -26,6 +26,7 @@
 - Format des résultats web : rendu en Markdown structuré (#/##/###), avec **gras**, *italique*, listes et liens propres
 - Workflow repo : à chaque modification de fichiers, fournir un petit récap (diff/ce qui a changé) + `git status` + faire un commit (sans inclure secrets/credentials) et pousser vers GitHub quand possible
 - Exigence stricte (2026-02-13) : toute modif/ajout de fichiers faite par l’agent doit être reflétée sur le repo GitHub (éviter divergence local vs remote)
+- Référence GitHub officielle (depuis 2026-02-16) : travailler sur `Doudou-labo/DoudouClaw` pour tout ce qui touche GitHub (commits/push/issues/projects)
 - Source d’info prioritaire : utiliser d’abord le workspace local (incl. mémoire/skills), puis fallback sur GitHub si doute, info introuvable ou possible modification distante
 - Référence PARA: quand une demande concerne l’organisation/projets/suivi/rappels/décisions déjà prises, consulter `notes/` par défaut. Si le message commence par **"PARA:"**, consulter systématiquement `notes/` avant de répondre.
 
@@ -43,6 +44,8 @@
 
 ### Key Decisions Made
 - Utiliser PARA + mémoire structurée pour améliorer la continuité de travail
+- Centraliser GitHub sur l'organisation `Doudou-labo` avec repo de travail `Doudou-labo/DoudouClaw`
+- Conserver l'identité bot `DoudouClaw` pour les commits/push
 
 ### Things to Remember
 - Le N+1 Arnaud est une relation clé, positive (pro + perso)
@@ -59,4 +62,4 @@ Amie de longue date d’Alexandre (amour de lycée) revenue récemment dans sa v
 
 ---
 
-*Dernière mise à jour: 2026-02-09*
+*Dernière mise à jour: 2026-02-16*
