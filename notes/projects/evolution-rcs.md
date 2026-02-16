@@ -193,11 +193,38 @@ Mais il faut le faire **de manière visible et tracée**.
 
 ---
 
+## 🛠️ Outils créés (disponibles dans notes/resources/templates/)
+
+1. **🅿️ Parking Sollicitations** (`parking-sollicitations.md`)
+   - Tableau quotidien pour noter les interruptions
+   - Système de priorisation 🔴🟡🟢
+   - Bilan quotidien pour tracker l'amélioration
+   - À imprimer ou remplir digital
+
+2. **📅 Script Point Hebdo Arnaud** (`point-hebdo-arnaud.md`)
+   - 3 options de script pour proposer le RDV
+   - Structure du point (15 min chrono)
+   - Questions clés à poser
+   - Template de notes post-point
+
+3. **📊 Suivi Hebdomadaire RCS** (`suivi-hebdo-rcs.md`)
+   - Tableau de bord avec indicateurs clés
+   - Tracker d'accomplissements
+   - Section apprentissages
+   - Échelle de confiance vers le poste
+
+---
+
 ## 🎯 Prochaines actions (cette semaine)
 
-1. **Demain (ou cette semaine)** : mettre en place le système "parking sollicitations"
-2. **Point avec Arnaud** : lui proposer un point hebdo 15 min pendant 1 mois
-3. **Tester la posture** : prochaine sollicitation → *"Je note, je reviens vers toi dans 30 min"*
+### Aujourd'hui
+- [ ] **Imprimer ou ouvrir** le template Parking Sollicitations
+- [ ] **Tester la phrase** : *"Je note, je te reviens dans 30 min"* dès la prochaine sollicitation
+
+### Cette semaine
+- [ ] **Proposer le point hebdo à Arnaud** (utiliser le script fourni)
+- [ ] **Remplir le suivi hebdo** le vendredi avant le week-end
+- [ ] **Noter 1 tâche RCS** réalisée pour la montrer à Arnaud
 
 ---
 
