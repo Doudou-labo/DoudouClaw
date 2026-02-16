@@ -56,6 +56,7 @@ tool-name --common-flag
 **Hook post-commit automatique :**
 - Fichier: `.git/hooks/post-commit`
 - Action: auto-push vers `origin main` après chaque commit
+- Garde-fous actifs: refuse push si `origin` n'est pas en HTTPS ou si `git user.name` ≠ `DoudouClaw`
 - Rend le push transparent et systématique
 
 **Scripts additionnels :**
