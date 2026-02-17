@@ -42,6 +42,12 @@ tool-name --common-flag
 - Touche d'humour légère quand pertinent
 - Inclure des emojis dans les réponses (préférence explicite utilisateur) 😄✨
 
+## Préférences Finance (Alexandre)
+
+- Quand Alexandre demande l’état/détail de ses comptes: répondre **sans transactions** (soldes uniquement).
+- Afficher les comptes **séparés**: Revolut, portefeuille actions, PERCO Natixis.
+- **Ne pas** donner de total combiné, sauf demande explicite.
+
 ---
 
 ## GitHub Backup Automation
