@@ -286,6 +286,22 @@ scripts/auto-self-improve-review.sh      # revue hebdo self-improving (.learning
 - ✅ Contrôle : humain décide, agent propose
 - ✅ Apprentissage : learnings tracés, dashboard d'évolution
 
+**Crons automatiques (ajoutés 2026-02-17) :**
+
+1. **Evolution Dashboard - Mise à jour 8h**
+   - ID: `ae293b73-ee13-403f-a034-81e0569e9fae`
+   - Horaire: 08:00 (Europe/Paris) - tous les jours
+   - Action: Lance `update-evolution-dashboard.sh` + résumé (learnings total, pending, changements)
+   - Delivery: Telegram (mode announce)
+
+2. **Evolution Dashboard - Mise à jour 19h**
+   - ID: `a156a993-1c6a-4675-8856-c80310cc69da`
+   - Horaire: 19:00 (Europe/Paris) - tous les jours
+   - Action: Lance `update-evolution-dashboard.sh` + résumé (learnings total, pending, changements)
+   - Delivery: Telegram (mode announce)
+
+**Objectif :** Suivi continu de l'évolution de l'agent, visibilité quotidienne des learnings et backlog.
+
 ## ripgrep pour les recherches
 
 **Status:** ✅ installé (15 février 2026)
