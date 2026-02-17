@@ -10,7 +10,7 @@
 ## 🧠 Ce qu'il faut savoir
 
 ### Contexte personnel
-- **Sa fille est l'ex d'Alexandre**
+- **Sa fille Audrey est l'ex d'Alexandre**
   - Élément sensible, mais la relation pro reste fluide
   - Arnaud garde une posture professionnelle claire
   - Pas d'impact négatif observé sur la relation de travail
