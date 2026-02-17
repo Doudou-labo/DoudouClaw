@@ -87,6 +87,34 @@ tool-name --common-flag
 **Règle mémoire (ajout 2026-02-16) :**
 - Si une mémoire est ajoutée/supprimée via tools (`memory_store` / `memory_forget`), consigner la trace utile dans un fichier mémoire local (`memory/YYYY-MM-DD.md` ou `MEMORY.md`) puis commit + push.
 
+## Web Search API (Brave + Perplexity)
+
+**Status:** ✅ Configured (2026-02-17)
+
+**Brave Search:**
+- Clé stockée dans: `.credentials/brave-api-key.txt`
+- Config: `tools.web.search.apiKey`
+- Provider: Brave Search API
+
+**Perplexity:**
+- Clé stockée dans: `.credentials/perplexity-api-key.txt`
+- Config: `tools.web.search.perplexity.apiKey` + `env.vars.PERPLEXITY_API_KEY`
+- Provider: Perplexity / OpenRouter
+
+**Commandes utiles:**
+```bash
+# Test Brave Search
+openclaw web-search "cours Michelin janvier 2026"
+
+# Test Perplexity via skill
+node skills/perplexity/scripts/search.mjs "cours Michelin janvier 2026"
+```
+
+**Gotchas:**
+- Les deux clés sont dans `.credentials/` (gitignored)
+- Config patché via `gateway config.patch` (nécessite restart)
+- Perplexity passe aussi via variable d'environnement pour le skill CLI
+
 ## LanceDB / Memory plugin (OpenClaw)
 
 **Status:** ✅ Working (corrigé le 2026-02-13)
