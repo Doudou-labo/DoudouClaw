@@ -2,7 +2,7 @@
 
 > Consolidated view of agent evolution (learnings + events)
 
-**Last updated:** 2026-02-17 12:26:14 UTC
+**Last updated:** 2026-02-17 18:01:54 UTC
 
 ---
 
@@ -14,7 +14,7 @@
 | Applied | 0 (0%) |
 | Pending | 0 (0%) |
 | Rejected | 0 |
-| Evolution events logged | 1 |
+| Evolution events logged | 21 |
 
 ---
 
