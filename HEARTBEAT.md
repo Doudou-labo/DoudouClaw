@@ -153,4 +153,105 @@ Things to check periodically:
 
 ---
 
-*Customize this checklist for your workflow.*
+## 🔧 1. Auto-Heal (résolution automatique)
+
+Exécuter à chaque heartbeat :
+```bash
+bash scripts/heartbeat-auto-heal.sh
+```
+
+**Ce que ça fait :**
+- Détecte les cooldowns API actifs → les nettoie automatiquement
+- Détecte les tokens OAuth expirés → alerte
+- Vérifie les crons en erreur (>3 consécutives) → alerte pour désactivation
+
+**Si alertes :** Notifier Doudou dans le topic `-1003791371950:topic:1495` uniquement si action requise.
+
+---
+
+## 💾 2. Auto-Commit (sauvegarde intelligente)
+
+Exécuter à chaque heartbeat :
+```bash
+bash scripts/heartbeat-auto-commit.sh
+```
+
+**Ce que ça fait :**
+- Scanne `memory/`, `notes/`, `TOOLS.md`, `AGENTS.md`, `HEARTBEAT.md`, `scripts/` pour changements non commités
+- Auto-commit + push via hook post-commit
+- Aucune perte de données entre les sessions
+
+**Règle :** Ne commit que les fichiers dans les patterns surveillés (pas de commit sauvage).
+
+---
+
+## ⚡ 3. Auto-Optimize (ajustements dynamiques)
+
+À chaque heartbeat, vérifier :
+
+1. **Provider usage :** Si un provider a eu >3 erreurs dans l'heure → réduire les crons qui l'utilisent
+2. **Cron patterns :** Si un cron produit systématiquement NO_REPLY (>5 runs consécutifs) → proposer réduction de fréquence
+3. **Contexte session :** Si contexte >70% → flush mémoire automatique (`SESSION-STATE.md` + `working-buffer.md`)
+
+**Action :** Proposer les optimisations, ne les appliquer que si impact faible (fréquence cron). Demander pour les changements structurels.
+
+---
+
+## 📚 4. Auto-Learn (apprentissage continu)
+
+Exécuter à chaque heartbeat :
+```bash
+bash scripts/heartbeat-auto-learn.sh
+```
+
+**Ce que ça fait :**
+- Scanne les logs récents (<1h) pour erreurs
+- Vérifie si des patterns d'erreur se répètent (>3x même type)
+- Croise avec les learnings existants pour éviter les doublons
+- Si pattern nouveau détecté → créer un learning automatiquement
+
+**Enrichissement :**
+- Après fix d'un problème → mettre à jour le learning (status: applied)
+- Si un gotcha est découvert → mettre à jour `TOOLS.md` automatiquement
+
+---
+
+## 🚨 5. Auto-Alert (alertes intelligentes)
+
+Exécuter à chaque heartbeat :
+```bash
+bash scripts/heartbeat-auto-alert.sh
+```
+
+**Ce que ça fait :**
+- **GitHub :** Issues critiques (labels bug/urgent) sur Doudou-labo/DoudouClaw
+- **CRM :** Tâches en retard (deadline dépassée)
+- **Finance :** Aucune saisie depuis >48h → rappel
+- **Disque :** Usage >85% → alerte
+
+**Règle d'envoi :**
+- Alerte uniquement si action requise
+- Max 1 alerte par type par jour (anti-spam)
+- Topic Telegram : `-1003791371950:topic:1495`
+
+---
+
+## 🧹 6. Auto-Cleanup (maintenance préventive)
+
+Exécuter à chaque heartbeat :
+```bash
+bash scripts/heartbeat-auto-cleanup.sh
+```
+
+**Ce que ça fait :**
+- Fichiers `.tmp` orphelins >24h → suppression
+- Logs >50MB → rotation (garder 1000 dernières lignes)
+- Rapports >30 jours → archivage dans `notes/archive/`
+- Médias inbound >7 jours → suppression
+- Vérification espace disque
+
+**Sécurité :** Jamais de suppression de fichiers de travail. Uniquement tmp/logs/cache.
+
+---
+
+*Automatismes ajoutés le 2026-02-17. 6 scripts heartbeat pour auto-heal, auto-commit, auto-optimize, auto-learn, auto-alert, auto-cleanup.*
