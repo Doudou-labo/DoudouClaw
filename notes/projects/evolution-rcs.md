@@ -228,4 +228,16 @@ Mais il faut le faire **de manière visible et tracée**.
 
 ---
 
-**Dernière mise à jour** : 2026-02-16 (19h - plan finalisé)
+## 🆕 Mise à jour contexte poste cible (2026-02-17)
+
+Le poste cible est confirmé en **centre MV (mixte VI + VL)**.
+Implications intégrées dans la roadmap GitHub:
+- ajout contraintes **VI** (retards règlements, qualité interventions parc, activité tachy si applicable)
+- maintien des exigences **VL** (NPS/TAP, excellence opérationnelle, standards centre)
+- pilotage unifié **MV** (business + opérationnel + management)
+
+Références:
+- `notes/projects/roadmap-rcs-mv-github.md`
+- `notes/projects/github-issues-rcs-mv.md`
+
+**Dernière mise à jour** : 2026-02-17 (roadmap MV + issues prêtes GitHub)
