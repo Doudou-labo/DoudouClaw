@@ -9,3 +9,13 @@
   "impact": "4 composants fonctionnels (evolution-log, learnings métadonnées, analyze-errors, dashboard) + documentation complète + 5 GitHub Issues tracées",
   "parent_id": null
 }
+{
+  "timestamp": "2026-02-17T15:26:32Z",
+  "id": "evt-1771341992-e7a94b50",
+  "category": "optimization",
+  "context": "Ajout crons automatiques pour mise à jour dashboard évolution (8h + 19h quotidien)",
+  "lesson": "Automatiser la surveillance de l'évolution sans intervention manuelle, visibilité quotidienne learnings/backlog",
+  "applied": true,
+  "impact": "2 crons créés, résumés Telegram 2x/jour, suivi continu activé",
+  "parent_id": null
+}
