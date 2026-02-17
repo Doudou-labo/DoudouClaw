@@ -302,6 +302,18 @@ scripts/auto-self-improve-review.sh      # revue hebdo self-improving (.learning
 
 **Objectif :** Suivi continu de l'évolution de l'agent, visibilité quotidienne des learnings et backlog.
 
+**Cron automatique analyse d'erreurs (ajouté 2026-02-17) :**
+
+- **Error Analysis - Rapport hebdo (dimanche 20h)**
+  - ID: `bb5db840-7ffe-4794-9015-e0fd85d903a3`
+  - Horaire: 20:00 (Europe/Paris) - tous les dimanches
+  - Action: Lance `analyze-errors.sh` + résumé (total erreurs, top patterns, recommandations)
+  - Alerte intelligente: 🚨 si >50 erreurs OU keywords critiques (segfault/crash/OOM)
+  - Commit automatique du rapport sur GitHub
+  - Delivery: Telegram (mode announce)
+
+**Objectif :** Détection proactive patterns d'erreurs récurrents, suivi hebdomadaire de la stabilité système.
+
 ## ripgrep pour les recherches
 
 **Status:** ✅ installé (15 février 2026)
