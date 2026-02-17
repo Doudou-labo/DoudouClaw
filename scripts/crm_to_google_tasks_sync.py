@@ -40,6 +40,7 @@ from typing import Any
 from zoneinfo import ZoneInfo
 import urllib.request
 import urllib.parse
+from urllib.error import HTTPError
 
 TZ = ZoneInfo("Europe/Paris")
 
@@ -235,12 +236,17 @@ def tasks_insert(tasklist_id: str, body: dict) -> dict:
     return http_json("POST", url, body=body)
 
 
-def tasks_patch(tasklist_id: str, task_id: str, body: dict) -> dict:
+def tasks_patch(tasklist_id: str, task_id: str, body: dict) -> dict | None:
     url = (
         f"{GATEWAY_BASE}/tasks/v1/lists/{urllib.parse.quote(tasklist_id, safe='')}/tasks/{urllib.parse.quote(task_id, safe='')}"
         "?fields=id,title,notes,status,due,updated,completed"
     )
-    return http_json("PATCH", url, body=body)
+    try:
+        return http_json("PATCH", url, body=body)
+    except HTTPError as e:
+        if e.code == 404:
+            return None  # Task not found (deleted manually)
+        raise
 
 
 def main() -> int:
@@ -296,8 +302,13 @@ def main() -> int:
                         tid = entry["googleTaskId"]
                         patch = {"title": title, "notes": notes}
                         patch["due"] = due if due else None
-                        tasks_patch(tasklist_id, tid, patch)
-                        entry["lastCrmUpdatedAt"] = last_marker
+                        result = tasks_patch(tasklist_id, tid, patch)
+                        if result is None:
+                            # Task was deleted on Google side, remove mapping and treat as new
+                            del mapping[key]
+                            changes.append(f"  (stale mapping removed, will recreate)")
+                        else:
+                            entry["lastCrmUpdatedAt"] = last_marker
 
         for t in done:
             key = f"v2:{t.id}"
@@ -309,7 +320,11 @@ def main() -> int:
                 continue
             changes.append(f"✓ complete task for CRM V2 {t.id}")
             if apply:
-                tasks_patch(tasklist_id, tid, {"status": "completed"})
+                result = tasks_patch(tasklist_id, tid, {"status": "completed"})
+                if result is None:
+                    # Task was deleted on Google side, remove from mapping
+                    del mapping[key]
+                    changes.append(f"  (removed stale mapping for V2 {t.id})")
 
     else:
         # Legacy SQLite followups
@@ -340,8 +355,13 @@ def main() -> int:
                         tid = entry["googleTaskId"]
                         patch = {"title": title, "notes": notes}
                         patch["due"] = due if due else None
-                        tasks_patch(tasklist_id, tid, patch)
-                        entry["lastCrmUpdatedAt"] = fu.updated_at
+                        result = tasks_patch(tasklist_id, tid, patch)
+                        if result is None:
+                            # Task was deleted on Google side, remove mapping and treat as new
+                            del mapping[key]
+                            changes.append(f"  (stale mapping removed, will recreate)")
+                        else:
+                            entry["lastCrmUpdatedAt"] = fu.updated_at
 
         for fu in done:
             key = f"sql:{fu.id}"
@@ -353,7 +373,11 @@ def main() -> int:
                 continue
             changes.append(f"✓ complete task for CRM SQL #{fu.id}")
             if apply:
-                tasks_patch(tasklist_id, tid, {"status": "completed"})
+                result = tasks_patch(tasklist_id, tid, {"status": "completed"})
+                if result is None:
+                    # Task was deleted on Google side, remove from mapping
+                    del mapping[key]
+                    changes.append(f"  (removed stale mapping for SQL #{fu.id})")
 
     if dry_run:
         print("DRY_RUN")
