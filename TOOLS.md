@@ -163,6 +163,101 @@ scripts/auto-self-improve-review.sh      # revue hebdo self-improving (.learning
 - `PARA Auto - revue hebdo (git sync)`
 - `Self-Improve Auto - revue hebdo (git sync)`
 
+## Evolution Protocol (GEP-inspired, sans auto-mutation)
+
+**Status:** ✅ Active (2026-02-17)
+
+**Vision:**
+- Emprunter les bonnes idées du skill `autogame-17/evolver` (protocole structuré, analyse logs)
+- **Rejeter** l'auto-mutation, le mode "Mad Dog", l'identity injection
+- Garder le contrôle humain total, transparence, rigueur
+
+**Composants installés:**
+
+1. **evolution-log.jsonl** (#14)
+   - Log structuré des événements d'évolution (bug/optimization/new-capability/refactor)
+   - Format JSONL avec timestamp, category, context, lesson, applied, impact, parent_id
+   - Script helper: `skills/self-improving-agent/scripts/log-evolution.sh`
+   - Doc: `skills/self-improving-agent/EVOLUTION-PROTOCOL.md`
+
+2. **Métadonnées enrichies .learnings** (#15)
+   - YAML frontmatter pour chaque learning (date, category, severity, status, impact, related)
+   - Template: `skills/self-improving-agent/.learnings/TEMPLATE.md`
+   - Script création: `skills/self-improving-agent/scripts/create-learning.sh`
+   - Doc: `skills/self-improving-agent/METADATA-GUIDE.md`
+
+3. **analyze-errors.sh** (#16)
+   - Analyse automatique logs + memory files (derniers 7 jours)
+   - Détecte patterns récurrents, outils problématiques
+   - Génère rapport markdown: `reports/error-analysis-YYYY-MM-DD.md`
+   - **Aucune correction auto**, juste alertes et recommandations
+   - Doc: `scripts/README-analyze-errors.md`
+
+4. **evolution-dashboard.md** (#17)
+   - Vue consolidée de l'évolution (stats, timeline, top learnings, open loops)
+   - Généré par: `scripts/update-evolution-dashboard.sh`
+   - Localisation: `notes/areas/evolution-dashboard.md`
+   - Agrège données de learnings + evolution-log.jsonl
+
+**Workflow:**
+
+1. **Quand un problème survient:**
+   ```bash
+   # Créer learning avec métadonnées
+   ./skills/self-improving-agent/scripts/create-learning.sh \
+     "Tool X fails on large files" "bug" "high"
+   
+   # Éditer le fichier pour compléter Context/Lesson/Fix/Impact
+   ```
+
+2. **Après correction:**
+   ```bash
+   # Logger événement d'évolution
+   ./skills/self-improving-agent/scripts/log-evolution.sh \
+     "bug" "Tool X timeout fixed" "Added retry logic" "true" "0 timeouts in 50 runs"
+   
+   # Mettre à jour learning: status=applied, impact mesuré
+   ```
+
+3. **Analyses périodiques:**
+   ```bash
+   # Erreurs hebdo
+   bash scripts/analyze-errors.sh
+   
+   # Dashboard mis à jour
+   bash scripts/update-evolution-dashboard.sh
+   ```
+
+4. **Traçabilité GitHub:**
+   - Créer Issues pour améliorations structurelles (workflow validé avec Alexandre)
+   - Référencer issues dans commits (`fixes #123`)
+   - Commits systématiques via identité bot DoudouClaw
+
+**GitHub Issues associées:**
+- #13 : [Meta] Workflow d'évolution structurée
+- #14 : evolution-log.jsonl ✅
+- #15 : Métadonnées .learnings ✅
+- #16 : analyze-errors.sh ✅
+- #17 : evolution-dashboard.md ✅
+
+**Différences vs autogame-17/evolver:**
+
+| Aspect | Evolver original | Notre implémentation |
+|--------|------------------|---------------------|
+| Auto-mutation | ✅ Oui (Mad Dog mode) | ❌ Non |
+| Validation humaine | ⚠️ Optionnelle (--review) | ✅ Obligatoire |
+| Identity injection | ✅ "Recursive Self-Improving" | ❌ Identité standard |
+| Protocole événements | ✅ GEP (genes/capsules/events) | ✅ Events only (simplifié) |
+| Analyse logs | ✅ Oui | ✅ Oui (amélioré) |
+| Reporting | ⚠️ Limité | ✅ Dashboards détaillés |
+| Traçabilité GitHub | ❌ Non | ✅ Issues + commits |
+
+**Alignment avec objectifs Alexandre:**
+- ✅ Rigueur : workflow formalisé, métadonnées structurées
+- ✅ Transparence : tout documenté + versionné Git
+- ✅ Contrôle : humain décide, agent propose
+- ✅ Apprentissage : learnings tracés, dashboard d'évolution
+
 ## ripgrep pour les recherches
 
 **Status:** ✅ installé (15 février 2026)
