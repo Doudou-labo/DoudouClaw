@@ -387,3 +387,66 @@ curl -X POST -H "Authorization: token $(cat .credentials/github-token.txt)" \
 ```
 
 **Note:** gh CLI pas utilisé (exige read:org non nécessaire), API REST directe préférée.
+
+## Discord Bot Integration
+
+**Status:** ✅ Working (corrigé le 2026-02-18)
+
+**Configuration:**
+- Token stocké dans config OpenClaw (`channels.discord.token`)
+- Guild ID: `1472335329527595038`
+- Bot username: `@DoudouClaw`
+- Rôles bot: OWNER + BOT + DoudouClaw (managed)
+
+**Fix majeur (18 fév 2026) — Intents Discord:**
+
+**Symptôme rencontré:**
+- Messages Discord n'arrivaient pas à OpenClaw (aucune session créée)
+- Commandes Discord retournaient "You are not authorized"
+- Logs: `Discord Message Content Intent is limited`
+
+**Cause racine:**
+OpenClaw demandait des intents privilégiés (`Guild Members` + `Presence`) dans la config, mais Discord ne les autorisait pas → conflit → bot bloqué.
+
+**Solution:**
+1. Activer **Message Content Intent** sur Discord Developer Portal (obligatoire pour lire le texte des messages)
+2. Désactiver les intents `Guild Members` et `Presence` dans l'interface web OpenClaw (`openclaw.doudougen.xyz` → Channels → Discord → Intents)
+
+**Config actuelle (working) :**
+```json
+{
+  "channels": {
+    "discord": {
+      "enabled": true,
+      "groupPolicy": "open",
+      "guilds": {
+        "1472335329527595038": {
+          "requireMention": false,
+          "reactionNotifications": "all"
+        }
+      },
+      "intents": {
+        "presence": false,
+        "guildMembers": false
+      }
+    }
+  }
+}
+```
+
+**Gotchas:**
+- Si le bot ne reçoit plus de messages Discord, vérifier d'abord les intents (Developer Portal + config OpenClaw)
+- La restriction `roles` dans la config guild était un red herring (retirée, mais pas la vraie cause)
+- Cross-context messaging bloqué : on ne peut pas envoyer sur Discord depuis une session Telegram (by design OpenClaw)
+
+**Commandes utiles:**
+```bash
+# Status Discord
+openclaw status --deep | grep -A 5 Discord
+
+# Logs Discord
+journalctl -xe --no-pager | grep -i discord | tail -30
+
+# Restart après changement config
+openclaw gateway restart
+```
