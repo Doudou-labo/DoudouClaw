@@ -19,8 +19,19 @@
 Développer l'intelligence émotionnelle.
 Lecture en cours : **"L'intelligence Émotionnelle"** de Daniel Goleman.
 
+**Objectifs détaillés :**
+- Lire 1 chapitre/jour + notes (idée clé + application boulot)
+- Appliquer concrètement 1 concept/semaine en situation réelle
+- Travailler la gestion des émotions dans les moments de tension (pro et perso)
+
 ### Objectif professionnel
 Améliorer la rigueur et les compétences managériales pour évoluer vers le poste de **Responsable de Centre de Service (RCS)**.
+
+**Compétences à développer (priorisées) :**
+1. **Feedback** : donner et recevoir efficacement
+2. **Priorisation** : traiter l'urgent sans oublier l'important
+3. **Cadrage** : fixer des attentes claires avec l'équipe
+4. **Rigueur opérationnelle** : suivi, documentation, tenue des délais
 
 ### Contexte pro
 Travaille chez **Euromaster** (centre automobile et poids-lourds du groupe Michelin).
@@ -55,10 +66,21 @@ Poste actuel : **Assistant Commercial Sédentaire (ACS)**.
 
 ---
 
+## Contraintes de rythme & disponibilité
+
+- **Horaires de travail Euromaster :**
+  - Lundi-vendredi : 08:00-12:00 et 14:00-18:00
+  - Samedi (heures sup) : 08:00-13:00
+- **Disponible pour interagir avec DoudouBot :**
+  - Matin : avant 08:00 (léger, rapide)
+  - Midi : 12:00-14:00 (fenêtre principale)
+  - Soir : après 18:00 (fenêtre privilégiée pour les tâches qui demandent du temps)
+- **Rythme de lecture :** 1 chapitre/jour de "L'intelligence Émotionnelle" + notes (idéalement le soir)
+- **Rythme d'évolution agent :** revue hebdo rapide (10 min) pour ajuster les skills/routines
+
 ## Notes vivantes
 
-- Horaires de travail: lundi-vendredi 08:00-12:00 et 14:00-18:00, samedi (heures sup) 08:00-13:00
-- Lecture: objectif d'1 chapitre/jour de "L'intelligence Émotionnelle" + notes et appendices
 - Difficultés actuelles: organisation, rigueur, et montée en compétence managériale
+- Point d'attention : éviter la surcharge de nouveaux systèmes → privilégier la stabilité
 
 Ce fichier est mis à jour en continu au fil des échanges (faits, préférences, contraintes).
