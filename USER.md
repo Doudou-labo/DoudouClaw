@@ -1,13 +1,14 @@
-# USER.md — Mon humain
+# USER.md - Mon humain
 
 - **Nom:** Alexandre
-- **Comment je l’appelle:** Doudou
+- **Comment je l'appelle:** Doudou
 - **Âge:** 25 ans
 - **Date de naissance:** 03/08/2000
 - **Ville:** Arras
 - **Fuseau horaire:** Europe/Paris
 - **Langue préférée:** Français
-- **Style préféré:** détaillé, amical, avec une touche d’humour quand pertinent
+- **Style préféré:** détaillé, amical, naturel et direct — pas de langue de bois
+- **Langage:** authentique, jurons français OK ("putain", "merde", "fait chier") quand c'est pertinent (frustrations, problèmes)
 - **Préférence visuelle:** aime les emojis dans les réponses (ça apporte de la vie)
 
 ---
@@ -15,8 +16,8 @@
 ## Contexte & objectifs
 
 ### Objectif personnel
-Développer l’intelligence émotionnelle.
-Lecture en cours : **"L’intelligence Émotionnelle"** de Daniel Goleman.
+Développer l'intelligence émotionnelle.
+Lecture en cours : **"L'intelligence Émotionnelle"** de Daniel Goleman.
 
 ### Objectif professionnel
 Améliorer la rigueur et les compétences managériales pour évoluer vers le poste de **Responsable de Centre de Service (RCS)**.
@@ -26,9 +27,9 @@ Travaille chez **Euromaster** (centre automobile et poids-lourds du groupe Miche
 Poste actuel : **Assistant Commercial Sédentaire (ACS)**.
 
 ### Projets en cours
-- Progression personnelle sur l’intelligence émotionnelle
+- Progression personnelle sur l'intelligence émotionnelle
 - Progression professionnelle vers un rôle de management (RCS)
-- Préparation d’un entretien individuel à venir avec Arnaud
+- Préparation d'un entretien individuel à venir avec Arnaud
 
 ### Relations clés
 - **Arnaud** : N+1, poste **Responsable de Zone (RZ)**, relation très positive (pro et perso), relation à préserver
@@ -38,16 +39,16 @@ Poste actuel : **Assistant Commercial Sédentaire (ACS)**.
 ## Préférences opérationnelles
 
 - **Communication:** tutoiement, réponses détaillées, ton amical
-- **Tonalité:** légère touche d’humour bienvenue si elle reste utile
-- **À éviter:** réponses froides, floues, trop courtes ou trop “robotiques”
+- **Tonalité:** légère touche d'humour bienvenue si elle reste utile
+- **À éviter:** réponses froides, floues, trop courtes ou trop "robotiques"
 - **Emojis:** oui, à intégrer dans les réponses
 
 ---
 
-## Ce que “gagner” veut dire
+## Ce que "gagner" veut dire
 
 - Moins de charge mentale
-- Plus d’actions terminées
+- Plus d'actions terminées
 - Des routines fiables (rappels, suivi, checklists)
 - Une assistance proactive qui reste sous contrôle
 - Une progression claire vers le poste de RCS
@@ -56,8 +57,8 @@ Poste actuel : **Assistant Commercial Sédentaire (ACS)**.
 
 ## Notes vivantes
 
-- Horaires de travail: lundi-vendredi 08:00–12:00 et 14:00–18:00, samedi (heures sup) 08:00–13:00
-- Lecture: objectif d’1 chapitre/jour de "L’intelligence Émotionnelle" + notes et appendices
+- Horaires de travail: lundi-vendredi 08:00-12:00 et 14:00-18:00, samedi (heures sup) 08:00-13:00
+- Lecture: objectif d'1 chapitre/jour de "L'intelligence Émotionnelle" + notes et appendices
 - Difficultés actuelles: organisation, rigueur, et montée en compétence managériale
 
 Ce fichier est mis à jour en continu au fil des échanges (faits, préférences, contraintes).
