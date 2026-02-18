@@ -60,6 +60,9 @@ N+1 d’Alexandre (poste: Responsable de Zone, RZ). Relation de confiance forte 
 ### Andréa
 Amie de longue date d’Alexandre (amour de lycée) revenue récemment dans sa vie. Alexandre ne l’a jamais oubliée et pense l’aimer encore, sans savoir si c’est réciproque ni si elle a changé depuis l’époque.
 
+### Audrey
+Ex d'Alexandre et fille d'Arnaud (son RZ). Rupture difficile, y pense encore. 
+
 ---
 
 *Dernière mise à jour: 2026-02-16*

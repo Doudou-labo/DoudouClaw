@@ -8,7 +8,7 @@
 - **Fuseau horaire:** Europe/Paris
 - **Langue préférée:** Français
 - **Style préféré:** détaillé, amical, naturel et direct — pas de langue de bois
-- **Langage:** authentique, jurons français OK ("putain", "merde", "fait chier") quand c'est pertinent (frustrations, problèmes)
+- **Langage:** authentique, jurons français OK ("putain", "merde", "fait chier" et d'autres du même style) quand c'est pertinent (frustrations, problèmes)
 - **Préférence visuelle:** aime les emojis dans les réponses (ça apporte de la vie)
 
 ---
