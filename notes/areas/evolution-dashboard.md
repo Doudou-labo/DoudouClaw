@@ -2,7 +2,7 @@
 
 > Consolidated view of agent evolution (learnings + events)
 
-**Last updated:** 2026-02-18 07:00:08 UTC
+**Last updated:** 2026-02-18 18:01:07 UTC
 
 ---
 
@@ -10,11 +10,11 @@
 
 | Metric | Value |
 |--------|-------|
-| Total learnings | 0 |
-| Applied | 0 (0%) |
+| Total learnings | 1 |
+| Applied | 1 (100.0%) |
 | Pending | 0 (0%) |
 | Rejected | 0 |
-| Evolution events logged | 21 |
+| Evolution events logged | 31 |
 
 ---
 
@@ -22,6 +22,7 @@
 
 | Category | Total | Applied | Pending | Completion % |
 |----------|-------|---------|---------|--------------|
+| bug | 1 | 1 | 0 | 100.0% |
 
 ---
 
@@ -29,6 +30,7 @@
 
 | Month | Count |
 |-------|-------|
+| 2026-02 | 1 |
 
 ---
 
@@ -36,6 +38,7 @@
 
 | # | Title | Impact |
 |---|-------|--------|
+| 1 | [Discord bot blocked by conflicting intents configuration](/root/.openclaw/workspace/skills/self-improving-agent/.learnings/2026-02-18-discord-bot-blocked-by-conflicting-intents-configuration.md) | Discord bot fully operational - messages received and processed |
 
 ---
 
