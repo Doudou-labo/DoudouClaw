@@ -39,5 +39,5 @@
 - [ ] Choisir le fallback si `openai-codex/gpt-5.3-codex` est indispo (probablement `openai-codex/gpt-5.2`)
 
 ## Auto-checkpoints
-- [ ] [AUTO 2026-02-17 midi] Checkpoint 3-min fait. Next: Ce soir 21:15 : saisir les dépenses du jour (`finance add ...`) puis vérifier (`finance recent 5`) et résumé (`finance summary`)
+- [ ] [AUTO 2026-02-18 midi] Checkpoint 3-min fait. Next: Ce soir 21:15 : saisir les dépenses du jour (`finance add ...`) puis vérifier (`finance recent 5`) et résumé (`finance summary`)
 
