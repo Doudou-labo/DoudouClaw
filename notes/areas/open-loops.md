@@ -34,10 +34,5 @@
 - [ ] Me donner ton mode d'accès + 1-2 IPs à whitelister (pour éviter de te bloquer)
 - [ ] Après ton feu vert : installer/configurer fail2ban (sshd) + test de verrouillage safe
 
-### Modèles - mode "auto" (Kimi discussion / Codex technique)
-- [ ] Définir un critère simple de bascule (mots-clés / commande / type de demande)
-- [ ] Choisir le fallback si `openai-codex/gpt-5.3-codex` est indispo (probablement `openai-codex/gpt-5.2`)
-
 ## Auto-checkpoints
 - [ ] [AUTO 2026-02-18 midi] Checkpoint 3-min fait. Next: Ce soir 21:15 : saisir les dépenses du jour (`finance add ...`) puis vérifier (`finance recent 5`) et résumé (`finance summary`)
-
