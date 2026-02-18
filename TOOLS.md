@@ -438,6 +438,7 @@ OpenClaw demandait des intents privilégiés (`Guild Members` + `Presence`) dans
 - Si le bot ne reçoit plus de messages Discord, vérifier d'abord les intents (Developer Portal + config OpenClaw)
 - La restriction `roles` dans la config guild était un red herring (retirée, mais pas la vraie cause)
 - Cross-context messaging bloqué : on ne peut pas envoyer sur Discord depuis une session Telegram (by design OpenClaw)
+- **Commandes "not authorized" :** Si `channels.discord.allowFrom` est null ET aucun rôle configuré dans la guild → OpenClaw refuse **tout le monde**. Fix : mettre `allowFrom: ["*"]` pour une guild privée.
 
 **Commandes utiles:**
 ```bash
