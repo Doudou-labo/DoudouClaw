@@ -1,0 +1,22 @@
+{
+  "currency": "EUR",
+  "income": [
+    {
+      "id": 1,
+      "amount": 793,
+      "description": "Acompte salaire",
+      "type": "other",
+      "date": "2026-02-16T09:24:18.085789",
+      "timestamp": 1771233858
+    },
+    {
+      "id": 2,
+      "amount": 7.88,
+      "description": "Remboursement Carrefour",
+      "type": "refund",
+      "date": "2026-02-19T16:03:12.076171+00:00",
+      "timestamp": 1771516992
+    }
+  ],
+  "created_at": "2026-02-16T09:00:27.984164"
+}

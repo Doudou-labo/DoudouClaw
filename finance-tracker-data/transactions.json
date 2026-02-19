@@ -1,0 +1,92 @@
+{
+  "version": "1.0",
+  "currency": "EUR",
+  "created_at": "2026-02-09T21:33:20.620712",
+  "transactions": [
+    {
+      "id": 1,
+      "amount": 550,
+      "category": "home",
+      "description": "Loyer février (ajusté remboursement avance)",
+      "date": "2026-02-16T09:05:12.926408",
+      "timestamp": 1771232712
+    },
+    {
+      "id": 2,
+      "amount": 55,
+      "category": "subscriptions",
+      "description": "Revolut abonnement",
+      "date": "2026-02-16T09:39:07.858454",
+      "timestamp": 1771234747
+    },
+    {
+      "id": 3,
+      "amount": 21,
+      "category": "tech",
+      "description": "Claude AI abonnement tech",
+      "date": "2026-02-16T12:01:23.488219",
+      "timestamp": 1771243283
+    },
+    {
+      "id": 4,
+      "amount": 14,
+      "category": "food",
+      "description": "Flunch repas midi",
+      "date": "2026-02-16T12:02:13.145785",
+      "timestamp": 1771243333
+    },
+    {
+      "id": 5,
+      "amount": 7.6,
+      "category": "food",
+      "description": "Thiriet",
+      "date": "2026-02-19T15:46:13.584973",
+      "timestamp": 1771515973,
+      "updated_at": "2026-02-19T15:46:22.987377"
+    },
+    {
+      "id": 6,
+      "amount": 6.99,
+      "category": "food",
+      "description": "Thiriet",
+      "date": "2026-02-19T15:46:13.646636",
+      "timestamp": 1771515973,
+      "updated_at": "2026-02-19T15:46:23.057200"
+    },
+    {
+      "id": 7,
+      "amount": 8.08,
+      "category": "food",
+      "description": "Carrefour",
+      "date": "2026-02-19T15:46:13.710006",
+      "timestamp": 1771515973,
+      "updated_at": "2026-02-19T15:46:23.121832"
+    },
+    {
+      "id": 8,
+      "amount": 13.15,
+      "category": "food",
+      "description": "Marie Blachere",
+      "date": "2026-02-19T15:46:13.770939",
+      "timestamp": 1771515973,
+      "updated_at": "2026-02-19T15:46:23.183306"
+    },
+    {
+      "id": 9,
+      "amount": 7.88,
+      "category": "food",
+      "description": "Carrefour",
+      "date": "2026-02-19T15:46:13.826059",
+      "timestamp": 1771515973,
+      "updated_at": "2026-02-19T15:46:23.247696"
+    },
+    {
+      "id": 10,
+      "amount": 13.0,
+      "category": "tobacco",
+      "description": "La Chope d'Or",
+      "date": "2026-02-19T16:01:07.221223",
+      "timestamp": 1771516867
+    }
+  ]
+}

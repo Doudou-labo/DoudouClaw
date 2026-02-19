@@ -1,0 +1,83 @@
+{
+  "recurring": [
+    {
+      "id": 1,
+      "amount": 23,
+      "description": "ChatGPT",
+      "category": "other",
+      "frequency": "monthly",
+      "day": 15,
+      "start_date": "2026-02-15T18:03:17.451915",
+      "last_logged": null,
+      "next_due": "2026-03-15T18:03:17.451921",
+      "active": false,
+      "created_at": "2026-02-15T18:03:17.452075"
+    },
+    {
+      "id": 2,
+      "amount": 23,
+      "description": "ChatGPT",
+      "category": "tech",
+      "frequency": "monthly",
+      "day": 15,
+      "start_date": "2026-02-15T18:19:53.909256",
+      "last_logged": null,
+      "next_due": "2026-03-15T18:19:53.909268",
+      "active": true,
+      "created_at": "2026-02-15T18:19:53.909304"
+    },
+    {
+      "id": 3,
+      "amount": 655,
+      "description": "Loyer",
+      "category": "home",
+      "frequency": "monthly",
+      "day": 15,
+      "start_date": "2026-02-15T18:31:44.405023",
+      "last_logged": null,
+      "next_due": "2026-03-15T18:31:44.405037",
+      "active": true,
+      "created_at": "2026-02-15T18:31:44.405047"
+    },
+    {
+      "id": 4,
+      "amount": 55,
+      "description": "Abonnement Revolut",
+      "category": "subscriptions",
+      "frequency": "monthly",
+      "day": 16,
+      "start_date": "2026-02-16T09:22:09.237048",
+      "last_logged": null,
+      "next_due": "2026-03-16T09:22:09.237063",
+      "active": true,
+      "created_at": "2026-02-16T09:22:09.237360"
+    },
+    {
+      "id": 5,
+      "amount": 21,
+      "description": "Claude AI",
+      "category": "other",
+      "frequency": "monthly",
+      "day": 16,
+      "start_date": "2026-02-16T12:01:21.258721",
+      "last_logged": null,
+      "next_due": "2026-03-16T12:01:21.258740",
+      "active": true,
+      "created_at": "2026-02-16T12:01:21.259004"
+    },
+    {
+      "id": 6,
+      "amount": 50,
+      "description": "Versement PERCO Natixis",
+      "category": "other",
+      "frequency": "monthly",
+      "day": 5,
+      "start_date": "2026-02-17T01:15:02.257586",
+      "last_logged": null,
+      "next_due": "2026-03-05T01:15:02.257604",
+      "active": true,
+      "created_at": "2026-02-17T01:15:02.257618"
+    }
+  ],
+  "created_at": "2026-02-15T18:03:17.450814"
+}
