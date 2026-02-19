@@ -35,5 +35,5 @@
 - [ ] Après ton feu vert : installer/configurer fail2ban (sshd) + test de verrouillage safe
 
 ## Auto-checkpoints
-- [ ] [AUTO 2026-02-19 midi] Checkpoint 3-min fait. Next: Ce soir 21:15 : saisir les dépenses du jour (`finance add ...`) puis vérifier (`finance recent 5`) et résumé (`finance summary`)
+- [ ] [AUTO 2026-02-19 soir] Checkpoint 3-min fait. Next: Ce soir 21:15 : saisir les dépenses du jour (`finance add ...`) puis vérifier (`finance recent 5`) et résumé (`finance summary`)
 
