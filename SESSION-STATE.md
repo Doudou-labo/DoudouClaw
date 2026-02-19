@@ -1,26 +1,24 @@
 # SESSION-STATE.md — Active Working Memory
 
 ## Current Task
-Formaliser la règle de miroir mémoire: toute mémoire importante stockée via `memory_store` doit aussi être tracée dans les fichiers mémoire Git du workspace.
+Mettre à jour les préférences mémoire: désactiver la règle Telegram "une seule réponse finale" à la demande d’Alexandre.
 
 ## Immediate Context
-- Alexandre a demandé où sont stockées les mémoires LanceDB (hors repo Git).
-- Vérification faite: base OpenClaw locale trouvée dans `~/.openclaw/memory/lancedb/memories.lance`.
-- Décision validée par Alexandre: mettre en place la règle "miroir" pour visibilité GitHub.
+- Alexandre a demandé explicitement de désactiver la règle Telegram liée au bug d’écrasement de messages.
+- Cette règle était présente dans la mémoire LTM (memory_store/LanceDB).
+- Action prévue: retirer la mémoire concernée et tracer la décision dans les notes mémoire Git.
 
 ## Key Decisions
-1. Les entrées `memory_store` restent dans LanceDB (runtime local, non versionné Git).
-2. Pour les éléments importants, ajouter un miroir court dans `memory/YYYY-MM-DD.md` (et `MEMORY.md` si c'est durable).
-3. Documenter la règle dans les fichiers d'exploitation pour la rendre systématique.
+1. La règle Telegram "une seule réponse finale" est désactivée.
+2. Ne plus l’appliquer comme préférence active.
+3. Conserver une trace horodatée de la désactivation dans `memory/2026-02-19.md`.
 
 ## Key Files
 - `memory/2026-02-19.md`
-- `AGENTS.md`
-- `TOOLS.md`
-- `MEMORY.md`
+- `SESSION-STATE.md`
 
 ## Open Questions
-- Faut-il automatiser le miroir via script dédié (optionnel, pas bloquant).
+- Aucune bloquante.
 
 ## Last Updated
-2026-02-19 22:05 UTC
+2026-02-19 22:12 UTC
