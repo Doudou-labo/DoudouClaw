@@ -16,15 +16,6 @@ Before doing anything:
 
 Don't ask permission. Just do it.
 
-## Communication Rule (global)
-
-For any task likely to take **more than ~30 seconds** or involve **multiple steps**:
-1. Send an immediate acknowledgment first (e.g., "Bien reçu, je m'en occupe maintenant.")
-2. Then send the completion message when done.
-
-For short conversational replies, respond normally in a single message.
-Apply this behavior consistently.
-
 ---
 
 ## Memory
