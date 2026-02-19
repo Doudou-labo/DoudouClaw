@@ -84,8 +84,10 @@ tool-name --common-flag
 3. `TOOLS.md` → procédure opérationnelle centralisée
 4. `.git/hooks/post-commit` → auto-push systématique
 
-**Règle mémoire (ajout 2026-02-16) :**
+**Règle mémoire (ajout 2026-02-16, renforcée 2026-02-19) :**
 - Si une mémoire est ajoutée/supprimée via tools (`memory_store` / `memory_forget`), consigner la trace utile dans un fichier mémoire local (`memory/YYYY-MM-DD.md` ou `MEMORY.md`) puis commit + push.
+- **Règle miroir opérationnelle :** chaque `memory_store` important doit avoir un miroir lisible Git (1-3 lignes minimum dans `memory/YYYY-MM-DD.md`).
+- Si l'information est durable (préférence stable, décision long terme, relation clé), la promouvoir ensuite dans `MEMORY.md`.
 
 ## Web Search API (Brave + Perplexity)
 

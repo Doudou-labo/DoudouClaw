@@ -93,6 +93,7 @@ Templates disponibles dans `notes/resources/templates/`.
 - Scripts créés/édités → commit + push
 - Configuration changée → commit + push
 - Opérations mémoire tool (`memory_store` / `memory_forget`) → journaliser la décision dans un fichier de mémoire local puis commit + push
+- Règle miroir mémoire: toute `memory_store` importante doit être résumée en 1-3 lignes dans `memory/YYYY-MM-DD.md` (et promue vers `MEMORY.md` si durable) pour visibilité GitHub
 
 **4 méthodes d’ancrage (obligatoires) :**
 1. Règle explicite dans `AGENTS.md` (ce bloc)

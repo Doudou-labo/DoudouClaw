@@ -1,27 +1,26 @@
 # SESSION-STATE.md — Active Working Memory
 
 ## Current Task
-Synchronisation finale de la mémoire après la session de debug modèle + migration GitHub organisation.
+Formaliser la règle de miroir mémoire: toute mémoire importante stockée via `memory_store` doit aussi être tracée dans les fichiers mémoire Git du workspace.
 
 ## Immediate Context
-- L'utilisateur (Alexandre) a validé la nouvelle cible GitHub: `Doudou-labo/DoudouClaw`.
-- Le project org est actif: `https://github.com/orgs/Doudou-labo/projects/1`.
-- Les issues utiles ont été migrées/recopiées et liées au project.
-- Côté modèles, la sélection Sonnet est stabilisée après retrait des fallbacks `google-antigravity/*` (403).
+- Alexandre a demandé où sont stockées les mémoires LanceDB (hors repo Git).
+- Vérification faite: base OpenClaw locale trouvée dans `~/.openclaw/memory/lancedb/memories.lance`.
+- Décision validée par Alexandre: mettre en place la règle "miroir" pour visibilité GitHub.
 
 ## Key Decisions
-1. Tout ce qui touche GitHub passe désormais par `Doudou-labo/DoudouClaw`.
-2. Identité de commit/push conservée: bot `DoudouClaw`.
-3. En cas de doute modèle: se fier à `/status` + logs runtime plutôt qu'au seul menu `/models`.
+1. Les entrées `memory_store` restent dans LanceDB (runtime local, non versionné Git).
+2. Pour les éléments importants, ajouter un miroir court dans `memory/YYYY-MM-DD.md` (et `MEMORY.md` si c'est durable).
+3. Documenter la règle dans les fichiers d'exploitation pour la rendre systématique.
 
 ## Key Files
-- `memory/2026-02-16.md`
-- `MEMORY.md`
-- `RECENT_CONTEXT.md`
+- `memory/2026-02-19.md`
+- `AGENTS.md`
 - `TOOLS.md`
+- `MEMORY.md`
 
 ## Open Questions
-- Aucune bloquante.
+- Faut-il automatiser le miroir via script dédié (optionnel, pas bloquant).
 
 ## Last Updated
-2026-02-16 23:10 UTC
+2026-02-19 22:05 UTC
