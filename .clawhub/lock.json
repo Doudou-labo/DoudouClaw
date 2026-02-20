@@ -84,6 +84,10 @@
     "notion-api-skill": {
       "version": "1.0.5",
       "installedAt": 1771531472742
+    },
+    "obsidian": {
+      "version": "1.0.0",
+      "installedAt": 1771539697542
     }
   }
 }
