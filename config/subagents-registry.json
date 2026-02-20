@@ -1,0 +1,81 @@
+{
+  "version": 1,
+  "strategy": {
+    "scope": "per-channel",
+    "bootstrap": "on-demand",
+    "restartRecovery": "ensure-and-recreate",
+    "notes": "Les spécialistes sont créés/réutilisés par channel. Après restart, ils sont recréés automatiquement au premier besoin."
+  },
+  "roles": [
+    {
+      "id": "orchestrator",
+      "label": "spec-orchestrator",
+      "purpose": "Classifier la demande, sélectionner les spécialistes, fusionner les résultats et répondre.",
+      "triggers": ["multi-step", "cross-domain", "needs-routing"],
+      "defaultModel": "sonnet"
+    },
+    {
+      "id": "github",
+      "label": "spec-github",
+      "purpose": "Issues, PR, CI, review, workflows GitHub via gh/API.",
+      "triggers": ["github", "pr", "issue", "ci"],
+      "defaultModel": "codex"
+    },
+    {
+      "id": "research",
+      "label": "spec-research",
+      "purpose": "Recherche web Brave/Perplexity + synthèse fiable avec sources.",
+      "triggers": ["search", "research", "veille", "web"],
+      "defaultModel": "sonnet"
+    },
+    {
+      "id": "coding",
+      "label": "spec-coding",
+      "purpose": "Code, debug, refactor, tests, scripts techniques.",
+      "triggers": ["code", "bug", "refactor", "script"],
+      "defaultModel": "codex"
+    },
+    {
+      "id": "writing",
+      "label": "spec-writing",
+      "purpose": "Rédaction: messages, docs, templates, reformulations.",
+      "triggers": ["rédige", "écris", "doc", "message"],
+      "defaultModel": "sonnet"
+    },
+    {
+      "id": "memory-context",
+      "label": "spec-memory",
+      "purpose": "Consolidation mémoire: session-state, daily memory, décisions persistantes.",
+      "triggers": ["mémoire", "context", "rappel", "historique"],
+      "defaultModel": "haiku"
+    },
+    {
+      "id": "planning-coaching",
+      "label": "spec-planning",
+      "purpose": "Plan d’action, priorisation, coaching RCS, préparation entretiens.",
+      "triggers": ["plan", "priorité", "entretien", "RCS"],
+      "defaultModel": "sonnet"
+    },
+    {
+      "id": "finance",
+      "label": "spec-finance",
+      "purpose": "Suivi comptes/portefeuille/PERCO selon préférences d’affichage.",
+      "triggers": ["finance", "compte", "revolut", "perco"],
+      "defaultModel": "haiku"
+    },
+    {
+      "id": "crm-followup",
+      "label": "spec-crm",
+      "purpose": "Contacts, interactions, relances CRM.",
+      "triggers": ["crm", "relance", "contact", "suivi"],
+      "defaultModel": "haiku"
+    },
+    {
+      "id": "ops-automation",
+      "label": "spec-ops",
+      "purpose": "Crons, santé OpenClaw, auto-heal, maintenance scripts.",
+      "triggers": ["cron", "automation", "heartbeat", "openclaw status"],
+      "defaultModel": "codex"
+    }
+  ]
+}

@@ -1,24 +1,26 @@
 # SESSION-STATE.md — Active Working Memory
 
 ## Current Task
-Mettre à jour les préférences mémoire: désactiver la règle Telegram "une seule réponse finale" à la demande d’Alexandre.
+Mettre en place une architecture multi-agents spécialisée (orchestrateur + rôles dédiés) utilisable dans les channels Discord, avec stratégie d’auto-recréation après restart.
 
 ## Immediate Context
-- Alexandre a demandé explicitement de désactiver la règle Telegram liée au bug d’écrasement de messages.
-- Cette règle était présente dans la mémoire LTM (memory_store/LanceDB).
-- Action prévue: retirer la mémoire concernée et tracer la décision dans les notes mémoire Git.
+- Alexandre valide l’approche “orchestrateur qui appelle les agents nécessaires”.
+- Il veut des rôles complets selon ses usages habituels (pas juste 4 rôles basiques).
+- Contrainte OpenClaw: sessions sub-agents non globales par défaut; pattern recommandé = pool spécialisé par channel + ensure/recreate automatique.
 
 ## Key Decisions
-1. La règle Telegram "une seule réponse finale" est désactivée.
-2. Ne plus l’appliquer comme préférence active.
-3. Conserver une trace horodatée de la désactivation dans `memory/2026-02-19.md`.
+1. Adopter une architecture avancée avec un orchestrateur + 10 spécialistes.
+2. Prévoir un registry versionné des rôles et règles de routage.
+3. Prévoir une stratégie de résilience post-restart (ensure on-demand + watchdog optionnel).
 
 ## Key Files
-- `memory/2026-02-19.md`
-- `SESSION-STATE.md`
+- `config/subagents-registry.json`
+- `notes/areas/subagents-orchestration.md`
+- `memory/2026-02-20.md`
 
 ## Open Questions
-- Aucune bloquante.
+- Fréquence exacte du watchdog (ex: 10 min, 30 min, 1h).
+- Activer un préchauffage proactif sur les channels prioritaires ou uniquement à la demande.
 
 ## Last Updated
-2026-02-19 22:12 UTC
+2026-02-20 UTC
