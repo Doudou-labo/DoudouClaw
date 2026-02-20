@@ -1,12 +1,12 @@
 # SESSION-STATE.md — Active Working Memory
 
 ## Current Task
-Finaliser la traçabilité GitHub de la migration hybride persistante, puis publier un compte rendu d’usage/fonctionnement des agents dans le salon Discord dédié.
+Corriger le mode d’orchestration utilisateur pour éviter les auto-announces bruyants et fiabiliser la ligne `Agents utilisés` avec la vraie chaîne d’agents invoqués.
 
 ## Immediate Context
-- Alexandre valide d’aller jusqu’au bout pour “être sûr de tout”.
-- La config hybride persistante contient déjà 9 agents, il manque `spec-memory` et `spec-crm` en statique.
-- Action: ajouter ces 2 agents dans `~/.openclaw/openclaw.json`, redémarrer le gateway, vérifier `agents_list`.
+- Alexandre signale encore un échec UX: bruit interne (`<relevant-memories>`, context blocks) visible dans Discord + footer `Agents utilisés : main` alors que des specs ont tourné.
+- Cause racine: usage de `sessions_spawn` pour orchestration utilisateur (auto-announce public) + footer non raccordé à la chaîne réelle.
+- Action: basculer la politique vers `sessions_send` pour orchestration interactive, réserver `sessions_spawn` au background, et imposer footer avec chaîne réelle des agents appelés.
 
 ## Key Decisions
 1. Adopter une architecture avancée avec un orchestrateur + 10 spécialistes.

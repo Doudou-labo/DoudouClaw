@@ -46,6 +46,8 @@ tool-name --common-flag
 - Règle orchestrator: s’il est utilisé, il doit déléguer à ≥1 spécialiste `spec-*` (sinon rester en `main`)
 - Déclencheur hard: si la demande couvre 2+ domaines, ne pas traiter en `main`; passer par orchestrator + specs.
 - Déclencheur explicite: si l’utilisateur écrit "utilise les agents nécessaires", forcer le passage orchestrator.
+- Orchestration interactive: utiliser `sessions_send` vers les agents persistants pour éviter les auto-announces de `sessions_spawn` dans le channel.
+- Transparence exacte: `Agents utilisés` doit lister les agents réellement invoqués (pas uniquement `main`).
 
 ## Préférences Finance (Alexandre)
 

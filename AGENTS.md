@@ -264,6 +264,9 @@ Don't wait for permission to improve. If you learned something, write it down no
 - Déclencheur texte explicite: si le message contient "utilise les agents nécessaires" (ou équivalent), forcer `spec-orchestrator`.
 - Règle stricte: si `spec-orchestrator` est utilisé, il doit appeler **au moins un** spécialiste `spec-*` avant synthèse finale.
 - Interdiction de sortir `Agents utilisés : main` sur une demande multi-domaines.
+- Pour l’orchestration interactive user-facing: privilégier `sessions_send` vers agents persistants (`spec-*`), pas `sessions_spawn` (qui auto-annonce publiquement).
+- Réserver `sessions_spawn` aux tâches background/longues où l’annonce automatique est voulue.
+- Le footer `Agents utilisés : ...` doit refléter la chaîne réelle (main + specs réellement appelés).
 - En cas d’échec spécialiste: recreate immédiat, 1 retry, puis fallback voisin.
 - Cible de réponse: une seule synthèse finale claire pour l’utilisateur.
 
