@@ -1,12 +1,12 @@
 # SESSION-STATE.md — Active Working Memory
 
 ## Current Task
-Verrouiller globalement les règles multi-agents (routage main/spec/orchestrator + transparence) dans les fichiers persistants et fournir un compte rendu complet de la mise en place.
+Finaliser la traçabilité GitHub de la migration hybride persistante, puis publier un compte rendu d’usage/fonctionnement des agents dans le salon Discord dédié.
 
 ## Immediate Context
-- Alexandre veut que toutes les règles définies depuis le début de la création des sous-agents soient respectées dans n’importe quelle session.
-- Il demande un verrouillage documentaire + push GitHub + compte rendu global.
-- Le routage attendu est explicite: simple=main, moyen/technique mono-domaine=spec direct, complexe multi-domaines=orchestrator.
+- Alexandre valide d’aller jusqu’au bout pour “être sûr de tout”.
+- La config hybride persistante contient déjà 9 agents, il manque `spec-memory` et `spec-crm` en statique.
+- Action: ajouter ces 2 agents dans `~/.openclaw/openclaw.json`, redémarrer le gateway, vérifier `agents_list`.
 
 ## Key Decisions
 1. Adopter une architecture avancée avec un orchestrateur + 10 spécialistes.

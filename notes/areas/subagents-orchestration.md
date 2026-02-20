@@ -49,7 +49,22 @@ Donc on standardise le même set de rôles dans chaque channel, et on automatise
      - retry 1 fois
      - fallback vers spécialiste voisin
 
+## État actuel (2026-02-20)
+Config hybride persistante active avec 11 agents statiques:
+- `main`
+- `spec-orchestrator`
+- `spec-github`
+- `spec-coding`
+- `spec-research`
+- `spec-writing`
+- `spec-planning`
+- `spec-finance`
+- `spec-ops`
+- `spec-memory`
+- `spec-crm`
+
 ## Notes d’exploitation
 - `cleanup: keep` pour conserver les sessions de spécialistes
 - Même avec keep, un restart peut casser les timers/états => d’où ensure/recreate
 - Garder la complexité faible: règles lisibles, logs clairs, labels stables
+- Fichier de config runtime concerné: `~/.openclaw/openclaw.json` (hors repo workspace)
