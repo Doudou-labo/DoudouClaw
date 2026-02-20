@@ -261,6 +261,7 @@ Don't wait for permission to improve. If you learned something, write it down no
 - Tâche **moyenne/technique mono-domaine** → routage direct `main -> spec-*` (sans orchestrator).
 - Tâche **multi-domaines / dépendances / coordination** → `spec-orchestrator` + spécialistes.
 - Déclencheur obligatoire: si la demande contient **2 domaines ou plus** (ex: GitHub + finance + rédaction), orchestrator requis.
+- Déclencheur texte explicite: si le message contient "utilise les agents nécessaires" (ou équivalent), forcer `spec-orchestrator`.
 - Règle stricte: si `spec-orchestrator` est utilisé, il doit appeler **au moins un** spécialiste `spec-*` avant synthèse finale.
 - Interdiction de sortir `Agents utilisés : main` sur une demande multi-domaines.
 - En cas d’échec spécialiste: recreate immédiat, 1 retry, puis fallback voisin.

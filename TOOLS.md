@@ -45,6 +45,7 @@ tool-name --common-flag
 - Routage global: `main` pour simple, `main -> spec-*` pour moyen/technique mono-domaine, `spec-orchestrator` pour multi-domaines
 - Règle orchestrator: s’il est utilisé, il doit déléguer à ≥1 spécialiste `spec-*` (sinon rester en `main`)
 - Déclencheur hard: si la demande couvre 2+ domaines, ne pas traiter en `main`; passer par orchestrator + specs.
+- Déclencheur explicite: si l’utilisateur écrit "utilise les agents nécessaires", forcer le passage orchestrator.
 
 ## Préférences Finance (Alexandre)
 
