@@ -249,6 +249,12 @@ Don't wait for permission to improve. If you learned something, write it down no
 
 ---
 
+## Response Transparency (global)
+
+- Afficher en bas de **chaque réponse utilisateur** la ligne: `Agents utilisés : ...`
+- Cette règle est globale (tous channels/sessions), sauf demande explicite contraire de l’utilisateur.
+- Si aucun spécialiste n’est appelé, afficher `Agents utilisés : main`.
+
 ## Learned Lessons
 
 > Add your lessons here as you learn them

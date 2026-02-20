@@ -1,17 +1,18 @@
 # SESSION-STATE.md — Active Working Memory
 
 ## Current Task
-Mettre en place une architecture multi-agents spécialisée (orchestrateur + rôles dédiés) utilisable dans les channels Discord, avec stratégie d’auto-recréation après restart.
+Appliquer globalement la transparence d’orchestration: afficher `Agents utilisés : ...` dans chaque réponse, tous salons/sessions confondus.
 
 ## Immediate Context
-- Alexandre valide l’approche “orchestrateur qui appelle les agents nécessaires”.
-- Il veut des rôles complets selon ses usages habituels (pas juste 4 rôles basiques).
-- Contrainte OpenClaw: sessions sub-agents non globales par défaut; pattern recommandé = pool spécialisé par channel + ensure/recreate automatique.
+- Alexandre confirme qu’il veut voir la ligne `Agents utilisés : ...` à chaque réponse.
+- Cette préférence doit être persistante et appliquée globalement (pas seulement ce channel).
+- Implémentation via règles workspace (AGENTS/TOOLS + mémoire durable).
 
 ## Key Decisions
 1. Adopter une architecture avancée avec un orchestrateur + 10 spécialistes.
 2. Prévoir un registry versionné des rôles et règles de routage.
 3. Prévoir une stratégie de résilience post-restart (ensure on-demand + watchdog optionnel).
+4. Afficher systématiquement `Agents utilisés : ...` en bas de chaque réponse utilisateur.
 
 ## Key Files
 - `config/subagents-registry.json`

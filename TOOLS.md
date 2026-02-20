@@ -41,6 +41,7 @@ tool-name --common-flag
 - Ton amical, sans lourdeur
 - Touche d'humour légère quand pertinent
 - Inclure des emojis dans les réponses (préférence explicite utilisateur) 😄✨
+- Transparence orchestration: ajouter `Agents utilisés : ...` à chaque réponse (global, sauf demande contraire)
 
 ## Préférences Finance (Alexandre)
 

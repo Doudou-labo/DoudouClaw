@@ -29,6 +29,7 @@
 - Référence GitHub officielle (depuis 2026-02-16) : travailler sur `Doudou-labo/DoudouClaw` pour tout ce qui touche GitHub (commits/push/issues/projects)
 - Source d’info prioritaire : utiliser d’abord le workspace local (incl. mémoire/skills), puis fallback sur GitHub si doute, info introuvable ou possible modification distante
 - Référence PARA: quand une demande concerne l’organisation/projets/suivi/rappels/décisions déjà prises, consulter `notes/` par défaut. Si le message commence par **"PARA:"**, consulter systématiquement `notes/` avant de répondre.
+- Préférence de transparence (2026-02-20): afficher en bas de chaque réponse `Agents utilisés : ...` (global), sauf s’il demande explicitement de masquer.
 
 ### Important Dates
 - Date de naissance: 03/08/2000
