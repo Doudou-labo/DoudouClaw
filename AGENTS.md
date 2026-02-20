@@ -260,6 +260,7 @@ Don't wait for permission to improve. If you learned something, write it down no
 - Tâche courte/linéaire/faible risque → traiter en `main`.
 - Tâche **moyenne/technique mono-domaine** → routage direct `main -> spec-*` (sans orchestrator).
 - Tâche **multi-domaines / dépendances / coordination** → `spec-orchestrator` + spécialistes.
+- Règle stricte: si `spec-orchestrator` est utilisé, il doit appeler **au moins un** spécialiste `spec-*` avant synthèse finale.
 - En cas d’échec spécialiste: recreate immédiat, 1 retry, puis fallback voisin.
 - Cible de réponse: une seule synthèse finale claire pour l’utilisateur.
 

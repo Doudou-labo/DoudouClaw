@@ -14,6 +14,7 @@ Verrouiller globalement les règles multi-agents (routage main/spec/orchestrator
 3. Prévoir une stratégie de résilience post-restart (ensure on-demand + watchdog optionnel).
 4. Afficher systématiquement `Agents utilisés : ...` en bas de chaque réponse utilisateur.
 5. Routage global verrouillé: simple→main, moyen mono-domaine→spec direct, complexe→orchestrator.
+6. Si `spec-orchestrator` est invoqué, il doit déléguer à au moins un spécialiste `spec-*` (sinon traiter directement en `main`).
 
 ## Key Files
 - `config/subagents-registry.json`
