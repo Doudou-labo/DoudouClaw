@@ -255,6 +255,14 @@ Don't wait for permission to improve. If you learned something, write it down no
 - Cette règle est globale (tous channels/sessions), sauf demande explicite contraire de l’utilisateur.
 - Si aucun spécialiste n’est appelé, afficher `Agents utilisés : main`.
 
+## Sub-agent Routing Policy (global)
+
+- Tâche courte/linéaire/faible risque → traiter en `main`.
+- Tâche **moyenne/technique mono-domaine** → routage direct `main -> spec-*` (sans orchestrator).
+- Tâche **multi-domaines / dépendances / coordination** → `spec-orchestrator` + spécialistes.
+- En cas d’échec spécialiste: recreate immédiat, 1 retry, puis fallback voisin.
+- Cible de réponse: une seule synthèse finale claire pour l’utilisateur.
+
 ## Learned Lessons
 
 > Add your lessons here as you learn them

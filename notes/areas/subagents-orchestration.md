@@ -31,8 +31,9 @@ Donc on standardise le même set de rôles dans chaque channel, et on automatise
 
 ## Routage (règles simples)
 - Détection d’intention par mots-clés + type de tâche
-- Si tâche mono-domaine: 1 spécialiste
-- Si multi-domaines: orchestrateur -> 2+ spécialistes -> synthèse
+- Si tâche **courte/linéaire**: traitement direct en `main`
+- Si tâche **moyenne/technique mono-domaine**: routage direct `main -> 1 spécialiste` (sans orchestrateur)
+- Si tâche **multi-domaines**: orchestrateur -> 2+ spécialistes -> synthèse
 - Si doute: orchestrateur démarre par `research` ou `memory-context`
 
 ## Résilience restart

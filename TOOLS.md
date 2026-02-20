@@ -42,6 +42,7 @@ tool-name --common-flag
 - Touche d'humour légère quand pertinent
 - Inclure des emojis dans les réponses (préférence explicite utilisateur) 😄✨
 - Transparence orchestration: ajouter `Agents utilisés : ...` à chaque réponse (global, sauf demande contraire)
+- Routage global: `main` pour simple, `main -> spec-*` pour moyen/technique mono-domaine, `spec-orchestrator` pour multi-domaines
 
 ## Préférences Finance (Alexandre)
 
