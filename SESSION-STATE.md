@@ -1,14 +1,14 @@
 # SESSION-STATE.md — Active Working Memory
 
 ## Current Task
-THREAD_B
+Test Discord (temporaire)
 
 ## Immediate Context
-- L’utilisateur indique explicitement: "On va parler de la tache THREAD_B".
-- Le fil actif bascule donc de THREAD_A/état temporaire vers THREAD_B.
+- Session de test sur Discord.
+- Aucun état persistant spécifique demandé.
 
 ## Key Decisions
-- La tâche active de cette session est désormais `THREAD_B`.
+- Ne pas persister les éléments temporaires de test en mémoire long terme.
 
 ## Key Files
 - `SESSION-STATE.md`
