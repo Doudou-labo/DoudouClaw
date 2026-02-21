@@ -13,8 +13,11 @@ jobs:
     env:
       DISCORD_PUSH_WEBHOOK_URL: ${{ secrets.DISCORD_PUSH_WEBHOOK_URL }}
     steps:
-      - name: Build payload
+      - name: Build pretty Discord payload
+        shell: bash
         run: |
+          set -euo pipefail
+
           REPO="${{ github.repository }}"
           BRANCH="${GITHUB_REF_NAME}"
           ACTOR="${{ github.actor }}"
@@ -23,20 +26,58 @@ jobs:
           HEAD_URL="${{ github.event.head_commit.url }}"
           SHORT_SHA="${GITHUB_SHA::7}"
 
-          CONTENT="✅ **Push détecté**\n"
-          CONTENT+="Repo: **${REPO}**\n"
-          CONTENT+="Branche: **${BRANCH}**\n"
-          CONTENT+="Auteur: **${ACTOR}**\n"
-          CONTENT+="Commit: [${SHORT_SHA}](${HEAD_URL})\n"
-          CONTENT+="Message: ${HEAD_MSG}\n"
-          CONTENT+="Compare: ${COMPARE_URL}"
+          COMMIT_COUNT="$(jq -r '.commits | length' "$GITHUB_EVENT_PATH")"
+          ADDED_COUNT="$(jq -r '[.commits[]? | .added[]?] | unique | length' "$GITHUB_EVENT_PATH")"
+          MODIFIED_COUNT="$(jq -r '[.commits[]? | .modified[]?] | unique | length' "$GITHUB_EVENT_PATH")"
+          REMOVED_COUNT="$(jq -r '[.commits[]? | .removed[]?] | unique | length' "$GITHUB_EVENT_PATH")"
 
-          jq -n --arg content "$CONTENT" '{content: $content}' > payload.json
-          cat payload.json
+          FILES_LIST="$(jq -r '[.commits[]? | (.added[]?, .modified[]?, .removed[]?)] | unique | .[:12] | map("`" + . + "`") | join("\n")' "$GITHUB_EVENT_PATH")"
+          if [ -z "$FILES_LIST" ] || [ "$FILES_LIST" = "null" ]; then
+            FILES_LIST="_Aucun fichier listé par l'event push._"
+          fi
+
+          jq -n \
+            --arg content "🚀 **Push détecté sur ${BRANCH}**" \
+            --arg title "✅ Nouveau push sur ${REPO}" \
+            --arg desc "🧑‍💻 **${ACTOR}** a poussé **${COMMIT_COUNT} commit(s)**" \
+            --arg compare "$COMPARE_URL" \
+            --arg headmsg "$HEAD_MSG" \
+            --arg headurl "$HEAD_URL" \
+            --arg shortsha "$SHORT_SHA" \
+            --arg branch "$BRANCH" \
+            --arg files "$FILES_LIST" \
+            --arg added "$ADDED_COUNT" \
+            --arg modified "$MODIFIED_COUNT" \
+            --arg removed "$REMOVED_COUNT" \
+            '{
+              content: $content,
+              embeds: [
+                {
+                  title: $title,
+                  description: $desc,
+                  color: 5763719,
+                  fields: [
+                    {name: "🌿 Branche", value: $branch, inline: true},
+                    {name: "🔖 Commit", value: "[" + $shortsha + "](" + $headurl + ")", inline: true},
+                    {name: "📝 Message", value: $headmsg, inline: false},
+                    {name: "📦 Fichiers", value: $files, inline: false},
+                    {name: "📊 Stats", value: "➕ " + $added + "  •  ✏️ " + $modified + "  •  🗑️ " + $removed, inline: false},
+                    {name: "🔍 Compare", value: "[Voir les changements](" + $compare + ")", inline: false}
+                  ],
+                  footer: {text: "DoudouClaw • GitHub push notifier"},
+                  timestamp: now | todateiso8601
+                }
+              ]
+            }' > payload.json
+
+          echo "Payload prêt ✅"
 
       - name: Send Discord notification (if secret configured)
+        shell: bash
         run: |
-          if [ -z "$DISCORD_PUSH_WEBHOOK_URL" ]; then
+          set -euo pipefail
+
+          if [ -z "${DISCORD_PUSH_WEBHOOK_URL:-}" ]; then
             echo "Secret DISCORD_PUSH_WEBHOOK_URL absent."
             echo "Ajoute-le dans Settings > Secrets and variables > Actions."
             exit 0
@@ -46,3 +87,5 @@ jobs:
             -H "Content-Type: application/json" \
             -d @payload.json \
             "$DISCORD_PUSH_WEBHOOK_URL"
+
+          echo "Notification Discord envoyée ✅"
