@@ -1,6 +1,6 @@
-# DoudouBot Workspace 🤖
+# DoudouClaw Workspace 🤖
 
-Ce dépôt contient le **workspace privé** de DoudouBot (assistant OpenClaw d’Alexandre / Doudou).
+Ce dépôt contient le **workspace privé** de DoudouClaw (assistant OpenClaw d’Alexandre / Doudou).
 
 ## 🎯 À quoi sert ce repo ?
 
