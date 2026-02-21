@@ -30,6 +30,7 @@ jobs:
           ADDED_COUNT="$(jq -r '[.commits[]? | .added[]?] | unique | length' "$GITHUB_EVENT_PATH")"
           MODIFIED_COUNT="$(jq -r '[.commits[]? | .modified[]?] | unique | length' "$GITHUB_EVENT_PATH")"
           REMOVED_COUNT="$(jq -r '[.commits[]? | .removed[]?] | unique | length' "$GITHUB_EVENT_PATH")"
+          NOW_UTC="$(date -u +"%Y-%m-%dT%H:%M:%SZ")"
 
           FILES_LIST="$(jq -r '[.commits[]? | (.added[]?, .modified[]?, .removed[]?)] | unique | .[:12] | map("`" + . + "`") | join("\n")' "$GITHUB_EVENT_PATH")"
           if [ -z "$FILES_LIST" ] || [ "$FILES_LIST" = "null" ]; then
@@ -49,6 +50,7 @@ jobs:
             --arg added "$ADDED_COUNT" \
             --arg modified "$MODIFIED_COUNT" \
             --arg removed "$REMOVED_COUNT" \
+            --arg now "$NOW_UTC" \
             '{
               content: $content,
               embeds: [
@@ -58,14 +60,14 @@ jobs:
                   color: 5763719,
                   fields: [
                     {name: "🌿 Branche", value: $branch, inline: true},
-                    {name: "🔖 Commit", value: "[" + $shortsha + "](" + $headurl + ")", inline: true},
+                    {name: "🔖 Commit", value: "[\($shortsha)](\($headurl))", inline: true},
                     {name: "📝 Message", value: $headmsg, inline: false},
                     {name: "📦 Fichiers", value: $files, inline: false},
-                    {name: "📊 Stats", value: "➕ " + $added + "  •  ✏️ " + $modified + "  •  🗑️ " + $removed, inline: false},
-                    {name: "🔍 Compare", value: "[Voir les changements](" + $compare + ")", inline: false}
+                    {name: "📊 Stats", value: "➕ \($added)  •  ✏️ \($modified)  •  🗑️ \($removed)", inline: false},
+                    {name: "🔍 Compare", value: "[Voir les changements](\($compare))", inline: false}
                   ],
                   footer: {text: "DoudouClaw • GitHub push notifier"},
-                  timestamp: now | todateiso8601
+                  timestamp: $now
                 }
               ]
             }' > payload.json
