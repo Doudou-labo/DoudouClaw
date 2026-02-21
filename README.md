@@ -14,6 +14,17 @@ En bref : c’est le **cerveau opérationnel** de ton assistant, versionné et s
 
 ---
 
+## 🧭 Architecture actuelle (vue rapide)
+
+- **Orga/repo GitHub** : `Doudou-labo/DoudouClaw`
+- **Branche principale** : `main` (single-branch workflow)
+- **Identité de commit/push** : bot **DoudouClaw**
+- **Auth Git** : **HTTPS + token** (pas SSH)
+- **Notifications push** : GitHub Actions → Discord webhook
+- **Runtime agent** : OpenClaw `main` avec mémoire locale versionnée
+
+---
+
 ## 📍 Où retrouver les fichiers importants
 
 ### Fichiers “racine” (pilotage global)
@@ -37,6 +48,7 @@ En bref : c’est le **cerveau opérationnel** de ton assistant, versionné et s
 - `scripts/` → scripts utilitaires et routines
 - `skills/` → skills installés
 - `crm/` → données et scripts liés au mini-CRM local
+- `.github/workflows/` → automatisations CI/CD (dont notif push Discord)
 
 ---
 
@@ -58,7 +70,7 @@ git add <fichiers>
 git commit -m "type(scope): message"
 
 # push vers GitHub
-git push
+git push origin main
 ```
 
 ### 3) Sauvegarde continue
@@ -78,12 +90,54 @@ git checkout <commit>
 
 ---
 
+## 🔔 Notifications push GitHub → Discord
+
+Un workflow envoie une notification Discord à chaque push sur `main`.
+
+- **Workflow** : `.github/workflows/push-discord-notify.yml`
+- **Trigger** : `on: push` sur `main`
+- **Secret requis** : `DISCORD_PUSH_WEBHOOK_URL`
+
+### Setup secret
+Repo GitHub → **Settings** → **Secrets and variables** → **Actions** → **New repository secret**
+
+- Name: `DISCORD_PUSH_WEBHOOK_URL`
+- Value: URL du webhook Discord du salon cible
+
+### Payload envoyé
+- branche
+- auteur
+- commit (SHA + lien)
+- message
+- fichiers modifiés (extrait)
+- lien compare
+
+---
+
 ## 🔐 Règles de sécurité du repo
 
 - Repo GitHub **privé**
-- Remote de préférence en **SSH**
+- Remote Git en **HTTPS** (token bot), **pas SSH**
 - Jamais de secrets en clair (`.credentials/`, `.secrets/`)
 - Données locales sensibles exclues via `.gitignore`
+
+---
+
+## 🛠️ Runbook rapide (dépannage)
+
+### 1) La notif Discord ne tombe plus
+1. Vérifier le secret `DISCORD_PUSH_WEBHOOK_URL`
+2. Vérifier que le webhook Discord existe encore et pointe sur le bon salon
+3. Vérifier l’onglet **Actions** du repo et les logs du run
+
+### 2) Le workflow GitHub échoue
+1. Ouvrir le run en erreur dans **Actions**
+2. Lire l’étape qui fail (`Build payload` / `Send Discord`)
+3. Corriger `.github/workflows/push-discord-notify.yml`, commit, push
+
+### 3) Les commandes exec redemandent approbation sur Discord
+Vérifier la config OpenClaw :
+- `channels.discord.execApprovals.enabled = false`
 
 ---
 
