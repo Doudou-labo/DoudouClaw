@@ -10,9 +10,10 @@ permissions:
 jobs:
   notify:
     runs-on: ubuntu-latest
+    env:
+      DISCORD_PUSH_WEBHOOK_URL: ${{ secrets.DISCORD_PUSH_WEBHOOK_URL }}
     steps:
       - name: Build payload
-        id: payload
         run: |
           REPO="${{ github.repository }}"
           BRANCH="${GITHUB_REF_NAME}"
@@ -21,7 +22,6 @@ jobs:
           HEAD_MSG="${{ github.event.head_commit.message }}"
           HEAD_URL="${{ github.event.head_commit.url }}"
           SHORT_SHA="${GITHUB_SHA::7}"
-          COUNT="${{ github.event.commits && github.event.commits.size || 1 }}"
 
           CONTENT="✅ **Push détecté**\n"
           CONTENT+="Repo: **${REPO}**\n"
@@ -34,16 +34,15 @@ jobs:
           jq -n --arg content "$CONTENT" '{content: $content}' > payload.json
           cat payload.json
 
-      - name: Send Discord notification
-        if: ${{ secrets.DISCORD_PUSH_WEBHOOK_URL != '' }}
+      - name: Send Discord notification (if secret configured)
         run: |
+          if [ -z "$DISCORD_PUSH_WEBHOOK_URL" ]; then
+            echo "Secret DISCORD_PUSH_WEBHOOK_URL absent."
+            echo "Ajoute-le dans Settings > Secrets and variables > Actions."
+            exit 0
+          fi
+
           curl -sS -X POST \
             -H "Content-Type: application/json" \
             -d @payload.json \
-            "${{ secrets.DISCORD_PUSH_WEBHOOK_URL }}"
-
-      - name: Missing webhook secret
-        if: ${{ secrets.DISCORD_PUSH_WEBHOOK_URL == '' }}
-        run: |
-          echo "Secret DISCORD_PUSH_WEBHOOK_URL absent."
-          echo "Ajoute un webhook Discord dans Settings > Secrets and variables > Actions."
+            "$DISCORD_PUSH_WEBHOOK_URL"
