@@ -1,20 +1,20 @@
 # SESSION-STATE.md — Active Working Memory
 
 ## Current Task
-THREAD_A
+THREAD_B
 
 ## Immediate Context
-- Contexte actif de ce fil fixé explicitement par l’utilisateur: `THREAD_A`.
-- Le fil traite des comportements Discord/Web UI (streaming, contexte injecté visible, impact usage).
+- L’utilisateur indique explicitement: "On va parler de la tache THREAD_B".
+- Le fil actif bascule donc de THREAD_A/état temporaire vers THREAD_B.
 
 ## Key Decisions
-1. La tâche active de cette session est `THREAD_A`.
+- La tâche active de cette session est désormais `THREAD_B`.
 
 ## Key Files
 - `SESSION-STATE.md`
 
 ## Open Questions
-- Aucune pour l’instant.
+- Aucune.
 
 ## Last Updated
 2026-02-21 UTC
