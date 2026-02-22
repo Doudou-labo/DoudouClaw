@@ -21,7 +21,7 @@ Passthrough proxy for direct access to third-party APIs using managed auth conne
 
 ```bash
 # Native Slack API call
-python <<'EOF'
+python3 <<'EOF'
 import urllib.request, os, json
 data = json.dumps({'channel': 'C0123456', 'text': 'Hello from gateway!'}).encode()
 req = urllib.request.Request('https://gateway.maton.ai/slack/api/chat.postMessage', data=data, method='POST')
@@ -71,7 +71,7 @@ Connection management uses a separate base URL: `https://ctrl.maton.ai`
 ### List Connections
 
 ```bash
-python <<'EOF'
+python3 <<'EOF'
 import urllib.request, os, json
 req = urllib.request.Request('https://ctrl.maton.ai/connections?app=slack&status=ACTIVE')
 req.add_header('Authorization', f'Bearer {os.environ["MATON_API_KEY"]}')
@@ -103,7 +103,7 @@ EOF
 ### Create Connection
 
 ```bash
-python <<'EOF'
+python3 <<'EOF'
 import urllib.request, os, json
 data = json.dumps({'app': 'slack'}).encode()
 req = urllib.request.Request('https://ctrl.maton.ai/connections', data=data, method='POST')
@@ -116,7 +116,7 @@ EOF
 ### Get Connection
 
 ```bash
-python <<'EOF'
+python3 <<'EOF'
 import urllib.request, os, json
 req = urllib.request.Request('https://ctrl.maton.ai/connections/{connection_id}')
 req.add_header('Authorization', f'Bearer {os.environ["MATON_API_KEY"]}')
@@ -144,7 +144,7 @@ Open the returned URL in a browser to complete OAuth.
 ### Delete Connection
 
 ```bash
-python <<'EOF'
+python3 <<'EOF'
 import urllib.request, os, json
 req = urllib.request.Request('https://ctrl.maton.ai/connections/{connection_id}', method='DELETE')
 req.add_header('Authorization', f'Bearer {os.environ["MATON_API_KEY"]}')
@@ -157,7 +157,7 @@ EOF
 If you have multiple connections for the same app, you can specify which connection to use by adding the `Maton-Connection` header with the connection ID:
 
 ```bash
-python <<'EOF'
+python3 <<'EOF'
 import urllib.request, os, json
 data = json.dumps({'channel': 'C0123456', 'text': 'Hello!'}).encode()
 req = urllib.request.Request('https://gateway.maton.ai/slack/api/chat.postMessage', data=data, method='POST')
@@ -357,7 +357,7 @@ See [references/](references/) for detailed routing guides per provider:
 
 ```bash
 # Native Slack API: POST https://slack.com/api/chat.postMessage
-python <<'EOF'
+python3 <<'EOF'
 import urllib.request, os, json
 data = json.dumps({'channel': 'C0123456', 'text': 'Hello!'}).encode()
 req = urllib.request.Request('https://gateway.maton.ai/slack/api/chat.postMessage', data=data, method='POST')
@@ -371,7 +371,7 @@ EOF
 
 ```bash
 # Native HubSpot API: POST https://api.hubapi.com/crm/v3/objects/contacts
-python <<'EOF'
+python3 <<'EOF'
 import urllib.request, os, json
 data = json.dumps({'properties': {'email': 'john@example.com', 'firstname': 'John', 'lastname': 'Doe'}}).encode()
 req = urllib.request.Request('https://gateway.maton.ai/hubspot/crm/v3/objects/contacts', data=data, method='POST')
@@ -385,7 +385,7 @@ EOF
 
 ```bash
 # Native Sheets API: GET https://sheets.googleapis.com/v4/spreadsheets/{id}/values/{range}
-python <<'EOF'
+python3 <<'EOF'
 import urllib.request, os, json
 req = urllib.request.Request('https://gateway.maton.ai/google-sheets/v4/spreadsheets/122BS1sFN2RKL8AOUQjkLdubzOwgqzPT64KfZ2rvYI4M/values/Sheet1!A1:B2')
 req.add_header('Authorization', f'Bearer {os.environ["MATON_API_KEY"]}')
@@ -397,7 +397,7 @@ EOF
 
 ```bash
 # Native Salesforce API: GET https://{instance}.salesforce.com/services/data/v64.0/query?q=...
-python <<'EOF'
+python3 <<'EOF'
 import urllib.request, os, json
 req = urllib.request.Request('https://gateway.maton.ai/salesforce/services/data/v64.0/query?q=SELECT+Id,Name+FROM+Contact+LIMIT+10')
 req.add_header('Authorization', f'Bearer {os.environ["MATON_API_KEY"]}')
@@ -409,7 +409,7 @@ EOF
 
 ```bash
 # Native Airtable API: GET https://api.airtable.com/v0/meta/bases/{id}/tables
-python <<'EOF'
+python3 <<'EOF'
 import urllib.request, os, json
 req = urllib.request.Request('https://gateway.maton.ai/airtable/v0/meta/bases/appgqan2NzWGP5sBK/tables')
 req.add_header('Authorization', f'Bearer {os.environ["MATON_API_KEY"]}')
@@ -421,7 +421,7 @@ EOF
 
 ```bash
 # Native Notion API: POST https://api.notion.com/v1/data_sources/{id}/query
-python <<'EOF'
+python3 <<'EOF'
 import urllib.request, os, json
 data = json.dumps({}).encode()
 req = urllib.request.Request('https://gateway.maton.ai/notion/v1/data_sources/23702dc5-9a3b-8001-9e1c-000b5af0a980/query', data=data, method='POST')
@@ -436,7 +436,7 @@ EOF
 
 ```bash
 # Native Stripe API: GET https://api.stripe.com/v1/customers
-python <<'EOF'
+python3 <<'EOF'
 import urllib.request, os, json
 req = urllib.request.Request('https://gateway.maton.ai/stripe/v1/customers?limit=10')
 req.add_header('Authorization', f'Bearer {os.environ["MATON_API_KEY"]}')
@@ -495,7 +495,7 @@ echo $MATON_API_KEY
 2. Verify the API key is valid by listing connections:
 
 ```bash
-python <<'EOF'
+python3 <<'EOF'
 import urllib.request, os, json
 req = urllib.request.Request('https://ctrl.maton.ai/connections')
 req.add_header('Authorization', f'Bearer {os.environ["MATON_API_KEY"]}')
@@ -513,7 +513,7 @@ EOF
 2. Ensure you have an active connection for the app. List your connections to verify:
 
 ```bash
-python <<'EOF'
+python3 <<'EOF'
 import urllib.request, os, json
 req = urllib.request.Request('https://ctrl.maton.ai/connections?app=google-mail&status=ACTIVE')
 req.add_header('Authorization', f'Bearer {os.environ["MATON_API_KEY"]}')
