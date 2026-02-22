@@ -48,6 +48,8 @@
 - Développer l’intelligence émotionnelle (lecture: Daniel Goleman)
 - Progresser vers un poste de Responsable de Centre de Service (RCS)
 - Préparer l’entretien individuel à venir avec Arnaud
+- Retrouver l’équilibre émotionnel après la rupture avec Audrey
+- Reprendre le sport de façon durable malgré la contrainte d’épaule gauche instable
 
 ### Key Decisions Made
 - Utiliser PARA + mémoire structurée pour améliorer la continuité de travail
@@ -68,7 +70,10 @@ N+1 d’Alexandre (poste: Responsable de Zone, RZ). Relation de confiance forte 
 Amie de longue date d’Alexandre (amour de lycée) revenue récemment dans sa vie. Alexandre ne l’a jamais oubliée et pense l’aimer encore, sans savoir si c’est réciproque ni si elle a changé depuis l’époque.
 
 ### Audrey
-Ex d'Alexandre et fille d'Arnaud (son RZ). Rupture difficile, y pense encore. 
+Ex d'Alexandre et fille d'Arnaud (son RZ). Rupture difficile, y pense encore. Contexte actuel sensible qui impacte la motivation sportive et la charge émotionnelle.
+
+### Marine
+Meilleure amie d’Alexandre, habite à Calais; relation amicale de longue date (environ 10 ans).
 
 ---
 
