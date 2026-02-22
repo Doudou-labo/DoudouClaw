@@ -264,6 +264,11 @@ After every mistake or learned lesson:
 
 Don't wait for permission to improve. If you learned something, write it down now.
 
+### Mémoire/LTM — correction immédiate + cron (règle validée)
+- Si l’utilisateur signale un écart mémoire (LTM vs `MEMORY.md`/journal du jour), **corriger immédiatement** (ne pas attendre la revue planifiée).
+- Conserver la revue cron: le cron hebdo reste actif pour contrôle qualité, consolidation et détection d’écarts résiduels.
+- Après correction immédiate: tracer dans `memory/YYYY-MM-DD.md`, puis commit/push.
+
 ---
 
 ## Response Transparency (global)
