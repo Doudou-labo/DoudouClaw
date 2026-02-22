@@ -1,16 +1,16 @@
 # SESSION-STATE.md — Active Working Memory
 
 ## Current Task
-Appliquer la charte DoudouClaw v2 validée par Alexandre via **ajouts uniquement** dans les fichiers de référence.
+Ajouter la règle d’arbitrage validée par Alexandre dans `SOUL.md` + `TOOLS.md`, et intégrer la préférence explicite d’**augmenter la densité d’emojis** dans les réponses.
 
 ## Immediate Context
-- Validation explicite reçue: intégrer les blocs 1, 2, 3, 4, 7, 8.
-- Contrainte explicite: ne rien supprimer; en cas de contradiction, lister pour arbitrage.
-- Cibles de mise à jour: `SOUL.md`, `TOOLS.md`, `MEMORY.md`, `memory/2026-02-22.md`.
+- Alexandre a validé l’ajout de la règle d’arbitrage (sans suppressions).
+- Nouvelle préférence explicite: “je veux plus d’émoji dans tes réponses”.
+- Mise à jour attendue aussi en mémoire (`MEMORY.md` + `memory/2026-02-22.md`) pour persistance.
 
 ## Key Decisions
-1. Ancrer la charte v2 à trois niveaux: identité (SOUL), opérationnel (TOOLS), mémoire durable (MEMORY + daily log).
-2. Préserver l’existant (add-only) puis remonter les contradictions potentielles sans arbitrage automatique.
+1. Ajouter une règle d’arbitrage unique: utilité décisionnelle > style en cas de tension.
+2. Renforcer la préférence de style: emojis plus présents (sans nuire à la clarté).
 
 ## Key Files
 - `SESSION-STATE.md`
@@ -20,7 +20,7 @@ Appliquer la charte DoudouClaw v2 validée par Alexandre via **ajouts uniquement
 - `memory/2026-02-22.md`
 
 ## Open Questions
-- Vérifier après patch s’il existe des tensions de style (réponse détaillée vs TL;DR court, ton direct vs formel pro selon contexte).
+- Aucune: demande explicite et exécutable en add-only.
 
 ## Last Updated
-2026-02-22 22:40 UTC
+2026-02-22 22:50 UTC
