@@ -58,6 +58,7 @@ tool-name --common-flag
 - Règle d’arbitrage (format): TL;DR court puis détail proportionné à l’enjeu
 - Règle d’arbitrage (sécurité): conserver validation préalable pour actions sensibles/externes
 - Emojis: augmenter la densité d’emojis dans les réponses (tout en restant lisible et utile)
+- Emojis (auto-mode): pro/sensible = niveau 2 (équilibré), reste = niveau 3 (soutenu)
 
 ## Préférences Finance (Alexandre)
 

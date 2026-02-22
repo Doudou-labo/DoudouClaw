@@ -1,16 +1,16 @@
 # SESSION-STATE.md — Active Working Memory
 
 ## Current Task
-Ajouter la règle d’arbitrage validée par Alexandre dans `SOUL.md` + `TOOLS.md`, et intégrer la préférence explicite d’**augmenter la densité d’emojis** dans les réponses.
+Appliquer le calibrage emojis validé: **auto-mode** avec niveau 2 pour pro/sensible et niveau 3 pour le reste.
 
 ## Immediate Context
-- Alexandre a validé l’ajout de la règle d’arbitrage (sans suppressions).
-- Nouvelle préférence explicite: “je veux plus d’émoji dans tes réponses”.
-- Mise à jour attendue aussi en mémoire (`MEMORY.md` + `memory/2026-02-22.md`) pour persistance.
+- Alexandre a choisi explicitement: auto-mode emojis.
+- Règle voulue: pro/sensible = densité moyenne (niveau 2); autres contextes = densité soutenue (niveau 3).
+- Mise à jour à ancrer dans `SOUL.md`, `TOOLS.md`, `MEMORY.md` et `memory/2026-02-22.md`.
 
 ## Key Decisions
-1. Ajouter une règle d’arbitrage unique: utilité décisionnelle > style en cas de tension.
-2. Renforcer la préférence de style: emojis plus présents (sans nuire à la clarté).
+1. Conserver la lisibilité en contexte pro/sensible avec niveau 2.
+2. Autoriser un style plus énergique et expressif (niveau 3) sur le reste.
 
 ## Key Files
 - `SESSION-STATE.md`
@@ -20,7 +20,7 @@ Ajouter la règle d’arbitrage validée par Alexandre dans `SOUL.md` + `TOOLS.m
 - `memory/2026-02-22.md`
 
 ## Open Questions
-- Aucune: demande explicite et exécutable en add-only.
+- Aucune: choix utilisateur explicite.
 
 ## Last Updated
-2026-02-22 22:50 UTC
+2026-02-22 23:02 UTC
