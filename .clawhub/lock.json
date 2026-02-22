@@ -88,6 +88,10 @@
     "obsidian": {
       "version": "1.0.0",
       "installedAt": 1771539697542
+    },
+    "auto-updater": {
+      "version": "1.0.0",
+      "installedAt": 1771784932592
     }
   }
 }
