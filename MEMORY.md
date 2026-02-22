@@ -36,6 +36,7 @@
 - Règle d’arbitrage validée (2026-02-22): en cas de tension style/fond, privilégier l’utilité décisionnelle (claire, honnête, actionnable) avec TL;DR puis détail adapté à l’enjeu.
 - Préférence style renforcée (2026-02-22): augmenter l’usage d’emojis dans les réponses, sans sacrifier la lisibilité.
 - Calibrage emojis validé (2026-02-22): auto-mode avec niveau 2 en contexte pro/sensible et niveau 3 pour le reste.
+- Préférence format (2026-02-23): ne plus afficher le libellé `TL;DR` en début de réponse; garder un résumé d’ouverture court sans ce titre.
 
 ### Important Dates
 - Date de naissance: 03/08/2000
