@@ -23,3 +23,11 @@ Maintenir la procédure à jour, éventuellement la copier dans la PARA ou la tr
 - Source: conversation
 - Related Files: notes/areas/finance-tracker-procedure.md
 - Tags: finance-tracker, process
+
+## 2026-02-22 17:20 UTC
+- Findings: corrections utilisateur détectées
+- Sources:
+  - memory/2026-02-22.md:12:- Objectif du cron: aligner LTM avec `MEMORY.md` + mémoire du jour (points importants), corriger formulations obsolètes, tracer le bilan quotidien dans `memory/YYYY-MM-DD.md`.
+  - memory/2026-02-22.md:14:## 22:22 UTC — Correction immédiate sync LTM (retour utilisateur)
+  - memory/2026-02-22.md:21:- Règle appliquée: en cas d’écart détecté, correction immédiate + traçabilité Git (sans attendre le cron).
+- Action: promouvoir les patterns stables dans AGENTS.md/MEMORY.md
