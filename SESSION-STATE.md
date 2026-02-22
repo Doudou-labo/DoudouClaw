@@ -1,25 +1,24 @@
 # SESSION-STATE.md — Active Working Memory
 
 ## Current Task
-Nettoyage/synchronisation mémoire LanceDB et mise en place d’un cron quotidien de sync LTM à 22h.
+Compléter immédiatement LanceDB avec les points durables manquants de `MEMORY.md` après retour d’Alexandre.
 
 ## Immediate Context
-- Alexandre a demandé un alignement entre `MEMORY.md` et la mémoire vectorielle LanceDB.
-- Nettoyage LTM réalisé: suppression des entrées de test + suppression de la formulation obsolète `DoudouBot`.
-- Réinjection d’une entrée canonique avec `DoudouClaw`.
-- Cron créé: `Memory Sync LTM 22h` (Europe/Paris, session isolée, sans delivery) pour synchronisation quotidienne.
+- Alexandre a signalé (à raison) que LanceDB n’était pas encore enrichie avec des éléments clés présents dans `MEMORY.md`.
+- Action corrective faite maintenant: ajout en LTM des points de base (identité, profil perso, contexte pro, objectifs durables, relation clé Arnaud).
+- Le cron quotidien 22h reste actif pour la maintenance continue.
 
 ## Key Decisions
-1. Considérer `MEMORY.md` + `memory/YYYY-MM-DD.md` comme source de vérité humaine.
-2. Maintenir LanceDB alignée quotidiennement via cron (ajouts manquants + correction formulations obsolètes).
-3. Éviter l’accumulation d’entrées de test dans LTM.
+1. En cas d’écart constaté entre `MEMORY.md` et LTM, corriger immédiatement (pas attendre le cron).
+2. Conserver `MEMORY.md` comme référence humaine et LanceDB comme index sémantique opérationnel.
 
 ## Key Files
 - `SESSION-STATE.md`
 - `memory/2026-02-22.md`
+- `MEMORY.md`
 
 ## Open Questions
-- Aucune bloquante.
+- Vérifier demain après le premier run 22h que la sync quotidienne ajoute bien les éventuels manquants.
 
 ## Last Updated
-2026-02-22 22:18 UTC
+2026-02-22 22:22 UTC
