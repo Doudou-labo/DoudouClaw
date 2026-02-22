@@ -64,6 +64,23 @@ Templates disponibles dans `notes/resources/templates/`.
 **Write-Ahead rule**
 - Si l’utilisateur donne un détail concret (décision, correction, date, préférence), mettre à jour `SESSION-STATE.md` avant la réponse finale.
 
+### 🗂️ Memory Access Policy (N1/N2/N3)
+
+**Ordre de lecture par défaut:**
+1. **N1 Actif**: `SESSION-STATE.md`, `MEMORY.md`, `memory/YYYY-MM-DD.md`
+2. **N2 Référence**: `notes/areas/contexte-personnel-reference.md` (si N1 insuffisant)
+3. **N3 Archive sensible**: `notes/archive/contexte-sensible-rupture.md` (uniquement sur demande explicite ou pour arbitrer une contradiction)
+
+**Règle de sortie:**
+- Réponse utilisateur: utiliser N1/N2 par défaut; ne jamais exposer de détails N3 sans demande explicite.
+- Si N3 est consulté, produire un résumé factuel/actionnable, sans surinterprétation.
+
+**Règle d’écriture:**
+- Durable + actionnable → N1
+- Utile mais non quotidien → N2
+- Intime/sensible/historique détaillé → N3
+- Toute mise à jour importante doit être tracée dans `memory/YYYY-MM-DD.md` + commit/push.
+
 ---
 
 ## Git Workflow (Non négociable)

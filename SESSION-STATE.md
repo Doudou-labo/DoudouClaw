@@ -1,28 +1,26 @@
 # SESSION-STATE.md — Active Working Memory
 
 ## Current Task
-Mettre en place la structuration mémoire N2/N3 pour référence contextuelle contrôlée.
+Ancrer la politique d’accès mémoire N1/N2/N3 dans AGENTS/TOOLS et valider la compatibilité avec les skills mémoire installés.
 
 ## Immediate Context
-- Alexandre valide la mise en place des niveaux 2 et 3.
-- Fichiers créés:
-  - `notes/areas/contexte-personnel-reference.md` (N2)
-  - `notes/archive/contexte-sensible-rupture.md` (N3)
-- But: exploiter le contexte utile à la demande sans surcharger la mémoire active.
+- Alexandre valide l’ajout de la règle N1/N2/N3.
+- Politique ajoutée dans `AGENTS.md` (protocole comportemental) et `TOOLS.md` (opérationnel).
+- Vérification conceptuelle: les skills mémoire restent compatibles, la règle ne remplace pas les outils (`memory_store`, `memory_recall`, scripts de recall/capture), elle orchestre leur usage.
 
 ## Key Decisions
-1. N1 = mémoire active (LTM + MEMORY.md), N2 = référence ciblée, N3 = archive sensible.
-2. Détails émotionnels lourds restent en N3 sauf demande explicite.
-3. Journaliser cette structuration dans `memory/2026-02-22.md`.
+1. N1 par défaut, N2 au besoin, N3 uniquement sur demande explicite/contradiction.
+2. Conserver la compatibilité avec rosepuppy-memory + LanceDB + cron sync LTM 22h.
+3. Journaliser l’ancrage de règle dans `memory/2026-02-22.md`.
 
 ## Key Files
+- `AGENTS.md`
+- `TOOLS.md`
 - `SESSION-STATE.md`
-- `notes/areas/contexte-personnel-reference.md`
-- `notes/archive/contexte-sensible-rupture.md`
 - `memory/2026-02-22.md`
 
 ## Open Questions
 - Aucune bloquante.
 
 ## Last Updated
-2026-02-22 23:58 UTC
+2026-02-23 00:05 UTC
