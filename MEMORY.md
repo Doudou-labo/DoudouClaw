@@ -30,6 +30,8 @@
 - Source d’info prioritaire : utiliser d’abord le workspace local (incl. mémoire/skills), puis fallback sur GitHub si doute, info introuvable ou possible modification distante
 - Référence PARA: quand une demande concerne l’organisation/projets/suivi/rappels/décisions déjà prises, consulter `notes/` par défaut. Si le message commence par **"PARA:"**, consulter systématiquement `notes/` avant de répondre.
 - Préférence de transparence (2026-02-20): afficher en bas de chaque réponse `Agents utilisés : ...` (global), sauf s’il demande explicitement de masquer.
+- Préférence langage (canonique, 2026-02-22): utiliser un ton naturel et direct; jurons français courants autorisés quand pertinent (problèmes/frustrations). Référence de nom: `DoudouClaw`.
+- Préférence mémoire (2026-02-22): maintenir un alignement actif entre `MEMORY.md` (source humaine curée) et la mémoire vectorielle LanceDB (rappel sémantique).
 
 ### Important Dates
 - Date de naissance: 03/08/2000
@@ -66,4 +68,4 @@ Ex d'Alexandre et fille d'Arnaud (son RZ). Rupture difficile, y pense encore.
 
 ---
 
-*Dernière mise à jour: 2026-02-16*
+*Dernière mise à jour: 2026-02-22*
