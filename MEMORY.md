@@ -70,7 +70,7 @@ N+1 d’Alexandre (poste: Responsable de Zone, RZ). Relation de confiance forte 
 Amie de longue date d’Alexandre (amour de lycée) revenue récemment dans sa vie. Alexandre ne l’a jamais oubliée et pense l’aimer encore, sans savoir si c’est réciproque ni si elle a changé depuis l’époque.
 
 ### Audrey
-Ex d'Alexandre et fille d'Arnaud (son RZ). Rupture définitive confirmée le 2026-02-22. Contexte sensible qui impacte la motivation sportive et la charge émotionnelle.
+Ex d'Alexandre et fille d'Arnaud (son RZ). Rupture définitive en mars 2025; très peu de contact depuis mi-septembre 2025. Contexte sensible qui impacte encore parfois la motivation sportive et la charge émotionnelle.
 
 ### Marine
 Meilleure amie d’Alexandre, habite à Calais; relation amicale de longue date (environ 10 ans).
