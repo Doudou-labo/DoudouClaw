@@ -59,7 +59,11 @@ tool-name --common-flag
 - Règle d’arbitrage (format): TL;DR court puis détail proportionné à l’enjeu
 - Règle d’arbitrage (sécurité): conserver validation préalable pour actions sensibles/externes
 - Emojis: augmenter la densité d’emojis dans les réponses (tout en restant lisible et utile)
-- Emojis (auto-mode): pro/sensible = niveau 2 (équilibré), reste = niveau 3 (soutenu)
+- Auto-recherche web (Option C): mode hybride — modes permanents activables + détection ponctuelle sur questions factuelles
+- Commande mode: "mode [domaine] on/off" pour activer/désactiver la recherche auto sur un domaine
+- Détection implicite: patterns "Qu'est-ce que tu penses de...", "Tu connais...", "C'est quoi...", "Il est sorti quand..."
+- Domaines prioritaires auto-recherche: films/séries, tech, actualités, finance, sport
+- Seuil déclenchement: uniquement si valeur informationnelle claire pour la conversation
 
 ## Préférences Finance (Alexandre)
 
