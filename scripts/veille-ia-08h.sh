@@ -36,28 +36,56 @@ mkdir -p "$VEILLE_DIR/deep-dives/$DATE"
 echo ""
 echo "⚡ Génération du Flash 5 min..."
 
-# Requêtes flash génériques + thème du jour
+# Requêtes flash génériques + thème du jour EN FRANÇAIS
 case $THEME in
     "tech")
-        FLASH_QUERIES=("AI news today" "New LLM releases" "AI model benchmarks" "OpenAI Anthropic Google announcements today")
+        FLASH_QUERIES=(
+            "Actualités intelligence artificielle aujourd'hui - résumé détaillé en français"
+            "Nouveaux modèles LLM cette semaine - analyse en français"
+            "Benchmarks et performances IA récents - synthèse française"
+        )
         ;;
     "produits")
-        FLASH_QUERIES=("New AI tools launched today" "AI productivity updates" "NoCode AI announcements" "AI agent frameworks releases")
+        FLASH_QUERIES=(
+            "Nouveaux outils IA lancés aujourd'hui - analyse détaillée en français"
+            "Mises à jour outils productivité IA - résumé en français"
+            "Annonces plateformes NoCode AI - synthèse française"
+        )
         ;;
     "regulation")
-        FLASH_QUERIES=("AI regulation news today" "EU AI Act updates" "AI copyright legal cases" "AI ethics news")
+        FLASH_QUERIES=(
+            "Actualités réglementation IA aujourd'hui - analyse juridique en français"
+            "Mises à jour AI Act Europe - résumé détaillé en français"
+            "Affaires juridiques propriété intellectuelle IA - synthèse française"
+        )
         ;;
     "business")
-        FLASH_QUERIES=("AI startup funding today" "AI acquisitions news" "Big tech AI investments" "AI market news")
+        FLASH_QUERIES=(
+            "Levées de fonds startups IA aujourd'hui - analyse en français"
+            "Acquisitions et fusions IA cette semaine - résumé détaillé français"
+            "Investissements Big Tech en IA - synthèse en français"
+        )
         ;;
     "sectoriel")
-        FLASH_QUERIES=("AI automotive industry news" "Autonomous vehicles updates" "Michelin AI initiatives" "Predictive maintenance AI")
+        FLASH_QUERIES=(
+            "Actualités IA dans l'industrie automobile - analyse détaillée en français"
+            "Progress véhicules autonomes aujourd'hui - résumé français"
+            "Initiatives Michelin et IA - synthèse en français"
+        )
         ;;
     "emergent")
-        FLASH_QUERIES=("AI breakthrough news" "AI research papers today" "Emerging AI technologies" "AI science discoveries")
+        FLASH_QUERIES=(
+            "Breakthrough recherche IA aujourd'hui - analyse approfondie en français"
+            "Nouveaux papers scientifiques IA - résumé détaillé français"
+            "Technologies AI émergentes - synthèse en français"
+        )
         ;;
     "recap")
-        FLASH_QUERIES=("AI week in review" "AI Sunday roundup" "Weekly AI highlights" "AI industry weekly summary")
+        FLASH_QUERIES=(
+            "Bilan semaine intelligence artificielle - récap détaillé en français"
+            "Faits marquants IA cette semaine - analyse française"
+            "Tendances de la semaine IA - synthèse en français"
+        )
         ;;
 esac
 
@@ -82,7 +110,7 @@ $(for q in "${FLASH_QUERIES[@]}"; do echo "- $q"; done)
 
 ---
 
-## 📰 Résultats
+## 📰 Actualités et Analyses
 
 $FLASH_OUTPUT
 
@@ -97,35 +125,63 @@ echo "✅ Flash sauvegardé : $FLASH_FILE"
 echo ""
 echo "🔬 Génération du Deep Dive..."
 
-# Requêtes deep dive selon le thème
+# Requêtes deep dive selon le thème EN FRANÇAIS avec demande d'analyse
 case $THEME in
     "tech")
-        DEEP_QUERIES=("State of large language models 2026 comparison capabilities" "Multimodal AI models state of the art" "AI inference optimization techniques 2026")
+        DEEP_QUERIES=(
+            "État des large language models 2026 : comparaison capacités détaillée - analyse en français"
+            "Modèles multimodaux IA : état de l'art et cas d'usage - explications approfondies en français"
+            "Optimisation inference IA 2026 : techniques et outils - analyse technique en français"
+        )
         DEEP_TITLE="État des LLM et Multimodal AI"
         ;;
     "produits")
-        DEEP_QUERIES=("Best AI agent frameworks 2026 comparison LangChain CrewAI AutoGPT" "NoCode AI tools enterprise adoption 2026" "AI copilots productivity ROI studies")
+        DEEP_QUERIES=(
+            "Meilleurs frameworks agents IA 2026 : comparaison LangChain CrewAI AutoGPT détaillée - français"
+            "Adoption outils NoCode AI en entreprise : état des lieux 2026 - analyse française"
+            "ROI des copilotes IA : études et retours d'expérience - synthèse détaillée en français"
+        )
         DEEP_TITLE="Frameworks d'Agents IA et NoCode"
         ;;
     "regulation")
-        DEEP_QUERIES=("EU AI Act 2026 compliance requirements detailed" "AI copyright law developments 2026" "AI governance frameworks enterprise implementation")
+        DEEP_QUERIES=(
+            "AI Act 2026 : exigences de conformité détaillées pour entreprises - guide français"
+            "Évolution droit d'auteur et IA 2026 : ce qui change - analyse juridique française"
+            "Frameworks gouvernance IA enterprise : implémentation pratique - guide détaillé en français"
+        )
         DEEP_TITLE="Régulation AI Act et Gouvernance"
         ;;
     "business")
-        DEEP_QUERIES=("AI startup funding trends 2026 analysis" "Big tech AI strategy comparison" "Enterprise AI adoption statistics 2026")
+        DEEP_QUERIES=(
+            "Tendances levées de fonds IA 2026 : analyse marché détaillée en français"
+            "Stratégies Big Tech en IA : comparaison approfondie GAFA - analyse française"
+            "Statistiques adoption enterprise IA 2026 : chiffres et tendances - synthèse française"
+        )
         DEEP_TITLE="Marché AI et Adoption Enterprise"
         ;;
     "sectoriel")
-        DEEP_QUERIES=("AI in automotive industry 2026 trends analysis" "Predictive maintenance AI fleet management" "Autonomous trucking development status 2026")
+        DEEP_QUERIES=(
+            "IA dans l'industrie automobile 2026 : tendances et acteurs - analyse détaillée en français"
+            "Maintenance prédictive par IA : état de l'art fleet management - explications en français"
+            "Développement camions autonomes 2026 : où en est-on ? - synthèse française"
+        )
         DEEP_TITLE="IA dans l'Automobile et la Logistique"
         ;;
     "emergent")
-        DEEP_QUERIES=("AI reasoning capabilities 2026" "Neuromorphic computing AI applications" "Quantum machine learning progress")
+        DEEP_QUERIES=(
+            "Capacités de raisonnement IA 2026 : progrès récents - analyse détaillée en français"
+            "Computing neuromorphique : applications AI concrètes - explications en français"
+            "Machine learning quantique : avancées et perspectives - synthèse française"
+        )
         DEEP_TITLE="Technologies AI Émergentes"
         ;;
     "recap")
-        DEEP_QUERIES=("AI weekly highlights analysis" "Key AI developments this week" "AI industry week in review insights")
-        DEEP_TITLE="Récap Hebdomadaire et Insights"
+        DEEP_QUERIES=(
+            "Highlights hebdomadaires IA : analyse des événements clés - synthèse détaillée en français"
+            "Tendances majeures de la semaine IA : implications stratégiques - analyse française"
+            "Revue complète semaine IA : faits marquants et perspectives - français"
+        )
+        DEEP_TITLE="Analyse Hebdomadaire Complète"
         ;;
 esac
 
@@ -144,13 +200,13 @@ cat > "$DEEP_FILE" << EOF
 
 ---
 
-## 🔍 Requêtes exécutées
+## 🔍 Requêtes d'analyse approfondie
 
 $(for q in "${DEEP_QUERIES[@]}"; do echo "- $q"; done)
 
 ---
 
-## 📚 Analyse Approfondie
+## 📚 Analyse Détaillée
 
 $DEEP_OUTPUT
 
@@ -158,13 +214,13 @@ $DEEP_OUTPUT
 
 ## 💡 Points Clés à Retenir
 
-<!-- À compléter manuellement si besoin -->
+<!-- À compléter après lecture -->
 
 ---
 
 ## 🎯 Actions / Réflexions
 
-<!-- À compléter manuellement si besoin -->
+<!-- À compléter si pertinent -->
 
 ---
 

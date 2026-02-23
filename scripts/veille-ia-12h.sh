@@ -20,8 +20,12 @@ mkdir -p "$VEILLE_DIR/daily-flash/$DATE"
 echo ""
 echo "⚡ Génération du Flash 5 min (midi)..."
 
-# Requêtes flash légères - actualités de la matinée
-FLASH_QUERIES=("AI breaking news today" "AI announcements this morning" "AI Twitter trending")
+# Requêtes flash légères EN FRANÇAIS
+FLASH_QUERIES=(
+    "Breaking news intelligence artificielle ce matin - résumé en français"
+    "Annonces IA de ce matin - synthèse détaillée en français"
+    "Tendances IA du matin - analyse rapide en français"
+)
 
 # Lancer les requêtes Perplexity
 cd "$SKILL_DIR"

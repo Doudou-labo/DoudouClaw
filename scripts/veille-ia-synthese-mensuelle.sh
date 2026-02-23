@@ -32,19 +32,19 @@ mkdir -p "$VEILLE_DIR/syntheses-mensuelles"
 echo ""
 echo "🔮 Génération de la synthèse stratégique..."
 
-# Requêtes synthèse par thème
+# Requêtes synthèse par thème EN FRANÇAIS avec analyses détaillées
 SYNTHESE_QUERIES=(
-    "AI industry monthly recap $MOIS $ANNEE"
-    "AI technology breakthroughs $MOIS $ANNEE summary"
-    "AI regulation updates $MOIS $ANNEE"
-    "AI funding acquisitions monthly report $MOIS $ANNEE"
-    "Enterprise AI adoption trends $MOIS $ANNEE"
-    "AI automotive industry developments $MOIS $ANNEE"
+    "Bilan mensuel industrie IA $MOIS $ANNEE : tendances majeures et évolutions - analyse stratégique détaillée en français"
+    "Avancées technologiques IA $MOIS $ANNEE : innovations clés et implications - synthèse approfondie en français"
+    "Évolution réglementation IA $MOIS $ANNEE : nouveautés et impacts - analyse juridique détaillée en français"
+    "Marché IA $MOIS $ANNEE : levées de fonds acquisitions fusion - analyse économique en français"
+    "Adoption enterprise IA $MOIS $ANNEE : chiffres et tendances - étude détaillée en français"
+    "Développements IA automobile $MOIS $ANNEE : secteur et innovations - analyse sectorielle en français"
 )
 
 # Lancer les requêtes Perplexity
 cd "$SKILL_DIR"
-echo "Exécution des requêtes Perplexity..."
+echo "Exécution des requêtes Perplexity (analyses détaillées)..."
 SYNTHESE_OUTPUT=$(node scripts/search.mjs "${SYNTHESE_QUERIES[@]}" 2>&1)
 
 # Générer le fichier de synthèse
@@ -141,7 +141,7 @@ $(for q in "${SYNTHESE_QUERIES[@]}"; do echo "- $q"; done)
 
 ---
 
-## 📚 Données Brutes Perplexity
+## 📚 Analyses Détaillées par Thème
 
 $SYNTHESE_OUTPUT
 

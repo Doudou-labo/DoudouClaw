@@ -36,8 +36,12 @@ mkdir -p "$VEILLE_DIR/deep-dives/$DATE"
 echo ""
 echo "⚡ Génération du Flash 5 min (soir)..."
 
-# Requêtes flash - actualités de la journée
-FLASH_QUERIES=("AI news today roundup" "AI daily summary" "AI trending topics today")
+# Requêtes flash - actualités de la journée EN FRANÇAIS avec analyse
+FLASH_QUERIES=(
+    "Quelles sont les actualités IA majeures aujourd'hui ? Réponds en français avec analyse détaillée."
+    "Résumé des annonces intelligence artificielle de la journée en français"
+    "Tendances IA du jour - analyse en français"
+)
 
 # Lancer les requêtes Perplexity
 cd "$SKILL_DIR"
@@ -60,7 +64,7 @@ $(for q in "${FLASH_QUERIES[@]}"; do echo "- $q"; done)
 
 ---
 
-## 📰 Résultats de la Journée
+## 📰 Actualités et Analyses
 
 $FLASH_OUTPUT
 
@@ -75,34 +79,62 @@ echo "✅ Flash soir sauvegardé : $FLASH_FILE"
 echo ""
 echo "🔬 Génération du Deep Dive (soir)..."
 
-# Requêtes deep dive selon le thème (complémentaire du matin)
+# Requêtes deep dive selon le thème (complémentaire du matin) EN FRANÇAIS
 case $THEME in
     "tech")
-        DEEP_QUERIES=("Edge AI deployment challenges 2026" "AI hardware chips comparison" "Transformer alternatives research")
+        DEEP_QUERIES=(
+            "Analyse détaillée des défis du déploiement Edge AI en 2026 - réponds en français avec exemples concrets"
+            "Comparaison approfondie des puces AI hardware 2026 : GPU, TPU, ASIC - analyse en français"
+            "Alternatives aux Transformers : état de la recherche et implications - explications détaillées en français"
+        )
         DEEP_TITLE="Infrastructure et Hardware AI"
         ;;
     "produits")
-        DEEP_QUERIES=("AI automation platforms comparison 2026" "Enterprise AI integration challenges" "AI workflow automation tools")
+        DEEP_QUERIES=(
+            "Plateformes d'automatisation AI enterprise 2026 : comparaison détaillée en français"
+            "Défis d'intégration AI en entreprise - analyse approfondie avec cas d'usage en français"
+            "Outils de workflow automation AI : état du marché et tendances - analyse française"
+        )
         DEEP_TITLE="Automatisation et Intégration Enterprise"
         ;;
     "regulation")
-        DEEP_QUERIES=("Algorithmic bias detection regulations" "AI transparency requirements" "AI liability legal cases 2026")
+        DEEP_QUERIES=(
+            "Régulations sur la détection des biais algorithmiques - analyse juridique détaillée en français"
+            "Exigences de transparence AI : ce que les entreprises doivent savoir - français"
+            "Responsabilité juridique de l'IA : évolution des cas récents 2026 - analyse française"
+        )
         DEEP_TITLE="Éthique et Responsabilité Algorithmique"
         ;;
     "business")
-        DEEP_QUERIES=("AI unicorn valuations 2026" "AI startup failure analysis" "AI talent market trends")
+        DEEP_QUERIES=(
+            "Valorisation des licornes AI en 2026 : analyse de marché détaillée en français"
+            "Échecs et faillites startups AI 2026 : leçons à tirer - analyse française"
+            "Marché du talent AI : tendances salariales et pénuries - étude détaillée en français"
+        )
         DEEP_TITLE="Écosystème Startup et Talent AI"
         ;;
     "sectoriel")
-        DEEP_QUERIES=("Connected car AI features" "AI vehicle diagnostics" "Tire industry digitalization")
+        DEEP_QUERIES=(
+            "Fonctionnalités AI des véhicules connectés 2026 - analyse détaillée en français"
+            "Diagnostic automobile par IA : technologies et acteurs - étude approfondie française"
+            "Digitalisation de l'industrie du pneumatique : innovations IA - analyse en français"
+        )
         DEEP_TITLE="Digitalisation Automobile et Pneumatique"
         ;;
     "emergent")
-        DEEP_QUERIES=("Swarm intelligence AI applications" "Federated learning enterprise use cases" "Causal AI developments")
+        DEEP_QUERIES=(
+            "Intelligence en essaim (swarm intelligence) : applications AI concrètes - français"
+            "Apprentissage fédéré (federated learning) en entreprise : cas d'usage détaillés - français"
+            "IA causale : développements récents et implications - explications approfondies en français"
+        )
         DEEP_TITLE="Paradigmes AI Émergents"
         ;;
     "recap")
-        DEEP_QUERIES=("AI week highlights analysis" "Key AI trends this week" "AI industry weekly review insights")
+        DEEP_QUERIES=(
+            "Bilan hebdomadaire IA : principales avancées de la semaine - synthèse détaillée en français"
+            "Tendances clés de la semaine dans l'intelligence artificielle - analyse française"
+            "Revue d'actualité AI hebdomadaire : faits marquants et implications - français"
+        )
         DEEP_TITLE="Analyse Hebdomadaire Complète"
         ;;
 esac
@@ -122,13 +154,13 @@ cat > "$DEEP_FILE" << EOF
 
 ---
 
-## 🔍 Requêtes exécutées
+## 🔍 Requêtes d'analyse approfondie
 
 $(for q in "${DEEP_QUERIES[@]}"; do echo "- $q"; done)
 
 ---
 
-## 📚 Analyse Approfondie
+## 📚 Analyse Détaillée
 
 $DEEP_OUTPUT
 
@@ -136,13 +168,13 @@ $DEEP_OUTPUT
 
 ## 💡 Points Clés à Retenir
 
-<!-- À compléter manuellement si besoin -->
+<!-- À compléter après lecture -->
 
 ---
 
 ## 🎯 Actions / Réflexions
 
-<!-- À compléter manuellement si besoin -->
+<!-- À compléter si pertinent -->
 
 ---
 
