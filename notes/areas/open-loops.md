@@ -20,5 +20,5 @@
 - [ ] Cette semaine : choisir 1 compétence à travailler (ex : feedback / priorisation / cadrage) et définir 1 situation où l'appliquer
 
 ## Auto-checkpoints
-- [ ] [AUTO 2026-02-23 midi] Checkpoint 3-min fait. Next: Ce soir 21:15 : saisir les dépenses du jour (`finance add ...`) puis vérifier (`finance recent 5`) et résumé (`finance summary`)
+- [ ] [AUTO 2026-02-23 soir] Checkpoint 3-min fait. Next: Ce soir 21:15 : saisir les dépenses du jour (`finance add ...`) puis vérifier (`finance recent 5`) et résumé (`finance summary`)
 
