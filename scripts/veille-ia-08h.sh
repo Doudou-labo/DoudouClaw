@@ -5,7 +5,7 @@
 set -e
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-BASE_DIR="$(cd "$SCRIPT_DIR/../.." && pwd)"
+BASE_DIR="$(cd "$SCRIPT_DIR/.." && pwd)"
 SKILL_DIR="$BASE_DIR/skills/perplexity"
 VEILLE_DIR="$BASE_DIR/notes/areas/veille-ia"
 DATE=$(date +%Y-%m-%d)
