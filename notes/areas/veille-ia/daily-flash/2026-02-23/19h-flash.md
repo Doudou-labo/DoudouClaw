@@ -1,7 +1,7 @@
 # ⚡ Flash IA - 2026-02-23 - 19h00 (Soir)
 
 **Thème du jour** : TECH
-**Généré le** : 23/02/2026 à 22:02
+**Généré le** : 23/02/2026 à 22:08
 
 ---
 
@@ -27,8 +27,50 @@ Le Premier ministre indien, Narendra Modi (à gauche), se prête à une photo de
 
 **Intelligences artificielles génératives - Actualités, vidéos et infos en ...**
 https://www.lemonde.fr/intelligences-artificielles-generatives/
-Une découverte qui pourrait peser sur des procès futurs. Publié le 22 janvier 2026 à 20h00, modifié le 23 janvier 2026 à 09h48 Nicolas Six Article réservé à nos abonnés Dans les entreprises, l’intégration de l’IA se fait à géométrie variable Les Rencontres RH du 13 janvier ont de nouveau permis de c...
+Publié le 16 janvier 2026 à 05h00, modifié le 16 janvier 2026 à 08h42 Adélaïde Tenaglia Morgane Tual Michaël Szadkowski Article réservé à nos abonnés Santé mentale : grâce à l’IA, Callyope veut aider les psychiatres à prévenir les rechutes de leurs patients Cette start-up française utilise la voix e...
 
 ---
 
-*Veille automatique - Perplexity AI*
+Unknown argument: stdin
+Usage: gemini [options] [command]
+
+Gemini CLI - Defaults to interactive mode. Use -p/--prompt for non-interactive (headless) mode.
+
+Commands:
+  gemini [query..]             Launch Gemini CLI  [default]
+  gemini mcp                   Manage MCP servers
+  gemini extensions <command>  Manage Gemini CLI extensions.  [aliases: extension]
+  gemini skills <command>      Manage agent skills.  [aliases: skill]
+  gemini hooks <command>       Manage Gemini CLI hooks.  [aliases: hook]
+
+Positionals:
+  query  Initial prompt. Runs in interactive mode by default; use -p/--prompt for non-interactive.
+
+Options:
+  -d, --debug                     Run in debug mode (open debug console with F12)  [boolean] [default: false]
+  -m, --model                     Model  [string]
+  -p, --prompt                    Run in non-interactive (headless) mode with the given prompt. Appended to input on stdin (if any).  [string]
+  -i, --prompt-interactive        Execute the provided prompt and continue in interactive mode  [string]
+  -s, --sandbox                   Run in sandbox?  [boolean]
+  -y, --yolo                      Automatically accept all actions (aka YOLO mode, see https://www.youtube.com/watch?v=xvFZjo5PgG0 for more details)?  [boolean] [default: false]
+      --approval-mode             Set the approval mode: default (prompt for approval), auto_edit (auto-approve edit tools), yolo (auto-approve all tools), plan (read-only mode)  [string] [choices: "default", "auto_edit", "yolo", "plan"]
+      --experimental-acp          Starts the agent in ACP mode  [boolean]
+      --allowed-mcp-server-names  Allowed MCP server names  [array]
+      --allowed-tools             Tools that are allowed to run without confirmation  [array]
+  -e, --extensions                A list of extensions to use. If not provided, all extensions are used.  [array]
+  -l, --list-extensions           List all available extensions and exit.  [boolean]
+  -r, --resume                    Resume a previous session. Use "latest" for most recent or index number (e.g. --resume 5)  [string]
+      --list-sessions             List available sessions for the current project and exit.  [boolean]
+      --delete-session            Delete a session by index number (use --list-sessions to see available sessions).  [string]
+      --include-directories       Additional directories to include in the workspace (comma-separated or multiple --include-directories)  [array]
+      --screen-reader             Enable screen reader mode for accessibility.  [boolean]
+  -o, --output-format             The format of the CLI output.  [string] [choices: "text", "json", "stream-json"]
+      --raw-output                Disable sanitization of model output (e.g. allow ANSI escape sequences). WARNING: This can be a security risk if the model output is untrusted.  [boolean]
+      --accept-raw-output-risk    Suppress the security warning when using --raw-output.  [boolean]
+  -v, --version                   Show version number  [boolean]
+  -h, --help                      Show help  [boolean]
+*Synthèse Gemini indisponible*
+
+---
+
+*Veille automatique - Perplexity AI + Gemini*

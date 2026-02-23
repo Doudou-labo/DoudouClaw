@@ -1,5 +1,5 @@
 #!/bin/bash
-# veille-ia-19h.sh - Veille IA du soir (Flash + Deep Dive) - VERSION COMPLÈTE
+# veille-ia-19h.sh - Veille IA du soir (Flash + Deep Dive) - AVEC SYNTHÈSE GEMINI
 # Exécution : 19h00 tous les jours
 
 set -e
@@ -27,7 +27,6 @@ mkdir -p "$VEILLE_DIR/deep-dives/$DATE"
 echo ""
 echo "⚡ Génération du Flash 5 min (soir)..."
 
-# Requêtes flash EN FRANÇAIS
 FLASH_QUERIES=(
     "Actualités intelligence artificielle aujourd'hui 23 février 2026 - faits marquants et annonces"
     "Nouvelles du jour dans l'IA - résumé complet en français"
@@ -36,6 +35,16 @@ FLASH_QUERIES=(
 cd "$SKILL_DIR"
 echo "Appel Perplexity pour Flash..."
 FLASH_RAW=$(node scripts/search.mjs "${FLASH_QUERIES[@]}" 2>&1 || echo "Erreur Perplexity Flash")
+
+# Générer synthèse Gemini pour Flash
+echo "Génération synthèse Gemini pour Flash..."
+FLASH_SYNTHESIS=$(echo "$FLASH_RAW" | gemini --stdin "Tu es un expert en veille technologique. À partir de ce contenu sur l'actualité IA, génère :
+
+## 🎯 Points Clés à Retenir (3 points maximum, en français, bullet points avec emojis)
+
+## 🚀 Actions / Réflexions (2-3 suggestions concrètes de lecture ou d'actions à entreprendre, en français)
+
+Sois concis et percutant." 2>&1 || echo "*Synthèse Gemini indisponible*")
 
 # Générer le fichier Flash
 FLASH_FILE="$VEILLE_DIR/daily-flash/$DATE/19h-flash.md"
@@ -53,7 +62,11 @@ echo "$FLASH_RAW" >> "$FLASH_FILE"
 echo "" >> "$FLASH_FILE"
 echo "---" >> "$FLASH_FILE"
 echo "" >> "$FLASH_FILE"
-echo "*Veille automatique - Perplexity AI*" >> "$FLASH_FILE"
+echo "$FLASH_SYNTHESIS" >> "$FLASH_FILE"
+echo "" >> "$FLASH_FILE"
+echo "---" >> "$FLASH_FILE"
+echo "" >> "$FLASH_FILE"
+echo "*Veille automatique - Perplexity AI + Gemini*" >> "$FLASH_FILE"
 
 echo "✅ Flash soir sauvegardé : $FLASH_FILE ($(wc -l < "$FLASH_FILE" | tr -d ' ') lignes)"
 
@@ -61,7 +74,7 @@ echo "✅ Flash soir sauvegardé : $FLASH_FILE ($(wc -l < "$FLASH_FILE" | tr -d 
 echo ""
 echo "🔬 Génération du Deep Dive (soir)..."
 
-# Requêtes deep dive selon le thème EN FRANÇAIS
+# Requêtes deep dive selon le thème
 case $THEME in
     "tech")
         DEEP_QUERIES=(
@@ -124,6 +137,18 @@ esac
 echo "Appel Perplexity pour Deep Dive..."
 DEEP_RAW=$(node scripts/search.mjs "${DEEP_QUERIES[@]}" 2>&1 || echo "Erreur Perplexity Deep Dive")
 
+# Générer synthèse Gemini pour Deep Dive
+echo "Génération synthèse Gemini pour Deep Dive..."
+DEEP_SYNTHESIS=$(echo "$DEEP_RAW" | gemini --stdin "Tu es un expert en veille technologique spécialisé en $DEEP_TITLE. À partir de ce contenu de recherche, génère :
+
+## 💡 Points Clés à Retenir (4-5 points maximum, en français, bullet points avec emojis, focus sur les enseignements stratégiques)
+
+## 🎯 Actions / Réflexions (3-4 suggestions concrètes : quels articles lire en priorité, quelles tendances surveiller, quelles actions entreprendre pour un professionnel de l'IA)
+
+## 🔮 Perspectives (2-3 évolutions à surveiller sur ce thème dans les prochains mois)
+
+Sois percutant, stratégique et actionnable. Évite le jargon superflu." 2>&1 || echo "*Synthèse Gemini indisponible*")
+
 # Générer le fichier Deep Dive
 DEEP_FILE="$VEILLE_DIR/deep-dives/$DATE/19h-deep-dive-${THEME}.md"
 
@@ -147,31 +172,11 @@ echo "$DEEP_RAW" >> "$DEEP_FILE"
 echo "" >> "$DEEP_FILE"
 echo "---" >> "$DEEP_FILE"
 echo "" >> "$DEEP_FILE"
-echo "## 💡 Points Clés à Retenir" >> "$DEEP_FILE"
-echo "" >> "$DEEP_FILE"
-echo "### 🎯 Enseignements Principaux" >> "$DEEP_FILE"
-echo "" >> "$DEEP_FILE"
-echo "1. **Point clé 1** : *À compléter après lecture*" >> "$DEEP_FILE"
-echo "2. **Point clé 2** : *À compléter après lecture*" >> "$DEEP_FILE"
-echo "3. **Point clé 3** : *À compléter après lecture*" >> "$DEEP_FILE"
-echo "" >> "$DEEP_FILE"
-echo "### 🚀 Opportunités Identifiées" >> "$DEEP_FILE"
-echo "" >> "$DEEP_FILE"
-echo "- *À compléter*" >> "$DEEP_FILE"
-echo "" >> "$DEEP_FILE"
-echo "### ⚠️ Risques et Vigilances" >> "$DEEP_FILE"
-echo "" >> "$DEEP_FILE"
-echo "- *À compléter*" >> "$DEEP_FILE"
+echo "$DEEP_SYNTHESIS" >> "$DEEP_FILE"
 echo "" >> "$DEEP_FILE"
 echo "---" >> "$DEEP_FILE"
 echo "" >> "$DEEP_FILE"
-echo "## 🎬 Conclusion et Perspectives" >> "$DEEP_FILE"
-echo "" >> "$DEEP_FILE"
-echo "*Synthèse des enjeux et orientations futures à surveiller.*" >> "$DEEP_FILE"
-echo "" >> "$DEEP_FILE"
-echo "---" >> "$DEEP_FILE"
-echo "" >> "$DEEP_FILE"
-echo "*Veille automatique - Perplexity AI*" >> "$DEEP_FILE"
+echo "*Veille automatique - Perplexity AI + Gemini*" >> "$DEEP_FILE"
 
 echo "✅ Deep Dive soir sauvegardé : $DEEP_FILE ($(wc -l < "$DEEP_FILE" | tr -d ' ') lignes)"
 
