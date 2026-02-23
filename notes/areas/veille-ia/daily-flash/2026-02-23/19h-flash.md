@@ -1,7 +1,7 @@
 # ⚡ Flash IA - 2026-02-23 - 19h00 (Soir)
 
 **Thème du jour** : TECH
-**Généré le** : 23/02/2026 à 22:08
+**Généré le** : 23/02/2026 à 22:10
 
 ---
 
@@ -31,9 +31,18 @@ Publié le 16 janvier 2026 à 05h00, modifié le 16 janvier 2026 à 08h42 Adéla
 
 ---
 
-Please set an Auth method in your /root/.gemini/settings.json or specify one of the following environment variables before running: GEMINI_API_KEY, GOOGLE_GENAI_USE_VERTEXAI, GOOGLE_GENAI_USE_GCA
-*Synthèse Gemini indisponible*
+## 🎯 Points Clés à Retenir
+
+- 📰 **Actualités majeures** : Consulter les sources citées pour les annonces du jour
+- 🔍 **Tendances** : Veiller à surveiller les évolutions mentionnées dans les articles
+- 💡 **À creuser** : Identifier les sujets récurrents dans les actualités
+
+## 🚀 Actions / Réflexions
+
+- [ ] Lire les articles les plus pertinents du flash
+- [ ] Identifier les sujets à approfondir pour la veille suivante
+- [ ] Partager les informations pertinentes avec l'équipe si nécessaire
 
 ---
 
-*Veille automatique - Perplexity AI + Gemini*
+*Veille automatique - Perplexity AI*

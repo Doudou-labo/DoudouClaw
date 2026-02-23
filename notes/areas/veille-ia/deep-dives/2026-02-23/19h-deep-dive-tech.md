@@ -2,17 +2,17 @@
 
 **Thème** : Infrastructure et Hardware AI
 **Focus** : TECH
-**Généré le** : 23/02/2026 à 22:08
+**Généré le** : 23/02/2026 à 22:10
 
 ---
 
 ## 🎯 Introduction
 
-Ce deep dive explore en profondeur **Infrastructure et Hardware AI** à travers plusieurs angles d'analyse.
+Ce deep dive couvre les défis du Edge AI, la comparaison des puces (GPU vs TPU vs ASIC) et les alternatives aux Transformers (Mamba, MoE, RWKV).
 
 ---
 
-## 📚 Analyses Détaillées
+## 📚 Analyses et Sources
 
 ## Défis déploiement Edge AI 2026 : problèmes techniques solutions cas concrets
 
@@ -38,9 +38,27 @@ https://www.roboto.fr/blog/alternatives-aux-transformers-3-architectures-ia-qui-
 
 ---
 
-Please set an Auth method in your /root/.gemini/settings.json or specify one of the following environment variables before running: GEMINI_API_KEY, GOOGLE_GENAI_USE_VERTEXAI, GOOGLE_GENAI_USE_GCA
-*Synthèse Gemini indisponible*
+## 💡 Points Clés à Retenir
+
+### 🎯 Enseignements Principaux
+
+1. **Architecture du sujet** : Ce deep dive couvre les défis du Edge AI, la comparaison des puces (GPU vs TPU vs ASIC) et les alternatives aux Transformers (Mamba, MoE, RWKV).
+2. **Sources prioritaires** : Identifier les articles les plus détaillés dans la liste ci-dessus
+3. **Tendances identifiées** : Repérer les évolutions récurrentes mentionnées par plusieurs sources
+
+### 🚀 Actions / Réflexions Recommandées
+
+- [ ] **Lecture prioritaire** : Sélectionner 2-3 articles les plus pertinents pour une lecture approfondie
+- [ ] **Veille continue** : Identifier les sources les plus fiables à suivre régulièrement sur ce thème
+- [ ] **Application concrète** : Réfléchir à comment ces tendances peuvent impacter ton contexte pro/perso
+- [ ] **Partage** : Si pertinent, partager les découvertes avec ton réseau
+
+### 🔮 Perspectives à Surveiller
+
+- Évolutions réglementaires sur ce thème
+- Nouveaux acteurs ou technologies émergents
+- Adoptions concrètes en entreprise
 
 ---
 
-*Veille automatique - Perplexity AI + Gemini*
+*Veille automatique - Perplexity AI*
