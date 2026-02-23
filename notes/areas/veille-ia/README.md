@@ -22,16 +22,17 @@
 notes/areas/veille-ia/
 ├── mots-cles-veille.md          # Requêtes Perplexity optimisées
 ├── sources-trustees.md          # Liste des sources fiables
-├── daily-flash/                 # Captures quotidiennes
+├── README.md                    # Cette documentation
+├── daily-flash/                 # Généré automatiquement
 │   └── YYYY-MM-DD/
 │       ├── 08h-flash.md
 │       ├── 12h-flash.md
 │       └── 19h-flash.md
-├── deep-dives/                  # Analyses approfondies
+├── deep-dives/                  # Généré automatiquement
 │   └── YYYY-MM-DD/
 │       ├── 08h-deep-dive-{theme}.md
 │       └── 19h-deep-dive-{theme}.md
-└── syntheses-mensuelles/        # Rapports stratégiques
+└── syntheses-mensuelles/        # Généré automatiquement
     └── synthese-YYYY-MM-DD.md
 ```
 
@@ -77,19 +78,27 @@ bash scripts/veille-ia-synthese-mensuelle.sh
 
 ## ⚙️ Configuration des Crons
 
-Les crons sont configurés dans OpenClaw avec les paramètres suivants :
+Les crons sont configurés dans OpenClaw avec livraison sur Discord.
+
+### 📬 Canal de livraison
+
+Toutes les veilles sont livrées sur le channel Discord : **🔍-ᴠᴇɪʟʟᴇ-ɪᴀ** (ID: `1475604437505413211`)
 
 ### Veille 8h00
 ```json
 {
-  "id": "veille-ia-08h",
+  "id": "🌅 Veille IA - 8h00",
   "schedule": "0 8 * * *",
   "timezone": "Europe/Paris",
-  "command": "bash /root/.openclaw/workspace/scripts/veille-ia-08h.sh",
+  "sessionTarget": "isolated",
+  "payload": {
+    "kind": "agentTurn",
+    "message": "Exécute le script de veille IA 8h"
+  },
   "delivery": {
     "mode": "announce",
-    "target": "telegram",
-    "topic": "veille-ia"
+    "channel": "discord",
+    "to": "1475604437505413211"
   }
 }
 ```
@@ -97,14 +106,18 @@ Les crons sont configurés dans OpenClaw avec les paramètres suivants :
 ### Veille 12h00
 ```json
 {
-  "id": "veille-ia-12h",
+  "id": "☀️ Veille IA - 12h00",
   "schedule": "0 12 * * *",
   "timezone": "Europe/Paris",
-  "command": "bash /root/.openclaw/workspace/scripts/veille-ia-12h.sh",
+  "sessionTarget": "isolated",
+  "payload": {
+    "kind": "agentTurn",
+    "message": "Exécute le script de veille IA 12h"
+  },
   "delivery": {
     "mode": "announce",
-    "target": "telegram",
-    "topic": "veille-ia"
+    "channel": "discord",
+    "to": "1475604437505413211"
   }
 }
 ```
@@ -112,14 +125,18 @@ Les crons sont configurés dans OpenClaw avec les paramètres suivants :
 ### Veille 19h00
 ```json
 {
-  "id": "veille-ia-19h",
+  "id": "🌆 Veille IA - 19h00",
   "schedule": "0 19 * * *",
   "timezone": "Europe/Paris",
-  "command": "bash /root/.openclaw/workspace/scripts/veille-ia-19h.sh",
+  "sessionTarget": "isolated",
+  "payload": {
+    "kind": "agentTurn",
+    "message": "Exécute le script de veille IA 19h"
+  },
   "delivery": {
     "mode": "announce",
-    "target": "telegram",
-    "topic": "veille-ia"
+    "channel": "discord",
+    "to": "1475604437505413211"
   }
 }
 ```
@@ -127,30 +144,37 @@ Les crons sont configurés dans OpenClaw avec les paramètres suivants :
 ### Synthèse Mensuelle (15 du mois)
 ```json
 {
-  "id": "veille-ia-synthese-15",
+  "id": "📊 Veille IA - Synthèse Mensuelle (15)",
   "schedule": "0 9 15 * *",
   "timezone": "Europe/Paris",
-  "command": "bash /root/.openclaw/workspace/scripts/veille-ia-synthese-mensuelle.sh",
+  "sessionTarget": "isolated",
+  "payload": {
+    "kind": "agentTurn",
+    "message": "Exécute le script de synthèse mensuelle IA"
+  },
   "delivery": {
     "mode": "announce",
-    "target": "telegram",
-    "topic": "veille-ia"
+    "channel": "discord",
+    "to": "1475604437505413211"
   }
 }
 ```
 
-### Synthèse Mensuelle (30 du mois - 28 pour février)
+### Synthèse Mensuelle (30/28 du mois)
 ```json
 {
-  "id": "veille-ia-synthese-30",
-  "schedule": "0 9 28-31 * *",
+  "id": "📊 Veille IA - Synthèse Mensuelle (30/28)",
+  "schedule": "0 9 28,29,30,31 * *",
   "timezone": "Europe/Paris",
-  "command": "bash /root/.openclaw/workspace/scripts/veille-ia-synthese-mensuelle.sh",
-  "condition": "test $(date +\%d) -eq 30 || (test $(date +\%m) -eq 2 \&\& test $(date +\%d) -eq 28)",
+  "sessionTarget": "isolated",
+  "payload": {
+    "kind": "agentTurn",
+    "message": "Exécute le script de synthèse mensuelle IA"
+  },
   "delivery": {
     "mode": "announce",
-    "target": "telegram",
-    "topic": "veille-ia"
+    "channel": "discord",
+    "to": "1475604437505413211"
   }
 }
 ```
