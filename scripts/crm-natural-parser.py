@@ -85,9 +85,9 @@ def parse_tire_brand_model(text):
     words = rest.split()
     model_words = []
     
-    for word in words[:3]:  # Max 3 words for model
+    for word in words[:4]:  # Max 4 words for model
         word_clean = word.strip('.,;:!?')
-        if word_clean.lower() in ['pour', 'un', 'une', 'le', 'la', 'suite', 'car', 'a', 'sur', 'de']:
+        if word_clean.lower() in ['pour', 'un', 'une', 'le', 'la', 'suite', 'car', 'a', 'sur', 'de', 'qui', 'est', 'en']:
             break
         model_words.append(word_clean)
     
@@ -120,6 +120,9 @@ def parse_societe(text):
     
     # Patterns for company detection
     patterns = [
+        # "du Commonwealth" pattern (after name)
+        r'(?:Monsieur|M|M\.\s*|Mr\s+|Mme\s+|Madame\s+)[A-Za-z\s]+\s+du\s+([A-Z][A-Za-z0-9\s&\.\-]+?)(?:\s+(?:au|pour|,|en)\s|$)',
+        # Standard patterns
         r'(?:pour\s+la\s+société|pour\s+la\s+ste|chez|société|ste|entreprise|sarl|sas|eurl)\s+([A-Z][A-Za-z0-9\s&\.\-]+?)(?:\s+(?:pour|au|le|la|un|une|à|@)\s|$)',
         r'(?:client\s+pro|professionnel|société)\s*:?\s*([A-Z][A-Za-z0-9\s&\.\-]+?)(?:\s+(?:pour|au|le)\s|$)',
     ]
@@ -184,19 +187,19 @@ def parse_date(text):
 
 def parse_name(text):
     """Extract person name from text"""
-    # Look for patterns: "Mr Dupont", "Mme Martin", "rappeler X", "appeler X"
-    patterns = [
-        r'(?:Monsieur|M|M\.\s*|Mr\s+|Mme\s+|Madame\s+)([A-Z][a-z]+)',
-        r'(?:rappeller?|appeller?)\s+(?:Monsieur|M|M\.\s*|Mr\s+|Mme\s+|Madame\s+)?([A-Z][a-z]+)',
-    ]
+    # Look for patterns: "Monsieur Dupont", "Mme Martin", "rappeler X"
+    # Pattern 1: Monsieur/Mme + nom (capturer le premier mot capitalisé après)
+    match = re.search(r'\b(?:Monsieur|Mr|Mme|Madame)\s+([A-Z][a-z]+)', text, re.IGNORECASE)
+    if match:
+        return match.group(1).strip()
     
-    for pattern in patterns:
-        match = re.search(pattern, text, re.IGNORECASE)
-        if match:
-            return match.group(1).strip()
+    # Pattern 2: rappeller/appeller + Monsieur/Mme + nom
+    match = re.search(r'(?:rappeller?|appeller?)\s+(?:Monsieur|M|M\.\s*|Mr\s+|Mme\s+|Madame\s+)([A-Z][a-z]+)', text, re.IGNORECASE)
+    if match:
+        return match.group(1).strip()
     
-    # Fallback: look for capitalized words after "rappelle"
-    match = re.search(r'rappelle\s+([A-Z][a-z]+(?:\s+[A-Z][a-z]+)?)', text, re.IGNORECASE)
+    # Fallback: look for capitalized words after "rappelle Monsieur"
+    match = re.search(r'rappelle\s+(?:Monsieur|M|M\.\s*|Mr\s+|Mme\s+|Madame\s+)?([A-Z][a-z]+)', text, re.IGNORECASE)
     if match:
         return match.group(1).strip()
     
