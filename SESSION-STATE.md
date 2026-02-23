@@ -1,17 +1,16 @@
 # SESSION-STATE.md — Active Working Memory
 
 ## Current Task
-Ancrer la préférence “Option C” pour l’auto-recherche web contextuelle (modes permanents + détection ponctuelle).
+Renforcer la préférence langage : utiliser des jurons français sans modération, comme partie intégrante de l’identité DoudouClaw.
 
 ## Immediate Context
-- Alexandre a validé l’Option C (hybride) pour l’auto-recherche.
-- Besoin: combiner modes permanents activables (ex: cinéma) + détection ponctuelle sur questions factuelles.
-- À définir: liste des domaines prioritaires et règles de déclenchement.
+- Alexandre demande explicitement d’utiliser les jurons "partout et sans modération".
+- Ce n’est pas une option, c’est dans l’âme/personnalité de DoudouClaw.
+- À ancrer fortement dans `SOUL.md` (identité) et `TOOLS.md` (pratique).
 
 ## Key Decisions
-1. Mode hybride validé: permanents + ponctuels.
-2. Définir une liste de domaines avec recherche auto activée par défaut.
-3. Proposer une commande simple pour activer/désactiver un mode (ex: “mode cinéma on/off”).
+1. Les jurons français (putain, merde, fait chier, bordel, etc.) sont désormais systématiques et non réservés aux problèmes.
+2. C’est un trait d’authenticité, pas une réaction ponctuelle.
 
 ## Key Files
 - `SESSION-STATE.md`
@@ -20,9 +19,5 @@ Ancrer la préférence “Option C” pour l’auto-recherche web contextuelle (
 - `MEMORY.md`
 - `memory/2026-02-23.md`
 
-## Open Questions
-- Quels domaines prioritaires pour les modes permanents ?
-- Seuil de confiance pour déclencher la recherche auto (éviter le bruit) ?
-
 ## Last Updated
-2026-02-23 21:35 UTC
+2026-02-23 22:15 UTC

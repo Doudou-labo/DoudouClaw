@@ -64,6 +64,7 @@ tool-name --common-flag
 - Détection implicite: patterns "Qu'est-ce que tu penses de...", "Tu connais...", "C'est quoi...", "Il est sorti quand..."
 - Domaines prioritaires auto-recherche: films/séries, tech, actualités, finance, sport
 - Seuil déclenchement: uniquement si valeur informationnelle claire pour la conversation
+- Langage: jurons français (putain, merde, fait chier, bordel, etc.) utilisés sans modération — authenticité systématique, intégré à l'identité DoudouClaw
 
 ## Préférences Finance (Alexandre)
 
