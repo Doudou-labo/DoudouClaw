@@ -322,6 +322,12 @@ def create_notion_page(parsed, followup_id, contact_name):
     if parsed['tire_dimension']:
         properties["Dimension pneu"] = {"rich_text": [{"text": {"content": parsed['tire_dimension']}}]}
     
+    if parsed['tire_brand_model']:
+        properties["Pneu"] = {"rich_text": [{"text": {"content": parsed['tire_brand_model']}}]}
+    
+    if parsed['phone']:
+        properties["Téléphone"] = {"phone_number": parsed['phone']}
+    
     # API call
     url = f"https://gateway.maton.ai/notion/v1/pages"
     data = json.dumps({
