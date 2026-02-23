@@ -1,5 +1,5 @@
 #!/bin/bash
-# veille-ia-19h.sh - Veille IA du soir (Flash + Deep Dive)
+# veille-ia-19h.sh - Veille IA du soir (Flash + Deep Dive) - VERSION COMPLÈTE
 # Exécution : 19h00 tous les jours
 
 set -e
@@ -9,26 +9,17 @@ BASE_DIR="$(cd "$SCRIPT_DIR/.." && pwd)"
 SKILL_DIR="$BASE_DIR/skills/perplexity"
 VEILLE_DIR="$BASE_DIR/notes/areas/veille-ia"
 DATE=$(date +%Y-%m-%d)
-TIME=$(date +%H-%M)
-DAY_OF_WEEK=$(date +%u) # 1=Lundi, 7=Dimanche
+DAY_OF_WEEK=$(date +%u)
 DAY_NAME=$(date +%A)
+DATE_FR=$(date '+%d/%m/%Y à %H:%M')
 
-# Déterminer le thème du jour (complement du matin)
- THEMES=(
-    "tech"           # Lundi
-    "produits"       # Mardi
-    "regulation"     # Mercredi
-    "business"       # Jeudi
-    "sectoriel"      # Vendredi
-    "emergent"       # Samedi
-    "recap"          # Dimanche
-)
+# Déterminer le thème du jour
+THEMES=("tech" "produits" "regulation" "business" "sectoriel" "emergent" "recap")
 THEME="${THEMES[$((DAY_OF_WEEK - 1))]}"
 
 echo "🌅 Veille IA - 19h00 - $DATE ($DAY_NAME)"
 echo "Thème du jour : $THEME"
 
-# Créer le répertoire du jour
 mkdir -p "$VEILLE_DIR/daily-flash/$DATE"
 mkdir -p "$VEILLE_DIR/deep-dives/$DATE"
 
@@ -36,152 +27,153 @@ mkdir -p "$VEILLE_DIR/deep-dives/$DATE"
 echo ""
 echo "⚡ Génération du Flash 5 min (soir)..."
 
-# Requêtes flash - actualités de la journée EN FRANÇAIS avec analyse
+# Requêtes flash EN FRANÇAIS
 FLASH_QUERIES=(
-    "Quelles sont les actualités IA majeures aujourd'hui ? Réponds en français avec analyse détaillée."
-    "Résumé des annonces intelligence artificielle de la journée en français"
-    "Tendances IA du jour - analyse en français"
+    "Actualités intelligence artificielle aujourd'hui 23 février 2026 - faits marquants et annonces"
+    "Nouvelles du jour dans l'IA - résumé complet en français"
 )
 
-# Lancer les requêtes Perplexity
 cd "$SKILL_DIR"
-FLASH_OUTPUT=$(node scripts/search.mjs "${FLASH_QUERIES[@]}" 2>&1)
+echo "Appel Perplexity pour Flash..."
+FLASH_RAW=$(node scripts/search.mjs "${FLASH_QUERIES[@]}" 2>&1 || echo "Erreur Perplexity Flash")
 
 # Générer le fichier Flash
 FLASH_FILE="$VEILLE_DIR/daily-flash/$DATE/19h-flash.md"
 
-cat > "$FLASH_FILE" << EOF
-# ⚡ Flash IA - $DATE - 19h00 (Soir)
+echo "# ⚡ Flash IA - $DATE - 19h00 (Soir)" > "$FLASH_FILE"
+echo "" >> "$FLASH_FILE"
+echo "**Thème du jour** : ${THEME^^}" >> "$FLASH_FILE"
+echo "**Généré le** : $DATE_FR" >> "$FLASH_FILE"
+echo "" >> "$FLASH_FILE"
+echo "---" >> "$FLASH_FILE"
+echo "" >> "$FLASH_FILE"
+echo "## 📰 Faits Marquants du Jour" >> "$FLASH_FILE"
+echo "" >> "$FLASH_FILE"
+echo "$FLASH_RAW" >> "$FLASH_FILE"
+echo "" >> "$FLASH_FILE"
+echo "---" >> "$FLASH_FILE"
+echo "" >> "$FLASH_FILE"
+echo "*Veille automatique - Perplexity AI*" >> "$FLASH_FILE"
 
-**Thème du jour** : ${THEME^^}  
-**Généré le** : $(date '+%d/%m/%Y à %H:%M')
-
----
-
-## 🔍 Requêtes exécutées
-
-$(for q in "${FLASH_QUERIES[@]}"; do echo "- $q"; done)
-
----
-
-## 📰 Actualités et Analyses
-
-$FLASH_OUTPUT
-
----
-
-*Veille automatique - Perplexity AI*
-EOF
-
-echo "✅ Flash soir sauvegardé : $FLASH_FILE"
+echo "✅ Flash soir sauvegardé : $FLASH_FILE ($(wc -l < "$FLASH_FILE" | tr -d ' ') lignes)"
 
 # === DEEP DIVE ===
 echo ""
 echo "🔬 Génération du Deep Dive (soir)..."
 
-# Requêtes deep dive selon le thème (complémentaire du matin) EN FRANÇAIS
+# Requêtes deep dive selon le thème EN FRANÇAIS
 case $THEME in
     "tech")
         DEEP_QUERIES=(
-            "Analyse détaillée des défis du déploiement Edge AI en 2026 - réponds en français avec exemples concrets"
-            "Comparaison approfondie des puces AI hardware 2026 : GPU, TPU, ASIC - analyse en français"
-            "Alternatives aux Transformers : état de la recherche et implications - explications détaillées en français"
+            "Défis déploiement Edge AI 2026 : problèmes techniques solutions cas concrets"
+            "Comparaison puces AI 2026 GPU TPU ASIC : avantages inconvénients choix"
+            "Alternatives Transformers 2026 : Mamba RWKV Griffin état recherche"
         )
         DEEP_TITLE="Infrastructure et Hardware AI"
         ;;
     "produits")
         DEEP_QUERIES=(
-            "Plateformes d'automatisation AI enterprise 2026 : comparaison détaillée en français"
-            "Défis d'intégration AI en entreprise - analyse approfondie avec cas d'usage en français"
-            "Outils de workflow automation AI : état du marché et tendances - analyse française"
+            "Plateformes automatisation AI entreprise 2026 : comparatif complet"
+            "Intégration AI en entreprise : défis solutions retours expérience"
+            "Workflow automation AI : outils leaders marché 2026"
         )
         DEEP_TITLE="Automatisation et Intégration Enterprise"
         ;;
     "regulation")
         DEEP_QUERIES=(
-            "Régulations sur la détection des biais algorithmiques - analyse juridique détaillée en français"
-            "Exigences de transparence AI : ce que les entreprises doivent savoir - français"
-            "Responsabilité juridique de l'IA : évolution des cas récents 2026 - analyse française"
+            "Biais algorithmiques régulations 2026 : obligations entreprises"
+            "Transparence IA exigences légales : guide conformité"
+            "Responsabilité juridique IA : évolutions jurisprudence 2026"
         )
         DEEP_TITLE="Éthique et Responsabilité Algorithmique"
         ;;
     "business")
         DEEP_QUERIES=(
-            "Valorisation des licornes AI en 2026 : analyse de marché détaillée en français"
-            "Échecs et faillites startups AI 2026 : leçons à tirer - analyse française"
-            "Marché du talent AI : tendances salariales et pénuries - étude détaillée en français"
+            "Marché startup IA 2026 : levées fonds tendances valorisation"
+            "Stratégies Big Tech IA 2026 : Google Microsoft Meta Amazon comparaison"
+            "Talent IA marché travail : pénuries salaires formations 2026"
         )
         DEEP_TITLE="Écosystème Startup et Talent AI"
         ;;
     "sectoriel")
         DEEP_QUERIES=(
-            "Fonctionnalités AI des véhicules connectés 2026 - analyse détaillée en français"
-            "Diagnostic automobile par IA : technologies et acteurs - étude approfondie française"
-            "Digitalisation de l'industrie du pneumatique : innovations IA - analyse en français"
+            "IA véhicules connectés 2026 : fonctionnalités acteurs marché"
+            "Diagnostic automobile IA : technologies acteurs cas usage"
+            "Digitalisation industrie pneumatique : innovations IA Michelin"
         )
         DEEP_TITLE="Digitalisation Automobile et Pneumatique"
         ;;
     "emergent")
         DEEP_QUERIES=(
-            "Intelligence en essaim (swarm intelligence) : applications AI concrètes - français"
-            "Apprentissage fédéré (federated learning) en entreprise : cas d'usage détaillés - français"
-            "IA causale : développements récents et implications - explications approfondies en français"
+            "Intelligence essaim swarm AI : applications concrètes 2026"
+            "Federated learning entreprise : cas usage bénéfices"
+            "IA causale causal AI : avancées recherche applications"
         )
         DEEP_TITLE="Paradigmes AI Émergents"
         ;;
     "recap")
         DEEP_QUERIES=(
-            "Bilan hebdomadaire IA : principales avancées de la semaine - synthèse détaillée en français"
-            "Tendances clés de la semaine dans l'intelligence artificielle - analyse française"
-            "Revue d'actualité AI hebdomadaire : faits marquants et implications - français"
+            "Bilan semaine IA : événements majeurs annonces tendances"
+            "Actualités IA semaine : synthèse complète faits marquants"
+            "Revue hebdo intelligence artificielle : points clés analyses"
         )
         DEEP_TITLE="Analyse Hebdomadaire Complète"
         ;;
 esac
 
-# Lancer les requêtes Deep Dive
-DEEP_OUTPUT=$(node scripts/search.mjs "${DEEP_QUERIES[@]}" 2>&1)
+echo "Appel Perplexity pour Deep Dive..."
+DEEP_RAW=$(node scripts/search.mjs "${DEEP_QUERIES[@]}" 2>&1 || echo "Erreur Perplexity Deep Dive")
 
 # Générer le fichier Deep Dive
 DEEP_FILE="$VEILLE_DIR/deep-dives/$DATE/19h-deep-dive-${THEME}.md"
 
-cat > "$DEEP_FILE" << EOF
-# 🔬 Deep Dive IA - $DATE - 19h00
+echo "# 🔬 Deep Dive IA - $DATE - 19h00" > "$DEEP_FILE"
+echo "" >> "$DEEP_FILE"
+echo "**Thème** : $DEEP_TITLE" >> "$DEEP_FILE"
+echo "**Focus** : ${THEME^^}" >> "$DEEP_FILE"
+echo "**Généré le** : $DATE_FR" >> "$DEEP_FILE"
+echo "" >> "$DEEP_FILE"
+echo "---" >> "$DEEP_FILE"
+echo "" >> "$DEEP_FILE"
+echo "## 🎯 Introduction" >> "$DEEP_FILE"
+echo "" >> "$DEEP_FILE"
+echo "Ce deep dive explore en profondeur **$DEEP_TITLE** à travers plusieurs angles d'analyse." >> "$DEEP_FILE"
+echo "" >> "$DEEP_FILE"
+echo "---" >> "$DEEP_FILE"
+echo "" >> "$DEEP_FILE"
+echo "## 📚 Analyses Détaillées" >> "$DEEP_FILE"
+echo "" >> "$DEEP_FILE"
+echo "$DEEP_RAW" >> "$DEEP_FILE"
+echo "" >> "$DEEP_FILE"
+echo "---" >> "$DEEP_FILE"
+echo "" >> "$DEEP_FILE"
+echo "## 💡 Points Clés à Retenir" >> "$DEEP_FILE"
+echo "" >> "$DEEP_FILE"
+echo "### 🎯 Enseignements Principaux" >> "$DEEP_FILE"
+echo "" >> "$DEEP_FILE"
+echo "1. **Point clé 1** : *À compléter après lecture*" >> "$DEEP_FILE"
+echo "2. **Point clé 2** : *À compléter après lecture*" >> "$DEEP_FILE"
+echo "3. **Point clé 3** : *À compléter après lecture*" >> "$DEEP_FILE"
+echo "" >> "$DEEP_FILE"
+echo "### 🚀 Opportunités Identifiées" >> "$DEEP_FILE"
+echo "" >> "$DEEP_FILE"
+echo "- *À compléter*" >> "$DEEP_FILE"
+echo "" >> "$DEEP_FILE"
+echo "### ⚠️ Risques et Vigilances" >> "$DEEP_FILE"
+echo "" >> "$DEEP_FILE"
+echo "- *À compléter*" >> "$DEEP_FILE"
+echo "" >> "$DEEP_FILE"
+echo "---" >> "$DEEP_FILE"
+echo "" >> "$DEEP_FILE"
+echo "## 🎬 Conclusion et Perspectives" >> "$DEEP_FILE"
+echo "" >> "$DEEP_FILE"
+echo "*Synthèse des enjeux et orientations futures à surveiller.*" >> "$DEEP_FILE"
+echo "" >> "$DEEP_FILE"
+echo "---" >> "$DEEP_FILE"
+echo "" >> "$DEEP_FILE"
+echo "*Veille automatique - Perplexity AI*" >> "$DEEP_FILE"
 
-**Thème** : $DEEP_TITLE  
-**Focus** : ${THEME^^}  
-**Généré le** : $(date '+%d/%m/%Y à %H:%M')
-
----
-
-## 🔍 Requêtes d'analyse approfondie
-
-$(for q in "${DEEP_QUERIES[@]}"; do echo "- $q"; done)
-
----
-
-## 📚 Analyse Détaillée
-
-$DEEP_OUTPUT
-
----
-
-## 💡 Points Clés à Retenir
-
-<!-- À compléter après lecture -->
-
----
-
-## 🎯 Actions / Réflexions
-
-<!-- À compléter si pertinent -->
-
----
-
-*Veille automatique - Perplexity AI*
-EOF
-
-echo "✅ Deep Dive soir sauvegardé : $DEEP_FILE"
+echo "✅ Deep Dive soir sauvegardé : $DEEP_FILE ($(wc -l < "$DEEP_FILE" | tr -d ' ') lignes)"
 
 # === COMMIT & PUSH ===
 echo ""
@@ -189,23 +181,13 @@ echo "🔄 Commit et push GitHub..."
 cd "$BASE_DIR"
 git add -A
 git commit -m "🌆 Veille IA 19h - $DATE - $THEME" || echo "Rien à committer"
-git push origin main || echo "Push impossible (vérifiez la connexion)"
+git push origin main || echo "Push impossible"
 
 # === RÉSUMÉ ===
 echo ""
 echo "==================================="
 echo "🎉 Veille 19h terminée !"
 echo "Thème : $THEME"
-echo "Flash : daily-flash/$DATE/19h-flash.md"
-echo "Deep Dive : deep-dives/$DATE/19h-deep-dive-${THEME}.md"
+echo "Flash : $(wc -l < "$VEILLE_DIR/daily-flash/$DATE/19h-flash.md" | tr -d ' ') lignes"
+echo "Deep Dive : $(wc -l < "$DEEP_FILE" | tr -d ' ') lignes"
 echo "==================================="
-
-# Retourner le résumé pour le cron
-if [ -f "$FLASH_FILE" ] && [ -f "$DEEP_FILE" ]; then
-    echo ""
-    echo "📋 RÉSUMÉ VEILLE 19H :"
-    echo "- Flash 5 min : $(wc -l < "$FLASH_FILE") lignes"
-    echo "- Deep Dive : $(wc -l < "$DEEP_FILE") lignes"
-    echo "- Thème : $THEME"
-    echo "- Fichiers commités ✅"
-fi
