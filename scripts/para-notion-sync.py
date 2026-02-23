@@ -96,7 +96,7 @@ def create_or_update_page(parent_id, title, content, category, api_key):
                     "object": "block",
                     "type": "paragraph",
                     "paragraph": {
-                        "rich_text": [{"type": "text", "text": {"content": content[:2000]}}]
+                        "rich_text": [{"type": "text", "text": {"content": content[:1990]}}]
                     }
                 }]
             }, api_key=api_key)
@@ -113,7 +113,7 @@ def create_or_update_page(parent_id, title, content, category, api_key):
             "object": "block",
             "type": "paragraph",
             "paragraph": {
-                "rich_text": [{"type": "text", "text": {"content": content[:2000]}}]
+                "rich_text": [{"type": "text", "text": {"content": content[:1990]}}]
             }
         }]
     }
