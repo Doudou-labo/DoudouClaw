@@ -114,6 +114,28 @@ def parse_phone(text):
     return None
 
 
+def parse_societe(text):
+    """Extract company name from text"""
+    text_lower = text.lower()
+    
+    # Patterns for company detection
+    patterns = [
+        r'(?:pour\s+la\s+société|pour\s+la\s+ste|chez|société|ste|entreprise|sarl|sas|eurl)\s+([A-Z][A-Za-z0-9\s&\.\-]+?)(?:\s+(?:pour|au|le|la|un|une|à|@)\s|$)',
+        r'(?:client\s+pro|professionnel|société)\s*:?\s*([A-Z][A-Za-z0-9\s&\.\-]+?)(?:\s+(?:pour|au|le)\s|$)',
+    ]
+    
+    for pattern in patterns:
+        match = re.search(pattern, text, re.IGNORECASE)
+        if match:
+            # Clean up and limit length
+            societe = match.group(1).strip()
+            # Remove trailing words that aren't part of company name
+            societe = re.sub(r'\s+(pour|au|le|la|un|une|à|@|en|sur)\s+.*$', '', societe, flags=re.IGNORECASE)
+            return societe[:100]  # Limit length
+    
+    return None
+
+
 def parse_date(text):
     """Extract date and time from text"""
     text_lower = text.lower()
@@ -219,6 +241,7 @@ def parse_input(text):
         'raw': text,
         'name': parse_name(text),
         'phone': parse_phone(text),
+        'societe': parse_societe(text),
         'date': parse_date(text),
         'tire_dimension': parse_tire_dimension(text),
         'tire_brand_model': parse_tire_brand_model(text),
@@ -233,10 +256,16 @@ def format_summary(parsed):
     lines = [
         "📋 **Compris :**",
         f"**Nom :** {parsed['name']}",
+    ]
+    
+    if parsed['societe']:
+        lines.append(f"**Société :** {parsed['societe']}")
+    
+    lines.extend([
         f"**Téléphone :** {parsed['phone'] or 'Non spécifié'}",
         f"**Date :** {parsed['date'].strftime('%d/%m/%Y à %Hh%M')}",
         f"**Priorité :** {parsed['priority']}",
-    ]
+    ])
     
     if parsed['tire_dimension']:
         lines.append(f"**Dimension pneu :** {parsed['tire_dimension']}")
@@ -328,6 +357,9 @@ def create_notion_page(parsed, followup_id, contact_name):
     if parsed['phone']:
         properties["Téléphone"] = {"phone_number": parsed['phone']}
     
+    if parsed['societe']:
+        properties["Société"] = {"rich_text": [{"text": {"content": parsed['societe']}}]}
+    
     # API call
     url = f"https://gateway.maton.ai/notion/v1/pages"
     data = json.dumps({
@@ -362,7 +394,7 @@ def process(text):
     contact_id, is_new = get_or_create_contact(
         parsed['name'], 
         parsed['phone'],
-        None  # societe
+        parsed['societe']
     )
     
     followup_id = create_followup(
