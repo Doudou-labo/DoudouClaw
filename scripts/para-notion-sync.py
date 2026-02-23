@@ -29,6 +29,20 @@ def get_notion_parent_id():
         return config_path.read_text().strip()
     return None
 
+def get_category_parent_ids():
+    """Get mapping of PARA category -> Notion page ID."""
+    mapping_path = Path.home() / ".openclaw" / "workspace" / ".credentials" / "notion-para-mapping.json"
+    if mapping_path.exists():
+        return json.loads(mapping_path.read_text())
+    # Fallback: use single parent ID for all
+    parent_id = get_notion_parent_id()
+    return {
+        "projects": parent_id,
+        "areas": parent_id,
+        "resources": parent_id,
+        "archive": parent_id
+    }
+
 def notion_request(path, method="GET", data=None, api_key=None):
     """Make a request to Notion API via Maton gateway."""
     if not api_key:
@@ -137,21 +151,21 @@ def scan_para_files():
 
 def main():
     api_key = get_api_key()
-    parent_id = get_notion_parent_id()
+    category_parents = get_category_parent_ids()
     
     if not api_key:
         print("❌ Error: MATON_API_KEY not found", file=sys.stderr)
         print("   Create: .credentials/maton-api-key.txt", file=sys.stderr)
         sys.exit(1)
     
-    if not parent_id:
-        print("❌ Error: Notion parent ID not found", file=sys.stderr)
-        print("   Create: .credentials/notion-para-parent-id.txt", file=sys.stderr)
+    if not category_parents or not any(category_parents.values()):
+        print("❌ Error: Notion parent IDs not found", file=sys.stderr)
+        print("   Create: .credentials/notion-para-mapping.json", file=sys.stderr)
         sys.exit(1)
     
     print(f"🔄 PARA Sync started at {datetime.now().isoformat()}")
     print(f"📁 Notes dir: {NOTES_DIR}")
-    print(f"🎯 Notion parent: {parent_id}")
+    print(f"🎯 Notion mapping: Projects→{category_parents.get('projects','?')[:8]}... Areas→{category_parents.get('areas','?')[:8]}... Resources→{category_parents.get('resources','?')[:8]}...")
     print()
     
     files = scan_para_files()
@@ -162,7 +176,13 @@ def main():
     
     for file_info in sorted(files, key=lambda x: x["mtime"], reverse=True):
         emoji = get_category_emoji(file_info["category"])
-        print(f"{emoji} [{file_info['category'].upper()}] {file_info['rel_path']}")
+        parent_id = category_parents.get(file_info["category"], category_parents.get("root"))
+        
+        if not parent_id:
+            print(f"⚠️  Skipping {file_info['rel_path']}: no parent ID for category {file_info['category']}")
+            continue
+        
+        print(f"{emoji} [{file_info['category'].upper()}] {file_info['rel_path']} -> {parent_id[:8]}...")
         
         try:
             page_id = create_or_update_page(
