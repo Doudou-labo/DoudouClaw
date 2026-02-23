@@ -38,7 +38,7 @@ FLASH_RAW=$(node scripts/search.mjs "${FLASH_QUERIES[@]}" 2>&1 || echo "Erreur P
 
 # Générer synthèse Gemini pour Flash
 echo "Génération synthèse Gemini pour Flash..."
-FLASH_SYNTHESIS=$(echo "$FLASH_RAW" | gemini --stdin "Tu es un expert en veille technologique. À partir de ce contenu sur l'actualité IA, génère :
+FLASH_SYNTHESIS=$(echo "$FLASH_RAW" | gemini -p "Tu es un expert en veille technologique. À partir de ce contenu sur l'actualité IA, génère :
 
 ## 🎯 Points Clés à Retenir (3 points maximum, en français, bullet points avec emojis)
 
@@ -139,7 +139,7 @@ DEEP_RAW=$(node scripts/search.mjs "${DEEP_QUERIES[@]}" 2>&1 || echo "Erreur Per
 
 # Générer synthèse Gemini pour Deep Dive
 echo "Génération synthèse Gemini pour Deep Dive..."
-DEEP_SYNTHESIS=$(echo "$DEEP_RAW" | gemini --stdin "Tu es un expert en veille technologique spécialisé en $DEEP_TITLE. À partir de ce contenu de recherche, génère :
+DEEP_SYNTHESIS=$(echo "$DEEP_RAW" | gemini -p "Tu es un expert en veille technologique spécialisé en $DEEP_TITLE. À partir de ce contenu de recherche, génère :
 
 ## 💡 Points Clés à Retenir (4-5 points maximum, en français, bullet points avec emojis, focus sur les enseignements stratégiques)
 
