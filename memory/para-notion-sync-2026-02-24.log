@@ -1,0 +1,3 @@
+🔄 PARA Sync started: Tue Feb 24 21:02:09 UTC 2026
+HTTP Error 400: {"object":"error","status":400,"code":"validation_error","message":"body failed validation: body.children[0].paragraph.rich_text[0].text.content.length should be ≤ `2000`, instead was `2001`.","request_id":"dd639ddb-46a1-4312-9509-8098cc65bce5"}
+  ❌ Error: HTTP Error 400: Bad Request
