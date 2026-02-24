@@ -360,6 +360,17 @@ rg -n "finance"
 rg --files
 ```
 
+## OpenClaw gateway restart — Comportement (leçon 2026-02-24)
+
+**Problème:** Quand `openclaw gateway restart` est lancé, la session WebSocket est coupée → la réponse en attente est perdue → Alexandre doit renvoyer un message pour relancer.
+
+**Règle:**
+- Prévenir Alexandre AVANT tout restart : "Je redémarre le gateway, renvoie-moi un message après"
+- Les modifications de modèles dans `openclaw.json` (section `agents.defaults.models` et `agents.defaults.model`) **ne nécessitent pas de restart** — la config est rechargée automatiquement
+- Ne redémarrer que si strictement nécessaire (nouvelle clé API, changement de port, bug gateway)
+
+---
+
 ## OpenClaw editing policy (stabilité)
 
 **Status:** ✅ Active (2026-02-15)
