@@ -12,7 +12,7 @@ import sys
 from urllib.parse import urlparse
 
 try:
-    from scrapling.fetchers import Fetcher, StealthyFetcher
+    from scrapling.fetchers import Fetcher
 except ImportError:
     print(json.dumps({"error": "Scrapling non installé. pip install scrapling"}), file=sys.stderr)
     sys.exit(1)
@@ -20,8 +20,8 @@ except ImportError:
 def scrape_url(url):
     """Scrape une URL et retourne les infos clés"""
     try:
-        # Utiliser StealthyFetcher pour les sites protégés
-        page = StealthyFetcher.fetch(url, headless=True, timeout=30)
+        # Utiliser Fetcher (HTTP simple, rapide)
+        page = Fetcher.get(url)
         
         # Extraire les métadonnées
         title = page.css('title').first
