@@ -118,6 +118,14 @@ def parse_societe(text):
     """Extract company name from text"""
     text_lower = text.lower()
     
+    # Pattern 0: Company in ALL CAPS (e.g., "EARL PARENT", "SARL TRUC")
+    match = re.search(r'\b([A-Z]{2,}(?:\s+[A-Z]{2,})+)\b', text)
+    if match:
+        societe = match.group(1).strip()
+        # Exclude if it's just a single word that's likely not a company
+        if ' ' in societe or len(societe) > 5:
+            return societe[:100]
+    
     # Patterns for company detection
     patterns = [
         # "du Commonwealth" pattern (after name)
@@ -187,19 +195,23 @@ def parse_date(text):
 
 def parse_name(text):
     """Extract person name from text"""
-    # Look for patterns: "Monsieur Dupont", "Mme Martin", "rappeler X"
-    # Pattern 1: Monsieur/Mme + nom (capturer le premier mot capitalisé après)
+    # Pattern 1: Monsieur/Mme + nom
     match = re.search(r'\b(?:Monsieur|Mr|Mme|Madame)\s+([A-Z][a-z]+)', text, re.IGNORECASE)
     if match:
         return match.group(1).strip()
     
-    # Pattern 2: rappeller/appeller + Monsieur/Mme + nom
-    match = re.search(r'(?:rappeller?|appeller?)\s+(?:Monsieur|M|M\.\s*|Mr\s+|Mme\s+|Madame\s+)([A-Z][a-z]+)', text, re.IGNORECASE)
+    # Pattern 2: Name after company (e.g., "EARL PARENT loridant")
+    match = re.search(r'\b[A-Z]{2,}(?:\s+[A-Z]{2,})*\s+([A-Za-z]+)\s+(?:\d|pour|au|le|à|@)', text)
+    if match:
+        return match.group(1).strip().capitalize()
+    
+    # Pattern 3: rappeller/appeller + Monsieur/Mme + nom
+    match = re.search(r'(?:rappeller?|appeller?)\s+(?:Monsieur|Mr|Mme|Madame)\s+([A-Z][a-z]+)', text, re.IGNORECASE)
     if match:
         return match.group(1).strip()
     
-    # Fallback: look for capitalized words after "rappelle Monsieur"
-    match = re.search(r'rappelle\s+(?:Monsieur|M|M\.\s*|Mr\s+|Mme\s+|Madame\s+)?([A-Z][a-z]+)', text, re.IGNORECASE)
+    # Fallback: look for capitalized words after "rappelle"
+    match = re.search(r'rappelle\s+(?:Monsieur|Mr|Mme|Madame)?\s*([A-Z][a-z]+)', text, re.IGNORECASE)
     if match:
         return match.group(1).strip()
     
