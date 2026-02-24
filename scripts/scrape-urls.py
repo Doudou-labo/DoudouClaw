@@ -27,8 +27,13 @@ def scrape_url(url):
         title = page.css('title').first
         title_text = title.text if title else ""
         
-        meta_desc = page.css('meta[name="description"]').first
-        description = meta_desc.attr('content') if meta_desc else ""
+        meta_desc = page.css('meta[name="description"]')
+        description = ""
+        if meta_desc:
+            try:
+                description = meta_desc.get('content') or ""
+            except:
+                pass
         
         # Extraire le contenu principal (h1, h2, p principaux)
         h1 = page.css('h1').first
