@@ -20,11 +20,11 @@ mkdir -p "$VEILLE_DIR/daily-flash/$DATE"
 echo ""
 echo "⚡ Génération du Flash 5 min (filtré 72h)..."
 
-# Requêtes flash orientées fraîcheur
+# Requêtes flash orientées fraîcheur - France et USA
 FLASH_QUERIES=(
-    "Breaking news intelligence artificielle dernières 48h - résumé français"
-    "Annonces IA aujourd'hui ou hier - synthèse détaillée français"
-    "Tendances IA dernières 72 heures - analyse rapide français"
+    "Breaking news intelligence artificielle France USA dernières 48h - résumé français"
+    "Annonces IA Etats-Unis et Europe aujourd'hui ou hier - synthèse détaillée français"
+    "Tendances IA tech américaine dernières 72 heures - analyse rapide français"
 )
 
 # Lancer les requêtes Perplexity avec filtre fraîcheur (week = 7 jours)

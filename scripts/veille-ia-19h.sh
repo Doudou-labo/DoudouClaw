@@ -28,8 +28,8 @@ echo ""
 echo "⚡ Génération du Flash 5 min (soir, fraîcheur 72h)..."
 
 FLASH_QUERIES=(
-    "Actualités intelligence artificielle dernières 48h - faits marquants et annonces"
-    "Nouvelles IA récentes - résumé complet en français"
+    "Actualités intelligence artificielle France USA dernières 48h - faits marquants et annonces"
+    "Nouvelles IA Etats-Unis et Europe récentes - résumé complet en français"
 )
 
 cd "$SKILL_DIR"
@@ -97,59 +97,59 @@ echo "🔬 Génération du Deep Dive (soir, fraîcheur 72h)..."
 case $THEME in
     "tech")
         DEEP_QUERIES=(
-            "Défis déploiement Edge AI 2026 : problèmes techniques solutions cas concrets"
-            "Comparaison puces AI 2026 GPU TPU ASIC : avantages inconvénients choix"
-            "Alternatives Transformers 2026 : Mamba RWKV Griffin état recherche"
+            "Défis déploiement Edge AI Europe USA 2026 : problèmes techniques solutions cas concrets"
+            "Comparaison puces AI 2026 GPU TPU ASIC marché américain européen : avantages inconvénients"
+            "Alternatives Transformers 2026 Mamba RWKV : avancées recherche USA Europe"
         )
         DEEP_TITLE="Infrastructure et Hardware AI"
         ;;
     "produits")
         DEEP_QUERIES=(
-            "Plateformes automatisation AI entreprise 2026 : comparatif complet"
-            "Intégration AI en entreprise : défis solutions retours expérience"
-            "Workflow automation AI : outils leaders marché 2026"
+            "Plateformes automatisation AI entreprise France USA 2026 : comparatif complet"
+            "Intégration AI en entreprise européenne et américaine : défis solutions retours expérience"
+            "Workflow automation AI outils leaders marché français américain 2026"
         )
         DEEP_TITLE="Automatisation et Intégration Enterprise"
         ;;
     "regulation")
         DEEP_QUERIES=(
-            "Biais algorithmiques régulations 2026 : obligations entreprises"
-            "Transparence IA exigences légales : guide conformité"
-            "Responsabilité juridique IA : évolutions jurisprudence 2026"
+            "Régulation IA Europe France 2026 : obligations entreprises conformité"
+            "AI Act Europe application entreprises : guide pratique conformité"
+            "Régulation IA Etats-Unis 2026 : évolutions législatives fédérales étatiques"
         )
-        DEEP_TITLE="Éthique et Responsabilité Algorithmique"
+        DEEP_TITLE="Éthique et Régulation Algorithmique"
         ;;
     "business")
         DEEP_QUERIES=(
-            "Marché startup IA 2026 : levées fonds tendances valorisation"
+            "Marché startup IA France Europe 2026 : levées fonds tendances valorisation"
             "Stratégies Big Tech IA 2026 : Google Microsoft Meta Amazon comparaison"
-            "Talent IA marché travail : pénuries salaires formations 2026"
+            "Talent IA marché travail France USA : pénuries salaires formations 2026"
         )
         DEEP_TITLE="Écosystème Startup et Talent AI"
         ;;
     "sectoriel")
         DEEP_QUERIES=(
-            "IA véhicules connectés 2026 : fonctionnalités acteurs marché"
-            "Diagnostic automobile IA : technologies acteurs cas usage"
-            "Digitalisation industrie pneumatique : innovations IA Michelin"
+            "IA transformation digitale industrie française 2026 : cas concrets"
+            "Intelligence artificielle retail e-commerce France Europe : innovations"
+            "IA services financiers banques France USA 2026 : applications"
         )
-        DEEP_TITLE="Digitalisation Automobile et Pneumatique"
+        DEEP_TITLE="Transformation Digitale Sectorielle"
         ;;
     "emergent")
         DEEP_QUERIES=(
-            "Intelligence essaim swarm AI : applications concrètes 2026"
-            "Federated learning entreprise : cas usage bénéfices"
-            "IA causale causal AI : avancées recherche applications"
+            "Intelligence essaim swarm AI applications concrètes 2026 France USA"
+            "Federated learning entreprise Europe USA : cas usage bénéfices"
+            "IA causale causal AI avancées recherche américaine européenne 2026"
         )
         DEEP_TITLE="Paradigmes AI Émergents"
         ;;
     "recap")
         DEEP_QUERIES=(
-            "Bilan semaine IA : événements majeurs annonces tendances"
-            "Actualités IA semaine : synthèse complète faits marquants"
-            "Revue hebdo intelligence artificielle : points clés analyses"
+            "Bilan semaine IA France Europe Etats-Unis : événements majeurs annonces"
+            "Actualités IA semaine France USA : synthèse complète faits marquants"
+            "Revue hebdo intelligence artificielle monde : points clés analyses"
         )
-        DEEP_TITLE="Analyse Hebdomadaire Complète"
+        DEEP_TITLE="Analyse Hebdomadaire France USA Europe"
         ;;
 esac
 

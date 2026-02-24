@@ -21,8 +21,8 @@ echo ""
 echo "⚡ Génération du Flash réveil (fraîcheur 72h)..."
 
 FLASH_QUERIES=(
-    "Breaking news IA hier soir et ce matin - résumé français"
-    "Annonces intelligence artificielle dernières 24h - faits marquants"
+    "Breaking news intelligence artificielle France USA aujourd'hui - résumé français"
+    "Actualités IA Etats-Unis et Europe dernières 24h - faits marquants"
 )
 
 cd "$SKILL_DIR"
