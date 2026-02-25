@@ -118,6 +118,24 @@ tool-name --common-flag
   - N3 archive sensible: `notes/archive/contexte-sensible-rupture.md` (demande explicite ou arbitrage contradiction uniquement)
 - Compatibilité: cette politique n'écrase pas les skills mémoire; elle définit seulement *quand* lire/écrire chaque couche.
 
+## Google Calendar
+
+**Status:** ✅ Active (via Maton API)
+
+**Préférence calendrier:**
+- Toujours utiliser le calendrier **OpenClaw** pour toutes opérations (ajout, suppression, modification)
+- **Calendar ID:** `88b14e5c160f914b9743cf46d6ff857ed6baedc24449bccee0cb56c531ac20a0@group.calendar.google.com`
+- Ne jamais utiliser `primary` sauf demande explicite d'Alexandre
+
+**Autres calendriers disponibles:**
+- `tecknogeek69@gmail.com` — calendrier principal perso
+- `family14830406815357676768@group.calendar.google.com` — Famille
+- `fr.french#holiday@group.v.calendar.google.com` — Jours fériés
+
+**Base URL:** `https://gateway.maton.ai/google-calendar/calendar/v3/calendars/<calendarId>/events`
+
+---
+
 ## Web Search API (Brave + Perplexity)
 
 **Status:** ✅ Configured (2026-02-17)
