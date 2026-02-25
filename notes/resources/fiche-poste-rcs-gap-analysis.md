@@ -43,6 +43,7 @@
 | **Vision opérationnelle** | "Outrepasse" déjà sa fonction |
 | **Réseau interne** | Soutien Arnaud + DR + RRH + équipe |
 | **Méthodes de vente Artemis** | Utilisées au quotidien |
+| **Compte d'exploitation** | ✅ **Déjà maîtrisé** — analyse les chiffres, calcule la marge contributive, régule la facturation d'un mois à l'autre |
 
 ---
 
@@ -62,14 +63,12 @@
 
 | Compétence | Gap | Plan |
 |-----------|-----|------|
-| **Compte d'exploitation** | Lecture CA/marges/charges | Demander à Arnaud une session dédiée |
 | **Gestion des plannings (ORION)** | Pas encore pratiqué | Observer / former |
 | **Gestion stocks (inventaires, réassort)** | Partielle | Observer le process complet |
 | **25 incontournables** | À maîtriser entièrement | Lister + vérifier maîtrise item par item |
 | **Droit du travail de base** | Niveau basique | Formation ou lectures ciblées |
 | **Rituels managériaux formels** | Pas encore animé | Demander à co-animer une réunion |
 | **Recrutement / intégration** | Non pratiqué | Observer le prochain recrutement |
-| **Tachygraphe (VI)** | Non pratiqué | Formation dédiée à venir |
 | **Clients B2B VI (grands comptes)** | Limité à B2C | Suivre l'ATC sur ses visites |
 
 ---
@@ -84,7 +83,7 @@
 ### Priorité 2 — Mois 1-2 (bases managériales)
 - [ ] Tester l'entretien individuel (co-animé avec Arnaud)
 - [ ] Déléguer 1 tâche/semaine à un technicien
-- [ ] Apprendre à lire le compte d'exploitation avec Arnaud
+- [x] ~~Apprendre à lire le compte d'exploitation avec Arnaud~~ → **DÉJÀ MAÎTRISÉ**
 
 ### Priorité 3 — Mois 3-4 (montée en autonomie)
 - [ ] Animer seul 1 réunion d'équipe
