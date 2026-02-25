@@ -39,11 +39,19 @@ Poste actuel : **Assistant Commercial Sédentaire (ACS)**.
 
 ### Projets en cours
 - Progression personnelle sur l'intelligence émotionnelle
-- Progression professionnelle vers un rôle de management (RCS)
-- Préparation d'un entretien individuel à venir avec Arnaud
+- Progression professionnelle vers un rôle de management (RCS) — **évolution confirmée par Arnaud le 16/02/2026**
+- Plan de montée en compétence RCS actif (posture managériale, rigueur, outrepasser)
+- Points de suivi hebdo 15 min avec Arnaud (mois 1–2)
+
+### Contexte RCS (clé)
+- **Timeline** : 6 mois à 2 ans selon assessment de Léa (RCS Adjointe Lens)
+- **Scénario probable** : 6 mois (Léa pas vue d'un bon œil par la région)
+- **Augmentation reçue** : 2040€ → 2091€ brut (+51€) le 25/02/2026, spontanée par Arnaud
+- **NAO à venir** : potentiel de gain supplémentaire à surveiller
+- **Axe fort** : Alexandre "outrepasse déjà sa fonction" — validé par Arnaud
 
 ### Relations clés
-- **Arnaud** : N+1, poste **Responsable de Zone (RZ)**, relation très positive (pro et perso), relation à préserver
+- **Arnaud** : N+1, poste **Responsable de Zone (RZ)**, relation très positive (pro et perso), relation à préserver. Confiance forte prouvée par actes (augmentation spontanée).
 
 ---
 

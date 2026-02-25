@@ -16,8 +16,13 @@
 ### Intelligence émotionnelle (lecture Goleman)
 - [ ] Aujourd'hui : lire 1 chapitre + écrire 5 lignes de notes (1 idée clé + 1 application concrète au boulot)
 
-### Évolution vers RCS (management)
-- [ ] Cette semaine : choisir 1 compétence à travailler (ex : feedback / priorisation / cadrage) et définir 1 situation où l'appliquer
+### Évolution RCS — Suivi post-entretien Arnaud ✅
+- [x] ~~Entretien individuel avec Arnaud~~ → **FAIT le 16/02/2026** — RCS confirmé, timeline 6 mois–2 ans
+- [x] ~~Augmentation~~ → **REÇUE le 25/02/2026** : 2040 → 2091€, spontanée par Arnaud
+- [ ] **Mettre en place le parking sollicitations** (template : `notes/resources/templates/parking-sollicitations.md`)
+- [ ] **Tester la posture** : *"Je note, je te reviens dans 30 min"* dès la prochaine sollicitation
+- [ ] **Documenter 1 tâche RCS par semaine** (rendre visible la progression à Arnaud)
+- [ ] **NAO à venir** : préparer un argumentaire si occasion se présente
 
 ## Auto-checkpoints
 - [ ] [AUTO 2026-02-25 midi] Checkpoint 3-min fait. Next: Ce soir 21:15 : saisir les dépenses du jour (`finance add ...`) puis vérifier (`finance recent 5`) et résumé (`finance summary`)
