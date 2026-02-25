@@ -2,7 +2,7 @@
 # veille-ia-08h.sh - Veille IA du matin (Flash + Deep Dive)
 # Exécution : 8h00 tous les jours
 
-set -e
+set +e  # On continue même en cas d'erreur partielle
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 BASE_DIR="$(cd "$SCRIPT_DIR/.." && pwd)"
@@ -91,7 +91,7 @@ esac
 
 # Lancer les requêtes Perplexity
 cd "$SKILL_DIR"
-FLASH_OUTPUT=$(node scripts/search.mjs "${FLASH_QUERIES[@]}" 2>&1)
+FLASH_OUTPUT=$(node scripts/search.mjs "${FLASH_QUERIES[@]}" 2>&1 || echo "⚠️ Perplexity indisponible - veille manuelle recommandée")
 
 # Générer le fichier Flash
 FLASH_FILE="$VEILLE_DIR/daily-flash/$DATE/08h-flash.md"
@@ -186,7 +186,7 @@ case $THEME in
 esac
 
 # Lancer les requêtes Deep Dive
-DEEP_OUTPUT=$(node scripts/search.mjs "${DEEP_QUERIES[@]}" 2>&1)
+DEEP_OUTPUT=$(node scripts/search.mjs "${DEEP_QUERIES[@]}" 2>&1 || echo "⚠️ Perplexity indisponible - veille manuelle recommandée")
 
 # Générer le fichier Deep Dive
 DEEP_FILE="$VEILLE_DIR/deep-dives/$DATE/08h-deep-dive-${THEME}.md"

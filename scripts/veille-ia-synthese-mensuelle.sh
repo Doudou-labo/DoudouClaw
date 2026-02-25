@@ -2,7 +2,7 @@
 # veille-ia-synthese-mensuelle.sh - Synthèse stratégique mensuelle
 # Exécution : 15 et 30 de chaque mois (28 pour février)
 
-set -e
+set +e  # On continue même en cas d'erreur partielle
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 BASE_DIR="$(cd "$SCRIPT_DIR/.." && pwd)"
@@ -45,7 +45,7 @@ SYNTHESE_QUERIES=(
 # Lancer les requêtes Perplexity
 cd "$SKILL_DIR"
 echo "Exécution des requêtes Perplexity (analyses détaillées)..."
-SYNTHESE_OUTPUT=$(node scripts/search.mjs "${SYNTHESE_QUERIES[@]}" 2>&1)
+SYNTHESE_OUTPUT=$(node scripts/search.mjs "${SYNTHESE_QUERIES[@]}" 2>&1 || echo "⚠️ Perplexity indisponible")
 
 # Générer le fichier de synthèse
 SYNTHESE_FILE="$VEILLE_DIR/syntheses-mensuelles/synthese-${ANNEE}-${MOIS_NUM}-${JOUR}.md"

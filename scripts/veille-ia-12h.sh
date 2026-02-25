@@ -2,7 +2,7 @@
 # veille-ia-12h.sh - Veille IA du midi (Flash 5 min avec scraping)
 # Exécution : 12h00 tous les jours
 
-set -e
+set +e  # On continue même en cas d'erreur partielle
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 BASE_DIR="$(cd "$SCRIPT_DIR/.." && pwd)"
@@ -30,7 +30,7 @@ FLASH_QUERIES=(
 # Lancer les requêtes Perplexity avec filtre fraîcheur (week = 7 jours)
 cd "$SKILL_DIR"
 echo "🔍 Recherche Perplexity (freshness=week)..."
-FLASH_OUTPUT=$(node scripts/search.mjs --freshness week "${FLASH_QUERIES[@]}" 2>&1)
+FLASH_OUTPUT=$(node scripts/search.mjs --freshness week "${FLASH_QUERIES[@]}" 2>&1 || echo "⚠️ Perplexity indisponible")
 
 # Extraire les URLs pour scraping
 echo "🔗 Extraction des URLs pour scraping..."

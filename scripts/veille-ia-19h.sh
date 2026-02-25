@@ -2,7 +2,7 @@
 # veille-ia-19h.sh - Veille IA du soir (Flash + Deep Dive) - v2 avec fraîcheur + scraping
 # Exécution : 19h00 tous les jours
 
-set -e
+set +e  # On continue même en cas d'erreur partielle
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 BASE_DIR="$(cd "$SCRIPT_DIR/.." && pwd)"
