@@ -19,12 +19,12 @@
 ### Évolution RCS — Suivi post-entretien Arnaud ✅
 - [x] ~~Entretien individuel avec Arnaud~~ → **FAIT le 16/02/2026** — RCS confirmé, timeline 6 mois–2 ans
 - [x] ~~Augmentation~~ → **REÇUE le 25/02/2026** : 2040 → 2091€, spontanée par Arnaud
-- [ ] **🔴 PRIORITÉ — Préparer la visite de Marc (DR) le 31/03/2026** : maîtriser les KPIs du centre, connaître les 25 incontournables, préparer 3 réflexions sur la vision du poste
-- [ ] **Mettre en place le parking sollicitations** (template : `notes/resources/templates/parking-sollicitations.md`)
-- [ ] **Tester la posture** : *"Je note, je te reviens dans 30 min"* dès la prochaine sollicitation
-- [ ] **Documenter 1 tâche RCS par semaine** (rendre visible la progression à Arnaud)
-- [ ] **Demander à Arnaud une session "lecture compte d'exploitation"** (30 min)
-- [ ] **Lister les 25 incontournables** et auto-évaluer son niveau sur chacun
+- [ ] **🔴 PRIORITÉ — Préparer la visite de Marc (DR) le 31/03/2026** → Issue #18
+- [ ] **Mettre en place le parking sollicitations** → Issue #20
+- [ ] **Maîtriser la lecture du compte d'exploitation** → Issue #19
+- [ ] **Tester l'entretien individuel** → Issue #28
+- [ ] **Documenter 1 tâche RCS par semaine** → Issue #21
+- [ ] **Maîtriser les 25 incontournables** → Issue #22
 
 ## Auto-checkpoints
 - [ ] [AUTO 2026-02-25 midi] Checkpoint 3-min fait. Next: Ce soir 21:15 : saisir les dépenses du jour (`finance add ...`) puis vérifier (`finance recent 5`) et résumé (`finance summary`)
