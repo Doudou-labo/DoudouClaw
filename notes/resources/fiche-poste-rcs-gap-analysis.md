@@ -44,6 +44,7 @@
 | **Réseau interne** | Soutien Arnaud + DR + RRH + équipe |
 | **Méthodes de vente Artemis** | Utilisées au quotidien |
 | **Compte d'exploitation** | ✅ **Déjà maîtrisé** — analyse les chiffres, calcule la marge contributive, régule la facturation d'un mois à l'autre |
+| **Animation de réunion** | ✅ **Déjà maîtrisé** — anime la réunion mensuelle de l'agence avec Nathalie (RCS Adjointe) depuis 2 mois |
 
 ---
 
@@ -67,7 +68,6 @@
 | **Gestion stocks (inventaires, réassort)** | Partielle | Observer le process complet |
 | **25 incontournables** | À maîtriser entièrement | Lister + vérifier maîtrise item par item |
 | **Droit du travail de base** | Niveau basique | Formation ou lectures ciblées |
-| **Rituels managériaux formels** | Pas encore animé | Demander à co-animer une réunion |
 | **Recrutement / intégration** | Non pratiqué | Observer le prochain recrutement |
 | **Clients B2B VI (grands comptes)** | Limité à B2C | Suivre l'ATC sur ses visites |
 
@@ -86,7 +86,7 @@
 - [x] ~~Apprendre à lire le compte d'exploitation avec Arnaud~~ → **DÉJÀ MAÎTRISÉ**
 
 ### Priorité 3 — Mois 3-4 (montée en autonomie)
-- [ ] Animer seul 1 réunion d'équipe
+- [x] ~~Animer seul 1 réunion d'équipe~~ → **DÉJÀ MAÎTRISÉ** (réunion mensuelle avec Nathalie depuis 2 mois)
 - [ ] Gérer 1 situation RH simple (retard, conflit mineur)
 - [ ] Observer 1 session de recrutement
 - [ ] Maîtriser ORION (plannings)
