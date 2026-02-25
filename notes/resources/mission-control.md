@@ -3,9 +3,10 @@
 ## 📍 Localisation
 `~/.openclaw/openclaw-mission-control/`
 
-## 🌐 Accès
-- **Local:** http://localhost:3333
-- **Distant:** Configurer via Cloudflare Tunnel (voir ci-dessous)
+## 🌐 Accès distant (HTTPS + Auth)
+- **URL:** https://dashboard.doudougen.xyz
+- **Auth:** Basic Auth (login/pass)
+- **SSL:** Let's Encrypt auto (géré par Caddy)
 
 ## 🚀 Installation
 ```bash
@@ -21,39 +22,36 @@ Le dashboard tourne en background via:
 systemctl --user status openclaw-dashboard
 ```
 
-## 🔒 Cloudflare Tunnel (Accès distant)
+## 🌐 Reverse Proxy (Caddy)
 
-### 1. Installer cloudflared
+### Configuration
+Fichier: `/etc/caddy/Caddyfile`
+```
+dashboard.doudougen.xyz {
+    basicauth {
+        doudou $2a$14$...hash_bcrypt...
+    }
+
+    reverse_proxy 127.0.0.1:3333
+}
+```
+
+### Générer un nouveau mot de passe
 ```bash
-# Ubuntu/Debian
-curl -L https://pkg.cloudflare.com/cloudflare-main.gpg | sudo apt-key add -
-echo "deb https://pkg.cloudflare.com/cloudflared $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/cloudflared.list
-sudo apt update && sudo apt install cloudflared
+# Générer le hash
+sudo caddy hash-password --plaintext 'TON_MDP'
+
+# Modifier le Caddyfile avec le nouveau hash
+sudo nano /etc/caddy/Caddyfile
+
+# Recharger Caddy
+sudo caddy reload --config /etc/caddy/Caddyfile
 ```
 
-### 2. Créer un tunnel
-```bash
-cloudflared tunnel login
-cloudflared tunnel create openclaw-dashboard
-```
-
-### 3. Configurer le tunnel
-Fichier: `~/.cloudflared/config.yml`
-```yaml
-tunnel: <TUNNEL_ID>
-credentials-file: /root/.cloudflared/<TUNNEL_ID>.json
-
-ingress:
-  - hostname: dashboard.tondomaine.com
-    service: http://localhost:3333
-  - service: http_status:404
-```
-
-### 4. Démarrer le tunnel
-```bash
-cloudflared tunnel route dns <TUNNEL_ID> dashboard.tondomaine.com
-cloudflared tunnel run <TUNNEL_ID>
-```
+### DNS requis (Hostinger)
+| Type | Nom | Contenu | TTL |
+|------|-----|---------|-----|
+| A | dashboard | 76.13.32.35 | 300 |
 
 ## 🛠️ Fonctionnalités disponibles
 - Dashboard avec stats en temps réel
@@ -70,3 +68,11 @@ cloudflared tunnel run <TUNNEL_ID>
 
 ## 📅 Date d'installation
 2026-02-25
+
+## ✅ Checklist post-install
+- [x] Mission Control installé et démarré
+- [x] DNS A record configuré sur Hostinger
+- [x] Reverse proxy Caddy configuré
+- [x] SSL Let's Encrypt actif
+- [x] Authentification Basic Auth activée
+- [ ] Changer le mot de passe temporaire
