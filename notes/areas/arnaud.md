@@ -22,6 +22,7 @@
 - **Accessible** : relation pro + perso fluide
 - **Accompagnement actif** : aide déjà Alexandre à monter en compétences RCS au quotidien
 - **Reconnaissance** : a dit en entretien qu'Alexandre "outrepasse sa fonction" (validation positive)
+- **Confiance prouvée par les actes** : augmentation spontanée accordée sans demande (→ 25/02/2026)
 
 ---
 
@@ -65,6 +66,13 @@
 - **Actions** : Plan de montée en compétence finalisé
 - **Prochain point** : Proposer hebdo 15 min pendant 1 mois, puis mensuel
 
+### 25/02/2026 - Augmentation spontanée (post-entretien)
+- **Résultat** : Augmentation accordée sans demande : **2040€ → 2091€ brut** (+51€)
+- **Lecture** : Confirmation directe de la confiance d'Arnaud — il valorise proactivement, sans attendre une demande
+- **NAO à venir** : potentiel de gain supplémentaire (bonne part de l'enveloppe)
+- **Insight clé** : Alexandre avait pressenti qu'il n'avait pas besoin de demander → confirmé ✅
+- **Signal** : Arnaud investit dans Alexandre sans qu'il ait à "vendre" sa peau
+
 ---
 
 ## 💡 Notes relationnelles
@@ -94,4 +102,4 @@
 
 ---
 
-**Dernière mise à jour** : 2026-02-16
+**Dernière mise à jour** : 2026-02-25
