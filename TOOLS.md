@@ -4,6 +4,55 @@
 
 ---
 
+## agent-browser (Vercel)
+
+**Status:** ✅ Installed (2026-02-26)
+
+**Version:** 0.15.0
+
+**Description:** Browser automation CLI pour agents IA — Rust natif + Playwright. Parfait pour le scraping, l'automation web et les tests.
+
+**Installation:**
+```bash
+npm install -g agent-browser
+agent-browser install  # Télécharge Chromium
+```
+
+**Workflow de base (pour agents):**
+```bash
+# 1. Ouvrir une page
+agent-browser open example.com
+
+# 2. Récupérer l'accessibility tree avec refs
+agent-browser snapshot -i
+# Output: - link "Learn more" [ref=e1]
+
+# 3. Interagir via les refs
+agent-browser click @e1
+agent-browser fill @e2 "texte"
+
+# 4. Screenshot annoté (avec numéros sur les éléments)
+agent-browser screenshot --annotate page.png
+```
+
+**Commandes utiles:**
+```bash
+agent-browser --version
+agent-browser --help
+agent-browser open <url> --headed  # Mode visible (debug)
+agent-browser snapshot -i -c -d 5  # Interactif + compact + depth 5
+agent-browser pdf output.pdf       # Export PDF
+```
+
+**Gotchas:**
+- Premier lancement : Chromium se télécharge (~280MB)
+- Si erreur de librairies système : `agent-browser install --with-deps`
+- OS pas officiellement supporté → fallback Ubuntu 24.04 (fonctionne quand même)
+
+**Docs:** https://github.com/vercel-labs/agent-browser
+
+---
+
 ## Credentials Location
 
 All credentials stored in `.credentials/` (gitignored):
