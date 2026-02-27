@@ -25,4 +25,4 @@ Maintenance mémoire quotidienne — memory-curator actif (subagent).
 - `memory/2026-02-27.md`
 
 ## Last Updated
-2026-02-27 13:12 UTC — memory-curator continuation + contrôle recall cohérence OK
+2026-02-27 13:13 UTC — memory-curator continuation (reprise après timeout) validée, recalls critiques reconfirmés
