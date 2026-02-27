@@ -1,70 +1,87 @@
-# Orchestration multi-agents (v1)
+# Orchestration multi-agents (v2)
 
 ## Objectif
-Avoir des spécialistes utilisables **dans n’importe quel channel** sans les recréer à la main.
+Assurer une orchestration fiable, lisible et reproductible des sous-agents, quel que soit le channel.
 
-## Décision
-Architecture retenue:
-- 1 orchestrateur logique
-- 10 rôles spécialistes
-- pool **par channel** (pas un singleton global)
-- recréation auto après restart via ensure/recreate
+---
 
-## Pourquoi pool par channel
-OpenClaw est session-centric:
-- le contexte est lié au channel/session
-- un sub-agent d’un channel A n’est pas partagé nativement avec channel B
+## 1) Architecture statique (sessions persistantes)
 
-Donc on standardise le même set de rôles dans chaque channel, et on automatise leur présence.
+### Rôle du conducteur
+- **`main`** = conducteur principal (point d’entrée user-facing).
 
-## Rôles (10)
-1. orchestrator — routage + fusion de résultats
-2. github — PR/issues/CI/reviews
-3. research — web Brave/Perplexity + sources
-4. coding — dev/debug/refacto/tests
-5. writing — docs/rédaction/reformulation
-6. memory-context — consolidation mémoire & continuité
-7. planning-coaching — priorisation + coaching RCS
-8. finance — suivi comptes/portefeuille/PERCO
-9. crm-followup — interactions et relances CRM
-10. ops-automation — crons/santé/maintenance OpenClaw
+### Spécialistes persistants (thread-bound)
+- `spec-orchestrator` — coordination multi-domaines
+- `memory-curator` — mémoire N1/N2/N3, consolidation
+- `ops-guardian` — santé gateway/crons/providers
+- `repo-keeper` — git add/commit/push, traçabilité
+- `qa-safety` — sécurité/policy/anti-injection
+- `knowledge-librarian` — PARA/docs/learnings
 
-## Routage (règles simples)
-- Détection d’intention par mots-clés + type de tâche
-- Si tâche **courte/linéaire**: traitement direct en `main`
-- Si tâche **moyenne/technique mono-domaine**: routage direct `main -> 1 spécialiste` (sans orchestrateur)
-- Si tâche **multi-domaines**: orchestrateur -> 2+ spécialistes -> synthèse
-- Si doute: orchestrateur démarre par `research` ou `memory-context`
+### Pourquoi statique
+- Réduction du temps de démarrage sur tâches récurrentes
+- Continuité contextuelle par rôle
+- Responsabilités plus nettes (qui fait quoi)
 
-## Résilience restart
-1. Ensure on-demand (obligatoire)
-   - Au premier besoin dans un channel:
-     - l’orchestrateur vérifie la présence des labels spécialistes
-     - s’il en manque, il les recrée
-2. Watchdog périodique (optionnel)
-   - vérification toutes X minutes sur channels prioritaires
-3. Fallback runtime
-   - en cas d’échec d’un spécialiste:
-     - recreate immédiat
-     - retry 1 fois
-     - fallback vers spécialiste voisin
+---
 
-## État actuel (2026-02-20)
-Config hybride persistante active avec 11 agents statiques:
-- `main`
-- `spec-orchestrator`
-- `spec-github`
-- `spec-coding`
-- `spec-research`
-- `spec-writing`
-- `spec-planning`
-- `spec-finance`
-- `spec-ops`
-- `spec-memory`
-- `spec-crm`
+## 2) Architecture dynamique (pool éphémère)
 
-## Notes d’exploitation
-- `cleanup: keep` pour conserver les sessions de spécialistes
-- Même avec keep, un restart peut casser les timers/états => d’où ensure/recreate
-- Garder la complexité faible: règles lisibles, logs clairs, labels stables
-- Fichier de config runtime concerné: `~/.openclaw/openclaw.json` (hors repo workspace)
+Pool de spécialistes spawn à la demande pour charge ponctuelle:
+- `spec-dev-*`
+- `spec-data-*`
+- `spec-web-research-*`
+- `spec-docs-*`
+- `spec-finance-*`
+- `spec-automation-*`
+- `spec-discord-*`
+- `spec-comms-*`
+
+### Quand utiliser le dynamique
+- Tâche longue/batch
+- Besoin parallèle massif
+- Expertise ponctuelle non couverte par les persistants
+
+### Quand éviter le dynamique
+- Aller-retour interactif court
+- Suivi continu d’un même fil
+
+---
+
+## 3) Règles de routage (source opérationnelle)
+
+1. **Simple / linéaire / faible risque** → `main`
+2. **Moyenne / technique mono-domaine** → `main -> spécialiste direct`
+3. **Multi-domaines / dépendances** → `main -> spec-orchestrator -> spécialistes`
+4. Si message contient "utilise les agents nécessaires" → forcer orchestrator
+5. Si orchestrator est utilisé, il doit déléguer à au moins 1 spécialiste
+6. Transparence obligatoire en sortie: `Agents utilisés : ...`
+
+---
+
+## 4) Exécution pratique
+
+- Orchestration interactive: privilégier sessions persistantes
+- Spawn dynamique réservé aux traitements de fond
+- En cas d’échec spécialiste persistant:
+  1) retry x1
+  2) fallback voisin
+  3) respawn si nécessaire
+
+---
+
+## 5) Check-list de fiabilité
+
+Avant synthèse finale:
+- [ ] Le bon mode de routage a été choisi
+- [ ] Les dépendances inter-agents sont couvertes
+- [ ] Le résultat est consolidé en une seule réponse claire
+- [ ] La ligne `Agents utilisés : ...` reflète la chaîne réelle
+
+---
+
+## 6) Notes d’exploitation
+
+- Config runtime OpenClaw hors repo: `~/.openclaw/openclaw.json`
+- Priorité de source: workspace local d’abord, fallback GitHub si doute
+- Toute évolution de routage doit être tracée dans AGENTS.md + note d’aire

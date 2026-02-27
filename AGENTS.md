@@ -290,6 +290,8 @@ Don't wait for permission to improve. If you learned something, write it down no
   - `qa-safety` (sécurité/policy/anti-injection)
   - `knowledge-librarian` (PARA/docs/learnings)
 - **Pool dynamique (spawn à la demande, non persistant):** `spec-dev-*`, `spec-data-*`, `spec-web-research-*`, `spec-docs-*`, `spec-finance-*`, `spec-automation-*`, `spec-discord-*`, `spec-comms-*`.
+- **Documentation canonique d’orchestration:** `notes/areas/subagents-orchestration.md`
+- **Gouvernance (rôles, SLA, escalade, hygiène):** `notes/areas/subagents-governance.md`
 
 ### Règles de routage
 
