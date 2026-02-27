@@ -279,17 +279,34 @@ Don't wait for permission to improve. If you learned something, write it down no
 
 ## Sub-agent Routing Policy (global)
 
+### Architecture hybride (Niveau 1 + Niveau 2)
+
+- **Conductor principal:** `main` (équivalent rôle `main-conductor`).
+- **Sessions persistantes statiques (thread-bound):**
+  - `spec-orchestrator` (coordination multi-domaines)
+  - `memory-curator` (mémoire N1/N2/N3, consolidation)
+  - `ops-guardian` (santé gateway/crons/providers)
+  - `repo-keeper` (git add/commit/push, traçabilité)
+  - `qa-safety` (sécurité/policy/anti-injection)
+  - `knowledge-librarian` (PARA/docs/learnings)
+- **Pool dynamique (spawn à la demande, non persistant):** `spec-dev-*`, `spec-data-*`, `spec-web-research-*`, `spec-docs-*`, `spec-finance-*`, `spec-automation-*`, `spec-discord-*`, `spec-comms-*`.
+
+### Règles de routage
+
 - Tâche courte/linéaire/faible risque → traiter en `main`.
-- Tâche **moyenne/technique mono-domaine** → routage direct `main -> spec-*` (sans orchestrator).
-- Tâche **multi-domaines / dépendances / coordination** → `spec-orchestrator` + spécialistes.
+- Tâche **moyenne/technique mono-domaine** → routage direct `main -> spécialiste` (persistant si dispo, sinon dynamique).
+- Tâche **multi-domaines / dépendances / coordination** → `main -> spec-orchestrator -> spécialistes`.
 - Déclencheur obligatoire: si la demande contient **2 domaines ou plus** (ex: GitHub + finance + rédaction), orchestrator requis.
 - Déclencheur texte explicite: si le message contient "utilise les agents nécessaires" (ou équivalent), forcer `spec-orchestrator`.
-- Règle stricte: si `spec-orchestrator` est utilisé, il doit appeler **au moins un** spécialiste `spec-*` avant synthèse finale.
+- Règle stricte: si `spec-orchestrator` est utilisé, il doit appeler **au moins un** spécialiste avant synthèse finale.
 - Interdiction de sortir `Agents utilisés : main` sur une demande multi-domaines.
-- Pour l’orchestration interactive user-facing: privilégier `sessions_send` vers agents persistants (`spec-*`), pas `sessions_spawn` (qui auto-annonce publiquement).
-- Réserver `sessions_spawn` aux tâches background/longues où l’annonce automatique est voulue.
-- Le footer `Agents utilisés : ...` doit refléter la chaîne réelle (main + specs réellement appelés).
-- En cas d’échec spécialiste: recreate immédiat, 1 retry, puis fallback voisin.
+
+### Exécution pratique
+
+- Pour l’orchestration interactive user-facing: privilégier `sessions_send` vers les sessions persistantes.
+- Réserver `sessions_spawn` aux tâches background/longues, batch, ou spécialistes éphémères.
+- En cas d’échec spécialiste persistant: 1 retry, puis fallback voisin; si KO, respawn session.
+- Le footer `Agents utilisés : ...` doit refléter la chaîne réelle (main + agents réellement appelés).
 - Cible de réponse: une seule synthèse finale claire pour l’utilisateur.
 
 ## Learned Lessons
