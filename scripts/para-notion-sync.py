@@ -14,6 +14,9 @@ from datetime import datetime
 # Config
 NOTES_DIR = Path.home() / ".openclaw" / "workspace" / "notes"
 PARA_CATEGORIES = ["projects", "areas", "resources", "archive"]
+NOTION_TEXT_LIMIT = 2000
+SAFE_CHUNK_SIZE = 1800
+MAX_CHILDREN_PER_REQUEST = 100
 
 def get_api_key():
     """Get Maton API key from credentials file."""
@@ -75,6 +78,50 @@ def search_page_by_title(title, api_key):
     }, api_key=api_key)
     return result.get("results", [])
 
+def split_text_for_notion(content, max_len=SAFE_CHUNK_SIZE):
+    """Split markdown content into Notion-safe chunks (<= 2000 chars each)."""
+    text = (content or "").replace("\r\n", "\n")
+    if not text.strip():
+        return ["(vide)"]
+
+    chunks = []
+    paragraphs = text.split("\n\n")
+
+    for para in paragraphs:
+        p = para.strip()
+        if not p:
+            continue
+        while len(p) > max_len:
+            chunks.append(p[:max_len])
+            p = p[max_len:]
+        chunks.append(p)
+
+    if not chunks:
+        chunks = [text[:max_len]]
+
+    # Hard safety guard for Notion API max 2000
+    return [c[:NOTION_TEXT_LIMIT] for c in chunks]
+
+def build_paragraph_blocks(content):
+    """Convert content to Notion paragraph blocks."""
+    return [{
+        "object": "block",
+        "type": "paragraph",
+        "paragraph": {
+            "rich_text": [{"type": "text", "text": {"content": chunk}}]
+        }
+    } for chunk in split_text_for_notion(content)]
+
+
+def append_blocks_in_batches(page_id, blocks, api_key):
+    """Append blocks to a page, respecting Notion's 100 children/request limit."""
+    for i in range(0, len(blocks), MAX_CHILDREN_PER_REQUEST):
+        batch = blocks[i:i + MAX_CHILDREN_PER_REQUEST]
+        notion_request(f"/v1/blocks/{page_id}/children", method="PATCH", data={
+            "children": batch
+        }, api_key=api_key)
+
+
 def create_or_update_page(parent_id, title, content, category, api_key):
     """Create or update a page in Notion."""
     # Search existing page
@@ -90,35 +137,31 @@ def create_or_update_page(parent_id, title, content, category, api_key):
                     "title": {"title": [{"text": {"content": title}}]}
                 }
             }, api_key=api_key)
-            # Update content (append new block)
-            notion_request(f"/v1/blocks/{page_id}/children", method="PATCH", data={
-                "children": [{
-                    "object": "block",
-                    "type": "paragraph",
-                    "paragraph": {
-                        "rich_text": [{"type": "text", "text": {"content": content[:1990]}}]
-                    }
-                }]
-            }, api_key=api_key)
-            return page_id
+            # Update content (append new blocks)
+            children = build_paragraph_blocks(content)
+            append_blocks_in_batches(page_id, children, api_key)
+            return page_id, "updated"
     
     # Create new page
     print(f"  Creating: {title}")
+    all_blocks = build_paragraph_blocks(content)
+    first_batch = all_blocks[:MAX_CHILDREN_PER_REQUEST]
+    remaining = all_blocks[MAX_CHILDREN_PER_REQUEST:]
+
     page_data = {
         "parent": {"page_id": parent_id},
         "properties": {
             "title": {"title": [{"text": {"content": title}}]}
         },
-        "children": [{
-            "object": "block",
-            "type": "paragraph",
-            "paragraph": {
-                "rich_text": [{"type": "text", "text": {"content": content[:1990]}}]
-            }
-        }]
+        "children": first_batch
     }
     result = notion_request("/v1/pages", method="POST", data=page_data, api_key=api_key)
-    return result.get("id")
+    page_id = result.get("id")
+
+    if page_id and remaining:
+        append_blocks_in_batches(page_id, remaining, api_key)
+
+    return page_id, "created"
 
 def get_category_emoji(category):
     """Get emoji for PARA category."""
@@ -185,18 +228,15 @@ def main():
         print(f"{emoji} [{file_info['category'].upper()}] {file_info['rel_path']} -> {parent_id[:8]}...")
         
         try:
-            page_id = create_or_update_page(
+            page_id, action = create_or_update_page(
                 parent_id=parent_id,
                 title=file_info["title"],
                 content=file_info["content"],
                 category=file_info["category"],
                 api_key=api_key
             )
-            if page_id:
-                stats["updated" if any(
-                    p.get("parent", {}).get("page_id") == parent_id 
-                    for p in search_page_by_title(file_info["title"], api_key)
-                ) else "created"] += 1
+            if page_id and action in stats:
+                stats[action] += 1
         except Exception as e:
             print(f"  ❌ Error: {e}", file=sys.stderr)
             stats["errors"] += 1
