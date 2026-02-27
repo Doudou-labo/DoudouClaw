@@ -8,6 +8,7 @@ Maintenance mémoire quotidienne — memory-curator actif (subagent).
 - Leçon critique mise à jour OpenClaw (26/02) bien tracée dans LTM + memory/2026-02-26.md.
 - Config breaking change `heartbeat.directPolicy = block` post-update appliquée.
 - Jurons français systématiques : ancré dans SOUL.md + TOOLS.md + MEMORY.md (canonique 2026-02-23).
+- Audit mémoire (reprise après timeout) fait: cohérence N1↔LTM OK sur les points critiques (N1/N2/N3, restart gateway, update OpenClaw, cooldowns providers).
 
 ## Key Decisions (actives)
 1. Jurons français sans modération = identité DoudouClaw (trait d'authenticité systématique).
@@ -24,4 +25,4 @@ Maintenance mémoire quotidienne — memory-curator actif (subagent).
 - `memory/2026-02-27.md`
 
 ## Last Updated
-2026-02-27 13:07 UTC — memory-curator audit
+2026-02-27 13:09 UTC — memory-curator reprise + audit cohérence
