@@ -21,7 +21,7 @@ echo ""
 echo "⏹ Étape 1 : Arrêt du gateway..."
 systemctl --user stop openclaw-gateway 2>/dev/null || true
 sleep 3
-pgrep -f "openclaw" | xargs kill -9 2>/dev/null || true
+pgrep -f "openclaw/dist/entry\|openclaw.mjs gateway" | xargs kill -9 2>/dev/null || true
 sleep 2
 echo "   ✅ Gateway arrêté"
 
