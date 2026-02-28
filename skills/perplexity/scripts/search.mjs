@@ -1,6 +1,9 @@
 #!/usr/bin/env node
-// search.mjs — Perplexity Search avec filtre fraîcheur + citations
-// Usage: search.mjs "query" [--freshness day|week|month] [--json] [--urls-only]
+// search.mjs — Perplexity via MCP server (officiel)
+// Usage: search.mjs "query" [--freshness day|week|month|hour|year] [--json] [--urls-only]
+
+import { Client } from "@modelcontextprotocol/sdk/client/index.js";
+import { StdioClientTransport } from "@modelcontextprotocol/sdk/client/stdio.js";
 
 const args = process.argv.slice(2);
 
@@ -16,61 +19,52 @@ for (let i = 0; i < args.length; i++) {
   } else if (arg === "--urls-only") {
     urlsOnly = true;
   } else if (arg === "--freshness" && args[i + 1]) {
-    freshness = args[++i]; // day | week | month
+    freshness = args[++i]; // hour | day | week | month | year
   } else if (!arg.startsWith("-")) {
     queries.push(arg);
   }
 }
 
 if (queries.length === 0) {
-  console.error("Usage: search.mjs <query> [query2...] [--freshness day|week|month] [--json] [--urls-only]");
+  console.error("Usage: search.mjs <query> [query2...] [--freshness day|week|month|hour|year] [--json] [--urls-only]");
   process.exit(1);
 }
 
-const apiKey = process.env.PERPLEXITY_API_KEY;
-if (!apiKey) {
+const validFreshness = new Set(["hour", "day", "week", "month", "year"]);
+if (!validFreshness.has(freshness)) {
+  console.error(`Error: invalid --freshness '${freshness}'. Use one of: hour, day, week, month, year`);
+  process.exit(1);
+}
+
+if (!process.env.PERPLEXITY_API_KEY) {
   console.error("Error: PERPLEXITY_API_KEY environment variable not set");
   process.exit(1);
 }
 
-async function searchOne(query) {
-  const body = {
-    model: "sonar",
-    messages: [{ role: "user", content: query }],
-    search_recency_filter: freshness,
-    return_citations: true,
-    max_tokens: 1024,
-  };
-
-  const response = await fetch("https://api.perplexity.ai/chat/completions", {
-    method: "POST",
-    headers: {
-      "Authorization": `Bearer ${apiKey}`,
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify(body),
-  });
-
-  if (!response.ok) {
-    const error = await response.text();
-    throw new Error(`Perplexity API error (${response.status}): ${error}`);
+function extractUrls(text = "") {
+  const matches = text.match(/https?:\/\/[^\s)\]]+/g) || [];
+  const deduped = [];
+  const seen = new Set();
+  for (const url of matches) {
+    if (!seen.has(url)) {
+      seen.add(url);
+      deduped.push(url);
+    }
   }
-
-  return response.json();
+  return deduped;
 }
 
-function formatResult(data, query) {
+function formatResult(content, query) {
   const lines = [];
-  const content = data?.choices?.[0]?.message?.content || "";
-  const citations = data?.citations || [];
+  const urls = extractUrls(content);
 
   if (query) lines.push(`## ${query}\n`);
+  if (content) lines.push(content.trim());
 
-  if (content) lines.push(content);
-
-  if (citations.length > 0) {
+  // Si le modèle n'a pas explicitement section "Citations", on ajoute nos URLs détectées
+  if (urls.length > 0 && !/\bCitations?\b/i.test(content)) {
     lines.push("\n### 🔗 Sources\n");
-    citations.slice(0, 8).forEach((url, i) => {
+    urls.slice(0, 8).forEach((url, i) => {
       lines.push(`${i + 1}. ${url}`);
     });
   }
@@ -78,28 +72,45 @@ function formatResult(data, query) {
   return lines.join("\n");
 }
 
-function extractUrls(data) {
-  return data?.citations || [];
-}
+async function main() {
+  const client = new Client({ name: "perplexity-skill-cli", version: "2.0.0" });
+  const transport = new StdioClientTransport({
+    command: "npx",
+    args: ["-yq", "@perplexity-ai/mcp-server"],
+    env: process.env,
+  });
 
-try {
-  const allUrls = [];
+  try {
+    await client.connect(transport);
 
-  for (const query of queries) {
-    const result = await searchOne(query);
+    for (const query of queries) {
+      const result = await client.callTool({
+        name: "perplexity_ask",
+        arguments: {
+          messages: [{ role: "user", content: query }],
+          search_recency_filter: freshness,
+        },
+      });
 
-    if (jsonOutput) {
-      console.log(JSON.stringify(result, null, 2));
-    } else if (urlsOnly) {
-      const urls = extractUrls(result);
-      urls.forEach(u => console.log(u));
-      allUrls.push(...urls);
-    } else {
-      console.log(formatResult(result, queries.length > 1 ? query : null));
-      console.log("");
+      const content = result?.structuredContent?.response
+        || result?.content?.find((c) => c.type === "text")?.text
+        || "";
+
+      if (jsonOutput) {
+        console.log(JSON.stringify(result, null, 2));
+      } else if (urlsOnly) {
+        extractUrls(content).forEach((u) => console.log(u));
+      } else {
+        console.log(formatResult(content, queries.length > 1 ? query : null));
+        console.log("");
+      }
     }
+  } catch (error) {
+    console.error(`Error: ${error.message}`);
+    process.exit(1);
+  } finally {
+    await client.close().catch(() => {});
   }
-} catch (error) {
-  console.error(`Error: ${error.message}`);
-  process.exit(1);
 }
+
+await main();

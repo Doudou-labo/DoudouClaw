@@ -1,6 +1,6 @@
 ---
 name: perplexity
-description: Search the web with AI-powered answers via Perplexity API. Returns grounded responses with citations. Supports batch queries.
+description: Search the web with AI-powered answers via Perplexity MCP server. Returns grounded responses with citations. Supports batch queries.
 homepage: https://docs.perplexity.ai
 metadata: {"clawdbot":{"emoji":"🔮","requires":{"bins":["node"],"env":["PERPLEXITY_API_KEY"]},"primaryEnv":"PERPLEXITY_API_KEY"}}
 ---
@@ -23,10 +23,13 @@ node {baseDir}/scripts/search.mjs "What is Perplexity?" "Latest AI news" "Best c
 
 ## Options
 
-- `--json`: Output raw JSON response
+- `--freshness day|week|month|hour|year`: Filter by recency (default: `week`)
+- `--urls-only`: Output citations URLs only
+- `--json`: Output raw MCP tool response
 
 ## Notes
 
 - Requires `PERPLEXITY_API_KEY` environment variable
+- Uses the official MCP server: `@perplexity-ai/mcp-server`
 - Responses include citations when available
-- Batch queries are processed in a single API call
+- Batch queries are executed sequentially in one CLI run
