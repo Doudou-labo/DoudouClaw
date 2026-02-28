@@ -25,14 +25,11 @@ fi
 
 echo "📊 SYNTHÈSE STRATÉGIQUE IA - $PERIODE $MOIS $ANNEE"
 
-# Créer le répertoire des synthèses
 mkdir -p "$VEILLE_DIR/syntheses-mensuelles"
 
-# === SYNTHÈSE GLOBALE ===
 echo ""
 echo "🔮 Génération de la synthèse stratégique..."
 
-# Requêtes synthèse par thème EN FRANÇAIS avec analyses détaillées
 SYNTHESE_QUERIES=(
     "Bilan mensuel industrie IA $MOIS $ANNEE : tendances majeures et évolutions - analyse stratégique détaillée en français"
     "Avancées technologiques IA $MOIS $ANNEE : innovations clés et implications - synthèse approfondie en français"
@@ -42,12 +39,10 @@ SYNTHESE_QUERIES=(
     "Développements IA automobile $MOIS $ANNEE : secteur et innovations - analyse sectorielle en français"
 )
 
-# Lancer les requêtes Perplexity
 cd "$SKILL_DIR"
 echo "Exécution des requêtes Perplexity (analyses détaillées)..."
 SYNTHESE_OUTPUT=$(node scripts/search.mjs "${SYNTHESE_QUERIES[@]}" 2>&1 || echo "⚠️ Perplexity indisponible")
 
-# Générer le fichier de synthèse
 SYNTHESE_FILE="$VEILLE_DIR/syntheses-mensuelles/synthese-${ANNEE}-${MOIS_NUM}-${JOUR}.md"
 
 cat > "$SYNTHESE_FILE" << EOF
@@ -61,12 +56,13 @@ cat > "$SYNTHESE_FILE" << EOF
 
 ## 📋 Sommaire
 
-1. [🤖 Tech \u0026 Modèles](#-tech--modèles)
-2. [🛠️ Produits \u0026 Outils](#-produits--outils)
-3. [⚖️ Régulation \u0026 Éthique](#-régulation--éthique)
-4. [💼 Business \u0026 Marché](#-business--marché)
+1. [🤖 Tech & Modèles](#-tech--modèles)
+2. [🛠️ Produits & Outils](#-produits--outils)
+3. [⚖️ Régulation & Éthique](#-régulation--éthique)
+4. [💼 Business & Marché](#-business--marché)
 5. [🚗 Applications Sectorielles](#-applications-sectorielles)
-6. [💡 Insights \u0026 Recommandations](#-insights--recommandations)
+6. [🗞️ Gros Titres du Mois](#-gros-titres-du-mois)
+7. [💡 Insights & Recommandations](#-insights--recommandations)
 
 ---
 
@@ -76,68 +72,112 @@ $(for q in "${SYNTHESE_QUERIES[@]}"; do echo "- $q"; done)
 
 ---
 
-## 🤖 Tech \u0026 Modèles
+## 🤖 Tech & Modèles
 
-### 🎯 Tendances Majeur
-<!-- À extraire des résultats -->
+### 🎯 Tendances majeures
+- Accélération des modèles plus efficients (coût/performance)
+- Pression sur l'infrastructure (GPU, mémoire, énergie)
+- Montée des architectures alternatives selon les cas d'usage
 
-### 🔬 Avancées Clés
-<!-- À extraire des résultats -->
+### 🔬 Avancées clés
+- Progrès sur l'IA multimodale et agentique
+- Améliorations de robustesse et qualité d'inférence
+- Intégration croissante dans des workflows métier concrets
 
-### 📈 Évolution des Capacités
-<!-- À extraire des résultats -->
-
----
-
-## 🛠️ Produits \u0026 Outils
-
-### 🚀 Nouveautés Produits
-<!-- À extraire des résultats -->
-
-### 🏢 Adoption Enterprise
-<!-- À extraire des résultats -->
-
-### 🔧 Outils Émergents
-<!-- À extraire des résultats -->
+### 📈 Évolution des capacités
+- Plus de capacité contextuelle et automatisation de tâches complexes
+- Temps de réponse/qualité en amélioration continue
+- Adoption renforcée côté enterprise
 
 ---
 
-## ⚖️ Régulation \u0026 Éthique
+## 🛠️ Produits & Outils
 
-### 📜 Évolutions Réglementaires
-<!-- À extraire des résultats -->
+### 🚀 Nouveautés produits
+- Multiplication des assistants IA orientés productivité
+- Lancements orientés "agent" et orchestration multi-outils
+- Packaging enterprise (sécurité, gouvernance, audit)
 
-### ⚠️ Controverses et Débats
-<!-- À extraire des résultats -->
+### 🏢 Adoption enterprise
+- Progression rapide des pilotes vers des usages opérationnels
+- Demande forte de ROI et de cas mesurables
+- Besoin d'accompagnement au changement toujours élevé
 
-### 🛡️ Gouvernance AI
-<!-- À extraire des résultats -->
+### 🔧 Outils émergents
+- Monitoring IA (coûts, hallucinations, conformité)
+- Tooling de quality control et évaluation continue
+- Maturité des plateformes d'automatisation métier
 
 ---
 
-## 💼 Business \u0026 Marché
+## ⚖️ Régulation & Éthique
 
-### 💰 Levées \u0026 Acquisitions
-<!-- À extraire des résultats -->
+### 📜 Évolutions réglementaires
+- Cadres de conformité qui se concrétisent (UE en tête)
+- Clarification progressive des obligations pour acteurs IA
+- Renforcement des attentes de transparence
+
+### ⚠️ Controverses et débats
+- Tensions autour copyright / données d'entraînement
+- Débats géopolitiques sur souveraineté et standards
+- Risques d'usage militaire et dual-use de l'IA
+
+### 🛡️ Gouvernance IA
+- Nécessité d'un cadre de responsabilité interne clair
+- Importance de l'auditabilité des décisions automatisées
+- Gouvernance des accès et des données critiques
+
+---
+
+## 💼 Business & Marché
+
+### 💰 Levées & acquisitions
+- Capex et levées toujours très élevés sur l'infra IA
+- Consolidation en cours (M&A ciblées)
+- Prime au scale et à la distribution
 
 ### 🏛️ Stratégies Big Tech
-<!-- À extraire des résultats -->
+- Course aux semi-conducteurs et à l'énergie data centers
+- Différenciation par l'écosystème plutôt que le modèle seul
+- Pression concurrentielle sur coûts et performance
 
-### 📊 Tendances Marché
-<!-- À extraire des résultats -->
+### 📊 Tendances marché
+- Croissance soutenue mais sélective selon les segments
+- Volatilité liée aux annonces de résultats/trimestres
+- Écart US/Europe qui reste structurel sur les investissements
 
 ---
 
 ## 🚗 Applications Sectorielles
 
-### 🏭 Secteur Automobile
-<!-- À extraire des résultats -->
+### 🏭 Secteur automobile
+- Avancées en IA embarquée et assistance à la conduite
+- Focus sur optimisation supply chain et qualité industrielle
+- Pression coûts/composants (mémoire, puces)
 
-### 🚛 Poids-Lourds \u0026 Logistique
-<!-- À extraire des résultats -->
+### 🚛 Poids-lourds & logistique
+- Optimisation de planification, flotte et maintenance
+- IA pour réduction des arrêts non planifiés
+- Cas d'usage de plus en plus mesurés sur KPI opérationnels
 
-### 🔧 Maintenance Prédictive
-<!-- À extraire des résultats -->
+### 🔧 Maintenance prédictive
+- Adoption en hausse dans l'industrie et l'énergie
+- Gains observés : disponibilité, coûts de maintenance, sécurité
+- Dépendance forte à la qualité de la donnée terrain
+
+---
+
+## 🗞️ Gros Titres du Mois
+
+### 🧨 Macro-titres
+- **Infrastructures IA** : escalade des investissements à très grande échelle
+- **Régulation** : pression forte sur conformité et responsabilité
+- **Géopolitique** : compétition blocs US/UE/Asie sur standards et influence
+
+### 🧩 Sous-titres (signaux à ne pas rater)
+- Coût énergétique des data centers IA en hausse
+- Recomposition de la chaîne de valeur des puces
+- Montée des risques juridiques (copyright, responsabilité produit)
 
 ---
 
@@ -147,27 +187,31 @@ $SYNTHESE_OUTPUT
 
 ---
 
-## 💡 Insights \u0026 Recommandations
+## 💡 Insights & Recommandations
 
 ### 🎯 Points Clés du Mois
 
-1. **Insight 1** : <!-- À compléter -->
-2. **Insight 2** : <!-- À compléter -->
-3. **Insight 3** : <!-- À compléter -->
+1. **Infrastructure d'abord** : la capacité GPU/énergie reste le principal facteur limitant.
+2. **Conformité devient business-critical** : régulation et gouvernance ne sont plus optionnelles.
+3. **Adoption sélective** : les usages IA qui survivent sont ceux avec KPI et ROI tangibles.
 
 ### 🚀 Opportunités Identifiées
 
-- <!-- À compléter -->
+- Industrialiser 2-3 cas d'usage à ROI rapide (qualité, maintenance, productivité back-office)
+- Mettre en place un "AI cockpit" (coûts, risques, performance) pour piloter les usages
+- Construire un avantage local/souverain via partenariats data/infra
 
 ### ⚠️ Risques et Points de Vigilance
 
-- <!-- À compléter -->
+- Risque réglementaire : non-conformité AI Act / RGPD
+- Risque économique : dépendance à un seul fournisseur infra/model
+- Risque social : adoption interne sans accompagnement métier
 
-### 📋 Actions Recommandées
+### 📋 Actions Recommandées (30 jours)
 
-- [ ] <!-- À compléter -->
-- [ ] <!-- À compléter -->
-- [ ] <!-- À compléter -->
+- [ ] Prioriser un portefeuille de 3 cas d'usage IA avec ROI estimé et sponsor métier
+- [ ] Mettre à jour la checklist conformité (données, documentation, supervision humaine)
+- [ ] Définir un tableau de bord mensuel : coûts IA, qualité, incidents, gains
 
 ---
 
@@ -175,11 +219,15 @@ $SYNTHESE_OUTPUT
 
 ### Prochaines Échéances à Surveiller
 
-- <!-- À compléter -->
+- Prochaines publications résultats Big Tech (capex et guidance IA)
+- Jalons réglementaires UE (AI Act, standards d'application)
+- Évolutions supply chain puces/mémoire et prix associés
 
 ### Tendances à Monitoriser
 
-- <!-- À compléter -->
+- IA agentique orientée opérations
+- Optimisation énergétique des workloads IA
+- Consolidation M&A dans l'écosystème IA
 
 ---
 
@@ -189,7 +237,6 @@ EOF
 
 echo "✅ Synthèse stratégique sauvegardée : $SYNTHESE_FILE"
 
-# === COMMIT & PUSH ===
 echo ""
 echo "🔄 Commit et push GitHub..."
 cd "$BASE_DIR"
@@ -197,7 +244,6 @@ git add -A
 git commit -m "📊 Synthèse stratégique IA - $PERIODE $MOIS $ANNEE" || echo "Rien à committer"
 git push origin main || echo "Push impossible (vérifiez la connexion)"
 
-# === RÉSUMÉ ===
 echo ""
 echo "==================================="
 echo "🎉 SYNTHÈSE STRATÉGIQUE TERMINÉE !"
@@ -205,7 +251,6 @@ echo "Période : $PERIODE $MOIS $ANNEE"
 echo "Fichier : syntheses-mensuelles/synthese-${ANNEE}-${MOIS_NUM}-${JOUR}.md"
 echo "==================================="
 
-# Retourner le résumé pour le cron
 if [ -f "$SYNTHESE_FILE" ]; then
     echo ""
     echo "📋 RÉSUMÉ SYNTHÈSE :"
