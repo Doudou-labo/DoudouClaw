@@ -1,16 +1,12 @@
 #!/usr/bin/env node
-// search.mjs — Perplexity via MCP server (officiel) 🔮
-// Usage: search.mjs "query" [--mode ask|reason|research|search] [--freshness day|week|month|hour|year] [--json] [--urls-only]
-
-import { Client } from "@modelcontextprotocol/sdk/client/index.js";
-import { StdioClientTransport } from "@modelcontextprotocol/sdk/client/stdio.js";
+// search.mjs — Perplexity Search avec filtre fraîcheur + citations
+// Usage: search.mjs "query" [--freshness day|week|month] [--json] [--urls-only]
 
 const args = process.argv.slice(2);
 
 const queries = [];
 let jsonOutput = false;
 let urlsOnly = false;
-let mode = "research"; // défaut : deep research 🔬
 let freshness = "week"; // défaut : 7 jours
 
 for (let i = 0; i < args.length; i++) {
@@ -19,61 +15,62 @@ for (let i = 0; i < args.length; i++) {
     jsonOutput = true;
   } else if (arg === "--urls-only") {
     urlsOnly = true;
-  } else if (arg === "--mode" && args[i + 1]) {
-    mode = args[++i]; // ask | reason | research | search
   } else if (arg === "--freshness" && args[i + 1]) {
-    freshness = args[++i]; // hour | day | week | month | year
+    freshness = args[++i]; // day | week | month
   } else if (!arg.startsWith("-")) {
     queries.push(arg);
   }
 }
 
 if (queries.length === 0) {
-  console.error("Usage: search.mjs <query> [query2...] [--mode ask|reason|research|search] [--freshness day|week|month|hour|year] [--json] [--urls-only]");
+  console.error("Usage: search.mjs <query> [query2...] [--freshness day|week|month] [--json] [--urls-only]");
   process.exit(1);
 }
 
-const validModes = new Set(["ask", "reason", "research", "search"]);
-if (!validModes.has(mode)) {
-  console.error(`Error: invalid --mode '${mode}'. Use one of: ask, reason, research, search`);
-  process.exit(1);
-}
-
-const validFreshness = new Set(["hour", "day", "week", "month", "year"]);
-if (!validFreshness.has(freshness)) {
-  console.error(`Error: invalid --freshness '${freshness}'. Use one of: hour, day, week, month, year`);
-  process.exit(1);
-}
-
-if (!process.env.PERPLEXITY_API_KEY) {
+const apiKey = process.env.PERPLEXITY_API_KEY;
+if (!apiKey) {
   console.error("Error: PERPLEXITY_API_KEY environment variable not set");
   process.exit(1);
 }
 
-function extractUrls(text = "") {
-  const matches = text.match(/https?:\/\/[^\s)\]]+/g) || [];
-  const deduped = [];
-  const seen = new Set();
-  for (const url of matches) {
-    if (!seen.has(url)) {
-      seen.add(url);
-      deduped.push(url);
-    }
+async function searchOne(query) {
+  const body = {
+    model: "sonar",
+    messages: [{ role: "user", content: query }],
+    search_recency_filter: freshness,
+    return_citations: true,
+    max_tokens: 1024,
+  };
+
+  const response = await fetch("https://api.perplexity.ai/chat/completions", {
+    method: "POST",
+    headers: {
+      "Authorization": `Bearer ${apiKey}`,
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(body),
+  });
+
+  if (!response.ok) {
+    const error = await response.text();
+    throw new Error(`Perplexity API error (${response.status}): ${error}`);
   }
-  return deduped;
+
+  return response.json();
 }
 
-function formatResult(content, query) {
+function formatResult(data, query) {
   const lines = [];
-  const urls = extractUrls(content);
+  const content = data?.choices?.[0]?.message?.content || "";
+  const citations = data?.citations || [];
 
   if (query) lines.push(`## ${query}\n`);
-  if (content) lines.push(content.trim());
 
-  // Si le modèle n'a pas explicitement section "Citations", on ajoute nos URLs détectées
-  if (urls.length > 0 && !/\bCitations?\b/i.test(content)) {
+  if (content) lines.push(content);
+
+  if (citations.length > 0) {
     lines.push("\n### 🔗 Sources\n");
-    urls.slice(0, 8).forEach((url, i) => {
+    citations.slice(0, 8).forEach((url, i) => {
       lines.push(`${i + 1}. ${url}`);
     });
   }
@@ -81,81 +78,28 @@ function formatResult(content, query) {
   return lines.join("\n");
 }
 
-async function main() {
-  const client = new Client({ name: "perplexity-skill-cli", version: "2.0.0" });
-  const transport = new StdioClientTransport({
-    command: "npx",
-    args: ["-yq", "@perplexity-ai/mcp-server"],
-    env: {
-      ...process.env,
-      PERPLEXITY_TIMEOUT_MS: process.env.PERPLEXITY_TIMEOUT_MS || "600000",
-    },
-  });
-
-  try {
-    await client.connect(transport);
-
-    const modeToTool = {
-      ask: "perplexity_ask",
-      reason: "perplexity_reason",
-      research: "perplexity_research",
-      search: "perplexity_search",
-    };
-
-    for (const query of queries) {
-      const toolName = modeToTool[mode];
-      const toolArgs = mode === "search"
-        ? {
-            query,
-            max_results: 10,
-          }
-        : {
-            messages: [{ role: "user", content: query }],
-            search_recency_filter: freshness,
-          };
-
-      let result;
-      try {
-        result = await client.callTool({
-          name: toolName,
-          arguments: toolArgs,
-        });
-      } catch (err) {
-        const isTimeout = /timed out|timeout/i.test(String(err?.message || err));
-        if (mode === "research" && isTimeout) {
-          // Fallback auto pour éviter les fichiers vides en veille ⛑️
-          result = await client.callTool({
-            name: "perplexity_reason",
-            arguments: {
-              messages: [{ role: "user", content: query }],
-              search_recency_filter: freshness,
-            },
-          });
-        } else {
-          throw err;
-        }
-      }
-
-      const content = result?.structuredContent?.response
-        || result?.content?.find((c) => c.type === "text")?.text
-        || (result?.structuredContent ? JSON.stringify(result.structuredContent, null, 2) : "")
-        || "";
-
-      if (jsonOutput) {
-        console.log(JSON.stringify(result, null, 2));
-      } else if (urlsOnly) {
-        extractUrls(content).forEach((u) => console.log(u));
-      } else {
-        console.log(formatResult(content, queries.length > 1 ? query : null));
-        console.log("");
-      }
-    }
-  } catch (error) {
-    console.error(`Error: ${error.message}`);
-    process.exit(1);
-  } finally {
-    await client.close().catch(() => {});
-  }
+function extractUrls(data) {
+  return data?.citations || [];
 }
 
-await main();
+try {
+  const allUrls = [];
+
+  for (const query of queries) {
+    const result = await searchOne(query);
+
+    if (jsonOutput) {
+      console.log(JSON.stringify(result, null, 2));
+    } else if (urlsOnly) {
+      const urls = extractUrls(result);
+      urls.forEach(u => console.log(u));
+      allUrls.push(...urls);
+    } else {
+      console.log(formatResult(result, queries.length > 1 ? query : null));
+      console.log("");
+    }
+  }
+} catch (error) {
+  console.error(`Error: ${error.message}`);
+  process.exit(1);
+}
