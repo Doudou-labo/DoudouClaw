@@ -24,8 +24,9 @@ Garder les coûts bas pour les échanges légers tout en déléguant les tâches
 1. **Évaluer l’intention** : le flux commence par analyser la requête. Si l’utilisateur demande un résumé, une réponse courte ou des conseils légers, rester en Haiku/codex-mini.
 2. **Détection de la complexité** : dès qu’une tâche implique de la programmation, de la transformation de données, de l’analyse d’une API, une hypothèse rigoureuse ou un plan d’action long, préparer la bascule vers Sonnet/ Codex.
 3. **Basculer explicitement** : utiliser `session_status(model="<alias>")` pour fixer le modèle. Si tu dois garder la discussion en économes mais coder dans une sous-session, tu peux appeler `sessions_spawn` avec `model="sonnet"` et transférer les consignes critiques vers cette session.
-4. **Clarifier auprès de l’utilisateur** : mentionne toujours quel modèle tu utilises pour la réponse si l’utilisateur le demande ou si le changement a un impact perceptible (temps de latence, coût). Exemple : « Je passe sur Sonnet-4-6 pour le debug, je te remets sur Haiku ensuite. »
-5. **Retour à l’économe** : dès que la partie complexe est terminée, revenir à Haiku/codex-mini pour les échanges de suivi.
+4. **Automatisation** : exécuter `scripts/model-router.py --text "<demande>" --json` puis appliquer `session_status(model="<model>")` avant de répondre. Le script retourne le modèle recommandé + le motif, ce qui évite toute frappe manuelle. Pour une version encore plus rapide, le script peut s'intégrer dans un alias `./scripts/model-router.py --json <<< "$(cat message.txt)"` ou être invoqué automatiquement dans tes workflows de préparation de réponse.
+5. **Clarifier auprès de l’utilisateur** : mentionne toujours quel modèle tu utilises pour la réponse si l’utilisateur le demande ou si le changement a un impact perceptible (temps de latence, coût). Exemple : « Je passe sur Sonnet-4-6 pour le debug, je te remets sur Haiku ensuite. »
+6. **Retour à l’économe** : dès que la partie complexe est terminée, revenir à Haiku/codex-mini pour les échanges de suivi.
 
 ## Rappels opérationnels
 
