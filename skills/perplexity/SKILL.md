@@ -21,10 +21,11 @@ Multiple queries (batch):
 node {baseDir}/scripts/search.mjs "What is Perplexity?" "Latest AI news" "Best coffee in NYC"
 ```
 
-## Options
+## Options ⚙️
 
+- `--mode ask|reason|research|search`: Choose MCP tool (default: `reason` 🧠)
 - `--freshness day|week|month|hour|year`: Filter by recency (default: `week`)
-- `--urls-only`: Output citations URLs only
+- `--urls-only`: Output citations URLs only 🔗
 - `--json`: Output raw MCP tool response
 
 ## Notes
