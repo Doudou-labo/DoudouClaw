@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 import argparse
 import json
-import sys
 from typing import List
 
 CONTEXT_KEYWORDS = {
@@ -34,14 +33,20 @@ CONTEXT_KEYWORDS = {
     "question": "discussion",
 }
 
-MODEL_MAP = {
-    "discussion": "anthropic/claude-haiku-4-5",
-    "economy": "openai-codex/gpt-5.1-codex-mini",
-    "analysis": "anthropic/claude-sonnet-4-6",
-    "code": "anthropic/claude-sonnet-4-6",
+PRIORITY_MODELS = {
+    "discussion": [
+        "anthropic/claude-haiku-4-5",
+        "kimi-coding/k2p5",
+        "openai-codex/gpt-5.1-codex-mini",
+    ],
+    "analysis": [
+        "openai-codex/gpt-5.3-codex",
+        "anthropic/claude-sonnet-4-6",
+        "kimi-coding/k2p5",
+    ],
 }
 
-ECONOMY_THRESHOLD = 80
+LONG_FORM_THRESHOLD = 80
 
 
 def classify(text: str) -> List[str]:
@@ -54,29 +59,35 @@ def classify(text: str) -> List[str]:
 
 
 def choose_model(text: str) -> dict:
-    proposal = {
-        "model": MODEL_MAP["discussion"],
-        "reason": "Défaut discussion légère",
-        "category": "discussion",
-    }
+    category = "discussion"
+    reason = "Ordre recommandé Haiku → K2P5 → Codex-mini"
     if len(text.strip()) == 0:
-        return proposal
+        return {
+            "model": PRIORITY_MODELS[category][0],
+            "reason": reason,
+            "category": category,
+            "order": PRIORITY_MODELS[category],
+        }
+
     hints = classify(text)
+    normalized = text.lower()
+
     if "analysis" in hints or "code" in hints:
-        proposal["model"] = MODEL_MAP["analysis"]
-        proposal["reason"] = "Mots clés d’analyse/code détectés: {}".format(
+        category = "analysis"
+        reason = "Mots clés techniques détectés ({}).".format(
             ", ".join(sorted(set(hints)))
         )
-        proposal["category"] = "analysis"
-    elif any(keyword in text.lower() for keyword in ["répond", "question", "idée", "brainstorm"]):
-        proposal["model"] = MODEL_MAP["economy"]
-        proposal["reason"] = "Requête rédaction légère / brainstorming"
-        proposal["category"] = "economy"
-    elif len(text) > ECONOMY_THRESHOLD and not hints:
-        proposal["model"] = MODEL_MAP["economy"]
-        proposal["reason"] = "Longue question sans mots clés techniques"
-        proposal["category"] = "economy"
-    return proposal
+    elif any(keyword in normalized for keyword in ["répond", "question", "idée", "brainstorm"]):
+        reason = "Requête rédaction légère / brainstorming (ordre Haiku → K2P5 → Codex-mini)."
+    elif len(text) > LONG_FORM_THRESHOLD and not hints:
+        reason = "Longue question sans mots clés techniques (ordre Haiku → K2P5 → Codex-mini)."
+
+    return {
+        "model": PRIORITY_MODELS[category][0],
+        "reason": reason,
+        "category": category,
+        "order": PRIORITY_MODELS[category],
+    }
 
 
 def main():

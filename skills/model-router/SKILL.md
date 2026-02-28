@@ -1,6 +1,6 @@
 ---
 name: model-router
-description: "Routage entre modèles économes (Haiku / Codex-mini / Codex-spark) pour les discussions, et modèles puissants (Sonnet-4-6 / GPT-5.3-Codex) pour le code ou l’analyse lourde. Déclenche ce skill dès que l’utilisateur mentionne un changement de modèle, ou qu’il faut arbitrer coût vs capacité."
+description: "Routage entre modèles économes (Haiku / K2P5 / Codex-mini) pour les discussions légères, et modèles puissants (GPT-5.3-Codex / Sonnet-4-6 / K2P5) pour le code ou l’analyse lourde. Déclenche ce skill dès que l’utilisateur mentionne un changement de modèle, ou qu’il faut arbitrer coût vs capacité."
 ---
 
 # Routage des modèles selon l’intensité
@@ -12,10 +12,12 @@ Garder les coûts bas pour les échanges légers tout en déléguant les tâches
 
 | Situation | Modèle souhaité | Commande à exécuter |
 |-----------|-----------------|----------------------|
-| Discussion courte, rappel rapide, réponse factuelle / brainstorming léger | `anthropic/claude-haiku-4-5` (haiku) | `session_status(model="haiku")` |
-| Question un peu plus longue, besoin de rédaction structurée sans gros calcul | `openai-codex/gpt-5.1-codex-mini` (codex-mini) | `session_status(model="codex-mini")` |
-| Débogage, génération de code, architecture, analyse de logs, conception de workflow | `anthropic/claude-sonnet-4-6` | `session_status(model="sonnet")` |
-| Code critique (vérification, refactor, architecture) | `openai-codex/gpt-5.3-codex` | `session_status(model="codex")` |
+| Situation | Ordre de modèles recommandé | Commande à exécuter |
+|-----------|----------------------------|----------------------|
+| Discussion courte, rappel rapide, réponse factuelle / brainstorming léger | `anthropic/claude-haiku-4-5` → `kimi-coding/k2p5` → `openai-codex/gpt-5.1-codex-mini` | `session_status(model="haiku")` (puis fallback si nécessaire) |
+| Question un peu plus longue, rédaction structurée légère sans gros calcul | même ordre `Haiku → K2P5 → Codex-mini` (solo ou avec transition) | `session_status(model="codex-mini")` (retour sur `haiku` selon le niveau) |
+| Débogage, génération de code, architecture, analyse de logs, conception de workflow | `openai-codex/gpt-5.3-codex` → `anthropic/claude-sonnet-4-6` → `kimi-coding/k2p5` | `session_status(model="codex")` (ou `sonnet`, selon l’étape) |
+| Code critique (vérification, refactor, architecture) | même ordre `Codex → Sonnet → K2P5` avec priorité forte sur `gpt-5.3-codex` | `session_status(model="codex")` |
 
 > Si la commande retourne un modèle non autorisé, basculer sur le proxie le plus proche (p. ex. Haiku → Codex-mini) et documenter la limitation dans la réponse.
 
