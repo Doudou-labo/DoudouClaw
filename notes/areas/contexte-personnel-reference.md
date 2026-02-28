@@ -20,6 +20,11 @@
 - Andréa: relation affective historique importante.
 - Audrey: sujet sensible (voir archive dédiée pour historique détaillé).
 
+## Culture / films & séries (référence)
+- 22/02/2026: discussion engagée sur le film **Marty Supreme** (échange d'avis sans spoil). Au moment de l'échange, Doudou indique qu'il va le commencer.
+- Série **B.R.I**: saison 2 terminée (retour positif), frustration sur la fin en cliffhanger, attente de la saison 3.
+- Série **Control Z**: terminée, appréciée pour son côté psychologique et les dynamiques/comportements des personnages.
+
 ## Règle d'usage
-- Utiliser ce fichier en support quand la discussion touche coaching perso, sport adapté, organisation, ou relationnel.
+- Utiliser ce fichier en support quand la discussion touche coaching perso, sport adapté, organisation, relationnel, ou culture (films/séries).
 - Ne pas remonter automatiquement les détails sensibles; privilégier ce qui est actionnable ici et maintenant.

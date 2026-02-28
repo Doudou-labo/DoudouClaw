@@ -4,6 +4,9 @@
 Maintenance mémoire quotidienne — memory-curator actif (subagent).
 
 ## Immediate Context
+- Correction mémoire en cours sur le thème films/séries: Doudou signale des discussions passées non retrouvées en recall.
+- Les preuves fournies (captures) confirment: discussion sur le film *Marty Supreme* + retours séries (*B.R.I* S2 terminée, *Control Z* terminée).
+- Action immédiate: mise à jour N2 + journal du jour + synchronisation LTM pour éviter une nouvelle dérive.
 - Aucune tâche critique ouverte détectée.
 - Leçon critique mise à jour OpenClaw (26/02) bien tracée dans LTM + memory/2026-02-26.md.
 - Config breaking change `heartbeat.directPolicy = block` post-update appliquée.
@@ -25,4 +28,4 @@ Maintenance mémoire quotidienne — memory-curator actif (subagent).
 - `memory/2026-02-27.md`
 
 ## Last Updated
-2026-02-27 13:13 UTC — memory-curator continuation (reprise après timeout) validée, recalls critiques reconfirmés
+2026-02-28 22:19 UTC — correction mémoire films/séries enclenchée (preuves utilisateur + MAJ N2/N1)
