@@ -10,7 +10,7 @@ const args = process.argv.slice(2);
 const queries = [];
 let jsonOutput = false;
 let urlsOnly = false;
-let mode = "reason"; // défaut demandé : raisonnement avancé 🧠
+let mode = "research"; // défaut : deep research 🔬
 let freshness = "week"; // défaut : 7 jours
 
 for (let i = 0; i < args.length; i++) {
