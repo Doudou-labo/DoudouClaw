@@ -13,7 +13,7 @@ Garder les coûts bas pour les échanges légers tout en déléguant les tâches
 | Situation | Modèle souhaité | Commande à exécuter |
 |-----------|-----------------|----------------------|
 | Discussion courte, rappel rapide, réponse factuelle / brainstorming léger | `anthropic/claude-haiku-4-5` (haiku) | `session_status(model="haiku")` |
-| Question un peu plus longue, besoin de rédaction structurée sans gros calcul | `openai-codex/gpt-5.1-codex-mini` (codex-mini) ou `openai-codex/gpt-5.3-codex-spark` si mini refusé | `session_status(model="codex-spark")` |
+| Question un peu plus longue, besoin de rédaction structurée sans gros calcul | `openai-codex/gpt-5.1-codex-mini` (codex-mini) | `session_status(model="codex-mini")` |
 | Débogage, génération de code, architecture, analyse de logs, conception de workflow | `anthropic/claude-sonnet-4-6` | `session_status(model="sonnet")` |
 | Code critique (vérification, refactor, architecture) | `openai-codex/gpt-5.3-codex` | `session_status(model="codex")` |
 
