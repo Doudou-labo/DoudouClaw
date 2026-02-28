@@ -86,7 +86,10 @@ async function main() {
   const transport = new StdioClientTransport({
     command: "npx",
     args: ["-yq", "@perplexity-ai/mcp-server"],
-    env: process.env,
+    env: {
+      ...process.env,
+      PERPLEXITY_TIMEOUT_MS: process.env.PERPLEXITY_TIMEOUT_MS || "600000",
+    },
   });
 
   try {
@@ -111,10 +114,27 @@ async function main() {
             search_recency_filter: freshness,
           };
 
-      const result = await client.callTool({
-        name: toolName,
-        arguments: toolArgs,
-      });
+      let result;
+      try {
+        result = await client.callTool({
+          name: toolName,
+          arguments: toolArgs,
+        });
+      } catch (err) {
+        const isTimeout = /timed out|timeout/i.test(String(err?.message || err));
+        if (mode === "research" && isTimeout) {
+          // Fallback auto pour éviter les fichiers vides en veille ⛑️
+          result = await client.callTool({
+            name: "perplexity_reason",
+            arguments: {
+              messages: [{ role: "user", content: query }],
+              search_recency_filter: freshness,
+            },
+          });
+        } else {
+          throw err;
+        }
+      }
 
       const content = result?.structuredContent?.response
         || result?.content?.find((c) => c.type === "text")?.text
