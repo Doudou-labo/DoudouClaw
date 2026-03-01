@@ -317,3 +317,13 @@ Don't wait for permission to improve. If you learned something, write it down no
 ---
 
 *Make this your own. Add conventions, rules, and patterns as you figure out what works.*
+
+### Plugin OpenClaw — règles de sécurité (leçon 2026-03-01)
+- **Avant tout patch config plugin :**
+  1. Valider le JSON après modification : `python3 -m json.tool openclaw.json`
+  2. Vérifier que le plugin id est reconnu : `openclaw plugins list`
+  3. Tester le plugin en isolation avant d'ajouter à `plugins.allow` et `plugins.entries`
+  4. Avoir un snapshot/backup du JSON avant de toucher quoi que ce soit
+- **Jamais** patcher `plugins.allow` avec un id inconnu d'OpenClaw → bloque le gateway au démarrage
+- **Jamais** restart gateway sans rollback plan prêt
+- Si plugin ClawHub → lire le README complet + vérifier compatibilité OpenClaw avant install en extensions
