@@ -1,7 +1,7 @@
 # ⚡ Flash IA - 2026-03-01 - 8h00
 
 **Thème du jour** : RECAP  
-**Généré le** : 01/03/2026 à 09:43
+**Généré le** : 01/03/2026 à 09:44
 
 ---
 
@@ -15,7 +15,7 @@
 
 ## 📰 Actualités et Analyses
 
-⚠️ Perplexity indisponible (erreur d'authentification API).\n\nLa veille continue en mode dégradé.\nAction requise: vérifier la clé API Perplexity dans la configuration OpenClaw.
+⚠️ Perplexity indisponible (erreur d'authentification API). La veille continue en mode dégradé. Action requise : vérifier la clé API Perplexity dans la configuration OpenClaw.
 
 ---
 

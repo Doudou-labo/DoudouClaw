@@ -2,7 +2,7 @@
 
 **Thème** : Analyse Hebdomadaire Complète  
 **Focus** : RECAP  
-**Généré le** : 01/03/2026 à 09:43
+**Généré le** : 01/03/2026 à 09:44
 
 ---
 
@@ -16,7 +16,7 @@
 
 ## 📚 Analyse Détaillée
 
-⚠️ Perplexity indisponible (erreur d'authentification API).\n\nDeep Dive non généré automatiquement.\nAction requise: vérifier la clé API Perplexity dans la configuration OpenClaw.
+⚠️ Perplexity indisponible (erreur d'authentification API). Deep Dive non généré automatiquement. Action requise : vérifier la clé API Perplexity dans la configuration OpenClaw.
 
 ---
 

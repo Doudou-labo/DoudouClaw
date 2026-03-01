@@ -34,7 +34,7 @@ FLASH_OUTPUT=$(node scripts/search.mjs --freshness week "${FLASH_QUERIES[@]}" 2>
 
 # Nettoyer les erreurs API pour éviter d'afficher du HTML brut
 if echo "$FLASH_OUTPUT" | grep -qiE "401|Authorization Required|Perplexity API error"; then
-    FLASH_OUTPUT="⚠️ Perplexity indisponible (erreur d'authentification API).\n\nLe flash continue en mode dégradé sans contenu Perplexity.\nAction requise: vérifier la clé API Perplexity dans la configuration OpenClaw."
+    FLASH_OUTPUT="⚠️ Perplexity indisponible (erreur d'authentification API). Le flash continue en mode dégradé sans contenu Perplexity. Action requise : vérifier la clé API Perplexity dans la configuration OpenClaw."
 fi
 
 # Extraire les URLs pour scraping
