@@ -30,7 +30,12 @@ FLASH_QUERIES=(
 # Lancer les requêtes Perplexity avec filtre fraîcheur (week = 7 jours)
 cd "$SKILL_DIR"
 echo "🔍 Recherche Perplexity (freshness=week)..."
-FLASH_OUTPUT=$(node scripts/search.mjs --freshness week "${FLASH_QUERIES[@]}" 2>&1 || echo "⚠️ Perplexity indisponible")
+FLASH_OUTPUT=$(node scripts/search.mjs --freshness week "${FLASH_QUERIES[@]}" 2>&1 || true)
+
+# Nettoyer les erreurs API pour éviter d'afficher du HTML brut
+if echo "$FLASH_OUTPUT" | grep -qiE "401|Authorization Required|Perplexity API error"; then
+    FLASH_OUTPUT="⚠️ Perplexity indisponible (erreur d'authentification API).\n\nLe flash continue en mode dégradé sans contenu Perplexity.\nAction requise: vérifier la clé API Perplexity dans la configuration OpenClaw."
+fi
 
 # Extraire les URLs pour scraping
 echo "🔗 Extraction des URLs pour scraping..."

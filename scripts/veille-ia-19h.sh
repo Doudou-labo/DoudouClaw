@@ -34,7 +34,11 @@ FLASH_QUERIES=(
 
 cd "$SKILL_DIR"
 echo "🔍 Recherche Perplexity (freshness=week)..."
-FLASH_RAW=$(node scripts/search.mjs --freshness week "${FLASH_QUERIES[@]}" 2>&1)
+FLASH_RAW=$(node scripts/search.mjs --freshness week "${FLASH_QUERIES[@]}" 2>&1 || true)
+
+if echo "$FLASH_RAW" | grep -qiE "401|Authorization Required|Perplexity API error"; then
+    FLASH_RAW="⚠️ Perplexity indisponible (erreur d'authentification API).\n\nLe flash continue en mode dégradé.\nAction requise: vérifier la clé API Perplexity dans la configuration OpenClaw."
+fi
 
 # Extraire et scraper les URLs
 echo "🔗 Extraction des URLs pour scraping..."
@@ -154,7 +158,11 @@ case $THEME in
 esac
 
 echo "🔍 Recherche Perplexity Deep Dive (freshness=week)..."
-DEEP_RAW=$(node scripts/search.mjs --freshness week "${DEEP_QUERIES[@]}" 2>&1)
+DEEP_RAW=$(node scripts/search.mjs --freshness week "${DEEP_QUERIES[@]}" 2>&1 || true)
+
+if echo "$DEEP_RAW" | grep -qiE "401|Authorization Required|Perplexity API error"; then
+    DEEP_RAW="⚠️ Perplexity indisponible (erreur d'authentification API).\n\nLe deep dive continue en mode dégradé.\nAction requise: vérifier la clé API Perplexity dans la configuration OpenClaw."
+fi
 
 # Extraire et scraper les URLs du deep dive
 echo "🔗 Extraction des URLs Deep Dive..."

@@ -91,7 +91,12 @@ esac
 
 # Lancer les requêtes Perplexity
 cd "$SKILL_DIR"
-FLASH_OUTPUT=$(node scripts/search.mjs "${FLASH_QUERIES[@]}" 2>&1 || echo "⚠️ Perplexity indisponible - veille manuelle recommandée")
+FLASH_OUTPUT=$(node scripts/search.mjs "${FLASH_QUERIES[@]}" 2>&1 || true)
+
+# Nettoyer les erreurs API pour éviter d'afficher du HTML brut
+if echo "$FLASH_OUTPUT" | grep -qiE "401|Authorization Required|Perplexity API error"; then
+    FLASH_OUTPUT="⚠️ Perplexity indisponible (erreur d'authentification API).\n\nLa veille continue en mode dégradé.\nAction requise: vérifier la clé API Perplexity dans la configuration OpenClaw."
+fi
 
 # Générer le fichier Flash
 FLASH_FILE="$VEILLE_DIR/daily-flash/$DATE/08h-flash.md"
@@ -186,7 +191,12 @@ case $THEME in
 esac
 
 # Lancer les requêtes Deep Dive
-DEEP_OUTPUT=$(node scripts/search.mjs "${DEEP_QUERIES[@]}" 2>&1 || echo "⚠️ Perplexity indisponible - veille manuelle recommandée")
+DEEP_OUTPUT=$(node scripts/search.mjs "${DEEP_QUERIES[@]}" 2>&1 || true)
+
+# Nettoyer les erreurs API pour éviter d'afficher du HTML brut
+if echo "$DEEP_OUTPUT" | grep -qiE "401|Authorization Required|Perplexity API error"; then
+    DEEP_OUTPUT="⚠️ Perplexity indisponible (erreur d'authentification API).\n\nDeep Dive non généré automatiquement.\nAction requise: vérifier la clé API Perplexity dans la configuration OpenClaw."
+fi
 
 # Générer le fichier Deep Dive
 DEEP_FILE="$VEILLE_DIR/deep-dives/$DATE/08h-deep-dive-${THEME}.md"
