@@ -652,3 +652,72 @@ openclaw gateway restart
 - URLs en clair (pas de `[texte](url)`)
 - Titres en **gras**
 - Emojis par type : 🏛️ LOI / 📜 DÉCRET / 📋 ARRÊTÉ / 📢 AVIS / ⚖️ DÉCISION / 📑 ORDONNANCE
+
+---
+
+## MCPorter (MCP Integration)
+
+**Status:** ✅ Installed (2026-03-01)
+
+**Version:** 0.7.3
+
+**Description:** CLI pour gérer les serveurs MCP (Model Context Protocol) — permet de connecter des outils externes (GitHub, Obsidian, etc.) à OpenClaw.
+
+**Installation:**
+```bash
+npm install -g mcporter
+```
+
+**Configuration:**
+```bash
+# Lister les serveurs configurés
+mcporter list
+
+# Voir les outils d'un serveur
+mcporter list github --schema
+
+# Appeler un outil
+mcporter call github.get_file_contents owner:Doudou-labo repo:DoudouClaw path:README.md
+```
+
+**Serveurs MCP configurés:**
+
+### GitHub MCP (Official Remote)
+**Status:** ✅ Working
+**Config:** HTTP remote vers `https://api.githubcopilot.com/mcp`
+**Auth:** Token GitHub (via `gh auth token`)
+**Outils disponibles:** 20+ (get_file_contents, create_pull_request, create_issue, search_repositories, fork_repository, etc.)
+
+```bash
+# Exemples d'usage
+mcporter call github.search_repositories query:"user:Doudou-labo"
+mcporter call github.create_issue owner:Doudou-labo repo:DoudouClaw title:"Bug" body:"Description"
+mcporter call github.create_pull_request owner:Doudou-labo repo:DoudouClaw title:"Feature" head:branch base:main
+```
+
+### Obsidian MCP
+**Status:** ⚠️ Configured (not tested)
+**Config:** STDIO via `npx @mauricio.wolff/mcp-obsidian@latest ~/notes`
+**Outils:** 14 (list, search, read, write, create, delete, etc.)
+
+```bash
+# Lister les notes
+mcporter call obsidian.list_notes
+
+# Rechercher dans les notes
+mcporter call obsidian.search query:"PARA"
+```
+
+**Fichier de config:**
+- Chemin: `/root/.openclaw/workspace/config/mcporter.json`
+- Ne pas toucher manuellement — utiliser `mcporter config`
+
+**Gotchas:**
+- Les serveurs STDIO (comme Obsidian) nécessitent un wrapper pour exposition HTTP
+- Pour intégration native OpenClaw: nécessite modification `openclaw.json` + restart gateway (risqué)
+- Privilégier l'usage via `mcporter call` pour éviter les problèmes de config
+
+**Docs:**
+- GitHub MCP: https://github.com/github/github-mcp-server
+- MCPorter: https://github.com/steipete/mcporter
+- Obsidian MCP: https://github.com/bitbonsai/mcp-obsidian
