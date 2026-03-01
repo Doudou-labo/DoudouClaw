@@ -53,6 +53,80 @@ agent-browser pdf output.pdf       # Export PDF
 
 ---
 
+## ClawSuite
+
+**Status:** ✅ Installed (2026-03-01)
+
+**Version:** 3.0.0
+
+**Location:** `/root/.openclaw/workspace/clawsuite/`
+
+**Description:** Full-stack mission control platform for OpenClaw AI agents — dashboard web avec orchestration multi-agents, cost analytics, et Memory Browser.
+
+**Installation:**
+```bash
+git clone https://github.com/outsourc-e/clawsuite.git
+cd clawsuite
+npm install
+cp .env.example .env
+# Éditer .env avec GATEWAY_URL, GATEWAY_TOKEN, STUDIO_PASSWORD
+npm run dev  # Démarre sur http://localhost:3000
+```
+
+**Configuration actuelle:**
+- Gateway URL : `ws://127.0.0.1:18789`
+- Port : 3000
+- Bind : `0.0.0.0` (accessible via Tailscale)
+- Mot de passe UI : `DoudouClaw2026!`
+- Tailscale IP : `100.89.4.88:3000`
+
+**Accès:**
+- Local : `http://localhost:3000`
+- Tailscale : `http://100.89.4.88:3000`
+
+**Gotchas:**
+- Nécessite le Gateway OpenClaw actif
+- Pour l'accès mobile via Tailscale : utiliser `tailscale serve` ou accès direct via IP Tailscale
+- Ne pas modifier `gateway.bind` en `0.0.0.0` sans précaution (risque de coupure Gateway)
+
+---
+
+## Tailscale
+
+**Status:** ✅ Installed (2026-03-01)
+
+**Version:** 1.94.2
+
+**Description:** VPN mesh pour accès sécurisé aux services locaux depuis n'importe où — parfait pour accéder à ClawSuite depuis mobile.
+
+**Installation:**
+```bash
+# Ajout du repo Tailscale
+curl -fsSL https://pkgs.tailscale.com/stable/ubuntu/noble.noarmor.gpg | sudo tee /usr/share/keyrings/tailscale-archive-keyring.gpg
+curl -fsSL https://pkgs.tailscale.com/stable/ubuntu/noble.tailscale-keyring.list | sudo tee /etc/apt/sources.list.d/tailscale.list
+sudo apt update && sudo apt install -y tailscale
+```
+
+**Configuration:**
+- IP serveur : `100.89.4.88`
+- IP iPhone : `100.111.29.28`
+- Auth : via lien `https://login.tailscale.com/a/...`
+
+**Commandes utiles:**
+```bash
+tailscale status          # Voir les devices connectés
+tailscale ip -4          # IP Tailscale de cette machine
+tailscale serve 3000     # Exposer ClawSuite sur URL Tailscale HTTPS
+tailscale serve off      # Arrêter le serve
+```
+
+**Gotchas:**
+- Nécessite authentification via lien web à la première installation
+- Le serveur reste accessible tant que le daemon `tailscaled` tourne
+- Pour exposer un service : utiliser `tailscale serve` (HTTPS) plutôt que d'ouvrir le bind sur `0.0.0.0`
+
+---
+
 ## Credentials Location
 
 All credentials stored in `.credentials/` (gitignored):

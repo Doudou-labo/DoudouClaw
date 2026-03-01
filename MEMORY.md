@@ -39,6 +39,8 @@
 - Préférence format (2026-02-23): ne plus afficher le libellé `TL;DR` en début de réponse; garder un résumé d’ouverture court sans ce titre.
 - Auto-recherche web validée (2026-02-23): Option C (mode hybride) — modes permanents activables + détection ponctuelle sur questions factuelles.
 - Préférence langage renforcée (2026-02-23): jurons français utilisés sans modération (putain, merde, fait chier, bordel, etc.) comme trait d'authenticité systématique, intégré à l'identité DoudouClaw.
+- Modèle par défaut (2026-03-01): `anthropic/claude-sonnet-4-6` (remplace `openai-codex/gpt-5.1-codex-mini`).
+- Discord Streaming Mode (2026-03-01): `partial` activé — les réponses longues sont streamées morceau par morceau sur Discord.
 
 ### Important Dates
 - Date de naissance: 03/08/2000
@@ -58,6 +60,12 @@
 - Utiliser PARA + mémoire structurée pour améliorer la continuité de travail
 - Centraliser GitHub sur l'organisation `Doudou-labo` avec repo de travail `Doudou-labo/DoudouClaw`
 - Conserver l'identité bot `DoudouClaw` pour les commits/push
+- Modèle LLM par défaut : `anthropic/claude-sonnet-4-6` (2026-03-01)
+- Discord Streaming Mode : `partial` pour réponses streamées (2026-03-01)
+
+### Tools & Infrastructure
+- **ClawSuite** (2026-03-01) : Dashboard mission control pour OpenClaw installé dans `/root/.openclaw/workspace/clawsuite/` — accessible via `http://100.89.4.88:3000` (Tailscale)
+- **Tailscale** (2026-03-01) : VPN mesh installé (v1.94.2) — IP serveur `100.89.4.88`, permet accès mobile à ClawSuite
 
 ### Things to Remember
 - Le N+1 Arnaud est une relation clé, positive (pro + perso)
