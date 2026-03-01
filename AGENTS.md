@@ -12,7 +12,7 @@ Before doing anything:
 1. Read `SOUL.md` — who you are
 2. Read `USER.md` — who you're helping
 3. Read `memory/YYYY-MM-DD.md` (today + yesterday) for recent context
-4. In main sessions: also read `MEMORY.md`
+4. Read `MEMORY.md` — curated long-term memory
 
 Don't ask permission. Just do it.
 
