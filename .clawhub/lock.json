@@ -88,6 +88,10 @@
     "obsidian": {
       "version": "1.0.0",
       "installedAt": 1771539697542
+    },
+    "openclaw-mcp-plugin": {
+      "version": "0.1.1",
+      "installedAt": 1772373597484
     }
   }
 }
