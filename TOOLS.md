@@ -560,3 +560,21 @@ journalctl -xe --no-pager | grep -i discord | tail -30
 # Restart après changement config
 openclaw gateway restart
 ```
+
+## Format Discord — Canal ⚖️-legifrance
+
+**Règle validée (2026-03-01):**
+- Sur Discord, **ne jamais utiliser de tableaux Markdown** (illisibles)
+- Format standard pour les listes de textes juridiques :
+
+```
+**N**
+• Date : JJ/MM
+• Type : emoji **TYPE**
+• Texte : **Titre** — description courte
+• Lien : https://url-complete
+```
+
+- URLs en clair (pas de `[texte](url)`)
+- Titres en **gras**
+- Emojis par type : 🏛️ LOI / 📜 DÉCRET / 📋 ARRÊTÉ / 📢 AVIS / ⚖️ DÉCISION / 📑 ORDONNANCE
