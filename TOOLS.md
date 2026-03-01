@@ -683,17 +683,23 @@ mcporter call github.get_file_contents owner:Doudou-labo repo:DoudouClaw path:RE
 **Serveurs MCP configurés:**
 
 ### GitHub MCP (Official Remote)
-**Status:** ✅ Working
-**Config:** HTTP remote vers `https://api.githubcopilot.com/mcp`
+**Status:** ✅ Working (via MCPorter uniquement)
+**Architecture:** HTTP remote vers `https://api.githubcopilot.com/mcp` — **PAS** d'intégration native OpenClaw (tentative échouée, corruption JSON)
 **Auth:** Token GitHub (via `gh auth token`)
 **Outils disponibles:** 20+ (get_file_contents, create_pull_request, create_issue, search_repositories, fork_repository, etc.)
 
 ```bash
+# Lister les outils disponibles
+mcporter list github --schema
+
 # Exemples d'usage
 mcporter call github.search_repositories query:"user:Doudou-labo"
 mcporter call github.create_issue owner:Doudou-labo repo:DoudouClaw title:"Bug" body:"Description"
 mcporter call github.create_pull_request owner:Doudou-labo repo:DoudouClaw title:"Feature" head:branch base:main
+mcporter call github.get_file_contents owner:Doudou-labo repo:DoudouClaw path:README.md
 ```
+
+**⚠️ Important:** L'intégration native dans OpenClaw (via `openclaw.json`) a corrompu le fichier et a dû être restaurée. **On reste sur MCPorter uniquement.**
 
 ### Obsidian MCP
 **Status:** ⚠️ Configured (not tested)
@@ -713,9 +719,9 @@ mcporter call obsidian.search query:"PARA"
 - Ne pas toucher manuellement — utiliser `mcporter config`
 
 **Gotchas:**
-- Les serveurs STDIO (comme Obsidian) nécessitent un wrapper pour exposition HTTP
-- Pour intégration native OpenClaw: nécessite modification `openclaw.json` + restart gateway (risqué)
-- Privilégier l'usage via `mcporter call` pour éviter les problèmes de config
+- **Intégration OpenClaw native ABANDONNÉE** — Tentative de modification `openclaw.json` → corruption → restauration backup. On reste sur MCPorter uniquement.
+- Les serveurs STDIO (comme Obsidian) nécessitent un wrapper pour exposition HTTP si on veut les intégrer à OpenClaw
+- Privilégier l'usage via `mcporter call` — c'est stable et ça fonctionne
 
 **Docs:**
 - GitHub MCP: https://github.com/github/github-mcp-server
