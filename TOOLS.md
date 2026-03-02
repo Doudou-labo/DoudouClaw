@@ -49,6 +49,7 @@
 | **Status gateway** | `openclaw status` | [Gateway](#openclaw-gateway-restart--comportement) |
 | **Navigateur** | `agent-browser open <url>` | [Agent Browser](#agent-browser-vercel) |
 | **Recherche fichiers** | `rg -n "pattern"` | [ripgrep](#ripgrep-pour-les-recherches) |
+| **Playwright MCP** | `mcporter call playwright.browser_navigate` | [Playwright MCP](#playwright-mcp)
 
 **Rappels rapides :**
 - 🚨 **Pas de preuve = Pas fait** → Toujours montrer un PID/fichier/output quand je dis "je fais X"
@@ -217,6 +218,53 @@ agent-browser pdf output.pdf         # Export PDF
 - OS pas officiellement supporté → fallback Ubuntu 24.04 (fonctionne)
 
 **Docs:** https://github.com/vercel-labs/agent-browser
+
+---
+
+### Playwright MCP
+
+**Status:** ⚠️ À configurer (2026-03-02)
+
+**Description:** Serveur MCP officiel Microsoft pour l'automatisation navigateur via Playwright. Fournit des capacités de navigation, interaction, screenshot et assertion via le protocole MCP. Alternative à agent-browser avec une intégration native MCP.
+
+**Installation:**
+```bash
+# Via MCPorter (recommandé)
+mcporter add playwright npx @playwright/mcp@latest
+
+# Ou installation globale
+npm install -g @playwright/mcp
+```
+
+**Commandes utiles :**
+```bash
+# Lister les outils disponibles
+mcporter list playwright --schema
+
+# Navigation
+mcporter call playwright.browser_navigate url:"https://example.com"
+
+# Snapshot (accessibility tree)
+mcporter call playwright.browser_snapshot
+
+# Cliquer sur un élément
+mcporter call playwright.browser_click element:"Sign in button"
+
+# Saisir du texte
+mcporter call playwright.browser_type element="Search input" text="query"
+
+# Screenshot
+mcporter call playwright.browser_screenshot
+```
+
+**Gotchas:**
+- Nécessite Chromium/Chrome installé (`npx playwright install chromium`)
+- Utilise l'accessibility tree (comme agent-browser) plutôt que des coordonnées
+- Mode headless par défaut, ajouter `--headed` pour debug visuel
+- Conflit potentiel avec agent-browser si les deux tentent de contrôler le navigateur
+- Préférer Playwright MCP pour les workflows MCP natifs, agent-browser pour l'usage CLI direct
+
+**Docs:** https://github.com/microsoft/playwright-mcp
 
 ---
 
@@ -565,6 +613,7 @@ scripts/heartbeat-auto-cleanup.sh   # Cleanup .tmp, rotation logs
 
 | Date | Changement |
 |------|------------|
+| 2026-03-02 | Ajout Playwright MCP dans outils développement |
 | 2026-03-02 | Réorganisation complète (Option A): TOC, Quick Reference, regroupement par fréquence |
 | 2026-03-01 | Ajout MCPorter, ClawSuite, Tailscale |
 | 2026-02-26 | Ajout agent-browser |
