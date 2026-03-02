@@ -223,7 +223,7 @@ agent-browser pdf output.pdf         # Export PDF
 
 ### Playwright MCP
 
-**Status:** ⚠️ À configurer (2026-03-02)
+**Status:** ✅ Configured via MCPorter (2026-03-02)
 
 **Description:** Serveur MCP officiel Microsoft pour l'automatisation navigateur via Playwright. Fournit des capacités de navigation, interaction, screenshot et assertion via le protocole MCP. Alternative à agent-browser avec une intégration native MCP.
 
