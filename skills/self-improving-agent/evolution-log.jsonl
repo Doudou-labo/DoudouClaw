@@ -29,3 +29,13 @@
   "impact": "Discord bot operational: 0→100% message reception rate",
   "parent_id": null
 }
+{
+  "timestamp": "2026-03-02T22:18:00Z",
+  "id": "evt-1771442400-screenshot-discord",
+  "category": "new-capability",
+  "context": "Workflow screenshot Discord via Playwright MCP",
+  "lesson": "Utiliser tool read avec chemin relatif pour envoyer images sur Discord, pas message tool avec media",
+  "applied": true,
+  "impact": "Screenshot workflow fonctionnel: navigate→click→screenshot→envoi documenté et automatisé",
+  "parent_id": null
+}
