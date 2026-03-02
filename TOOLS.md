@@ -621,11 +621,18 @@ scripts/heartbeat-auto-cleanup.sh   # Cleanup .tmp, rotation logs
 │   ├── areas/                # Responsabilités continues
 │   ├── resources/            # Références, guides
 │   └── archive/              # Terminé/inactif
+├── images/                   # Screenshots et images (PNG, JPG)
+├── pdf/                      # Documents PDF
 ├── scripts/                  # Scripts utilitaires
 ├── skills/                   # Skills installés
 ├── config/                   # Configurations
 └── .credentials/             # Secrets (gitignored)
 ```
+
+**Règles de rangement:**
+- 📸 Screenshots/images → `images/` (chemins relatifs: `./images/...`)
+- 📄 Documents PDF → `pdf/` (chemins relatifs: `./pdf/...`)
+- 🚫 Pas de fichiers binaires à la racine du workspace
 
 ---
 
