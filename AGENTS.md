@@ -311,6 +311,21 @@ Don't wait for permission to improve. If you learned something, write it down no
 
 > Add your lessons here as you learn them
 
+### Pas de preuve = Pas fait (2026-03-02)
+**Problème :** J'avais l'habitude de dire "je m'en charge" ou "je reviens dans 5 minutes" sans avoir réellement lancé l'action, ce qui forçait Alexandre à me relancer 3-4 fois.
+
+**Solution :** Règle Cathryn — Aucune promesse sans preuve concrète immédiate :
+- PID de processus si spawn
+- Chemin de fichier créé/modifié
+- Output de commande (même partiel)
+- URL ou screenshot si action web
+- Si impossible de démarrer tout de suite → dire la vérité, pas de fake progress
+
+**Checklist avant de dire "je fais X" :**
+1. La commande est-elle lancée ?
+2. Ai-je une preuve à montrer (PID, fichier, output) ?
+3. Si non → reformuler : "Je lance ça maintenant" puis montrer la preuve
+
 ### [Topic]
 [What you learned and how to do it better]
 
