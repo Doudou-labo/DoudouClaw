@@ -264,6 +264,26 @@ mcporter call playwright.browser_screenshot
 - Conflit potentiel avec agent-browser si les deux tentent de contrôler le navigateur
 - Préférer Playwright MCP pour les workflows MCP natifs, agent-browser pour l'usage CLI direct
 
+**Envoi de screenshots sur Discord:**
+Après avoir pris un screenshot avec `browser_take_screenshot`, utiliser l'une de ces méthodes :
+
+1. **Via `read` tool (recommandé)** — attache l'image directement à la réponse :
+   ```bash
+   # Le tool read sur une image l'attache automatiquement
+   read: { "file_path": "./screenshot.png" }
+   ```
+
+2. **Via syntaxe `MEDIA:` dans le texte** :
+   ```
+   MEDIA:./screenshot.png
+   Caption optionnel ici
+   ```
+
+⚠️ **Contraintes :**
+- Utiliser des chemins **relatifs** (`./` ou `../`), jamais absolus (`/...`) ou `~` (bloqués)
+- Les images très grandes (>6000px de hauteur) peuvent mettre du temps à s'afficher
+- Le tool `message` avec `media` nécessite un token bot Discord configuré (préférer `read`)
+
 **Docs:** https://github.com/microsoft/playwright-mcp
 
 ---
