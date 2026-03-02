@@ -1,24 +1,193 @@
-# TOOLS.md - Tool Configuration & Notes
+# TOOLS.md - Configuration et Notes des Outils
 
-> Document tool-specific configurations, gotchas, and credentials here.
+> Documentation centralisée des outils, configurations, gotchas et procédures.
 
 ---
 
-## agent-browser (Vercel)
+## 📑 Table des matières
 
-**Status:** ✅ Installed (2026-02-26)
+- [⚡ Référence Rapide (Usage Quotidien)](#-référence-rapide-usage-quotidien)
+- [🔧 Outils Essentiels](#-outils-essentiels)
+  - [Git (Workflow Backup)](#github-backup-automation)
+  - [MCPorter (MCP Integration)](#mcporter-mcp-integration)
+  - [Google Calendar](#google-calendar)
+  - [Web Search (Brave + Perplexity)](#web-search-api-brave--perplexity)
+- [🛠️ Outils de Développement](#️-outils-de-développement)
+  - [agent-browser (Vercel)](#agent-browser-vercel)
+  - [ripgrep](#ripgrep-pour-les-recherches)
+- [🖥️ Infrastructure et Déploiement](#️-infrastructure-et-déploiement)
+  - [ClawSuite](#clawsuite)
+  - [Tailscale](#tailscale)
+  - [OpenClaw Gateway](#openclaw-gateway-restart--comportement)
+- [🧠 Gestion de Contexte et Mémoire](#-gestion-de-contexte-et-mémoire)
+  - [Context Manager](#context-manager-safe-compression)
+  - [LanceDB / Memory plugin](#lancedb--memory-plugin-openclaw)
+- [🤖 Intégrations Discord](#-intégrations-discord)
+  - [Discord Bot](#discord-bot-integration)
+  - [Format Discord (Canal legifrance)](#format-discord--canal-legifrance)
+- [📊 Automatisations et Monitoring](#-automatisations-et-monitoring)
+  - [PARA + Self-Improving](#para--self-improving-automations)
+  - [Evolution Protocol](#evolution-protocol-gep-inspired-sans-auto-mutation)
+  - [Heartbeats Auto-Scripts](#heartbeats)
+- [💰 Préférences Spécifiques](#-préférences-spécifiques)
+  - [Finance (Alexandre)](#préférences-finance-alexandre)
+  - [Writing Preferences](#writing-preferences)
+- [📁 Organisation des Fichiers](#-organisation-des-fichiers)
 
-**Version:** 0.15.0
+---
 
-**Description:** Browser automation CLI pour agents IA — Rust natif + Playwright. Parfait pour le scraping, l'automation web et les tests.
+## ⚡ Référence Rapide (Usage Quotidien)
+
+| Besoin | Commande/Outil | Doc détaillée |
+|--------|----------------|---------------|
+| **Commit + push** | `git add . && git commit -m "msg" && git push` | [Git Workflow](#github-backup-automation) |
+| **GitHub API** | `mcporter call github.<outil>` | [MCPorter](#mcporter-mcp-integration) |
+| **Recherche web** | `web_search` tool ou Perplexity skill | [Web Search](#web-search-api-brave--perplexity) |
+| **Calendrier** | API Maton (calendrier OpenClaw) | [Google Calendar](#google-calendar) |
+| **Mémoire LTM** | `memory_store` / `memory_recall` | [LanceDB](#lancedb--memory-plugin-openclaw) |
+| **Compression contexte** | `scripts/context-compress-preview.sh` | [Context Manager](#context-manager-safe-compression) |
+| **Status gateway** | `openclaw status` | [Gateway](#openclaw-gateway-restart--comportement) |
+| **Navigateur** | `agent-browser open <url>` | [Agent Browser](#agent-browser-vercel) |
+| **Recherche fichiers** | `rg -n "pattern"` | [ripgrep](#ripgrep-pour-les-recherches) |
+
+**Rappels rapides :**
+- 🚨 **Pas de preuve = Pas fait** → Toujours montrer un PID/fichier/output quand je dis "je fais X"
+- 🔒 **Gateway restart** → Prévenir Alexandre avant (session coupée)
+- 📝 **Modèles** → Changement dans `openclaw.json` ne nécessite PAS restart
+
+---
+
+## 🔧 Outils Essentiels
+
+### GitHub Backup Automation
+
+**Status:** ✅ Active (2026-02-16)
+
+**Workflow systématique (ancré dans AGENTS.md + SOUL.md) :**
+- **Toute modification de fichier** → `git add` + `git commit` + `git push`
+- Aucune exception (sauf secrets via `.gitignore`)
+- Garantit zéro divergence local vs GitHub
+
+**Commande rapide :**
+```bash
+git add <fichiers> && git commit -m "description" && git push origin main
+```
+
+**Hook post-commit automatique :**
+- Fichier: `.git/hooks/post-commit`
+- Action: auto-push vers `origin main` après chaque commit
+- Garde-fous: refuse push si `origin` pas en HTTPS ou si `git user.name` ≠ `DoudouClaw`
+
+**Auth Git :**
+- Compte: `DoudouClaw` (bot)
+- Token: `.credentials/github-token.txt`
+- Remote: HTTPS uniquement (`https://github.com/...`)
+- Login: `gh auth login --with-token < .credentials/github-token.txt`
+
+**Règle mémoire (LTM) :**
+- Chaque `memory_store` important → miroir dans `memory/YYYY-MM-DD.md` (1-3 lignes)
+- Durable → promouvoir vers `MEMORY.md`
+- Puis commit + push systématique
+
+---
+
+### MCPorter (MCP Integration)
+
+**Status:** ✅ Installed (2026-03-01) — **Version:** 0.7.3
+
+**Description:** CLI pour gérer les serveurs MCP (Model Context Protocol).
+
+**Commandes de base :**
+```bash
+mcporter list                          # Lister serveurs
+mcporter list github --schema          # Voir outils disponibles
+mcporter call github.get_file_contents owner:Doudou-labo repo:DoudouClaw path:README.md
+```
+
+**Serveurs configurés :**
+
+#### GitHub MCP (Official Remote)
+**Status:** ✅ Working (via MCPorter uniquement)
+**Architecture:** HTTP remote vers `https://api.githubcopilot.com/mcp`
+**⚠️ Important:** Intégration native OpenClaw ABANDONNÉE (corruption JSON). On reste sur MCPorter.
+
+**Outils disponibles :** 20+
+- `github.search_repositories`
+- `github.create_issue`
+- `github.create_pull_request`
+- `github.get_file_contents`
+- etc.
+
+**Exemples :**
+```bash
+mcporter call github.search_repositories query:"user:Doudou-labo"
+mcporter call github.create_issue owner:Doudou-labo repo:DoudouClaw title:"Bug" body:"Desc"
+mcporter call github.create_pull_request owner:Doudou-labo repo:DoudouClaw title:"Feature" head:branch base:main
+```
+
+#### Obsidian MCP
+**Status:** ⚠️ Configured (not tested)
+```bash
+mcporter call obsidian.list_notes
+mcporter call obsidian.search query:"PARA"
+```
+
+---
+
+### Google Calendar
+
+**Status:** ✅ Active (via Maton API)
+
+**Préférence calendrier:**
+- Toujours utiliser le calendrier **OpenClaw** pour toutes opérations
+- **Calendar ID:** `88b14e5c160f914b9743cf46d6ff857ed6baedc24449bccee0cb56c531ac20a0@group.calendar.google.com`
+- Ne jamais utiliser `primary` sauf demande explicite
+
+**Autres calendriers :**
+- `tecknogeek69@gmail.com` — calendrier principal perso
+- `family14830406815357676768@group.calendar.google.com` — Famille
+- `fr.french#holiday@group.v.calendar.google.com` — Jours fériés
+
+**Base URL:** `https://gateway.maton.ai/google-calendar/calendar/v3/calendars/<calendarId>/events`
+
+---
+
+### Web Search API (Brave + Perplexity)
+
+**Status:** ✅ Configured (2026-02-17)
+
+**Clés API :**
+- Brave: `.credentials/brave-api-key.txt`
+- Perplexity: `.credentials/perplexity-api-key.txt`
+
+**Commandes utiles :**
+```bash
+# Test Brave Search
+openclaw web-search "cours Michelin janvier 2026"
+
+# Test Perplexity via skill
+node skills/perplexity/scripts/search.mjs "cours Michelin janvier 2026"
+```
+
+**Gotchas:**
+- Config patch via `gateway config.patch` nécessite restart
+- Perplexity aussi via env var `PERPLEXITY_API_KEY` pour le skill CLI
+
+---
+
+## 🛠️ Outils de Développement
+
+### agent-browser (Vercel)
+
+**Status:** ✅ Installed (2026-02-26) — **Version:** 0.15.0
 
 **Installation:**
 ```bash
 npm install -g agent-browser
-agent-browser install  # Télécharge Chromium
+agent-browser install  # Télécharge Chromium (~280MB)
 ```
 
-**Workflow de base (pour agents):**
+**Workflow de base :**
 ```bash
 # 1. Ouvrir une page
 agent-browser open example.com
@@ -31,37 +200,54 @@ agent-browser snapshot -i
 agent-browser click @e1
 agent-browser fill @e2 "texte"
 
-# 4. Screenshot annoté (avec numéros sur les éléments)
+# 4. Screenshot annoté
 agent-browser screenshot --annotate page.png
 ```
 
-**Commandes utiles:**
+**Commandes utiles :**
 ```bash
-agent-browser --version
-agent-browser --help
-agent-browser open <url> --headed  # Mode visible (debug)
-agent-browser snapshot -i -c -d 5  # Interactif + compact + depth 5
-agent-browser pdf output.pdf       # Export PDF
+agent-browser open <url> --headed    # Mode visible (debug)
+agent-browser snapshot -i -c -d 5    # Interactif + compact + depth 5
+agent-browser pdf output.pdf         # Export PDF
 ```
 
 **Gotchas:**
 - Premier lancement : Chromium se télécharge (~280MB)
-- Si erreur de librairies système : `agent-browser install --with-deps`
-- OS pas officiellement supporté → fallback Ubuntu 24.04 (fonctionne quand même)
+- Si erreur librairies : `agent-browser install --with-deps`
+- OS pas officiellement supporté → fallback Ubuntu 24.04 (fonctionne)
 
 **Docs:** https://github.com/vercel-labs/agent-browser
 
 ---
 
-## ClawSuite
+### ripgrep pour les recherches
 
-**Status:** ✅ Installed (2026-03-01)
+**Status:** ✅ installé (15 février 2026)
 
-**Version:** 3.0.0
+**Pourquoi:** Recherche rapide dans les fichiers (alternative à `grep` plus rapide).
+
+**Installation:** `apt-get install ripgrep`
+
+**Commandes utiles :**
+```bash
+rg -n "pattern"          # Recherche avec numéros de ligne
+rg --files               # Lister tous les fichiers
+```
+
+**Gotcha historique:**
+- Dépot tiers `monarx.list` retournait 404 → renommé en `.disabled`
+
+---
+
+## 🖥️ Infrastructure et Déploiement
+
+### ClawSuite
+
+**Status:** ✅ Installed (2026-03-01) — **Version:** 3.0.0
 
 **Location:** `/root/.openclaw/workspace/clawsuite/`
 
-**Description:** Full-stack mission control platform for OpenClaw AI agents — dashboard web avec orchestration multi-agents, cost analytics, et Memory Browser.
+**Description:** Full-stack mission control platform pour OpenClaw — dashboard web avec orchestration multi-agents, cost analytics, Memory Browser.
 
 **Installation:**
 ```bash
@@ -74,256 +260,72 @@ npm run dev  # Démarre sur http://localhost:3000
 ```
 
 **Configuration actuelle:**
-- Gateway URL : `ws://127.0.0.1:18789`
-- Port : 3000
-- Bind : `0.0.0.0` (accessible via Tailscale)
-- Mot de passe UI : `DoudouClaw2026!`
-- Tailscale IP : `100.89.4.88:3000`
+- Gateway URL: `ws://127.0.0.1:18789`
+- Port: 3000
+- Bind: `0.0.0.0` (accessible via Tailscale)
+- Mot de passe UI: `DoudouClaw2026!`
+- Tailscale IP: `100.89.4.88:3000`
 
 **Accès:**
-- Local : `http://localhost:3000`
-- Tailscale : `http://100.89.4.88:3000`
+- Local: `http://localhost:3000`
+- Tailscale: `http://100.89.4.88:3000`
 
 **Gotchas:**
-- Nécessite le Gateway OpenClaw actif
-- Pour l'accès mobile via Tailscale : utiliser `tailscale serve` ou accès direct via IP Tailscale
-- Ne pas modifier `gateway.bind` en `0.0.0.0` sans précaution (risque de coupure Gateway)
+- Nécessite Gateway OpenClaw actif
+- Ne pas modifier `gateway.bind` en `0.0.0.0` sans précaution (risque coupure Gateway)
 
 ---
 
-## Tailscale
+### Tailscale
 
-**Status:** ✅ Installed (2026-03-01)
+**Status:** ✅ Installed (2026-03-01) — **Version:** 1.94.2
 
-**Version:** 1.94.2
-
-**Description:** VPN mesh pour accès sécurisé aux services locaux depuis n'importe où — parfait pour accéder à ClawSuite depuis mobile.
+**Description:** VPN mesh pour accès sécurisé aux services locaux depuis n'importe où.
 
 **Installation:**
 ```bash
-# Ajout du repo Tailscale
 curl -fsSL https://pkgs.tailscale.com/stable/ubuntu/noble.noarmor.gpg | sudo tee /usr/share/keyrings/tailscale-archive-keyring.gpg
 curl -fsSL https://pkgs.tailscale.com/stable/ubuntu/noble.tailscale-keyring.list | sudo tee /etc/apt/sources.list.d/tailscale.list
 sudo apt update && sudo apt install -y tailscale
 ```
 
 **Configuration:**
-- IP serveur : `100.89.4.88`
-- IP iPhone : `100.111.29.28`
-- Auth : via lien `https://login.tailscale.com/a/...`
+- IP serveur: `100.89.4.88`
+- IP iPhone: `100.111.29.28`
+- Auth: via lien `https://login.tailscale.com/a/...`
 
-**Commandes utiles:**
+**Commandes utiles :**
 ```bash
-tailscale status          # Voir les devices connectés
+tailscale status          # Voir devices connectés
 tailscale ip -4          # IP Tailscale de cette machine
 tailscale serve 3000     # Exposer ClawSuite sur URL Tailscale HTTPS
 tailscale serve off      # Arrêter le serve
 ```
 
 **Gotchas:**
-- Nécessite authentification via lien web à la première installation
-- Le serveur reste accessible tant que le daemon `tailscaled` tourne
-- Pour exposer un service : utiliser `tailscale serve` (HTTPS) plutôt que d'ouvrir le bind sur `0.0.0.0`
+- Nécessite auth web à la première installation
+- Utiliser `tailscale serve` (HTTPS) plutôt que bind sur `0.0.0.0`
 
 ---
 
-## Credentials Location
+### OpenClaw gateway restart — Comportement
 
-All credentials stored in `.credentials/` (gitignored):
-- `example-api.txt` - Example API key
+**⚠️ Problème:** Quand `openclaw gateway restart` est lancé, la session WebSocket est coupée → réponse perdue → Alexandre doit renvoyer un message.
 
----
-
-## [Tool Name]
-
-**Status:** ✅ Working | ⚠️ Issues | ❌ Not configured
-
-**Configuration:**
-```
-Key details about how this tool is configured
-```
-
-**Gotchas:**
-- Things that don't work as expected
-- Workarounds discovered
-
-**Common Operations:**
-```bash
-# Example command
-tool-name --common-flag
-```
+**Règle:**
+- **Toujours prévenir Alexandre AVANT** : "Je redémarre le gateway, renvoie-moi un message après"
+- **Exception:** Modifications modèles dans `openclaw.json` (section `agents.defaults.models`) **ne nécessitent PAS de restart** — config rechargée auto
+- Ne redémarrer que si strictement nécessaire (nouvelle clé API, changement port, bug gateway)
 
 ---
 
-## Writing Preferences
+## 🧠 Gestion de Contexte et Mémoire
 
-- Répondre en français par défaut
-- Tutoiement
-- Style direct, concret, utile
-- Réponses détaillées par défaut
-- Ton amical, sans lourdeur
-- Touche d'humour légère quand pertinent
-- Inclure des emojis dans les réponses (préférence explicite utilisateur) 😄✨
-- Transparence orchestration: ajouter `Agents utilisés : ...` à chaque réponse (global, sauf demande contraire)
-- Routage global: `main` pour simple, `main -> spec-*` pour moyen/technique mono-domaine, `spec-orchestrator` pour multi-domaines
-- Règle orchestrator: s’il est utilisé, il doit déléguer à ≥1 spécialiste `spec-*` (sinon rester en `main`)
-- Déclencheur hard: si la demande couvre 2+ domaines, ne pas traiter en `main`; passer par orchestrator + specs.
-- Déclencheur explicite: si l’utilisateur écrit "utilise les agents nécessaires", forcer le passage orchestrator.
-- Orchestration interactive: utiliser `sessions_send` vers les agents persistants pour éviter les auto-announces de `sessions_spawn` dans le channel.
-- Transparence exacte: `Agents utilisés` doit lister les agents réellement invoqués (pas uniquement `main`).
-- Structure de réponse par défaut: TL;DR (2-3 lignes) → détail structuré → `Prochaine action recommandée`
-- UX format: ne pas afficher le titre littéral `TL;DR`; commencer directement par le résumé court
-- En cas de désaccord: expliciter le point contesté, le pourquoi, les bases et l’alternative
-- Incertitude: afficher le niveau de confiance (faible/moyen/élevé) quand utile; ne jamais inventer
-- Proactivité encadrée: proposer des initiatives, mais demander validation avant action externe/sensible/impactante
-- Sur sujets sensibles: reformuler émotion + enjeu avant recommandation
-- Anti-biais: signaler les biais possibles avec tact + proposer un contre-test simple
-- Règle d’arbitrage: en cas de tension style/fond, privilégier l’utilité décisionnelle (clarté, honnêteté, actionnabilité)
-- Règle d’arbitrage (format): TL;DR court puis détail proportionné à l’enjeu
-- Règle d’arbitrage (sécurité): conserver validation préalable pour actions sensibles/externes
-- Emojis: augmenter la densité d’emojis dans les réponses (tout en restant lisible et utile)
-- Auto-recherche web (Option C): mode hybride — modes permanents activables + détection ponctuelle sur questions factuelles
-- Commande mode: "mode [domaine] on/off" pour activer/désactiver la recherche auto sur un domaine
-- Détection implicite: patterns "Qu'est-ce que tu penses de...", "Tu connais...", "C'est quoi...", "Il est sorti quand..."
-- Domaines prioritaires auto-recherche: films/séries, tech, actualités, finance, sport
-- Seuil déclenchement: uniquement si valeur informationnelle claire pour la conversation
-- Langage: jurons français (putain, merde, fait chier, bordel, etc.) utilisés sans modération — authenticité systématique, intégré à l'identité DoudouClaw
-
-## Préférences Finance (Alexandre)
-
-- Quand Alexandre demande l’état/détail de ses comptes: répondre **sans transactions** (soldes uniquement).
-- Afficher les comptes **séparés**: Revolut, portefeuille actions, PERCO Natixis.
-- **Ne pas** donner de total combiné, sauf demande explicite.
-
----
-
-## GitHub Backup Automation
-
-**Status:** ✅ Active (2026-02-16)
-
-**Workflow systématique (ancré dans AGENTS.md + SOUL.md) :**
-- **Toute modification de fichier** → `git add` + `git commit` + `git push`
-- Aucune exception (sauf secrets via `.gitignore`)
-- Garantit zéro divergence local vs GitHub
-
-**Hook post-commit automatique :**
-- Fichier: `.git/hooks/post-commit`
-- Action: auto-push vers `origin main` après chaque commit
-- Garde-fous actifs: refuse push si `origin` n'est pas en HTTPS ou si `git user.name` ≠ `DoudouClaw`
-- Rend le push transparent et systématique
-
-**Scripts additionnels :**
-- `scripts/weekly-backup-tag.sh` — tag hebdo pour snapshots
-- `scripts/auto-para-checkpoint.sh` — checkpoint PARA avec commit/push
-- `scripts/auto-para-weekly-review.sh` — revue hebdo avec commit/push
-- `scripts/auto-self-improve-review.sh` — revue self-improving avec commit/push
-
-**Note technique :**
-- Mode retenu: **HTTPS + token bot** (compte `DoudouClaw`)
-- Token source: `.credentials/github-token.txt` (gitignored)
-- Login recommandé: `gh auth login --with-token < .credentials/github-token.txt`
-- Le remote Git doit rester en HTTPS (`https://github.com/...`), pas SSH
-- Hook fonctionne en mode interactif (sessions agent OpenClaw)
-
-**4 méthodes en place (verrouillage anti-oubli commit/push) :**
-1. `AGENTS.md` → workflow Git non négociable
-2. `SOUL.md` → principe "documenté ET versionné"
-3. `TOOLS.md` → procédure opérationnelle centralisée
-4. `.git/hooks/post-commit` → auto-push systématique
-
-**Règle mémoire (ajout 2026-02-16, renforcée 2026-02-22) :**
-- Si une mémoire est ajoutée/supprimée via tools (`memory_store` / `memory_forget`), consigner la trace utile dans un fichier mémoire local (`memory/YYYY-MM-DD.md` ou `MEMORY.md`) puis commit + push.
-- **Règle miroir opérationnelle :** chaque `memory_store` important doit avoir un miroir lisible Git (1-3 lignes minimum dans `memory/YYYY-MM-DD.md`).
-- Si l'information est durable (préférence stable, décision long terme, relation clé), la promouvoir ensuite dans `MEMORY.md`.
-- **Politique d'accès mémoire N1/N2/N3 :**
-  - N1 actif: `SESSION-STATE.md` + `MEMORY.md` + journal du jour
-  - N2 référence: `notes/areas/contexte-personnel-reference.md` (au besoin)
-  - N3 archive sensible: `notes/archive/contexte-sensible-rupture.md` (demande explicite ou arbitrage contradiction uniquement)
-- Compatibilité: cette politique n'écrase pas les skills mémoire; elle définit seulement *quand* lire/écrire chaque couche.
-
-## Google Calendar
-
-**Status:** ✅ Active (via Maton API)
-
-**Préférence calendrier:**
-- Toujours utiliser le calendrier **OpenClaw** pour toutes opérations (ajout, suppression, modification)
-- **Calendar ID:** `88b14e5c160f914b9743cf46d6ff857ed6baedc24449bccee0cb56c531ac20a0@group.calendar.google.com`
-- Ne jamais utiliser `primary` sauf demande explicite d'Alexandre
-
-**Autres calendriers disponibles:**
-- `tecknogeek69@gmail.com` — calendrier principal perso
-- `family14830406815357676768@group.calendar.google.com` — Famille
-- `fr.french#holiday@group.v.calendar.google.com` — Jours fériés
-
-**Base URL:** `https://gateway.maton.ai/google-calendar/calendar/v3/calendars/<calendarId>/events`
-
----
-
-## Web Search API (Brave + Perplexity)
-
-**Status:** ✅ Configured (2026-02-17)
-
-**Brave Search:**
-- Clé stockée dans: `.credentials/brave-api-key.txt`
-- Config: `tools.web.search.apiKey`
-- Provider: Brave Search API
-
-**Perplexity:**
-- Clé stockée dans: `.credentials/perplexity-api-key.txt`
-- Config: `tools.web.search.perplexity.apiKey` + `env.vars.PERPLEXITY_API_KEY`
-- Provider: Perplexity / OpenRouter
-
-**Commandes utiles:**
-```bash
-# Test Brave Search
-openclaw web-search "cours Michelin janvier 2026"
-
-# Test Perplexity via skill
-node skills/perplexity/scripts/search.mjs "cours Michelin janvier 2026"
-```
-
-**Gotchas:**
-- Les deux clés sont dans `.credentials/` (gitignored)
-- Config patché via `gateway config.patch` (nécessite restart)
-- Perplexity passe aussi via variable d'environnement pour le skill CLI
-
-## LanceDB / Memory plugin (OpenClaw)
-
-**Status:** ✅ Working (corrigé le 2026-02-13)
-
-**Symptôme rencontré:**
-- `memory_store` en erreur: `Cannot find module '@lancedb/lancedb'`
-
-**Diagnostic utile:**
-```bash
-openclaw status
-openclaw ltm list
-```
-
-**Correctif appliqué:**
-```bash
-# Installer la dépendance là où OpenClaw la résout
-cd /usr/lib/node_modules/openclaw
-npm i @lancedb/lancedb
-
-# Redémarrer le gateway
-openclaw gateway restart
-```
-
-**Validation:**
-- Test `memory_store` + `memory_recall` OK
-- Note: `openclaw status` peut parfois afficher `Memory ... unavailable` de façon transitoire malgré des tools mémoire fonctionnels.
-
-## Context Manager (safe compression)
+### Context Manager (safe compression)
 
 **Status:** ✅ Installed (2026-02-13)
 
-**Source:**
-- `skills/context-manager/` (importé depuis openclaw/skills: plgonzalezrx8/context-manager)
-
-**Compat patch local:**
-- Support des fichiers session suffixés topic (`<sessionId>-topic-<id>.jsonl`)
-- Conversion CRLF → LF sur les fichiers shell
+**Source:** `skills/context-manager/` (plgonzalezrx8/context-manager)
 
 **Procédure safe (2 étapes):**
 ```bash
@@ -334,268 +336,52 @@ bash scripts/context-compress-preview.sh 'agent:main:telegram:group:-10037913719
 bash scripts/context-compress-apply.sh 'agent:main:telegram:group:-1003791371950:topic:37' RESET_OK
 ```
 
-**Traçabilité GitHub:**
-- Les scripts preview/apply ajoutent une trace dans `memory/YYYY-MM-DD.md`
-- Commit + push automatiques des artefacts utiles (summary + backup)
-
-## PARA + Self-Improving automations
-
-**Status:** ✅ Working (setup 2026-02-13)
-
-**Scripts:**
-```bash
-scripts/auto-para-checkpoint.sh          # checkpoint PARA 3-min (midi/soir)
-scripts/auto-para-weekly-review.sh       # revue hebdo PARA (snapshot)
-scripts/auto-self-improve-review.sh      # revue hebdo self-improving (.learnings)
-```
-
-**Traçabilité GitHub intégrée:**
-- Chaque script fait `git add` ciblé + `git commit` + `git push`
-- Objectif: aucune perte de trace entre local et GitHub
-
-**Retour utilisateur intégré (Telegram):**
-- Chaque automation renvoie désormais un résumé: **Résultats + Points à retenir + commit**
-- Mise en œuvre cron: `delivery.mode=announce` (évite les échecs `message.send` sur target topic)
-
-**Crons créés:**
-- `PARA Auto - 3min midi (git sync)`
-- `PARA Auto - 3min soir (git sync)`
-- `PARA Auto - revue hebdo (git sync)`
-- `Self-Improve Auto - revue hebdo (git sync)`
-
-## Evolution Protocol (GEP-inspired, sans auto-mutation)
-
-**Status:** ✅ Active (2026-02-17)
-
-**Vision:**
-- Emprunter les bonnes idées du skill `autogame-17/evolver` (protocole structuré, analyse logs)
-- **Rejeter** l'auto-mutation, le mode "Mad Dog", l'identity injection
-- Garder le contrôle humain total, transparence, rigueur
-
-**Composants installés:**
-
-1. **evolution-log.jsonl** (#14)
-   - Log structuré des événements d'évolution (bug/optimization/new-capability/refactor)
-   - Format JSONL avec timestamp, category, context, lesson, applied, impact, parent_id
-   - Script helper: `skills/self-improving-agent/scripts/log-evolution.sh`
-   - Doc: `skills/self-improving-agent/EVOLUTION-PROTOCOL.md`
-
-2. **Métadonnées enrichies .learnings** (#15)
-   - YAML frontmatter pour chaque learning (date, category, severity, status, impact, related)
-   - Template: `skills/self-improving-agent/.learnings/TEMPLATE.md`
-   - Script création: `skills/self-improving-agent/scripts/create-learning.sh`
-   - Doc: `skills/self-improving-agent/METADATA-GUIDE.md`
-
-3. **analyze-errors.sh** (#16)
-   - Analyse automatique logs + memory files (derniers 7 jours)
-   - Détecte patterns récurrents, outils problématiques
-   - Génère rapport markdown: `reports/error-analysis-YYYY-MM-DD.md`
-   - **Aucune correction auto**, juste alertes et recommandations
-   - Doc: `scripts/README-analyze-errors.md`
-
-4. **evolution-dashboard.md** (#17)
-   - Vue consolidée de l'évolution (stats, timeline, top learnings, open loops)
-   - Généré par: `scripts/update-evolution-dashboard.sh`
-   - Localisation: `notes/areas/evolution-dashboard.md`
-   - Agrège données de learnings + evolution-log.jsonl
-
-**Workflow:**
-
-1. **Quand un problème survient:**
-   ```bash
-   # Créer learning avec métadonnées
-   ./skills/self-improving-agent/scripts/create-learning.sh \
-     "Tool X fails on large files" "bug" "high"
-   
-   # Éditer le fichier pour compléter Context/Lesson/Fix/Impact
-   ```
-
-2. **Après correction:**
-   ```bash
-   # Logger événement d'évolution
-   ./skills/self-improving-agent/scripts/log-evolution.sh \
-     "bug" "Tool X timeout fixed" "Added retry logic" "true" "0 timeouts in 50 runs"
-   
-   # Mettre à jour learning: status=applied, impact mesuré
-   ```
-
-3. **Analyses périodiques:**
-   ```bash
-   # Erreurs hebdo
-   bash scripts/analyze-errors.sh
-   
-   # Dashboard mis à jour
-   bash scripts/update-evolution-dashboard.sh
-   ```
-
-4. **Traçabilité GitHub:**
-   - Créer Issues pour améliorations structurelles (workflow validé avec Alexandre)
-   - Référencer issues dans commits (`fixes #123`)
-   - Commits systématiques via identité bot DoudouClaw
-
-**GitHub Issues associées:**
-- #13 : [Meta] Workflow d'évolution structurée
-- #14 : evolution-log.jsonl ✅
-- #15 : Métadonnées .learnings ✅
-- #16 : analyze-errors.sh ✅
-- #17 : evolution-dashboard.md ✅
-
-**Différences vs autogame-17/evolver:**
-
-| Aspect | Evolver original | Notre implémentation |
-|--------|------------------|---------------------|
-| Auto-mutation | ✅ Oui (Mad Dog mode) | ❌ Non |
-| Validation humaine | ⚠️ Optionnelle (--review) | ✅ Obligatoire |
-| Identity injection | ✅ "Recursive Self-Improving" | ❌ Identité standard |
-| Protocole événements | ✅ GEP (genes/capsules/events) | ✅ Events only (simplifié) |
-| Analyse logs | ✅ Oui | ✅ Oui (amélioré) |
-| Reporting | ⚠️ Limité | ✅ Dashboards détaillés |
-| Traçabilité GitHub | ❌ Non | ✅ Issues + commits |
-
-**Alignment avec objectifs Alexandre:**
-- ✅ Rigueur : workflow formalisé, métadonnées structurées
-- ✅ Transparence : tout documenté + versionné Git
-- ✅ Contrôle : humain décide, agent propose
-- ✅ Apprentissage : learnings tracés, dashboard d'évolution
-
-**Crons automatiques (ajoutés 2026-02-17) :**
-
-1. **Evolution Dashboard - Mise à jour 8h**
-   - ID: `ae293b73-ee13-403f-a034-81e0569e9fae`
-   - Horaire: 08:00 (Europe/Paris) - tous les jours
-   - Action: Lance `update-evolution-dashboard.sh` + résumé (learnings total, pending, changements)
-   - Delivery: Telegram (mode announce)
-
-2. **Evolution Dashboard - Mise à jour 19h**
-   - ID: `a156a993-1c6a-4675-8856-c80310cc69da`
-   - Horaire: 19:00 (Europe/Paris) - tous les jours
-   - Action: Lance `update-evolution-dashboard.sh` + résumé (learnings total, pending, changements)
-   - Delivery: Telegram (mode announce)
-
-**Objectif :** Suivi continu de l'évolution de l'agent, visibilité quotidienne des learnings et backlog.
-
-**Cron automatique analyse d'erreurs (ajouté 2026-02-17) :**
-
-- **Error Analysis - Rapport hebdo (dimanche 20h)**
-  - ID: `bb5db840-7ffe-4794-9015-e0fd85d903a3`
-  - Horaire: 20:00 (Europe/Paris) - tous les dimanches
-  - Action: Lance `analyze-errors.sh` + résumé (total erreurs, top patterns, recommandations)
-  - Alerte intelligente: 🚨 si >50 erreurs OU keywords critiques (segfault/crash/OOM)
-  - Commit automatique du rapport sur GitHub
-  - Delivery: Telegram (mode announce)
-
-**Objectif :** Détection proactive patterns d'erreurs récurrents, suivi hebdomadaire de la stabilité système.
-
-## ripgrep pour les recherches
-
-**Status:** ✅ installé (15 février 2026)
-
-**Pourquoi:** On voulait l'utiliser pour chercher rapidement dans les fichiers (`rg -n "finance"`), mais la commande n'était pas disponible par défaut. Je l'ai installée via `apt-get install ripgrep`.
-
-**Gotchas:**
-- Le dépôt tiers `https://repository.monarx.com/repository/ubuntu-questing` retournait un 404 et bloquait `apt update`. Pour régler ça, j'ai renommé `/etc/apt/sources.list.d/monarx.list` en `.disabled`, ce qui évite l'erreur à l'avenir.
-
-**Commandes utiles:**
-```bash
-rg -n "finance"
-rg --files
-```
-
-## OpenClaw gateway restart — Comportement (leçon 2026-02-24)
-
-**Problème:** Quand `openclaw gateway restart` est lancé, la session WebSocket est coupée → la réponse en attente est perdue → Alexandre doit renvoyer un message pour relancer.
-
-**Règle:**
-- Prévenir Alexandre AVANT tout restart : "Je redémarre le gateway, renvoie-moi un message après"
-- Les modifications de modèles dans `openclaw.json` (section `agents.defaults.models` et `agents.defaults.model`) **ne nécessitent pas de restart** — la config est rechargée automatiquement
-- Ne redémarrer que si strictement nécessaire (nouvelle clé API, changement de port, bug gateway)
+**Traçabilité:** Les scripts ajoutent une trace dans `memory/YYYY-MM-DD.md` + commit/push automatique.
 
 ---
 
-## OpenClaw editing policy (stabilité)
+### LanceDB / Memory plugin (OpenClaw)
 
-**Status:** ✅ Active (2026-02-15)
+**Status:** ✅ Working (corrigé le 2026-02-13)
 
-**Contrainte validée avec Alexandre:**
-- Ne pas utiliser/installer `apply_patch` dans cet environnement.
-- Utiliser uniquement les outils natifs `edit` et `write` pour les modifications de fichiers.
+**Symptôme rencontré:** `memory_store` en erreur: `Cannot find module '@lancedb/lancedb'`
 
-**Pourquoi:**
-- `apply_patch` n'est pas disponible ici (`command not found`) et son installation n'est pas nécessaire.
-- Le flux `edit`/`write` est plus stable et réduit le risque de casser le setup.
+**Diagnostic:**
+```bash
+openclaw status
+openclaw ltm list
+```
+
+**Correctif appliqué:**
+```bash
+cd /usr/lib/node_modules/openclaw
+npm i @lancedb/lancedb
+openclaw gateway restart
+```
+
+**Validation:** Test `memory_store` + `memory_recall` OK
+
+**Note:** `openclaw status` peut afficher `Memory ... unavailable` de façon transitoire malgré des tools mémoire fonctionnels.
 
 ---
 
-## What Goes Here
+## 🤖 Intégrations Discord
 
-- Tool configurations and settings
-- Credential locations (not the credentials themselves!)
-- Gotchas and workarounds discovered
-- Common commands and patterns
-- Integration notes
-
-## Why Separate?
-
-Skills define *how* tools work. This file is for *your* specifics - the stuff that's unique to your setup.
-
----
-
-*Add whatever helps you do your job. This is your cheat sheet.*
-
-## GitHub API Access
-
-**Status:** ✅ Active (2026-02-16)
-
-**Configuration:**
-- Token stocké dans `.credentials/github-token.txt` (gitignored)
-- Accès API REST/GraphQL via `curl` ou `gh`
-- Permissions : repo, project, workflow, admin:repo_hook, admin:org_hook, write:discussion
-- Compte bot actif pour opérations GitHub: `DoudouClaw`
-- Politique validée avec Alexandre: commits/push code via identité bot (`git user.name=DoudouClaw`)
-- Repo de référence (depuis 2026-02-16): `https://github.com/Doudou-labo/DoudouClaw`
-- Organisation de référence: `Doudou-labo` (issues/projects/kanban centralisés)
-
-**Test de connexion:**
-```bash
-curl -s -H "Authorization: token $(cat .credentials/github-token.txt)" https://api.github.com/user | jq -r '.login'
-# Output attendu: Hadoudoux
-```
-
-**Créer une issue:**
-```bash
-curl -X POST -H "Authorization: token $(cat .credentials/github-token.txt)" \
-  -H "Content-Type: application/json" \
-  -d '{"title":"Test issue","body":"Description"}' \
-  https://api.github.com/repos/Hadoudoux/doudoubot-workspace/issues
-```
-
-**Note:** gh CLI pas utilisé (exige read:org non nécessaire), API REST directe préférée.
-
-## Discord Bot Integration
+### Discord Bot Integration
 
 **Status:** ✅ Working (corrigé le 2026-02-18)
 
 **Configuration:**
-- Token stocké dans config OpenClaw (`channels.discord.token`)
+- Token: dans config OpenClaw (`channels.discord.token`)
 - Guild ID: `1472335329527595038`
 - Bot username: `@DoudouClaw`
-- Rôles bot: OWNER + BOT + DoudouClaw (managed)
+- Rôles: OWNER + BOT + DoudouClaw (managed)
 
-**Fix majeur (18 fév 2026) — Intents Discord:**
+**Fix majeur (18 fév 2026) — Intents:**
+- Activer **Message Content Intent** sur Discord Developer Portal (obligatoire)
+- Désactiver `Guild Members` et `Presence` dans config OpenClaw
 
-**Symptôme rencontré:**
-- Messages Discord n'arrivaient pas à OpenClaw (aucune session créée)
-- Commandes Discord retournaient "You are not authorized"
-- Logs: `Discord Message Content Intent is limited`
-
-**Cause racine:**
-OpenClaw demandait des intents privilégiés (`Guild Members` + `Presence`) dans la config, mais Discord ne les autorisait pas → conflit → bot bloqué.
-
-**Solution:**
-1. Activer **Message Content Intent** sur Discord Developer Portal (obligatoire pour lire le texte des messages)
-2. Désactiver les intents `Guild Members` et `Presence` dans l'interface web OpenClaw (`openclaw.doudougen.xyz` → Channels → Discord → Intents)
-
-**Config actuelle (working) :**
+**Config actuelle (working):**
 ```json
 {
   "channels": {
@@ -618,28 +404,23 @@ OpenClaw demandait des intents privilégiés (`Guild Members` + `Presence`) dans
 ```
 
 **Gotchas:**
-- Si le bot ne reçoit plus de messages Discord, vérifier d'abord les intents (Developer Portal + config OpenClaw)
-- La restriction `roles` dans la config guild était un red herring (retirée, mais pas la vraie cause)
-- Cross-context messaging bloqué : on ne peut pas envoyer sur Discord depuis une session Telegram (by design OpenClaw)
-- **Commandes "not authorized" :** Si `channels.discord.allowFrom` est null ET aucun rôle configuré dans la guild → OpenClaw refuse **tout le monde**. Fix : mettre `allowFrom: ["*"]` pour une guild privée.
+- Si bot ne reçoit plus de messages → vérifier intents (Developer Portal + config OpenClaw)
+- Cross-context messaging bloqué (Discord ↔ Telegram)
+- **Commandes "not authorized":** Si `channels.discord.allowFrom` est null ET aucun rôle → refuse tout le monde. Fix: `allowFrom: ["*"]`
 
-**Commandes utiles:**
+**Commandes utiles :**
 ```bash
-# Status Discord
 openclaw status --deep | grep -A 5 Discord
-
-# Logs Discord
 journalctl -xe --no-pager | grep -i discord | tail -30
-
-# Restart après changement config
-openclaw gateway restart
 ```
 
-## Format Discord — Canal ⚖️-legifrance
+---
+
+### Format Discord — Canal ⚖️-legifrance
 
 **Règle validée (2026-03-01):**
 - Sur Discord, **ne jamais utiliser de tableaux Markdown** (illisibles)
-- Format standard pour les listes de textes juridiques :
+- Format standard pour les textes juridiques :
 
 ```
 **N**
@@ -655,75 +436,145 @@ openclaw gateway restart
 
 ---
 
-## MCPorter (MCP Integration)
+## 📊 Automatisations et Monitoring
 
-**Status:** ✅ Installed (2026-03-01)
+### PARA + Self-Improving Automations
 
-**Version:** 0.7.3
+**Status:** ✅ Working (setup 2026-02-13)
 
-**Description:** CLI pour gérer les serveurs MCP (Model Context Protocol) — permet de connecter des outils externes (GitHub, Obsidian, etc.) à OpenClaw.
-
-**Installation:**
+**Scripts:**
 ```bash
-npm install -g mcporter
+scripts/auto-para-checkpoint.sh          # checkpoint PARA 3-min (midi/soir)
+scripts/auto-para-weekly-review.sh       # revue hebdo PARA
+scripts/auto-self-improve-review.sh      # revue hebdo self-improving
 ```
 
-**Configuration:**
+**Traçabilité GitHub:** Chaque script fait `git add` ciblé + `git commit` + `git push`
+
+**Crons créés:**
+- `PARA Auto - 3min midi (git sync)`
+- `PARA Auto - 3min soir (git sync)`
+- `PARA Auto - revue hebdo (git sync)`
+- `Self-Improve Auto - revue hebdo (git sync)`
+
+---
+
+### Evolution Protocol (GEP-inspired, sans auto-mutation)
+
+**Status:** ✅ Active (2026-02-17)
+
+**Vision:** Emprunter les bonnes idées de `autogame-17/evolver` (protocole structuré, analyse logs) mais **rejeter** l'auto-mutation, mode "Mad Dog", identity injection.
+
+**Composants:**
+
+1. **evolution-log.jsonl** (#14)
+   - Log structuré des événements d'évolution
+   - Script: `skills/self-improving-agent/scripts/log-evolution.sh`
+
+2. **Métadonnées enrichies .learnings** (#15)
+   - YAML frontmatter pour chaque learning
+   - Template: `skills/self-improving-agent/.learnings/TEMPLATE.md`
+   - Script: `skills/self-improving-agent/scripts/create-learning.sh`
+
+3. **analyze-errors.sh** (#16)
+   - Analyse logs + memory files (7 derniers jours)
+   - Rapport: `reports/error-analysis-YYYY-MM-DD.md`
+   - **Aucune correction auto**, juste alertes
+
+4. **evolution-dashboard.md** (#17)
+   - Vue consolidée: `notes/areas/evolution-dashboard.md`
+   - Script: `scripts/update-evolution-dashboard.sh`
+
+**Crons:**
+- Evolution Dashboard: 08:00 et 19:00 tous les jours
+- Error Analysis: 20:00 tous les dimanches
+
+---
+
+### Heartbeats
+
+Scripts automatiques (ajoutés 2026-02-17):
+
 ```bash
-# Lister les serveurs configurés
-mcporter list
-
-# Voir les outils d'un serveur
-mcporter list github --schema
-
-# Appeler un outil
-mcporter call github.get_file_contents owner:Doudou-labo repo:DoudouClaw path:README.md
+scripts/heartbeat-auto-heal.sh      # Nettoie cooldowns API, alerte tokens OAuth
+scripts/heartbeat-auto-commit.sh    # Auto-commit + push des changements
+scripts/heartbeat-auto-optimize.sh  # Ajuste fréquence crons si besoin
+scripts/heartbeat-auto-learn.sh     # Détecte patterns d'erreurs nouveaux
+scripts/heartbeat-auto-alert.sh     # Alertes GitHub/CRM/Finance/Disk
+scripts/heartbeat-auto-cleanup.sh   # Cleanup .tmp, rotation logs
 ```
 
-**Serveurs MCP configurés:**
+---
 
-### GitHub MCP (Official Remote)
-**Status:** ✅ Working (via MCPorter uniquement)
-**Architecture:** HTTP remote vers `https://api.githubcopilot.com/mcp` — **PAS** d'intégration native OpenClaw (tentative échouée, corruption JSON)
-**Auth:** Token GitHub (via `gh auth token`)
-**Outils disponibles:** 20+ (get_file_contents, create_pull_request, create_issue, search_repositories, fork_repository, etc.)
+## 💰 Préférences Spécifiques
 
-```bash
-# Lister les outils disponibles
-mcporter list github --schema
+### Préférences Finance (Alexandre)
 
-# Exemples d'usage
-mcporter call github.search_repositories query:"user:Doudou-labo"
-mcporter call github.create_issue owner:Doudou-labo repo:DoudouClaw title:"Bug" body:"Description"
-mcporter call github.create_pull_request owner:Doudou-labo repo:DoudouClaw title:"Feature" head:branch base:main
-mcporter call github.get_file_contents owner:Doudou-labo repo:DoudouClaw path:README.md
+- Quand Alexandre demande l'état/détail de ses comptes: répondre **sans transactions** (soldes uniquement)
+- Afficher les comptes **séparés**: Revolut, portefeuille actions, PERCO Natixis
+- **Ne pas** donner de total combiné, sauf demande explicite
+
+---
+
+### Writing Preferences
+
+- Répondre en **français** par défaut
+- **Tutoiement**
+- Style **direct, concret, utile** — pas de langue de bois
+- Réponses détaillées par défaut
+- Ton **amical**, sans lourdeur
+- **Emojis** dans les réponses (préférence explicite) 😄✨
+- **Transparence:** `Agents utilisés : ...` à chaque réponse
+- **Structure:** TL;DR court → détail structuré → `Prochaine action recommandée`
+- **Incertitude:** niveau de confiance (faible/moyen/élevé) quand pertinent
+- **Proactivité encadrée:** proposer initiatives, demander validation avant action sensible/externe
+- **Jurons français:** utilisés sans modération (putain, merde, fait chier, bordel, etc.)
+- **Règle d'arbitrage:** en cas tension style/fond, privilégier utilité décisionnelle
+
+---
+
+## 📁 Organisation des Fichiers
+
+```
+/root/.openclaw/workspace/
+├── SOUL.md                    # Qui je suis
+├── AGENTS.md                  # Règles de fonctionnement
+├── USER.md                    # Qui est Alexandre
+├── MEMORY.md                  # Mémoire long terme curée
+├── TOOLS.md                   # Ce fichier
+├── TOOLS.md.backup-*          # Backups (dossier backups/)
+├── SESSION-STATE.md           # État session actif
+├── RECENT_CONTEXT.md          # Contexte récent auto-updaté
+├── memory/
+│   ├── YYYY-MM-DD.md         # Notes journalières
+│   └── working-buffer.md     # Buffer si contexte >60%
+├── notes/
+│   ├── projects/             # Projets (travail avec fin)
+│   ├── areas/                # Responsabilités continues
+│   ├── resources/            # Références, guides
+│   └── archive/              # Terminé/inactif
+├── scripts/                  # Scripts utilitaires
+├── skills/                   # Skills installés
+├── config/                   # Configurations
+└── .credentials/             # Secrets (gitignored)
 ```
 
-**⚠️ Important:** L'intégration native dans OpenClaw (via `openclaw.json`) a corrompu le fichier et a dû être restaurée. **On reste sur MCPorter uniquement.**
+---
 
-### Obsidian MCP
-**Status:** ⚠️ Configured (not tested)
-**Config:** STDIO via `npx @mauricio.wolff/mcp-obsidian@latest ~/notes`
-**Outils:** 14 (list, search, read, write, create, delete, etc.)
+## 🔄 Changelog
 
-```bash
-# Lister les notes
-mcporter call obsidian.list_notes
+| Date | Changement |
+|------|------------|
+| 2026-03-02 | Réorganisation complète (Option A): TOC, Quick Reference, regroupement par fréquence |
+| 2026-03-01 | Ajout MCPorter, ClawSuite, Tailscale |
+| 2026-02-26 | Ajout agent-browser |
+| 2026-02-24 | Ajout comportement gateway restart |
+| 2026-02-22 | Ajout préférences langage, transparence orchestration |
+| 2026-02-18 | Fix Discord Bot Integration (intents) |
+| 2026-02-17 | Ajout Evolution Protocol, Web Search API |
+| 2026-02-16 | Ajout GitHub Backup Automation |
+| 2026-02-13 | Ajout Context Manager, LanceDB fix, PARA automations |
 
-# Rechercher dans les notes
-mcporter call obsidian.search query:"PARA"
-```
+---
 
-**Fichier de config:**
-- Chemin: `/root/.openclaw/workspace/config/mcporter.json`
-- Ne pas toucher manuellement — utiliser `mcporter config`
-
-**Gotchas:**
-- **Intégration OpenClaw native ABANDONNÉE** — Tentative de modification `openclaw.json` → corruption → restauration backup. On reste sur MCPorter uniquement.
-- Les serveurs STDIO (comme Obsidian) nécessitent un wrapper pour exposition HTTP si on veut les intégrer à OpenClaw
-- Privilégier l'usage via `mcporter call` — c'est stable et ça fonctionne
-
-**Docs:**
-- GitHub MCP: https://github.com/github/github-mcp-server
-- MCPorter: https://github.com/steipete/mcporter
-- Obsidian MCP: https://github.com/bitbonsai/mcp-obsidian
+*Backup original disponible dans `backups/TOOLS.md.backup-2026-03-02`*
