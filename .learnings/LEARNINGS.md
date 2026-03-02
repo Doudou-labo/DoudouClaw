@@ -1,62 +1,51 @@
-# LEARNINGS
+# Learnings - Self-Improvement Log
 
-## 2026-02-15 17:20 UTC
-- Findings: pas de correction explicite détectée
-
-## [LRN-20260215-001] best_practice
-**Logged**: 2026-02-15T17:40:00Z
-**Priority**: medium
-**Status**: pending
-**Area**: docs
-
-### Summary
-L’usage des questions financières doit systématiquement passer par le skill `finance-tracker` et être formalisé.
-
-### Details
-Après que l’utilisateur ait souligné le besoin d’un usage systématique du skill `finance-tracker` pour les sujets d’argent, j’ai documenté une procédure et commitée dans `notes/areas/finance-tracker-procedure.md`.
-Cette règle mérite d’être visible et non oubliée pour les prochains échanges.
-
-### Suggested Action
-Maintenir la procédure à jour, éventuellement la copier dans la PARA ou la tracker des règles, et vérifier que chaque conversation financière déclenche au moins une commande `finance-tracker`.
-
-### Metadata
-- Source: conversation
-- Related Files: notes/areas/finance-tracker-procedure.md
-- Tags: finance-tracker, process
-
-## 2026-02-22 17:20 UTC
-- Findings: corrections utilisateur détectées
-- Sources:
-  - memory/2026-02-22.md:12:- Objectif du cron: aligner LTM avec `MEMORY.md` + mémoire du jour (points importants), corriger formulations obsolètes, tracer le bilan quotidien dans `memory/YYYY-MM-DD.md`.
-  - memory/2026-02-22.md:14:## 22:22 UTC — Correction immédiate sync LTM (retour utilisateur)
-  - memory/2026-02-22.md:21:- Règle appliquée: en cas d’écart détecté, correction immédiate + traçabilité Git (sans attendre le cron).
-- Action: promouvoir les patterns stables dans AGENTS.md/MEMORY.md
-
-## [LRN-20260228-001] correction
-**Logged**: 2026-02-28T22:23:00Z
-**Priority**: high
-**Status**: pending
-**Area**: docs
-
-### Summary
-Dérive mémoire détectée: des échanges films/séries discutés avec l’utilisateur n’étaient pas retrouvés en recall.
-
-### Details
-L’utilisateur a corrigé explicitement un manque de mémoire sur un sujet déjà discuté (Marty Supreme, B.R.I S2, Control Z). La cause principale est l’absence de capture systématique minimale en journal quotidien au moment de l’échange.
-
-### Suggested Action
-Appliquer strictement la règle opérationnelle suivante:
-1. Après chaque échange substantiel: écrire au minimum 1 entrée dans `memory/YYYY-MM-DD.md`.
-2. Si l’info est durable: promotion immédiate vers N2/N1 selon criticité.
-3. Si préférence/fait clé: `memory_store` le même tour.
-4. Vérifier en fin de tour: "journal + couche durable + LTM" cochés.
-
-### Metadata
-- Source: user_feedback
-- Related Files: memory/2026-02-28.md, notes/areas/contexte-personnel-reference.md, SESSION-STATE.md
-- Tags: memory, correction, n1-n2, recall, protocol
+> Log des apprentissages, corrections et meilleures pratiques pour amélioration continue.
 
 ---
 
-## 2026-03-01 17:20 UTC
-- Findings: pas de correction explicite détectée
+## [LRN-20250302-001] best_practice
+
+**Logged**: 2026-03-02T22:18:00Z
+**Priority**: high
+**Status**: promoted
+**Area**: config
+
+### Summary
+Workflow correct pour envoyer des screenshots sur Discord via OpenClaw : utiliser `read` tool avec chemin relatif, pas `message` tool.
+
+### Details
+**Problème initial :** Tentative d'envoi de screenshot via `message` tool avec paramètre `media` → erreur "Discord bot token missing".
+
+**Investigation :** Le token Discord est bien configuré dans `~/.openclaw/openclaw.json`, mais le tool `message` ne le détecte pas (probablement besoin de restart Gateway).
+
+**Solution trouvée :** Utiliser le tool `read` sur le fichier image avec un chemin relatif :
+```json
+{ "file_path": "./screenshot.png" }
+```
+L'image est alors automatiquement attachée à la réponse Discord.
+
+**Alternative :** Syntaxe inline `MEDIA:./screenshot.png` dans le texte de réponse.
+
+### Contraintes importantes
+- ✅ Chemins relatifs uniquement (`./`, `../`)
+- ❌ Chemins absolus (`/...`) et `~` bloqués par sécurité
+- ⚠️ Images très grandes (>6000px hauteur) peuvent mettre du temps à s'afficher
+
+### Suggested Action
+- Toujours préférer `read` tool pour les screenshots/images
+- Documenter dans TOOLS.md (fait ✓)
+- Créer helper script (fait ✓)
+
+### Metadata
+- Source: user_feedback
+- Related Files: TOOLS.md, scripts/send-screenshot-discord.sh
+- Tags: discord, screenshot, playwright, mcp
+- See Also: -
+
+### Resolution
+- **Resolved**: 2026-03-02T22:20:00Z
+- **Promoted**: TOOLS.md (section Playwright MCP), MEMORY.md
+- **Notes**: Workflow documenté et automatisable dorénavant
+
+---
