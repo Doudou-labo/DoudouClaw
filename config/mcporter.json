@@ -4,11 +4,14 @@
       "command": "npx @mauricio.wolff/mcp-obsidian@latest ~/notes"
     },
     "github": {
-      "type": "http",
       "url": "https://api.githubcopilot.com/mcp",
       "headers": {
         "Authorization": "Bearer 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"
       }
+    },
+    "playwright": {
+      "command": "npx",
+      "args": ["@playwright/mcp@latest", "--no-sandbox"]
     }
   },
   "imports": []
