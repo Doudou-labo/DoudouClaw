@@ -11,7 +11,13 @@
     },
     "playwright": {
       "command": "npx",
-      "args": ["@playwright/mcp@latest", "--no-sandbox"]
+      "args": [
+        "@playwright/mcp@latest",
+        "--no-sandbox"
+      ]
+    },
+    "qmd": {
+      "command": "qmd mcp"
     }
   },
   "imports": []
