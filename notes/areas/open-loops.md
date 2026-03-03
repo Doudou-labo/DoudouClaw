@@ -27,5 +27,5 @@
 - [ ] **Maîtriser les 25 incontournables** → Issue #22
 
 ## Auto-checkpoints
-- [ ] [AUTO 2026-03-03 midi] Checkpoint 3-min fait. Next: Ce soir 21:15 : saisir les dépenses du jour (`finance add ...`) puis vérifier (`finance recent 5`) et résumé (`finance summary`)
+- [ ] [AUTO 2026-03-03 soir] Checkpoint 3-min fait. Next: Ce soir 21:15 : saisir les dépenses du jour (`finance add ...`) puis vérifier (`finance recent 5`) et résumé (`finance summary`)
 
