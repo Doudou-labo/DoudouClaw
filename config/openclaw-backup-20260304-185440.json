@@ -1,0 +1,574 @@
+{
+  "meta": {
+    "lastTouchedVersion": "2026.3.2",
+    "lastTouchedAt": "2026-03-03T06:56:22.622Z"
+  },
+  "env": {
+    "vars": {
+      "PERPLEXITY_API_KEY": "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"
+    }
+  },
+  "wizard": {
+    "lastRunAt": "2026-03-03T06:56:22.589Z",
+    "lastRunVersion": "2026.3.2",
+    "lastRunCommand": "doctor",
+    "lastRunMode": "local"
+  },
+  "update": {
+    "channel": "beta"
+  },
+  "auth": {
+    "profiles": {
+      "moonshot:default": {
+        "provider": "moonshot",
+        "mode": "api_key"
+      },
+      "google-antigravity:tecknogeek69@gmail.com": {
+        "provider": "google-antigravity",
+        "mode": "oauth"
+      },
+      "opencode:default": {
+        "provider": "opencode",
+        "mode": "api_key"
+      },
+      "anthropic:default": {
+        "provider": "anthropic",
+        "mode": "token"
+      },
+      "openai-codex:default": {
+        "provider": "openai-codex",
+        "mode": "oauth"
+      },
+      "kimi-coding:default": {
+        "provider": "kimi-coding",
+        "mode": "api_key"
+      }
+    }
+  },
+  "models": {
+    "mode": "merge",
+    "providers": {
+      "moonshot": {
+        "baseUrl": "https://api.moonshot.ai/v1",
+        "apiKey": "sk-0j1hN2GhGZzC53iAbNhkHq4xdxa0as4so7Vsp3GT5IsPKieC",
+        "auth": "api-key",
+        "api": "openai-completions",
+        "models": [
+          {
+            "id": "kimi-latest",
+            "name": "Kimi (latest)",
+            "reasoning": false,
+            "input": [
+              "text"
+            ],
+            "cost": {
+              "input": 0,
+              "output": 0,
+              "cacheRead": 0,
+              "cacheWrite": 0
+            },
+            "contextWindow": 200000,
+            "maxTokens": 8192
+          },
+          {
+            "id": "moonshot-v1-auto",
+            "name": "Moonshot v1 auto",
+            "reasoning": false,
+            "input": [
+              "text"
+            ],
+            "cost": {
+              "input": 0,
+              "output": 0,
+              "cacheRead": 0,
+              "cacheWrite": 0
+            },
+            "contextWindow": 200000,
+            "maxTokens": 8192
+          },
+          {
+            "id": "moonshot-v1-8k",
+            "name": "Moonshot v1 8k",
+            "reasoning": false,
+            "input": [
+              "text"
+            ],
+            "cost": {
+              "input": 0,
+              "output": 0,
+              "cacheRead": 0,
+              "cacheWrite": 0
+            },
+            "contextWindow": 200000,
+            "maxTokens": 8192
+          },
+          {
+            "id": "moonshot-v1-32k",
+            "name": "Moonshot v1 32k",
+            "reasoning": false,
+            "input": [
+              "text"
+            ],
+            "cost": {
+              "input": 0,
+              "output": 0,
+              "cacheRead": 0,
+              "cacheWrite": 0
+            },
+            "contextWindow": 200000,
+            "maxTokens": 8192
+          },
+          {
+            "id": "moonshot-v1-128k",
+            "name": "Moonshot v1 128k",
+            "reasoning": false,
+            "input": [
+              "text"
+            ],
+            "cost": {
+              "input": 0,
+              "output": 0,
+              "cacheRead": 0,
+              "cacheWrite": 0
+            },
+            "contextWindow": 200000,
+            "maxTokens": 8192
+          },
+          {
+            "id": "kimi-k2-thinking-turbo",
+            "name": "Kimi K2 Thinking Turbo",
+            "reasoning": false,
+            "input": [
+              "text"
+            ],
+            "cost": {
+              "input": 0,
+              "output": 0,
+              "cacheRead": 0,
+              "cacheWrite": 0
+            },
+            "contextWindow": 200000,
+            "maxTokens": 8192
+          },
+          {
+            "id": "kimi-k2-turbo-preview",
+            "name": "Kimi K2 Turbo Preview",
+            "reasoning": false,
+            "input": [
+              "text"
+            ],
+            "cost": {
+              "input": 0,
+              "output": 0,
+              "cacheRead": 0,
+              "cacheWrite": 0
+            },
+            "contextWindow": 200000,
+            "maxTokens": 8192
+          },
+          {
+            "id": "kimi-k2-0711-preview",
+            "name": "Kimi K2 0711 Preview",
+            "reasoning": false,
+            "input": [
+              "text"
+            ],
+            "cost": {
+              "input": 0,
+              "output": 0,
+              "cacheRead": 0,
+              "cacheWrite": 0
+            },
+            "contextWindow": 200000,
+            "maxTokens": 8192
+          },
+          {
+            "id": "kimi-k2.5",
+            "name": "Kimi K2.5",
+            "reasoning": false,
+            "input": [
+              "text"
+            ],
+            "cost": {
+              "input": 0,
+              "output": 0,
+              "cacheRead": 0,
+              "cacheWrite": 0
+            },
+            "contextWindow": 256000,
+            "maxTokens": 8192
+          }
+        ]
+      },
+      "kimi-coding": {
+        "baseUrl": "https://api.kimi.com/coding/",
+        "api": "anthropic-messages",
+        "models": [
+          {
+            "id": "k2p5",
+            "name": "Kimi for Coding",
+            "reasoning": true,
+            "input": [
+              "text",
+              "image"
+            ],
+            "cost": {
+              "input": 0,
+              "output": 0,
+              "cacheRead": 0,
+              "cacheWrite": 0
+            },
+            "contextWindow": 262144,
+            "maxTokens": 32768
+          }
+        ]
+      }
+    }
+  },
+  "agents": {
+    "defaults": {
+      "model": {
+        "primary": "anthropic/claude-sonnet-4-6",
+        "fallbacks": [
+          "kimi-coding/k2p5",
+          "openai-codex/gpt-5.3-codex",
+          "anthropic/claude-opus-4-6",
+          "anthropic/claude-haiku-4-5",
+          "anthropic/claude-sonnet-4-5",
+          "google-antigravity/claude-opus-4-6-thinking",
+          "google-antigravity/gemini-3-pro-low",
+          "google-antigravity/gemini-3-pro-high",
+          "google-antigravity/claude-sonnet-4-5",
+          "google-antigravity/gemini-3-flash",
+          "moonshot/kimi-k2.5"
+        ]
+      },
+      "models": {
+        "anthropic/claude-opus-4-6": {
+          "alias": "opus",
+          "streaming": true
+        },
+        "anthropic/claude-opus-4-5": {
+          "alias": "opus45",
+          "streaming": true
+        },
+        "anthropic/claude-haiku-4-5": {
+          "alias": "haiku",
+          "streaming": true
+        },
+        "anthropic/claude-sonnet-4-5": {
+          "alias": "sonnet",
+          "streaming": true
+        },
+        "google-antigravity/gemini-3-pro-low": {},
+        "google-antigravity/gemini-3-pro-high": {},
+        "google-antigravity/claude-sonnet-4-5": {
+          "alias": "sonnet-g",
+          "streaming": true
+        },
+        "google-antigravity/gemini-3-flash": {},
+        "moonshot/kimi-k2.5": {
+          "streaming": true
+        },
+        "openai-codex/gpt-5.3-codex": {
+          "alias": "codex",
+          "streaming": true
+        },
+        "openai-codex/gpt-5.3-codex-spark": {
+          "alias": "codex-spark",
+          "streaming": true
+        },
+        "openrouter/openai/gpt-oss-120b:free": {},
+        "anthropic/claude-sonnet-4-6": {
+          "streaming": true
+        },
+        "google-antigravity/claude-opus-4-6-thinking": {},
+        "kimi-coding/k2p5": {
+          "alias": "Kimi for Coding"
+        },
+        "openai-codex/gpt-5.1-codex-mini": {}
+      },
+      "workspace": "/root/.openclaw/workspace",
+      "timeFormat": "24",
+      "contextPruning": {
+        "mode": "cache-ttl",
+        "ttl": "1h"
+      },
+      "compaction": {
+        "mode": "safeguard"
+      },
+      "thinkingDefault": "low",
+      "verboseDefault": "off",
+      "blockStreamingDefault": "on",
+      "blockStreamingBreak": "text_end",
+      "blockStreamingChunk": {
+        "breakPreference": "paragraph"
+      },
+      "heartbeat": {
+        "every": "1h",
+        "directPolicy": "block"
+      },
+      "maxConcurrent": 4,
+      "subagents": {
+        "maxConcurrent": 8,
+        "maxSpawnDepth": 2,
+        "maxChildrenPerAgent": 10
+      }
+    },
+    "list": [
+      {
+        "id": "main",
+        "default": true,
+        "name": "Main",
+        "workspace": "/root/.openclaw/workspace",
+        "agentDir": "/root/.openclaw/agents/main/agent",
+        "model": {
+          "primary": "anthropic/claude-sonnet-4-6",
+          "fallbacks": [
+            "openai-codex/gpt-5.3-codex",
+            "kimi-coding/k2p5"
+          ]
+        },
+        "subagents": {
+          "allowAgents": [
+            "*"
+          ]
+        }
+      }
+    ]
+  },
+  "tools": {
+    "web": {
+      "search": {
+        "apiKey": "BSAxwnseHzPDVud0uKP7HlsU1XhHHle",
+        "perplexity": {
+          "apiKey": "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"
+        }
+      }
+    },
+    "exec": {
+      "security": "full",
+      "ask": "off"
+    }
+  },
+  "bindings": [],
+  "messages": {
+    "ackReactionScope": "group-all"
+  },
+  "commands": {
+    "native": "auto",
+    "nativeSkills": "auto",
+    "restart": true,
+    "ownerDisplay": "hash",
+    "ownerDisplaySecret": "57742795153bbeab619fc4d5d36deafa3556ed458f2acb836d42f3155be8d7a5",
+    "allowFrom": {}
+  },
+  "hooks": {
+    "enabled": true,
+    "path": "/hooks",
+    "token": "DYsPqNUMzhGvb9aeeN7RRY_4-HeZotLCasnD4JVaExg",
+    "defaultSessionKey": "hook:github:doudou-labo",
+    "allowRequestSessionKey": false,
+    "allowedAgentIds": [
+      "main"
+    ],
+    "mappings": [
+      {
+        "id": "github-discord-adminlogs",
+        "match": {
+          "path": "github"
+        },
+        "action": "agent",
+        "name": "GitHub",
+        "agentId": "main",
+        "messageTemplate": "Tu re\u00e7ois un webhook d\u00e9j\u00e0 normalis\u00e9 par le relay. Prends le texte dans payload.text (ou text \u00e0 la racine) et envoie-le tel quel avec l'outil message: action=send, channel=discord, target=1472597513898033162, message=<texte>. Si absent, envoie: \u26a0\ufe0f GitHub webhook re\u00e7u mais champ text absent dans le payload relay. Ensuite r\u00e9ponds uniquement NO_REPLY.",
+        "deliver": false,
+        "allowUnsafeExternalContent": true
+      }
+    ],
+    "internal": {
+      "enabled": true,
+      "entries": {
+        "self-improvement": {
+          "enabled": true
+        }
+      }
+    }
+  },
+  "channels": {
+    "telegram": {
+      "enabled": true,
+      "dmPolicy": "pairing",
+      "botToken": "8594872070:AAEmuZSjgwcJwQQvqDQspb9rFcEqG8dlEiA",
+      "groups": {
+        "*": {
+          "requireMention": false
+        }
+      },
+      "groupPolicy": "allowlist",
+      "textChunkLimit": 4000,
+      "chunkMode": "newline",
+      "streaming": "partial"
+    },
+    "discord": {
+      "markdown": {
+        "tables": "bullets"
+      },
+      "enabled": true,
+      "commands": {
+        "native": true,
+        "nativeSkills": true
+      },
+      "configWrites": true,
+      "allowBots": false,
+      "groupPolicy": "open",
+      "textChunkLimit": 4000,
+      "chunkMode": "newline",
+      "blockStreaming": false,
+      "streaming": "partial",
+      "actions": {
+        "reactions": true,
+        "stickers": true,
+        "emojiUploads": true,
+        "stickerUploads": true,
+        "polls": true,
+        "permissions": true,
+        "messages": true,
+        "threads": true,
+        "pins": true,
+        "search": true,
+        "memberInfo": true,
+        "roleInfo": true,
+        "roles": true,
+        "channelInfo": true,
+        "voiceStatus": true,
+        "events": true,
+        "moderation": true,
+        "channels": true,
+        "presence": true
+      },
+      "dm": {
+        "enabled": true,
+        "groupEnabled": true
+      },
+      "guilds": {
+        "1472335329527595038": {
+          "requireMention": false,
+          "reactionNotifications": "all",
+          "roles": [],
+          "channels": {}
+        }
+      },
+      "execApprovals": {
+        "enabled": false,
+        "target": "channel"
+      },
+      "threadBindings": {
+        "enabled": true,
+        "spawnSubagentSessions": true
+      },
+      "intents": {
+        "presence": false,
+        "guildMembers": false
+      },
+      "status": "online",
+      "accounts": {
+        "default": {
+          "token": "MTQ3MjcwMzMyMzEyMjQzNDA0OA.GWXWjv.fttE1xtRKdI70RtHngl1xJSjDiyHwDU_Ydaq1M",
+          "groupPolicy": "open",
+          "streaming": "partial",
+          "allowFrom": [
+            "*"
+          ],
+          "guilds": {
+            "1472335329527595038": {
+              "requireMention": false,
+              "channels": {}
+            }
+          },
+          "status": "online"
+        }
+      }
+    }
+  },
+  "gateway": {
+    "port": 18789,
+    "mode": "local",
+    "bind": "loopback",
+    "controlUi": {
+      "allowedOrigins": [
+        "https://openclaw.doudougen.xyz",
+        "https://dashboard.doudougen.xyz",
+        "https://clawsuite.doudougen.xyz",
+        "http://100.89.4.88:3000",
+        "http://localhost:3000",
+        "http://127.0.0.1:18789",
+        "http://127.0.0.1:3000"
+      ]
+    },
+    "auth": {
+      "mode": "token",
+      "token": "54c876bec7b7569a6ee692e12d0263284909c9627c1ab8b0"
+    },
+    "trustedProxies": [
+      "127.0.0.1/32",
+      "::1/128",
+      "100.64.0.0/10"
+    ],
+    "tailscale": {
+      "mode": "off",
+      "resetOnExit": false
+    }
+  },
+  "skills": {
+    "entries": {
+      "voice-call": {
+        "enabled": false
+      },
+      "memory-setup": {
+        "enabled": false
+      }
+    }
+  },
+  "plugins": {
+    "allow": [
+      "memory-lancedb",
+      "telegram",
+      "discord"
+    ],
+    "slots": {
+      "memory": "memory-lancedb"
+    },
+    "entries": {
+      "telegram": {
+        "enabled": true
+      },
+      "memos-cloud-openclaw-plugin": {
+        "enabled": false
+      },
+      "memory-lancedb": {
+        "enabled": true,
+        "config": {
+          "embedding": {
+            "apiKey": "${OPENAI_API_KEY}",
+            "model": "text-embedding-3-small"
+          },
+          "autoCapture": true,
+          "autoRecall": true
+        }
+      },
+      "discord": {
+        "enabled": true
+      }
+    },
+    "installs": {
+      "memos-cloud-openclaw-plugin": {
+        "source": "npm",
+        "spec": "github:MemTensor/MemOS-Cloud-OpenClaw-Plugin",
+        "installPath": "/root/.openclaw/extensions/memos-cloud-openclaw-plugin",
+        "version": "0.1.0",
+        "installedAt": "2026-02-12T20:39:17.012Z"
+      }
+    }
+  }
+}
