@@ -27,18 +27,54 @@ export function buildIndex() {
     const rel = file.replace(`${ROOT}/`, '');
     const type = rel.startsWith('memory/') ? 'DAILY' : rel.startsWith('notes/') ? 'PARA' : rel === 'MEMORY.md' ? 'MEMORY' : 'SESSION';
     const lines = fs.readFileSync(file, 'utf8').split('\n');
-    lines.forEach((line, idx) => {
-      const text = line.trim();
-      if (text.length < 12 || text.startsWith('#')) return;
+
+    let section = '';
+    let block = [];
+    let blockStart = 1;
+
+    const flushBlock = () => {
+      const joined = block.join(' ').replace(/\s+/g, ' ').trim();
+      block = [];
+      if (joined.length < 20) return;
       items.push({
-        id: `${rel}:${idx + 1}`,
+        id: `${rel}:${blockStart}`,
         type,
         path: rel,
-        line: idx + 1,
-        text,
+        line: blockStart,
+        text: section ? `${section} — ${joined}` : joined,
         date: rel.startsWith('memory/') ? rel.slice(7, 17) : '',
       });
+    };
+
+    lines.forEach((raw, idx) => {
+      const line = raw.trim();
+      const ln = idx + 1;
+
+      if (!line) {
+        flushBlock();
+        return;
+      }
+
+      if (line.startsWith('#')) {
+        flushBlock();
+        section = line.replace(/^#+\s*/, '').trim();
+        return;
+      }
+
+      if (line.length < 3) return;
+      if (block.length === 0) blockStart = ln;
+      block.push(line.replace(/^[-*]\s+/, ''));
     });
+
+    flushBlock();
   }
-  return items;
+
+  // de-dup visuel: même texte + même fichier + même section
+  const seen = new Set();
+  return items.filter((it) => {
+    const key = `${it.path}::${it.text}`;
+    if (seen.has(key)) return false;
+    seen.add(key);
+    return true;
+  });
 }
