@@ -53,6 +53,7 @@
 - Développer l’intelligence émotionnelle (lecture: Daniel Goleman)
 - Progresser vers un poste de Responsable de Centre de Service (RCS)
 - Préparer l’entretien individuel à venir avec Arnaud
+- Projet immobilier Arras avec sa mère: étude de 2 appartements (1 loc étudiante + 1 usage perso), décision conditionnée à la due diligence copro complète
 - Retrouver l’équilibre émotionnel après la rupture avec Audrey
 - Reprendre le sport de façon durable malgré la contrainte d’épaule gauche instable
 
@@ -88,4 +89,4 @@ Meilleure amie d’Alexandre, habite à Calais; relation amicale de longue date 
 
 ---
 
-*Dernière mise à jour: 2026-02-22*
+*Dernière mise à jour: 2026-03-05*

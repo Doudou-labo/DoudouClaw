@@ -1,13 +1,12 @@
 # SESSION-STATE.md — Active Working Memory
 
 ## Current Task
-Consolider le contexte “visite appartement Arras” dans un Project PARA, à la demande de Doudou.
+Exécuter la consolidation mémoire quotidienne + PARA (cron fin de journée) avec mise à jour N1 et traçabilité Git.
 
 ## Immediate Context
-- Source confirmée par Doudou: discussion dans le salon Discord `1478644352233373789`.
-- Contexte capté: projet d’achat de 2 apparts avec sa mère (1 loc étudiante + 1 pour lui à Arras), checklist de visite, demande des docs critiques (PV AG, copro/charges, diagnostics, conso EDF, nuisances/travaux), puis réception de plusieurs PDF et images.
-- Action immédiate demandée: “Retiens tout ça dans un Project sur PARA”.
-- Objectif: créer une note projet structurée avec état, points de vigilance et prochaines actions.
+- Journée centrée sur le dossier **appartement Arras**: structuration PARA du projet + première due diligence documentaire.
+- Décision méthodo maintenue: **pas de verdict final** avant réception des pièces copro clés (PV AG 3 ans, état daté/pré-état daté, charges réelles, taxe foncière).
+- Nouveau cron actif: `796b145b-d198-4ba2-a6ca-2dd893bf65d8` (21:50 Europe/Paris), avec delivery Discord `1472597513898033162`.
 
 ## Key Decisions (actives)
 1. Jurons français sans modération = identité DoudouClaw (trait d'authenticité systématique).
@@ -15,13 +14,13 @@ Consolider le contexte “visite appartement Arras” dans un Project PARA, à l
 3. Commits/push systématiques via bot DoudouClaw (HTTPS, pas SSH).
 4. Ne jamais lancer `npm install -g openclaw` avec le gateway actif.
 5. Calendrier OpenClaw = `88b14e5c160f914b9743cf46d6ff857ed6baedc24449bccee0cb56c531ac20a0@group.calendar.google.com`.
+6. Dossier appartement Arras: décision GO/NO-GO uniquement après réception + analyse du pack copro complet.
 
 ## Key Files
-- `SESSION-STATE.md` (ce fichier)
-- `SOUL.md`
-- `TOOLS.md`
-- `MEMORY.md`
-- `memory/2026-02-27.md`
+- `memory/2026-03-05.md`
+- `notes/projects/appartement-arras-visite-et-due-diligence.md`
+- `notes/areas/open-loops.md`
+- `notes/areas/automations-cron.md`
 
 ## Last Updated
-2026-02-28 22:19 UTC — correction mémoire films/séries enclenchée (preuves utilisateur + MAJ N2/N1)
+2026-03-05 20:50 UTC — consolidation mémoire quotidienne (N1 + PARA + préparation commit/push).

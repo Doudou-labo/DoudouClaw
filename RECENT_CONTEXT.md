@@ -8,26 +8,20 @@
 ## Latest Session
 
 ### Topic
-Stabilisation du modèle Sonnet + migration complète GitHub vers organisation `Doudou-labo`.
+Consolidation du dossier **appartement Arras** + mise en place du cron quotidien de consolidation mémoire/PARA.
 
 ### Key Points
-- Incident de switch modèle diagnostiqué:
-  - `google-antigravity/claude-sonnet-4-5` en erreur 403 (service disabled / ToS)
-  - failover provoquait des bascules inattendues (opus/codex) et confusion UI.
-- Correctifs appliqués:
-  - aliases explicites (`sonnet-a`, `sonnet-g`, `haiku`, `opus`, `opus45`)
-  - retrait des modèles `google-antigravity/*` des fallbacks.
-- GitHub:
-  - org créée: `Doudou-labo`
-  - repo cible validé: `Doudou-labo/DoudouClaw`
-  - project org créé: `https://github.com/orgs/Doudou-labo/projects/1`
-  - issues migrées et liées au project.
+- Note projet créée: `notes/projects/appartement-arras-visite-et-due-diligence.md`.
+- Contexte confirmé: projet d’achat de 2 appartements avec sa mère (1 loc étudiante + 1 usage perso à Arras).
+- Première analyse des pièces techniques (Carrez, amiante, DPE, électricité, EDF) et du règlement de copro (pages 1-20): pas de blocage majeur détecté à ce stade.
+- Décision méthode: verdict final GO/NO-GO + prix cible/plafond uniquement après réception des docs copro manquants (PV AG 3 ans, état daté/pré-état daté, charges réelles, taxe foncière).
+- Cron créé puis patché: `796b145b-d198-4ba2-a6ca-2dd893bf65d8`, 21:50 Europe/Paris, annonce Discord `1472597513898033162`.
 
 ### Status
-- [x] Modèle Sonnet stabilisé après nettoyage fallback
-- [x] Repo GitHub cible basculé sur `Doudou-labo/DoudouClaw`
-- [x] Project + issues opérationnels sur l'org
+- [x] Ancrage PARA du sujet immobilier
+- [x] Consolidation mémoire fin de journée (N1)
+- [ ] Réception/analyse du pack copro complet pour décision finale
 
 ---
 
-*Last auto-update: 2026-02-16 23:10 UTC*
+*Last auto-update: 2026-03-05 20:50 UTC*

@@ -26,6 +26,12 @@
 - [ ] **Documenter 1 tâche RCS par semaine** → Issue #21
 - [ ] **Maîtriser les 25 incontournables** → Issue #22
 
+## Appartement Arras — Due diligence
+- [ ] Récupérer le pack copro complet: PV AG 3 ans + état daté/pré-état daté + détail charges réelles + taxe foncière
+- [ ] Chiffrer le coût total annuel réel par lot (charges + énergie + assurance + taxe)
+- [ ] Définir la borne de négo: prix cible + prix plafond (par lot)
+- [ ] Rendre un verdict final GO/NO-GO après analyse des pièces manquantes
+
 ## Auto-checkpoints
 - [ ] [AUTO 2026-03-05 midi] Checkpoint 3-min fait. Next: Ce soir 21:15 : saisir les dépenses du jour (`finance add ...`) puis vérifier (`finance recent 5`) et résumé (`finance summary`)
 
