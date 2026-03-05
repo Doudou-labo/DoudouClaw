@@ -16,6 +16,13 @@ export async function GET(req) {
     .filter((x) => (!type || x.type === type))
     .filter((x) => (!date || x.date === date))
     .filter((x) => !q || `${x.text} ${x.path}`.toLowerCase().includes(q))
+    .sort((a, b) => {
+      const da = a.date || '';
+      const db = b.date || '';
+      if (da !== db) return db.localeCompare(da); // décroissant (plus récent d'abord)
+      if (a.path !== b.path) return b.path.localeCompare(a.path);
+      return b.line - a.line;
+    })
     .slice(0, 500);
 
   return NextResponse.json({ count: all.length, types, items });
