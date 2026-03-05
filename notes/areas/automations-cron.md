@@ -35,7 +35,7 @@
 - **Schedule:** `50 21 * * *` (Europe/Paris)
 - **Session target:** `isolated`
 - **Action:** agentTurn de consolidation N1/N2/LTM + MAJ `memory/YYYY-MM-DD.md`, `SESSION-STATE.md`, `RECENT_CONTEXT.md`, `MEMORY.md` (si durable), mise à jour PARA (`notes/*` + `open-loops`) et commit/push.
-- **Delivery:** none (job silencieux, exécution de maintenance)
+- **Delivery:** announce Discord `1472597513898033162` (retour après chaque exécution, best-effort)
 
 ## Règle opératoire
 - Toute évolution de cron doit être mise à jour ici + commit/push GitHub.
