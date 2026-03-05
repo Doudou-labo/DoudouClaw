@@ -26,3 +26,9 @@ backups/
 
 # OpenClaw local config/sessions
 .openclaw/
+
+# Second-brain generated index (rebuildable)
+second-brain/data.json
+
+# Runtime sync logs
+memory/para-notion-sync-*.log
