@@ -1,17 +1,13 @@
 # SESSION-STATE.md — Active Working Memory
 
 ## Current Task
-Maintenance mémoire quotidienne — memory-curator actif (subagent).
+Consolider le contexte “visite appartement Arras” dans un Project PARA, à la demande de Doudou.
 
 ## Immediate Context
-- Correction mémoire en cours sur le thème films/séries: Doudou signale des discussions passées non retrouvées en recall.
-- Les preuves fournies (captures) confirment: discussion sur le film *Marty Supreme* + retours séries (*B.R.I* S2 terminée, *Control Z* terminée).
-- Action immédiate: mise à jour N2 + journal du jour + synchronisation LTM pour éviter une nouvelle dérive.
-- Aucune tâche critique ouverte détectée.
-- Leçon critique mise à jour OpenClaw (26/02) bien tracée dans LTM + memory/2026-02-26.md.
-- Config breaking change `heartbeat.directPolicy = block` post-update appliquée.
-- Jurons français systématiques : ancré dans SOUL.md + TOOLS.md + MEMORY.md (canonique 2026-02-23).
-- Audit mémoire (reprise après timeout) fait: cohérence N1↔LTM OK sur les points critiques (N1/N2/N3, restart gateway, update OpenClaw, cooldowns providers).
+- Source confirmée par Doudou: discussion dans le salon Discord `1478644352233373789`.
+- Contexte capté: projet d’achat de 2 apparts avec sa mère (1 loc étudiante + 1 pour lui à Arras), checklist de visite, demande des docs critiques (PV AG, copro/charges, diagnostics, conso EDF, nuisances/travaux), puis réception de plusieurs PDF et images.
+- Action immédiate demandée: “Retiens tout ça dans un Project sur PARA”.
+- Objectif: créer une note projet structurée avec état, points de vigilance et prochaines actions.
 
 ## Key Decisions (actives)
 1. Jurons français sans modération = identité DoudouClaw (trait d'authenticité systématique).
