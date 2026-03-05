@@ -28,6 +28,15 @@
 - **Action:** `bash scripts/auto-self-improve-review.sh`
 - **Channel:** Telegram `-1003791371950:topic:32`
 
+## 2026-03-05 — Consolidation mémoire quotidienne + PARA
+
+### 5) Memory Daily Consolidation + PARA
+- **Cron ID:** `796b145b-d198-4ba2-a6ca-2dd893bf65d8`
+- **Schedule:** `50 21 * * *` (Europe/Paris)
+- **Session target:** `isolated`
+- **Action:** agentTurn de consolidation N1/N2/LTM + MAJ `memory/YYYY-MM-DD.md`, `SESSION-STATE.md`, `RECENT_CONTEXT.md`, `MEMORY.md` (si durable), mise à jour PARA (`notes/*` + `open-loops`) et commit/push.
+- **Delivery:** none (job silencieux, exécution de maintenance)
+
 ## Règle opératoire
 - Toute évolution de cron doit être mise à jour ici + commit/push GitHub.
 - Rendu attendu de chaque automation: message de synthèse (Résultats + Points à retenir + commit).
