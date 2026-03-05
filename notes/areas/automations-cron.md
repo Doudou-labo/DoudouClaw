@@ -43,10 +43,10 @@
 - **Action:** `bash scripts/memory-auto-tags.sh` + commit/push si changement
 - **Delivery:** none
 
-### 7) Second Brain Dashboard Reindex
+### 7) Second Brain Next.js Build Check
 - **Cron ID:** `4faea737-c940-4de3-86f6-e7d926b32bcc`
 - **Schedule:** `57 21 * * *` (Europe/Paris)
-- **Action:** `./scripts/build-second-brain-dashboard.py` + commit/push si changement
+- **Action:** `cd second-brain-nextjs && npm run build` (validation dashboard)
 - **Delivery:** announce Discord `1472597513898033162` (best-effort)
 
 ### 8) Memory Quality Score Hebdo

@@ -9,7 +9,8 @@ Implémenter les 3 upgrades "Doudou-ready": dashboard recherche globale, tags au
 - Nouveau cron actif: `796b145b-d198-4ba2-a6ca-2dd893bf65d8` (21:50 Europe/Paris), avec delivery Discord `1472597513898033162`.
 - Préférence validée: retour post-run en format plus clean (Markdown + emojis + structure courte).
 - Action appliquée: prompt du cron patché avec template de sortie obligatoire (titre + 6 bullets max).
-- 3 upgrades Doudou-ready implémentés: dashboard recherche globale, auto-tags quotidiens, score qualité mémoire hebdo + crons associés.
+- 3 upgrades Doudou-ready implémentés: dashboard recherche globale (version Next.js alignée repo), auto-tags quotidiens, score qualité mémoire hebdo + crons associés.
+- Correction intégrée après feedback Doudou: abandon de l’approche dashboard statique au profit du pattern Next.js demandé.
 
 ## Key Decisions (actives)
 1. Jurons français sans modération = identité DoudouClaw (trait d'authenticité systématique).
@@ -26,4 +27,4 @@ Implémenter les 3 upgrades "Doudou-ready": dashboard recherche globale, tags au
 - `notes/areas/automations-cron.md`
 
 ## Last Updated
-2026-03-05 21:55 UTC — 3 upgrades Doudou-ready implémentés (dashboard + auto-tags + score hebdo).
+2026-03-05 22:05 UTC — dashboard migré en Next.js suite feedback utilisateur + cron build-check aligné.

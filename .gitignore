@@ -27,8 +27,9 @@ backups/
 # OpenClaw local config/sessions
 .openclaw/
 
-# Second-brain generated index (rebuildable)
-second-brain/data.json
+# Next.js second-brain app artifacts
+second-brain-nextjs/node_modules/
+second-brain-nextjs/.next/
 
 # Runtime sync logs
 memory/para-notion-sync-*.log
