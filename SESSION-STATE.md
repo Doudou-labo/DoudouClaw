@@ -7,6 +7,8 @@ Exécuter la consolidation mémoire quotidienne + PARA (cron fin de journée) av
 - Journée centrée sur le dossier **appartement Arras**: structuration PARA du projet + première due diligence documentaire.
 - Décision méthodo maintenue: **pas de verdict final** avant réception des pièces copro clés (PV AG 3 ans, état daté/pré-état daté, charges réelles, taxe foncière).
 - Nouveau cron actif: `796b145b-d198-4ba2-a6ca-2dd893bf65d8` (21:50 Europe/Paris), avec delivery Discord `1472597513898033162`.
+- Préférence validée: retour post-run en format plus clean (Markdown + emojis + structure courte).
+- Action appliquée: prompt du cron patché avec template de sortie obligatoire (titre + 6 bullets max).
 
 ## Key Decisions (actives)
 1. Jurons français sans modération = identité DoudouClaw (trait d'authenticité systématique).
@@ -23,4 +25,4 @@ Exécuter la consolidation mémoire quotidienne + PARA (cron fin de journée) av
 - `notes/areas/automations-cron.md`
 
 ## Last Updated
-2026-03-05 20:50 UTC — consolidation mémoire quotidienne (N1 + PARA + préparation commit/push).
+2026-03-05 20:59 UTC — patch format reporting cron mémoire (Markdown + emojis) appliqué.
