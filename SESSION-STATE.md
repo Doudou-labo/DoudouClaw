@@ -11,7 +11,7 @@ Implémenter les 3 upgrades "Doudou-ready": dashboard recherche globale, tags au
 - Action appliquée: prompt du cron patché avec template de sortie obligatoire (titre + 6 bullets max).
 - 3 upgrades Doudou-ready implémentés: dashboard recherche globale (version Next.js alignée repo), auto-tags quotidiens, score qualité mémoire hebdo + crons associés.
 - Correction intégrée après feedback Doudou: abandon de l’approche dashboard statique au profit du pattern Next.js demandé.
-- Feedback UX dashboard (nouveau): rendu jugé "ligne par ligne" et peu lisible; correction en cours vers indexation par blocs/sections + déduplication.
+- Feedback UX dashboard (nouveau): rendu jugé "ligne par ligne" et peu lisible; correction étendue avec filtrage anti-bruit (templates exclus + séparateurs ignorés + blocs textuels significatifs uniquement) + anti-spam par fichier (cap de résultats).
 - Infra appliquée sur demande: routage Caddy `brain.doudougen.xyz` + SSL auto + basic auth + service systemd app (port 3199).
 - Point restant: DNS public `brain.doudougen.xyz` à créer/corriger pour accès externe.
 

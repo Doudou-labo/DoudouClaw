@@ -13,6 +13,15 @@ function collectFiles(dir, out = []) {
   return out;
 }
 
+function isMeaningful(text) {
+  const t = text.trim();
+  if (!t) return false;
+  if (/^[-_*|`:\s]+$/.test(t)) return false; // séparateurs décoratifs
+  const letters = (t.match(/[A-Za-zÀ-ÿ]/g) || []).length;
+  if (letters < 8) return false;
+  return true;
+}
+
 export function buildIndex() {
   const files = [
     path.join(ROOT, 'MEMORY.md'),
@@ -20,7 +29,9 @@ export function buildIndex() {
     path.join(ROOT, 'RECENT_CONTEXT.md'),
     ...collectFiles(path.join(ROOT, 'memory')),
     ...collectFiles(path.join(ROOT, 'notes')),
-  ].filter((v, i, a) => a.indexOf(v) === i && fs.existsSync(v));
+  ]
+    .filter((v, i, a) => a.indexOf(v) === i && fs.existsSync(v))
+    .filter((v) => !v.includes('/notes/resources/templates/')); // trop de bruit template
 
   const items = [];
   for (const file of files) {
@@ -36,6 +47,7 @@ export function buildIndex() {
       const joined = block.join(' ').replace(/\s+/g, ' ').trim();
       block = [];
       if (joined.length < 20) return;
+      if (!isMeaningful(joined)) return;
       items.push({
         id: `${rel}:${blockStart}`,
         type,
@@ -62,8 +74,10 @@ export function buildIndex() {
       }
 
       if (line.length < 3) return;
+      const cleaned = line.replace(/^[-*]\s+/, '').trim();
+      if (!isMeaningful(cleaned) && cleaned.length < 30) return;
       if (block.length === 0) blockStart = ln;
-      block.push(line.replace(/^[-*]\s+/, ''));
+      block.push(cleaned);
     });
 
     flushBlock();

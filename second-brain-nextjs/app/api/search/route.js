@@ -18,7 +18,7 @@ export async function GET(req) {
     return Number.isNaN(t) ? 0 : t;
   };
 
-  const items = all
+  const sorted = all
     .filter((x) => (!type || x.type === type))
     .filter((x) => (!date || x.date === date))
     .filter((x) => !q || `${x.text} ${x.path}`.toLowerCase().includes(q))
@@ -28,8 +28,19 @@ export async function GET(req) {
       if (ta !== tb) return tb - ta; // décroissant: plus récent d'abord
       if (a.path !== b.path) return b.path.localeCompare(a.path);
       return b.line - a.line;
-    })
-    .slice(0, 500);
+    });
+
+  // Anti-spam visuel: limite le nombre de blocs issus d'un même fichier
+  const perPathCap = q ? 6 : 3;
+  const perPath = new Map();
+  const items = [];
+  for (const it of sorted) {
+    const n = perPath.get(it.path) || 0;
+    if (n >= perPathCap) continue;
+    perPath.set(it.path, n + 1);
+    items.push(it);
+    if (items.length >= 500) break;
+  }
 
   return NextResponse.json({ count: all.length, types, items });
 }
