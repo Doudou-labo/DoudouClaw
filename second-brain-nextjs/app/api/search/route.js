@@ -30,17 +30,7 @@ export async function GET(req) {
       return b.line - a.line;
     });
 
-  // Anti-spam visuel: limite le nombre de blocs issus d'un même fichier
-  const perPathCap = q ? 6 : 3;
-  const perPath = new Map();
-  const items = [];
-  for (const it of sorted) {
-    const n = perPath.get(it.path) || 0;
-    if (n >= perPathCap) continue;
-    perPath.set(it.path, n + 1);
-    items.push(it);
-    if (items.length >= 500) break;
-  }
+  const items = sorted.slice(0, 500);
 
   return NextResponse.json({ count: all.length, types, items });
 }
