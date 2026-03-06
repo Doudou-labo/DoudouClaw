@@ -64,9 +64,15 @@
 - Modèle LLM par défaut : `anthropic/claude-sonnet-4-6` (2026-03-01)
 - Discord Streaming Mode : `partial` pour réponses streamées (2026-03-01)
 
+### Key Decisions Made (suite)
+- Modèle primaire changé à `openai-codex/gpt-5.3-codex` (2026-03-06)
+- Queue mode global : `steer+backlog` (debounce 1200ms, cap 25, drop summarize)
+
 ### Tools & Infrastructure
-- **ClawSuite** (2026-03-01) : Dashboard mission control pour OpenClaw installé dans `/root/.openclaw/workspace/clawsuite/` — accessible via `http://100.89.4.88:3000` (Tailscale)
-- **Tailscale** (2026-03-01) : VPN mesh installé (v1.94.2) — IP serveur `100.89.4.88`, permet accès mobile à ClawSuite
+- **ClawSuite** (2026-03-01) : Dashboard mission control — `https://clawsuite.doudougen.xyz` (port 3000, auth Basic DoudouClaw)
+- **ClawMetry** (2026-03-06) : Observabilité temps réel — `https://metry.doudougen.xyz` (port 8900, auth Basic DoudouClaw, v0.11.57)
+- **ClawBridge** (2026-03-06) : Dashboard mobile-first — `https://mobile.doudougen.xyz` (port 3001, auth Basic DoudouClaw, v1.1.2, Access Key: `433f8670fabc90836cd2d6f43fb9d83f`)
+- **Tailscale** (2026-03-01) : VPN mesh (v1.94.2) — IP serveur `100.89.4.88`, tous dashboards accessibles
 
 ### Things to Remember
 - Le N+1 Arnaud est une relation clé, positive (pro + perso)
