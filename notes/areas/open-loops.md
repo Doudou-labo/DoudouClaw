@@ -35,3 +35,8 @@
 ## Auto-checkpoints
 - [ ] [AUTO 2026-03-06 midi] Checkpoint 3-min fait. Next: Ce soir 21:15 : saisir les dépenses du jour (`finance add ...`) puis vérifier (`finance recent 5`) et résumé (`finance summary`)
 
+### Memory/PARA Ops (2026-03-06)
+- [ ] Corriger/créer l’entrée DNS publique `brain.doudougen.xyz` (A/AAAA ou proxy) pour accès externe.
+- [ ] Vérifier l’accès externe au dashboard memory via `https://brain.doudougen.xyz` après propagation DNS.
+- [ ] Continuer la due diligence appartement Arras dès réception du pack copro complet (PV AG 3 ans, état daté, charges, taxe).
+

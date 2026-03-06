@@ -8,20 +8,19 @@
 ## Latest Session
 
 ### Topic
-Consolidation du dossier **appartement Arras** + mise en place du cron quotidien de consolidation mémoire/PARA.
+Consolidation mémoire quotidienne + stabilisation du système mémoire/PARA (cron fin de journée).
 
 ### Key Points
-- Note projet créée: `notes/projects/appartement-arras-visite-et-due-diligence.md`.
-- Contexte confirmé: projet d’achat de 2 appartements avec sa mère (1 loc étudiante + 1 usage perso à Arras).
-- Première analyse des pièces techniques (Carrez, amiante, DPE, électricité, EDF) et du règlement de copro (pages 1-20): pas de blocage majeur détecté à ce stade.
-- Décision méthode: verdict final GO/NO-GO + prix cible/plafond uniquement après réception des docs copro manquants (PV AG 3 ans, état daté/pré-état daté, charges réelles, taxe foncière).
-- Cron créé puis patché: `796b145b-d198-4ba2-a6ca-2dd893bf65d8`, 21:50 Europe/Paris, annonce Discord `1472597513898033162`.
+- N1 relu et synchronisé: `memory/2026-03-06.md`, `SESSION-STATE.md`, `RECENT_CONTEXT.md`.
+- Préférence durable confirmée: retour post-cron en Markdown + emojis, envoi Discord `1472597513898033162` (announce, best-effort).
+- Faits saillants du jour consolidés: audit des capacités mémoire (store/recall/forget), installation ClawMetry (8900) + ClawBridge (3001), suivi due diligence appartement Arras.
+- Open loops clarifiés: DNS `brain.doudougen.xyz` à corriger/créer, puis validation accès externe.
 
 ### Status
-- [x] Ancrage PARA du sujet immobilier
-- [x] Consolidation mémoire fin de journée (N1)
-- [ ] Réception/analyse du pack copro complet pour décision finale
+- [x] Consolidation mémoire quotidienne exécutée
+- [x] Synchronisation N1 + journal du jour
+- [ ] Vérification DNS/public access du dashboard memory
 
 ---
 
-*Last auto-update: 2026-03-05 20:50 UTC*
+*Last auto-update: 2026-03-06 20:50 UTC*

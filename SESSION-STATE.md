@@ -1,20 +1,13 @@
 # SESSION-STATE.md — Active Working Memory
 
 ## Current Task
-Implémenter les 3 upgrades "Doudou-ready": dashboard recherche globale, tags auto légers, score qualité mémoire hebdo.
+Exécuter la consolidation mémoire quotidienne + PARA et laisser un état propre pour reprise demain.
 
 ## Immediate Context
-- Journée centrée sur le dossier **appartement Arras**: structuration PARA du projet + première due diligence documentaire.
-- Décision méthodo maintenue: **pas de verdict final** avant réception des pièces copro clés (PV AG 3 ans, état daté/pré-état daté, charges réelles, taxe foncière).
-- Nouveau cron actif: `796b145b-d198-4ba2-a6ca-2dd893bf65d8` (21:50 Europe/Paris), avec delivery Discord `1472597513898033162`.
-- Préférence validée: retour post-run en format plus clean (Markdown + emojis + structure courte).
-- Action appliquée: prompt du cron patché avec template de sortie obligatoire (titre + 6 bullets max).
-- 3 upgrades Doudou-ready implémentés: dashboard recherche globale (version Next.js alignée repo), auto-tags quotidiens, score qualité mémoire hebdo + crons associés.
-- Correction intégrée après feedback Doudou: abandon de l’approche dashboard statique au profit du pattern Next.js demandé.
-- Feedback UX dashboard (nouveau): rendu jugé "ligne par ligne" et peu lisible; correction étendue avec filtrage anti-bruit (templates exclus + séparateurs ignorés + blocs textuels significatifs uniquement).
-- Préférence utilisateur validée: pour le dashboard memory, ne pas appliquer de cap par fichier (afficher tous les résultats triés/filtrés).
-- Infra appliquée sur demande: routage Caddy `brain.doudougen.xyz` + SSL auto + basic auth + service systemd app (port 3199).
-- Point restant: DNS public `brain.doudougen.xyz` à créer/corriger pour accès externe.
+- Consolidation quotidienne 2026-03-06 exécutée: N1 revu et synchronisé (`memory/2026-03-06.md`, `SESSION-STATE.md`, `RECENT_CONTEXT.md`).
+- Préférence validée et durable: rapport post-exécution des crons mémoire/PARA en Markdown + emojis, vers Discord `1472597513898033162`.
+- Points du jour consolidés: audit mémoire outillage (capability-first), installation ClawMetry + ClawBridge, suivi dossier appartement Arras.
+- Open loops immédiats: DNS public `brain.doudougen.xyz` à corriger/créer, puis test d’accès externe dashboard memory.
 
 ## Key Decisions (actives)
 1. Jurons français sans modération = identité DoudouClaw (trait d'authenticité systématique).
@@ -31,4 +24,4 @@ Implémenter les 3 upgrades "Doudou-ready": dashboard recherche globale, tags au
 - `notes/areas/automations-cron.md`
 
 ## Last Updated
-2026-03-05 22:28 UTC — correction UX dashboard: indexation par blocs/sections + déduplication en cours.
+2026-03-06 20:50 UTC — consolidation mémoire quotidienne + PARA effectuée.
