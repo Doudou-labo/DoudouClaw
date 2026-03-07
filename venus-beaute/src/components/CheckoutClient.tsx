@@ -10,9 +10,12 @@ type CartItem = {
 
 const CART_KEY = "venus_beaute_cart";
 
+const clampQty = (value: number) => Math.max(1, Math.min(20, value));
+
 export default function CheckoutClient({ initialSlug, initialQty }: { initialSlug?: string; initialQty?: number }) {
   const [selectedSlug, setSelectedSlug] = useState(initialSlug ?? products[0].slug);
-  const [quantity, setQuantity] = useState(Math.max(1, Math.min(20, initialQty || 1)));
+  const [quantityInput, setQuantityInput] = useState(String(clampQty(initialQty || 1)));
+  const [cartQtyDrafts, setCartQtyDrafts] = useState<Record<string, string>>({});
   const [cart, setCart] = useState<CartItem[]>([]);
   const [loading, setLoading] = useState(false);
 
@@ -20,6 +23,8 @@ export default function CheckoutClient({ initialSlug, initialQty }: { initialSlu
     () => products.find((p) => p.slug === selectedSlug) ?? products[0],
     [selectedSlug]
   );
+
+  const selectedQuantity = clampQty(Number(quantityInput || 1));
 
   const cartDetailed = useMemo(() => {
     return cart
@@ -33,10 +38,7 @@ export default function CheckoutClient({ initialSlug, initialQty }: { initialSlu
       );
   }, [cart]);
 
-  const total = useMemo(
-    () => cartDetailed.reduce((sum, item) => sum + item.subtotal, 0),
-    [cartDetailed]
-  );
+  const total = useMemo(() => cartDetailed.reduce((sum, item) => sum + item.subtotal, 0), [cartDetailed]);
 
   const persistCart = (nextCart: CartItem[]) => {
     setCart(nextCart);
@@ -55,7 +57,7 @@ export default function CheckoutClient({ initialSlug, initialQty }: { initialSlu
           parsed = data
             .map((item) => ({
               slug: String(item.slug),
-              quantity: Math.max(1, Math.min(20, Number(item.quantity || 1))),
+              quantity: clampQty(Number(item.quantity || 1)),
             }))
             .filter((item) => products.some((p) => p.slug === item.slug));
         }
@@ -65,17 +67,13 @@ export default function CheckoutClient({ initialSlug, initialQty }: { initialSlu
     }
 
     if (initialSlug) {
-      const safeQty = Math.max(1, Math.min(20, Number(initialQty || 1)));
+      const safeQty = clampQty(Number(initialQty || 1));
       const existing = parsed.find((item) => item.slug === initialSlug);
       if (existing) {
-        existing.quantity = Math.max(1, Math.min(20, existing.quantity + safeQty));
+        existing.quantity = clampQty(existing.quantity + safeQty);
       } else {
         parsed.push({ slug: initialSlug, quantity: safeQty });
       }
-    }
-
-    if (parsed.length === 0) {
-      parsed = [{ slug: products[0].slug, quantity: 1 }];
     }
 
     persistCart(parsed);
@@ -87,23 +85,27 @@ export default function CheckoutClient({ initialSlug, initialQty }: { initialSlu
     if (existing) {
       persistCart(
         cart.map((item) =>
-          item.slug === selectedProduct.slug
-            ? { ...item, quantity: Math.max(1, Math.min(20, item.quantity + quantity)) }
-            : item
+          item.slug === selectedProduct.slug ? { ...item, quantity: clampQty(item.quantity + selectedQuantity) } : item
         )
       );
     } else {
-      persistCart([...cart, { slug: selectedProduct.slug, quantity }]);
+      persistCart([...cart, { slug: selectedProduct.slug, quantity: selectedQuantity }]);
     }
+    setQuantityInput("1");
   };
 
   const updateQty = (slug: string, nextQty: number) => {
-    persistCart(cart.map((item) => (item.slug === slug ? { ...item, quantity: Math.max(1, Math.min(20, nextQty)) } : item)));
+    persistCart(cart.map((item) => (item.slug === slug ? { ...item, quantity: clampQty(nextQty) } : item)));
   };
 
   const removeItem = (slug: string) => {
     const next = cart.filter((item) => item.slug !== slug);
-    persistCart(next.length > 0 ? next : [{ slug: products[0].slug, quantity: 1 }]);
+    setCartQtyDrafts((drafts) => {
+      const clone = { ...drafts };
+      delete clone[slug];
+      return clone;
+    });
+    persistCart(next);
   };
 
   const startCheckout = async () => {
@@ -155,11 +157,18 @@ export default function CheckoutClient({ initialSlug, initialQty }: { initialSlu
           <label className="text-sm font-semibold text-green-900">
             Quantité
             <input
-              type="number"
-              min={1}
-              max={20}
-              value={quantity}
-              onChange={(e) => setQuantity(Math.max(1, Math.min(20, Number(e.target.value) || 1)))}
+              type="text"
+              inputMode="numeric"
+              value={quantityInput}
+              onChange={(e) => {
+                const cleaned = e.target.value.replace(/\D/g, "");
+                if (cleaned === "") {
+                  setQuantityInput("");
+                  return;
+                }
+                setQuantityInput(String(clampQty(Number(cleaned))));
+              }}
+              onBlur={() => setQuantityInput(String(clampQty(Number(quantityInput || 1))))}
               className="mt-2 w-full rounded-lg border border-green-300 bg-white px-3 py-2 text-sm"
             />
           </label>
@@ -174,34 +183,51 @@ export default function CheckoutClient({ initialSlug, initialQty }: { initialSlu
 
         <div className="mt-6 rounded-2xl border border-green-100 bg-white p-5">
           <p className="font-semibold text-green-900">Ton panier</p>
-          <div className="mt-3 space-y-3">
-            {cartDetailed.map((item) => (
-              <div key={item.product.slug} className="grid gap-3 rounded-xl border border-green-100 bg-green-50 p-3 md:grid-cols-[1fr_120px_120px_auto] md:items-center">
-                <div>
-                  <p className="font-medium text-green-900">{item.product.name}</p>
-                  <p className="text-sm text-green-800/80">{formatPrice(item.product.price)} / unité</p>
-                </div>
 
-                <input
-                  type="number"
-                  min={1}
-                  max={20}
-                  value={item.quantity}
-                  onChange={(e) => updateQty(item.product.slug, Number(e.target.value) || 1)}
-                  className="rounded-lg border border-green-300 bg-white px-3 py-2 text-sm"
-                />
-
-                <p className="font-semibold text-green-900">{formatPrice(item.subtotal)}</p>
-
-                <button
-                  onClick={() => removeItem(item.product.slug)}
-                  className="rounded-lg border border-red-200 px-3 py-2 text-sm font-medium text-red-600 hover:bg-red-50"
+          {cartDetailed.length === 0 ? (
+            <p className="mt-3 text-sm text-green-800/80">Ton panier est vide pour l’instant.</p>
+          ) : (
+            <div className="mt-3 space-y-3">
+              {cartDetailed.map((item) => (
+                <div
+                  key={item.product.slug}
+                  className="grid gap-3 rounded-xl border border-green-100 bg-green-50 p-3 md:grid-cols-[1fr_120px_120px_auto] md:items-center"
                 >
-                  Retirer
-                </button>
-              </div>
-            ))}
-          </div>
+                  <div>
+                    <p className="font-medium text-green-900">{item.product.name}</p>
+                    <p className="text-sm text-green-800/80">{formatPrice(item.product.price)} / unité</p>
+                  </div>
+
+                  <input
+                    type="text"
+                    inputMode="numeric"
+                    value={cartQtyDrafts[item.product.slug] ?? String(item.quantity)}
+                    onChange={(e) => {
+                      const cleaned = e.target.value.replace(/\D/g, "");
+                      setCartQtyDrafts((drafts) => ({ ...drafts, [item.product.slug]: cleaned }));
+                    }}
+                    onBlur={() => {
+                      const draft = cartQtyDrafts[item.product.slug];
+                      const normalized = clampQty(Number(draft || item.quantity || 1));
+                      updateQty(item.product.slug, normalized);
+                      setCartQtyDrafts((drafts) => ({ ...drafts, [item.product.slug]: String(normalized) }));
+                    }}
+                    className="rounded-lg border border-green-300 bg-white px-3 py-2 text-sm"
+                  />
+
+                  <p className="font-semibold text-green-900">{formatPrice(item.subtotal)}</p>
+
+                  <button
+                    type="button"
+                    onClick={() => removeItem(item.product.slug)}
+                    className="rounded-lg border border-red-200 px-3 py-2 text-sm font-medium text-red-600 hover:bg-red-50"
+                  >
+                    Retirer
+                  </button>
+                </div>
+              ))}
+            </div>
+          )}
 
           <div className="mt-4 border-t border-green-200 pt-3 flex items-center justify-between font-bold text-green-950">
             <span>Total</span>
