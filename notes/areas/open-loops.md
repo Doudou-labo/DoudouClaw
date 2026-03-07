@@ -41,4 +41,5 @@
 
 ## Auto-checkpoints
 - [ ] [AUTO 2026-03-07 midi] Checkpoint 3-min fait. Next: Ce soir 21:15 : saisir les dépenses du jour (`finance add ...`) puis vérifier (`finance recent 5`) et résumé (`finance summary`)
+- [ ] [AUTO 2026-03-07 soir] Après consolidation mémoire/PARA: exécuter l’action finance de 21:15, puis confirmer en 2 lignes dans `memory/2026-03-07.md`.
 
