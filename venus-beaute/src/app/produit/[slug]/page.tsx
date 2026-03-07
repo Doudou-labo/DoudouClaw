@@ -1,16 +1,44 @@
 "use client";
 
-import { notFound, useParams } from "next/navigation";
-import Link from "next/link";
+import { notFound, useParams, useRouter } from "next/navigation";
 import { useMemo, useState } from "react";
 import { formatPrice, products } from "@/data/products";
 
+const CART_KEY = "venus_beaute_cart";
+
 export default function ProductPage() {
   const params = useParams<{ slug: string }>();
+  const router = useRouter();
   const product = useMemo(() => products.find((p) => p.slug === params.slug), [params.slug]);
   const [quantity, setQuantity] = useState(1);
 
   if (!product) return notFound();
+
+  const addToCart = () => {
+    const raw = localStorage.getItem(CART_KEY);
+    let cart: { slug: string; quantity: number }[] = [];
+
+    if (raw) {
+      try {
+        const parsed = JSON.parse(raw);
+        if (Array.isArray(parsed)) {
+          cart = parsed;
+        }
+      } catch {
+        cart = [];
+      }
+    }
+
+    const existing = cart.find((item) => item.slug === product.slug);
+    if (existing) {
+      existing.quantity = Math.max(1, Math.min(20, existing.quantity + quantity));
+    } else {
+      cart.push({ slug: product.slug, quantity });
+    }
+
+    localStorage.setItem(CART_KEY, JSON.stringify(cart));
+    router.push("/checkout");
+  };
 
   return (
     <main className="min-h-screen bg-white px-6 py-10">
@@ -34,12 +62,12 @@ export default function ProductPage() {
             />
           </label>
 
-          <Link
-            href={`/checkout?slug=${product.slug}&qty=${quantity}`}
+          <button
+            onClick={addToCart}
             className="mt-6 inline-block rounded-xl bg-green-700 px-5 py-3 font-semibold text-white hover:bg-green-800"
           >
-            Acheter avec Stripe
-          </Link>
+            Ajouter au panier
+          </button>
         </div>
       </div>
     </main>
