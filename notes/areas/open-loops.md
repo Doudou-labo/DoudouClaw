@@ -32,6 +32,13 @@
 - [ ] Définir la borne de négo: prix cible + prix plafond (par lot)
 - [ ] Rendre un verdict final GO/NO-GO après analyse des pièces manquantes
 
+## Venus Beauté — E-commerce
+- [ ] Créer le salon Discord dédié au projet (continuité des échanges)
+- [ ] Recevoir la liste finale des produits + photos
+- [ ] Intégrer le vrai catalogue dans `venus-beaute/src/data/products.ts` (ou DB)
+- [ ] Brancher le paiement PayPal réel (sandbox puis production)
+- [ ] Ajouter pages légales (CGV, mentions légales, confidentialité)
+
 ## Auto-checkpoints
 - [ ] [AUTO 2026-03-07 midi] Checkpoint 3-min fait. Next: Ce soir 21:15 : saisir les dépenses du jour (`finance add ...`) puis vérifier (`finance recent 5`) et résumé (`finance summary`)
 

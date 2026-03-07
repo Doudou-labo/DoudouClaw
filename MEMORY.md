@@ -57,6 +57,7 @@
 - Projet immobilier Arras avec sa mère: étude de 2 appartements (1 loc étudiante + 1 usage perso), décision conditionnée à la due diligence copro complète
 - Retrouver l’équilibre émotionnel après la rupture avec Audrey
 - Reprendre le sport de façon durable malgré la contrainte d’épaule gauche instable
+- Lancer la boutique e-commerce Venus Beauté (branding vert/blanc, marché France, paiement PayPal)
 
 ### Key Decisions Made
 - Utiliser PARA + mémoire structurée pour améliorer la continuité de travail
@@ -68,6 +69,7 @@
 ### Key Decisions Made (suite)
 - Modèle primaire changé à `openai-codex/gpt-5.3-codex` (2026-03-06)
 - Queue mode global : `steer+backlog` (debounce 1200ms, cap 25, drop summarize)
+- Projet Venus Beauté démarré et aperçu public validé sur `https://venusbeaute.doudougen.xyz` (2026-03-07)
 
 ### Tools & Infrastructure
 - **ClawSuite** (2026-03-01) : Dashboard mission control — `https://clawsuite.doudougen.xyz` (port 3000, auth Basic DoudouClaw)

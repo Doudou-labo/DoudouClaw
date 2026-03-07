@@ -1,13 +1,13 @@
 # SESSION-STATE.md — Active Working Memory
 
 ## Current Task
-Exécuter la consolidation mémoire quotidienne + PARA et laisser un état propre pour reprise demain.
+Tracer le chantier Venus Beauté dans PARA + mémoire pour reprise dans un salon Discord dédié.
 
 ## Immediate Context
-- Consolidation quotidienne 2026-03-06 exécutée: N1 revu et synchronisé (`memory/2026-03-06.md`, `SESSION-STATE.md`, `RECENT_CONTEXT.md`).
-- Préférence validée et durable: rapport post-exécution des crons mémoire/PARA en Markdown + emojis, vers Discord `1472597513898033162`.
-- Points du jour consolidés: audit mémoire outillage (capability-first), installation ClawMetry + ClawBridge, suivi dossier appartement Arras.
-- Open loops immédiats: DNS public `brain.doudougen.xyz` à corriger/créer, puis test d’accès externe dashboard memory.
+- Projet boutique e-commerce lancé: `venus-beaute/` (Next.js, thème vert/blanc, France, PayPal).
+- Déploiement aperçu/prod en place: `venusbeaute.doudougen.xyz` via reverse proxy Caddy, HTTPS validé (HTTP/2 200).
+- Documentation déploiement prête: `venus-beaute/deploy/` (Caddyfile, service systemd, nginx.conf, DEPLOY.md).
+- Doudou va créer un salon dédié pour continuer le sujet proprement.
 
 ## Key Decisions (actives)
 1. Jurons français sans modération = identité DoudouClaw (trait d'authenticité systématique).
@@ -16,6 +16,7 @@ Exécuter la consolidation mémoire quotidienne + PARA et laisser un état propr
 4. Ne jamais lancer `npm install -g openclaw` avec le gateway actif.
 5. Calendrier OpenClaw = `88b14e5c160f914b9743cf46d6ff857ed6baedc24449bccee0cb56c531ac20a0@group.calendar.google.com`.
 6. Dossier appartement Arras: décision GO/NO-GO uniquement après réception + analyse du pack copro complet.
+7. Projet Venus Beauté validé: stack Next.js + déploiement Caddy sur `venusbeaute.doudougen.xyz` comme base de reprise.
 
 ## Key Files
 - `memory/2026-03-05.md`
@@ -24,4 +25,4 @@ Exécuter la consolidation mémoire quotidienne + PARA et laisser un état propr
 - `notes/areas/automations-cron.md`
 
 ## Last Updated
-2026-03-06 20:50 UTC — consolidation mémoire quotidienne + PARA effectuée.
+2026-03-07 17:48 UTC — contexte Venus Beauté consolidé (PARA + mémoire) pour reprise en salon dédié.
