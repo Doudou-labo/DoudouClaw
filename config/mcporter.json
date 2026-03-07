@@ -18,6 +18,9 @@
     },
     "qmd": {
       "command": "qmd mcp"
+    },
+    "stripe": {
+      "baseUrl": "https://mcp.stripe.com"
     }
   },
   "imports": []
