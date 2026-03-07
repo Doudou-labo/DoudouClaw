@@ -1,10 +1,15 @@
-import { notFound } from "next/navigation";
+"use client";
+
+import { notFound, useParams } from "next/navigation";
 import Link from "next/link";
+import { useMemo, useState } from "react";
 import { formatPrice, products } from "@/data/products";
 
-export default async function ProductPage({ params }: { params: Promise<{ slug: string }> }) {
-  const { slug } = await params;
-  const product = products.find((p) => p.slug === slug);
+export default function ProductPage() {
+  const params = useParams<{ slug: string }>();
+  const product = useMemo(() => products.find((p) => p.slug === params.slug), [params.slug]);
+  const [quantity, setQuantity] = useState(1);
+
   if (!product) return notFound();
 
   return (
@@ -16,8 +21,24 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
           <h1 className="text-4xl font-extrabold text-green-900">{product.name}</h1>
           <p className="mt-4 text-green-800/90">{product.description}</p>
           <p className="mt-6 text-3xl font-bold text-green-700">{formatPrice(product.price)}</p>
-          <Link href="/checkout" className="mt-6 inline-block rounded-xl bg-green-700 px-5 py-3 font-semibold text-white hover:bg-green-800">
-            Acheter via PayPal
+
+          <label className="mt-6 block text-sm font-semibold text-green-900">
+            Quantité
+            <input
+              type="number"
+              min={1}
+              max={20}
+              value={quantity}
+              onChange={(e) => setQuantity(Math.max(1, Math.min(20, Number(e.target.value) || 1)))}
+              className="mt-2 w-28 rounded-lg border border-green-300 bg-white px-3 py-2 text-sm"
+            />
+          </label>
+
+          <Link
+            href={`/checkout?slug=${product.slug}&qty=${quantity}`}
+            className="mt-6 inline-block rounded-xl bg-green-700 px-5 py-3 font-semibold text-white hover:bg-green-800"
+          >
+            Acheter avec Stripe
           </Link>
         </div>
       </div>

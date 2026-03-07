@@ -12,7 +12,7 @@ export default function Home() {
         </div>
         <nav className="flex gap-3 text-sm font-medium">
           <Link href="/boutique" className="rounded-xl border border-green-300 px-4 py-2 hover:bg-green-100">Boutique</Link>
-          <Link href="/checkout" className="rounded-xl bg-green-700 px-4 py-2 text-white hover:bg-green-800">Paiement PayPal</Link>
+          <Link href="/checkout" className="rounded-xl bg-green-700 px-4 py-2 text-white hover:bg-green-800">Paiement Stripe</Link>
         </nav>
       </header>
 
