@@ -52,7 +52,7 @@ export default function ProductPage() {
 
   return (
     <main className="min-h-screen bg-green-50 text-green-900">
-      <header className="mx-auto flex w-full max-w-6xl items-center justify-between px-4 py-5 sm:px-6">
+      <header className="mx-auto flex w-full max-w-6xl items-center justify-between px-4 py-5 sm:px-6 fade-in-up">
         <Link href="/" className="text-2xl font-black text-green-900">
           Venus<span className="text-[#a89546]">Beauté</span>
         </Link>
@@ -64,7 +64,7 @@ export default function ProductPage() {
         </div>
       </header>
 
-      <section className="bg-green-800 px-4 py-8 text-white sm:px-6">
+      <section className="bg-green-800 px-4 py-8 text-white sm:px-6 fade-in-up-delay-1">
         <div className="mx-auto max-w-5xl">
           <p className="text-xs uppercase tracking-[0.2em] text-green-100">{category}</p>
           <h1 className="mt-2 text-2xl font-extrabold leading-tight sm:text-4xl">{product.name}</h1>
@@ -73,11 +73,13 @@ export default function ProductPage() {
       </section>
 
       <section className="mx-auto grid max-w-5xl gap-6 px-4 py-8 sm:px-6 md:grid-cols-2 md:gap-10 md:py-12">
-        <div className="rounded-3xl border border-green-100 bg-white p-4 shadow-sm sm:p-6">
-          <img src={product.image} alt={product.name} className="h-[360px] w-full rounded-2xl object-cover sm:h-[430px]" />
+        <div className="group card-hover rounded-3xl border border-green-100 bg-white p-4 shadow-sm sm:p-6 fade-in-up-delay-2">
+          <div className="overflow-hidden rounded-2xl">
+            <img src={product.image} alt={product.name} className="media-hover h-[360px] w-full object-cover sm:h-[430px]" />
+          </div>
         </div>
 
-        <div className="rounded-3xl border border-green-100 bg-white p-5 shadow-sm sm:p-7">
+        <div className="card-hover rounded-3xl border border-green-100 bg-white p-5 shadow-sm sm:p-7 fade-in-up-delay-3">
           <h2 className="text-3xl font-extrabold leading-tight text-green-900 sm:text-4xl">{product.name}</h2>
 
           <div className="mt-4 flex items-end gap-3">
@@ -94,7 +96,7 @@ export default function ProductPage() {
               <button
                 type="button"
                 onClick={() => setQuantity((q) => Math.max(1, q - 1))}
-                className="border-r border-green-300 px-3 py-2 font-semibold"
+                className="button-micro border-r border-green-300 px-3 py-2 font-semibold"
               >
                 −
               </button>
@@ -102,7 +104,7 @@ export default function ProductPage() {
               <button
                 type="button"
                 onClick={() => setQuantity((q) => Math.min(20, q + 1))}
-                className="px-3 py-2 font-semibold"
+                className="button-micro px-3 py-2 font-semibold"
               >
                 +
               </button>
@@ -110,7 +112,7 @@ export default function ProductPage() {
 
             <button
               onClick={addToCart}
-              className="rounded-xl bg-green-700 px-5 py-2.5 text-sm font-bold uppercase tracking-wide text-white transition hover:bg-green-800 sm:text-base"
+              className="button-micro rounded-xl bg-green-700 px-5 py-2.5 text-sm font-bold uppercase tracking-wide text-white transition hover:bg-green-800 sm:text-base"
             >
               Ajouter au panier
             </button>
@@ -124,8 +126,8 @@ export default function ProductPage() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-5xl px-4 pb-10 sm:px-6 md:pb-14">
-        <div className="rounded-3xl border border-green-200 bg-white p-5 shadow-sm sm:p-7">
+      <section className="mx-auto max-w-5xl px-4 pb-10 sm:px-6 md:pb-14 fade-in-up-delay-3">
+        <div className="card-hover rounded-3xl border border-green-200 bg-white p-5 shadow-sm sm:p-7">
           <h3 className="text-2xl font-semibold text-[#8f8441]">Description</h3>
           <p className="mt-3 text-base leading-relaxed text-green-900/90 sm:text-lg">{product.description}</p>
           <p className="mt-3 text-base leading-relaxed text-green-900/90 sm:text-lg">

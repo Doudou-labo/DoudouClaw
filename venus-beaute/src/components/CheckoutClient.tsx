@@ -134,11 +134,11 @@ export default function CheckoutClient({ initialSlug, initialQty }: { initialSlu
 
   return (
     <main className="min-h-screen bg-green-50 px-6 py-10">
-      <div className="mx-auto max-w-4xl rounded-3xl border border-green-100 bg-white p-8 shadow-sm">
+      <div className="fade-in-up mx-auto max-w-4xl rounded-3xl border border-green-100 bg-white p-8 shadow-sm">
         <h1 className="text-3xl font-extrabold text-green-900">Panier & paiement Stripe</h1>
         <p className="mt-3 text-green-800/80">Ajoute des articles, ajuste les quantités, puis valide ton paiement sécurisé.</p>
 
-        <div className="mt-6 grid gap-4 rounded-2xl border border-green-100 bg-green-50 p-5 md:grid-cols-[1fr_auto_auto] md:items-end">
+        <div className="fade-in-up-delay-1 mt-6 grid gap-4 rounded-2xl border border-green-100 bg-green-50 p-5 md:grid-cols-[1fr_auto_auto] md:items-end">
           <label className="text-sm font-semibold text-green-900">
             Produit
             <select
@@ -175,7 +175,7 @@ export default function CheckoutClient({ initialSlug, initialQty }: { initialSlu
 
           <button
             onClick={addSelectedToCart}
-            className="rounded-xl bg-green-700 px-4 py-2 text-sm font-semibold text-white hover:bg-green-800"
+            className="button-micro rounded-xl bg-green-700 px-4 py-2 text-sm font-semibold text-white hover:bg-green-800"
           >
             Ajouter au panier
           </button>
@@ -191,7 +191,7 @@ export default function CheckoutClient({ initialSlug, initialQty }: { initialSlu
               {cartDetailed.map((item) => (
                 <div
                   key={item.product.slug}
-                  className="grid gap-3 rounded-xl border border-green-100 bg-green-50 p-3 md:grid-cols-[1fr_120px_120px_auto] md:items-center"
+                  className="card-hover grid gap-3 rounded-xl border border-green-100 bg-green-50 p-3 md:grid-cols-[1fr_120px_120px_auto] md:items-center"
                 >
                   <div>
                     <p className="font-medium text-green-900">{item.product.name}</p>
@@ -220,7 +220,7 @@ export default function CheckoutClient({ initialSlug, initialQty }: { initialSlu
                   <button
                     type="button"
                     onClick={() => removeItem(item.product.slug)}
-                    className="rounded-lg border border-red-200 px-3 py-2 text-sm font-medium text-red-600 hover:bg-red-50"
+                    className="button-micro rounded-lg border border-red-200 px-3 py-2 text-sm font-medium text-red-600 hover:bg-red-50"
                   >
                     Retirer
                   </button>
@@ -238,7 +238,7 @@ export default function CheckoutClient({ initialSlug, initialQty }: { initialSlu
         <button
           onClick={startCheckout}
           disabled={loading || cartDetailed.length === 0}
-          className="mt-6 w-full rounded-xl bg-green-600 px-5 py-3 font-semibold text-white transition hover:bg-green-700 disabled:cursor-not-allowed disabled:opacity-60"
+          className="button-micro mt-6 w-full rounded-xl bg-green-600 px-5 py-3 font-semibold text-white transition hover:bg-green-700 disabled:cursor-not-allowed disabled:opacity-60"
         >
           {loading ? "Redirection vers Stripe..." : "Payer avec Stripe"}
         </button>

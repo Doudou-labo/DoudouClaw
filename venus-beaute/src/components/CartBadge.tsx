@@ -22,9 +22,19 @@ function readCartCount() {
 
 export default function CartBadge() {
   const [count, setCount] = useState(0);
+  const [animate, setAnimate] = useState(false);
 
   useEffect(() => {
-    const refresh = () => setCount(readCartCount());
+    const refresh = () => {
+      const next = readCartCount();
+      setCount((prev) => {
+        if (next !== prev) {
+          setAnimate(true);
+          setTimeout(() => setAnimate(false), 380);
+        }
+        return next;
+      });
+    };
 
     refresh();
     window.addEventListener("storage", refresh);
@@ -37,9 +47,13 @@ export default function CartBadge() {
   }, []);
 
   return (
-    <Link href="/checkout" className="relative rounded-xl border border-green-300 px-4 py-2 hover:bg-green-100">
+    <Link href="/checkout" className="button-micro relative rounded-xl border border-green-300 px-4 py-2 hover:bg-green-100">
       Panier
-      <span className="absolute -right-2 -top-2 inline-flex h-6 min-w-6 items-center justify-center rounded-full bg-green-700 px-1 text-xs font-bold text-white">
+      <span
+        className={`absolute -right-2 -top-2 inline-flex h-6 min-w-6 items-center justify-center rounded-full bg-green-700 px-1 text-xs font-bold text-white ${
+          animate ? "cart-pulse" : ""
+        }`}
+      >
         {count}
       </span>
     </Link>
