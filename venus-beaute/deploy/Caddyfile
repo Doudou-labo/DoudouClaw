@@ -1,0 +1,20 @@
+venusbeaute.doudougen.xyz {
+  encode zstd gzip
+
+  # Basic security headers
+  header {
+    Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
+    X-Content-Type-Options "nosniff"
+    X-Frame-Options "SAMEORIGIN"
+    Referrer-Policy "strict-origin-when-cross-origin"
+    Permissions-Policy "camera=(), microphone=(), geolocation=()"
+  }
+
+  reverse_proxy 127.0.0.1:3100
+
+  # Logs (optional)
+  log {
+    output file /var/log/caddy/venusbeaute.access.log
+    format console
+  }
+}

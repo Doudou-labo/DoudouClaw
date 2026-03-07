@@ -1,0 +1,22 @@
+[Unit]
+Description=Venus Beaute Next.js app
+After=network.target
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/root/.openclaw/workspace/venus-beaute
+Environment=NODE_ENV=production
+Environment=PORT=3100
+ExecStart=/usr/bin/npm run start -- --hostname 127.0.0.1 --port 3100
+Restart=always
+RestartSec=5
+
+# Hardening (safe defaults)
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=full
+ReadWritePaths=/root/.openclaw/workspace/venus-beaute
+
+[Install]
+WantedBy=multi-user.target
