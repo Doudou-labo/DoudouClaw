@@ -41,6 +41,7 @@ export default function CheckoutClient({ initialSlug, initialQty }: { initialSlu
   const persistCart = (nextCart: CartItem[]) => {
     setCart(nextCart);
     localStorage.setItem(CART_KEY, JSON.stringify(nextCart));
+    window.dispatchEvent(new Event("venus_cart_updated"));
   };
 
   useEffect(() => {

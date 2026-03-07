@@ -1,5 +1,6 @@
 import Link from "next/link";
 import ProductCard from "@/components/ProductCard";
+import CartBadge from "@/components/CartBadge";
 import { products } from "@/data/products";
 
 export default function Home() {
@@ -13,6 +14,7 @@ export default function Home() {
         <nav className="flex gap-3 text-sm font-medium">
           <Link href="/boutique" className="rounded-xl border border-green-300 px-4 py-2 hover:bg-green-100">Boutique</Link>
           <Link href="/checkout" className="rounded-xl bg-green-700 px-4 py-2 text-white hover:bg-green-800">Paiement Stripe</Link>
+          <CartBadge />
         </nav>
       </header>
 

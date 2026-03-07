@@ -37,6 +37,7 @@ export default function ProductPage() {
     }
 
     localStorage.setItem(CART_KEY, JSON.stringify(cart));
+    window.dispatchEvent(new Event("venus_cart_updated"));
     router.push("/checkout");
   };
 
