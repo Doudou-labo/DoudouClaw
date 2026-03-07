@@ -32,9 +32,7 @@ export default function ProductPage() {
     if (raw) {
       try {
         const parsed = JSON.parse(raw);
-        if (Array.isArray(parsed)) {
-          cart = parsed;
-        }
+        if (Array.isArray(parsed)) cart = parsed;
       } catch {
         cart = [];
       }
@@ -54,7 +52,7 @@ export default function ProductPage() {
 
   return (
     <main className="min-h-screen bg-green-50 text-green-900">
-      <header className="mx-auto flex w-full max-w-6xl items-center justify-between px-6 py-5">
+      <header className="mx-auto flex w-full max-w-6xl items-center justify-between px-4 py-5 sm:px-6">
         <Link href="/" className="text-2xl font-black text-green-900">
           Venus<span className="text-[#a89546]">Beauté</span>
         </Link>
@@ -66,60 +64,71 @@ export default function ProductPage() {
         </div>
       </header>
 
-      <section className="bg-green-800 px-6 py-8 text-white">
-        <div className="mx-auto max-w-3xl text-center">
-          <h1 className="text-4xl font-extrabold leading-tight">{product.name}</h1>
-          <p className="mt-3 text-sm text-white/90">
-            Accueil / Boutique en ligne / {category} / {product.name}
-          </p>
+      <section className="bg-green-800 px-4 py-8 text-white sm:px-6">
+        <div className="mx-auto max-w-5xl">
+          <p className="text-xs uppercase tracking-[0.2em] text-green-100">{category}</p>
+          <h1 className="mt-2 text-2xl font-extrabold leading-tight sm:text-4xl">{product.name}</h1>
+          <p className="mt-3 text-sm text-white/90">Accueil / Boutique en ligne / {category} / {product.name}</p>
         </div>
       </section>
 
-      <section className="mx-auto max-w-3xl px-6 py-10">
-        <img src={product.image} alt={product.name} className="mx-auto h-[420px] w-full max-w-sm rounded-2xl object-cover" />
-
-        <h2 className="mt-8 text-5xl font-bold leading-tight text-[#8f8441]">{product.name}</h2>
-
-        <div className="mt-4 flex items-end gap-3">
-          <p className="text-3xl text-green-900/40 line-through">{formatPrice(oldPrice)}</p>
-          <p className="text-6xl font-black text-green-900">{formatPrice(product.price)}</p>
+      <section className="mx-auto grid max-w-5xl gap-6 px-4 py-8 sm:px-6 md:grid-cols-2 md:gap-10 md:py-12">
+        <div className="rounded-3xl border border-green-100 bg-white p-4 shadow-sm sm:p-6">
+          <img src={product.image} alt={product.name} className="h-[360px] w-full rounded-2xl object-cover sm:h-[430px]" />
         </div>
 
-        <p className="mt-4 text-2xl text-green-700">✔ En stock</p>
+        <div className="rounded-3xl border border-green-100 bg-white p-5 shadow-sm sm:p-7">
+          <h2 className="text-3xl font-extrabold leading-tight text-green-900 sm:text-4xl">{product.name}</h2>
 
-        <p className="mt-6 text-2xl leading-relaxed text-green-900/90">{product.description}</p>
+          <div className="mt-4 flex items-end gap-3">
+            <p className="text-xl text-green-900/40 line-through sm:text-2xl">{formatPrice(oldPrice)}</p>
+            <p className="text-4xl font-black text-[#8f8441] sm:text-5xl">{formatPrice(product.price)}</p>
+          </div>
 
-        <div className="mt-8 grid grid-cols-[180px_1fr] gap-3">
-          <div className="grid grid-cols-3 overflow-hidden rounded border border-green-300 bg-white text-2xl">
+          <p className="mt-2 text-sm text-green-700">✔ En stock · Livraison France</p>
+
+          <p className="mt-5 text-base leading-relaxed text-green-900/90 sm:text-lg">{product.description}</p>
+
+          <div className="mt-6 grid grid-cols-[120px_1fr] gap-3 sm:grid-cols-[150px_1fr]">
+            <div className="grid grid-cols-3 overflow-hidden rounded-xl border border-green-300 bg-white text-lg">
+              <button
+                type="button"
+                onClick={() => setQuantity((q) => Math.max(1, q - 1))}
+                className="border-r border-green-300 px-3 py-2 font-semibold"
+              >
+                −
+              </button>
+              <div className="flex items-center justify-center border-r border-green-300 font-semibold">{quantity}</div>
+              <button
+                type="button"
+                onClick={() => setQuantity((q) => Math.min(20, q + 1))}
+                className="px-3 py-2 font-semibold"
+              >
+                +
+              </button>
+            </div>
+
             <button
-              type="button"
-              onClick={() => setQuantity((q) => Math.max(1, q - 1))}
-              className="border-r border-green-300 px-4 py-3"
+              onClick={addToCart}
+              className="rounded-xl bg-green-700 px-5 py-2.5 text-sm font-bold uppercase tracking-wide text-white transition hover:bg-green-800 sm:text-base"
             >
-              -
-            </button>
-            <div className="flex items-center justify-center border-r border-green-300">{quantity}</div>
-            <button
-              type="button"
-              onClick={() => setQuantity((q) => Math.min(20, q + 1))}
-              className="px-4 py-3"
-            >
-              +
+              Ajouter au panier
             </button>
           </div>
 
-          <button
-            onClick={addToCart}
-            className="rounded-full bg-green-700 px-8 py-3 text-xl font-bold uppercase tracking-wide text-white hover:bg-green-800"
-          >
-            Ajouter au panier
-          </button>
+          <div className="mt-5 grid gap-2 text-sm text-green-900/80">
+            <p>• Paiement sécurisé Stripe</p>
+            <p>• Retours simplifiés</p>
+            <p>• Service client réactif</p>
+          </div>
         </div>
+      </section>
 
-        <div className="mt-8 border border-green-200 bg-white p-6 text-lg leading-relaxed text-green-900/90">
+      <section className="mx-auto max-w-5xl px-4 pb-10 sm:px-6 md:pb-14">
+        <div className="rounded-3xl border border-green-200 bg-white p-5 shadow-sm sm:p-7">
           <h3 className="text-2xl font-semibold text-[#8f8441]">Description</h3>
-          <p className="mt-3">{product.description}</p>
-          <p className="mt-3">
+          <p className="mt-3 text-base leading-relaxed text-green-900/90 sm:text-lg">{product.description}</p>
+          <p className="mt-3 text-base leading-relaxed text-green-900/90 sm:text-lg">
             Convient parfaitement à une routine quotidienne. Formule douce, texture agréable et résultats visibles avec
             une application régulière.
           </p>
