@@ -9,6 +9,8 @@ type CartItem = {
 };
 
 const CART_KEY = "venus_beaute_cart";
+const SHIPPING = 4.9;
+const FREE_SHIPPING_THRESHOLD = 60;
 
 const clampQty = (value: number) => Math.max(1, Math.min(20, value));
 
@@ -38,7 +40,9 @@ export default function CheckoutClient({ initialSlug, initialQty }: { initialSlu
       );
   }, [cart]);
 
-  const total = useMemo(() => cartDetailed.reduce((sum, item) => sum + item.subtotal, 0), [cartDetailed]);
+  const subtotal = useMemo(() => cartDetailed.reduce((sum, item) => sum + item.subtotal, 0), [cartDetailed]);
+  const shipping = subtotal === 0 ? 0 : subtotal >= FREE_SHIPPING_THRESHOLD ? 0 : SHIPPING;
+  const total = subtotal + shipping;
 
   const persistCart = (nextCart: CartItem[]) => {
     setCart(nextCart);
@@ -133,115 +137,178 @@ export default function CheckoutClient({ initialSlug, initialQty }: { initialSlu
   };
 
   return (
-    <main className="min-h-screen bg-green-50 px-6 py-10">
-      <div className="fade-in-up mx-auto max-w-4xl rounded-3xl border border-green-100 bg-white p-8 shadow-sm">
-        <h1 className="text-3xl font-extrabold text-green-900">Panier & paiement Stripe</h1>
-        <p className="mt-3 text-green-800/80">Ajoute des articles, ajuste les quantités, puis valide ton paiement sécurisé.</p>
-
-        <div className="fade-in-up-delay-1 mt-6 grid gap-4 rounded-2xl border border-green-100 bg-green-50 p-5 md:grid-cols-[1fr_auto_auto] md:items-end">
-          <label className="text-sm font-semibold text-green-900">
-            Produit
-            <select
-              value={selectedSlug}
-              onChange={(e) => setSelectedSlug(e.target.value)}
-              className="mt-2 w-full rounded-lg border border-green-300 bg-white px-3 py-2 text-sm"
-            >
-              {products.map((product) => (
-                <option key={product.id} value={product.slug}>
-                  {product.name} — {formatPrice(product.price)}
-                </option>
-              ))}
-            </select>
-          </label>
-
-          <label className="text-sm font-semibold text-green-900">
-            Quantité
-            <input
-              type="text"
-              inputMode="numeric"
-              value={quantityInput}
-              onChange={(e) => {
-                const cleaned = e.target.value.replace(/\D/g, "");
-                if (cleaned === "") {
-                  setQuantityInput("");
-                  return;
-                }
-                setQuantityInput(String(clampQty(Number(cleaned))));
-              }}
-              onBlur={() => setQuantityInput(String(clampQty(Number(quantityInput || 1))))}
-              className="mt-2 w-full rounded-lg border border-green-300 bg-white px-3 py-2 text-sm"
-            />
-          </label>
-
-          <button
-            onClick={addSelectedToCart}
-            className="button-micro rounded-xl bg-green-700 px-4 py-2 text-sm font-semibold text-white hover:bg-green-800"
-          >
-            Ajouter au panier
-          </button>
+    <main className="min-h-screen bg-green-50 px-4 py-8 sm:px-6 sm:py-10">
+      <div className="fade-in-up mx-auto max-w-7xl">
+        <div className="text-center">
+          <p className="text-sm font-semibold uppercase tracking-[0.25em] text-green-700">Venus Beauté</p>
+          <h1 className="mt-3 text-3xl font-extrabold text-green-950 sm:text-4xl">Récapitulatif de mon panier</h1>
+          <p className="mt-2 text-sm text-green-800/80">Un panier plus clean, plus premium, mais toujours dans notre DA 🌿</p>
         </div>
 
-        <div className="mt-6 rounded-2xl border border-green-100 bg-white p-5">
-          <p className="font-semibold text-green-900">Ton panier</p>
+        <div className="fade-in-up-delay-1 mt-8 grid gap-6 xl:grid-cols-[1.6fr_0.9fr]">
+          <section className="space-y-5">
+            <div className="rounded-3xl border border-green-100 bg-white p-5 shadow-sm">
+              <div className="grid gap-4 md:grid-cols-[1fr_140px_140px_auto] md:items-end">
+                <label className="text-sm font-semibold text-green-900">
+                  Produit
+                  <select
+                    value={selectedSlug}
+                    onChange={(e) => setSelectedSlug(e.target.value)}
+                    className="mt-2 w-full rounded-xl border border-green-200 bg-green-50 px-4 py-3 text-sm text-green-900 outline-none transition focus:border-green-500"
+                  >
+                    {products.map((product) => (
+                      <option key={product.id} value={product.slug}>
+                        {product.name} — {formatPrice(product.price)}
+                      </option>
+                    ))}
+                  </select>
+                </label>
 
-          {cartDetailed.length === 0 ? (
-            <p className="mt-3 text-sm text-green-800/80">Ton panier est vide pour l’instant.</p>
-          ) : (
-            <div className="mt-3 space-y-3">
-              {cartDetailed.map((item) => (
-                <div
-                  key={item.product.slug}
-                  className="card-hover grid gap-3 rounded-xl border border-green-100 bg-green-50 p-3 md:grid-cols-[1fr_120px_120px_auto] md:items-center"
-                >
-                  <div>
-                    <p className="font-medium text-green-900">{item.product.name}</p>
-                    <p className="text-sm text-green-800/80">{formatPrice(item.product.price)} / unité</p>
-                  </div>
-
+                <label className="text-sm font-semibold text-green-900">
+                  Quantité
                   <input
                     type="text"
                     inputMode="numeric"
-                    value={cartQtyDrafts[item.product.slug] ?? String(item.quantity)}
+                    value={quantityInput}
                     onChange={(e) => {
                       const cleaned = e.target.value.replace(/\D/g, "");
-                      setCartQtyDrafts((drafts) => ({ ...drafts, [item.product.slug]: cleaned }));
+                      if (cleaned === "") {
+                        setQuantityInput("");
+                        return;
+                      }
+                      setQuantityInput(String(clampQty(Number(cleaned))));
                     }}
-                    onBlur={() => {
-                      const draft = cartQtyDrafts[item.product.slug];
-                      const normalized = clampQty(Number(draft || item.quantity || 1));
-                      updateQty(item.product.slug, normalized);
-                      setCartQtyDrafts((drafts) => ({ ...drafts, [item.product.slug]: String(normalized) }));
-                    }}
-                    className="rounded-lg border border-green-300 bg-white px-3 py-2 text-sm"
+                    onBlur={() => setQuantityInput(String(clampQty(Number(quantityInput || 1))))}
+                    className="mt-2 w-full rounded-xl border border-green-200 bg-green-50 px-4 py-3 text-sm text-green-900 outline-none transition focus:border-green-500"
                   />
+                </label>
 
-                  <p className="font-semibold text-green-900">{formatPrice(item.subtotal)}</p>
-
-                  <button
-                    type="button"
-                    onClick={() => removeItem(item.product.slug)}
-                    className="button-micro rounded-lg border border-red-200 px-3 py-2 text-sm font-medium text-red-600 hover:bg-red-50"
-                  >
-                    Retirer
-                  </button>
+                <div className="rounded-2xl bg-green-50 px-4 py-3 text-sm text-green-900">
+                  <p className="text-xs uppercase tracking-wide text-green-700">Prix</p>
+                  <p className="mt-1 text-lg font-bold">{formatPrice(selectedProduct.price)}</p>
                 </div>
-              ))}
+
+                <button
+                  onClick={addSelectedToCart}
+                  className="button-micro rounded-2xl bg-green-700 px-5 py-3 text-sm font-semibold text-white hover:bg-green-800"
+                >
+                  Ajouter
+                </button>
+              </div>
             </div>
-          )}
 
-          <div className="mt-4 border-t border-green-200 pt-3 flex items-center justify-between font-bold text-green-950">
-            <span>Total</span>
-            <span>{formatPrice(total)}</span>
-          </div>
+            <div className="rounded-3xl border border-green-100 bg-white p-3 shadow-sm sm:p-4">
+              {cartDetailed.length === 0 ? (
+                <p className="rounded-2xl bg-green-50 px-4 py-6 text-center text-sm text-green-800/80">
+                  Ton panier est vide pour l’instant.
+                </p>
+              ) : (
+                <div className="space-y-3">
+                  {cartDetailed.map((item) => (
+                    <article
+                      key={item.product.slug}
+                      className="card-hover grid gap-4 rounded-2xl border border-green-100 bg-white p-4 md:grid-cols-[96px_1fr_120px_120px_auto] md:items-center"
+                    >
+                      <div className="overflow-hidden rounded-2xl border border-green-100 bg-green-50">
+                        <img src={item.product.image} alt={item.product.name} className="h-24 w-full object-cover" />
+                      </div>
+
+                      <div>
+                        <h3 className="text-base font-bold text-green-950">{item.product.name}</h3>
+                        <p className="mt-1 text-sm text-green-800/70">{item.product.shortDescription}</p>
+                        <p className="mt-2 text-sm font-semibold text-green-800">{formatPrice(item.product.price)}</p>
+                      </div>
+
+                      <div>
+                        <p className="mb-2 text-xs font-semibold uppercase tracking-wide text-green-700">Quantité</p>
+                        <input
+                          type="text"
+                          inputMode="numeric"
+                          value={cartQtyDrafts[item.product.slug] ?? String(item.quantity)}
+                          onChange={(e) => {
+                            const cleaned = e.target.value.replace(/\D/g, "");
+                            setCartQtyDrafts((drafts) => ({ ...drafts, [item.product.slug]: cleaned }));
+                          }}
+                          onBlur={() => {
+                            const draft = cartQtyDrafts[item.product.slug];
+                            const normalized = clampQty(Number(draft || item.quantity || 1));
+                            updateQty(item.product.slug, normalized);
+                            setCartQtyDrafts((drafts) => ({ ...drafts, [item.product.slug]: String(normalized) }));
+                          }}
+                          className="w-full rounded-xl border border-green-200 bg-green-50 px-3 py-3 text-sm text-green-900 outline-none transition focus:border-green-500"
+                        />
+                      </div>
+
+                      <div>
+                        <p className="mb-2 text-xs font-semibold uppercase tracking-wide text-green-700">Sous-total</p>
+                        <p className="text-lg font-bold text-green-950">{formatPrice(item.subtotal)}</p>
+                      </div>
+
+                      <button
+                        type="button"
+                        onClick={() => removeItem(item.product.slug)}
+                        className="button-micro rounded-xl border border-red-200 px-3 py-3 text-sm font-medium text-red-600 hover:bg-red-50"
+                      >
+                        Retirer
+                      </button>
+                    </article>
+                  ))}
+                </div>
+              )}
+            </div>
+          </section>
+
+          <aside className="fade-in-up-delay-2 space-y-4">
+            <div className="rounded-3xl border border-green-100 bg-white p-6 shadow-sm">
+              <h2 className="text-xl font-bold text-green-950">Résumé</h2>
+              <div className="mt-5 space-y-3 text-sm text-green-900/80">
+                <div className="flex items-center justify-between">
+                  <span>Produits</span>
+                  <span className="font-semibold text-green-950">{formatPrice(subtotal)}</span>
+                </div>
+                <div className="flex items-center justify-between">
+                  <span>Livraison</span>
+                  <span className="font-semibold text-green-950">{shipping === 0 ? "Offerte" : formatPrice(shipping)}</span>
+                </div>
+              </div>
+
+              <div className="mt-5 border-t border-green-100 pt-5 flex items-center justify-between">
+                <span className="text-lg font-bold text-green-950">Total</span>
+                <span className="text-2xl font-black text-green-950">{formatPrice(total)}</span>
+              </div>
+
+              <button
+                onClick={startCheckout}
+                disabled={loading || cartDetailed.length === 0}
+                className="button-micro mt-6 w-full rounded-2xl bg-green-700 px-5 py-3.5 text-sm font-semibold text-white hover:bg-green-800 disabled:cursor-not-allowed disabled:opacity-60"
+              >
+                {loading ? "Redirection vers Stripe..." : "Valider ma commande"}
+              </button>
+            </div>
+
+            <div className="rounded-3xl border border-green-100 bg-white p-6 shadow-sm">
+              <p className="text-sm font-semibold text-green-950">Tu as un code promo ?</p>
+              <div className="mt-3 flex gap-2">
+                <input
+                  type="text"
+                  placeholder="Mon bon de réduction"
+                  className="w-full rounded-xl border border-green-200 bg-green-50 px-4 py-3 text-sm outline-none transition focus:border-green-500"
+                />
+                <button className="button-micro rounded-xl border border-green-200 px-4 py-3 text-sm font-medium text-green-800 hover:bg-green-50">
+                  Ajouter
+                </button>
+              </div>
+            </div>
+
+            <div className="rounded-3xl border border-green-100 bg-white p-6 shadow-sm">
+              <div className="space-y-3 text-sm text-green-900/80">
+                <p>🚚 Expédié rapidement</p>
+                <p>🎁 Livraison offerte dès {formatPrice(FREE_SHIPPING_THRESHOLD)}</p>
+                <p>🔒 Paiement ultra sécurisé</p>
+              </div>
+            </div>
+          </aside>
         </div>
-
-        <button
-          onClick={startCheckout}
-          disabled={loading || cartDetailed.length === 0}
-          className="button-micro mt-6 w-full rounded-xl bg-green-600 px-5 py-3 font-semibold text-white transition hover:bg-green-700 disabled:cursor-not-allowed disabled:opacity-60"
-        >
-          {loading ? "Redirection vers Stripe..." : "Payer avec Stripe"}
-        </button>
       </div>
     </main>
   );
