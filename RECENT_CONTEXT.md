@@ -5,23 +5,29 @@
 
 ---
 
-## Latest Session
+## Latest Session — 2026-03-08
 
 ### Topic
-Consolidation mémoire quotidienne + PARA (fin de journée, 2026-03-07).
+Journée dev Venus Beauté + config modèles OpenClaw + PARA weekly review.
 
 ### Key Points
-- N1 relu et synchronisé: `SESSION-STATE.md`, `MEMORY.md`, `memory/2026-03-07.md`.
-- Faits saillants consolidés: projet Venus Beauté lancé et déployé (`https://venusbeaute.doudougen.xyz`), continuité prévue via salon Discord dédié.
-- Open loops validés: priorités inchangées sur Venus Beauté, appartement Arras, progression RCS et routine finance du soir.
-- Préférence durable déjà active: reporting cron Memory+PARA en Markdown + emojis vers Discord `1472597513898033162` (announce, best-effort).
+- **Modèles** : ordre fallback validé → `openai-codex/gpt-5.4` → `anthropic/claude-sonnet-4-6` → `kimi-coding/k2p5` ; `openclaw.json` mis à jour.
+- **Préférence outils** : exploiter proactivement tous les outils pertinents sans rester bloqué sur un sous-ensemble par habitude.
+- **Venus Beauté** : panier premium retravaillé (Stripe, 2 colonnes, sidebar résumé, badge animé), fiche produit cohérente DA vert/blanc, nouveau produit *Douceur Nettoyante Fraîcheur* (31€) ajouté.
+- **PARA snapshot** : Projects=8, Areas=15, Resources=13, Archive=1, Open loops=20.
+- **Self-improving** : aucun pattern d'erreur ou correction utilisateur détecté cette semaine.
+
+### Prochains pas
+- [ ] Finance tracker du soir (saisir dépenses du jour)
+- [ ] Recevoir vraies photos produits Venus Beauté
+- [ ] Préparer visite Marc (DR) le 31/03/2026
 
 ### Status
 - [x] Consolidation mémoire quotidienne exécutée
 - [x] Synchronisation N1 effectuée
-- [x] Revue PARA / open loops effectuée
-- [ ] Continuer l’exécution des prochains pas (finance + Venus Beauté)
+- [x] Revue PARA + Self-improving weekly effectuées
+- [ ] Finance tracker soir
 
 ---
 
-*Last auto-update: 2026-03-07 20:50 UTC*
+*Last auto-update: 2026-03-08 20:50 UTC*

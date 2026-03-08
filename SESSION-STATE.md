@@ -1,15 +1,14 @@
 # SESSION-STATE.md — Active Working Memory
 
 ## Current Task
-Consolidation mémoire quotidienne + PARA exécutée (journal, contexte actif, highlights) avec traçabilité Git.
+Consolidation mémoire quotidienne + PARA exécutée (2026-03-08 20:50 UTC).
 
 ## Immediate Context
-- Projet boutique e-commerce lancé: `venus-beaute/` (Next.js, thème vert/blanc, France, PayPal).
-- Déploiement aperçu/prod en place: `venusbeaute.doudougen.xyz` via reverse proxy Caddy, HTTPS validé (HTTP/2 200).
-- Consolidation du 07/03 effectuée: `memory/2026-03-07.md` enrichi, `RECENT_CONTEXT.md` rafraîchi, cohérence N1 vérifiée.
-- Préférence reporting cron Memory+PARA déjà mémorisée: résumé Markdown + emojis à publier en best-effort dans Discord `1472597513898033162`.
-- Demande active du 08/03: définir l'ordre de modèles principal/fallback sur `openai-codex/gpt-5.4` -> `anthropic/claude-sonnet-4-6` -> `kimi-coding/k2p5`.
-- Préférence opérationnelle du 08/03: exploiter de façon proactive tous les outils pertinents disponibles, sans rester bloqué sur un sous-ensemble par habitude.
+- Projet boutique e-commerce Venus Beauté : panier premium (Stripe, 2 colonnes, badge animé), fiche produit cohérente DA vert/blanc, nouveau produit Douceur Nettoyante Fraîcheur (31€) ajouté.
+- Déploiement actif : `venusbeaute.doudougen.xyz` via Caddy HTTPS.
+- Ordre modèles confirmé : `openai-codex/gpt-5.4` → `anthropic/claude-sonnet-4-6` → `kimi-coding/k2p5` ; `openclaw.json` mis à jour.
+- Préférence opérationnelle : exploiter proactivement tous les outils pertinents, sans enchaîner des appels inutiles.
+- Reporting cron Memory+PARA → Discord `1472597513898033162` (Markdown + emojis, best-effort).
 
 ## Key Decisions (actives)
 1. Jurons français sans modération = identité DoudouClaw (trait d'authenticité systématique).
@@ -21,10 +20,10 @@ Consolidation mémoire quotidienne + PARA exécutée (journal, contexte actif, h
 7. Projet Venus Beauté validé: stack Next.js + déploiement Caddy sur `venusbeaute.doudougen.xyz` comme base de reprise.
 
 ## Key Files
-- `memory/2026-03-07.md`
+- `memory/2026-03-08.md`
 - `notes/projects/venus-beaute-ecommerce.md`
 - `notes/areas/open-loops.md`
 - `RECENT_CONTEXT.md`
 
 ## Last Updated
-2026-03-07 20:50 UTC — consolidation mémoire quotidienne + PARA effectuée.
+2026-03-08 20:50 UTC — consolidation mémoire quotidienne + PARA effectuée.
