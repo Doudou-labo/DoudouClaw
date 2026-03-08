@@ -66,6 +66,11 @@ export async function POST(req: NextRequest) {
       shipping_address_collection: {
         allowed_countries: ["FR"],
       },
+      shipping_options: [
+        {
+          shipping_rate: "shr_1T8nET62KsXIqxXvf2Qbnh9R",
+        },
+      ],
       metadata: {
         source: "venus-beaute-web",
         cartSize: String(normalized.length),
