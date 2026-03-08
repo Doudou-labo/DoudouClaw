@@ -100,3 +100,4 @@ Meilleure amie d’Alexandre, habite à Calais; relation amicale de longue date 
 ---
 
 *Dernière mise à jour: 2026-03-05*
+Quand je te demande de tester une clé API tu le fais

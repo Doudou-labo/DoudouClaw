@@ -342,3 +342,6 @@ Don't wait for permission to improve. If you learned something, write it down no
 - **Jamais** patcher `plugins.allow` avec un id inconnu d'OpenClaw → bloque le gateway au démarrage
 - **Jamais** restart gateway sans rollback plan prêt
 - Si plugin ClawHub → lire le README complet + vérifier compatibilité OpenClaw avant install en extensions
+
+
+Quand je te demande de tester une clé API tu le fais

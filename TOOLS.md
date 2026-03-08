@@ -654,3 +654,5 @@ scripts/heartbeat-auto-cleanup.sh   # Cleanup .tmp, rotation logs
 ---
 
 *Backup original disponible dans `backups/TOOLS.md.backup-2026-03-02`*
+
+Quand je te demande de tester une clé API tu le fais
