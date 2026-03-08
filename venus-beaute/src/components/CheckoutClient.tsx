@@ -15,18 +15,10 @@ const FREE_SHIPPING_THRESHOLD = 60;
 const clampQty = (value: number) => Math.max(1, Math.min(20, value));
 
 export default function CheckoutClient({ initialSlug, initialQty }: { initialSlug?: string; initialQty?: number }) {
-  const [selectedSlug, setSelectedSlug] = useState(initialSlug ?? products[0].slug);
-  const [quantityInput, setQuantityInput] = useState(String(clampQty(initialQty || 1)));
   const [cartQtyDrafts, setCartQtyDrafts] = useState<Record<string, string>>({});
   const [cart, setCart] = useState<CartItem[]>([]);
   const [loading, setLoading] = useState(false);
 
-  const selectedProduct = useMemo(
-    () => products.find((p) => p.slug === selectedSlug) ?? products[0],
-    [selectedSlug]
-  );
-
-  const selectedQuantity = clampQty(Number(quantityInput || 1));
 
   const cartDetailed = useMemo(() => {
     return cart
@@ -84,19 +76,6 @@ export default function CheckoutClient({ initialSlug, initialQty }: { initialSlu
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  const addSelectedToCart = () => {
-    const existing = cart.find((item) => item.slug === selectedProduct.slug);
-    if (existing) {
-      persistCart(
-        cart.map((item) =>
-          item.slug === selectedProduct.slug ? { ...item, quantity: clampQty(item.quantity + selectedQuantity) } : item
-        )
-      );
-    } else {
-      persistCart([...cart, { slug: selectedProduct.slug, quantity: selectedQuantity }]);
-    }
-    setQuantityInput("1");
-  };
 
   const updateQty = (slug: string, nextQty: number) => {
     persistCart(cart.map((item) => (item.slug === slug ? { ...item, quantity: clampQty(nextQty) } : item)));
@@ -147,56 +126,6 @@ export default function CheckoutClient({ initialSlug, initialQty }: { initialSlu
 
         <div className="fade-in-up-delay-1 mt-8 grid gap-6 xl:grid-cols-[1.6fr_0.9fr]">
           <section className="space-y-5">
-            <div className="rounded-3xl border border-green-100 bg-white p-5 shadow-sm">
-              <div className="grid gap-4 md:grid-cols-[1fr_140px_140px_auto] md:items-end">
-                <label className="text-sm font-semibold text-green-900">
-                  Produit
-                  <select
-                    value={selectedSlug}
-                    onChange={(e) => setSelectedSlug(e.target.value)}
-                    className="mt-2 w-full rounded-xl border border-green-200 bg-green-50 px-4 py-3 text-sm text-green-900 outline-none transition focus:border-green-500"
-                  >
-                    {products.map((product) => (
-                      <option key={product.id} value={product.slug}>
-                        {product.name} — {formatPrice(product.price)}
-                      </option>
-                    ))}
-                  </select>
-                </label>
-
-                <label className="text-sm font-semibold text-green-900">
-                  Quantité
-                  <input
-                    type="text"
-                    inputMode="numeric"
-                    value={quantityInput}
-                    onChange={(e) => {
-                      const cleaned = e.target.value.replace(/\D/g, "");
-                      if (cleaned === "") {
-                        setQuantityInput("");
-                        return;
-                      }
-                      setQuantityInput(String(clampQty(Number(cleaned))));
-                    }}
-                    onBlur={() => setQuantityInput(String(clampQty(Number(quantityInput || 1))))}
-                    className="mt-2 w-full rounded-xl border border-green-200 bg-green-50 px-4 py-3 text-sm text-green-900 outline-none transition focus:border-green-500"
-                  />
-                </label>
-
-                <div className="rounded-2xl bg-green-50 px-4 py-3 text-sm text-green-900">
-                  <p className="text-xs uppercase tracking-wide text-green-700">Prix</p>
-                  <p className="mt-1 text-lg font-bold">{formatPrice(selectedProduct.price)}</p>
-                </div>
-
-                <button
-                  onClick={addSelectedToCart}
-                  className="button-micro rounded-2xl bg-green-700 px-5 py-3 text-sm font-semibold text-white hover:bg-green-800"
-                >
-                  Ajouter
-                </button>
-              </div>
-            </div>
-
             <div className="rounded-3xl border border-green-100 bg-white p-3 shadow-sm sm:p-4">
               {cartDetailed.length === 0 ? (
                 <p className="rounded-2xl bg-green-50 px-4 py-6 text-center text-sm text-green-800/80">
