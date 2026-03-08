@@ -49,3 +49,29 @@ L'image est alors automatiquement attachée à la réponse Discord.
 - **Notes**: Workflow documenté et automatisable dorénavant
 
 ---
+
+## [LRN-20260308-001] correction
+
+**Logged**: 2026-03-08T16:52:00Z
+**Priority**: high
+**Status**: pending
+**Area**: docs
+
+### Summary
+La mémoire vectorielle (`memory_recall` / `memory_store`) est sous-utilisée par l’agent en pratique, même sans demande explicite de l’utilisateur.
+
+### Details
+L’utilisateur a signalé à juste titre que le nombre d’utilisations des outils `memory_*` sur 24h et 7 jours est très faible. En pratique, l’agent s’appuie souvent sur les fichiers N1 (`SESSION-STATE.md`, `MEMORY.md`, journaux du jour) et sur le contexte injecté, mais ne déclenche pas assez spontanément les outils de mémoire sémantique. Le comportement attendu est pourtant d’utiliser `memory_recall` avant les questions de contexte passé, et `memory_store` / miroir local après décisions, préférences, corrections et faits durables.
+
+### Suggested Action
+- Déclencher plus systématiquement `memory_recall` sur les questions de contexte, d’historique, de préférences et de décisions passées.
+- Déclencher `memory_store` après corrections utilisateur, préférences stables, décisions et faits durables, puis faire le miroir local requis.
+- Vérifier régulièrement les compteurs d’usage mémoire pour éviter une dérive silencieuse.
+
+### Metadata
+- Source: user_feedback
+- Related Files: AGENTS.md, MEMORY.md, SESSION-STATE.md
+- Tags: memory, recall, ltm, correction
+- See Also: -
+
+---
