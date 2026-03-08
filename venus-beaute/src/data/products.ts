@@ -46,6 +46,18 @@ export const products: Product[] = [
     category: "Corps",
     badge: "Nouveau",
   },
+  {
+    id: "p4",
+    slug: "douceur-nettoyante-fraicheur",
+    name: "Douceur Nettoyante Fraîcheur",
+    shortDescription: "Crème démaquillante visage, toutes peaux",
+    description:
+      "Crème démaquillante visage à la texture baume pour démaquiller en douceur. Adaptée à tous types de peaux, elle laisse la peau douce, fraîche, confortable et propre grâce à l'extrait d'aloe vera.",
+    price: 31,
+    image: "https://images.unsplash.com/photo-1571781926291-c477ebfd024b?q=80&w=1200&auto=format&fit=crop",
+    category: "Visage",
+    badge: "Nouveau",
+  },
 ];
 
 export const formatPrice = (price: number) =>
