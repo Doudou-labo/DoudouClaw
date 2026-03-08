@@ -5,7 +5,6 @@
 ## En cours
 
 ### Finance Tracker - Pilotage 7 jours
-- [ ] Ce soir 21:15 : saisir les dépenses du jour (`finance add ...`) puis vérifier (`finance recent 5`) et résumé (`finance summary`)
 - [ ] Avant la fin du pilote (16/02) : noter 3 catégories à ajuster (si besoin) + 1 friction d'usage (ce qui bloque)
 - [ ] J+7 (16/02) : créer 1 objectif d'épargne + 1 récurrence (ex : Spotify) et valider que ça tient dans ta vraie vie
 
@@ -22,23 +21,10 @@
 - [ ] **🔴 PRIORITÉ — Préparer la visite de Marc (DR) le 31/03/2026** → Issue #18
 - [ ] **Mettre en place le parking sollicitations** → Issue #20
 - [ ] **Maîtriser la lecture du compte d'exploitation** → Issue #19
-- [ ] **Tester l'entretien individuel** → Issue #28
 - [ ] **Documenter 1 tâche RCS par semaine** → Issue #21
 - [ ] **Maîtriser les 25 incontournables** → Issue #22
 
-## Appartement Arras — Due diligence
-- [ ] Récupérer le pack copro complet: PV AG 3 ans + état daté/pré-état daté + détail charges réelles + taxe foncière
-- [ ] Chiffrer le coût total annuel réel par lot (charges + énergie + assurance + taxe)
-- [ ] Définir la borne de négo: prix cible + prix plafond (par lot)
-- [ ] Rendre un verdict final GO/NO-GO après analyse des pièces manquantes
-
 ## Venus Beauté — E-commerce
-- [ ] Créer le salon Discord dédié au projet (continuité des échanges)
 - [ ] Recevoir la liste finale des produits + photos
 - [ ] Intégrer le vrai catalogue dans `venus-beaute/src/data/products.ts` (ou DB)
-- [ ] Brancher le paiement PayPal réel (sandbox puis production)
 - [ ] Ajouter pages légales (CGV, mentions légales, confidentialité)
-
-## Auto-checkpoints
-- [ ] [AUTO 2026-03-08 midi] Checkpoint 3-min fait. Next: Ce soir 21:15 : saisir les dépenses du jour (`finance add ...`) puis vérifier (`finance recent 5`) et résumé (`finance summary`)
-
