@@ -8,6 +8,7 @@ Consolidation mémoire quotidienne + PARA exécutée (journal, contexte actif, h
 - Déploiement aperçu/prod en place: `venusbeaute.doudougen.xyz` via reverse proxy Caddy, HTTPS validé (HTTP/2 200).
 - Consolidation du 07/03 effectuée: `memory/2026-03-07.md` enrichi, `RECENT_CONTEXT.md` rafraîchi, cohérence N1 vérifiée.
 - Préférence reporting cron Memory+PARA déjà mémorisée: résumé Markdown + emojis à publier en best-effort dans Discord `1472597513898033162`.
+- Demande active du 08/03: définir l'ordre de modèles principal/fallback sur `openai-codex/gpt-5.4` -> `anthropic/claude-sonnet-4-6` -> `kimi-coding/k2p5`.
 
 ## Key Decisions (actives)
 1. Jurons français sans modération = identité DoudouClaw (trait d'authenticité systématique).

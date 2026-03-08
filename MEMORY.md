@@ -68,6 +68,7 @@
 
 ### Key Decisions Made (suite)
 - Modèle primaire changé à `openai-codex/gpt-5.3-codex` (2026-03-06)
+- Ordre de modèles principal/fallback mis à jour (2026-03-08) : `openai-codex/gpt-5.4` -> `anthropic/claude-sonnet-4-6` -> `kimi-coding/k2p5`
 - Queue mode global : `steer+backlog` (debounce 1200ms, cap 25, drop summarize)
 - Projet Venus Beauté démarré et aperçu public validé sur `https://venusbeaute.doudougen.xyz` (2026-03-07)
 
