@@ -70,6 +70,9 @@ export async function POST(req: NextRequest) {
         {
           shipping_rate: "shr_1T8nET62KsXIqxXvf2Qbnh9R",
         },
+        {
+          shipping_rate: "shr_1T8nPC62KsXIqxXv3fQ0pigS",
+        },
       ],
       metadata: {
         source: "venus-beaute-web",
