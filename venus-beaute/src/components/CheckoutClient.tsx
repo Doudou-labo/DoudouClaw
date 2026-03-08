@@ -214,6 +214,10 @@ export default function CheckoutClient({ initialSlug, initialQty }: { initialSlu
                 <span className="text-2xl font-black text-green-950">{formatPrice(total)}</span>
               </div>
 
+              <p className="mt-4 rounded-2xl bg-green-50 px-4 py-3 text-sm text-green-800">
+                Bon de réduction à saisir au moment du paiement sur la page sécurisée Stripe.
+              </p>
+
               <button
                 onClick={startCheckout}
                 disabled={loading || cartDetailed.length === 0}
