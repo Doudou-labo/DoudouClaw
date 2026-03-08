@@ -122,6 +122,14 @@ export default function CheckoutClient({ initialSlug, initialQty }: { initialSlu
           <p className="text-sm font-semibold uppercase tracking-[0.25em] text-green-700">Venus Beauté</p>
           <h1 className="mt-3 text-3xl font-extrabold text-green-950 sm:text-4xl">Récapitulatif de mon panier</h1>
           <p className="mt-2 text-sm text-green-800/80">Un panier plus clean, plus premium, mais toujours dans notre DA 🌿</p>
+          <div className="mt-5 flex justify-center">
+            <a
+              href="/boutique"
+              className="button-micro inline-flex items-center rounded-2xl border border-green-200 bg-white px-5 py-3 text-sm font-semibold text-green-800 shadow-sm hover:bg-green-50"
+            >
+              ← Continuer mes achats
+            </a>
+          </div>
         </div>
 
         <div className="fade-in-up-delay-1 mt-8 grid gap-6 xl:grid-cols-[1.6fr_0.9fr]">
