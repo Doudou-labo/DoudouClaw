@@ -497,7 +497,15 @@ bash scripts/fsxmemory-vsearch.sh "décisions importantes" --deep
   - “si ça coupe on reprend là” → `checkpoint`
   - “on s’arrête là” → `handoff`
   - “tu te rappelles…” → `search` / `vsearch`
-- **Règle miroir importante :** une décision durable ne doit pas rester seulement dans `MEMORY.md` / journal du jour ; si `fsxmemory` est actif, elle doit aussi être rangée dans sa catégorie structurée (`memory/decisions/`, `memory/knowledge/`, etc.).
+- **Règle miroir importante :** tout ce qui est conservé dans la mémoire générale (`SESSION-STATE.md`, `MEMORY.md`, journal du jour, snapshots, handoffs) doit aussi avoir son ancrage `fsxmemory` si une catégorie adaptée existe.
+- Exemples :
+  - décision → `memory/decisions/`
+  - préférence/règle/fait durable → `memory/knowledge/` ou `memory/procedures/`
+  - personne → `memory/people/`
+  - projet/open loop durable → `memory/projects/`
+  - fin de session / reprise → `memory/handoffs/` + checkpoint si utile
+  - idée brute / note rapide → `memory/inbox/`
+- Principe simple : **si ça mérite d’être gardé, ça mérite aussi son miroir fsxmemory**.
 
 **Gotchas:**
 - Le package npm original `@foresigxt/foresigxt-cli-memory` n’était pas publiquement disponible → implémentation bash maison des commandes.

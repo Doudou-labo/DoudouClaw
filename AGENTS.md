@@ -101,11 +101,17 @@ Templates disponibles dans `notes/resources/templates/`.
 - L’utilisateur parle normalement; l’agent choisit l’action mémoire adaptée sans exiger de syntaxe CLI.
 - Auto-`capture` pour idées/TODOs rapides.
 - Auto-`remember` pour décisions, préférences stables, règles, faits durables.
-- **Règle miroir fsxmemory:** toute décision durable confirmée par l’utilisateur doit être ancrée à la fois dans la mémoire générale (`SESSION-STATE.md` / `MEMORY.md` / journal du jour) **et** dans un fichier structuré `fsxmemory` (`memory/decisions/`, `memory/knowledge/`, etc.) quand une catégorie claire existe.
+- **Règle miroir fsxmemory (globale):** tout élément jugé digne d’être conservé dans `SESSION-STATE.md`, `MEMORY.md`, `memory/YYYY-MM-DD.md`, snapshots, handoffs ou autre support mémoire doit aussi être ancré dans `fsxmemory` via une catégorie adaptée (`memory/decisions/`, `memory/knowledge/`, `memory/projects/`, `memory/people/`, `memory/procedures/`, `memory/episodes/`, `memory/inbox/`, `memory/handoffs/`).
+- Cette règle s’applique aussi :
+  - aux décisions confirmées par l’utilisateur
+  - aux fins de discussion avec points à retenir
+  - au mot-clé `sauvegarde`
+  - aux préparations de relance / nouvelle session
+  - aux préférences, règles, URLs, faits durables, open loops importants
 - Auto-`checkpoint` quand la tâche devient longue, technique, fragile, ou à risque de compaction.
 - Auto-`handoff` en fin de bloc de travail important ou avant arrêt/reprise.
 - Auto-`search` / `vsearch` quand l’utilisateur demande de retrouver une info passée.
-- **Guardrail:** ne pas sur-structurer les échanges banals; privilégier la qualité du signal au volume.
+- **Guardrail:** ne pas sur-structurer les échanges banals; mais dès qu’un point mérite la mémoire générale, il mérite aussi son miroir `fsxmemory`.
 - `qmd` doit indexer **uniquement** la collection `memory` pour le moment.
 
 ---

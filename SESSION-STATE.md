@@ -10,6 +10,7 @@ Documentation et stabilisation du nouveau workflow mémoire `fsxmemory` + `qmd` 
 - Script `scripts/fsxmemory-vsearch.sh` créé et testé avec succès (exit code 0).
 - Préférence utilisateur validée : fonctionnement **naturel + automatisé** du skill mémoire, en mode **niveau 2.5**.
 - Niveau 2.5 = auto normal renforcé : capture + remember + checkpoint/handoff quand pertinent, sans sur-structurer comme un bourrin.
+- Règle miroir totale validée : tout point conservé dans la mémoire générale doit aussi être ancré dans `fsxmemory`.
 - Décision du 2026-03-09 confirmée : **ne pas installer mem0 ni Cognee maintenant** ; les garder pour plus tard et tester d’abord la puissance réelle de `fsxmemory`.
 - Références à garder : `mem0` = https://github.com/mem0ai/mem0 ; `Cognee` = https://github.com/topoteretes/cognee
 - Reporting cron Memory+PARA → Discord `1472597513898033162` (Markdown + emojis, best-effort).
