@@ -26,4 +26,4 @@ Consolidation mémoire quotidienne + PARA exécutée (2026-03-08 20:50 UTC).
 - `RECENT_CONTEXT.md`
 
 ## Last Updated
-2026-03-08 20:50 UTC — consolidation mémoire quotidienne + PARA effectuée.
+2026-03-09 19:32 UTC — Memory flush soir. Bug gpt-5.4 tool calls noté. Contexte 21%, pas de compaction.
