@@ -73,6 +73,8 @@
 - Queue mode global : `steer+backlog` (debounce 1200ms, cap 25, drop summarize)
 - Projet Venus Beauté démarré et aperçu public validé sur `https://venusbeaute.doudougen.xyz` (2026-03-07)
 - Décision mémoire (2026-03-09): installer `fsxmemory` v1.3.1 comme couche locale checkpoint/recover/handoff/recherche; garder `mem0` et `Cognee` de côté pour une évaluation future.
+- Décision installation (2026-03-09): **ne pas installer `mem0` ni `Cognee` pour l’instant** ; tester d’abord la puissance réelle de `fsxmemory` avant tout nouvel ajout.
+- Références futures à conserver : `mem0` → https://github.com/mem0ai/mem0 ; `Cognee` → https://github.com/topoteretes/cognee
 - Recherche sémantique locale mémoire (2026-03-09): `qmd` installé avec **collection `memory` uniquement**, état validé à `43` fichiers / `1918` embeddings-chunks.
 
 ### Tools & Infrastructure
