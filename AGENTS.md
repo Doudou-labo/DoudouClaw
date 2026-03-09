@@ -6,6 +6,18 @@
 
 If `BOOTSTRAP.md` exists, follow it, then delete it.
 
+## Mot-clé Sauvegarde
+
+Quand Alexandre envoie le message **exactement** `sauvegarde` (seul, sans autre mot) :
+1. Résumer les éléments importants de la session en cours (contexte, décisions, faits, open loops)
+2. Déterminer le prochain numéro disponible pour la date du jour (n1, n2, n3…)
+3. Écrire le snapshot dans `memory/snapshots/YYYY-MM-DD-nX.md`
+4. Commit + push
+
+**Règle stricte :** Ne déclencher QUE si le message est uniquement le mot `sauvegarde`. Si le mot apparaît dans une phrase, ignorer.
+
+---
+
 ## Every Session
 
 Before doing anything:
