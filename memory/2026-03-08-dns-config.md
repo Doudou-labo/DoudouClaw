@@ -1,3 +1,11 @@
+---
+title: "2026-03-08-dns-config"
+date: 2026-03-09
+type: daily
+migrated: true
+source: openclaw
+---
+
 # Session: 2026-03-08 12:11:12 UTC
 
 - **Session Key**: agent:main:discord:channel:1475147402922033192

@@ -1,3 +1,11 @@
+---
+title: "2026-03-05-calendar-event"
+date: 2026-03-09
+type: daily
+migrated: true
+source: openclaw
+---
+
 # Session: 2026-03-05 17:55:04 UTC
 
 - **Session Key**: agent:main:discord:channel:1478036737648361699
