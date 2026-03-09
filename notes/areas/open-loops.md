@@ -15,6 +15,9 @@
 ### Intelligence émotionnelle (lecture Goleman)
 - [ ] Aujourd'hui : lire 1 chapitre + écrire 5 lignes de notes (1 idée clé + 1 application concrète au boulot)
 
+### Boulot — Actions ponctuelles
+- [ ] **🟡 Voir avec Arnaud la commande de vêtement pour Julien** _(ajouté 09/03/2026)_
+
 ### Évolution RCS — Suivi post-entretien Arnaud ✅
 - [x] ~~Entretien individuel avec Arnaud~~ → **FAIT le 16/02/2026** — RCS confirmé, timeline 6 mois–2 ans
 - [x] ~~Augmentation~~ → **REÇUE le 25/02/2026** : 2040 → 2091€, spontanée par Arnaud
