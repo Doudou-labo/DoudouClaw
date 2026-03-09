@@ -13,12 +13,15 @@ Lancer une boutique e-commerce beauté en France avec une DA vert/blanc et un pa
 ## État actuel
 - Déploiement actif sur `https://venusbeaute.doudougen.xyz`
 - Stack Next.js en place
-- Paiement Stripe actif
+- Home / boutique / produit / checkout déjà présents
+- Reverse proxy + HTTPS validés
 - Panier premium retravaillé (2 colonnes)
 - Badge panier animé
+- Paiement/checkout réel désormais orienté Stripe côté état actuel mémoire
 - Nouveau produit ajouté : **Douceur Nettoyante Fraîcheur** (31€)
 
 ## Open loops
-- Photos produits
-- Catalogue
+- Recevoir la liste finale des produits + photos
+- Brancher le vrai catalogue
 - Mentions/légales
+- Emails transactionnels

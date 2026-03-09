@@ -14,5 +14,17 @@ status: active
 - 1 appartement pour location étudiante
 - 1 appartement pour usage personnel
 
+## Vérifications à obtenir / suivre
+- PV d’AG des 3 dernières années
+- Règlement de copro + répartition des charges/tantièmes
+- Diagnostics complets
+- Consommations d’énergie
+- Travaux votés/prévus + financement
+
 ## Règle de décision
 **Aucune décision GO / NO-GO** avant réception et analyse complète du pack copro.
+
+## Vigilances
+- Coûts cachés de copro
+- Nuisances potentielles
+- Rendement réel vs charges réelles

@@ -18,9 +18,16 @@ Relation clé, à préserver. Confiance forte prouvée par les actes.
 - A déclenché spontanément une augmentation le 25/02/2026.
 - Sert de point d’appui concret pour la montée en compétences managériales.
 - Des points de suivi hebdo de 15 min sont prévus sur la montée en compétence RCS.
+- Sa fille Audrey est l’ex d’Alexandre : sujet sensible à garder strictement séparé du pro.
 
 ## Style relationnel utile
 - Transparence
 - Clarté
 - Honnêteté
+- Venir avec des solutions, pas seulement des problèmes
 - Continuer à montrer des comportements qui « outrepassent » déjà la fonction actuelle
+
+## Ce qu’il faut éviter
+- Mélanger perso/pro sur Audrey
+- Justifications excessives
+- Manque de suivi ou dispersion visible
