@@ -101,6 +101,7 @@ Templates disponibles dans `notes/resources/templates/`.
 - L’utilisateur parle normalement; l’agent choisit l’action mémoire adaptée sans exiger de syntaxe CLI.
 - Auto-`capture` pour idées/TODOs rapides.
 - Auto-`remember` pour décisions, préférences stables, règles, faits durables.
+- **Règle miroir fsxmemory:** toute décision durable confirmée par l’utilisateur doit être ancrée à la fois dans la mémoire générale (`SESSION-STATE.md` / `MEMORY.md` / journal du jour) **et** dans un fichier structuré `fsxmemory` (`memory/decisions/`, `memory/knowledge/`, etc.) quand une catégorie claire existe.
 - Auto-`checkpoint` quand la tâche devient longue, technique, fragile, ou à risque de compaction.
 - Auto-`handoff` en fin de bloc de travail important ou avant arrêt/reprise.
 - Auto-`search` / `vsearch` quand l’utilisateur demande de retrouver une info passée.

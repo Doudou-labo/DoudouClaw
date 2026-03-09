@@ -497,6 +497,7 @@ bash scripts/fsxmemory-vsearch.sh "décisions importantes" --deep
   - “si ça coupe on reprend là” → `checkpoint`
   - “on s’arrête là” → `handoff`
   - “tu te rappelles…” → `search` / `vsearch`
+- **Règle miroir importante :** une décision durable ne doit pas rester seulement dans `MEMORY.md` / journal du jour ; si `fsxmemory` est actif, elle doit aussi être rangée dans sa catégorie structurée (`memory/decisions/`, `memory/knowledge/`, etc.).
 
 **Gotchas:**
 - Le package npm original `@foresigxt/foresigxt-cli-memory` n’était pas publiquement disponible → implémentation bash maison des commandes.
