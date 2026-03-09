@@ -20,7 +20,10 @@
       "command": "qmd mcp"
     },
     "stripe": {
-      "baseUrl": "https://mcp.stripe.com"
+      "url": "https://mcp.stripe.com",
+      "headers": {
+        "Authorization": "Bearer rk_test_51T8PHo62KsXIqxXvZtlRAsslAPRScenup6hNbW32iVKfJOySnVx92RPpTuAIaof4CGEXuYYgilYcfDPLZpCo21wS00O84IohfC"
+      }
     }
   },
   "imports": []
