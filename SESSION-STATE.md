@@ -11,6 +11,8 @@ Documentation et stabilisation du nouveau workflow mémoire `fsxmemory` + `qmd` 
 - Préférence utilisateur validée : fonctionnement **naturel + automatisé** du skill mémoire, en mode **niveau 2.5**.
 - Niveau 2.5 = auto normal renforcé : capture + remember + checkpoint/handoff quand pertinent, sans sur-structurer comme un bourrin.
 - Règle miroir totale validée : tout point conservé dans la mémoire générale doit aussi être ancré dans `fsxmemory`.
+- Nouvelle préférence mémoire (2026-03-09) : privilégier une **sync qualitative** vers `fsxmemory` (catégories propres, pas de fourre-tout).
+- Règle d’implémentation validée : pour la sync qualitative `fsxmemory`, se référer **uniquement** aux fichiers canoniques `YYYY-MM-DD.md` + `MEMORY.md` + `SESSION-STATE.md` ; ignorer les variantes `YYYY-MM-DD-xxxx.md` sans tenter de fusion.
 - Décision du 2026-03-09 confirmée : **ne pas installer mem0 ni Cognee maintenant** ; les garder pour plus tard et tester d’abord la puissance réelle de `fsxmemory`.
 - Références à garder : `mem0` = https://github.com/mem0ai/mem0 ; `Cognee` = https://github.com/topoteretes/cognee
 - Reporting cron Memory+PARA → Discord `1472597513898033162` (Markdown + emojis, best-effort).
