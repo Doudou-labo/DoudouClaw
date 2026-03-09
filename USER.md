@@ -5,7 +5,7 @@
 - **Âge:** 25 ans
 - **Date de naissance:** 03/08/2000
 - **Ville:** Arras
-- **Fuseau horaire:** Europe/Paris
+- **Fuseau horaire:** Europe/Paris (UTC+1 hiver / UTC+2 été) — **toujours afficher les heures en heure locale Paris, jamais en UTC**
 - **Langue préférée:** Français
 - **Style préféré:** détaillé, amical, naturel et direct — pas de langue de bois
 - **Langage:** authentique, jurons français OK ("putain", "merde", "fait chier" et d'autres du même style) quand c'est pertinent (frustrations, problèmes)
