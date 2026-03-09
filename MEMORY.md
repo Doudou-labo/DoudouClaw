@@ -42,6 +42,7 @@
 - Modèle par défaut (2026-03-01): `anthropic/claude-sonnet-4-6` (remplace `openai-codex/gpt-5.1-codex-mini`).
 - Discord Streaming Mode (2026-03-01): `partial` activé — les réponses longues sont streamées morceau par morceau sur Discord.
 - Préférence reporting cron validée (2026-03-06): pour le cron Memory Daily Consolidation + PARA, envoyer systématiquement un résumé d’exécution en Markdown + emojis dans le salon Discord `1472597513898033162` (delivery announce, best-effort).
+- Préférence mémoire validée (2026-03-09): utiliser `fsxmemory` en mode **niveau 2.5** — interaction naturelle côté utilisateur, automatisation semi-intelligente côté agent (capture/remember/checkpoint/handoff/search) sans sur-structuration.
 
 ### Important Dates
 - Date de naissance: 03/08/2000
@@ -71,6 +72,8 @@
 - Ordre de modèles principal/fallback mis à jour (2026-03-08) : `openai-codex/gpt-5.4` -> `anthropic/claude-sonnet-4-6` -> `kimi-coding/k2p5`
 - Queue mode global : `steer+backlog` (debounce 1200ms, cap 25, drop summarize)
 - Projet Venus Beauté démarré et aperçu public validé sur `https://venusbeaute.doudougen.xyz` (2026-03-07)
+- Décision mémoire (2026-03-09): installer `fsxmemory` v1.3.1 comme couche locale checkpoint/recover/handoff/recherche; garder `mem0` et `Cognee` de côté pour une évaluation future.
+- Recherche sémantique locale mémoire (2026-03-09): `qmd` installé avec **collection `memory` uniquement**, état validé à `43` fichiers / `1918` embeddings-chunks.
 
 ### Tools & Infrastructure
 - **ClawSuite** (2026-03-01) : Dashboard mission control — `https://clawsuite.doudougen.xyz` (port 3000, auth Basic DoudouClaw)

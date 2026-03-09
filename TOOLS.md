@@ -22,6 +22,7 @@
 - [🧠 Gestion de Contexte et Mémoire](#-gestion-de-contexte-et-mémoire)
   - [Context Manager](#context-manager-safe-compression)
   - [LanceDB / Memory plugin](#lancedb--memory-plugin-openclaw)
+  - [fsxmemory + QMD](#fsxmemory--qmd)
 - [🤖 Intégrations Discord](#-intégrations-discord)
   - [Discord Bot](#discord-bot-integration)
   - [Format Discord (Canal legifrance)](#format-discord--canal-legifrance)
@@ -430,6 +431,78 @@ openclaw gateway restart
 **Validation:** Test `memory_store` + `memory_recall` OK
 
 **Note:** `openclaw status` peut afficher `Memory ... unavailable` de façon transitoire malgré des tools mémoire fonctionnels.
+
+---
+
+### fsxmemory + QMD
+
+**Status:** ✅ Installé et opérationnel (2026-03-09)
+
+**Objectif:** Ajouter une couche mémoire fichier-first pour la résilience au context death, les handoffs et la recherche structurée, sans remplacer la mémoire native OpenClaw.
+
+**Décision d’architecture:**
+- `fsxmemory` retenu comme couche **checkpoint / recover / handoff / recherche**
+- `mem0` et `Cognee` mis de côté pour évaluation future
+- Mode d’usage validé: **niveau 2.5** (naturel + semi-automatique, sans sur-structuration)
+
+**Composants installés:**
+- Skill: `skills/fsxmemory/`
+- Scripts:
+  - `scripts/fsxmemory-checkpoint.sh`
+  - `scripts/fsxmemory-recover.sh`
+  - `scripts/fsxmemory-handoff.sh`
+  - `scripts/fsxmemory-recap.sh`
+  - `scripts/fsxmemory-remember.sh`
+  - `scripts/fsxmemory-capture.sh`
+  - `scripts/fsxmemory-search.sh`
+  - `scripts/fsxmemory-vsearch.sh`
+  - `scripts/fsxmemory-stats.sh`
+  - `scripts/fsxmemory-link.sh`
+  - `scripts/fsxmemory-migrate.sh`
+  - `scripts/fsxmemory-doctor.sh`
+  - `scripts/fsxmemory-deathwatch.sh`
+
+**Structure vault créée dans `memory/`:**
+```bash
+memory/.fsxmemory/
+memory/handoffs/
+memory/decisions/
+memory/lessons/
+memory/people/
+memory/projects/
+memory/procedures/
+memory/knowledge/
+memory/episodes/
+memory/inbox/
+```
+
+**QMD:**
+- Package global: `@tobilu/qmd`
+- Version validée: `qmd 1.1.5`
+- Collection active: **`memory` uniquement**
+- État validé au 2026-03-09:
+  - `43` fichiers indexés
+  - `1918` embeddings/chunks
+- Script de recherche sémantique:
+```bash
+bash scripts/fsxmemory-vsearch.sh "décisions importantes"
+bash scripts/fsxmemory-vsearch.sh "décisions importantes" --deep
+```
+
+**Usage recommandé (mode 2.5):**
+- Conversation naturelle côté utilisateur
+- Mapping agent côté système :
+  - “note ça vite” → `capture`
+  - “retiens ça / on a décidé que” → `remember`
+  - “si ça coupe on reprend là” → `checkpoint`
+  - “on s’arrête là” → `handoff`
+  - “tu te rappelles…” → `search` / `vsearch`
+
+**Gotchas:**
+- Le package npm original `@foresigxt/foresigxt-cli-memory` n’était pas publiquement disponible → implémentation bash maison des commandes.
+- `qmd` tente parfois un backend Vulkan avant de retomber en CPU sur ce VPS; c’est bruyant mais non bloquant.
+- Pour l’instant, **ne pas indexer `notes/` ni `workspace/`** dans qmd pour éviter le bruit et les temps de calcul inutiles.
+- `fsxmemory-vsearch.sh` fonctionne, mais le premier chargement local du modèle peut être lent sur CPU.
 
 ---
 

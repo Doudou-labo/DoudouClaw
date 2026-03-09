@@ -69,9 +69,11 @@ Templates disponibles dans `notes/resources/templates/`.
 1. Lancer `python3 skills/rosepuppy-memory/scripts/recall.py "question utilisateur"`
 2. Lire les résultats rappelés
 3. Répondre avec ce contexte
+4. Si la recherche simple est insuffisante, utiliser `bash scripts/fsxmemory-vsearch.sh "requête"` (ou `--deep` si nécessaire)
 
 **Après une conversation substantielle (décision/préférence/tâche)**
 - Lancer `bash scripts/memory-capture-sync.sh "fact 1" "fact 2"`
+- Si l’info mérite une mémoire structurée, utiliser `bash scripts/fsxmemory-remember.sh <type> "titre" --content "..."`
 
 **Write-Ahead rule**
 - Si l’utilisateur donne un détail concret (décision, correction, date, préférence), mettre à jour `SESSION-STATE.md` avant la réponse finale.
@@ -92,6 +94,18 @@ Templates disponibles dans `notes/resources/templates/`.
 - Utile mais non quotidien → N2
 - Intime/sensible/historique détaillé → N3
 - Toute mise à jour importante doit être tracée dans `memory/YYYY-MM-DD.md` + commit/push.
+
+### fsxmemory — Mode par défaut (validé 2026-03-09)
+
+**Niveau 2.5 = naturel + semi-automatique**
+- L’utilisateur parle normalement; l’agent choisit l’action mémoire adaptée sans exiger de syntaxe CLI.
+- Auto-`capture` pour idées/TODOs rapides.
+- Auto-`remember` pour décisions, préférences stables, règles, faits durables.
+- Auto-`checkpoint` quand la tâche devient longue, technique, fragile, ou à risque de compaction.
+- Auto-`handoff` en fin de bloc de travail important ou avant arrêt/reprise.
+- Auto-`search` / `vsearch` quand l’utilisateur demande de retrouver une info passée.
+- **Guardrail:** ne pas sur-structurer les échanges banals; privilégier la qualité du signal au volume.
+- `qmd` doit indexer **uniquement** la collection `memory` pour le moment.
 
 ---
 
