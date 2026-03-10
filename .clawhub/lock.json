@@ -92,6 +92,10 @@
     "openclaw-mcp-plugin": {
       "version": "0.1.1",
       "installedAt": 1772373597484
+    },
+    "fsxmemory": {
+      "version": "1.0.0",
+      "installedAt": 1773087918026
     }
   }
 }
