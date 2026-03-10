@@ -10,6 +10,7 @@
 - [🔧 Outils Essentiels](#-outils-essentiels)
   - [Git (Workflow Backup)](#github-backup-automation)
   - [MCPorter (MCP Integration)](#mcporter-mcp-integration)
+  - [Agence-IA (Agents Spécialisés)](#agence-ia-agents-spécialisés)
   - [Google Calendar](#google-calendar)
   - [Web Search (Brave + Perplexity)](#web-search-api-brave--perplexity)
 - [🛠️ Outils de Développement](#️-outils-de-développement)
@@ -43,6 +44,7 @@
 |--------|----------------|---------------|
 | **Commit + push** | `git add . && git commit -m "msg" && git push` | [Git Workflow](#github-backup-automation) |
 | **GitHub API** | `mcporter call github.<outil>` | [MCPorter](#mcporter-mcp-integration) |
+| **Agents Agence-IA** | `sessions_spawn --file ~/.openclaw/agency-agents/[agent]/SOUL.md` | [Agence-IA](#agence-ia-agents-spécialisés) |
 | **Recherche web** | `web_search` tool ou Perplexity skill | [Web Search](#web-search-api-brave--perplexity) |
 | **Calendrier** | API Maton (calendrier OpenClaw) | [Google Calendar](#google-calendar) |
 | **Mémoire LTM** | `memory_store` / `memory_recall` | [LanceDB](#lancedb--memory-plugin-openclaw) |
@@ -133,6 +135,53 @@ mcporter call github.create_pull_request owner:Doudou-labo repo:DoudouClaw title
 mcporter call obsidian.list_notes
 mcporter call obsidian.search query:"PARA"
 ```
+
+---
+
+### Agence-IA (Agents Spécialisés)
+
+**Status:** ✅ Installed (2026-03-10) — **112 agents**
+
+**Description:** Collection de 112 agents spécialisés avec personnalités riches (backend-architect, frontend-developer, growth-hacker, etc.). Intégration native OpenClaw via SOUL.md.
+
+**Location:** `~/.openclaw/agency-agents/`
+
+**Agents clés :**
+- `backend-architect` — API, microservices, scalabilité
+- `frontend-developer` — React/Vue, UI pixel-perfect
+- `security-engineer` — audit, threat modeling
+- `devops-automator` — CI/CD, infra, monitoring
+- `growth-hacker` — acquisition, viral loops
+- `content-creator` — contenu multi-plateforme
+- `agents-orchestrator` — coordination pipeline multi-agents
+
+**Utilisation one-shot (tâche ponctuelle) :**
+```bash
+sessions_spawn \
+  --task "Crée une architecture API REST..." \
+  --file ~/.openclaw/agency-agents/backend-architect/SOUL.md \
+  --mode run
+```
+
+**Utilisation session persistante (projet long) :**
+```bash
+sessions_spawn \
+  --label "backend-venus" \
+  --task "Tu es le Backend Architect pour Venus Beauté" \
+  --file ~/.openclaw/agency-agents/backend-architect/SOUL.md \
+  --mode session \
+  --thread true
+```
+
+**Documentation:**
+- Orchestration: `notes/areas/agent-orchestration.md`
+- Routing: `notes/resources/agent-routing-guide.md`
+- Cheat sheet: `notes/resources/agent-routing-cheatsheet.md`
+
+**Gotchas:**
+- Les SOUL.md sont en anglais mais les agents répondent en français (héritage config utilisateur)
+- Spawn avec `--file` obligatoire pour charger la personnalité
+- Sessions persistantes: kill explicite nécessaire (`subagents --action kill --target [label]`)
 
 ---
 
@@ -722,6 +771,7 @@ scripts/heartbeat-auto-cleanup.sh   # Cleanup .tmp, rotation logs
 
 | Date | Changement |
 |------|------------|
+| 2026-03-10 | **Agence-IA** — Intégration 112 agents spécialisés, architecture 100% Agence-IA, suppression spec-* |
 | 2026-03-02 | Ajout Playwright MCP dans outils développement |
 | 2026-03-02 | Réorganisation complète (Option A): TOC, Quick Reference, regroupement par fréquence |
 | 2026-03-01 | Ajout MCPorter, ClawSuite, Tailscale |
