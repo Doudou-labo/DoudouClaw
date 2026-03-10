@@ -79,12 +79,14 @@
 - Décision installation (2026-03-09): **ne pas installer `mem0` ni `Cognee` pour l’instant** ; tester d’abord la puissance réelle de `fsxmemory` avant tout nouvel ajout.
 - Références futures à conserver : `mem0` → https://github.com/mem0ai/mem0 ; `Cognee` → https://github.com/topoteretes/cognee
 - Recherche sémantique locale mémoire (2026-03-09): `qmd` installé avec **collection `memory` uniquement**, état validé à `43` fichiers / `1918` embeddings-chunks.
+- Migration orchestration (2026-03-10): passage **100% Agence-IA** — remplacement de tous les agents `spec-*` par les 112 agents Agence-IA — nouvelle architecture dans `notes/areas/agent-orchestration.md` — orchestrateur: `agents-orchestrator` — agents installés dans `~/.openclaw/agency-agents/`
 
 ### Tools & Infrastructure
 - **ClawSuite** (2026-03-01) : Dashboard mission control — `https://clawsuite.doudougen.xyz` (port 3000, auth Basic DoudouClaw)
 - **ClawMetry** (2026-03-06) : Observabilité temps réel — `https://metry.doudougen.xyz` (port 8900, auth Basic DoudouClaw, v0.11.57)
 - **ClawBridge** (2026-03-06) : Dashboard mobile-first — `https://mobile.doudougen.xyz` (port 3001, auth Basic DoudouClaw, v1.1.2, Access Key: `433f8670fabc90836cd2d6f43fb9d83f`)
 - **Tailscale** (2026-03-01) : VPN mesh (v1.94.2) — IP serveur `100.89.4.88`, tous dashboards accessibles
+- **Agence-IA** (2026-03-10) : 112 agents spécialisés intégrés — disponibles dans `~/.openclaw/agency-agents/` — orchestration via `agents-orchestrator` — routing dans `notes/areas/agent-orchestration.md`
 
 ### Things to Remember
 - Le N+1 Arnaud est une relation clé, positive (pro + perso)
