@@ -10,6 +10,7 @@ Consolidation mémoire quotidienne + synchronisation PARA de fin de journée (20
 - `RECENT_CONTEXT.md` mis à jour avec highlights du 2026-03-10.
 - PARA synchronisé via `notes/areas/open-loops.md` (checkpoint auto du soir + prochaine action claire).
 - Aucune nouvelle information durable détectée aujourd’hui nécessitant une entrée LTM supplémentaire.
+- Nouvelle préférence UI mémoire : les auto-tags heuristiques doivent afficher les **éléments exacts tagués par catégorie**, pas seulement des compteurs.
 
 ## Key Decisions (actives)
 1. Jurons français sans modération = identité DoudouClaw (trait d'authenticité systématique).

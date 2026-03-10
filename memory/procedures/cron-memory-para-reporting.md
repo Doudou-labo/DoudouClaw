@@ -14,6 +14,7 @@ Le cron **Memory Daily Consolidation + PARA** doit publier un résumé d’exéc
 - Delivery announce
 - Best-effort
 - Format propre et lisible
+- Les auto-tags heuristiques doivent afficher les éléments exacts par catégorie (pas seulement des compteurs)
 
 ## But
 Donner un retour post-exécution clair sans spammer inutilement.

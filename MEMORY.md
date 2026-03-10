@@ -42,6 +42,7 @@
 - Modèle par défaut (2026-03-01): `anthropic/claude-sonnet-4-6` (remplace `openai-codex/gpt-5.1-codex-mini`).
 - Discord Streaming Mode (2026-03-01): `partial` activé — les réponses longues sont streamées morceau par morceau sur Discord.
 - Préférence reporting cron validée (2026-03-06): pour le cron Memory Daily Consolidation + PARA, envoyer systématiquement un résumé d’exécution en Markdown + emojis dans le salon Discord `1472597513898033162` (delivery announce, best-effort).
+- Préférence mémoire/UI validée (2026-03-10): les auto-tags heuristiques doivent être présentés **avec les éléments exacts tagués par catégorie** (format lisible), pas seulement avec des compteurs.
 - Préférence mémoire validée (2026-03-09): utiliser `fsxmemory` en mode **niveau 2.5** — interaction naturelle côté utilisateur, automatisation semi-intelligente côté agent (capture/remember/checkpoint/handoff/search) sans sur-structuration.
 - Règle mémoire validée (2026-03-09): **tout élément conservé dans la mémoire générale doit aussi être ancré dans `fsxmemory`** via une catégorie adaptée. Principe: si ça mérite d’être gardé, ça mérite aussi son miroir `fsxmemory`.
 - Préférence d’implémentation validée (2026-03-09): pour la sync qualitative `fsxmemory`, n’utiliser que les sources canoniques `MEMORY.md`, `SESSION-STATE.md` et `memory/YYYY-MM-DD.md`; ignorer les variantes journalières `YYYY-MM-DD-xxxx.md`.
