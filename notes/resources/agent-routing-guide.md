@@ -1,62 +1,71 @@
-# Agent Routing Guide (plug-and-play)
+# Agent Routing Guide — Agence-IA
 
-Guide rapide pour router les demandes vers le bon agent, sans friction.
+Guide rapide pour router les demandes vers les agents Agence-IA.
+
+---
 
 ## Règle simple
 
-- **1 domaine / tâche courte** → `main` ou un `spec-*` direct
-- **2 domaines ou plus / dépendances** → `spec-orchestrator`
-- **Action sensible** (suppression, sécurité, envoi externe, config critique) → validation `qa-safety` avant exécution
+- **1 domaine / tâche courte** → `main` ou agent Agence-IA direct
+- **2 domaines ou plus / dépendances** → `agents-orchestrator`
+- **Projet long** → session persistante dédiée (ex: `backend-venus`)
+
+---
 
 ## Tableau de commande
 
-| Agent | Domaine | Quand l’appeler | Exemple de prompt ultra court |
+| Agent Agence-IA | Domaine | Quand l'appeler | Exemple de prompt |
 |---|---|---|---|
-| `spec-orchestrator` | Coordination multi-domaines | Tâche complexe, plusieurs chantiers | `Coordonne: audit cron + fix + doc + commit.` |
-| `memory-curator` | Mémoire (N1/N2/N3, LTM) | Cohérence contexte, reprise après timeout | `Audit N1↔LTM et mets SESSION-STATE à jour.` |
-| `ops-guardian` | Ops OpenClaw (gateway, crons, logs, cooldowns) | Instabilité, 429, timeouts, jobs en erreur | `Check santé gateway + top 3 incidents + plan minimal-risk.` |
-| `repo-keeper` | Git/GitHub, commits, submodules | Finaliser changements, hygiène repo | `Commit/push ce qui est prêt, signale les blocages.` |
-| `qa-safety` | Sécurité/policy/risques | Avant action sensible ou doute injection | `Go/No-Go sécurité sur ce plan avant exécution.` |
-| `knowledge-librarian` | PARA, notes, templates, organisation | Ranger, normaliser, réduire la dette documentaire | `Classe ces notes en PARA + standardise les templates.` |
+| `backend-architect` | API, microservices, scalabilité | Architecture serveur, base de données | "Conçois l'API REST pour un e-commerce" |
+| `frontend-developer` | React/Vue, UI | Interface utilisateur, composants | "Crée une landing page avec React" |
+| `security-engineer` | Audit, sécurité | Review code, vulnérabilités | "Audit cette API pour failles OWASP" |
+| `devops-automator` | CI/CD, infra, cloud | Pipelines, déploiement, monitoring | "Mets en place un pipeline CI/CD" |
+| `growth-hacker` | Acquisition, croissance | Stratégie marketing, viralité | "Plan d'acquisition pour un SaaS" |
+| `content-creator` | Contenu, copywriting | Blog, réseaux, newsletters | "Rédige un article de blog SEO" |
+| `agents-orchestrator` | Coordination multi-domaines | Tâche complexe, plusieurs experts | "Coordonne backend + frontend + sécurité" |
+| `reality-checker` | QA, validation | Vérification avant production | "Cette feature est-elle prod-ready ?" |
+
+---
 
 ## Playbooks express
 
-### 1) Incident ops + correction + traçabilité
-1. `spec-orchestrator`
-2. `ops-guardian` (diagnostic)
-3. `qa-safety` (validation risques)
-4. `repo-keeper` (commit/push de la correction)
-5. Synthèse finale utilisateur
+### 1) Feature complète (backend + frontend + sécurité)
+1. `agents-orchestrator` (coordination)
+2. `backend-architect` (API)
+3. `frontend-developer` (UI)
+4. `security-engineer` (audit)
+5. `reality-checker` (validation finale)
+6. Synthèse finale utilisateur
 
-### 2) Reprise après timeout / compaction
-1. `memory-curator` (état + cohérence)
-2. `spec-orchestrator` si plusieurs volets ouverts
-3. Replanification courte avec prochaine action unique
+### 2) Projet long (session persistante)
+1. `sessions_spawn --label backend-venus --file backend-architect/SOUL.md --mode session`
+2. Interactions via `sessions_send --label backend-venus`
+3. Kill à la fin du projet: `subagents --action kill --target backend-venus`
 
-### 3) Nettoyage documentaire
-1. `knowledge-librarian`
-2. `repo-keeper` pour commit/push
+### 3) Tâche ponctuelle (one-shot)
+1. `sessions_spawn --file [agent]/SOUL.md --mode run`
+2. Résultat direct, pas de persistance
+
+---
 
 ## Prompts prêts à coller
 
-- `spec-orchestrator` :
-  - `Découpe cette demande en sous-tâches et délègue aux bons spec-*.`
-- `ops-guardian` :
-  - `Audit openclaw: gateway, crons, 429/cooldowns, erreurs récentes, reco priorisées.`
-- `repo-keeper` :
-  - `Nettoie l’état git, commit/push les fichiers validés, ne touche pas aux dépôts externes sans accord.`
-- `qa-safety` :
-  - `Passe ce plan en revue et donne go/no-go + garde-fous avant exécution.`
-- `memory-curator` :
-  - `Vérifie cohérence SESSION-STATE/MEMORY/journal du jour + LTM recall.`
-- `knowledge-librarian` :
-  - `Range ces notes dans PARA et propose les archives candidates.`
+- **Backend:** `"Conçois l'architecture API pour [projet], avec endpoints REST et modèle de données"`
+- **Frontend:** `"Crée les composants React pour [feature], avec design responsive"`
+- **Sécurité:** `"Audite ce code pour vulnérabilités et propose des correctifs"`
+- **DevOps:** `"Mets en place un pipeline CI/CD avec tests auto et déploiement"`
+- **Growth:** `"Propose une stratégie d'acquisition pour [cible] avec canaux et métriques"`
+- **Orchestrator:** `"Coordonne [agent1] + [agent2] pour [objectif global]"`
+
+---
 
 ## Notes opérationnelles
 
-- Éviter de lancer trop de spécialistes en parallèle sur le même provider si charge élevée (risque 429).
-- Préférer des lots courts et séquentiels quand les logs montrent des cooldowns.
-- Garder une synthèse unique côté utilisateur (pas de bruit multi-réponses).
+- Les agents Agence-IA sont dans `~/.openclaw/agency-agents/` (112 agents)
+- Spawn avec `--file ~/.openclaw/agency-agents/[agent]/SOUL.md`
+- Sessions persistantes: `--mode session --label [nom] --thread true`
+- Tâches ponctuelles: `--mode run`
+- Synthèse unique obligatoire côté utilisateur
 
 ---
-Dernière mise à jour: 2026-02-27
+Dernière mise à jour: 2026-03-10

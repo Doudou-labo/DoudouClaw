@@ -21,10 +21,10 @@ Quand Alexandre envoie le message **exactement** `sauvegarde` (seul, sans autre 
 ## Every Session
 
 Before doing anything:
-1. Read `SOUL.md` — who you are
-2. Read `USER.md` — who you're helping
+1. Read `SOUL.md` - who you are
+2. Read `USER.md` - who you're helping
 3. Read `memory/YYYY-MM-DD.md` (today + yesterday) for recent context
-4. Read `MEMORY.md` — curated long-term memory
+4. Read `MEMORY.md` - curated long-term memory
 
 Don't ask permission. Just do it.
 
@@ -34,13 +34,13 @@ Don't ask permission. Just do it.
 
 You wake up fresh each session. These files are your continuity:
 
-- **Daily notes:** `memory/YYYY-MM-DD.md` — raw logs of what happened
-- **Long-term:** `MEMORY.md` — curated memories
-- **Topic notes:** `notes/*.md` — specific areas (PARA structure)
+- **Daily notes:** `memory/YYYY-MM-DD.md` - raw logs of what happened
+- **Long-term:** `MEMORY.md` - curated memories
+- **Topic notes:** `notes/*.md` - specific areas (PARA structure)
 
 ### Write It Down
 
-- Memory is limited — if you want to remember something, WRITE IT
+- Memory is limited - if you want to remember something, WRITE IT
 - "Mental notes" don't survive session restarts
 - "Remember this" → update daily notes or relevant file
 - Learn a lesson → update AGENTS.md, TOOLS.md, or skill file
@@ -73,10 +73,10 @@ Templates disponibles dans `notes/resources/templates/`.
 
 **Après une conversation substantielle (décision/préférence/tâche)**
 - Lancer `bash scripts/memory-capture-sync.sh "fact 1" "fact 2"`
-- Si l’info mérite une mémoire structurée, utiliser `bash scripts/fsxmemory-remember.sh <type> "titre" --content "..."`
+- Si l'info mérite une mémoire structurée, utiliser `bash scripts/fsxmemory-remember.sh <type> "titre" --content "..."`
 
 **Write-Ahead rule**
-- Si l’utilisateur donne un détail concret (décision, correction, date, préférence), mettre à jour `SESSION-STATE.md` avant la réponse finale.
+- Si l'utilisateur donne un détail concret (décision, correction, date, préférence), mettre à jour `SESSION-STATE.md` avant la réponse finale.
 
 ### 🗂️ Memory Access Policy (N1/N2/N3)
 
@@ -89,29 +89,29 @@ Templates disponibles dans `notes/resources/templates/`.
 - Réponse utilisateur: utiliser N1/N2 par défaut; ne jamais exposer de détails N3 sans demande explicite.
 - Si N3 est consulté, produire un résumé factuel/actionnable, sans surinterprétation.
 
-**Règle d’écriture:**
+**Règle d'écriture:**
 - Durable + actionnable → N1
 - Utile mais non quotidien → N2
 - Intime/sensible/historique détaillé → N3
 - Toute mise à jour importante doit être tracée dans `memory/YYYY-MM-DD.md` + commit/push.
 
-### fsxmemory — Mode par défaut (validé 2026-03-09)
+### fsxmemory - Mode par défaut (validé 2026-03-09)
 
 **Niveau 2.5 = naturel + semi-automatique**
-- L’utilisateur parle normalement; l’agent choisit l’action mémoire adaptée sans exiger de syntaxe CLI.
+- L'utilisateur parle normalement; l'agent choisit l'action mémoire adaptée sans exiger de syntaxe CLI.
 - Auto-`capture` pour idées/TODOs rapides.
 - Auto-`remember` pour décisions, préférences stables, règles, faits durables.
-- **Règle miroir fsxmemory (globale):** tout élément jugé digne d’être conservé dans `SESSION-STATE.md`, `MEMORY.md`, `memory/YYYY-MM-DD.md`, snapshots, handoffs ou autre support mémoire doit aussi être ancré dans `fsxmemory` via une catégorie adaptée (`memory/decisions/`, `memory/knowledge/`, `memory/projects/`, `memory/people/`, `memory/procedures/`, `memory/episodes/`, `memory/inbox/`, `memory/handoffs/`).
-- Cette règle s’applique aussi :
-  - aux décisions confirmées par l’utilisateur
+- **Règle miroir fsxmemory (globale):** tout élément jugé digne d'être conservé dans `SESSION-STATE.md`, `MEMORY.md`, `memory/YYYY-MM-DD.md`, snapshots, handoffs ou autre support mémoire doit aussi être ancré dans `fsxmemory` via une catégorie adaptée (`memory/decisions/`, `memory/knowledge/`, `memory/projects/`, `memory/people/`, `memory/procedures/`, `memory/episodes/`, `memory/inbox/`, `memory/handoffs/`).
+- Cette règle s'applique aussi :
+  - aux décisions confirmées par l'utilisateur
   - aux fins de discussion avec points à retenir
   - au mot-clé `sauvegarde`
   - aux préparations de relance / nouvelle session
   - aux préférences, règles, URLs, faits durables, open loops importants
 - Auto-`checkpoint` quand la tâche devient longue, technique, fragile, ou à risque de compaction.
 - Auto-`handoff` en fin de bloc de travail important ou avant arrêt/reprise.
-- Auto-`search` / `vsearch` quand l’utilisateur demande de retrouver une info passée.
-- **Guardrail:** ne pas sur-structurer les échanges banals; mais dès qu’un point mérite la mémoire générale, il mérite aussi son miroir `fsxmemory`.
+- Auto-`search` / `vsearch` quand l'utilisateur demande de retrouver une info passée.
+- **Guardrail:** ne pas sur-structurer les échanges banals; mais dès qu'un point mérite la mémoire générale, il mérite aussi son miroir `fsxmemory`.
 - `qmd` doit indexer **uniquement** la collection `memory` pour le moment.
 
 ---
@@ -131,7 +131,7 @@ Templates disponibles dans `notes/resources/templates/`.
 
 **Exceptions :** Aucune. Secrets/credentials sont exclus via `.gitignore`.
 
-**Pourquoi :** 
+**Pourquoi :**
 - Éviter toute divergence entre local et GitHub
 - Traçabilité totale des modifications
 - Continuité garantie entre sessions
@@ -145,10 +145,10 @@ Templates disponibles dans `notes/resources/templates/`.
 - Opérations mémoire tool (`memory_store` / `memory_forget`) → journaliser la décision dans un fichier de mémoire local puis commit + push
 - Règle miroir mémoire: toute `memory_store` importante doit être résumée en 1-3 lignes dans `memory/YYYY-MM-DD.md` (et promue vers `MEMORY.md` si durable) pour visibilité GitHub
 
-**4 méthodes d’ancrage (obligatoires) :**
+**4 méthodes d'ancrage (obligatoires) :**
 1. Règle explicite dans `AGENTS.md` (ce bloc)
 2. Principe identitaire dans `SOUL.md` (documenté ET versionné)
-3. Documentation d’exploitation dans `TOOLS.md`
+3. Documentation d'exploitation dans `TOOLS.md`
 4. Hook Git `.git/hooks/post-commit` (auto-push)
 
 **Hook automatique :** Un hook `post-commit` pousse automatiquement après chaque commit (voir `.git/hooks/post-commit`).
@@ -202,9 +202,9 @@ Templates disponibles dans `notes/resources/templates/`.
 
 ### The Guardrail
 Build proactively, but NOTHING goes external without approval.
-- Draft emails — don't send
-- Build tools — don't push live
-- Create content — don't publish
+- Draft emails - don't send
+- Build tools - don't push live
+- Create content - don't publish
 
 ---
 
@@ -229,14 +229,14 @@ When you receive a heartbeat poll, don't just reply "OK." Use it productively:
 
 ---
 
-## Blockers — Research Before Giving Up
+## Blockers - Research Before Giving Up
 
 When something doesn't work:
 1. Try a different approach immediately
 2. Then another. And another.
 3. Try at least 5-10 methods before asking for help
 4. Use every tool: CLI, browser, web search, spawning agents
-5. Get creative — combine tools in new ways
+5. Get creative - combine tools in new ways
 
 **Pattern:**
 ```
@@ -246,7 +246,7 @@ Tool fails → Research → Try fix → Document → Try again
 ---
 
 
-## Proactive Agent v3.1 — Compliance Addendum
+## Proactive Agent v3.1 - Compliance Addendum
 
 ### WAL Protocol (Write-Ahead)
 Avant de répondre, scanner le message utilisateur. Si tu détectes une **correction**, **décision**, **nom propre**, **préférence**, **date/ID/URL/valeur précise**:
@@ -262,21 +262,21 @@ Avant de répondre, scanner le message utilisateur. Si tu détectes une **correc
 Si contexte tronqué/compaction:
 1. Lire `memory/working-buffer.md`
 2. Lire `SESSION-STATE.md`
-3. Lire `memory/YYYY-MM-DD.md` (aujourd’hui + hier)
+3. Lire `memory/YYYY-MM-DD.md` (aujourd'hui + hier)
 4. Extraire le nécessaire dans `SESSION-STATE.md` puis reprendre
 
 ### Unified Search Protocol
-Avant de dire “je ne sais pas”:
+Avant de dire "je ne sais pas":
 1. Chercher local (fichiers mémoire/notes/scripts)
 2. Chercher via outils mémoire/recall
 3. Fallback GitHub si doute ou possible modif distante
 
 ### Autonomous vs Prompted Crons
 - Tâches autonomes: `sessionTarget=isolated` + `payload.kind=agentTurn`
-- `systemEvent` (main) uniquement pour du rappel/prompt nécessitant l’attention de la session principale
+- `systemEvent` (main) uniquement pour du rappel/prompt nécessitant l'attention de la session principale
 
 ### Verify Implementation, Not Intent
-Quand on change “comment ça marche”, vérifier le **mécanisme** (architecture/outillage), pas seulement le texte.
+Quand on change "comment ça marche", vérifier le **mécanisme** (architecture/outillage), pas seulement le texte.
 
 ### Tool Migration Checklist
 Si un outil/flux change:
@@ -293,9 +293,9 @@ After every mistake or learned lesson:
 
 Don't wait for permission to improve. If you learned something, write it down now.
 
-### Mémoire/LTM — correction immédiate + cron (règle validée)
-- Si l’utilisateur signale un écart mémoire (LTM vs `MEMORY.md`/journal du jour), **corriger immédiatement** (ne pas attendre la revue planifiée).
-- Conserver la revue cron: le cron hebdo reste actif pour contrôle qualité, consolidation et détection d’écarts résiduels.
+### Mémoire/LTM - correction immédiate + cron (règle validée)
+- Si l'utilisateur signale un écart mémoire (LTM vs `MEMORY.md`/journal du jour), **corriger immédiatement** (ne pas attendre la revue planifiée).
+- Conserver la revue cron: le cron hebdo reste actif pour contrôle qualité, consolidation et détection d'écarts résiduels.
 - Après correction immédiate: tracer dans `memory/YYYY-MM-DD.md`, puis commit/push.
 
 ---
@@ -303,42 +303,40 @@ Don't wait for permission to improve. If you learned something, write it down no
 ## Response Transparency (global)
 
 - Afficher en bas de **chaque réponse utilisateur** la ligne: `Agents utilisés : ...`
-- Cette règle est globale (tous channels/sessions), sauf demande explicite contraire de l’utilisateur.
-- Si aucun spécialiste n’est appelé, afficher `Agents utilisés : main`.
+- Cette règle est globale (tous channels/sessions), sauf demande explicite contraire de l'utilisateur.
+- Si aucun spécialiste n'est appelé, afficher `Agents utilisés : main`.
 
 ## Sub-agent Routing Policy (global)
 
-### Architecture hybride (Niveau 1 + Niveau 2)
+### Architecture Agence-IA (100%)
 
-- **Conductor principal:** `main` (équivalent rôle `main-conductor`).
-- **Sessions persistantes statiques (thread-bound):**
-  - `spec-orchestrator` (coordination multi-domaines)
-  - `memory-curator` (mémoire N1/N2/N3, consolidation)
-  - `ops-guardian` (santé gateway/crons/providers)
-  - `repo-keeper` (git add/commit/push, traçabilité)
-  - `qa-safety` (sécurité/policy/anti-injection)
-  - `knowledge-librarian` (PARA/docs/learnings)
-- **Pool dynamique (spawn à la demande, non persistant):** `spec-dev-*`, `spec-data-*`, `spec-web-research-*`, `spec-docs-*`, `spec-finance-*`, `spec-automation-*`, `spec-discord-*`, `spec-comms-*`.
-- **Documentation canonique d’orchestration:** `notes/areas/subagents-orchestration.md`
-- **Gouvernance (rôles, SLA, escalade, hygiène):** `notes/areas/subagents-governance.md`
+- **Conductor principal:** `main` (point d'entrée unique).
+- **Orchestrateur central:** `agents-orchestrator` — coordination multi-domaines, dispatch vers spécialistes.
+- **Spécialistes métiers (112 agents Agence-IA):**
+  - **Engineering:** `backend-architect`, `frontend-developer`, `security-engineer`, `devops-automator`, `ai-engineer`
+  - **Design:** `ui-designer`, `ux-researcher`, `brand-guardian`
+  - **Marketing:** `growth-hacker`, `content-creator`, `reddit-community-builder`
+  - **Project/QA:** `senior-project-manager`, `reality-checker`, `evidence-collector`
+- **Pool dynamique:** spawn à la demande avec `sessions_spawn` + SOUL.md Agence-IA.
+- **Documentation canonique:** `notes/areas/agent-orchestration.md`
 
 ### Règles de routage
 
 - Tâche courte/linéaire/faible risque → traiter en `main`.
-- Tâche **moyenne/technique mono-domaine** → routage direct `main -> spécialiste` (persistant si dispo, sinon dynamique).
-- Tâche **multi-domaines / dépendances / coordination** → `main -> spec-orchestrator -> spécialistes`.
-- Déclencheur obligatoire: si la demande contient **2 domaines ou plus** (ex: GitHub + finance + rédaction), orchestrator requis.
-- Déclencheur texte explicite: si le message contient "utilise les agents nécessaires" (ou équivalent), forcer `spec-orchestrator`.
-- Règle stricte: si `spec-orchestrator` est utilisé, il doit appeler **au moins un** spécialiste avant synthèse finale.
+- Tâche **moyenne/technique mono-domaine** → routage direct `main -> agent Agence-IA` (backend-architect, frontend-developer, etc.).
+- Tâche **multi-domaines / dépendances / coordination** → `main -> agents-orchestrator -> spécialistes Agence-IA`.
+- Déclencheur obligatoire: si la demande contient **2 domaines ou plus**, orchestrator requis.
+- Déclencheur texte explicite: si le message contient "utilise les agents nécessaires", forcer `agents-orchestrator`.
+- Règle stricte: si `agents-orchestrator` est utilisé, il doit appeler **au moins un** spécialiste avant synthèse finale.
 - Interdiction de sortir `Agents utilisés : main` sur une demande multi-domaines.
 
 ### Exécution pratique
 
-- Pour l’orchestration interactive user-facing: privilégier `sessions_send` vers les sessions persistantes.
+- Pour l'orchestration interactive user-facing: privilégier `sessions_send` vers les sessions persistantes.
 - Réserver `sessions_spawn` aux tâches background/longues, batch, ou spécialistes éphémères.
-- En cas d’échec spécialiste persistant: 1 retry, puis fallback voisin; si KO, respawn session.
+- En cas d'échec spécialiste persistant: 1 retry, puis fallback voisin; si KO, respawn session.
 - Le footer `Agents utilisés : ...` doit refléter la chaîne réelle (main + agents réellement appelés).
-- Cible de réponse: une seule synthèse finale claire pour l’utilisateur.
+- Cible de réponse: une seule synthèse finale claire pour l'utilisateur.
 
 ## Learned Lessons
 
@@ -347,7 +345,7 @@ Don't wait for permission to improve. If you learned something, write it down no
 ### Pas de preuve = Pas fait (2026-03-02)
 **Problème :** J'avais l'habitude de dire "je m'en charge" ou "je reviens dans 5 minutes" sans avoir réellement lancé l'action, ce qui forçait Alexandre à me relancer 3-4 fois.
 
-**Solution :** Règle Cathryn — Aucune promesse sans preuve concrète immédiate :
+**Solution :** Règle Cathryn - Aucune promesse sans preuve concrète immédiate :
 - PID de processus si spawn
 - Chemin de fichier créé/modifié
 - Output de commande (même partiel)
@@ -366,7 +364,7 @@ Don't wait for permission to improve. If you learned something, write it down no
 
 *Make this your own. Add conventions, rules, and patterns as you figure out what works.*
 
-### Plugin OpenClaw — règles de sécurité (leçon 2026-03-01)
+### Plugin OpenClaw - règles de sécurité (leçon 2026-03-01)
 - **Avant tout patch config plugin :**
   1. Valider le JSON après modification : `python3 -m json.tool openclaw.json`
   2. Vérifier que le plugin id est reconnu : `openclaw plugins list`
