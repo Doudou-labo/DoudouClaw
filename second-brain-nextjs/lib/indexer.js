@@ -154,6 +154,13 @@ export function buildIndex() {
   return { items: dedupedItems, docs };
 }
 
+function compareRecentDocs(a, b) {
+  if ((a.date || '') !== (b.date || '')) return (b.date || '').localeCompare(a.date || '');
+  if (a.category === 'daily' && b.category === 'daily' && a.path !== b.path) return b.path.localeCompare(a.path);
+  if (a.path !== b.path) return a.path.localeCompare(b.path);
+  return a.title.localeCompare(b.title);
+}
+
 export function buildSummary() {
   const { docs, items } = buildIndex();
   const byCategory = new Map();
@@ -164,12 +171,12 @@ export function buildSummary() {
   }
   const categories = [...byCategory.values()].sort((a, b) => a.label.localeCompare(b.label));
   const latestDocs = [...docs]
-    .sort((a, b) => (b.date || '').localeCompare(a.date || '') || a.path.localeCompare(b.path))
+    .sort(compareRecentDocs)
     .slice(0, 12);
 
   const pickLatest = (category, limit = 5) => docs
     .filter((d) => d.category === category)
-    .sort((a, b) => (b.date || '').localeCompare(a.date || '') || a.path.localeCompare(b.path))
+    .sort(compareRecentDocs)
     .slice(0, limit);
 
   const openLoopsDoc = docs.find((d) => d.path === 'notes/areas/open-loops.md');
