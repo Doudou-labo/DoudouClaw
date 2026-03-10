@@ -33,6 +33,5 @@
 - [ ] Ajouter pages légales (CGV, mentions légales, confidentialité)
 
 ## Auto-checkpoints
-- [x] [AUTO 2026-03-10 midi] Checkpoint 3-min fait. Next: Avant la fin du pilote (16/02) : noter 3 catégories à ajuster (si besoin) + 1 friction d'usage (ce qui bloque)
-- [x] [AUTO 2026-03-10 soir] Consolidation mémoire+PARA exécutée. Next: préparer un mini bilan exécutable demain (3 catégories à ajuster + 1 friction Finance Tracker).
+- [ ] [AUTO 2026-03-10 soir] Checkpoint 3-min fait. Next: Avant la fin du pilote (16/02) : noter 3 catégories à ajuster (si besoin) + 1 friction d'usage (ce qui bloque)
 
