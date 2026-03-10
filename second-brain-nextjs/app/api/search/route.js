@@ -6,31 +6,23 @@ export const dynamic = 'force-dynamic';
 export async function GET(req) {
   const { searchParams } = new URL(req.url);
   const q = (searchParams.get('q') || '').toLowerCase();
-  const type = searchParams.get('type') || '';
+  const category = searchParams.get('category') || '';
   const date = searchParams.get('date') || '';
+  const bucket = searchParams.get('bucket') || '';
 
-  const all = buildIndex();
-  const types = [...new Set(all.map((x) => x.type))].sort();
+  const { items, docs } = buildIndex();
+  const categories = [...new Map(docs.map((d) => [d.category, { key: d.category, label: d.categoryLabel }])).values()].sort((a, b) => a.label.localeCompare(b.label));
 
-  const toTs = (d) => {
-    if (!d) return 0;
-    const t = Date.parse(`${d}T00:00:00Z`);
-    return Number.isNaN(t) ? 0 : t;
-  };
-
-  const sorted = all
-    .filter((x) => (!type || x.type === type))
+  const sorted = items
+    .filter((x) => (!category || x.category === category))
+    .filter((x) => (!bucket || x.bucket === bucket))
     .filter((x) => (!date || x.date === date))
-    .filter((x) => !q || `${x.text} ${x.path}`.toLowerCase().includes(q))
+    .filter((x) => !q || `${x.title} ${x.text} ${x.path}`.toLowerCase().includes(q))
     .sort((a, b) => {
-      const ta = toTs(a.date);
-      const tb = toTs(b.date);
-      if (ta !== tb) return tb - ta; // décroissant: plus récent d'abord
-      if (a.path !== b.path) return b.path.localeCompare(a.path);
-      return b.line - a.line;
+      if ((a.date || '') !== (b.date || '')) return (b.date || '').localeCompare(a.date || '');
+      if (a.path !== b.path) return a.path.localeCompare(b.path);
+      return a.line - b.line;
     });
 
-  const items = sorted.slice(0, 500);
-
-  return NextResponse.json({ count: all.length, types, items });
+  return NextResponse.json({ count: sorted.length, categories, items: sorted.slice(0, 300) });
 }

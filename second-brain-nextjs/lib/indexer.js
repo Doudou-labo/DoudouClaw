@@ -16,10 +16,49 @@ function collectFiles(dir, out = []) {
 function isMeaningful(text) {
   const t = text.trim();
   if (!t) return false;
-  if (/^[-_*|`:\s]+$/.test(t)) return false; // séparateurs décoratifs
+  if (/^[-_*|`:\s]+$/.test(t)) return false;
   const letters = (t.match(/[A-Za-zÀ-ÿ]/g) || []).length;
-  if (letters < 8) return false;
-  return true;
+  return letters >= 8;
+}
+
+function parseFrontmatter(content) {
+  if (!content.startsWith('---\n')) return {};
+  const end = content.indexOf('\n---\n', 4);
+  if (end === -1) return {};
+  const block = content.slice(4, end).split('\n');
+  const meta = {};
+  for (const line of block) {
+    const m = line.match(/^([A-Za-z0-9_-]+):\s*(.*)$/);
+    if (!m) continue;
+    meta[m[1]] = m[2].replace(/^"|"$/g, '').trim();
+  }
+  return meta;
+}
+
+function classify(rel, meta = {}) {
+  const byDir = [
+    ['memory/people/', { bucket: 'fsxmemory', category: 'people', label: '👤 Personnes' }],
+    ['memory/projects/', { bucket: 'fsxmemory', category: 'projects', label: '🚀 Projets' }],
+    ['memory/knowledge/', { bucket: 'fsxmemory', category: 'knowledge', label: '🧠 Connaissances' }],
+    ['memory/procedures/', { bucket: 'fsxmemory', category: 'procedures', label: '📋 Procédures' }],
+    ['memory/decisions/', { bucket: 'fsxmemory', category: 'decisions', label: '⚖️ Décisions' }],
+    ['memory/episodes/', { bucket: 'fsxmemory', category: 'episodes', label: '📖 Épisodes' }],
+    ['memory/handoffs/', { bucket: 'fsxmemory', category: 'handoffs', label: '🤝 Handoffs' }],
+    ['memory/inbox/', { bucket: 'fsxmemory', category: 'inbox', label: '📥 Inbox' }],
+    ['notes/projects/', { bucket: 'para', category: 'para-projects', label: '📂 PARA Projets' }],
+    ['notes/areas/', { bucket: 'para', category: 'para-areas', label: '🗂️ PARA Areas' }],
+    ['notes/resources/', { bucket: 'para', category: 'para-resources', label: '📚 PARA Resources' }],
+    ['notes/archive/', { bucket: 'para', category: 'para-archive', label: '🧳 PARA Archive' }],
+  ];
+  for (const [prefix, value] of byDir) {
+    if (rel.startsWith(prefix)) return value;
+  }
+  if (rel.startsWith('memory/')) return { bucket: 'memory', category: 'daily', label: '📝 Journaux' };
+  if (rel === 'MEMORY.md') return { bucket: 'core', category: 'memory-md', label: '📌 MEMORY.md' };
+  if (rel === 'SESSION-STATE.md') return { bucket: 'core', category: 'session-state', label: '⚡ SESSION-STATE' };
+  if (rel === 'RECENT_CONTEXT.md') return { bucket: 'core', category: 'recent-context', label: '🕒 RECENT_CONTEXT' };
+  if (meta.type) return { bucket: 'other', category: meta.type, label: meta.type };
+  return { bucket: 'other', category: 'other', label: 'Autres' };
 }
 
 export function buildIndex() {
@@ -31,13 +70,34 @@ export function buildIndex() {
     ...collectFiles(path.join(ROOT, 'notes')),
   ]
     .filter((v, i, a) => a.indexOf(v) === i && fs.existsSync(v))
-    .filter((v) => !v.includes('/notes/resources/templates/')); // trop de bruit template
+    .filter((v) => !v.includes('/notes/resources/templates/'))
+    .filter((v) => !v.includes('/openclaw-skills-registry/'));
 
   const items = [];
+  const docs = [];
+
   for (const file of files) {
     const rel = file.replace(`${ROOT}/`, '');
-    const type = rel.startsWith('memory/') ? 'DAILY' : rel.startsWith('notes/') ? 'PARA' : rel === 'MEMORY.md' ? 'MEMORY' : 'SESSION';
-    const lines = fs.readFileSync(file, 'utf8').split('\n');
+    const raw = fs.readFileSync(file, 'utf8');
+    const meta = parseFrontmatter(raw);
+    const cls = classify(rel, meta);
+    const lines = raw.split('\n');
+    const titleLine = lines.find((l) => l.trim().startsWith('# '));
+    const title = meta.title || titleLine?.replace(/^#+\s*/, '').trim() || path.basename(rel, '.md');
+    const date = meta.date || (rel.startsWith('memory/') ? rel.slice(7, 17) : '');
+
+    docs.push({
+      id: rel,
+      path: rel,
+      title,
+      date,
+      bucket: cls.bucket,
+      category: cls.category,
+      categoryLabel: cls.label,
+      meta,
+      excerpt: lines.filter((l) => l.trim() && !l.startsWith('---')).slice(0, 6).join(' ').slice(0, 280),
+      content: raw,
+    });
 
     let section = '';
     let block = [];
@@ -46,49 +106,73 @@ export function buildIndex() {
     const flushBlock = () => {
       const joined = block.join(' ').replace(/\s+/g, ' ').trim();
       block = [];
-      if (joined.length < 20) return;
-      if (!isMeaningful(joined)) return;
+      if (joined.length < 20 || !isMeaningful(joined)) return;
       items.push({
         id: `${rel}:${blockStart}`,
-        type,
         path: rel,
         line: blockStart,
+        title,
+        date,
         text: section ? `${section} — ${joined}` : joined,
-        date: rel.startsWith('memory/') ? rel.slice(7, 17) : '',
+        bucket: cls.bucket,
+        category: cls.category,
+        categoryLabel: cls.label,
+        meta,
       });
     };
 
-    lines.forEach((raw, idx) => {
-      const line = raw.trim();
+    lines.forEach((rawLine, idx) => {
+      const line = rawLine.trim();
       const ln = idx + 1;
-
       if (!line) {
         flushBlock();
         return;
       }
-
+      if (line.startsWith('---')) return;
       if (line.startsWith('#')) {
         flushBlock();
         section = line.replace(/^#+\s*/, '').trim();
         return;
       }
-
       if (line.length < 3) return;
       const cleaned = line.replace(/^[-*]\s+/, '').trim();
       if (!isMeaningful(cleaned) && cleaned.length < 30) return;
       if (block.length === 0) blockStart = ln;
       block.push(cleaned);
     });
-
     flushBlock();
   }
 
-  // de-dup visuel: même texte + même fichier + même section
   const seen = new Set();
-  return items.filter((it) => {
+  const dedupedItems = items.filter((it) => {
     const key = `${it.path}::${it.text}`;
     if (seen.has(key)) return false;
     seen.add(key);
     return true;
   });
+
+  return { items: dedupedItems, docs };
+}
+
+export function buildSummary() {
+  const { docs } = buildIndex();
+  const byCategory = new Map();
+  for (const doc of docs) {
+    const key = doc.category;
+    if (!byCategory.has(key)) byCategory.set(key, { key, label: doc.categoryLabel, count: 0 });
+    byCategory.get(key).count += 1;
+  }
+  const categories = [...byCategory.values()].sort((a, b) => a.label.localeCompare(b.label));
+  const latestDocs = [...docs]
+    .sort((a, b) => (b.date || '').localeCompare(a.date || '') || a.path.localeCompare(b.path))
+    .slice(0, 12);
+  return {
+    totalDocs: docs.length,
+    categories,
+    latestDocs,
+  };
+}
+
+export function getDocByPath(targetPath) {
+  return buildIndex().docs.find((d) => d.path === targetPath) || null;
 }
