@@ -155,7 +155,7 @@ export function buildIndex() {
 }
 
 export function buildSummary() {
-  const { docs } = buildIndex();
+  const { docs, items } = buildIndex();
   const byCategory = new Map();
   for (const doc of docs) {
     const key = doc.category;
@@ -166,10 +166,33 @@ export function buildSummary() {
   const latestDocs = [...docs]
     .sort((a, b) => (b.date || '').localeCompare(a.date || '') || a.path.localeCompare(b.path))
     .slice(0, 12);
+
+  const pickLatest = (category, limit = 5) => docs
+    .filter((d) => d.category === category)
+    .sort((a, b) => (b.date || '').localeCompare(a.date || '') || a.path.localeCompare(b.path))
+    .slice(0, limit);
+
+  const openLoopsDoc = docs.find((d) => d.path === 'notes/areas/open-loops.md');
+  const openLoopLines = (openLoopsDoc?.content || '')
+    .split('\n')
+    .map((l) => l.trim())
+    .filter((l) => /^[-*]\s+/.test(l) || /^\d+\.\s+/.test(l))
+    .map((l) => l.replace(/^[-*]\s+/, '').replace(/^\d+\.\s+/, '').trim())
+    .filter(Boolean)
+    .slice(0, 6);
+
   return {
     totalDocs: docs.length,
+    totalChunks: items.length,
     categories,
     latestDocs,
+    dashboard: {
+      recentDecisions: pickLatest('decisions', 4),
+      activeProjects: pickLatest('projects', 6),
+      keyPeople: pickLatest('people', 4),
+      latestHandoffs: pickLatest('handoffs', 4),
+      openLoops: openLoopLines,
+    },
   };
 }
 

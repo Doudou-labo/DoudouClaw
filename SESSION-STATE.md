@@ -1,10 +1,11 @@
 # SESSION-STATE.md — Active Working Memory
 
 ## Current Task
-Consolidation mémoire quotidienne + synchronisation PARA de fin de journée (2026-03-10 21:50 Europe/Paris).
+Corriger l’incohérence UI de `second-brain-nextjs` entre les quantités affichées par catégorie et les résultats de recherche découpés en plusieurs morceaux (2026-03-10 22:41 Europe/Paris).
 
 ## Immediate Context
 - Consolidation N1 exécutée ce soir: `SESSION-STATE.md`, `MEMORY.md`, `memory/2026-03-10.md` relus et alignés.
+- Nouveau retour utilisateur sur `second-brain-nextjs` : les compteurs de catégories semblent compter les documents/entrées, tandis que la recherche affiche plusieurs segments/chunks pour une même entrée, ce qui crée un écart visuel trompeur.
 - Préférence de reporting cron confirmée et conservée: résumé Memory+PARA en Markdown + emojis vers Discord `1472597513898033162` (best-effort).
 - Continuité mémoire inchangée: `fsxmemory` niveau 2.5 actif + règle miroir (mémoire générale ↔ fsxmemory).
 - `RECENT_CONTEXT.md` mis à jour avec highlights du 2026-03-10.

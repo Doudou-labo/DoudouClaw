@@ -25,7 +25,7 @@ export default function Page() {
   const [mode, setMode] = useState('keyword');
   const [category, setCategory] = useState('');
   const [date, setDate] = useState('');
-  const [summary, setSummary] = useState({ totalDocs: 0, categories: [], latestDocs: [] });
+  const [summary, setSummary] = useState({ totalDocs: 0, totalChunks: 0, categories: [], latestDocs: [], dashboard: { recentDecisions: [], activeProjects: [], keyPeople: [], latestHandoffs: [], openLoops: [] } });
   const [searchData, setSearchData] = useState({ count: 0, categories: [], items: [] });
   const [semanticData, setSemanticData] = useState({ count: 0, items: [], ok: true, raw: '' });
   const [selectedPath, setSelectedPath] = useState('');
@@ -102,8 +102,8 @@ export default function Page() {
 
         <div className="stats">
           <div className="stat"><strong>{summary.totalDocs}</strong><span>documents</span></div>
+          <div className="stat"><strong>{summary.totalChunks}</strong><span>extraits</span></div>
           <div className="stat"><strong>{summary.categories.length}</strong><span>catégories</span></div>
-          <div className="stat"><strong>{searchData.count}</strong><span>matchs mot-clé</span></div>
         </div>
 
         <div className="sectionTitle">Catégories</div>
@@ -151,11 +151,70 @@ export default function Page() {
           </div>
         </section>
 
+        <section className="dashboardGrid">
+          <section className="dashCard card">
+            <div className="panelHead">
+              <h3>⚖️ Décisions récentes</h3>
+              <div className="meta">{summary.dashboard.recentDecisions.length} docs</div>
+            </div>
+            <div className="miniList">
+              {summary.dashboard.recentDecisions.map((d) => (
+                <button key={d.path} className="miniItem" onClick={() => setSelectedPath(d.path)}>
+                  <strong>{d.title}</strong>
+                  <span>{d.date || 'sans date'}</span>
+                </button>
+              ))}
+            </div>
+          </section>
+
+          <section className="dashCard card">
+            <div className="panelHead">
+              <h3>🚀 Projets actifs</h3>
+              <div className="meta">{summary.dashboard.activeProjects.length} docs</div>
+            </div>
+            <div className="miniList">
+              {summary.dashboard.activeProjects.map((d) => (
+                <button key={d.path} className="miniItem" onClick={() => setSelectedPath(d.path)}>
+                  <strong>{d.title}</strong>
+                  <span>{d.date || 'sans date'}</span>
+                </button>
+              ))}
+            </div>
+          </section>
+
+          <section className="dashCard card">
+            <div className="panelHead">
+              <h3>👤 Personnes clés</h3>
+              <div className="meta">{summary.dashboard.keyPeople.length} docs</div>
+            </div>
+            <div className="miniList">
+              {summary.dashboard.keyPeople.map((d) => (
+                <button key={d.path} className="miniItem" onClick={() => setSelectedPath(d.path)}>
+                  <strong>{d.title}</strong>
+                  <span>{d.categoryLabel}</span>
+                </button>
+              ))}
+            </div>
+          </section>
+
+          <section className="dashCard card">
+            <div className="panelHead">
+              <h3>🎯 Open loops</h3>
+              <div className="meta">snapshot</div>
+            </div>
+            <div className="loopList">
+              {summary.dashboard.openLoops.map((item, idx) => (
+                <div key={`${idx}-${item}`} className="loopItem">• {item}</div>
+              ))}
+            </div>
+          </section>
+        </section>
+
         <section className="contentGrid">
           <section className="results card">
             <div className="panelHead">
               <h3>{mode === 'keyword' ? 'Résultats' : 'Recherche sémantique'}</h3>
-              <div className="meta">{mode === 'keyword' ? `${searchData.count} résultats` : `${semanticData.count} résultats`}</div>
+              <div className="meta">{mode === 'keyword' ? `${searchData.count} extraits` : `${semanticData.count} résultats sémantiques`}</div>
             </div>
 
             {mode !== 'keyword' && !semanticData.ok && (

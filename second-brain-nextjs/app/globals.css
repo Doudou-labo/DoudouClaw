@@ -31,6 +31,13 @@ button,input,select{font:inherit}
 .searchGrid{display:grid;grid-template-columns:minmax(0,1fr) 190px 170px;gap:10px}
 .input,.select{width:100%;padding:13px 14px;border-radius:14px;border:1px solid #31457c;background:#0b1330;color:#edf2ff;outline:none}
 .input:focus,.select:focus{border-color:#6d91ff;box-shadow:0 0 0 3px rgba(109,145,255,.18)}
+.dashboardGrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.dashCard{padding:18px}
+.miniList,.loopList{display:flex;flex-direction:column;gap:10px}
+.miniItem{width:100%;text-align:left;border:1px solid #24345d;background:#0e1630;color:#edf2ff;border-radius:14px;padding:12px;cursor:pointer;transition:.15s ease;display:flex;flex-direction:column;gap:6px}
+.miniItem:hover{background:#142043;border-color:#36508f}
+.miniItem span{font-size:12px;color:#9fb0dd}
+.loopItem{padding:12px;border:1px solid #24345d;background:#0e1630;border-radius:14px;color:#dfe7ff;line-height:1.45}
 .contentGrid{display:grid;grid-template-columns:440px 1fr;gap:16px;min-height:0}
 .panelHead{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:12px}
 .panelHead h3{margin:0}
@@ -40,4 +47,4 @@ button,input,select{font:inherit}
 .docTitle{font-size:24px;font-weight:800;margin-bottom:4px}
 .docContent{margin-top:16px;background:#0b1330;border:1px solid #26355f;border-radius:16px;padding:16px;white-space:pre-wrap;word-break:break-word;max-height:calc(100vh - 320px);overflow:auto;color:#e6edff}
 .warning,.empty{padding:14px;border-radius:14px;background:#22142d;border:1px solid #5e305f;color:#ffd7f2}
-@media (max-width: 1100px){.shell{grid-template-columns:1fr}.sidebar{position:static;height:auto}.contentGrid{grid-template-columns:1fr}.searchGrid{grid-template-columns:1fr}.hero{flex-direction:column;align-items:flex-start}}
+@media (max-width: 1100px){.shell{grid-template-columns:1fr}.sidebar{position:static;height:auto}.contentGrid,.dashboardGrid{grid-template-columns:1fr}.searchGrid{grid-template-columns:1fr}.hero{flex-direction:column;align-items:flex-start}}
