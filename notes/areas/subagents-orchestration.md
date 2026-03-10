@@ -145,7 +145,65 @@ sessions_spawn \
 
 ---
 
-## 5) Check-list de fiabilité
+## 5) Sessions persistantes Agence-IA (mode "session")
+
+Pour un projet long nécessitant un agent spécialisé avec continuité contextuelle :
+
+### Création d'une session persistante
+
+```bash
+# Spawner un agent Agence-IA en session persistante
+sessions_spawn \
+  --label "backend-venus" \
+  --task "Tu es le Backend Architect pour le projet Venus Beauté. Tu vas concevoir l'architecture API et gérer les décisions techniques." \
+  --file ~/.openclaw/agency-agents/backend-architect/SOUL.md \
+  --mode session \
+  --thread true
+```
+
+### Caractéristiques
+
+- **Session longue durée** : reste active tant qu'elle n'est pas killée
+- **Thread Discord dédié** : conversations isolées par agent/projet
+- **Mémoire persistante** : garde le contexte du projet en cours
+- **Label identifiable** : facile à retrouver avec `sessions_list`
+
+### Cas d'usage
+
+- Projet de développement sur plusieurs jours/semaines
+- Besoin d'un expert métier dédié (ex: "le SEO guy" pour un site)
+- Collaboration continue sur une fonctionnalité complexe
+- Agent dédié à un canal Discord spécifique (ex: #dev-backend)
+
+### Interactions avec une session persistante
+
+```bash
+# Envoyer un message à la session
+sessions_send --label "backend-venus" --message "Conçois l'endpoint /api/products"
+
+# Lister les sessions actives
+sessions_list --kinds session
+
+# Voir l'historique
+sessions_history --sessionKey "backend-venus"
+
+# Kill la session quand le projet est terminé
+subagents --action kill --target "backend-venus"
+```
+
+### Mapping projet → session persistante recommandée
+
+| Projet | Agent Agence-IA | Label suggéré |
+|--------|-----------------|---------------|
+| Venus Beauté (e-commerce) | `backend-architect` + `frontend-developer` | `backend-venus`, `frontend-venus` |
+| Refonte SEO site | `growth-hacker` | `seo-venus` |
+| Audit sécurité | `security-engineer` | `security-audit` |
+| CI/CD & Infra | `devops-automator` | `devops-pipeline` |
+| Content marketing | `content-creator` | `content-venus` |
+
+---
+
+## 6) Check-list de fiabilité
 
 Avant synthèse finale:
 - [ ] Le bon mode de routage a été choisi
@@ -155,7 +213,7 @@ Avant synthèse finale:
 
 ---
 
-## 6) Notes d'exploitation
+## 7) Notes d'exploitation
 
 - Config runtime OpenClaw hors repo: `~/.openclaw/openclaw.json`
 - Priorité de source: workspace local d'abord, fallback GitHub si doute
