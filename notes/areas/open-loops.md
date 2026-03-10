@@ -33,5 +33,5 @@
 - [ ] Ajouter pages légales (CGV, mentions légales, confidentialité)
 
 ## Auto-checkpoints
-- [ ] [AUTO 2026-03-09 midi] Checkpoint 3-min fait. Next: Avant la fin du pilote (16/02) : noter 3 catégories à ajuster (si besoin) + 1 friction d'usage (ce qui bloque)
+- [ ] [AUTO 2026-03-10 midi] Checkpoint 3-min fait. Next: Avant la fin du pilote (16/02) : noter 3 catégories à ajuster (si besoin) + 1 friction d'usage (ce qui bloque)
 
