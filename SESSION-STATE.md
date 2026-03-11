@@ -4,9 +4,10 @@
 Projet pneu-tracker livré et live (2026-03-11). Prochaine session : aucune tâche ouverte sur ce projet.
 
 ## Dernier travail réalisé (2026-03-11)
-- App pneu-tracker créée : Next.js 15 + SQLite, port 3002, systemd, Caddy
-- URL : https://pneus.doudougen.xyz (auth Basic DoudouClaw)
-- Features : formulaire 5 champs, historique, export CSV, recherche temps réel
+- App pneu-tracker créée et enrichie (v2) : Next.js 15 + SQLite + recharts + xlsx
+- URL : https://pneus.doudougen.xyz (auth Basic DoudouClaw, port 3002, systemd)
+- Features v1 : formulaire 5 champs, historique, export CSV, recherche
+- Features v2 : stats header, onglets, filtres avancés, modification entrée (modal), import CSV, export Excel, vue mobile cartes, toasts, dashboard graphique (3 charts)
 
 ## Current Task (précédent)
 Ajuster l’UI de `second-brain-nextjs` : les journaux récents doivent afficher les fichiers mémoire journaliers du plus récent au plus ancien, pour voir immédiatement les derniers jours en tête (2026-03-10 22:51 Europe/Paris).
