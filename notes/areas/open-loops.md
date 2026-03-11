@@ -33,10 +33,12 @@
 - [ ] Ajouter pages légales (CGV, mentions légales, confidentialité)
 
 ## Pneu Tracker — confort / suite
+- [ ] **🔴 EN COURS — Sprint soir** : migrations versionnées + FTS5 + mode saisie rapide + accessibilité ARIA (via Claude Code, session active)
 - [ ] Ajouter une fiche visuelle du pneu sélectionné (formulaire + édition)
 - [ ] Ajouter un bouton d'admin pour réimporter le catalogue pneus depuis l'UI
 - [ ] Enrichir le dashboard avec stats par marque / saison / référence
 
 ## Auto-checkpoints
-- [ ] [AUTO 2026-03-11 midi] Checkpoint 3-min fait. Next: Avant la fin du pilote (16/02) : noter 3 catégories à ajuster (si besoin) + 1 friction d'usage (ce qui bloque)
+- [x] [AUTO 2026-03-11 midi] Checkpoint 3-min fait
+- [x] [AUTO 2026-03-11 soir] Consolidation mémoire quotidienne faite
 
