@@ -82,6 +82,7 @@
 - Migration orchestration (2026-03-10): passage **100% Agence-IA** — remplacement de tous les agents `spec-*` par les 112 agents Agence-IA — nouvelle architecture dans `notes/areas/agent-orchestration.md` — orchestrateur: `agents-orchestrator` — agents installés dans `~/.openclaw/agency-agents/`
 
 ### Tools & Infrastructure
+- **pneu-tracker** (2026-03-11) : App suivi sorties pneus — `https://pneus.doudougen.xyz` (port 3002, auth Basic DoudouClaw, service systemd `pneu-tracker.service`). Stack: Next.js 15 + SQLite (`better-sqlite3`). Features: formulaire 5 champs, historique, export CSV, recherche temps réel. App : `/root/projects/pneu-tracker/`.
 - **ClawSuite** (2026-03-01) : Dashboard mission control — `https://clawsuite.doudougen.xyz` (port 3000, auth Basic DoudouClaw)
 - **ClawMetry** (2026-03-06) : Observabilité temps réel — `https://metry.doudougen.xyz` (port 8900, auth Basic DoudouClaw, v0.11.57)
 - **ClawBridge** (2026-03-06) : Dashboard mobile-first — `https://mobile.doudougen.xyz` (port 3001, auth Basic DoudouClaw, v1.1.2, Access Key: `433f8670fabc90836cd2d6f43fb9d83f`)

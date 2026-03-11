@@ -1,6 +1,14 @@
 # SESSION-STATE.md — Active Working Memory
 
 ## Current Task
+Projet pneu-tracker livré et live (2026-03-11). Prochaine session : aucune tâche ouverte sur ce projet.
+
+## Dernier travail réalisé (2026-03-11)
+- App pneu-tracker créée : Next.js 15 + SQLite, port 3002, systemd, Caddy
+- URL : https://pneus.doudougen.xyz (auth Basic DoudouClaw)
+- Features : formulaire 5 champs, historique, export CSV, recherche temps réel
+
+## Current Task (précédent)
 Ajuster l’UI de `second-brain-nextjs` : les journaux récents doivent afficher les fichiers mémoire journaliers du plus récent au plus ancien, pour voir immédiatement les derniers jours en tête (2026-03-10 22:51 Europe/Paris).
 
 ## Immediate Context
