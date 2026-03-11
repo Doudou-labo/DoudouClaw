@@ -1,13 +1,18 @@
 # SESSION-STATE.md — Active Working Memory
 
 ## Current Task
-Projet pneu-tracker livré et live (2026-03-11). Prochaine session : aucune tâche ouverte sur ce projet.
+Projet pneu-tracker livré et fortement enrichi (2026-03-11). Prochaine session : confort/raffinement possibles, mais aucune urgence bloquante.
 
 ## Dernier travail réalisé (2026-03-11)
-- App pneu-tracker créée et enrichie (v2) : Next.js 15 + SQLite + recharts + xlsx
+- App pneu-tracker créée et enrichie jusqu'à une version métier robuste : Next.js 16 + SQLite + recharts
 - URL : https://pneus.doudougen.xyz (auth Basic DoudouClaw, port 3002, systemd)
 - Features v1 : formulaire 5 champs, historique, export CSV, recherche
-- Features v2 : stats header, onglets, filtres avancés, modification entrée (modal), import CSV, export Excel, vue mobile cartes, toasts, dashboard graphique (3 charts)
+- Features v2 : stats header, onglets, filtres avancés, modification entrée (modal), import CSV, export Excel puis retrait d'Excel, vue mobile cartes, toasts, dashboard graphique
+- Durcissement : validation serveur renforcée, soft delete, audit trail, pagination visible, sécurité headers, service prêt pour auth app-level via EnvironmentFile
+- Référentiel pneus intégré : import de 12 568 références depuis fichier Excel dans `tyre_catalog`
+- Saisie métier : autocomplétion prédictive sur SAP / description / référence fabricant / libellé de recherche
+- Nouveaux champs ajoutés à `sorties` : `manufacturer_ref`, `search_label`, `tyre_catalog_id`
+- Autocomplète désormais disponible en création, édition et recherche historique
 
 ## Current Task (précédent)
 Ajuster l’UI de `second-brain-nextjs` : les journaux récents doivent afficher les fichiers mémoire journaliers du plus récent au plus ancien, pour voir immédiatement les derniers jours en tête (2026-03-10 22:51 Europe/Paris).
