@@ -1,7 +1,7 @@
 # SESSION-STATE.md — Active Working Memory
 
 ## Current Task
-Correction + précisions validées par Alexandre : **nouvelle application dédiée** à l’**inventaire physique des pneus** (séparée de `pneu-tracker`). Le site doit afficher **toutes les colonnes du XLSX** (`Article`, `Référence pneu`, `A utilisation libre`, `Stock disponible`, `Stock alloué`, `En cours de commande`) **sur une vue liste complète** — **pas une référence à la fois**. Ajouter la couche inventaire : **case à cocher si conforme**, **quantité physique si écart**, et **écart calculé automatiquement** par différence entre **utilisation libre** et **présence physique**. Les **statuts visuels recommandés** sont validés par Alexandre. Demande explicite : **utiliser les agents nécessaires** pour le faire.
+Correction + précisions validées par Alexandre : **nouvelle application dédiée** à l’**inventaire physique des pneus** (séparée de `pneu-tracker`). Le site doit afficher **toutes les colonnes du XLSX** (`Article`, `Référence pneu`, `A utilisation libre`, `Stock disponible`, `Stock alloué`, `En cours de commande`) **sur une vue liste complète** — **pas une référence à la fois**. Ajouter la couche inventaire : **case à cocher si conforme**, **quantité physique si écart**, et **écart calculé automatiquement** par différence entre **utilisation libre** et **présence physique**. Les **statuts visuels recommandés** sont validés par Alexandre. DNS déjà créé par Alexandre pour le projet : **`inventaire.doudougen.xyz`**. Demande explicite : **utiliser les agents nécessaires** pour le faire.
 
 ## Dernier travail réalisé (2026-03-11)
 - App **pneu-tracker** créée et massivement enrichie : Next.js 16 + SQLite + recharts
