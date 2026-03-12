@@ -62,6 +62,7 @@
 - Retrouver l’équilibre émotionnel après la rupture avec Audrey
 - Reprendre le sport de façon durable malgré la contrainte d’épaule gauche instable
 - Lancer la boutique e-commerce Venus Beauté (branding vert/blanc, marché France, paiement PayPal)
+- Construire une app dédiée d’inventaire physique pneus (`inventaire.doudougen.xyz`) séparée de `pneu-tracker`, avec import XLSX ordonné, contrôle conforme/écarts, et export Excel final
 
 ### Key Decisions Made
 - Utiliser PARA + mémoire structurée pour améliorer la continuité de travail

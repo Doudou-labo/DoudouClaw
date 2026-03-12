@@ -1,7 +1,7 @@
 # SESSION-STATE.md — Active Working Memory
 
 ## Current Task
-Correction + précisions validées par Alexandre : **nouvelle application dédiée** à l’**inventaire physique des pneus** (séparée de `pneu-tracker`). Le site doit afficher **toutes les colonnes du XLSX** (`Article`, `Référence pneu`, `A utilisation libre`, `Stock disponible`, `Stock alloué`, `En cours de commande`) **sur une vue liste complète** — **pas une référence à la fois**. Ajouter la couche inventaire : **case à cocher si conforme**, **quantité physique si écart**, et **écart calculé automatiquement** par différence entre **utilisation libre** et **présence physique**. Les **statuts visuels recommandés** sont validés par Alexandre. DNS déjà créé par Alexandre pour le projet : **`inventaire.doudougen.xyz`**. Bug remonté par Alexandre : il faut pouvoir **retirer la conformité / revenir en arrière / réinitialiser une ligne** sans que la mention conforme ou écart reste bloquée. Nouvelle exigence validée : lors de l’import XLSX, **l’ordre des lignes doit rester strictement celui du fichier** (ordre alphabétique/dimension métier) — **aucun tri ni repositionnement** dans la vue principale. Nouveau besoin UI : filtres explicites **non conforme / conforme / reste à contrôler** + possibilité claire de **revenir à l’ordre d’import**. Nouvelle piste produit validée : réutiliser le **référentiel des ~13 000 pneus** déjà intégré dans `pneu-tracker` comme **BDD de recherche/ajout** pour l’inventaire, afin de pouvoir ajouter des pneus en plus via **référence fabricant / SAP / description**. Nouveau besoin validé : **export Excel des résultats d’inventaire** en fin de contrôle, afin de ressortir un fichier basé sur le résultat final.
+Consolidation terminée; prochain focus produit: **app dédiée d’inventaire physique des pneus** (séparée de `pneu-tracker`) avec vue liste complète XLSX, respect strict de l’ordre d’import, workflow de contrôle conforme/non conforme/reste à contrôler, calcul d’écarts automatiques, et export Excel final.
 
 ## Dernier travail réalisé (2026-03-11)
 - App **pneu-tracker** créée et massivement enrichie : Next.js 16 + SQLite + recharts
@@ -16,12 +16,11 @@ Correction + précisions validées par Alexandre : **nouvelle application dédi�
 - Sprint soir lancé : migrations versionnées, FTS5 pour `/api/tyres/suggest`, formulaire simplifié, accessibilité autocomplete
 
 ## Immediate Context
-- Consolidation mémoire quotidienne exécutée (20:50 UTC).
-- `memory/2026-03-11.md`, `RECENT_CONTEXT.md`, `notes/areas/open-loops.md` synchronisés.
-- Chantiers pneu-tracker en cours via Claude Code (session active `sharp-tidepool`).
-- Aucun nouvel item LTM durable à créer (consolidation existante maintenue).
-- Préférence reporting cron maintenue : résumé Markdown + emojis vers Discord `1472597513898033162`.
-- Architecture Agence-IA 100% active (112 agents).
+- Consolidation mémoire quotidienne exécutée le **2026-03-12 21:50 Europe/Paris**.
+- N1 synchronisé: `memory/2026-03-12.md`, `SESSION-STATE.md`, `RECENT_CONTEXT.md`.
+- PARA mis à jour: création de la note projet `notes/projects/inventaire-physique-pneus.md` + open loops alignés.
+- Préférence reporting cron maintenue: résumé Markdown + emojis vers Discord `1472597513898033162` (announce best-effort).
+- Chantiers actifs: cadrage puis implémentation de l’app inventaire (DNS prêt `inventaire.doudougen.xyz`).
 
 ## Key Decisions (actives)
 1. Jurons français sans modération = identité DoudouClaw.
@@ -40,4 +39,4 @@ Correction + précisions validées par Alexandre : **nouvelle application dédi�
 - `RECENT_CONTEXT.md`
 
 ## Last Updated
-2026-03-11 21:50 Europe/Paris — consolidation mémoire/PARA exécutée, N1 synchronisé.
+2026-03-12 21:50 Europe/Paris — consolidation mémoire/PARA exécutée, N1 synchronisé et plan projet inventaire ancré.

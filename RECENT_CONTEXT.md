@@ -4,33 +4,30 @@
 
 ---
 
-## Latest Session — 2026-03-11
+## Latest Session — 2026-03-12
 
 ### Topic
-Développement intensif de **pneu-tracker** — app de suivi des sorties pneus pour Euromaster.
+Consolidation mémoire quotidienne + cadrage projet **inventaire physique des pneus** (app séparée de `pneu-tracker`).
 
 ### Key Points
-- App créée et enrichie : Next.js 16 + SQLite + recharts, port 3002, systemd
-- URL live : https://pneus.doudougen.xyz (auth Basic)
-- Features : formulaire enrichi, historique filtrable, pagination, modification/suppression logique, import/export CSV, dashboard graphique, toasts
-- Référentiel métier : **12 568 références pneus** importées avec autocomplétion prédictive
-- Durcissement : validation serveur, soft delete, audit trail, security headers
-- Bug proxy same-site corrigé (mobile/Safari)
-- Réaudit multi-agents (orchestrateur + 4 spécialistes)
-- Sprint soir en cours : migrations versionnées, FTS5, formulaire simplifié, accessibilité ARIA
+- Consolidation N1 exécutée (journal du jour, SESSION-STATE, RECENT_CONTEXT) avec traçabilité.
+- Cadrage produit validé: vue liste complète des colonnes XLSX et **ordre d’import strictement conservé**.
+- Workflow inventaire validé: statuts explicites (conforme/non conforme/reste à contrôler), saisie quantité physique, calcul automatique des écarts, reset d’une ligne.
+- Réutilisation du référentiel ~12.5k pneus (`pneu-tracker`) comme base de recherche/ajout dans l’inventaire.
+- Besoin de sortie confirmé: **export Excel** des résultats d’inventaire en fin de contrôle.
+- Préférence cron maintenue: rapport Markdown + emojis vers Discord `1472597513898033162` (announce best-effort).
 
 ### Prochains pas
-- [ ] Finaliser sprint soir (migrations, FTS5, saisie rapide)
-- [ ] Tester le mode saisie ultra-rapide en conditions réelles
-- [ ] Préparer visite Marc (DR) le 31/03/2026
+- [ ] Rédiger le backlog MVP technique de l’app `inventaire.doudougen.xyz`
+- [ ] Définir le schéma de données import + état de contrôle + export
+- [ ] Implémenter filtres UX et mécanisme de retour à l’ordre d’import
 
 ### Status
-- [x] pneu-tracker v1 livrée (matin)
-- [x] pneu-tracker v2 + durcissement + référentiel (après-midi)
-- [x] Bug proxy corrigé
-- [x] Réaudit multi-agents
-- [ ] Sprint soir (en cours via Claude Code)
+- [x] Consolidation mémoire/PARA du jour exécutée
+- [x] N1 synchronisé
+- [x] Cadrage fonctionnel inventaire consolidé
+- [ ] Implémentation app inventaire (à lancer)
 
 ---
 
-*Last auto-update: 2026-03-11 20:50 UTC*
+*Last auto-update: 2026-03-12 20:50 UTC*

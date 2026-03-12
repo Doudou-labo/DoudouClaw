@@ -38,6 +38,12 @@
 - [ ] Ajouter un bouton d'admin pour réimporter le catalogue pneus depuis l'UI
 - [ ] Enrichir le dashboard avec stats par marque / saison / référence
 
+## Inventaire physique pneus — nouvelle app
+- [ ] Rédiger le backlog MVP technique (`inventaire.doudougen.xyz`) à partir du cadrage validé
+- [ ] Implémenter import XLSX avec ordre strict conservé + mode retour à l’ordre d’import
+- [ ] Implémenter statuts conforme/non conforme/reste à contrôler + reset ligne complet
+- [ ] Brancher recherche/ajout via référentiel pneus + préparer export Excel final
+
 ## Auto-checkpoints
 - [ ] [AUTO 2026-03-12 midi] Checkpoint 3-min fait. Next: Avant la fin du pilote (16/02) : noter 3 catégories à ajuster (si besoin) + 1 friction d'usage (ce qui bloque)
 
