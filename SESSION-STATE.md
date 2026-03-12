@@ -1,7 +1,7 @@
 # SESSION-STATE.md — Active Working Memory
 
 ## Current Task
-Session soir **pneu-tracker** : sprint saisie rapide + FTS5 + migrations versionnées (en cours via Claude Code, session `sharp-tidepool`). Prochaine session : finaliser les chantiers ou confort/rafraîchissements.
+Projet **pneu-tracker / inventaire pneus** : intégrer un **import Excel du stock** avec au minimum stock théorique + quantité réservée, puis une **vue d’inventaire physique** où chaque ligne peut être soit **cochée conforme** (ligne verte), soit **corrigée avec quantité réelle physique**. Demande explicite d’Alexandre : **utiliser les agents de l’Agence-IA** pour réaliser le projet.
 
 ## Dernier travail réalisé (2026-03-11)
 - App **pneu-tracker** créée et massivement enrichie : Next.js 16 + SQLite + recharts
