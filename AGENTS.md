@@ -308,35 +308,34 @@ Don't wait for permission to improve. If you learned something, write it down no
 
 ## Sub-agent Routing Policy (global)
 
-### Architecture Agence-IA (100%)
+### Principe canonique
 
-- **Conductor principal:** `main` (point d'entrée unique).
-- **Orchestrateur central:** `agents-orchestrator` — coordination multi-domaines, dispatch vers spécialistes.
-- **Spécialistes métiers (112 agents Agence-IA):**
-  - **Engineering:** `backend-architect`, `frontend-developer`, `security-engineer`, `devops-automator`, `ai-engineer`
-  - **Design:** `ui-designer`, `ux-researcher`, `brand-guardian`
-  - **Marketing:** `growth-hacker`, `content-creator`, `reddit-community-builder`
-  - **Project/QA:** `senior-project-manager`, `reality-checker`, `evidence-collector`
-- **Pool dynamique:** spawn à la demande avec `sessions_spawn` + SOUL.md Agence-IA.
+- **Point d’entrée unique :** `main`.
+- **Pas de logique “1 salon = 1 agent”.** Les salons Discord ne doivent pas être multipliés pour matérialiser les agents.
+- Les agents spécialisés fonctionnent comme des **sessions séparées en backend**, pas comme une arborescence Discord dédiée.
 - **Documentation canonique:** `notes/areas/agent-orchestration.md`
 
 ### Règles de routage
 
 - Tâche courte/linéaire/faible risque → traiter en `main`.
-- Tâche **moyenne/technique mono-domaine** → routage direct `main -> agent Agence-IA` (backend-architect, frontend-developer, etc.).
-- Tâche **multi-domaines / dépendances / coordination** → `main -> agents-orchestrator -> spécialistes Agence-IA`.
+- Tâche **moyenne/technique mono-domaine** → `main` délègue à une **session spécialisée**.
+- Tâche **multi-domaines / dépendances / coordination** → `main` orchestre **plusieurs sessions spécialisées**.
 - Déclencheur obligatoire: si la demande contient **2 domaines ou plus**, orchestrator requis.
-- Déclencheur texte explicite: si le message contient "utilise les agents nécessaires", forcer `agents-orchestrator`.
-- Règle stricte: si `agents-orchestrator` est utilisé, il doit appeler **au moins un** spécialiste avant synthèse finale.
+- Déclencheur texte explicite: si le message contient "utilise les agents nécessaires" (ou équivalent), forcer l’orchestration multi-sessions.
+- Règle stricte: si une orchestration multi-sessions est utilisée, elle doit appeler **au moins une** session spécialisée avant synthèse finale.
 - Interdiction de sortir `Agents utilisés : main` sur une demande multi-domaines.
 
 ### Exécution pratique
 
-- Pour l'orchestration interactive user-facing: privilégier `sessions_send` vers les sessions persistantes.
+- Réponse utilisateur: **une seule synthèse claire dans le salon courant**.
+- Transparence: footer `Agents utilisés : ...` obligatoire.
+- Pour l’orchestration interactive user-facing: privilégier `sessions_send` / `sessions_spawn` côté backend, sans exposer les sessions comme salons dédiés.
 - Réserver `sessions_spawn` aux tâches background/longues, batch, ou spécialistes éphémères.
-- En cas d'échec spécialiste persistant: 1 retry, puis fallback voisin; si KO, respawn session.
-- Le footer `Agents utilisés : ...` doit refléter la chaîne réelle (main + agents réellement appelés).
-- Cible de réponse: une seule synthèse finale claire pour l'utilisateur.
+- En cas d’échec d’une session spécialisée: 1 retry, puis fallback voisin; si KO, respawn session.
+
+### Principe directeur
+
+**Multi-agent par sessions séparées, pas par multiplication de salons Discord.**
 
 ## Learned Lessons
 
