@@ -1,7 +1,7 @@
 # SESSION-STATE.md — Active Working Memory
 
 ## Current Task
-Projet **pneu-tracker / inventaire pneus** : intégrer un **import Excel du stock** avec au minimum stock théorique + quantité réservée, puis une **vue d’inventaire physique** où chaque ligne peut être soit **cochée conforme** (ligne verte), soit **corrigée avec quantité réelle physique**. Demande explicite d’Alexandre : **utiliser les agents de l’Agence-IA** pour réaliser le projet.
+Projet **pneu-tracker / inventaire pneus** : Alexandre a fourni un **fichier XLSX réel** contenant `code article SAP`, `référence`, `quantité informatique`, `quantité disponible`, `quantité allouée` et `quantité en cours de commande`. Objectif immédiat : réaliser l’évolution de `pneu-tracker` avec **import XLSX réel + session d’inventaire physique** (case conforme verte ou saisie quantité physique), en **utilisant les agents de l’Agence-IA**.
 
 ## Dernier travail réalisé (2026-03-11)
 - App **pneu-tracker** créée et massivement enrichie : Next.js 16 + SQLite + recharts
