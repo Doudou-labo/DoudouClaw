@@ -30,12 +30,12 @@ Détection d'anomalies dans un log Apache-like avec erreurs injectées.
 
 | Modèle | Requêtes détectées | Taux d'erreur | Anomalies trouvées | Rapport |
 |--------|--------------------|---------------|--------------------|----|
+| **Healer Alpha** | 45 | 40.0% | 6 patterns + médiane 95ms | ✅ Bon |
 | **Sonnet 4.6** | 45 | 31.1% | 6 patterns | ✅ Excellent |
 | **GPT-5.4** | 52 | 40.4% | 6 patterns + P95 | ✅ Très détaillé |
 | **Hunter Alpha** | 49 | 42.9% | 6 patterns + lecture causale | ✅ Bon |
-| **Healer Alpha** | *retry en cours* | — | — | ⏳ |
 
-**Note :** GPT et Hunter ont "créé" des requêtes supplémentaires (comptage diff), Sonnet est resté sur le count exact (45).
+**Note :** GPT et Hunter ont "créé" des requêtes supplémentaires (comptage diff), Sonnet et Healer sont restés sur le count exact (45).
 
 ### 🌐 Recherche — FTS5 vs Elasticsearch
 Synthèse technique avec recherche web réelle.
@@ -54,9 +54,9 @@ Synthèse technique avec recherche web réelle.
 | Critère | Healer Alpha | Sonnet 4.6 | GPT-5.4 | Hunter Alpha |
 |---------|-------------|------------|---------|-------------|
 | Code | ⭐⭐⭐⭐ | ⭐⭐⭐⭐⭐ | ⭐⭐⭐ | ⭐⭐⭐⭐ |
-| Analyse | ⏳ | ⭐⭐⭐⭐⭐ | ⭐⭐⭐⭐ | ⭐⭐⭐⭐ |
+| Analyse | ⭐⭐⭐⭐ | ⭐⭐⭐⭐⭐ | ⭐⭐⭐⭐ | ⭐⭐⭐⭐ |
 | Recherche | ⭐⭐⭐⭐ | ⭐⭐⭐⭐⭐ | ⭐⭐⭐⭐⭐ | ⭐⭐⭐⭐ |
-| **Total** | — | 🥇 | 🥈 | 🥉 |
+| **Total** | 🥉 | 🥇 | 🥈 | 🥉 |
 
 ## Structure des fichiers
 
