@@ -270,7 +270,7 @@ build_report() {
     report+=$'\n'
     report+="• Fichiers modifiés: **${git_files}**"
     report+=$'\n'
-    report+="• Commit: \`${git_commit}\`"
+    report+="• Commit: **${git_commit}**"
     report+=$'\n'
     if [[ -n "$git_url" ]]; then
         report+="• URL: ${git_url}"
@@ -440,11 +440,18 @@ main() {
     fi
     
     log_info "📨 Envoi vers Discord (channel: ${DISCORD_CHANNEL})..."
+    
+    # Sauvegarder le rapport dans un fichier pour usage externe (OpenClaw)
+    local report_file="/tmp/discord-report-${RUN_ID}.md"
+    echo "$report" > "$report_file"
+    log_info "💾 Rapport sauvegardé dans: $report_file"
+    
     if send_to_discord "$report"; then
         log_info "✨ Rapport Discord envoyé avec succès"
         exit 0
     else
         log_warn "⚠️ Envoi échoué mais on continue (mode best-effort)"
+        log_info "💡 Rapport disponible dans: $report_file"
         exit 0  # Best-effort: pas de fail hard
     fi
 }
