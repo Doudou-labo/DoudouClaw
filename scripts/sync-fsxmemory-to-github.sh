@@ -1,7 +1,7 @@
 #!/bin/bash
 #
 # sync-fsxmemory-to-github.sh
-# Synchronise le vault fsxmemory vers GitHub (repo séparé DoudouClaw-memory)
+# Synchronise le vault fsxmemory vers GitHub (repo principal DoudouClaw)
 # Usage: ./scripts/sync-fsxmemory-to-github.sh [--dry-run]
 #
 
@@ -9,9 +9,9 @@ set -euo pipefail
 
 # Configuration
 FSXMEMORY_SOURCE="/root/.openclaw/workspace/memory"
-MEMORY_REPO_DIR="/tmp/DoudouClaw-memory-sync"
-MEMORY_REPO_URL="https://github.com/Doudou-labo/DoudouClaw-memory.git"
-SYNC_DIR="${MEMORY_REPO_DIR}/fsxmemory"
+MEMORY_REPO_DIR="/tmp/DoudouClaw-sync"
+MEMORY_REPO_URL="https://github.com/Doudou-labo/DoudouClaw.git"
+SYNC_DIR="${MEMORY_REPO_DIR}/memory"
 DRY_RUN=false
 
 # Colors
@@ -68,7 +68,7 @@ if command -v qmd &> /dev/null; then
     QMD_STATS=$(qmd status 2>/dev/null | grep -E "(files indexed|Vectors:)" | tr '\n' ' ' || echo "qmd non disponible")
 fi
 
-log_info "Démarrage sync fsxmemory → DoudouClaw-memory"
+log_info "Démarrage sync fsxmemory → DoudouClaw"
 log_info "Source: $FSXMEMORY_SOURCE"
 log_info "Dest: $SYNC_DIR"
 log_info "Timestamp: $TIMESTAMP"
@@ -134,4 +134,4 @@ git push origin main
 
 log_info "✅ Synchronisation terminée avec succès!"
 log_info "Timestamp: $TIMESTAMP"
-log_info "URL: https://github.com/Doudou-labo/DoudouClaw-memory/tree/main/fsxmemory"
+log_info "URL: https://github.com/Doudou-labo/DoudouClaw/tree/main/memory"
