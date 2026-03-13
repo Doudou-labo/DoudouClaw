@@ -18,9 +18,19 @@ set -euo pipefail
 # ============================================
 # Configuration
 # ============================================
-SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+# Déterminer le répertoire du script (le dossier scripts/, pas modules/)
+SCRIPT_DIR="$(cd "$(dirname "$(readlink -f "${BASH_SOURCE[0]}")")" && pwd)"
+
+# CORRECTION: Si on est dans scripts/modules/, remonter à scripts/
+if [[ "$(basename "$SCRIPT_DIR")" == "modules" ]]; then
+    SCRIPT_DIR="$(dirname "$SCRIPT_DIR")"
+fi
+
+# VARIABLE GLOBALE FIXE pour les modules (ne change jamais)
+MODULES_BASE_DIR="$SCRIPT_DIR/modules"
+
 WORKSPACE_DIR="$(cd "$SCRIPT_DIR/.." && pwd)"
-MODULES_DIR="$SCRIPT_DIR/modules"
+MODULES_DIR="$MODULES_BASE_DIR"
 
 # Horodatage unique pour cette exécution
 RUN_ID=$(date +%Y%m%d-%H%M%S)
@@ -65,7 +75,7 @@ declare -A PHASE_ERRORS
 run_phase_1() {
     log_info "📦 Phase 1: Consolidation Memory Stack"
     
-    local script_path="$SCRIPT_DIR/consolidate-memory-stack.sh"
+    local script_path="$MODULES_BASE_DIR/consolidate-memory-stack.sh"
     local phase_name="consolidate-memory"
     
     if [[ ! -f "$script_path" ]]; then
@@ -121,7 +131,8 @@ _Les phases suivantes continuent (pas de blocage)._" "$REPORT_CHANNEL"
 run_phase_2() {
     log_info "🗂️  Phase 2: Synchronisation PARA Structure"
     
-    local script_path="$SCRIPT_DIR/modules/sync-para-structure.sh"
+    # Utiliser MODULES_BASE_DIR (variable globale fixe)
+    local script_path="$MODULES_BASE_DIR/sync-para-structure.sh"
     local phase_name="sync-para"
     
     if [[ ! -f "$script_path" ]]; then
