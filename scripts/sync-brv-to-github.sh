@@ -1,7 +1,7 @@
 #!/bin/bash
 #
 # sync-brv-to-github.sh
-# Synchronise le context-tree ByteRover vers GitHub
+# Synchronise le context-tree ByteRover vers GitHub (repo séparé DoudouClaw-memory)
 # Usage: ./scripts/sync-brv-to-github.sh [--dry-run]
 #
 
@@ -9,8 +9,9 @@ set -euo pipefail
 
 # Configuration
 BRV_SOURCE="${HOME}/.brv/context-tree"
-REPO_DIR="/root/.openclaw/workspace"
-SYNC_DIR="${REPO_DIR}/.brv/context-tree"
+MEMORY_REPO_DIR="/tmp/DoudouClaw-memory-sync"
+MEMORY_REPO_URL="https://github.com/Doudou-labo/DoudouClaw-memory.git"
+SYNC_DIR="${MEMORY_REPO_DIR}/byterover/context-tree"
 DRY_RUN=false
 
 # Colors
@@ -36,9 +37,20 @@ if [[ ! -d "$BRV_SOURCE" ]]; then
     exit 1
 fi
 
-if [[ ! -d "$REPO_DIR/.git" ]]; then
-    log_error "Pas un repo Git: $REPO_DIR"
-    exit 1
+# Clone ou pull le repo mémoire
+if [[ "$DRY_RUN" == false ]]; then
+    if [[ -d "$MEMORY_REPO_DIR/.git" ]]; then
+        log_info "Mise à jour du repo mémoire..."
+        cd "$MEMORY_REPO_DIR"
+        git pull origin main 2>&1 || true
+    else
+        log_info "Clonage du repo mémoire..."
+        rm -rf "$MEMORY_REPO_DIR"
+        git clone "$MEMORY_REPO_URL" "$MEMORY_REPO_DIR" 2>&1
+        cd "$MEMORY_REPO_DIR"
+        git config user.name "DoudouClaw"
+        git config user.email "DoudouClaw@users.noreply.github.com"
+    fi
 fi
 
 # Créer le dossier de destination si besoin
@@ -50,7 +62,7 @@ fi
 TIMESTAMP=$(date '+%Y-%m-%d %H:%M:%S')
 DATE_ISO=$(date '+%Y-%m-%d')
 
-log_info "Démarrage sync ByteRover → GitHub"
+log_info "Démarrage sync ByteRover → DoudouClaw-memory"
 log_info "Source: $BRV_SOURCE"
 log_info "Dest: $SYNC_DIR"
 log_info "Timestamp: $TIMESTAMP"
@@ -74,22 +86,13 @@ if [[ "$DRY_RUN" == true ]]; then
     exit 0
 fi
 
-# Backup avant sync (safety)
-BACKUP_DIR="${REPO_DIR}/backups/brv-context-tree-${DATE_ISO}"
-if [[ -d "$SYNC_DIR" ]] && [[ "$(ls -A $SYNC_DIR 2>/dev/null)" ]]; then
-    log_info "Backup du context-tree existant..."
-    mkdir -p "$BACKUP_DIR"
-    cp -r "$SYNC_DIR" "$BACKUP_DIR/"
-    log_info "Backup créé: $BACKUP_DIR"
-fi
-
 # Sync
 echo ""
 log_info "Synchronisation en cours..."
 rsync $RSYNC_OPTS "${EXCLUDES[@]}" "$BRV_SOURCE/" "$SYNC_DIR/"
 
 # Compter les changements
-CHANGES=$(git -C "$REPO_DIR" status --porcelain "$SYNC_DIR" 2>/dev/null | wc -l)
+CHANGES=$(git -C "$MEMORY_REPO_DIR" status --porcelain "$SYNC_DIR" 2>/dev/null | wc -l)
 
 if [[ "$CHANGES" -eq 0 ]]; then
     log_info "Aucun changement détecté. Sync terminée."
@@ -99,7 +102,7 @@ fi
 log_info "$CHANGES fichier(s) modifié(s)"
 
 # Git operations
-cd "$REPO_DIR"
+cd "$MEMORY_REPO_DIR"
 
 # Stage
 git add "$SYNC_DIR"
@@ -122,4 +125,4 @@ git push origin main
 
 log_info "✅ Synchronisation terminée avec succès!"
 log_info "Timestamp: $TIMESTAMP"
-log_info "Commits: https://github.com/Doudou-labo/DoudouClaw/commits/main"
+log_info "URL: https://github.com/Doudou-labo/DoudouClaw-memory"

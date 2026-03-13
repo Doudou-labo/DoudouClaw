@@ -35,7 +35,6 @@ second-brain-nextjs/.next/
 memory/para-notion-sync-*.log
 
 # ByteRover context-tree (auto-synced from ~/.brv/)
-# Les fichiers sont versionnés mais pas les snapshots temporaires
-.brv/**/.snapshot.json
-.brv/**/*.tmp
-.brv/**/*.bak
+# MIGRÉ vers repo séparé: Doudou-labo/DoudouClaw-memory
+# Plus de sync ici - voir scripts/sync-brv-to-github.sh
+.brv/context-tree/
