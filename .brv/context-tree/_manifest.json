@@ -1,0 +1,211 @@
+{
+  "active_context": [
+    {
+      "order": 2,
+      "path": "memory/_index.md",
+      "tokens": 1393,
+      "type": "summary"
+    },
+    {
+      "order": 1,
+      "path": "projects/pneu_tracker/_index.md",
+      "tokens": 254,
+      "type": "summary"
+    },
+    {
+      "order": 0,
+      "path": "projects/openclaw/infrastructure/_index.md",
+      "tokens": 269,
+      "type": "summary"
+    },
+    {
+      "importance": 50,
+      "path": "memory/context.md",
+      "tokens": 81,
+      "type": "context"
+    },
+    {
+      "importance": 50,
+      "path": "memory/history/2026_02_17.md",
+      "tokens": 127,
+      "type": "context"
+    },
+    {
+      "importance": 50,
+      "path": "memory/history/2026_02_18.md",
+      "tokens": 75,
+      "type": "context"
+    },
+    {
+      "importance": 50,
+      "path": "memory/history/2026_02_19.md",
+      "tokens": 75,
+      "type": "context"
+    },
+    {
+      "importance": 50,
+      "path": "memory/history/2026_02_20.md",
+      "tokens": 83,
+      "type": "context"
+    },
+    {
+      "importance": 50,
+      "path": "memory/history/2026_02_21.md",
+      "tokens": 80,
+      "type": "context"
+    },
+    {
+      "importance": 50,
+      "path": "memory/history/2026_02_21_1528.md",
+      "tokens": 227,
+      "type": "context"
+    },
+    {
+      "importance": 50,
+      "path": "memory/history/2026_02_22.md",
+      "tokens": 75,
+      "type": "context"
+    },
+    {
+      "importance": 50,
+      "path": "memory/history/2026_02_23.md",
+      "tokens": 75,
+      "type": "context"
+    },
+    {
+      "importance": 50,
+      "path": "memory/history/2026_02_24.md",
+      "tokens": 75,
+      "type": "context"
+    },
+    {
+      "importance": 50,
+      "path": "memory/history/2026_02_25.md",
+      "tokens": 89,
+      "type": "context"
+    },
+    {
+      "importance": 50,
+      "path": "memory/history/2026_02_25_veille_scraping.md",
+      "tokens": 238,
+      "type": "context"
+    },
+    {
+      "importance": 50,
+      "path": "memory/history/2026_02_26.md",
+      "tokens": 90,
+      "type": "context"
+    },
+    {
+      "importance": 50,
+      "path": "memory/history/2026_02_26_agent_browser_skills.md",
+      "tokens": 243,
+      "type": "context"
+    },
+    {
+      "importance": 50,
+      "path": "memory/history/2026_02_27.md",
+      "tokens": 94,
+      "type": "context"
+    },
+    {
+      "importance": 50,
+      "path": "memory/history/2026_02_27_memory_levels.md",
+      "tokens": 236,
+      "type": "context"
+    },
+    {
+      "importance": 50,
+      "path": "memory/history/2026_02_28.md",
+      "tokens": 75,
+      "type": "context"
+    },
+    {
+      "importance": 50,
+      "path": "memory/history/2026_03_01.md",
+      "tokens": 111,
+      "type": "context"
+    },
+    {
+      "importance": 50,
+      "path": "memory/history/2026_03_01_mcp_setup.md",
+      "tokens": 232,
+      "type": "context"
+    },
+    {
+      "importance": 50,
+      "path": "memory/history/2026_03_02.md",
+      "tokens": 75,
+      "type": "context"
+    },
+    {
+      "importance": 50,
+      "path": "memory/history/2026_03_02_1254.md",
+      "tokens": 227,
+      "type": "context"
+    },
+    {
+      "importance": 50,
+      "path": "memory/history/2026_03_02_2153.md",
+      "tokens": 227,
+      "type": "context"
+    },
+    {
+      "importance": 50,
+      "path": "memory/history/2026_03_03.md",
+      "tokens": 75,
+      "type": "context"
+    },
+    {
+      "importance": 50,
+      "path": "memory/history/2026_03_04.md",
+      "tokens": 75,
+      "type": "context"
+    },
+    {
+      "importance": 50,
+      "path": "memory/history/2026_03_04_1836.md",
+      "tokens": 227,
+      "type": "context"
+    },
+    {
+      "importance": 50,
+      "path": "memory/history/2026_03_05.md",
+      "tokens": 82,
+      "type": "context"
+    },
+    {
+      "importance": 50,
+      "path": "memory/history/2026_03_05_calendar_event.md",
+      "tokens": 237,
+      "type": "context"
+    },
+    {
+      "importance": 50,
+      "path": "memory/history/2026_03_06.md",
+      "tokens": 89,
+      "type": "context"
+    },
+    {
+      "importance": 50,
+      "path": "memory/history/2026_03_06_token_loop.md",
+      "tokens": 233,
+      "type": "context"
+    },
+    {
+      "importance": 50,
+      "path": "memory/history/context.md",
+      "tokens": 48,
+      "type": "context"
+    }
+  ],
+  "generated_at": "2026-03-13T18:48:00.724Z",
+  "lane_tokens": {
+    "contexts": 3976,
+    "stubs": 0,
+    "summaries": 1916
+  },
+  "source_fingerprint": "e3a88d0c3033a1a9dd8a679b8d3ae2a9a5effc126b89174bb0b32c57007f0398",
+  "total_tokens": 5892,
+  "version": 1
+}
