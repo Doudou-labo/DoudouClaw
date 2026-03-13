@@ -33,3 +33,9 @@ second-brain-nextjs/.next/
 
 # Runtime sync logs
 memory/para-notion-sync-*.log
+
+# ByteRover context-tree (auto-synced from ~/.brv/)
+# Les fichiers sont versionnés mais pas les snapshots temporaires
+.brv/**/.snapshot.json
+.brv/**/*.tmp
+.brv/**/*.bak

@@ -788,3 +788,8 @@ scripts/heartbeat-auto-cleanup.sh   # Cleanup .tmp, rotation logs
 *Backup original disponible dans `backups/TOOLS.md.backup-2026-03-02`*
 
 Quand je te demande de tester une clé API tu le fais
+
+## ByteRover (Memory)
+- **Query:** `brv query "auth patterns"` (Check existing knowledge)
+- **Curate:** `brv curate "Auth uses JWT in cookies"` (Save new knowledge)
+- **Sync:** `brv pull` / `brv push` (Sync with team - requires login)

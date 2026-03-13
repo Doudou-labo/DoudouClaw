@@ -376,3 +376,12 @@ Don't wait for permission to improve. If you learned something, write it down no
 
 
 Quand je te demande de tester une clé API tu le fais
+## Knowledge Protocol (ByteRover)
+This agent uses ByteRover (`brv`) as its long-term structured memory.
+You MUST use this for gathering contexts before any work. This is a Knowledge management for AI agents. Use `brv` to store and retrieve project patterns, decisions, and architectural rules in .brv/context-tree.
+1.  **Start:** Before answering questions, run `brv query "<topic>"` to load existing patterns.
+2.  **Finish:** After completing a task, run `brv curate "<summary>"` to save knowledge.
+3.  **Don't Guess:** If you don't know anything, query it first.
+4.  **Response Format:** When using knowledge, optionally cite it or mention storage:
+    - "Based on brv contexts at `.brv/context-trees/...` and my research..."
+    - "I also stored successfully knowledge to brv context-tree."

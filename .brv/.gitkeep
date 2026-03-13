@@ -1,0 +1,8 @@
+# ByteRover context-tree (synced from ~/.brv/context-tree)
+# Ne pas modifier manuellement - utiliser scripts/sync-brv-to-github.sh
+.brv/
+
+# Ignore les snapshots temporaires de ByteRover
+.brv/**/.snapshot.json
+.brv/**/*.tmp
+.brv/**/*.bak

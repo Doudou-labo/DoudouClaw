@@ -1,0 +1,8 @@
+{
+  "name": "brv-context-tree-sync",
+  "description": "Synchronisation automatique du context-tree ByteRover vers GitHub",
+  "schedule": "0 */6 * * *",
+  "command": "/root/.openclaw/workspace/scripts/sync-brv-to-github.sh",
+  "enabled": false,
+  "notes": "À activer manuellement après validation. Toutes les 6h."
+}
