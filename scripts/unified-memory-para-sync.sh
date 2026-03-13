@@ -69,16 +69,9 @@ run_phase_1() {
     local phase_name="consolidate-memory"
     
     if [[ ! -f "$script_path" ]]; then
-        log_warn "Script consolidate-memory-stack.sh non trouvé - utilisation fallback"
-        # Fallback: utiliser fsxmemory-checkpoint.sh comme alternative
-        script_path="$SCRIPT_DIR/fsxmemory-checkpoint.sh"
-        phase_name="fsxmemory-checkpoint"
-    fi
-    
-    if [[ ! -f "$script_path" ]]; then
+        log_warn "Script consolidate-memory-stack.sh non trouvé - SKIP"
         PHASE_STATUS["$phase_name"]="SKIPPED"
         PHASE_DETAILS["$phase_name"]="Script non trouvé"
-        log_warn "Phase 1: SKIP - aucun script de consolidation disponible"
         return 0
     fi
     
@@ -128,14 +121,14 @@ _Les phases suivantes continuent (pas de blocage)._" "$REPORT_CHANNEL"
 run_phase_2() {
     log_info "🗂️  Phase 2: Synchronisation PARA Structure"
     
-    local script_path="$SCRIPT_DIR/sync-para-structure.sh"
+    local script_path="$SCRIPT_DIR/modules/sync-para-structure.sh"
     local phase_name="sync-para"
     
     if [[ ! -f "$script_path" ]]; then
-        log_warn "Script sync-para-structure.sh non trouvé - utilisation fallback"
-        # Fallback: utiliser auto-para-checkpoint.sh comme alternative
-        script_path="$SCRIPT_DIR/auto-para-checkpoint.sh"
-        phase_name="auto-para-checkpoint"
+        log_warn "Script sync-para-structure.sh non trouvé dans modules/ - SKIP"
+        PHASE_STATUS["$phase_name"]="SKIPPED"
+        PHASE_DETAILS["$phase_name"]="Script non trouvé"
+        return 0
     fi
     
     if [[ ! -f "$script_path" ]]; then
