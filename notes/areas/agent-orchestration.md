@@ -79,6 +79,28 @@ main
 
 ## 3) Exécution
 
+### Pattern recommandé — `spawn → yield → resume → synthèse`
+
+Utiliser ce pattern quand `main` orchestre plusieurs spécialistes ou une suite d'étapes qui ne tient pas proprement dans un seul tour.
+
+1. **Dispatch** : `main` spawn/envoie aux sessions spécialisées
+2. **Yield** : `main` appelle `sessions_yield` pour terminer proprement le tour courant sans gonfler inutilement le contexte
+3. **Resume** : au tour suivant, `main` reprend avec les résultats/annonces des spécialistes
+4. **Synthèse** : `main` produit une réponse unique, claire, user-facing
+
+### Quand utiliser `sessions_yield`
+
+- orchestration multi-agents
+- pipeline à étapes (cadrage → exécution → validation → synthèse)
+- attente de retours spécialisés
+- tâche assez longue pour risquer surcharge/contexte inutile
+
+### Quand **ne pas** utiliser `sessions_yield`
+
+- tâche simple, linéaire, mono-réponse
+- simple lecture / simple lookup
+- correction courte directement gérable dans `main`
+
 ### Spawn one-shot (tâche ponctuelle)
 
 ```bash

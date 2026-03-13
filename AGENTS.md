@@ -332,6 +332,7 @@ Don't wait for permission to improve. If you learned something, write it down no
 - Pour l’orchestration interactive user-facing: privilégier `sessions_send` / `sessions_spawn` côté backend, sans exposer les sessions comme salons dédiés.
 - Réserver `sessions_spawn` aux tâches background/longues, batch, ou spécialistes éphémères.
 - En cas d’échec d’une session spécialisée: 1 retry, puis fallback voisin; si KO, respawn session.
+- **`sessions_yield`** : sur orchestration multi-étapes, attente de résultats spécialisés, ou pipeline long, privilégier `sessions_yield` pour **découpler le dispatch et la synthèse**. Ne pas l’utiliser pour les tâches simples/linéaires.
 
 ### Principe directeur
 

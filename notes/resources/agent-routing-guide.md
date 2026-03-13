@@ -29,6 +29,14 @@ Guide rapide pour router les demandes vers les agents Agence-IA.
 
 ## Playbooks express
 
+### 0) Orchestration longue — pattern standard
+1. `main` distribue le travail (`sessions_spawn` / `sessions_send`)
+2. si attente de résultats ou pipeline multi-étapes → `sessions_yield`
+3. reprise au tour suivant avec les retours des spécialistes
+4. synthèse unique côté utilisateur
+
+**Règle :** `sessions_yield` = réservé aux tâches longues, multi-agents ou à étapes. Pas pour les one-shots simples.
+
 ### 1) Feature complète (backend + frontend + sécurité)
 1. `agents-orchestrator` (coordination)
 2. `backend-architect` (API)
