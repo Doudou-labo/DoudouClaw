@@ -48,6 +48,8 @@
 | **Recherche web** | `web_search` tool ou Perplexity skill | [Web Search](#web-search-api-brave--perplexity) |
 | **Calendrier** | API Maton (calendrier OpenClaw) | [Google Calendar](#google-calendar) |
 | **Mémoire LTM** | `memory_store` / `memory_recall` | [LanceDB](#lancedb--memory-plugin-openclaw) |
+| **Memory-PARA Sync** | Cron auto 4x/jour ou `unified-memory-para-sync.sh` | [Memory-PARA-Sync](#memory-para-sync) |
+| **Recherche mémoire** | `qmd query "..."` | [fsxmemory + QMD](#fsxmemory--qmd) |
 | **Compression contexte** | `scripts/context-compress-preview.sh` | [Context Manager](#context-manager-safe-compression) |
 | **Status gateway** | `openclaw status` | [Gateway](#openclaw-gateway-restart--comportement) |
 | **Navigateur** | `agent-browser open <url>` | [Agent Browser](#agent-browser-vercel) |
@@ -97,7 +99,7 @@ git add <fichiers> && git commit -m "description" && git push origin main
 
 ### MCPorter (MCP Integration)
 
-**Status:** ✅ Installed (2026-03-01) — **Version:** 0.7.3
+**Status:** ✅ Installed (2026-03-01) - **Version:** 0.7.3
 
 **Description:** CLI pour gérer les serveurs MCP (Model Context Protocol).
 
@@ -140,20 +142,20 @@ mcporter call obsidian.search query:"PARA"
 
 ### Agence-IA (Agents Spécialisés)
 
-**Status:** ✅ Installed (2026-03-10) — **112 agents**
+**Status:** ✅ Installed (2026-03-10) - **112 agents**
 
 **Description:** Collection de 112 agents spécialisés avec personnalités riches (backend-architect, frontend-developer, growth-hacker, etc.). Intégration native OpenClaw via SOUL.md.
 
 **Location:** `~/.openclaw/agency-agents/`
 
 **Agents clés :**
-- `backend-architect` — API, microservices, scalabilité
-- `frontend-developer` — React/Vue, UI pixel-perfect
-- `security-engineer` — audit, threat modeling
-- `devops-automator` — CI/CD, infra, monitoring
-- `growth-hacker` — acquisition, viral loops
-- `content-creator` — contenu multi-plateforme
-- `agents-orchestrator` — coordination pipeline multi-agents
+- `backend-architect` - API, microservices, scalabilité
+- `frontend-developer` - React/Vue, UI pixel-perfect
+- `security-engineer` - audit, threat modeling
+- `devops-automator` - CI/CD, infra, monitoring
+- `growth-hacker` - acquisition, viral loops
+- `content-creator` - contenu multi-plateforme
+- `agents-orchestrator` - coordination pipeline multi-agents
 
 **Utilisation one-shot (tâche ponctuelle) :**
 ```bash
@@ -195,9 +197,9 @@ sessions_spawn \
 - Ne jamais utiliser `primary` sauf demande explicite
 
 **Autres calendriers :**
-- `tecknogeek69@gmail.com` — calendrier principal perso
-- `family14830406815357676768@group.calendar.google.com` — Famille
-- `fr.french#holiday@group.v.calendar.google.com` — Jours fériés
+- `tecknogeek69@gmail.com` - calendrier principal perso
+- `family14830406815357676768@group.calendar.google.com` - Famille
+- `fr.french#holiday@group.v.calendar.google.com` - Jours fériés
 
 **Base URL:** `https://gateway.maton.ai/google-calendar/calendar/v3/calendars/<calendarId>/events`
 
@@ -230,7 +232,7 @@ node skills/perplexity/scripts/search.mjs "cours Michelin janvier 2026"
 
 ### agent-browser (Vercel)
 
-**Status:** ✅ Installed (2026-02-26) — **Version:** 0.15.0
+**Status:** ✅ Installed (2026-02-26) - **Version:** 0.15.0
 
 **Installation:**
 ```bash
@@ -317,7 +319,7 @@ mcporter call playwright.browser_screenshot
 **Envoi de screenshots sur Discord:**
 Après avoir pris un screenshot avec `browser_take_screenshot`, utiliser l'une de ces méthodes :
 
-1. **Via `read` tool (recommandé)** — attache l'image directement à la réponse :
+1. **Via `read` tool (recommandé)** - attache l'image directement à la réponse :
    ```bash
    # Le tool read sur une image l'attache automatiquement
    read: { "file_path": "./screenshot.png" }
@@ -361,11 +363,11 @@ rg --files               # Lister tous les fichiers
 
 ### ClawSuite
 
-**Status:** ✅ Installed (2026-03-01) — **Version:** 3.0.0
+**Status:** ✅ Installed (2026-03-01) - **Version:** 3.0.0
 
 **Location:** `/root/.openclaw/workspace/clawsuite/`
 
-**Description:** Full-stack mission control platform pour OpenClaw — dashboard web avec orchestration multi-agents, cost analytics, Memory Browser.
+**Description:** Full-stack mission control platform pour OpenClaw - dashboard web avec orchestration multi-agents, cost analytics, Memory Browser.
 
 **Installation:**
 ```bash
@@ -396,7 +398,7 @@ npm run dev  # Démarre sur http://localhost:3000
 
 ### Tailscale
 
-**Status:** ✅ Installed (2026-03-01) — **Version:** 1.94.2
+**Status:** ✅ Installed (2026-03-01) - **Version:** 1.94.2
 
 **Description:** VPN mesh pour accès sécurisé aux services locaux depuis n'importe où.
 
@@ -426,14 +428,69 @@ tailscale serve off      # Arrêter le serve
 
 ---
 
-### OpenClaw gateway restart — Comportement
+### OpenClaw gateway restart - Comportement
 
 **⚠️ Problème:** Quand `openclaw gateway restart` est lancé, la session WebSocket est coupée → réponse perdue → Alexandre doit renvoyer un message.
 
 **Règle:**
 - **Toujours prévenir Alexandre AVANT** : "Je redémarre le gateway, renvoie-moi un message après"
-- **Exception:** Modifications modèles dans `openclaw.json` (section `agents.defaults.models`) **ne nécessitent PAS de restart** — config rechargée auto
+- **Exception:** Modifications modèles dans `openclaw.json` (section `agents.defaults.models`) **ne nécessitent PAS de restart** - config rechargée auto
 - Ne redémarrer que si strictement nécessaire (nouvelle clé API, changement port, bug gateway)
+
+---
+
+## 🧠 Memory-PARA-Sync
+
+**Status:** ✅ Déployé (2026-03-13)
+
+**Description:** Système unifié de consolidation mémoire + sync PARA + reporting Discord, orchestré par 4 agents Agence-IA.
+
+### Architecture
+
+```
+Phase 1: Consolidation (OpenClaw + LanceDB + fsxmemory)
+    ↓
+Phase 2: Sync PARA + GitHub
+    ↓
+Phase 3: Rapport Discord (ce salon)
+```
+
+### Scripts
+
+| Script | Chemin | Fonction |
+|--------|--------|----------|
+| Orchestrateur | `scripts/unified-memory-para-sync.sh` | Coordination des 3 phases |
+| Consolidation | `scripts/modules/consolidate-memory-stack.sh` | Agrège les 3 systèmes mémoire |
+| Sync PARA | `scripts/modules/sync-para-structure.sh` | Sync notes/ + git push |
+| Rapport Discord | `scripts/modules/discord-report-sender.sh` | Envoie le rapport sur 1474162917694898181 |
+| Error Handler | `scripts/modules/error-handler.sh` | Retry 1x + alertes |
+
+### Crons (4x/jour)
+
+```cron
+0 9 * * *    # Matin
+0 13 * * *   # Midi
+30 18 * * *  # Soir
+30 22 * * *  # Nuit
+```
+
+### Usage manuel
+
+```bash
+# Test dry-run (sans effets de bord)
+./scripts/unified-memory-para-sync.sh --dry-run
+
+# Exécution réelle
+./scripts/unified-memory-para-sync.sh
+```
+
+### Rapport généré
+
+Format bullet (•) avec emojis, envoyé sur le canal mémoire (1474162917694898181) :
+- 📊 Stats consolidation (OpenClaw, LanceDB, fsxmemory)
+- 🗂️ Structure PARA (Projects, Areas, Resources, Archive)
+- ⚠️ Projets à vérifier (>30j sans modif)
+- 🔄 Sync GitHub (fichiers modifiés, commit)
 
 ---
 
@@ -489,10 +546,18 @@ openclaw gateway restart
 
 **Objectif:** Ajouter une couche mémoire fichier-first pour la résilience au context death, les handoffs et la recherche structurée, sans remplacer la mémoire native OpenClaw.
 
-**Décision d’architecture:**
+**Décision d'architecture:**
 - `fsxmemory` retenu comme couche **checkpoint / recover / handoff / recherche**
 - `mem0` et `Cognee` mis de côté pour évaluation future
-- Mode d’usage validé: **niveau 2.5** (naturel + semi-automatique, sans sur-structuration)
+- **ByteRover** : ❌ Désinstallé le 2026-03-13 (bug troncation ~900 bytes)
+- Mode d'usage validé: **niveau 2.5** (naturel + semi-automatique, sans sur-structuration)
+
+**Status actuel (2026-03-13):**
+- ✅ Réactivé et opérationnel
+- **114 fichiers indexés**
+- **128 vecteurs QMD**
+- Cron sync vers GitHub: 03:00 UTC
+- Intégré au système Memory-PARA-Sync (4x/jour)
 
 **Composants installés:**
 - Skill: `skills/fsxmemory/`
@@ -529,10 +594,32 @@ memory/inbox/
 - Package global: `@tobilu/qmd`
 - Version validée: `qmd 1.1.5`
 - Collection active: **`memory` uniquement**
-- État validé au 2026-03-09:
-  - `43` fichiers indexés
-  - `1918` embeddings/chunks
-- Script de recherche sémantique:
+- **État au 2026-03-13:**
+  - `114` fichiers indexés
+  - `128` vecteurs/embeddings
+
+**Commandes de recherche:**
+```bash
+# Recherche hybride (recommandée) — combine BM25 + vecteurs + reranking
+qmd query "architecture mémoire agent"
+
+# Recherche full-text BM25 (rapide, sans LLM)
+qmd search "fsxmemory checkpoint"
+
+# Recherche vectorielle (sémantique pure)
+qmd vsearch "comment sauvegarder la mémoire"
+
+# Voir un fichier spécifique
+qmd get MEMORY.md
+qmd get MEMORY.md:50 -l 20  # Lignes 50-70
+
+# Maintenance
+qmd status    # État de l'index
+qmd update    # Réindexer
+qmd embed     # Générer les vecteurs
+```
+
+**Script de recherche sémantique (legacy):**
 ```bash
 bash scripts/fsxmemory-vsearch.sh "décisions importantes"
 bash scripts/fsxmemory-vsearch.sh "décisions importantes" --deep
@@ -541,11 +628,11 @@ bash scripts/fsxmemory-vsearch.sh "décisions importantes" --deep
 **Usage recommandé (mode 2.5):**
 - Conversation naturelle côté utilisateur
 - Mapping agent côté système :
-  - “note ça vite” → `capture`
-  - “retiens ça / on a décidé que” → `remember`
-  - “si ça coupe on reprend là” → `checkpoint`
-  - “on s’arrête là” → `handoff`
-  - “tu te rappelles…” → `search` / `vsearch`
+  - "note ça vite" → `capture`
+  - "retiens ça / on a décidé que" → `remember`
+  - "si ça coupe on reprend là" → `checkpoint`
+  - "on s'arrête là" → `handoff`
+  - "tu te rappelles…" → `search` / `vsearch`
 - **Règle miroir importante :** tout ce qui est conservé dans la mémoire générale (`SESSION-STATE.md`, `MEMORY.md`, journal du jour, snapshots, handoffs) doit aussi avoir son ancrage `fsxmemory` si une catégorie adaptée existe.
 - Exemples :
   - décision → `memory/decisions/`
@@ -554,12 +641,12 @@ bash scripts/fsxmemory-vsearch.sh "décisions importantes" --deep
   - projet/open loop durable → `memory/projects/`
   - fin de session / reprise → `memory/handoffs/` + checkpoint si utile
   - idée brute / note rapide → `memory/inbox/`
-- Principe simple : **si ça mérite d’être gardé, ça mérite aussi son miroir fsxmemory**.
+- Principe simple : **si ça mérite d'être gardé, ça mérite aussi son miroir fsxmemory**.
 
 **Gotchas:**
-- Le package npm original `@foresigxt/foresigxt-cli-memory` n’était pas publiquement disponible → implémentation bash maison des commandes.
-- `qmd` tente parfois un backend Vulkan avant de retomber en CPU sur ce VPS; c’est bruyant mais non bloquant.
-- Pour l’instant, **ne pas indexer `notes/` ni `workspace/`** dans qmd pour éviter le bruit et les temps de calcul inutiles.
+- Le package npm original `@foresigxt/foresigxt-cli-memory` n'était pas publiquement disponible → implémentation bash maison des commandes.
+- `qmd` tente parfois un backend Vulkan avant de retomber en CPU sur ce VPS; c'est bruyant mais non bloquant.
+- Pour l'instant, **ne pas indexer `notes/` ni `workspace/`** dans qmd pour éviter le bruit et les temps de calcul inutiles.
 - `fsxmemory-vsearch.sh` fonctionne, mais le premier chargement local du modèle peut être lent sur CPU.
 
 ---
@@ -576,7 +663,7 @@ bash scripts/fsxmemory-vsearch.sh "décisions importantes" --deep
 - Bot username: `@DoudouClaw`
 - Rôles: OWNER + BOT + DoudouClaw (managed)
 
-**Fix majeur (18 fév 2026) — Intents:**
+**Fix majeur (18 fév 2026) - Intents:**
 - Activer **Message Content Intent** sur Discord Developer Portal (obligatoire)
 - Désactiver `Guild Members` et `Presence` dans config OpenClaw
 
@@ -615,7 +702,7 @@ journalctl -xe --no-pager | grep -i discord | tail -30
 
 ---
 
-### Format Discord — Canal ⚖️-legifrance
+### Format Discord - Canal ⚖️-legifrance
 
 **Règle validée (2026-03-01):**
 - Sur Discord, **ne jamais utiliser de tableaux Markdown** (illisibles)
@@ -625,7 +712,7 @@ journalctl -xe --no-pager | grep -i discord | tail -30
 **N**
 • Date : JJ/MM
 • Type : emoji **TYPE**
-• Texte : **Titre** — description courte
+• Texte : **Titre** - description courte
 • Lien : https://url-complete
 ```
 
@@ -719,7 +806,7 @@ scripts/heartbeat-auto-cleanup.sh   # Cleanup .tmp, rotation logs
 
 - Répondre en **français** par défaut
 - **Tutoiement**
-- Style **direct, concret, utile** — pas de langue de bois
+- Style **direct, concret, utile** - pas de langue de bois
 - Réponses détaillées par défaut
 - Ton **amical**, sans lourdeur
 - **Emojis** dans les réponses (préférence explicite) 😄✨
@@ -771,7 +858,7 @@ scripts/heartbeat-auto-cleanup.sh   # Cleanup .tmp, rotation logs
 
 | Date | Changement |
 |------|------------|
-| 2026-03-10 | **Agence-IA** — Intégration 112 agents spécialisés, architecture 100% Agence-IA, suppression spec-* |
+| 2026-03-10 | **Agence-IA** - Intégration 112 agents spécialisés, architecture 100% Agence-IA, suppression spec-* |
 | 2026-03-02 | Ajout Playwright MCP dans outils développement |
 | 2026-03-02 | Réorganisation complète (Option A): TOC, Quick Reference, regroupement par fréquence |
 | 2026-03-01 | Ajout MCPorter, ClawSuite, Tailscale |

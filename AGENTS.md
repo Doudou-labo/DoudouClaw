@@ -381,7 +381,33 @@ Quand je te demande de tester une clé API tu le fais
 
 > ⚠️ **ByteRover a été désinstallé le 2026-03-13** suite à un bug critique de troncation des fichiers (~900 bytes max).
 > 
-> **Remplacé par :** fsxmemory (couche fichier-first pour checkpoint/recover/handoff)
+> **Remplacé par :** fsxmemory (couche fichier-first pour checkpoint/recover/handoff) + système Memory-PARA-Sync
 > 
 > Les commandes `brv query` et `brv curate` ne sont plus disponibles.
 > Voir `notes/bug-report-byterover-truncation.md` pour le rapport de bug complet.
+
+---
+
+## Memory-PARA-Sync Protocol
+
+**Status:** ✅ Actif (déployé le 2026-03-13)
+
+Système unifié de consolidation mémoire + sync PARA + reporting Discord.
+
+### Stack mémoire actuelle
+| Système | Rôle | Tool/Commande |
+|---------|------|---------------|
+| **OpenClaw natif** | Journal quotidien | `memory/YYYY-MM-DD.md` |
+| **LanceDB** | LTM technique | `memory_store` / `memory_recall` |
+| **fsxmemory** | Checkpoint/recover/handoff | `fsxmemory-checkpoint.sh` |
+| **QMD** | Recherche sémantique | `qmd query "..."` |
+| **PARA** | Organisation sémantique | `notes/{projects,areas,resources,archive}/` |
+
+### Automatismes (4x/jour)
+- **09:00, 13:00, 18:30, 22:30** : Consolidation + sync PARA + push GitHub + rapport Discord
+- **03:00** : Backup fsxmemory vers GitHub
+
+### Règles de consolidation
+- Toute décision importante → ancrer dans `fsxmemory` + `MEMORY.md`
+- Tout projet terminé → archiver dans `notes/archive/`
+- Tout rapport de bug → documenter dans `notes/bug-report-*.md`
