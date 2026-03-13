@@ -30,4 +30,24 @@ Consolidation mémoire quotidienne + cadrage projet **inventaire physique des pn
 
 ---
 
-*Last auto-update: 2026-03-12 20:50 UTC*
+## Latest Session — 2026-03-13
+
+### Topic
+Installation et configuration de **ByteRover** (skill mémoire contextuelle).
+
+### Key Points
+- Skill installé via `npm install -g byterover-cli`
+- Config modifiée : `softThresholdTokens` 4000 → 170000 (évite spam)
+- Features activées : Daily Knowledge Mining + Context Plugin
+- Premier Memory Flush auto déclenché et validé
+- Checkpoint automatique fonctionnel
+
+### Status
+- [x] Installation ByteRover terminée
+- [x] Configuration validée
+- [x] Premier test Memory Flush OK
+- [ ] Pilote en cours (retour d'usage avant 16/03)
+
+---
+
+*Last auto-update: 2026-03-13 20:50 UTC*

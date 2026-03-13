@@ -1,0 +1,113 @@
+{"file":"memory/2026-03-13.md","date":"2026-03-13","topics":["PARA system","daily checkpoints","finance tracker pilot","workflow automation"],"facts":["Automatic PARA 3-min checkpoint was executed at 11:00 UTC","Suggested next action before pilot ends (16/02): note 3 categories to adjust if needed","User should document 1 friction point that blocks usage","Objective is to maintain only one clear next action to execute immediately","This is part of the finance tracker pilot workflow"],"summary":"Auto PARA checkpoint executed at 11:00 UTC as part of daily routine automation. The system prompted to document 3 categories for adjustment and 1 usage friction point before the finance tracker pilot concludes on February 16. Focus remains on maintaining a single clear next action.","domain":"daily_journal","title":"Daily Journal 13 March 2026"}
+null
+{"file":"memory/2026-03-12.md","date":"2026-03-12","topics":["Automated PARA checkpoints","Memory consolidation process","Tire inventory app development","Business rules for inventory management","Excel export functionality","Cron job preferences","LTM (Long Term Memory) sync"],"facts":["Decision made to create a separate app for tire inventory (distinct from pneu-tracker)","Inventory app must show complete XLSX column list and preserve import order","Business rules: statuses include conforme/non conforme/reste à contrôler","Business rules: physical quantity entry with automatic discrepancy calculation","Business rules: ability to reset a line","Use existing ~12,568 tire references as base for search/add functionality","Export Excel results capability required for end of inventory","Cron preference: Memory+PARA execution summary in Markdown with emojis","Discord channel for cron announcements: 1472597513898033162","Next action before pilot end (16/02): note 3 categories to adjust + 1 usage friction","LTM nightly sync added 1 daily memory entry about tire reference reuse decision"],"summary":"Daily memory file covering automated PARA checkpoints, memory consolidation, and key product decisions. Main decision: creating a separate tire inventory app (distinct from pneu-tracker) with specific business rules and Excel export capabilities. Cron preferences confirmed for Discord announcements.","domain":"projects","title":"Tire Inventory App Decisions and PARA Checkpoints"}
+null
+{"file":"memory/2026-03-12-session-start.md","date":"2026-03-12","topics":["Session startup","Model testing and evaluation","Healer-alpha model comparison","Discord bot operations","Memory recall during sessions"],"facts":["Session started at 21:06:29 UTC on 2026-03-12 via Discord channel 1472599466329641084","Active model: openrouter/openrouter/healer-alpha, default model: openai-codex/gpt-5.4","Session ID: 651a6f79-0a7f-4e57-baaa-640dca8bca1d","User Doudou (hadoux2811, ID: 840917059872882708) requested model stress tests","5 proposed test categories: filesystem code, logical reasoning, web research, debugging, data analysis","Recommended starting with Test 1 (code) and Test 3 (research) in parallel using sub-agents","Pneu-tracker is in production, next project is physical tire inventory app","Memory recall included: provider cooldown cleanup (2026-02-17), gateway restart lesson (2026-02-24), ClawSuite deployment (2026-03-03)","GitHub commits should go through DoudouClaw bot account (decision from 2026-02-16)","DoudouClaw v2 charter validated 2026-02-22 with structured response guidelines","Nightly memory+PARA cron should send execution summary to Discord channel 1472597513898033162"],"summary":"Session startup on 2026-03-12 at 21:06 UTC where user Doudou requested comprehensive stress tests for the new healer-alpha model from OpenRouter. Five test categories were proposed covering code generation, logical reasoning, web research, debugging, and data analysis. The session recalled key operational decisions including provider cooldown management, gateway restart procedures, and ClawSuite deployment.","domain":"daily_journal","title":"Session Start - Healer-Alpha Model Testing Discussion"}
+{"file":"memory/2026-03-12-historique-fix.md","date":"2026-03-12","topics":["UI/UX table fix","Historique page responsiveness","Provider token expiration","Codex authentication failure","Build verification"],"facts":["Fixed components/sorties-list.tsx for desktop/tablet table layout","Applied whitespace-nowrap to immatriculation and critical columns (date, SAP, fabricant ref, qté, maj)","Set minimum table width to min-w-[1100px] to prevent compression","Added truncate + title attribute to libellé and description columns for clean display with full content on hover","Made actions column sticky on right side for horizontal scroll accessibility","Build verification passed: npm run build succeeded with TypeScript OK","Codex agent failed due to missing bearer authentication (401 error)","Claude Code agent failed due to root/sudo privilege restriction","Google-antigravity provider token expired approximately 46 hours ago","Disk usage at 28% - healthy status","No active cooldowns or recurring errors detected","No CRM delays detected"],"summary":"Fixed the Historique page table layout in pneu tracker app to prevent immatriculation text wrapping and improve readability on narrow screens. Applied whitespace-nowrap, minimum width constraints, and sticky action column. Also detected expired Google-antigravity provider token requiring reauthentication.","domain":"projects","title":"Pneu Tracker Historique Table Layout Fix"}
+{"file":"memory/2026-03-12-2103.md","date":"2026-03-12","topics":["session_logging","discord_sessions","agent_sessions"],"facts":["Session Key: agent:main:discord:channel:1472599466329641084","Session ID: adb8b7c4-8356-4ced-8f47-c62d24f7a110","Source platform: Discord","Session timestamp: 2026-03-12 21:03:06 UTC"],"summary":"Discord agent session log entry from March 12, 2026 at 21:03 UTC. Session tracked under channel ID 1472599466329641084 with unique session identifier adb8b7c4-8356-4ced-8f47-c62d24f7a110. This is a system-generated session tracking record for agent interactions via Discord.","domain":"daily_journal","title":"Discord Session Log - March 12 2026 2103"}
+{"file":"2026-03-11.md","date":"2026-03-11","topics":["Pneu-tracker application development (v1 → v2 → hardening)","Tyre catalog integration with 12,568 references","Multi-agent audit and sprint implementation","Memory consolidation and LTM synchronization","Technical bug fixes and security hardening"],"facts":["Pneu-tracker created for Alexandre (Euromaster usage) with Next.js 15/16 + TypeScript + Tailwind CSS + SQLite","Production deployment: port 3002, systemd service, Caddy reverse proxy at https://pneus.doudougen.xyz","V1 features: date picker, auto-uppercase immatriculation, optional SAP code, quantity, description, CSV export","V2 features: quick stats header, tab navigation (Saisie/Historique/Dashboard), advanced filters, edit modal, CSV import, dashboard with charts","Hardening: server validation, soft delete, pagination (20/page), security headers, dark mode fix","Tyre catalog: 12,568 references loaded into SQLite table with SAP, manufacturer ref, brand, diameter, season","Autocomplete endpoint /api/tyres/suggest supports SAP, description, manufacturer ref, search label, brand","Bug fix: proxy same-site too strict for mobile/Safari (commit 251e231)","Multi-agent audit: orchestrator + backend-architect + frontend-developer + security-engineer + ux-researcher","Sprint implementation via Claude Code: FTS5 search, versioned migrations, ultra-rapid input mode, ARIA accessibility","LTM additions: model order (gpt-5.4 → claude-sonnet-4-6 → kimi-k2p5), queue mode (1200ms debounce, cap 25), fsxmemory 2.5, Agence-IA 100% (112 agents)"],"summary":"Journal entry documenting comprehensive development of pneu-tracker application for tyre exit tracking, progressing through v1, v2, hardening, and tyre catalog integration with 12,568 references. Includes multi-agent audit process with 5 Agence-IA agents, sprint implementation for FTS5 search and versioned migrations, and memory consolidation with 7 LTM additions covering model routing, queue configuration, and system upgrades.","domain":"projects","title":"Pneu-Tracker Complete Development and Multi-Agent Audit - March 11, 2026"}
+{"file":"memory/2026-03-11-model-switch.md","date":"2026-03-11","topics":["Model Configuration","API Discovery and Evaluation","Security Tools","System Administration"],"facts":["Primary model switched to openai-codex/gpt-5.3-codex (alias codex) on 2026-03-11","Request came from Doudou via Discord channel #🧪-ᴛᴇꜱᴛ-ʙᴏᴛ","Session ID: 8efc95d4-5a8d-478a-bf00-88e9d9f2ea46","Analyzed public-apis GitHub repo (406k stars, 43k forks) for useful free APIs","Top recommended API categories: Security/URL scanning, Government/Open Data, Weather, Dev utilities, Design/Media","Key security APIs identified: AbuseIPDB, AlienVault OTX, URLhaus, URLScan, VirusTotal","Repo useful for: discovery, prototyping, alternatives - but requires careful vetting"],"summary":"Documentation of switching the primary model to openai-codex/gpt-5.3-codex and evaluation of the public-apis GitHub repository. Identified security APIs (VirusTotal, URLScan, AbuseIPDB) as highest priority for potential integration into OpenClaw/ClawSuite tools.","domain":"openclaw","title":"Model Switch to Codex and API Repository Analysis"}
+null
+null
+{"file":"memory/2026-03-11-2015.md","date":"2026-03-11","topics":["session_logging","discord_sessions"],"facts":["Session started at 20:15:20 UTC on March 11, 2026","Session Key: agent:main:discord:channel:1472599389384998946","Session ID: bdc2dbe4-800e-4529-b28d-e811d9fcb38c","Source: Discord"],"summary":"Empty Discord session log from March 11, 2026 at 20:15 UTC. Contains only session metadata (session key, session ID, source channel) with no conversation content recorded. This appears to be a session header without actual dialogue.","domain":"daily_journal","title":"Discord Session Log March 11 2026 2015 UTC"}
+{"file":"memory/2026-03-10.md","date":"2026-03-10","topics":["Memory consolidation","PARA system checkpoints","LTM (Long Term Memory) sync","Second Brain infrastructure","Auto-tags preferences","Discord reporting preferences"],"facts":["Discord reporting preference: channel 1472597513898033162, Markdown+emojis, best-effort","Memory project fsxmemory at level 2.5","qmd should index only the 'memory' collection (not 'memory + notes')","Second Brain restarted on port 3199 at brain.doudougen.xyz","Git push conflict with second-brain-nextjs (non-fast-forward)","Google antigravity token expired for tecknogeek69@gmail.com","PARA checkpoint auto-executed twice (noon and evening)","Auto-tags should show detailed elements by category, not just counters","Script updated: scripts/memory-auto-tags.sh"],"summary":"Daily operations log from March 10, 2026 covering memory consolidation, PARA checkpoints, and LTM synchronization. Key normalization established that qmd indexes only the 'memory' collection. Second Brain infrastructure was restarted on port 3199 after port conflict detection.","domain":"daily_journal","title":"Memory Consolidation and PARA Checkpoints - March 10 2026"}
+{"file":"2026-03-10-memory-gap.md","date":"2026-03-10","topics":["Memory gap limitations","Daily memory retention","Conversation transcript logging","Token consumption optimization","Memory consolidation cron"],"facts":["Daily memory files (memory/YYYY-MM-DD.md) capture decisions, tasks, and important facts - not complete conversation threads","User identified limitation: daily memory does not retain all conversation content","Three options proposed for improvement: automatic logging, on-demand capture, or intelligent session-end extraction","Full transcripts written to disk have zero impact on token consumption","Loading transcripts at session start would consume 10-50k tokens per day of discussion","Recommended approach: write transcripts to disk, load only on demand via memory_recall","Existing cron 'Memory Daily Consolidation + PARA' consolidates existing memory files, not raw conversation transcripts","Cron runs nightly, extracts durable facts from memory files, updates MEMORY.md, and does PARA checkpoint","Discord channel 1475147402922033192 is the #🤖-ᴀɢᴇɴᴛ channel for agent management","User: Doudou (hadoux2811), ID: 840917059872882708"],"summary":"Discussion about memory system limitations where daily memory files only capture key decisions and facts, not full conversation threads. Three improvement options were proposed: automatic transcript logging, on-demand capture, or intelligent extraction at session end. The recommended approach is writing transcripts to disk without automatic injection to avoid token overhead.","domain":"operations/memory_management","title":"Memory Gap Analysis and Transcript Logging Options"}
+null
+{"file":"memory/2026-03-09.md","date":"2026-03-09","topics":["Memory System Installation","fsxmemory","qmd Semantic Search","gpt-5.4 Bug","Venus Beauté","Open Loops","PARA Checkpoint"],"facts":["Bug gpt-5.4: tool calls displayed as raw text instead of executing - claude-sonnet-4-6 works correctly as fallback","fsxmemory v1.3.1 chosen for context death resilience, zero cost, Obsidian-compatible","12 fsxmemory scripts created: checkpoint, recover, handoff, recap, remember, capture, search, stats, doctor, link, migrate, deathwatch","qmd v1.1.5 installed for semantic search, collections: memory + notes (PARA)","43 memory files indexed, 1918 embeddings/chunks generated","Decision: not installing mem0 or Cognee now - test fsxmemory first","Rule validated: everything in general memory must also be mirrored in fsxmemory","Source canonique for sync: MEMORY.md, SESSION-STATE.md, memory/YYYY-MM-DD.md only","Venus Beauté: Next.js live on venusbeaute.doudougen.xyz, Stripe 2-column cart, animated badge","Open loops: visite Marc DR 31/03 (priority), vêtement Julien, Venus Beauté photos/catalogue","Finance tracker pilot 7j - target date 16/02 passed, needs restart","Lecture Goleman: on pause","Memory usage level 2.5: natural interaction, semi-automatic agent actions","Auto-actions allowed: capture, remember, checkpoint, handoff, search, vsearch"],"summary":"Major memory system overhaul: installed fsxmemory v1.3.1 as local file-first memory layer with 12 custom scripts for checkpoint/recover/handoff. Also installed qmd v1.1.5 for semantic search on memory collections. Documented fsxmemory usage level 2.5 with semi-automatic memory capture rules. Synced general memory to fsxmemory structure.","domain":"daily_journal","title":"Memory System Overhaul - fsxmemory + qmd Installation"}
+null
+null
+null
+null
+null
+null
+null
+null
+null
+null
+null
+null
+null
+null
+null
+null
+null
+null
+null
+null
+null
+null
+null
+null
+null
+null
+null
+null
+null
+null
+null
+null
+null
+null
+null
+null
+null
+null
+null
+null
+null
+null
+null
+null
+null
+null
+null
+null
+null
+null
+null
+null
+null
+null
+null
+null
+null
+null
+null
+null
+null
+null
+null
+null
+null
+null
+null
+null
+null
+null
+null
+null
+null
+null
+null
+null
+null
+null
+null
+null
+null
+null
+null
+null
+null
+null
+null
+null
+null
+null
+null
+null
+null
+null
+null
+null
+null

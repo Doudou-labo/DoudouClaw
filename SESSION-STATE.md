@@ -39,4 +39,4 @@ Consolidation terminée; prochain focus produit: **app dédiée d’inventaire p
 - `RECENT_CONTEXT.md`
 
 ## Last Updated
-2026-03-12 21:50 Europe/Paris — consolidation mémoire/PARA exécutée, N1 synchronisé et plan projet inventaire ancré.
+2026-03-13 20:50 UTC — consolidation mémoire/PARA exécutée. Activité du jour : installation ByteRover (skill mémoire contextuelle) avec seuil à 170k tokens, premier Memory Flush auto validé. N1 synchronisé, pas d'échange utilisateur direct.
