@@ -32,10 +32,13 @@ MODULES_BASE_DIR="$SCRIPT_DIR/modules"
 WORKSPACE_DIR="$(cd "$SCRIPT_DIR/.." && pwd)"
 MODULES_DIR="$MODULES_BASE_DIR"
 
-# Horodatage unique pour cette exécution (fuseau Paris)
-RUN_ID=$(TZ=Europe/Paris date +%Y%m%d-%H%M%S)
-TIMESTAMP=$(TZ=Europe/Paris date '+%Y-%m-%d %H:%M:%S')
-DATE_HUMAN=$(TZ=Europe/Paris date '+%d/%m/%Y %H:%M')
+# Charger la config timezone (Europe/Paris)
+source "$WORKSPACE_DIR/config/timezone.conf"
+
+# Horodatage unique pour cette exécution (fuseau Paris configuré dans timezone.conf)
+RUN_ID=$(date +%Y%m%d-%H%M%S)
+TIMESTAMP=$(date '+%Y-%m-%d %H:%M:%S')
+DATE_HUMAN=$(date '+%d/%m/%Y %H:%M')
 
 # Canal Discord pour les rapports (canal delivery/routines)
 REPORT_CHANNEL="1472597513898033162"

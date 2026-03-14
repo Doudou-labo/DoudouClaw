@@ -15,6 +15,7 @@
 
 ### Preferences Learned
 - Communication en français, tutoiement
+- **Fuseau horaire:** Europe/Paris (UTC+1 hiver / UTC+2 été) — afficher toujours les heures en heure de Paris
 - **Cron Jobs** :
   - routines/rappels généraux dans le topic Telegram dédié (groupe `-1003791371950`, topic `32`)
   - automatisations **PARA** (discussions + résultats) dans le topic PARA de ce groupe (topic `35`)

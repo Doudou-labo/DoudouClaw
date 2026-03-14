@@ -2,6 +2,30 @@
 
 > Your operating system. Rules, workflows, and learned lessons.
 
+## Timezone Configuration
+
+**Fuseau horaire utilisateur:** Europe/Paris (UTC+1 hiver / UTC+2 été)
+
+### Règles d'affichage
+- Toutes les heures affichées à l'utilisateur doivent être en **heure de Paris**
+- Les logs système peuvent rester en UTC
+- Les crons doivent être configurés en UTC mais correspondre aux heures de Paris souhaitées
+
+### Scripts concernés
+Les scripts suivants source automatiquement la config timezone :
+- `scripts/unified-memory-para-sync.sh` ✅
+- Tout nouveau script doit sourcer `config/timezone.conf`
+
+### Exemple d'intégration
+```bash
+# En début de script
+source "$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)/../config/timezone.conf"
+# ou
+export TZ=Europe/Paris
+```
+
+---
+
 ## First Run
 
 If `BOOTSTRAP.md` exists, follow it, then delete it.
