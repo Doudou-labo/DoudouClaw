@@ -226,3 +226,33 @@
 [2026-03-14 09:00:20]   ℹ️  Aucun changement à commiter
 [2026-03-14 09:00:20] 📄 Rapport JSON: /root/.openclaw/workspace/logs/sync-para-report.json
 [2026-03-14 09:00:20] ✅ Sync terminé — Status: nothing_to_commit
+[2026-03-14 13:42:38] 🚀 === Démarrage sync PARA/GitHub ===
+[2026-03-14 13:42:38] 📁 Vérification structure PARA...
+[2026-03-14 13:42:38]   ✅ notes/projects: 9 fichiers
+[2026-03-14 13:42:38]   ✅ notes/areas: 16 fichiers
+[2026-03-14 13:42:38]   ✅ notes/resources: 14 fichiers
+[2026-03-14 13:42:38]   ✅ notes/archive: 2 fichiers
+[2026-03-14 13:42:38] 🔍 Détection des projets inactifs (>30j ou deadline dépassée)...
+[2026-03-14 13:42:38]   ⚠️  crm-v2-telegram.md — Dernière modif: 31j
+[2026-03-14 13:42:38] 📊 Projets actifs: 8 | À vérifier: 1
+[2026-03-14 13:42:38] 📊 Projets actifs: 8 | À vérifier: 1
+[2026-03-14 13:42:38] 🔄 Opérations Git...
+[2026-03-14 13:42:38]   ➕ git add memory/ notes/ *.md
+[2026-03-14 13:42:38]   ℹ️  Aucun changement à commiter
+[2026-03-14 13:42:38] 📄 Rapport JSON: /root/.openclaw/workspace/logs/sync-para-report.json
+[2026-03-14 13:42:38] ✅ Sync terminé — Status: nothing_to_commit
+[2026-03-14 18:30:21] 🚀 === Démarrage sync PARA/GitHub ===
+[2026-03-14 18:30:21] 📁 Vérification structure PARA...
+[2026-03-14 18:30:21]   ✅ notes/projects: 9 fichiers
+[2026-03-14 18:30:21]   ✅ notes/areas: 16 fichiers
+[2026-03-14 18:30:21]   ✅ notes/resources: 14 fichiers
+[2026-03-14 18:30:21]   ✅ notes/archive: 2 fichiers
+[2026-03-14 18:30:21] 🔍 Détection des projets inactifs (>30j ou deadline dépassée)...
+[2026-03-14 18:30:21]   ⚠️  crm-v2-telegram.md — Dernière modif: 31j
+[2026-03-14 18:30:21] 📊 Projets actifs: 8 | À vérifier: 1
+[2026-03-14 18:30:21] 📊 Projets actifs: 8 | À vérifier: 1
+[2026-03-14 18:30:21] 🔄 Opérations Git...
+[2026-03-14 18:30:21]   ➕ git add memory/ notes/ *.md
+[2026-03-14 18:30:21]   ℹ️  Aucun changement à commiter
+[2026-03-14 18:30:21] 📄 Rapport JSON: /root/.openclaw/workspace/logs/sync-para-report.json
+[2026-03-14 18:30:21] ✅ Sync terminé — Status: nothing_to_commit

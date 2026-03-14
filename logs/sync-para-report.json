@@ -1,9 +1,9 @@
 {
-  "timestamp": "2026-03-14T09:00:19+00:00",
+  "timestamp": "2026-03-14T18:30:21+01:00",
   "dry_run": false,
   "para_structure": {
     "projects": 9,
-    "areas": 15,
+    "areas": 16,
     "resources": 14,
     "archive": 2
   },
