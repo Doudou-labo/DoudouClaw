@@ -1,0 +1,21 @@
+{
+  "timestamp": "2026-03-13T22:30:11+00:00",
+  "dry_run": false,
+  "para_structure": {
+    "projects": 10,
+    "areas": 15,
+    "resources": 14,
+    "archive": 1
+  },
+  "projects_status": {
+    "active": 8,
+    "to_review": 2
+  },
+  "git": {
+    "push_status": "nothing_to_commit"
+  },
+  "anti_duplication": {
+    "recent_fsxmemory_sync": true
+  },
+  "projects_to_review": [{"name": "crm-v2-telegram.md", "reason": "Dernière modif: 30j"},{"name": "finance-tracker-pilot-7j.md", "reason": "Dernière modif: 32j"}]
+}
