@@ -211,3 +211,18 @@
 [2026-03-13 22:30:12]   ℹ️  Aucun changement à commiter
 [2026-03-13 22:30:12] 📄 Rapport JSON: /root/.openclaw/workspace/logs/sync-para-report.json
 [2026-03-13 22:30:12] ✅ Sync terminé — Status: nothing_to_commit
+[2026-03-14 09:00:19] 🚀 === Démarrage sync PARA/GitHub ===
+[2026-03-14 09:00:19] 📁 Vérification structure PARA...
+[2026-03-14 09:00:19]   ✅ notes/projects: 9 fichiers
+[2026-03-14 09:00:19]   ✅ notes/areas: 15 fichiers
+[2026-03-14 09:00:19]   ✅ notes/resources: 14 fichiers
+[2026-03-14 09:00:19]   ✅ notes/archive: 2 fichiers
+[2026-03-14 09:00:19] 🔍 Détection des projets inactifs (>30j ou deadline dépassée)...
+[2026-03-14 09:00:20]   ⚠️  crm-v2-telegram.md — Dernière modif: 31j
+[2026-03-14 09:00:20] 📊 Projets actifs: 8 | À vérifier: 1
+[2026-03-14 09:00:20] 📊 Projets actifs: 8 | À vérifier: 1
+[2026-03-14 09:00:20] 🔄 Opérations Git...
+[2026-03-14 09:00:20]   ➕ git add memory/ notes/ *.md
+[2026-03-14 09:00:20]   ℹ️  Aucun changement à commiter
+[2026-03-14 09:00:20] 📄 Rapport JSON: /root/.openclaw/workspace/logs/sync-para-report.json
+[2026-03-14 09:00:20] ✅ Sync terminé — Status: nothing_to_commit
