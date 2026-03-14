@@ -53,7 +53,7 @@ retry_command() {
 # ============================================
 send_alert() {
     local message="$1"
-    local channel_id="${2:-1472597513898033162}"  # Canal delivery/routines par défaut
+    local channel_id="${2:-1474162917694898181}"  # Canal delivery/routines par défaut
     
     log_info "📨 Envoi alerte Discord vers canal $channel_id"
     
@@ -77,7 +77,7 @@ send_alert() {
 send_discord_report() {
     local title="$1"
     local content="$2"
-    local channel_id="${3:-1472597513898033162}"  # Canal delivery/routines par défaut
+    local channel_id="${3:-1474162917694898181}"  # Canal delivery/routines par défaut
     
     # Formater le rapport avec emojis
     local formatted_report="📊 **${title}**
