@@ -53,18 +53,14 @@ retry_command() {
 # ============================================
 send_alert() {
     local message="$1"
-    local channel_id="${2:-1474162917694898181}"  # Canal mémoire par défaut
-    local session_id="agent:main:discord:channel:${channel_id}"
+    local channel_id="${2:-1472597513898033162}"  # Canal delivery/routines par défaut
     
     log_info "📨 Envoi alerte Discord vers canal $channel_id"
     
-    # Utiliser openclaw agent pour envoyer le message
-    if openclaw agent \
-        --session-id "$session_id" \
-        --message "$message" \
-        --deliver \
+    if openclaw message send \
         --channel discord \
-        --reply-to "$channel_id" 2>/dev/null; then
+        --target "$channel_id" \
+        --message "$message" 2>/dev/null; then
         log_info "✅ Alerte Discord envoyée"
         return 0
     else
@@ -82,7 +78,6 @@ send_discord_report() {
     local title="$1"
     local content="$2"
     local channel_id="${3:-1472597513898033162}"  # Canal delivery/routines par défaut
-    local session_id="agent:main:discord:channel:${channel_id}"
     
     # Formater le rapport avec emojis
     local formatted_report="📊 **${title}**
@@ -91,12 +86,10 @@ ${content}"
     
     log_info "📨 Envoi rapport Discord vers canal $channel_id"
     
-    if openclaw agent \
-        --session-id "$session_id" \
-        --message "$formatted_report" \
-        --deliver \
+    if openclaw message send \
         --channel discord \
-        --reply-to "$channel_id" 2>/dev/null; then
+        --target "$channel_id" \
+        --message "$formatted_report" 2>/dev/null; then
         log_info "✅ Rapport Discord envoyé"
         return 0
     else
