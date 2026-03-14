@@ -81,7 +81,7 @@ send_alert() {
 send_discord_report() {
     local title="$1"
     local content="$2"
-    local channel_id="${3:-1474162917694898181}"  # Canal mémoire par défaut
+    local channel_id="${3:-1472597513898033162}"  # Canal delivery/routines par défaut
     local session_id="agent:main:discord:channel:${channel_id}"
     
     # Formater le rapport avec emojis

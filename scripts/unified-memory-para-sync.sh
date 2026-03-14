@@ -37,8 +37,8 @@ RUN_ID=$(date +%Y%m%d-%H%M%S)
 TIMESTAMP=$(date '+%Y-%m-%d %H:%M:%S')
 DATE_HUMAN=$(date '+%d/%m/%Y %H:%M')
 
-# Canal Discord pour les rapports (canal mémoire)
-REPORT_CHANNEL="1474162917694898181"
+# Canal Discord pour les rapports (canal delivery/routines)
+REPORT_CHANNEL="1472597513898033162"
 
 # Options
 DRY_RUN="${1:-}"
