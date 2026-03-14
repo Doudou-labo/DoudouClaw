@@ -32,10 +32,10 @@ MODULES_BASE_DIR="$SCRIPT_DIR/modules"
 WORKSPACE_DIR="$(cd "$SCRIPT_DIR/.." && pwd)"
 MODULES_DIR="$MODULES_BASE_DIR"
 
-# Horodatage unique pour cette exécution
-RUN_ID=$(date +%Y%m%d-%H%M%S)
-TIMESTAMP=$(date '+%Y-%m-%d %H:%M:%S')
-DATE_HUMAN=$(date '+%d/%m/%Y %H:%M')
+# Horodatage unique pour cette exécution (fuseau Paris)
+RUN_ID=$(TZ=Europe/Paris date +%Y%m%d-%H%M%S)
+TIMESTAMP=$(TZ=Europe/Paris date '+%Y-%m-%d %H:%M:%S')
+DATE_HUMAN=$(TZ=Europe/Paris date '+%d/%m/%Y %H:%M')
 
 # Canal Discord pour les rapports (canal delivery/routines)
 REPORT_CHANNEL="1472597513898033162"
@@ -278,7 +278,7 @@ build_report() {
     
     # En-tête
     report="🆔 **Run ID:** \`$RUN_ID\`
-⏱️ **Durée:** $(date '+%H:%M:%S')
+⏱️ **Heure Paris:** $(TZ=Europe/Paris date '+%H:%M:%S')
 
 "
     
