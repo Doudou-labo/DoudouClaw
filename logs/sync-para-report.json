@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-03-14T22:30:12+01:00",
+  "timestamp": "2026-03-15T09:00:19+01:00",
   "dry_run": false,
   "para_structure": {
     "projects": 9,
@@ -17,5 +17,5 @@
   "anti_duplication": {
     "recent_fsxmemory_sync": false
   },
-  "projects_to_review": [{"name": "crm-v2-telegram.md", "reason": "Dernière modif: 31j"}]
+  "projects_to_review": [{"name": "crm-v2-telegram.md", "reason": "Dernière modif: 32j"}]
 }
