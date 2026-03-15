@@ -1,26 +1,24 @@
 # SESSION-STATE.md — Active Working Memory
 
 ## Current Task
-Consolidation terminée; prochain focus produit: **app dédiée d’inventaire physique des pneus** (séparée de `pneu-tracker`) avec vue liste complète XLSX, respect strict de l’ordre d’import, workflow de contrôle conforme/non conforme/reste à contrôler, calcul d’écarts automatiques, et export Excel final.
+Consolidation mémoire quotidienne exécutée. Prochains chantiers prioritaires :
+1. **Inventaire physique pneus** — rédiger puis implémenter le backlog MVP technique
+2. **Préparation visite Marc (DR)** — 31/03/2026, priorité RCS rouge
+3. **Pneu-tracker** — reprendre sprint FTS5/migrations/ARIA quand bande-passante dispo
 
-## Dernier travail réalisé (2026-03-11)
-- App **pneu-tracker** créée et massivement enrichie : Next.js 16 + SQLite + recharts
-- URL : https://pneus.doudougen.xyz (port 3002, auth Basic, service systemd)
-- Features livrées : formulaire enrichi, historique filtrable, pagination visible, modification/suppression logique, import/export CSV, dashboard graphique, toasts, vue mobile
-- Durcissement : validation serveur renforcée, soft delete, audit trail SQLite, security headers
-- Référentiel pneus intégré : **12 568 références** importées depuis Excel (table `tyre_catalog`)
-- Autocomplétion prédictive sur SAP / description / référence fabricant / libellé de recherche / marque
-- Nouveaux champs persistés : `manufacturer_ref`, `search_label`, `tyre_catalog_id`
-- Bug proxy same-site corrigé (mobile/Safari)
-- Réaudit multi-agents (orchestrateur + 4 spécialistes) → pistes : mode saisie rapide, FTS5, migrations, accessibilité ARIA
-- Sprint soir lancé : migrations versionnées, FTS5 pour `/api/tyres/suggest`, formulaire simplifié, accessibilité autocomplete
+## Dernier travail réalisé (2026-03-15)
+- **Benchmark LLM v6** — 7 modèles testés (5 payants + 2 gratuits), résultats compilés dans `benchmark-results/README-v6.md`
+  - Classement : Sonnet 4.6 (47/50), Hunter Alpha/k2p5 (45/50), Step-3.5 Flash (42/50)
+  - Leçon : GPT-OSS-120b inutilisable sur tâches ouvertes (dérive shell/filesystem)
+- **Mission Control** — update v0.2.1 → v0.4.6 (usage tracking provider, Security view, Doctor, Notifications, Calendar)
+- **ClawSuite** — update v3.1.0 → v3.2.0 (fix wizard bloquant, compat gateway 2026.3.8)
+- Consolidation mémoire quotidienne exécutée (cron 20:50 UTC)
 
 ## Immediate Context
-- Consolidation mémoire quotidienne exécutée le **2026-03-12 21:50 Europe/Paris**.
-- N1 synchronisé: `memory/2026-03-12.md`, `SESSION-STATE.md`, `RECENT_CONTEXT.md`.
-- PARA mis à jour: création de la note projet `notes/projects/inventaire-physique-pneus.md` + open loops alignés.
-- Préférence reporting cron maintenue: résumé Markdown + emojis vers Discord `1472597513898033162` (announce best-effort).
-- Chantiers actifs: cadrage puis implémentation de l’app inventaire (DNS prêt `inventaire.doudougen.xyz`).
+- N1 synchronisé : `memory/2026-03-15.md`, `SESSION-STATE.md`, `RECENT_CONTEXT.md`
+- Aucun échange utilisateur direct aujourd'hui (dimanche)
+- Projets stables, pas de décision utilisateur à intégrer
+- Prochaine consolidation : 2026-03-16 20:50 UTC
 
 ## Key Decisions (actives)
 1. Jurons français sans modération = identité DoudouClaw.
@@ -33,10 +31,10 @@ Consolidation terminée; prochain focus produit: **app dédiée d’inventaire p
 8. Migration 100% Agence-IA validée (2026-03-10).
 
 ## Key Files
-- `memory/2026-03-11.md`
+- `memory/2026-03-15.md`
 - `MEMORY.md`
 - `notes/areas/open-loops.md`
 - `RECENT_CONTEXT.md`
 
 ## Last Updated
-2026-03-14 20:50 UTC — consolidation mémoire/PARA exécutée. Aucun échange utilisateur direct aujourd'hui. Projets actifs stables (inventaire pneus, pneu-tracker, Venus Beauté, RCS). N1 synchronisé.
+2026-03-15 20:50 UTC — consolidation mémoire/PARA exécutée. N1 synchronisé.
