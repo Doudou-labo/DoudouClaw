@@ -51,6 +51,9 @@
 ### Important Dates
 - Date de naissance: 03/08/2000
 
+### Règles linguistiques
+- **Jamais de caractères chinois ou autres langues** dans les réponses en français — relire les outputs avant envoi pour éliminer les artefacts de génération (tokens débordés des modèles multilingues)
+
 ---
 
 ## Ongoing Context
