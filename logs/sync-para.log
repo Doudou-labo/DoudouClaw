@@ -318,3 +318,28 @@
 [2026-03-15 09:00:20]   ℹ️  Aucun changement à commiter
 [2026-03-15 09:00:20] 📄 Rapport JSON: /root/.openclaw/workspace/logs/sync-para-report.json
 [2026-03-15 09:00:20] ✅ Sync terminé — Status: nothing_to_commit
+[2026-03-15 13:00:15] 🚀 === Démarrage sync PARA/GitHub ===
+[2026-03-15 13:00:15] 📁 Vérification structure PARA...
+[2026-03-15 13:00:15]   ✅ notes/projects: 9 fichiers
+[2026-03-15 13:00:15]   ✅ notes/areas: 16 fichiers
+[2026-03-15 13:00:15]   ✅ notes/resources: 14 fichiers
+[2026-03-15 13:00:15]   ✅ notes/archive: 2 fichiers
+[2026-03-15 13:00:15] 🔍 Détection des projets inactifs (>30j ou deadline dépassée)...
+[2026-03-15 13:00:15]   ⚠️  crm-v2-telegram.md — Dernière modif: 32j
+[2026-03-15 13:00:15] 📊 Projets actifs: 8 | À vérifier: 1
+[2026-03-15 13:00:15] 📊 Projets actifs: 8 | À vérifier: 1
+[2026-03-15 13:00:15] 🔄 Opérations Git...
+[2026-03-15 13:00:15]   ➕ git add memory/ notes/ *.md
+[2026-03-15 13:00:15]   📦 1 fichier(s) en staging
+[2026-03-15 13:00:15]   📝 git commit
+To https://github.com/Doudou-labo/DoudouClaw.git
+   69338da..9c5819e  main -> main
+[main 9c5819e] 🧠 Memory-PARA Sync — 2026-03-15 13:00
+ 1 file changed, 102 insertions(+)
+ create mode 100644 memory/2026-03-15-1134.md
+[2026-03-15 13:00:16]   ✅ Commit réussi
+[2026-03-15 13:00:16]   🚀 git push origin main
+Everything up-to-date
+[2026-03-15 13:00:16]   ✅ Push réussi
+[2026-03-15 13:00:16] 📄 Rapport JSON: /root/.openclaw/workspace/logs/sync-para-report.json
+[2026-03-15 13:00:16] ✅ Sync terminé — Status: success
