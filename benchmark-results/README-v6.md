@@ -22,10 +22,10 @@
 
 | # | Modèle | Alias | Provider | Prix | Context |
 |---|--------|-------|----------|------|---------|
-| 1 | `openrouter/openrouter/healer-alpha` | **Healer Alpha** | OpenRouter | 💰 Payant | v1 (12 mars) |
+| 1 | `openrouter/openrouter/healer-alpha` | **Healer Alpha** | OpenRouter | 🆓 **Gratuit** | v1 (12 mars) |
 | 2 | `anthropic/claude-sonnet-4-6` | **Sonnet 4.6** | Anthropic | 💰 Payant | v1 (12 mars) |
 | 3 | `openai-codex/gpt-5.4` | **GPT-5.4** | OpenAI | 💰 Payant | v1 (12 mars) |
-| 4 | `openrouter/hunter-alpha` | **Hunter Alpha** | OpenRouter | 💰 Payant | v1 (12 mars) |
+| 4 | `openrouter/hunter-alpha` | **Hunter Alpha** | OpenRouter | 🆓 **Gratuit** | v1 (12 mars) |
 | 5 | `kimi-coding/k2p5` | **k2p5** | Moonshot/Kimi | 💰 Payant | v5 (13 mars) |
 | 6 | `openrouter/stepfun/step-3.5-flash:free` | **Step-3.5 Flash** 🆕 | StepFun | 🆓 **Gratuit** | v6 (15 mars) |
 | 7 | `openrouter/openai/gpt-oss-120b:free` | **GPT-OSS-120b** 🆕 | OpenAI (open-source) | 🆓 **Gratuit** | v6 (15 mars) |
@@ -88,7 +88,7 @@ GPT-OSS-120b produit le **plus grand nombre de tests** du benchmark entier : **5
 
 ### Modèles originaux (résumé)
 
-#### 🟢 Healer Alpha — Le Champion des Tests (payants)
+#### 🟢 Healer Alpha — Le Champion des Tests
 - **BST simple augmenté** avec maxEnd, sans équilibrage automatique
 - **18 tests** — le plus exhaustif des modèles payants
 - Philosophie : couvrir les cas limites plutôt que d'optimiser les garanties asymptotiques
@@ -125,7 +125,7 @@ GPT-OSS-120b produit le **plus grand nombre de tests** du benchmark entier : **5
 🥉 k2p5             → AVL solide + searchInterval + docs FR. Équilibre parfait.
 4e Hunter Alpha     → RB compact style LLRB. Efficace mais moins de features.
 5e Step-3.5 Flash 🆓→ AVL propre + searchOverlap. Excellent pour un gratuit.
-6e Healer Alpha     → 18 tests imbattables (payants), mais BST non équilibré.
+6e Healer Alpha 🆓  → 18 tests imbattables, mais BST non équilibré.
 7e GPT-5.4          → Conventionnel, aucun bonus, suppression O(n).
 ```
 
@@ -212,66 +212,65 @@ Score = 10 - (error_rate × 5) - ((avg_severity - 5) / 2)
 
 ## Résultats Bruts
 
-| Modèle | Volume | Sources | Latence FTS5 | Latence ES | Seuil bascule | Reco Pneu-Tracker |
-|--------|--------|---------|-------------|-----------|---------------|-------------------|
-| Healer Alpha | ~7 600c | Variées | Non chiffré | Non chiffré | < 500K docs | Non explicite |
-| **Sonnet 4.6** | ~9 100c | 8 | Non chiffré | Non chiffré | Non chiffré | Non |
-| GPT-5.4 | ~10 500c | Multi | Non chiffré | Non chiffré | Non chiffré | Non |
-| Hunter Alpha | ~8 900c | 7 | 840 req/s | N/A | < 500K docs | ✅ Oui |
-| k2p5 | ~8 400c | 6 | 100× plus rapide | Baseline | **1-5M docs** | Partiel |
-| **Step-3.5 Flash** 🆕 | ~8 500c | Web | **12ms** | **28ms** | **< 200K docs** | ✅ Recommandation claire |
-| **GPT-OSS-120b** 🆕 | ~7 500c | Web | **3.4ms** | **7.1ms** | **< 100K docs** | ✅ Feuille migration 9 étapes |
+| Modèle | Volume | Latence FTS5 | Latence ES | Seuil bascule | Reco Pneu-Tracker | Prix |
+|--------|--------|-------------|-----------|---------------|-------------------|------|
+| Healer Alpha | ~7 600c | Non chiffré | Non chiffré | < 500K docs | Non explicite | 🆓 |
+| **Sonnet 4.6** | ~9 100c | Non chiffré | Non chiffré | Non chiffré | Non | 💰 |
+| GPT-5.4 | ~10 500c | Non chiffré | Non chiffré | Non chiffré | Non | 💰 |
+| Hunter Alpha | ~8 900c | 840 req/s | N/A | < 500K docs | ✅ Oui (Pneu-Tracker) | 🆓 |
+| k2p5 | ~8 400c | 100× plus rapide | Baseline | **1-5M docs** | ✅ Partiel | 💰 |
+| **Step-3.5 Flash** 🆕 | ~8 000c | **1-5 ms** | **10-30 ms** | **~1M docs** | ✅ Architecture + plan 8 étapes | 🆓 |
+| **GPT-OSS-120b** 🆕 | ❌ Échec | ❌ | ❌ | ❌ | ❌ Tâche non viable | 🆓 |
+
+> ⚠️ **Note GPT-OSS-120b :** 4 tentatives (0 output × 3, listing node_modules × 1). Modèle inutilisable sur la rédaction longue — spécialisé tâches structurées courtes.
 
 ---
 
 ## Analyse détaillée par modèle (nouveaux)
 
-### 🆕 Step-3.5 Flash — Le Benchmarkeur Pratique
+### 🆕 Step-3.5 Flash — L'Architecte Technique Complet
 
 **Points forts :**
-- Benchmarks chiffrés : 12ms FTS5 vs 28ms ES (terme simple), 18ms vs 35ms (multi-termes)
-- Seuil : FTS5 < 200K docs, ES > 500K docs
-- Tableau de features complet (15+ critères)
-- Coût : FTS5 = 0€, ES = ~15€/mois
-- RAM : FTS5 180MB vs ES 850MB pendant indexation
-- Recommandation claire pour 12,500 refs = 6% de la limite
+- Internals détaillés : BM25 k1=1.2/b=0.75, Lucene segments, posting lists compressées
+- Benchmarks chiffrés : 1-5ms FTS5 vs 10-30ms ES (terme simple), 5-15ms vs 30-100ms (complexe)
+- Seuil double : ~50-100K docs si fuzzy/multi-langue requis ; ~1M docs pour performance pure
+- Tableau fonctionnel 10 critères dont geo, schema flex, réplication, backup
+- Coût : FTS5 = 0€ / <1h maintenance vs ES = 15-30€/mois + 2-4h/mois
+- Mention de `spellfix1` et tokenize `trigram` (SQLite ≥ 3.34) comme alternatives légères
+- Plan de migration 8 étapes avec feature-flag `USE_ES` et A/B test progressif
+- Recommandation claire pour 12,500 refs = 1.25% du seuil performance
 
-**Insight :** *"12,500 références = petit pour FTS5 (limite ~1M). Usage interne, pic < 10 req/s."*
+**Insight unique :** *"FTS5 fonctionne jusqu'à plusieurs millions de documents, mais les performances se dégradent car les posting lists deviennent longues. Au-delà de 1 million de docs, la latence peut dépasser 100ms pour des requêtes complexes."*
 
-**Limite :** Sources non citées individuellement (pas de liens URL).
+**Limite :** Analyse basée sur connaissance du modèle, pas une vraie recherche web avec sources URL citées.
 
 ---
 
-### 🆕 GPT-OSS-120b — Le Précis avec Feuille de Route
+### 🆕 GPT-OSS-120b — Échec total sur la rédaction longue
 
-**Points forts :**
-- Benchmarks les plus précis : 3.4ms FTS5 vs 7.1ms ES
-- Seuil : >100K docs pour justifier ES
-- Indexation : FTS5 0.12s vs ES 2.8s
-- Mémoire : FTS5 <30MB vs ES 350MB (heap)
-- **Feuille de route de migration en 9 étapes** avec Délais, Responsables, Livrables
-- Feature-flag approach (`USE_ES`) pour migration progressive
-- Améliorations FTS5 suggérées : trigrammes, spellfix1, highlight serveur
+GPT-OSS-120b est **inutilisable sur cette tâche** malgré 4 tentatives avec des prompts de plus en plus contraints :
+- v1 : 0 token output
+- v2 : 0 token output  
+- v3 : listing de `node_modules/react-dom/cjs/` du projet pneu-tracker
+- v4 : 0 token output
 
-**Insight :** *"Coût ES ~15€/mois. Complexité : FTS5 ⭐/5 vs ES ⭐⭐⭐⭐⭐/5."*
-
-**Limite :** Seuil plus conservateur (100K vs 200K de Step-3.5) — les deux sont défendables.
+**Ce que ça révèle :** GPT-OSS-120b est un modèle "code completion" — fort sur les tâches structurées et prévisibles (57 tests, analyse de logs), incapable de générer du texte analytique long.
 
 ---
 
 ## Verdict Recherche — Classement Commenté
 
 ```
-🥇 GPT-OSS-120b 🆓→ Benchmarks + précis (3.4ms vs 7.1ms) + feuille migration 9 étapes.
-🥈 k2p5            → Seuil 1-5M docs. Le plus actionnable pour une décision archi.
-🥉 Step-3.5 Flash 🆓→ Benchmarks solides + seuil 200K + coût opérationnel détaillé.
-4e Hunter Alpha    → Application directe au projet Pneu-Tracker.
-5e Sonnet 4.6      → Le plus exhaustif pour un architecte.
-6e GPT-5.4         → Le plus honnête sur les limites des sources.
-7e Healer Alpha    → Concis et correct mais le moins de profondeur.
+🥇 k2p5 💰          → Seuil 1-5M docs + benchmark 100×. Le plus actionnable en décision archi.
+🥈 Hunter Alpha 🆓  → Application directe au projet Pneu-Tracker. Très pratique.
+🥉 Step-3.5 Flash 🆓→ Architecture interne solide + seuil 1M + plan migration 8 étapes.
+4e Sonnet 4.6 💰    → Le plus exhaustif pour un architecte.
+5e GPT-5.4 💰       → Le plus honnête sur les limites des sources.
+6e Healer Alpha 🆓  → Concis et correct mais le moins de profondeur.
+N/A GPT-OSS-120b 🆓 → ❌ Échec sur 4 tentatives — hors périmètre fonctionnel du modèle.
 ```
 
-**💡 Insight :** Sur la recherche, les modèles gratuits **dominent le podium** (1er et 3e). GPT-OSS-120b est le plus précis, Step-3.5 Flash le plus pratique.
+**💡 Insight :** Sur la recherche, Step-3.5 Flash (gratuit) entre dans le **top 3** avec une analyse architecturale solide. GPT-OSS-120b révèle sa limite majeure — spécialisé code/analyse structurée, pas rédaction ouverte.
 
 ---
 
@@ -287,30 +286,30 @@ Score = 10 - (error_rate × 5) - ((avg_severity - 5) / 2)
 | Analyse — Rigueur | ⭐⭐⭐ | ⭐⭐⭐⭐⭐ | ⭐⭐ | ⭐⭐⭐ | ⭐⭐⭐⭐⭐ | ⭐⭐⭐⭐ | ⭐⭐⭐⭐⭐ |
 | Analyse — Insight | ⭐⭐⭐⭐ | ⭐⭐⭐⭐ | ⭐⭐⭐⭐ | ⭐⭐⭐⭐⭐ | ⭐⭐⭐⭐ | ⭐⭐⭐⭐ | ⭐⭐⭐⭐ |
 | Analyse — Action | ⭐⭐⭐⭐ | ⭐⭐⭐⭐⭐ | ⭐⭐⭐ | ⭐⭐⭐⭐⭐ | ⭐⭐⭐⭐ | ⭐⭐⭐⭐ | ⭐⭐⭐⭐⭐ |
-| Recherche — Profondeur | ⭐⭐⭐ | ⭐⭐⭐⭐⭐ | ⭐⭐⭐⭐ | ⭐⭐⭐⭐ | ⭐⭐⭐⭐ | ⭐⭐⭐⭐ | ⭐⭐⭐⭐⭐ |
-| Recherche — Applicabilité | ⭐⭐⭐ | ⭐⭐⭐ | ⭐⭐⭐ | ⭐⭐⭐⭐⭐ | ⭐⭐⭐⭐ | ⭐⭐⭐⭐⭐ | ⭐⭐⭐⭐⭐ |
-| Adaptation contexte | ⭐⭐⭐ | ⭐⭐⭐⭐ | ⭐⭐⭐ | ⭐⭐⭐⭐⭐ | ⭐⭐⭐⭐⭐ | ⭐⭐⭐⭐ | ⭐⭐⭐⭐ |
-| Consistance | ⭐⭐⭐ | ⭐⭐⭐⭐⭐ | ⭐⭐⭐ | ⭐⭐⭐⭐ | ⭐⭐⭐⭐⭐ | ⭐⭐⭐⭐ | ⭐⭐⭐⭐ |
-| **TOTAL** | **34** | **47** | **32** | **45** | **45** | **42** | **46** |
+| Recherche — Profondeur | ⭐⭐⭐ | ⭐⭐⭐⭐⭐ | ⭐⭐⭐⭐ | ⭐⭐⭐⭐ | ⭐⭐⭐⭐ | ⭐⭐⭐⭐ | ❌ Échec |
+| Recherche — Applicabilité | ⭐⭐⭐ | ⭐⭐⭐ | ⭐⭐⭐ | ⭐⭐⭐⭐⭐ | ⭐⭐⭐⭐ | ⭐⭐⭐⭐⭐ | ❌ Échec |
+| Adaptation contexte | ⭐⭐⭐ | ⭐⭐⭐⭐ | ⭐⭐⭐ | ⭐⭐⭐⭐⭐ | ⭐⭐⭐⭐⭐ | ⭐⭐⭐⭐ | ⭐⭐⭐ |
+| Consistance | ⭐⭐⭐ | ⭐⭐⭐⭐⭐ | ⭐⭐⭐ | ⭐⭐⭐⭐ | ⭐⭐⭐⭐⭐ | ⭐⭐⭐⭐ | ⭐⭐⭐ |
+| **TOTAL** | **34** | **47** | **32** | **45** | **45** | **42** | **38** |
 
 ## Classement Final Pondéré
 
 | Rang | Modèle | Score | Prix | Note |
 |------|--------|-------|------|------|
-| 🥇 | **Sonnet 4.6** | 47/50 | 💰 | Le perfectionniste. Inégalé sur la technicité pure. |
-| 🥈 | **GPT-OSS-120b** 🆕 | 46/50 | 🆓 | **GRATUIT et 2e.** Tests 57/57, scoring transparent, benchmarks précis. |
-| 🥈 | **Hunter Alpha** | 45/50 | 💰 | Le détective. Meilleure analyse causale + contextualisation. |
-| 🥈 | **k2p5** | 45/50 | 💰 | Le francophone. Précis, consistant, s'adapte au contexte. |
-| 🥉 | **Step-3.5 Flash** 🆕 | 42/50 | 🆓 | **GRATUIT et 5e.** Solide partout, excellent ratio qualité/prix. |
-| 6e | **Healer Alpha** | 34/50 | 💰 | Tests imbattables, manque de profondeur architecturale. |
-| 7e | **GPT-5.4** | 32/50 | 💰 | Scolaire. Correct mais sans relief ni bonus. |
+| 🥇 | **Sonnet 4.6** | 47/50 | 💰 Payant | Le perfectionniste. Inégalé sur la technicité pure. |
+| 🥈 | **Hunter Alpha** | 45/50 | 🆓 Gratuit | Le détective. Meilleure analyse causale + contextualisation projet. |
+| 🥈 | **k2p5** | 45/50 | 💰 Payant | Le francophone. Précis, consistant, s'adapte au contexte. |
+| 🥉 | **Step-3.5 Flash** 🆕 | 42/50 | 🆓 Gratuit | **GRATUIT et 4e.** Solide sur les 3 tâches, excellent ratio qualité/prix. |
+| 5e | **GPT-OSS-120b** 🆕 | 38/50 | 🆓 Gratuit | Fort sur code (57 tests) et analyse, mais **inutilisable sur rédaction longue**. |
+| 6e | **Healer Alpha** | 34/50 | 🆓 Gratuit | Tests imbattables (18), mais BST non équilibré et analyse approximative. |
+| 7e | **GPT-5.4** | 32/50 | 💰 Payant | Scolaire. Correct mais sans relief ni bonus. Comptage logs erroné. |
 
 ## Profils en une phrase
 
 | Modèle | Signature |
 |--------|-----------|
 | **Sonnet 4.6** | *"Je fais les choses correctement, même si tu n'as pas demandé le détail."* |
-| **GPT-OSS-120b** 🆓 | *"Je teste tout, je montre ma méthode, et je coûte rien."* |
+| **GPT-OSS-120b** 🆓 | *"Je teste tout sur le code, mais ne me demande pas d'écrire un article."* |
 | **Hunter Alpha** | *"Je trouve la cause racine et je te dis quoi faire maintenant."* |
 | **k2p5** | *"Je m'adapte à toi, je suis précis, et je ne fais pas de bruit inutile."* |
 | **Step-3.5 Flash** 🆓 | *"Je suis pragmatique, je livre, et je suis gratuit."* |
@@ -321,23 +320,24 @@ Score = 10 - (error_rate × 5) - ((avg_severity - 5) / 2)
 
 # 📊 Méta-Analyse
 
-## Le fait marquant : les gratuits sont compétitifs
+## Le fait marquant : les gratuits sont compétitifs… avec des limites claires
 
 | Comparaison | Payant moyen | Gratuit moyen | Verdict |
 |-------------|-------------|---------------|---------|
 | Code (tests) | 14.6 tests | 34.5 tests | 🆓 **Gratuits gagnent** (GPT-OSS 57 tests) |
-| Analyse (rigueur) | Comptage approximatif | Comptage exact 45/45 | 🆓 **Gratuits gagnent** |
-| Recherche (benchmarks) | Peu chiffré | Chiffré (ms précis) | 🆓 **Gratuits gagnent** |
+| Analyse (rigueur) | Comptage approx. | Comptage exact 45/45 | 🆓 **Gratuits gagnent** |
+| Recherche (profondeur) | Solide | Step-3.5 solide, GPT-OSS ❌ | 💰 Payants gagnent globalement |
 | Code (architecture) | RB/AVL varié | AVL uniquement | 💰 Payants gagnent (RB de Sonnet) |
+| Rédaction longue | Tous fonctionnent | GPT-OSS échoue × 4 | 💰 Payants gagnent |
 
-**Conclusion :** Les modèles gratuits excellent sur la **méthodologie** (tests, transparence, benchmarks chiffrés) mais les payants gardent l'avantage sur l'**architecture créative** (Red-Black Tree de Sonnet, features bonus non demandées).
+**Conclusion nuancée :** Step-3.5 Flash est **polyvalent** (3/3 tâches) et compétitif avec les payants. GPT-OSS-120b est **spécialisé** (excellent en code/analyse structurée, inutilisable en rédaction longue). Les modèles payants restent plus fiables sur les tâches ouvertes.
 
 ## Ce qui change avec les modèles gratuits
 
 1. **Accessibilité** : pas besoin de clé API premium → benchmark reproductible par n'importe qui
-2. **Méthodologie** : GPT-OSS-120b est le seul à fournir une formule de scoring reproductible
-3. **Tests** : GPT-OSS-120b (57 assertions) dépasse tous les payants sur la couverture
-4. **Benchmarks** : les gratuits fournissent des chiffres précis là où les payants restent vagues
+2. **Tests** : GPT-OSS-120b (57 assertions) dépasse tous les payants sur la couverture de tests
+3. **Transparence** : GPT-OSS-120b seul à fournir une formule de health score reproductible
+4. **Polyvalence gratuite** : Step-3.5 Flash rivalise avec les payants sur les 3 tâches
 
 ## Ce qui ne change pas
 
@@ -345,6 +345,13 @@ Score = 10 - (error_rate × 5) - ((avg_severity - 5) / 2)
 2. **Features non demandées** : Sonnet et k2p5 ajoutent des bonus que personne n'a demandés
 3. **Adaptation contextuelle** : k2p5 (docs FR) et Hunter (projet Pneu-Tracker) restent imbattables
 4. **Analyse causale** : Hunter reste seul à distinguer cause racine vs symptôme
+5. **Fiabilité sur tâches ouvertes** : les payants fonctionnent toujours — les gratuits peuvent dérailler
+
+## ⚠️ Limites identifiées des modèles free OpenRouter
+
+- **GPT-OSS-120b** : inutilisable sur rédaction longue/analyse ouverte — dérive vers l'exécution de commandes shell
+- **Step-3.5 Flash** : timeout si timeout < 5min (1.2M tokens consommés en web search sans output)
+- **Les deux** : nécessitent un timeout de 5min minimum pour les tâches complexes
 
 ---
 
@@ -353,15 +360,16 @@ Score = 10 - (error_rate × 5) - ((avg_severity - 5) / 2)
 | Situation | Modèle recommandé | Pourquoi |
 |-----------|-------------------|----------|
 | Code prod critique (algorithmes) | **Sonnet 4.6** | Garanties RB + features complètes |
-| Code avec tests exhaustifs | **GPT-OSS-120b** 🆓 | 57/57 tests, stress test, gratuit |
-| Debug incident production | **Hunter Alpha** | Cause racine + délai fix estimé |
-| Analyse métriques / dashboards | **GPT-OSS-120b** 🆓 | Formule scoring reproductible |
-| Veille techno + décision archi | **k2p5** | Seuils précis + docs FR |
-| Contextualisation projet | **Hunter Alpha** | Relie toujours au use case |
-| Documentation technique | **Sonnet 4.6** | Exhaustif, structuré, pro |
-| Prototypage rapide (coût zéro) | **Step-3.5 Flash** 🆓 | Solide, rapide, gratuit |
-| Rapport bilingue | **k2p5** | S'adapte à la langue |
-| Budget serré, qualité correcte | **GPT-OSS-120b** 🆓 | Top 2 global, gratuit |
+| Code avec tests exhaustifs | **GPT-OSS-120b** 🆓 | 57/57 tests, stress test 1000 inserts, gratuit |
+| Debug incident production | **Hunter Alpha** 🆓 | Cause racine + délai fix estimé, gratuit |
+| Analyse métriques / dashboards | **GPT-OSS-120b** 🆓 | Formule scoring reproductible, gratuit |
+| Veille techno + décision archi | **k2p5** 💰 | Seuils précis + docs FR |
+| Contextualisation projet | **Hunter Alpha** 🆓 | Relie toujours au use case, gratuit |
+| Documentation technique | **Sonnet 4.6** 💰 | Exhaustif, structuré, pro |
+| Prototypage rapide (coût zéro) | **Step-3.5 Flash** 🆓 | Solide sur les 3 tâches, gratuit |
+| Rapport bilingue | **k2p5** 💰 | S'adapte à la langue |
+| Tâche polyvalente gratuite | **Step-3.5 Flash** 🆓 | Fiable partout, pas de dérapage |
+| ⚠️ Rédaction/analyse longue | ❌ **Éviter GPT-OSS-120b** | Dérive systématique (4 échecs) |
 
 ---
 
