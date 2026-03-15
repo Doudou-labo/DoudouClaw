@@ -1,0 +1,45 @@
+08:01:12 [INFO] GET /api/users/42 - 200 - 35ms
+08:01:45 [INFO] GET /api/products - 200 - 89ms
+08:02:30 [ERROR] POST /api/payments - 500 - 92ms - NullPointerException at PaymentService.java:142
+08:03:15 [INFO] GET /api/users/87 - 200 - 41ms
+08:03:45 [ERROR] POST /api/payments - 500 - 87ms - NullPointerException at PaymentService.java:142
+08:04:20 [WARN] GET /api/search?q=tires - 200 - 5120ms - Response time exceeded threshold (2000ms)
+08:05:00 [INFO] GET /api/orders/1001 - 200 - 145ms
+08:05:30 [INFO] POST /api/orders - 201 - 320ms
+08:06:00 [ERROR] POST /api/payments - 503 - 41ms - Circuit breaker OPEN for payment-gateway
+08:06:01 [ERROR] POST /api/payments - 503 - 43ms - Circuit breaker OPEN for payment-gateway
+08:06:02 [ERROR] POST /api/payments - 503 - 42ms - Circuit breaker OPEN for payment-gateway
+08:07:00 [WARN] GET /api/products/55 - 200 - 2340ms - Response time exceeded threshold (2000ms)
+08:08:15 [INFO] GET /api/dashboard - 200 - 67ms
+08:09:00 [INFO] GET /api/health - 200 - 12ms
+08:09:45 [WARN] GET /api/orders/2003 - 200 - 3200ms - Response time exceeded threshold (2000ms)
+08:10:30 [INFO] GET /api/users/15 - 200 - 38ms
+08:11:00 [ERROR] POST /api/payments - 500 - 95ms - NullPointerException at PaymentService.java:142
+08:11:45 [WARN] GET /api/search?q=pneu - 200 - 6200ms - Response time exceeded threshold (2000ms)
+08:12:30 [INFO] GET /api/inventory/stock - 500 - 105ms - ConnectionTimeout: DB pool exhausted
+08:13:15 [INFO] GET /api/users/33 - 200 - 42ms
+08:14:00 [WARN] GET /api/products/12 - 200 - 4500ms - Response time exceeded threshold (2000ms)
+08:15:00 [INFO] GET /api/dashboard - 200 - 71ms
+08:16:00 [ERROR] POST /api/payments - 500 - 89ms - NullPointerException at PaymentService.java:142
+08:16:45 [WARN] POST /api/orders - 201 - 2800ms - Response time exceeded threshold (2000ms)
+08:17:30 [INFO] GET /api/users/56 - 200 - 39ms
+08:18:15 [ERROR] GET /api/reports/monthly - 500 - 110ms - OutOfMemoryError: Java heap space
+08:19:00 [WARN] GET /api/orders/1004 - 200 - 3500ms - Response time exceeded threshold (2000ms)
+08:20:00 [INFO] GET /api/products/88 - 200 - 95ms
+08:21:00 [ERROR] POST /api/payments - 503 - 44ms - Circuit breaker OPEN
+08:21:45 [INFO] GET /api/dashboard - 200 - 63ms
+08:22:30 [INFO] GET /api/health - 200 - 11ms
+08:23:15 [WARN] GET /api/search?q=stock - 200 - 5800ms - Response time exceeded threshold (2000ms)
+08:24:00 [INFO] GET /api/users/91 - 200 - 44ms
+08:25:00 [ERROR] GET /api/inventory/stock - 500 - 108ms - ConnectionTimeout: DB pool exhausted
+08:26:00 [ERROR] POST /api/orders - 500 - 130ms - ConstraintViolation: duplicate key orders_pkey
+08:27:00 [INFO] GET /api/users/12 - 200 - 36ms
+08:28:00 [WARN] GET /api/products/33 - 200 - 3800ms - Response time exceeded threshold (2000ms)
+08:30:00 [ERROR] GET /api/reports/monthly - 500 - 115ms - OutOfMemoryError: Java heap space
+08:31:00 [ERROR] POST /api/payments - 500 - 91ms - NullPointerException at PaymentService.java:142
+08:33:00 [WARN] POST /api/orders - 201 - 4100ms - Response time exceeded threshold (2000ms)
+08:35:00 [ERROR] GET /api/inventory/stock - 500 - 112ms - ConnectionTimeout: DB pool exhausted
+08:36:00 [ERROR] POST /api/payments - 503 - 45ms - Circuit breaker OPEN
+08:38:00 [WARN] GET /api/products/77 - 200 - 4200ms - Response time exceeded threshold (2000ms)
+08:40:00 [ERROR] GET /api/reports/monthly - 500 - 108ms - OutOfMemoryError: Java heap space
+08:43:00 [ERROR] POST /api/orders - 500 - 125ms - ConstraintViolation: duplicate key orders_pkey
