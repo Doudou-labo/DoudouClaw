@@ -355,7 +355,7 @@ L'utilisateur peut activer le skill via :
 #### Sujets transversaux :
 | Sujet | Thread ID | Usage |
 |-------|-----------|-------|
-| 💬 Général TDAH | 1483246437067260117 | Discussions, questions, partages |
+| 💬 Inbox Zero Général | 1483246437067260117 | Questions sur le skill, bugs, suggestions |
 | 📊 Ma Matrice TDAH | 1483245944118968374 | Vue d'ensemble du dashboard |
 
 **Workflow automatique :** 
