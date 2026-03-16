@@ -24,6 +24,7 @@
   - [Context Manager](#context-manager-safe-compression)
   - [LanceDB / Memory plugin](#lancedb--memory-plugin-openclaw)
   - [fsxmemory + QMD](#fsxmemory--qmd)
+  - [TDAH Inbox Zero Skill](#tdah-inbox-zero-skill)
 - [🤖 Intégrations Discord](#-intégrations-discord)
   - [Discord Bot](#discord-bot-integration)
   - [Format Discord (Canal legifrance)](#format-discord--canal-legifrance)
@@ -50,6 +51,7 @@
 | **Mémoire LTM** | `memory_store` / `memory_recall` | [LanceDB](#lancedb--memory-plugin-openclaw) |
 | **Memory-PARA Sync** | Cron auto 4x/jour ou `unified-memory-para-sync.sh` | [Memory-PARA-Sync](#memory-para-sync) |
 | **Recherche mémoire** | `qmd query "..."` | [fsxmemory + QMD](#fsxmemory--qmd) |
+| **TDAH Inbox Zero** | Pattern detection auto ou mention `@doudouclaw inbox:` | [TDAH Skill](#tdah-inbox-zero-skill) |
 | **Compression contexte** | `scripts/context-compress-preview.sh` | [Context Manager](#context-manager-safe-compression) |
 | **Status gateway** | `openclaw status` | [Gateway](#openclaw-gateway-restart--comportement) |
 | **Navigateur** | `agent-browser open <url>` | [Agent Browser](#agent-browser-vercel) |
@@ -647,6 +649,61 @@ bash scripts/fsxmemory-vsearch.sh "décisions importantes" --deep
 - Le package npm original `@foresigxt/foresigxt-cli-memory` n'était pas publiquement disponible → implémentation bash maison des commandes.
 - `qmd` tente parfois un backend Vulkan avant de retomber en CPU sur ce VPS; c'est bruyant mais non bloquant.
 - Pour l'instant, **ne pas indexer `notes/` ni `workspace/`** dans qmd pour éviter le bruit et les temps de calcul inutiles.
+
+---
+
+### TDAH Inbox Zero Skill
+
+**Status:** ✅ Active (2026-03-16) - **Version:** 1.1
+
+**Location:** `skills/tdah-inbox-zero/SKILL.md`
+
+**Description:** Skill OpenClaw pour l'externalisation de la mémoire exécutive adaptée au profil TDAH. Documentation canonique pour utilisation par tous les modèles (moins puissants inclus).
+
+**Quand l'utiliser:**
+- Message brouillon/confus ("faut que je...", "j'ai pensé à...")
+- Liste de 3+ items d'un coup (Brain Dump)
+- Heure tardive (22h-6h) + ton anxieux (Idée de nuit)
+- "Je bloque sur..." ou "C'est trop gros"
+- Interruption en plein focus sur autre sujet
+
+**9 Patterns détectés:**
+1. Rappel simple
+2. Blocage/Procrastination
+3. Idée/Projet
+4. Urgent/Stress
+5. Capture brute (zapping mental)
+6. Idée de nuit (3h du mat')
+7. Brain Dump (Cerveau plein)
+8. Fausse urgence
+9. Interruption en plein focus
+
+**Processus (7 étapes):**
+1. Identifier le pattern
+2. Destination PARA (Projects/Areas/Resources)
+3. Vérifier l'urgence réelle
+4. Formater la sortie (🎯📍📅⏱️💡)
+5. Single Tasking (UNE action)
+6. Journalisation discrète
+7. Follow-up 24h
+
+**Règles TDAH critiques:**
+- **PAS DE LISTES** → Une action à la fois
+- **Dopamine-friendly** → Mini-défis pour tâches chiantes
+- **Réduction friction** → Max 2 clics pour démarrer
+- **Protection émotionnelle** → Valider avant d'actionner si stress/émotion
+- **Noter sans déranger** → Capture silencieuse si hyperfocus détecté
+- **Idée de nuit** → NOTER UNIQUEMENT, répondre "on en parle demain"
+
+**Guardrails:**
+- Ne jamais créer de catégories PARA
+- Ne jamais suggérer +1 action
+- Ne jamais ignorer mention émotionnelle (Audrey, stress)
+- Ne jamais traiter idée de nuit à 2h
+- Ne jamais interrompre hyperfocus productif
+- Check-in 24h obligatoire
+
+**Référence:** Voir `skills/tdah-inbox-zero/SKILL.md` pour la documentation complète (patterns, exemples, guardrails détaillés).
 - `fsxmemory-vsearch.sh` fonctionne, mais le premier chargement local du modèle peut être lent sur CPU.
 
 ---

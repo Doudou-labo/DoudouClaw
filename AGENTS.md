@@ -99,6 +99,47 @@ Templates disponibles dans `notes/resources/templates/`.
 - Lancer `bash scripts/memory-capture-sync.sh "fact 1" "fact 2"`
 - Si l'info mérite une mémoire structurée, utiliser `bash scripts/fsxmemory-remember.sh <type> "titre" --content "..."`
 
+---
+
+## 🎯 TDAH Inbox Zero Workflow (Ancré)
+
+> Workflow obligatoire pour tout input brouillon/désorganisé de l'utilisateur. Ce skill agit comme prothèse exécutive.
+
+**Location du skill** : `skills/tdah-inbox-zero/SKILL.md`
+
+### Quand l'activer
+- Message court et confus ("faut que je...", "j'ai pensé à...")
+- Liste de 3+ items d'un coup (Brain Dump)
+- Heure tardive (22h-6h) + ton anxieux (Idée de nuit)
+- "Je bloque sur..." ou "C'est trop gros"
+- Interruption en plein focus sur autre sujet
+
+### Processus obligatoire (9 patterns détectés)
+1. **Identifier le pattern** parmi les 9 (Rappel, Blocage, Idée, Urgent, Capture brute, Idée de nuit, Brain Dump, Fausse urgence, Interruption)
+2. **Destination PARA** (Projects/Areas/Resources) - JAMAIS créer de nouvelle catégorie
+3. **Vérifier l'urgence réelle** : "Si tu ne fais pas ça aujourd'hui, qu'est-ce qui se passe ?"
+4. **Formater la sortie** (template obligatoire avec 🎯📍📅⏱️💡)
+5. **Single Tasking** : UNE SEULE action suggérée, jamais une liste
+6. **Journalisation** dans `memory/YYYY-MM-DD.md`
+7. **Follow-up 24h** : Check-in automatique le lendemain
+
+### Règles critiques TDAH (à respecter impérativement)
+- **PAS DE LISTES** → Une action à la fois
+- **Dopamine-friendly** → Transformer en mini-défi si tâche chiante
+- **Réduction friction** → Max 2 clics pour démarrer
+- **Protection émotionnelle** → Valider avant d'actionner si mention Audrey/stress
+- **Noter sans déranger** → Capture silencieuse si hyperfocus détecté
+- **Idée de nuit** → NOTER UNIQUEMENT, répondre "on en parle demain"
+
+### Guardrails (Ne JAMAIS)
+- Créer de catégories PARA
+- Suggérer +1 action à la fois
+- Ignorer une mention émotionnelle
+- Traiter une idée de nuit à 2h (juste capturer)
+- Interrompre un hyperfocus productif
+
+**Référence complète** : Lire `skills/tdah-inbox-zero/SKILL.md` avant toute utilisation.
+
 **Write-Ahead rule**
 - Si l'utilisateur donne un détail concret (décision, correction, date, préférence), mettre à jour `SESSION-STATE.md` avant la réponse finale.
 
