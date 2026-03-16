@@ -340,7 +340,7 @@ L'utilisateur peut activer le skill via :
 - Mention `@doudouclaw inbox:` suivi du message
 - Message dans le canal/sujet dédié "Inbox Zero"
 - Vocal/texte libre avec pattern de détection automatique
-- **Forum Discord TDAH (1483244330788454465)** avec 8 sujets organisés :
+- **Forum Discord Inbox Zero (1483244330788454465)** avec 8 sujets organisés :
 
 #### Sujets par case de la matrice :
 | Emoji | Case | Sujet Discord | Thread ID |
