@@ -12,6 +12,7 @@
 - **Fonctionnement à l'intérêt (Hyperfocus)** : Capacité de concentration intense sur les sujets passionnants (agence, résolution de problèmes complexes) mais blocage total ou procrastination massive sur les tâches administratives répétitives (facturation).
 - **Sommeil et Rumination** : Cerveau "en marche" dès le réveil. Pensées intrusives/boucles mentales sur le passé (rupture avec Audrey).
 - **Besoin d'immédiateté** : Difficulté avec les tâches à récompense différée.
+- **Hyper-focalisation émotionnelle** : Lien établi entre le TDAH et la difficulté de lâcher-prise émotionnel concernant Audrey (le cerveau "boucle" sur le sujet pour obtenir une stimulation émotionnelle/dopamine).
 
 ### Impact sur le rôle RCS (Responsable de Centre de Service)
 - **Rigueur** : La tenue des dossiers et le suivi administratif sont les points les plus fragiles.
@@ -31,12 +32,22 @@
 
 ## 📈 Résultats Tests
 
-- **ASRS (Adult ADHD Self-Report Scale)** : *En attente des captures d'Alexandre.*
+### ASRS (Adult ADHD Self-Report Scale) - 2026-03-16
+- **Score Partie A** : **4/6** (Seuil de screening positif atteint).
+- **Détails marquants** :
+    - Item 1 (Détails) : **Souvent**
+    - Item 2 (Organisation) : **Souvent**
+    - Item 4 (Démarrage tâches complexes) : **Souvent**
+    - Item 5 (Gigotage/Bougeotte) : **Très Souvent**
+- **Détails Partie B** :
+    - Item 11 (Distractibilité sensorielle/Bruit) : **Très Souvent**
+    - Item 12 (Hyperactivité intérieure) : **Très Souvent**
+    - Item 8 (Blocage tâches monotones) : **Souvent**
 
 ---
 
 ## 🏥 Prochaines étapes suggérées
-- [ ] Compléter le test ASRS.
+- [x] Compléter le test ASRS (Fait le 2026-03-16).
 - [ ] Centraliser ces notes pour un éventuel bilan avec un professionnel de santé (neuropsychologue ou psychiatre spécialisé).
 - [ ] Tester une semaine de "priorité unique" (un seul gros objectif par jour).
 
