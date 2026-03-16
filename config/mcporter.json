@@ -24,6 +24,9 @@
       "headers": {
         "Authorization": "Bearer rk_test_51T8PHo62KsXIqxXvZtlRAsslAPRScenup6hNbW32iVKfJOySnVx92RPpTuAIaof4CGEXuYYgilYcfDPLZpCo21wS00O84IohfC"
       }
+    },
+    "datagouv": {
+      "baseUrl": "https://mcp.data.gouv.fr/mcp"
     }
   },
   "imports": []
