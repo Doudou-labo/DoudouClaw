@@ -340,6 +340,13 @@ L'utilisateur peut activer le skill via :
 - Mention `@doudouclaw inbox:` suivi du message
 - Message dans le canal/sujet dédié "Inbox Zero"
 - Vocal/texte libre avec pattern de détection automatique
+- **Forum Discord TDAH (1483244330788454465)** avec sujets dédiés :
+  - 🔴 **Quick Wins** (1483245941548126288) - Pour les actions rapides urgentes
+  - 🏗️ **Gros Morceaux** (1483245942345044109) - Pour les projets longs
+  - 🧠 **Brain Dump & Idées** (1483245943552741396) - Pour le bazar mental
+  - 📊 **Ma Matrice TDAH** (1483245944118968374) - Pour voir le tableau de bord
+
+**Workflow automatique :** Quand tu postes dans le forum, je détecte automatiquement la case et je déplace dans le bon sujet si besoin.
 
 ### Fichiers impactés (lecture seule, jamais édition)
 - `notes/projects/*.md`

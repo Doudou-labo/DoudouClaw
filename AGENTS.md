@@ -116,6 +116,7 @@ L'utilisateur **ne choisit pas** dans quelle case de la matrice son truc va. Il 
 - Heure tardive (22h-6h) + ton anxieux (Idée de nuit)
 - "Je bloque sur..." ou "C'est trop gros"
 - Interruption en plein focus sur autre sujet
+- **Post dans le Forum TDAH Discord (1483244330788454465)** - Je détecte automatiquement le bon sujet
 
 ### Matrice de Priorisation TDAH (Eisenhower + Impact/Effort)
 
