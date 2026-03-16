@@ -1,0 +1,227 @@
+{
+  "name": "📧 Extraction RDV Euromaster",
+  "nodes": [
+    {
+      "parameters": {
+        "pollTimes": {
+          "item": [
+            {
+              "mode": "everyMinute"
+            }
+          ]
+        },
+        "mailbox": "INBOX",
+        "options": {}
+      },
+      "id": "n1",
+      "name": "📥 Gmail",
+      "type": "n8n-nodes-base.emailReadImap",
+      "typeVersion": 2,
+      "position": [
+        200,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": false
+          },
+          "conditions": [
+            {
+              "leftValue": "={{ $json.subject }}",
+              "rightValue": "rendez-vous",
+              "operator": {
+                "type": "string",
+                "operation": "contains"
+              }
+            }
+          ],
+          "combinator": "and"
+        }
+      },
+      "id": "n2",
+      "name": "🔍 Filtre RDV",
+      "type": "n8n-nodes-base.filter",
+      "typeVersion": 2,
+      "position": [
+        450,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "dataType": "string",
+        "value1": "={{ $json.subject.toLowerCase() }}",
+        "rules": {
+          "rules": [
+            {
+              "value2": "pneu",
+              "operation": "contains",
+              "output": 0
+            },
+            {
+              "value2": "entretien",
+              "operation": "contains",
+              "output": 1
+            },
+            {
+              "value2": "révision",
+              "operation": "contains",
+              "output": 1
+            },
+            {
+              "value2": "vidange",
+              "operation": "contains",
+              "output": 1
+            }
+          ]
+        }
+      },
+      "id": "n3",
+      "name": "🔀 Type RDV",
+      "type": "n8n-nodes-base.switch",
+      "typeVersion": 3,
+      "position": [
+        700,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "const text = $input.first().json.text || $input.first().json.html || '';\nconst subject = $input.first().json.subject || '';\nconst from = $input.first().json.from || '';\n\n// Immatriculation\nconst immatRegex = /\\b([A-Z]{2}[-\\s]?\\d{3}[-\\s]?[A-Z]{2})\\b/gi;\nconst immat = (text.match(immatRegex) || [])[0] || 'Non detectee';\n\n// Client\nconst clientMatch = text.match(/(?:client|nom)[\\s:]+([A-Z][a-z\\s]+)/i);\nconst client = clientMatch ? clientMatch[1].trim() : 'Non detecte';\n\n// Société\nconst societeMatch = text.match(/(?:societe|entreprise)[\\s:]+([A-Z][^\\n,]+)/i);\nconst societe = societeMatch ? societeMatch[1].trim() : 'Non detectee';\n\n// Loueur\nconst loueurs = ['ALD','Arval','LeasePlan','Alphabet','Athlon'];\nconst loueur = loueurs.find(l => text.includes(l)) || 'Non indique';\n\n// Dimensions pneus\nconst dimRegex = /\\b\\d{3}\\/\\d{2}[A-Z]\\d{2}[^\\s,;]*/gi;\nconst dims = [...new Set((text.match(dimRegex) || []))];\n\n// Codes SAP\nconst sapRegex = /\\b\\d{6,8}\\b/g;\nconst saps = [...new Set((text.match(sapRegex) || []))];\n\nreturn [{\n  json: {\n    type: 'PNEUS',\n    sujet: subject,\n    expediteur: from,\n    immatriculation: immat,\n    client: client,\n    societe: societe,\n    loueur: loueur,\n    dimensions: dims,\n    codesSAP: saps,\n    nbPneus: dims.length\n  }\n}];"
+      },
+      "id": "n4",
+      "name": "🛞 Extraction Pneus",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        950,
+        150
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "const text = $input.first().json.text || $input.first().json.html || '';\nconst subject = $input.first().json.subject || '';\n\n// Immatriculation\nconst immatRegex = /\\b([A-Z]{2}[-\\s]?\\d{3}[-\\s]?[A-Z]{2})\\b/gi;\nconst immat = (text.match(immatRegex) || [])[0] || 'Non detectee';\n\n// Kilometrage\nconst kmMatch = text.match(/([\\d\\s.]+)\\s*km/i);\nconst km = kmMatch ? kmMatch[1] : 'Non indique';\n\n// Prestations\nconst prestas = ['vidange','révision','freins','courroie','batterie','climatisation'];\nconst found = prestas.filter(p => text.toLowerCase().includes(p));\n\nreturn [{\n  json: {\n    type: 'ENTRETIEN',\n    sujet: subject,\n    immatriculation: immat,\n    kilometrage: km,\n    prestations: found\n  }\n}];"
+      },
+      "id": "n5",
+      "name": "🔧 Extraction Entretien",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        950,
+        450
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "const d = $input.first().json;\nlet msg = '';\n\nif (d.type === 'PNEUS') {\n  msg = '🛞 **RDV PNEUS**\\n';\n  msg += `Immat: ${d.immatriculation}\\n`;\n  msg += `Client: ${d.client}\\n`;\n  msg += `Societe: ${d.societe}\\n`;\n  msg += `Loueur: ${d.loueur}\\n`;\n  if (d.dimensions.length > 0) {\n    msg += `Pneus: ${d.dimensions.join(', ')}\\n`;\n  }\n  if (d.codesSAP.length > 0) {\n    msg += `SAP: ${d.codesSAP.join(', ')}\\n`;\n  }\n} else {\n  msg = '🔧 **RDV ENTRETIEN**\\n';\n  msg += `Immat: ${d.immatriculation}\\n`;\n  msg += `KM: ${d.kilometrage}\\n`;\n  if (d.prestations.length > 0) {\n    msg += `Presta: ${d.prestations.join(', ')}\\n`;\n  }\n}\n\nreturn [{ json: { discordMessage: msg } }];"
+      },
+      "id": "n6",
+      "name": "💬 Formate Discord",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1200,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://discord.com/api/webhooks/1482882942488547439/_2bUuF-RytQeD89Lzye6SrTfesBzdttyuH4kxuDRGLKdgdPWjrGZFyx1Z32A0qbMvJMV",
+        "sendBody": true,
+        "contentType": "json",
+        "specifyBody": "json",
+        "jsonBody": "={{ {\"content\": $json.discordMessage} }}"
+      },
+      "id": "n7",
+      "name": "📤 Discord",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        1450,
+        300
+      ]
+    }
+  ],
+  "connections": {
+    "📥 Gmail": {
+      "main": [
+        [
+          {
+            "node": "🔍 Filtre RDV",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "🔍 Filtre RDV": {
+      "main": [
+        [
+          {
+            "node": "🔀 Type RDV",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "🔀 Type RDV": {
+      "main": [
+        [
+          {
+            "node": "🛞 Extraction Pneus",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "🔧 Extraction Entretien",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "🛞 Extraction Pneus": {
+      "main": [
+        [
+          {
+            "node": "💬 Formate Discord",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "🔧 Extraction Entretien": {
+      "main": [
+        [
+          {
+            "node": "💬 Formate Discord",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "💬 Formate Discord": {
+      "main": [
+        [
+          {
+            "node": "📤 Discord",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "settings": {
+    "executionOrder": "v1"
+  }
+}
