@@ -100,6 +100,10 @@
     "byterover": {
       "version": "2.0.0",
       "installedAt": 1773427224729
+    },
+    "n8n": {
+      "version": "2.0.0",
+      "installedAt": 1773659773746
     }
   }
 }
