@@ -95,11 +95,35 @@ Si l'input contient des mots forts ("absolument", "urgent", "faut que", "j'ai pe
 - Si plusieurs items détectés → demander : "Lequel est le plus urgent ?"
 - Reformuler les gros projets en "première micro-action"
 
-### Étape 6 : Journalisation discrète + Follow-up
+### Étape 6 : Mettre à jour le Tableau de Bord TDAH
+Après avoir classé l'item et formaté la sortie, mettre à jour le fichier `notes/areas/tdah-matrix-dashboard.md` :
+
+**Format d'ajout dans le dashboard :**
+```markdown
+- [ ] **[Nom de l'action]** (Ajouté YYYY-MM-DD)
+  - 📅 Quand : [Timing]
+  - ⏱️ Durée : [Estimation]
+  - 💡 Si bloqué : [Alternative]
+  - 🎯 Case : [Quick Win / Gros Morceau / etc.]
+```
+
+**Règles de mise à jour :**
+- Ajouter l'item dans la case correspondante
+- Si l'item est déplacé d'une case à une autre → Le déplacer dans le dashboard
+- Si l'item est terminé → Cocher la case `[x]` ou le déplacer vers Archive
+- **Ne jamais** supprimer un item terminé (garder l'historique 30 jours)
+
+**Commande pour mettre à jour :**
+```bash
+# Le skill doit appeler cette logique automatiquement
+# ou utiliser : bash skills/tdah-inbox-zero/scripts/update-dashboard.sh "item" "case"
+```
 Ajouter une ligne dans `memory/YYYY-MM-DD.md` avec format :
 ```
-- [HH:MM] Inbox Zero: [Résumé action] → [Destination PARA]
+- [HH:MM] Inbox Zero: [Résumé action] → [Case Matrice] → [Destination PARA]
 ```
+
+**Follow-up 24h** : Programmer un check-in automatique pour le lendemain.
 
 ---
 
