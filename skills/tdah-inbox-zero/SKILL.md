@@ -340,13 +340,28 @@ L'utilisateur peut activer le skill via :
 - Mention `@doudouclaw inbox:` suivi du message
 - Message dans le canal/sujet dédié "Inbox Zero"
 - Vocal/texte libre avec pattern de détection automatique
-- **Forum Discord TDAH (1483244330788454465)** avec sujets dédiés :
-  - 🔴 **Quick Wins** (1483245941548126288) - Pour les actions rapides urgentes
-  - 🏗️ **Gros Morceaux** (1483245942345044109) - Pour les projets longs
-  - 🧠 **Brain Dump & Idées** (1483245943552741396) - Pour le bazar mental
-  - 📊 **Ma Matrice TDAH** (1483245944118968374) - Pour voir le tableau de bord
+- **Forum Discord TDAH (1483244330788454465)** avec 8 sujets organisés :
 
-**Workflow automatique :** Quand tu postes dans le forum, je détecte automatiquement la case et je déplace dans le bon sujet si besoin.
+#### Sujets par case de la matrice :
+| Emoji | Case | Sujet Discord | Thread ID |
+|-------|------|---------------|-----------|
+| 🔴 | Quick Win | 🔴 Quick Wins | 1483245941548126288 |
+| 🏗️ | Gros Morceau | 🏗️ Gros Morceaux | 1483245942345044109 |
+| 🟡 | Remplissage | 🟡 Remplissage (Batch) | 1483246436756754565 |
+| 📅 | Planifié | 📅 Planifié | 1483246436777852948 |
+| 🧠 | Brain Dump | 🧠 Brain Dump & Idées | 1483245943552741396 |
+| ✅ | Terminé | ✅ Terminé (Victoires) | 1483246436610211897 |
+
+#### Sujets transversaux :
+| Sujet | Thread ID | Usage |
+|-------|-----------|-------|
+| 💬 Général TDAH | 1483246437067260117 | Discussions, questions, partages |
+| 📊 Ma Matrice TDAH | 1483245944118968374 | Vue d'ensemble du dashboard |
+
+**Workflow automatique :** 
+- Poste n'importe où dans le forum → Je détecte automatiquement la case → Je classe dans le bon sujet
+- Je mets à jour le dashboard GitHub ET je poste dans le sujet Discord correspondant
+- Quand une tâche est terminée, je la déplace vers ✅ Terminé (Victoires)
 
 ### Fichiers impactés (lecture seule, jamais édition)
 - `notes/projects/*.md`
