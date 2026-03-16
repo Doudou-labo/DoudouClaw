@@ -52,5 +52,5 @@
 - [ ] Brancher recherche/ajout via référentiel pneus + préparer export Excel final
 
 ## Auto-checkpoints
-- [ ] [AUTO 2026-03-16 midi] Checkpoint 3-min fait. Next: Avant la fin du pilote (16/02) : noter 3 catégories à ajuster (si besoin) + 1 friction d'usage (ce qui bloque)
+- [ ] [AUTO 2026-03-16 soir] Checkpoint 3-min fait. Next: Créer Gmail dédié (doudou.n8n@gmail.com)
 
