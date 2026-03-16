@@ -252,6 +252,63 @@ Si BLOQUÉ :
 
 ---
 
+## 🎯 Matrice de Priorisation TDAH (Eisenhower + Impact/Effort)
+
+> Le cerveau TDAH a tendance à tout classer "Urgent + Important". C'est pourquoi **c'est l'assistant qui classe, pas l'utilisateur**.
+
+### Principe : "Je classe, tu exécutes"
+L'utilisateur envoie le bazar mental → L'assistant détermine la case → Propose UNE action adaptée.
+
+### La Matrice 2D
+
+|  | **🚀 Rapide (≤15 min)** | **🏗️ Long (+30 min)** |
+|---|---|---|
+| **🔴 Urgent + Important** | **Quick Win** → FAIRE IMMÉDIAT | **Gros Morceau** → DÉCOUPER en 3 micro-étapes |
+| **🟡 Important (pas urgent)** | **Remplissage** → BATCH (3 en 1) | **Planifié** → Calendrier + rappel |
+| **🟠 Urgent (pas important)** | **Délégable** → Qui peut faire ça ? | **Reportable** → Vraiment nécessaire ? |
+| **⚫ Ni l'un ni l'autre** | **Poubelle** → Ignore | **Archive** → Note et oublie |
+
+### Questions de Challenge (obligatoires)
+
+Pour éviter le piège "Tout est Urgent/Important", l'assistant DOIT poser ces questions :
+
+**Si l'utilisateur dit "C'est urgent" :**
+> "Si tu ne fais pas ça aujourd'hui, qu'est-ce qui se passe vraiment ?"
+- Si réponse = "Rien" ou "Je serais stressé" → **PAS URGENT** → Case 🟡 ou 🟠
+- Si réponse = "Client mécontent / Perte d'argent / Deadline juridique" → **VRAIMENT URGENT** → Case 🔴
+
+**Si l'utilisateur dit "C'est important" :**
+> "Est-ce que ça fait avancer un objectif à long terme (RCS, projet perso) ?"
+- Si réponse = "Oui, c'est lié à mes objectifs" → **IMPORTANT** 
+- Si réponse = "Non, c'est juste du bruit / une habitude" → **PAS IMPORTANT** → Case ⚫
+
+### Correspondance avec les Patterns
+
+| Pattern | Case Matrice | Stratégie |
+|---------|-------------|-----------|
+| Rappel simple | 🟡 Remplissage ou 🔴 Quick Win | Si ≤5 min → Quick Win, sinon Batch |
+| Blocage | 🏗️ Gros Morceau | Découper en 3 micro-étapes |
+| Idée de nuit | 🟡 Planifié | Noter, traiter demain matin |
+| Brain Dump | 🔴→🟡 | Trier : Quick Wins d'abord, reste en Batch |
+| Fausse urgence | 🟠 Reportable ou ⚫ Poubelle | Challenger l'urgence réelle |
+| Interruption | Variable | Capturer sans déranger, classer après |
+
+### Exemples de classification
+
+**Input :** `"Faut que j'appelle le fournisseur Michelin demain"`
+- Analyse : Important (fournisseur) + Rapide (5 min) + Pas ultra-urgent (demain)
+- **Case :** 🟡 Remplissage → BATCH avec 2 autres appels rapides
+
+**Input :** `"Le client Dupont va exploser si j'ai pas son devis ce soir"`
+- Analyse : Urgent (ce soir) + Important (client) + Rapide (15 min)
+- **Case :** 🔴 Quick Win → FAIRE MAINTENANT
+
+**Input :** `"Je dois refaire tout le site web"`
+- Analyse : Important mais PAS urgent + Long (plusieurs heures)
+- **Case :** 🟡 Planifié → Calendrier "Mardi 14h-16h : 2h sur le site" + découpage en micro-étapes
+
+---
+
 ## 🔧 Intégration Technique
 
 ### Commande d'activation
@@ -295,6 +352,7 @@ Toute action doit être tracée dans `memory/YYYY-MM-DD.md` pour traçabilité e
 
 ## 📝 Version History
 
+- **v1.2** (2026-03-16) : Ajout de la Matrice de Priorisation TDAH (Eisenhower + Impact/Effort) avec règle "Je classe, tu exécutes" et questions de challenge
 - **v1.1** (2026-03-16) : Ajout des patterns Idée de nuit, Brain Dump, Fausse urgence, Interruption + Follow-up 24h + Guardrails complétés
 - **v1.0** (2026-03-16) : Création initiale du skill TDAH Inbox Zero
 

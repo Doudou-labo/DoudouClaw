@@ -654,11 +654,13 @@ bash scripts/fsxmemory-vsearch.sh "décisions importantes" --deep
 
 ### TDAH Inbox Zero Skill
 
-**Status:** ✅ Active (2026-03-16) - **Version:** 1.1
+**Status:** ✅ Active (2026-03-16) - **Version:** 1.2
 
 **Location:** `skills/tdah-inbox-zero/SKILL.md`
 
 **Description:** Skill OpenClaw pour l'externalisation de la mémoire exécutive adaptée au profil TDAH. Documentation canonique pour utilisation par tous les modèles (moins puissants inclus).
+
+**Principe fondamental:** "Je classe, tu exécutes" → L'utilisateur envoie le bazar, l'assistant détermine la case matrice et propose l'action.
 
 **Quand l'utiliser:**
 - Message brouillon/confus ("faut que je...", "j'ai pensé à...")
@@ -666,6 +668,19 @@ bash scripts/fsxmemory-vsearch.sh "décisions importantes" --deep
 - Heure tardive (22h-6h) + ton anxieux (Idée de nuit)
 - "Je bloque sur..." ou "C'est trop gros"
 - Interruption en plein focus sur autre sujet
+
+**Matrice de Priorisation TDAH (Eisenhower + Impact/Effort):**
+
+|  | **🚀 Rapide (≤15 min)** | **🏗️ Long (+30 min)** |
+|---|---|---|
+| **🔴 Urgent + Important** | **Quick Win** → FAIRE IMMÉDIAT | **Gros Morceau** → DÉCOUPER en 3 micro-étapes |
+| **🟡 Important (pas urgent)** | **Remplissage** → BATCH (3 en 1) | **Planifié** → Calendrier + rappel |
+| **🟠 Urgent (pas important)** | **Délégable** → Qui peut faire ça ? | **Reportable** → Vraiment nécessaire ? |
+| **⚫ Ni l'un ni l'autre** | **Poubelle** → Ignore | **Archive** → Note et oublie |
+
+**Questions de Challenge:**
+- "Si tu ne fais pas ça aujourd'hui, qu'est-ce qui se passe vraiment ?" → Si "rien", alors PAS URGENT
+- "Est-ce que ça fait avancer un objectif à long terme ?" → Si "non", alors PAS IMPORTANT
 
 **9 Patterns détectés:**
 1. Rappel simple
@@ -678,14 +693,15 @@ bash scripts/fsxmemory-vsearch.sh "décisions importantes" --deep
 8. Fausse urgence
 9. Interruption en plein focus
 
-**Processus (7 étapes):**
+**Processus (8 étapes):**
 1. Identifier le pattern
 2. Destination PARA (Projects/Areas/Resources)
-3. Vérifier l'urgence réelle
-4. Formater la sortie (🎯📍📅⏱️💡)
-5. Single Tasking (UNE action)
-6. Journalisation discrète
-7. Follow-up 24h
+3. Vérifier l'urgence réelle (questions challenge)
+4. **Déterminer la case matrice** ← NOUVEAU
+5. Formater la sortie (🎯📍📅⏱️💡)
+6. Single Tasking (UNE action)
+7. Journalisation discrète
+8. Follow-up 24h
 
 **Règles TDAH critiques:**
 - **PAS DE LISTES** → Une action à la fois
@@ -694,6 +710,7 @@ bash scripts/fsxmemory-vsearch.sh "décisions importantes" --deep
 - **Protection émotionnelle** → Valider avant d'actionner si stress/émotion
 - **Noter sans déranger** → Capture silencieuse si hyperfocus détecté
 - **Idée de nuit** → NOTER UNIQUEMENT, répondre "on en parle demain"
+- **Je classe, tu exécutes** → Assistant détermine la priorité
 
 **Guardrails:**
 - Ne jamais créer de catégories PARA
@@ -701,9 +718,10 @@ bash scripts/fsxmemory-vsearch.sh "décisions importantes" --deep
 - Ne jamais ignorer mention émotionnelle (Audrey, stress)
 - Ne jamais traiter idée de nuit à 2h
 - Ne jamais interrompre hyperfocus productif
+- Ne jamais laisser tout mettre dans "Urgent/Important" sans challenge
 - Check-in 24h obligatoire
 
-**Référence:** Voir `skills/tdah-inbox-zero/SKILL.md` pour la documentation complète (patterns, exemples, guardrails détaillés).
+**Référence:** Voir `skills/tdah-inbox-zero/SKILL.md` pour la documentation complète (patterns, matrice détaillée, exemples, guardrails).
 - `fsxmemory-vsearch.sh` fonctionne, mais le premier chargement local du modèle peut être lent sur CPU.
 
 ---

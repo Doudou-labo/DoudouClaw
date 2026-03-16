@@ -101,11 +101,14 @@ Templates disponibles dans `notes/resources/templates/`.
 
 ---
 
-## 🎯 TDAH Inbox Zero Workflow (Ancré)
+## 🎯 TDAH Inbox Zero Workflow (Ancré) - v1.2
 
 > Workflow obligatoire pour tout input brouillon/désorganisé de l'utilisateur. Ce skill agit comme prothèse exécutive.
 
 **Location du skill** : `skills/tdah-inbox-zero/SKILL.md`
+
+### Principe fondamental : "Je classe, tu exécutes"
+L'utilisateur **ne choisit pas** dans quelle case de la matrice son truc va. Il envoie le bazar, **je détermine la case**, et je propose l'action adaptée.
 
 ### Quand l'activer
 - Message court et confus ("faut que je...", "j'ai pensé à...")
@@ -114,14 +117,28 @@ Templates disponibles dans `notes/resources/templates/`.
 - "Je bloque sur..." ou "C'est trop gros"
 - Interruption en plein focus sur autre sujet
 
+### Matrice de Priorisation TDAH (Eisenhower + Impact/Effort)
+
+|  | **🚀 Rapide (≤15 min)** | **🏗️ Long (+30 min)** |
+|---|---|---|
+| **🔴 Urgent + Important** | **Quick Win** → FAIRE IMMÉDIAT | **Gros Morceau** → DÉCOUPER en 3 micro-étapes |
+| **🟡 Important (pas urgent)** | **Remplissage** → BATCH (3 en 1) | **Planifié** → Calendrier + rappel |
+| **🟠 Urgent (pas important)** | **Délégable** → Qui peut faire ça ? | **Reportable** → Vraiment nécessaire ? |
+| **⚫ Ni l'un ni l'autre** | **Poubelle** → Ignore | **Archive** → Note et oublie |
+
+### Questions de Challenge (obligatoires)
+- **"Si tu ne fais pas ça aujourd'hui, qu'est-ce qui se passe vraiment ?"** → Si "rien", alors PAS URGENT
+- **"Est-ce que ça fait avancer un objectif à long terme ?"** → Si "non", alors PAS IMPORTANT
+
 ### Processus obligatoire (9 patterns détectés)
 1. **Identifier le pattern** parmi les 9 (Rappel, Blocage, Idée, Urgent, Capture brute, Idée de nuit, Brain Dump, Fausse urgence, Interruption)
 2. **Destination PARA** (Projects/Areas/Resources) - JAMAIS créer de nouvelle catégorie
-3. **Vérifier l'urgence réelle** : "Si tu ne fais pas ça aujourd'hui, qu'est-ce qui se passe ?"
-4. **Formater la sortie** (template obligatoire avec 🎯📍📅⏱️💡)
-5. **Single Tasking** : UNE SEULE action suggérée, jamais une liste
-6. **Journalisation** dans `memory/YYYY-MM-DD.md`
-7. **Follow-up 24h** : Check-in automatique le lendemain
+3. **Vérifier l'urgence réelle** : Questions de challenge obligatoires
+4. **Déterminer la case matrice** (Quick Win, Gros Morceau, Remplissage, Planifié, etc.)
+5. **Formater la sortie** (template obligatoire avec 🎯📍📅⏱️💡)
+6. **Single Tasking** : UNE SEULE action suggérée, jamais une liste
+7. **Journalisation** dans `memory/YYYY-MM-DD.md`
+8. **Follow-up 24h** : Check-in automatique le lendemain
 
 ### Règles critiques TDAH (à respecter impérativement)
 - **PAS DE LISTES** → Une action à la fois
@@ -130,15 +147,17 @@ Templates disponibles dans `notes/resources/templates/`.
 - **Protection émotionnelle** → Valider avant d'actionner si mention Audrey/stress
 - **Noter sans déranger** → Capture silencieuse si hyperfocus détecté
 - **Idée de nuit** → NOTER UNIQUEMENT, répondre "on en parle demain"
+- **Je classe, tu exécutes** → C'est l'assistant qui détermine la priorité, pas l'utilisateur
 
 ### Guardrails (Ne JAMAIS)
 - Créer de catégories PARA
 - Suggérer +1 action à la fois
-- Ignorer une mention émotionnelle
+- Ignorer une mention émotionnelle (Audrey, stress, fatigue)
 - Traiter une idée de nuit à 2h (juste capturer)
 - Interrompre un hyperfocus productif
+- Laisser l'utilisateur tout mettre dans "Urgent/Important" sans challenge
 
-**Référence complète** : Lire `skills/tdah-inbox-zero/SKILL.md` avant toute utilisation.
+**Référence complète** : Lire `skills/tdah-inbox-zero/SKILL.md` pour la documentation complète (patterns, matrice, exemples, guardrails détaillés).
 
 **Write-Ahead rule**
 - Si l'utilisateur donne un détail concret (décision, correction, date, préférence), mettre à jour `SESSION-STATE.md` avant la réponse finale.
