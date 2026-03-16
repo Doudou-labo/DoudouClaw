@@ -2,23 +2,25 @@
 
 ## Current Task
 Consolidation mémoire quotidienne exécutée. Prochains chantiers prioritaires :
-1. **Inventaire physique pneus** — rédiger puis implémenter le backlog MVP technique
-2. **Préparation visite Marc (DR)** — 31/03/2026, priorité RCS rouge
-3. **Pneu-tracker** — reprendre sprint FTS5/migrations/ARIA quand bande-passante dispo
+1. **Configuration n8n** — créer Gmail dédié + activer IMAP + configurer credential
+2. **Inventaire physique pneus** — rédiger puis implémenter le backlog MVP technique
+3. **Préparation visite Marc (DR)** — 31/03/2026, priorité RCS rouge
+4. **Pneu-tracker** — reprendre sprint FTS5/migrations/ARIA quand bande-passante dispo
 
-## Dernier travail réalisé (2026-03-15)
-- **Benchmark LLM v6** — 7 modèles testés (5 payants + 2 gratuits), résultats compilés dans `benchmark-results/README-v6.md`
-  - Classement : Sonnet 4.6 (47/50), Hunter Alpha/k2p5 (45/50), Step-3.5 Flash (42/50)
-  - Leçon : GPT-OSS-120b inutilisable sur tâches ouvertes (dérive shell/filesystem)
-- **Mission Control** — update v0.2.1 → v0.4.6 (usage tracking provider, Security view, Doctor, Notifications, Calendar)
-- **ClawSuite** — update v3.1.0 → v3.2.0 (fix wizard bloquant, compat gateway 2026.3.8)
-- Consolidation mémoire quotidienne exécutée (cron 20:50 UTC)
+## Dernier travail réalisé (2026-03-16)
+- **n8n self-hosted** — installation complète sur `workflow.doudougen.xyz` (Docker + Caddy)
+- **Workflow extraction RDV** — création et test du workflow `qAH9Z6MYbMvJPydk`
+  - Extraction emails Euromaster (pneus/entretien) via IMAP
+  - Parsing regex avec fix UTF-8 (Latin-1 → caractères accentués)
+  - Webhook Discord fonctionnel (test ARVAL FLEET SERVICES réussi)
+  - Export JSON : `/root/n8n/workflow-rdv-euromaster.json`
+- Architecture validée : Code node (offline/gratuit) vs LLM (trop complexe/costly)
 
 ## Immediate Context
-- N1 synchronisé : `memory/2026-03-15.md`, `SESSION-STATE.md`, `RECENT_CONTEXT.md`
-- Aucun échange utilisateur direct aujourd'hui (dimanche)
-- Projets stables, pas de décision utilisateur à intégrer
-- Prochaine consolidation : 2026-03-16 20:50 UTC
+- N1 synchronisé : `memory/2026-03-16.md`, `SESSION-STATE.md`, `RECENT_CONTEXT.md`
+- Aucun échange utilisateur direct aujourd'hui
+- n8n opérationnel, en attente de configuration Gmail dédié
+- Projets stables
 
 ## Key Decisions (actives)
 1. Jurons français sans modération = identité DoudouClaw.
@@ -29,12 +31,14 @@ Consolidation mémoire quotidienne exécutée. Prochains chantiers prioritaires 
 6. Mode mémoire **fsxmemory niveau 2.5** + règle miroir active.
 7. `qmd` indexe uniquement la collection `memory`.
 8. Migration 100% Agence-IA validée (2026-03-10).
+9. **n8n** : architecture Code node privilégiée vs LLM pour workflows internes.
 
 ## Key Files
-- `memory/2026-03-15.md`
+- `memory/2026-03-16.md`
 - `MEMORY.md`
 - `notes/areas/open-loops.md`
 - `RECENT_CONTEXT.md`
+- `notes/projects/n8n-extraction-pneus-mail.md`
 
 ## Last Updated
-2026-03-15 20:50 UTC — consolidation mémoire/PARA exécutée. N1 synchronisé.
+2026-03-16 20:50 UTC — consolidation mémoire/PARA exécutée. N1 synchronisé.

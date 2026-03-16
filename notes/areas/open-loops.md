@@ -4,6 +4,13 @@
 
 ## En cours
 
+### n8n — Configuration Gmail
+- [ ] Créer Gmail dédié (doudou.n8n@gmail.com)
+- [ ] Activer IMAP sur le compte
+- [ ] Générer App Password
+- [ ] Configurer credential IMAP dans n8n
+- [ ] Tester workflow en production avec vrais emails
+
 ### Finance Tracker - Pilotage 7 jours
 - [ ] Avant la fin du pilote (16/02) : noter 3 catégories à ajuster (si besoin) + 1 friction d'usage (ce qui bloque)
 - [ ] J+7 (16/02) : créer 1 objectif d'épargne + 1 récurrence (ex : Spotify) et valider que ça tient dans ta vraie vie

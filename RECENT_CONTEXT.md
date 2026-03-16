@@ -4,6 +4,34 @@
 
 ---
 
+## Latest Session — 2026-03-16
+
+### Topic
+Setup n8n self-hosted + création workflow extraction emails RDV Euromaster.
+
+### Key Points
+- **n8n self-hosted** installé et opérationnel sur `workflow.doudougen.xyz` (port 5678, Docker + Caddy)
+- **Workflow RDV Extraction** créé et testé avec succès (ID: `qAH9Z6MYbMvJPydk`)
+  - Trigger IMAP Gmail → extraction regex + fix UTF-8 → webhook Discord
+  - Architecture validée : Code node (gratuit/offline) plutôt que LLM
+  - Test réussi : email ARVAL FLEET SERVICES extrait complètement (type, prestation, immat, date, heure, kilométrage, client, loueur, téléphone)
+- Problèmes résolus : encodage UTF-8 (Latin-1 → fix), source contenu (`textPlain`), erreur JS (`const` vs `let`)
+- Export JSON généré : `/root/n8n/workflow-rdv-euromaster.json`
+
+### Prochains pas
+- [ ] Créer Gmail dédié (doudou.n8n@gmail.com) + activer IMAP + générer App Password
+- [ ] Configurer credential IMAP dans n8n
+- [ ] Rédiger backlog MVP inventaire physique pneus
+- [ ] Préparer visite Marc DR (31/03/2026) — priorité RCS rouge
+
+### Status
+- [x] n8n installé et accessible
+- [x] Workflow extraction emails fonctionnel
+- [x] Test end-to-end réussi (Discord webhook OK)
+- [ ] Configuration Gmail dédié à finaliser
+
+---
+
 ## Latest Session — 2026-03-15
 
 ### Topic
@@ -30,27 +58,4 @@ Consolidation mémoire quotidienne + activités techniques du dimanche (benchmar
 - [x] Mission Control + ClawSuite mis à jour
 - [ ] Inventaire pneus : implémentation non démarrée
 
----
-
-## Latest Session — 2026-03-14
-
-### Topic
-Consolidation mémoire quotidienne (aucun échange utilisateur direct).
-
-### Key Points
-- Aucune interaction directe avec Alexandre aujourd'hui.
-- Projets actifs stables : inventaire physique pneus (backlog MVP à rédiger), pneu-tracker (sprint FTS5/ARIA), Venus Beauté (catalogue en attente), évolution RCS.
-- Priorité RCS à venir : préparer visite Marc (DR) le 31/03/2026.
-- ByteRover désinstallé le 2026-03-13 → remplacé par fsxmemory + Memory-PARA-Sync.
-
-### Prochains pas
-- [ ] Rédiger backlog MVP inventaire physique pneus (`inventaire.doudougen.xyz`)
-- [ ] Préparer visite Marc DR (31/03/2026) — priorité RCS rouge
-- [ ] Finaliser sprint pneu-tracker (FTS5, migrations, ARIA)
-
-### Status
-- [x] Consolidation mémoire/PARA du jour exécutée
-- [x] N1 synchronisé
-- [ ] Inventaire pneus : implémentation non démarrée
-
-*Last auto-update: 2026-03-15 20:50 UTC*
+*Last auto-update: 2026-03-16 20:50 UTC*
