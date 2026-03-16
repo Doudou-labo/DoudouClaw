@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-03-15T18:30:12+01:00",
+  "timestamp": "2026-03-15T22:30:17+01:00",
   "dry_run": false,
   "para_structure": {
     "projects": 9,
@@ -8,14 +8,14 @@
     "archive": 2
   },
   "projects_status": {
-    "active": 8,
-    "to_review": 1
+    "active": 7,
+    "to_review": 2
   },
   "git": {
-    "push_status": "success"
+    "push_status": "nothing_to_commit"
   },
   "anti_duplication": {
     "recent_fsxmemory_sync": false
   },
-  "projects_to_review": [{"name": "crm-v2-telegram.md", "reason": "Dernière modif: 32j"}]
+  "projects_to_review": [{"name": "crm-v2-telegram.md", "reason": "Dernière modif: 32j"},{"name": "stack-skills-openclaw.md", "reason": "Dernière modif: 30j"}]
 }
