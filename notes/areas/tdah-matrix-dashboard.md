@@ -25,9 +25,10 @@
 > Urgent + Important + Rapide (≤15 min)
 
 - [ ] **Vérifier disponibilité BMW mercredi** (Ajouté 2026-03-16)
-  - 📅 Quand : Demain matin avant 9h30
+  - 📅 Quand : Aujourd'hui avant 10h
   - ⏱️ Durée : 5 min
   - 💡 Si bloqué : Appeler responsable véhicules
+  - 🎯 Case : Quick Win
 
 ---
 

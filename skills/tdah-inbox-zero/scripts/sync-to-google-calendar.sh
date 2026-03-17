@@ -117,15 +117,27 @@ create_calendar_event() {
 EOF
 )
     
-    echo "📌 Création événement: $summary"
-    echo "   🕐 $start_datetime → $end_datetime"
-    
     # Appel API Google Calendar via Maton
     # Note: Nécessite que l'auth Google Calendar soit configurée dans Maton
+    # Pour configurer: openclaw gateway config ou via l'UI ClawSuite
+    echo "   📌 Création événement: $summary"
+    echo "   🕐 $start_datetime → $end_datetime"
+    
+    # Vérifier si GATEWAY_TOKEN est dispo
+    if [[ -z "${GATEWAY_TOKEN:-}" ]]; then
+        echo "   ⚠️  GATEWAY_TOKEN non défini - utilisation du calendrier local"
+        echo "   💡 Pour activer la sync Google Calendar:"
+        echo "      1. Configurer l'auth Google dans Maton/ClawSuite"
+        echo "      2. Exporter GATEWAY_TOKEN"
+        echo "      3. Relancer le script"
+        return 0
+    fi
+    
     curl -s -X POST "${GATEWAY_URL}/google-calendar/calendar/v3/calendars/${CALENDAR_ID}/events" \
         -H "Content-Type: application/json" \
+        -H "Authorization: Bearer ${GATEWAY_TOKEN}" \
         -d "$event_json" 2>/dev/null || {
-            echo "   ⚠️  Erreur lors de la création (API non dispo ou non auth)"
+            echo "   ⚠️  Erreur API (auth ou connexion) - événement non créé"
             return 1
         }
     
@@ -173,11 +185,11 @@ sync_dashboard_to_calendar() {
     ' "$file" | while IFS='|' read -r action when duration case_type; do
         [[ -z "$action" ]] && continue
         
-        # Nettoyer
-        action=$(echo "$action" | xargs)
-        when=$(echo "$when" | xargs)
-        duration=$(echo "$duration" | xargs)
-        case_type=$(echo "$case_type" | xargs)
+        # Nettoyer (enlever espaces superflus)
+        action=$(echo "$action" | sed 's/^[[:space:]]*//;s/[[:space:]]*$//')
+        when=$(echo "$when" | sed 's/^[[:space:]]*//;s/[[:space:]]*$//')
+        duration=$(echo "$duration" | sed 's/^[[:space:]]*//;s/[[:space:]]*$//')
+        case_type=$(echo "$case_type" | sed 's/^[[:space:]]*//;s/[[:space:]]*$//')
         
         # Parser les dates et durées
         local start_datetime=$(parse_when_to_date "$when")
