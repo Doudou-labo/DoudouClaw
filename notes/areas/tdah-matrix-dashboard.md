@@ -36,13 +36,13 @@
 
 > Important + Long (+30 min) → Découper en 3 micro-étapes max
 
-- [ ] **Terminer inventaire pneus** (Ajouté 2026-03-16)
+- [ ] **Terminer inventaire pneus - Étape 1** (Ajouté 2026-03-16)
+  - 📅 Quand : Demain après-midi 14h
+  - ⏱️ Durée : 15 min
+  - 💡 Si bloqué : Prendre juste la feuille et noter 3 références max
+  - 🎯 Case : Gros Morceau
   - 📍 Projet : inventaire-pneus
-  - 🔨 Décomposé en :
-    1. Préparer liste références (15 min)
-    2. Contrôler Zone A (45 min)
-    3. Pause, puis suite
-  - 📅 Planifié : Après le Quick Win BMW
+  - 🔨 Détail : Préparer liste références
 
 ---
 
