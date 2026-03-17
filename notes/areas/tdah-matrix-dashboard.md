@@ -37,12 +37,12 @@
 > Important + Long (+30 min) → Découper en 3 micro-étapes max
 
 - [ ] **Terminer inventaire pneus - Étape 1** [S] (Ajouté 2026-03-16)
-  - 📅 Quand : Demain après-midi 14h
-  - ⏱️ Durée : 90 min
+  - 📅 Quand : Demain toute la journée
+  - ⏱️ Durée : 6h
   - 💡 Si bloqué : Prendre juste la feuille et noter 3 références max
   - 🎯 Case : Gros Morceau
   - 📍 Projet : inventaire-pneus
-  - 🔨 Détail : Préparer liste références
+  - 🔨 Détail : Préparer liste références + contrôle Zone A
 
 ---
 

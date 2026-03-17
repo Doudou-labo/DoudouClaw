@@ -60,6 +60,10 @@ parse_duration_to_minutes() {
         *"1h"*|*"1 h"*) echo "60" ;;
         *"1h30"*|*"1h30"*|*"90 min"*) echo "90" ;;
         *"2h"*|*"2 h"*) echo "120" ;;
+        *"3h"*|*"3 h"*) echo "180" ;;
+        *"4h"*|*"4 h"*) echo "240" ;;
+        *"5h"*|*"5 h"*) echo "300" ;;
+        *"6h"*|*"6 h"*) echo "360" ;;
         *) echo "30" ;;
     esac
 }
@@ -123,6 +127,7 @@ create_big_chunk_blocks() {
     
     local block_duration=30   # Blocs de 30 min (Pomodoro)
     local break_duration=10   # Pauses de 10 min
+    local lunch_break=45      # Pause déjeuner
     local current_start="$start"
     local remaining=$total_minutes
     local block_num=1
@@ -140,14 +145,20 @@ create_big_chunk_blocks() {
             ((created++)) || true
         fi
         
-        # Pause entre les blocs
-        current_start=$(date -d "$current_start + $this_block minutes + $break_duration minutes" '+%Y-%m-%dT%H:%M:%S')
+        # Pause déjeuner après le bloc 6 (12h-12h45)
+        if [[ $block_num -eq 6 ]]; then
+            echo "   🍽️  Pause déjeuner (45 min)"
+            current_start=$(date -d "$current_start + $this_block minutes + $lunch_break minutes" '+%Y-%m-%dT%H:%M:%S')
+        else
+            current_start=$(date -d "$current_start + $this_block minutes + $break_duration minutes" '+%Y-%m-%dT%H:%M:%S')
+        fi
+        
         remaining=$((remaining - this_block))
         block_num=$((block_num + 1))
         
-        # Max 3 blocs par jour (1h30 de travail effectif)
-        if [[ $block_num -gt 3 ]]; then
-            echo "   ⏸️  3 blocs atteints → reste pour le jour suivant"
+        # Max 9 blocs par jour (4h30 de travail effectif: matin 3 + après-midi 3 + soir 3)
+        if [[ $block_num -gt 9 ]]; then
+            echo "   ⏸️  9 blocs atteints → reste pour le jour suivant"
             break
         fi
     done
