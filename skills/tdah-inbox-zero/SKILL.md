@@ -121,10 +121,14 @@ bash skills/tdah-inbox-zero/scripts/sync-to-google-calendar.sh
 
 **Ce que fait le script :**
 - Parse la nouvelle entrée du dashboard
-- Crée un événement dans le calendrier OpenClaw
-- **Gros Morceaux** : Découpe en blocs de 30 min avec pauses de 10 min (max 3 blocs/jour)
+- Crée un événement dans le calendrier OpenClaw (via API Maton)
+- **Gros Morceaux** : Découpe en blocs de 30 min avec pauses de 10 min (max 9 blocs/jour)
+  - Pause déjeuner de 45 min après le 6ème bloc
+  - Planning type : 09h-12h50 (matin) → déjeuner → 13h35-15h25 (après-midi)
 - **Autres cases** : Un seul événement avec la durée prévue
+- **Anti-doublons** : Les items marqués `[S]` dans le dashboard sont ignorés
 - Format du titre : "[Emoji Case] [Nom]" (ex: "🔴 BMW", "🏗️ Inventaire - Bloc 1")
+- **Durées supportées** : 5 min → 6h (ex: "6h", "2h", "45 min")
 
 ### Étape 8 : Journalisation + Suivi
 Ajouter une ligne dans `memory/YYYY-MM-DD.md` avec format :
@@ -144,7 +148,9 @@ Ajouter une ligne dans `memory/YYYY-MM-DD.md` avec format :
 - "Cette semaine" → Rappel mercredi 9h
 - Date ISO (YYYY-MM-DD) → Rappel à 9h ce jour-là
 
-**Intégration future** : Migrer vers n8n + Google Calendar quand les quotas API sont disponibles.
+**Intégration Google Calendar** : ✅ Active (via API Maton Gateway)
+
+**Anti-doublons** : Marqueur `[S]` dans le dashboard → les items déjà synchronisés sont ignorés. Pour resynchroniser, retirer le `[S]`.
 
 ---
 
