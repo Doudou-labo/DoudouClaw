@@ -13,7 +13,7 @@ CURRENT_DATE=$(date +%Y-%m-%d)
 CURRENT_HOUR=$(date +%H)
 CURRENT_TIME=$(date +%H:%M)
 
-echo "🔍 Scan des rappels TDAH - $CURRENT_DATE $CURRENT_TIME"
+echo "🔍 Scan des rappels Inbox Zero - $CURRENT_DATE $CURRENT_TIME"
 
 # Fonction pour parser le dashboard et trouver les tâches à rappeler
 parse_dashboard() {
@@ -116,7 +116,7 @@ send_reminder() {
         *) emoji="⏰" ;;
     esac
     
-    local message="${emoji} RAPPEL TDAH
+    local message="${emoji} RAPPEL INBOX ZERO
 
 🎯 ${action}
 ⏱️ C'est prévu : ${when}
