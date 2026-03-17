@@ -7,6 +7,7 @@ set -e
 DASHBOARD="notes/areas/tdah-matrix-dashboard.md"
 CALENDAR_ID="88b14e5c160f914b9743cf46d6ff857ed6baedc24449bccee0cb56c531ac20a0@group.calendar.google.com"
 GATEWAY_URL="${GATEWAY_URL:-https://gateway.maton.ai}"
+GATEWAY_TOKEN="${GATEWAY_TOKEN:-_vrEGRCgzX7NMzdP_cuodFOndn3eDsqYi_J-DFGHo8Jp7Td71Aoe7g0cnAFsEDyod4qWLFLPtwmv2hoN1du-aFXJ-LBLYuWEhiTbYjyMTA}"
 
 source "$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)/../config/timezone.conf" 2>/dev/null || export TZ=Europe/Paris
 
@@ -198,9 +199,9 @@ sync_dashboard_to_calendar() {
         
         # Créer l'événement
         if create_calendar_event "$action" "$start_datetime" "$duration_minutes" "$description"; then
-            ((synced_count++))
+            ((synced_count++)) || true
         else
-            ((error_count++))
+            ((error_count++)) || true
         fi
     done
     
