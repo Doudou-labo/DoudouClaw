@@ -85,20 +85,41 @@ parse_duration_to_minutes() {
     esac
 }
 
+# Fonction pour obtenir l'emoji selon la case
+get_emoji_for_case() {
+    local case_type="$1"
+    
+    case "$case_type" in
+        *Quick*Win*|*quick*win*) echo "🔴" ;;
+        *Gros*Morceau*|*gros*morceau*) echo "🏗️" ;;
+        *Remplissage*|*remplissage*) echo "🟡" ;;
+        *Planifié*|*planifié*) echo "📅" ;;
+        *Délégable*|*délégable*) echo "🟠" ;;
+        *Reportable*|*reportable*) echo "🚫" ;;
+        *Poubelle*|*poubelle*) echo "🗑️" ;;
+        *Archive*|*archive*) echo "📦" ;;
+        *) echo "📌" ;;
+    esac
+}
+
 # Fonction pour créer un événement Google Calendar
 create_calendar_event() {
     local summary="$1"
     local start_datetime="$2"
     local duration_minutes="$3"
     local description="$4"
+    local case_type="$5"
     
     # Calculer la date de fin
     local end_datetime=$(date -d "$start_datetime + $duration_minutes minutes" '+%Y-%m-%dT%H:%M:%S')
     
+    # Obtenir l'emoji de la case
+    local emoji=$(get_emoji_for_case "$case_type")
+    
     # Construire le JSON de l'événement
     local event_json=$(cat <<EOF
 {
-  "summary": "[Inbox Zero] ${summary}",
+  "summary": "${emoji} ${summary}",
   "description": "${description}",
   "start": {
     "dateTime": "${start_datetime}",
@@ -198,7 +219,7 @@ sync_dashboard_to_calendar() {
         local description="Case: ${case_type}\nQuand: ${when}\nDurée: ${duration}"
         
         # Créer l'événement
-        if create_calendar_event "$action" "$start_datetime" "$duration_minutes" "$description"; then
+        if create_calendar_event "$action" "$start_datetime" "$duration_minutes" "$description" "$case_type"; then
             ((synced_count++)) || true
         else
             ((error_count++)) || true

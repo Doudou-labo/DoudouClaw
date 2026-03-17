@@ -123,7 +123,7 @@ bash skills/tdah-inbox-zero/scripts/sync-to-google-calendar.sh
 - Parse la nouvelle entrée du dashboard
 - Crée un événement dans le calendrier OpenClaw
 - Ajoute un rappel 15 min avant
-- Format du titre : "[Inbox Zero] [Nom de l'action]"
+- Format du titre : "[Emoji Case] [Nom de l'action]" (ex: "🔴 Vérifier BMW...", "🏗️ Inventaire...")
 
 ### Étape 8 : Journalisation + Suivi
 Ajouter une ligne dans `memory/YYYY-MM-DD.md` avec format :
