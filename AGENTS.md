@@ -139,8 +139,8 @@ L'utilisateur **ne choisit pas** dans quelle case de la matrice son truc va. Il 
 5. **Formater la sortie** (template obligatoire avec 🎯📍📅⏱️💡)
 6. **Single Tasking** : UNE SEULE action suggérée, jamais une liste
 7. **Mettre à jour le Tableau de Bord** `notes/areas/tdah-matrix-dashboard.md` automatiquement
-8. **Journalisation** dans `memory/YYYY-MM-DD.md`
-9. **Follow-up 24h** : Check-in automatique le lendemain
+8. **Synchroniser Google Calendar** - Créer l'événement avec rappel 15 min avant
+9. **Journalisation** dans `memory/YYYY-MM-DD.md` + Cron de rappel
 
 ### Règles critiques TDAH (à respecter impérativement)
 - **PAS DE LISTES** → Une action à la fois

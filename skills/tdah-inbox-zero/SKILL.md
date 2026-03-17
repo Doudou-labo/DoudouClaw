@@ -113,17 +113,23 @@ Après avoir classé l'item et formaté la sortie, mettre à jour le fichier `no
 - Si l'item est terminé → Cocher la case `[x]` ou le déplacer vers Archive
 - **Ne jamais** supprimer un item terminé (garder l'historique 30 jours)
 
-**Commande pour mettre à jour :**
+### Étape 7 : Synchroniser Google Calendar
+Exécuter automatiquement le script de sync pour créer l'événement avec rappel :
 ```bash
-# Le skill doit appeler cette logique automatiquement
-# ou utiliser : bash skills/tdah-inbox-zero/scripts/update-dashboard.sh "item" "case"
+bash skills/tdah-inbox-zero/scripts/sync-to-google-calendar.sh
 ```
+
+**Ce que fait le script :**
+- Parse la nouvelle entrée du dashboard
+- Crée un événement dans le calendrier OpenClaw
+- Ajoute un rappel 15 min avant
+- Format du titre : "[Inbox Zero] [Nom de l'action]"
+
+### Étape 8 : Journalisation + Suivi
 Ajouter une ligne dans `memory/YYYY-MM-DD.md` avec format :
 ```
 - [HH:MM] Inbox Zero: [Résumé action] → [Case Matrice] → [Destination PARA]
 ```
-
-**Follow-up 24h** : Programmer un check-in automatique pour le lendemain.
 
 **Système de Rappel (Cron OpenClaw)** :
 - Script : `skills/tdah-inbox-zero/scripts/tdah-reminder-check.sh`
