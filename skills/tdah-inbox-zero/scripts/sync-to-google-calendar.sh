@@ -85,7 +85,21 @@ parse_duration_to_minutes() {
     esac
 }
 
-# Fonction pour obtenir l'emoji selon la case
+# Fonction pour vérifier si un événement existe déjà
+event_exists() {
+    local summary="$1"
+    local search_date="$2"
+    
+    # Rechercher les événements du jour avec le même titre
+    local existing=$(curl -s "${GATEWAY_URL}/google-calendar/calendar/v3/calendars/${CALENDAR_ID}/events?q=${summary}&timeMin=${search_date}T00:00:00Z&timeMax=${search_date}T23:59:59Z" \
+        -H "Authorization: Bearer ${GATEWAY_TOKEN}" 2>/dev/null | grep -o '"summary": *"[^"]*"' | grep -c "$summary" || echo "0")
+    
+    if [[ "$existing" -gt 0 ]]; then
+        return 0  # Existe
+    else
+        return 1  # N'existe pas
+    fi
+}
 get_emoji_for_case() {
     local case_type="$1"
     
@@ -206,6 +220,12 @@ sync_dashboard_to_calendar() {
         in_item && /^## / { in_item = 0; }
     ' "$file" | while IFS='|' read -r action when duration case_type; do
         [[ -z "$action" ]] && continue
+        
+        # Vérifier si déjà syncé (marqueur [S])
+        if echo "$action" | grep -q '\[S\]'; then
+            echo "   ⏭️  Déjà syncé: $action"
+            continue
+        fi
         
         # Nettoyer (enlever espaces superflus)
         action=$(echo "$action" | sed 's/^[[:space:]]*//;s/[[:space:]]*$//')

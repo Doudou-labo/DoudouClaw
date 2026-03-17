@@ -24,7 +24,7 @@
 
 > Urgent + Important + Rapide (≤15 min)
 
-- [ ] **Vérifier disponibilité BMW mercredi** (Ajouté 2026-03-16)
+- [ ] **Vérifier disponibilité BMW mercredi** [S] (Ajouté 2026-03-16)
   - 📅 Quand : Aujourd'hui avant 10h
   - ⏱️ Durée : 5 min
   - 💡 Si bloqué : Appeler responsable véhicules
@@ -36,7 +36,7 @@
 
 > Important + Long (+30 min) → Découper en 3 micro-étapes max
 
-- [ ] **Terminer inventaire pneus - Étape 1** (Ajouté 2026-03-16)
+- [ ] **Terminer inventaire pneus - Étape 1** [S] (Ajouté 2026-03-16)
   - 📅 Quand : Demain après-midi 14h
   - ⏱️ Durée : 15 min
   - 💡 Si bloqué : Prendre juste la feuille et noter 3 références max
