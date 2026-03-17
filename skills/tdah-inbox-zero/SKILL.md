@@ -122,8 +122,9 @@ bash skills/tdah-inbox-zero/scripts/sync-to-google-calendar.sh
 **Ce que fait le script :**
 - Parse la nouvelle entrée du dashboard
 - Crée un événement dans le calendrier OpenClaw
-- Ajoute un rappel 15 min avant
-- Format du titre : "[Emoji Case] [Nom de l'action]" (ex: "🔴 Vérifier BMW...", "🏗️ Inventaire...")
+- **Gros Morceaux** : Découpe en blocs de 30 min avec pauses de 10 min (max 3 blocs/jour)
+- **Autres cases** : Un seul événement avec la durée prévue
+- Format du titre : "[Emoji Case] [Nom]" (ex: "🔴 BMW", "🏗️ Inventaire - Bloc 1")
 
 ### Étape 8 : Journalisation + Suivi
 Ajouter une ligne dans `memory/YYYY-MM-DD.md` avec format :

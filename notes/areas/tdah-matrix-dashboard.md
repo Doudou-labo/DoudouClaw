@@ -38,7 +38,7 @@
 
 - [ ] **Terminer inventaire pneus - Étape 1** [S] (Ajouté 2026-03-16)
   - 📅 Quand : Demain après-midi 14h
-  - ⏱️ Durée : 15 min
+  - ⏱️ Durée : 90 min
   - 💡 Si bloqué : Prendre juste la feuille et noter 3 références max
   - 🎯 Case : Gros Morceau
   - 📍 Projet : inventaire-pneus
