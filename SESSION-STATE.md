@@ -1,26 +1,25 @@
 # SESSION-STATE.md — Active Working Memory
 
 ## Current Task
-Consolidation mémoire quotidienne exécutée. Prochains chantiers prioritaires :
+Consolidation mémoire quotidienne 2026-03-17 exécutée. Inbox Zero refondu (TDAH→Inbox Zero + Google Calendar sync + Pomodoro). Prochains chantiers :
 1. **Configuration n8n** — créer Gmail dédié + activer IMAP + configurer credential
-2. **Inventaire physique pneus** — rédiger puis implémenter le backlog MVP technique
+2. **Inventaire physique pneus** — Étape 1 (dashboard + blocs Pomodoro planifiés)
 3. **Préparation visite Marc (DR)** — 31/03/2026, priorité RCS rouge
 4. **Pneu-tracker** — reprendre sprint FTS5/migrations/ARIA quand bande-passante dispo
 
-## Dernier travail réalisé (2026-03-16)
-- **n8n self-hosted** — installation complète sur `workflow.doudougen.xyz` (Docker + Caddy)
-- **Workflow extraction RDV** — création et test du workflow `qAH9Z6MYbMvJPydk`
-  - Extraction emails Euromaster (pneus/entretien) via IMAP
-  - Parsing regex avec fix UTF-8 (Latin-1 → caractères accentués)
-  - Webhook Discord fonctionnel (test ARVAL FLEET SERVICES réussi)
-  - Export JSON : `/root/n8n/workflow-rdv-euromaster.json`
-- Architecture validée : Code node (offline/gratuit) vs LLM (trop complexe/costly)
+## Dernier travail réalisé (2026-03-17)
+- **Inbox Zero — Refonte majeure** (session 09:17-10:12 UTC / Discord #tdah)
+  - Renommage "TDAH" → "Inbox Zero" (scripts, logs, AGENTS.md)
+  - Intégration Google Calendar : `skills/tdah-inbox-zero/scripts/sync-to-google-calendar.sh` (API Maton, calendrier OpenClaw, rappel 15 min)
+  - Anti-doublons : marqueur `[S]` dans dashboard
+  - Blocs Pomodoro pour Gros Morceaux : 30min work / 10min break, max 3/jour
+  - Emojis priorité dans événements calendrier (🔴🏗️🟡📅🟠🚫)
+  - 7 commits poussés
 
 ## Immediate Context
-- N1 synchronisé : `memory/2026-03-16.md`, `SESSION-STATE.md`, `RECENT_CONTEXT.md`
-- Aucun échange utilisateur direct aujourd'hui
-- n8n opérationnel, en attente de configuration Gmail dédié
-- Projets stables
+- N1 synchronisé
+- Dashboard Inbox Zero : 🔴 BMW [S] + 🏗️ Inventaire pneus [S]
+- n8n opérationnel, en attente config Gmail dédié
 
 ## Key Decisions (actives)
 1. Jurons français sans modération = identité DoudouClaw.
@@ -41,4 +40,4 @@ Consolidation mémoire quotidienne exécutée. Prochains chantiers prioritaires 
 - `notes/projects/n8n-extraction-pneus-mail.md`
 
 ## Last Updated
-2026-03-16 20:50 UTC — consolidation mémoire/PARA exécutée. N1 synchronisé.
+2026-03-17 20:50 UTC — consolidation mémoire/PARA exécutée. Inbox Zero refondu (TDAH→Inbox Zero + Calendar sync + Pomodoro). N1 synchronisé.

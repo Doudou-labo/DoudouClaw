@@ -4,10 +4,22 @@
 
 ---
 
-## Latest Session — 2026-03-16
+## Latest Session — 2026-03-17
 
 ### Topic
-Setup n8n self-hosted + création workflow extraction emails RDV Euromaster.
+Refonte système Inbox Zero (TDAH → Inbox Zero) + intégration Google Calendar.
+
+### Key Points
+- **Renommage TDAH → Inbox Zero** : scripts, logs (`/tmp/inbox-zero-reminders.log`), AGENTS.md mis à jour
+- **Google Calendar sync** : nouveau script `skills/tdah-inbox-zero/scripts/sync-to-google-calendar.sh`
+  - API Maton Gateway → calendrier OpenClaw
+  - Rappels popup 15 min avant chaque événement
+  - Anti-doublons avec marqueur `[S]` dans dashboard
+- **Blocs Pomodoro** : Gros Morceaux découpés en 30min/10min, max 3 blocs/jour
+- **Emojis priorité** dans titres événements calendrier (🔴🏗️🟡📅🟠🚫)
+- **Dashboard** : 🔴 BMW [S] + 🏗️ Inventaire pneus [S] (3 blocs Pomodoro planifiés demain 14h)
+- **Processus enrichi** : 9 étapes (ajout sync Google Calendar en étape 8)
+- **7 commits poussés** ce matin
 
 ### Key Points
 - **n8n self-hosted** installé et opérationnel sur `workflow.doudougen.xyz` (port 5678, Docker + Caddy)
