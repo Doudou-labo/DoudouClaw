@@ -125,6 +125,20 @@ Ajouter une ligne dans `memory/YYYY-MM-DD.md` avec format :
 
 **Follow-up 24h** : Programmer un check-in automatique pour le lendemain.
 
+**Système de Rappel (Cron OpenClaw)** :
+- Script : `skills/tdah-inbox-zero/scripts/tdah-reminder-check.sh`
+- Fréquence : Toutes les heures (8h-20h)
+- Logique : Parse le dashboard → Détecte les échéances → Envoie rappel sur Discord
+
+**Types d'échéance supportés :**
+- "Demain matin" → Rappel à 8h le lendemain
+- "Avant XXh" → Rappel 1h avant
+- "Ce soir" → Rappel à 18h
+- "Cette semaine" → Rappel mercredi 9h
+- Date ISO (YYYY-MM-DD) → Rappel à 9h ce jour-là
+
+**Intégration future** : Migrer vers n8n + Google Calendar quand les quotas API sont disponibles.
+
 ---
 
 ## 🧠 Règles Spécifiques TDAH (À respecter impérativement)
