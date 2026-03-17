@@ -1,9 +1,9 @@
 {
-  "timestamp": "2026-03-16T18:30:16+01:00",
+  "timestamp": "2026-03-17T09:00:16+01:00",
   "dry_run": false,
   "para_structure": {
     "projects": 10,
-    "areas": 16,
+    "areas": 18,
     "resources": 16,
     "archive": 2
   },
@@ -17,5 +17,5 @@
   "anti_duplication": {
     "recent_fsxmemory_sync": false
   },
-  "projects_to_review": [{"name": "crm-v2-telegram.md", "reason": "Dernière modif: 33j"},{"name": "stack-skills-openclaw.md", "reason": "Dernière modif: 30j"}]
+  "projects_to_review": [{"name": "crm-v2-telegram.md", "reason": "Dernière modif: 34j"},{"name": "stack-skills-openclaw.md", "reason": "Dernière modif: 31j"}]
 }
