@@ -443,6 +443,22 @@ Don't wait for permission to improve. If you learned something, write it down no
 2. Ai-je une preuve à montrer (PID, fichier, output) ?
 3. Si non → reformuler : "Je lance ça maintenant" puis montrer la preuve
 
+### Transparence d’action non demandée mais utile (2026-03-18)
+**Problème :** Quand j'effectue une action non explicitement demandée mais utile pour sécuriser un fix (ex: build, test, validation), Alexandre peut avoir l'impression que je fais des trucs "dans mon coin" sans visibilité.
+
+**Règle :** Si je lance une action annexe non demandée mais justifiée, je dois l'annoncer en **une ligne claire avant ou pendant l'action** avec :
+1. **ce que je touche**
+2. **pourquoi je le fais**
+3. **ce que ça valide**
+
+**Template :**
+> "J'ai corrigé X, et je lance Y pour vérifier que ça ne casse pas Z."
+
+**Exemple :**
+> "J'ai corrigé le tri des journaux récents dans `second-brain-nextjs/lib/indexer.js`, et je lance un build Next.js pour vérifier que la modif compile proprement."
+
+**But :** garder l'initiative utile **sans effet boîte noire**.
+
 ### [Topic]
 [What you learned and how to do it better]
 
