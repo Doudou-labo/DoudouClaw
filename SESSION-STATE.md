@@ -1,25 +1,22 @@
 # SESSION-STATE.md — Active Working Memory
 
 ## Current Task
-Consolidation mémoire quotidienne 2026-03-17 exécutée. Inbox Zero refondu (TDAH→Inbox Zero + Google Calendar sync + Pomodoro). Prochains chantiers :
+Consolidation mémoire quotidienne 2026-03-18 exécutée. Jour calme côté tâches manuelles (veilles automatisées + cron evolution dashboard). Prochains chantiers inchangés :
 1. **Configuration n8n** — créer Gmail dédié + activer IMAP + configurer credential
 2. **Inventaire physique pneus** — Étape 1 (dashboard + blocs Pomodoro planifiés)
 3. **Préparation visite Marc (DR)** — 31/03/2026, priorité RCS rouge
 4. **Pneu-tracker** — reprendre sprint FTS5/migrations/ARIA quand bande-passante dispo
 
-## Dernier travail réalisé (2026-03-17)
-- **Inbox Zero — Refonte majeure** (session 09:17-10:12 UTC / Discord #tdah)
-  - Renommage "TDAH" → "Inbox Zero" (scripts, logs, AGENTS.md)
-  - Intégration Google Calendar : `skills/tdah-inbox-zero/scripts/sync-to-google-calendar.sh` (API Maton, calendrier OpenClaw, rappel 15 min)
-  - Anti-doublons : marqueur `[S]` dans dashboard
-  - Blocs Pomodoro pour Gros Morceaux : 30min work / 10min break, max 3/jour
-  - Emojis priorité dans événements calendrier (🔴🏗️🟡📅🟠🚫)
-  - 7 commits poussés
+## Dernier travail réalisé (2026-03-18)
+- **Journée calme** — aucune interaction user majeure
+  - Veille IA automatisée : 12h (Fraîcheur 72h) + 19h (regulation + scraping)
+  - Evolution Dashboard : mise à jour autonome 18h
+- **Dernier travail user** : consolidation 2026-03-17 (Inbox Zero refondu)
 
 ## Immediate Context
 - N1 synchronisé
-- Dashboard Inbox Zero : 🔴 BMW [S] + 🏗️ Inventaire pneus [S]
-- n8n opérationnel, en attente config Gmail dédié
+- n8n Gmail dédié : toujours en attente (prochaine action prioritaire)
+- Visite Marc DR : 13 jours (31/03)
 
 ## Key Decisions (actives)
 1. Jurons français sans modération = identité DoudouClaw.
@@ -33,11 +30,11 @@ Consolidation mémoire quotidienne 2026-03-17 exécutée. Inbox Zero refondu (TD
 9. **n8n** : architecture Code node privilégiée vs LLM pour workflows internes.
 
 ## Key Files
-- `memory/2026-03-16.md`
+- `memory/2026-03-18.md`
 - `MEMORY.md`
 - `notes/areas/open-loops.md`
 - `RECENT_CONTEXT.md`
 - `notes/projects/n8n-extraction-pneus-mail.md`
 
 ## Last Updated
-2026-03-17 20:50 UTC — consolidation mémoire/PARA exécutée. Inbox Zero refondu (TDAH→Inbox Zero + Calendar sync + Pomodoro). N1 synchronisé.
+2026-03-18 20:50 UTC — consolidation mémoire quotidienne exécutée. Jour calme (veilles automatisées + cron evolution). N1 synchronisé.
