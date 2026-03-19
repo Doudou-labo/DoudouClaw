@@ -72,32 +72,28 @@ Consolidation mémoire quotidienne + activités techniques du dimanche (benchmar
 
 ---
 
-## Latest Session — 2026-03-18
+## Latest Session — 2026-03-19
 
 ### Topic
-Journée calme — aucune interaction user majeure. Automations uniquement.
+Journée calme — activité système uniquement. ClawSuite mis à jour.
 
 ### Key Points
-- **Veille IA automatisée** : 12h (Fraîcheur 72h + scraping) + 19h (regulation + scraping)
-- **Evolution Dashboard** : mise à jour autonome 18h
+- **4 veilles IA exécutées** : 8h (business), 12h, 19h x2 (business + scraping)
+- **Auto PARA checkpoint** : 11:00 UTC — Gmail dédié toujours en attente
+- **ClawSuite mis à jour** : clawsuite + skills/clawmetry-dashboard modifiés localement
 - **Consolidation mémoire** : exécutée 20:50 UTC
 
 ### Prochains pas
 - [ ] Créer Gmail dédié (doudou.n8n@gmail.com) + activer IMAP + générer App Password
 - [ ] Configurer credential IMAP dans n8n
 - [ ] Rédiger backlog MVP inventaire physique pneus
-- [ ] Préparer visite Marc DR (31/03/2026) — priorité RCS rouge (13 jours)
+- [ ] Préparer visite Marc DR (31/03/2026) — priorité RCS rouge (**12 jours**)
 
 ### Status
 - [x] n8n installé et accessible
 - [x] Workflow extraction emails fonctionnel
 - [ ] Configuration Gmail dédié à finaliser
 - [ ] Inventaire pneus : implémentation non démarrée
-
-### Status
 - [x] Consolidation mémoire/PARA du jour exécutée
-- [x] N1 synchronisé
-- [x] Veille IA automatisée fonctionnelle
-- [ ] Gmail dédié : toujours en attente
 
-*Last auto-update: 2026-03-18 20:50 UTC*
+*Last auto-update: 2026-03-19 20:50 UTC*
