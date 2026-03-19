@@ -17,6 +17,7 @@ Consolidation mémoire quotidienne 2026-03-18 exécutée. Jour calme côté tâc
 - N1 synchronisé
 - n8n Gmail dédié : toujours en attente (prochaine action prioritaire)
 - Inventaire physique pneus : Alexandre a poussé jusqu’à 22h à l’agence le 19/03, préparation quasi finie, reste ~1–2h de boulot
+- État physique du soir : fatigue marquée + douleurs dos/épaules après grosse journée ; éviter de charger davantage ce soir
 - Visite Marc DR : 13 jours (31/03)
 
 ## Key Decisions (actives)
