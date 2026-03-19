@@ -87,6 +87,14 @@
 - Migration orchestration (2026-03-10): passage **100% Agence-IA** — remplacement de tous les agents `spec-*` par les 112 agents Agence-IA — nouvelle architecture dans `notes/areas/agent-orchestration.md` — orchestrateur: `agents-orchestrator` — agents installés dans `~/.openclaw/agency-agents/`
 
 ### Tools & Infrastructure
+### ClawMetry Safari/mobile fix (2026-03-19)
+- Cause: ClawMetry ouvre les EventSource (streams SSE) auto au boot de la page
+- Sur Safari/iPhone + Caddy proxy, ça crée une boucle "Load failed - retrying"
+- Fix: ajout de  dans dashboard.py du submodule
+  - Désactive les streams auto sur Safari/iPhone pour stabilité
+  - Dashboard consultable normalement, juste moins "live" sur mobile
+- Commité dans  (submodule git)
+
 - **Inbox Zero (ex-TDAH)** (2026-03-17) : Refonte système — renommage "TDAH" → "Inbox Zero" (scripts, logs, AGENTS.md). Intégration Google Calendar via `skills/tdah-inbox-zero/scripts/sync-to-google-calendar.sh` (API Maton Gateway, calendrier OpenClaw, rappels 15 min). Anti-doublons avec marqueur `[S]`. Blocs Pomodoro pour Gros Morceaux (30min/10min, max 3/jour). Emojis priorité dans événements (🔴🏗️🟡📅🟠🚫).
 - **n8n** (2026-03-16) : Workflow automation self-hosted — `https://workflow.doudougen.xyz` (port 5678, Docker Compose + Caddy). Data persistée dans `/root/n8n/data`. Workflow principal : extraction emails RDV Euromaster (IMAP → parsing regex UTF-8 → Discord webhook). Architecture privilégiée : Code node (offline/gratuit) vs LLM.
 - **pneu-tracker** (2026-03-11) : App suivi sorties pneus — `https://pneus.doudougen.xyz` (port 3002, auth Basic DoudouClaw, service systemd `pneu-tracker.service`). Stack actuelle : Next.js 16 + SQLite (`better-sqlite3`) + recharts. Features : formulaire enrichi, historique filtrable avec pagination visible, modification + suppression logique, import CSV, export CSV, audit trail, dashboard, vue mobile, autocomplétion prédictive sur référentiel pneus. Référentiel métier intégré : **12 568 références** dans `tyre_catalog` (SAP, description, référence fabricant, marque, libellé de recherche, diamètre, saison). Autocomplète disponible en création, édition et recherche historique. Service prêt pour auth app-level via `EnvironmentFile`. App : `/root/projects/pneu-tracker/`.
