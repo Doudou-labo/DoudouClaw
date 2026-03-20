@@ -87,6 +87,13 @@
 - Migration orchestration (2026-03-10): passage **100% Agence-IA** — remplacement de tous les agents `spec-*` par les 112 agents Agence-IA — nouvelle architecture dans `notes/areas/agent-orchestration.md` — orchestrateur: `agents-orchestrator` — agents installés dans `~/.openclaw/agency-agents/`
 
 ### Tools & Infrastructure
+### n8n (2026-03-20)
+- **Skill v2.0.0** (ClawHub) installé + `n8n-workflow-automation` v1.0.0
+- Nouvelle clé API n8n générée le 20/03/2026 et stockée dans `~/.config/openclaw/settings.json`
+- Instance Docker : `n8n-n8n-1`, port 5678, accessible `localhost:5678`
+- **9 workflows détectés** dans l'instance au 20/03/2026
+- Workflow extraction emails RDV opérationnel (IMAP → regex + Discord webhook)
+
 ### ClawMetry Safari/mobile fix (2026-03-19)
 - Cause: ClawMetry ouvre les EventSource (streams SSE) auto au boot de la page
 - Sur Safari/iPhone + Caddy proxy, ça crée une boucle "Load failed - retrying"

@@ -4,6 +4,34 @@
 
 ---
 
+## Latest Session — 2026-03-20
+
+### Topic
+n8n setup avancé + ClawHub updates massives.
+
+### Key Points
+- **n8n** : skill v2.0.0 + n8n-workflow-automation v1.0.0 installés depuis ClawHub
+- **Nouvelle clé API n8n** générée et stockée dans `~/.config/openclaw/settings.json`
+- **9 workflows détectés** dans l'instance n8n (vs découverte initiale)
+- **Mises à jour ClawHub** : api-gateway 1.0.21→1.0.69 (massive), clawpod 0.1.2→0.1.7, notion-api-skill 1.0.5→1.0.6, google-tasks-api 1.0.2→1.0.3
+- **Inventaire skills stabilisé** : 14 fichiers modifiés tracked (perplexity, proactive-agent, self-improving-agent)
+- **git push** OK après les mises à jour
+
+### Prochains pas
+- [ ] Créer Gmail dédié (doudou.n8n@gmail.com) + activer IMAP + générer App Password
+- [ ] Configurer credential IMAP dans n8n
+- [ ] Rédiger backlog MVP inventaire physique pneus
+- [ ] Préparer visite Marc DR (31/03/2026) — priorité RCS (**11 jours restants**)
+
+### Status
+- [x] n8n skills installés et instance Docker active
+- [x] Nouvelle clé API n8n générée et configurée
+- [x] ClawHub updates appliquées
+- [ ] Gmail dédié à finaliser (IMAP + App Password)
+- [x] Consolidation mémoire/PARA exécutée
+
+---
+
 ## Latest Session — 2026-03-17
 
 ### Topic
@@ -96,4 +124,4 @@ Journée calme — activité système uniquement. ClawSuite mis à jour.
 - [ ] Inventaire pneus : implémentation non démarrée
 - [x] Consolidation mémoire/PARA du jour exécutée
 
-*Last auto-update: 2026-03-19 20:50 UTC*
+*Last auto-update: 2026-03-20 20:50 UTC*

@@ -1,11 +1,18 @@
 # SESSION-STATE.md — Active Working Memory
 
 ## Current Task
-Consolidation mémoire quotidienne 2026-03-18 exécutée. Jour calme côté tâches manuelles (veilles automatisées + cron evolution dashboard). Prochains chantiers inchangés :
-1. **Configuration n8n** — créer Gmail dédié + activer IMAP + configurer credential
-2. **Inventaire physique pneus** — Étape 1 (dashboard + blocs Pomodoro planifiés)
-3. **Préparation visite Marc (DR)** — 31/03/2026, priorité RCS rouge
-4. **Pneu-tracker** — reprendre sprint FTS5/migrations/ARIA quand bande-passante dispo
+Consolidation mémoire quotidienne 2026-03-20 exécutée. Journée productive autour de n8n + mises à jour ClawHub.
+
+## Today's Work Summary (2026-03-20)
+- **n8n work** : skills n8n v2.0.0 + n8n-workflow-automation v1.0.0 installés depuis ClawHub. Nouvelle clé API n8n générée. 9 workflows détectés.
+- **ClawHub updates** : api-gateway (1.0.21→1.0.69), clawpod (0.1.2→1.0.7), notion-api-skill (1.0.5→1.0.6), google-tasks-api (1.0.2→1.0.3)
+- **Auto PARA checkpoint** : 11:01 UTC — suggère création Gmail dédié
+
+## Prochains chantiers
+1. **Configuration n8n** — créer Gmail dédié (doudou.n8n@gmail.com) + activer IMAP + générer App Password
+2. **Inventaire physique pneus** — Étape 1 (dashboard + blocs Pomodoro)
+3. **Préparation visite Marc (DR)** — 31/03/2026 (11 jours restants)
+4. **Pneu-tracker** — reprendre sprint FTS5/migrations/ARIA
 
 ## Dernier travail réalisé (2026-03-18)
 - **Journée calme** — aucune interaction user majeure
