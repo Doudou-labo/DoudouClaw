@@ -50,7 +50,11 @@
 
 > Important + Rapide (≤15 min) → Faire 3 en 1 quand tu as 15 min
 
-*Aucun item actuellement.*
+- [ ] **Appeler fournisseur Michelin** (Ajouté 2026-03-18)
+  - 📅 Quand : Demain matin (2026-03-19)
+  - ⏱️ Durée : 10-15 min
+  - 💡 Si bloqué : Ligner occupée → message vocal + mail de relance
+  - 🎯 Case : Remplissage
 
 ---
 
