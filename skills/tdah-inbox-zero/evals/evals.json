@@ -1,0 +1,126 @@
+{
+  "skill_name": "tdah-inbox-zero",
+  "description": "Test evaluations for TDAH Inbox Zero skill - Pattern detection and matrix classification",
+  "version": "2.0",
+  "evals": [
+    {
+      "id": 1,
+      "name": "rappel-simple",
+      "prompt": "Rappelle-moi d'appeler le fournisseur Michelin demain",
+      "expected_output": "Pattern: Rappel simple, Matrice: 🟡 Important/Non-urgent (Remplissage ou Planifié)",
+      "assertions": [
+        "detecte_pattern_rappel",
+        "classe_dans_para",
+        "pas_de_liste",
+        "timing_precis"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "blocage-procrastination",
+      "prompt": "Je bloque sur la facturation, je sais pas par où commencer",
+      "expected_output": "Pattern: Blocage, Matrice: Décomposition en micro-étapes (max 3)",
+      "assertions": [
+        "detecte_pattern_blocage",
+        "decompose_en_micro_etapes",
+        "max_3_etapes",
+        "premiere_action_claire"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "fausse-urgence",
+      "prompt": "Il faut absolument que je fasse ça aujourd'hui !!!",
+      "expected_output": "Challenge: 'Si tu ne fais pas ça aujourd'hui, qu'est-ce qui se passe vraiment ?'",
+      "assertions": [
+        "detecte_fausse_urgence",
+        "pose_question_challenge",
+        "filtre_urgence_reelle"
+      ]
+    },
+    {
+      "id": 4,
+      "name": "brain-dump",
+      "prompt": "J'ai plein de trucs en tête : appeler X, facture Y, réunion Z, problème client, plus penser à acheter du savon...",
+      "expected_output": "Capture tout mais NE PAS analyser maintenant. Reporte au lendemain.",
+      "assertions": [
+        "detecte_brain_dump",
+        "valide_capture",
+        "pas_analyse_immediate",
+        "single_tasking"
+      ]
+    },
+    {
+      "id": 5,
+      "name": "idee-nuit",
+      "prompt": "[Message envoyé à 02:30] J'ai réalisé qu'il faut changer toute la stratégie du site, ça va tout changer !",
+      "expected_output": "Noter mais NE PAS traiter. Réponse: 'On en parle demain matin.'",
+      "assertions": [
+        "detecte_heure_nocturne",
+        "capture_sans_resoudre",
+        "reporte_lendemain",
+        "protection_sommeil"
+      ]
+    },
+    {
+      "id": 6,
+      "name": "quick-win-urgent",
+      "prompt": "URGENT : le client Dupont m'a envoyé un mail menaçant de résilier si je ne réponds pas dans l'heure",
+      "expected_output": "Pattern: Urgent+Important, Matrice: 🔴 Quick Win → Action immédiate",
+      "assertions": [
+        "detecte_urgence_reelle",
+        "matrice_quick_win",
+        "action_immediate",
+        "priorite_max"
+      ]
+    },
+    {
+      "id": 7,
+      "name": "gros-morceau",
+      "prompt": "Faut que je fasse l'inventaire complet du stock pneus, ça prend 4 heures",
+      "expected_output": "Pattern: Important + Long, Matrice: 🏗️ Gros Morceau → Découpe en blocs Pomodoro",
+      "assertions": [
+        "detecte_tache_longue",
+        "matrice_gros_morceau",
+        "decoupe_blocs_30min",
+        "planning_avec_pauses"
+      ]
+    },
+    {
+      "id": 8,
+      "name": "protection-emotionnelle",
+      "prompt": "Je suis trop stressé par rapport à Audrey, j'arrive pas à me concentrer sur le boulot",
+      "expected_output": "Valider émotion d'abord, ne pas forcer action productive immédiatement",
+      "assertions": [
+        "detecte_mention_emotionnelle",
+        "valide_emotion",
+        "pas_forcage_productif",
+        "alternative_douce_proposee"
+      ]
+    },
+    {
+      "id": 9,
+      "name": "interruption-focus",
+      "prompt": "[En pleine conversation sur un sujet technique depuis 45min] Ah au fait, j'ai eu une idée pour le marketing...",
+      "expected_output": "Noter l'idée sans déranger le focus actuel. On y revient plus tard.",
+      "assertions": [
+        "detecte_interruption",
+        "capture_silencieuse",
+        "protection_focus",
+        "reporte_post_focus"
+      ]
+    },
+    {
+      "id": 10,
+      "name": "capture-brute",
+      "prompt": "Lait",
+      "expected_output": "Triage automatique → Areas (Courses) ou Project selon contexte",
+      "assertions": [
+        "detecte_message_court",
+        "triage_automatique",
+        "classement_para",
+        "action_simple"
+      ]
+    }
+  ]
+}
