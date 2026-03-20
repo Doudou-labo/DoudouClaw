@@ -1,14 +1,14 @@
 # ClawPod
 
-Fetch and extract web page content through Massive's Unblocker REST API. Handles JavaScript rendering, anti-bot protection, CAPTCHAs, paywalls, and geo-restrictions server-side — returns rendered HTML that can be converted to clean markdown.
+Fetch web page content or search Google through Massive's Unblocker REST APIs. Handles JavaScript rendering, anti-bot protection, CAPTCHAs, paywalls, and geo-restrictions server-side — returns rendered HTML or structured JSON.
 
 ---
 
 ## How It Works
 
-1. **You provide a URL** — the target page to fetch
+1. **You provide a URL or search query** — the target page to fetch or terms to search
 2. **Unblocker handles the rest** — JS rendering, CAPTCHA solving, retries, and anti-bot bypass all happen server-side
-3. **Content returned** — rendered HTML, optionally converted to markdown via `node-html-markdown`
+3. **Content returned** — rendered HTML or structured JSON for search results
 
 ---
 
@@ -27,27 +27,10 @@ export MASSIVE_UNBLOCKER_TOKEN="your-token"
 ### 3. Fetch
 
 ```bash
-curl -s -G --data-urlencode "url=https://example.com" \
+curl --proto =https -s -G --data-urlencode "url=https://example.com" \
   -H "Authorization: Bearer $MASSIVE_UNBLOCKER_TOKEN" \
   "https://unblocker.joinmassive.com/browser"
 ```
-
-### 4. (Optional) HTML to Markdown
-
-If `node-html-markdown` is installed, pipe through it for cleaner output:
-
-```bash
-npm install -g node-html-markdown
-```
-
-```bash
-curl -s -G --data-urlencode "url=https://example.com" \
-  -H "Authorization: Bearer $MASSIVE_UNBLOCKER_TOKEN" \
-  "https://unblocker.joinmassive.com/browser" -o /tmp/_page.html && \
-  (node -e "const{NodeHtmlMarkdown}=require('node-html-markdown');console.log(NodeHtmlMarkdown.translate(require('fs').readFileSync('/tmp/_page.html','utf8')))" 2>/dev/null || cat /tmp/_page.html)
-```
-
-If `node-html-markdown` is unavailable, raw HTML is returned — LLMs can parse it directly.
 
 ---
 
@@ -55,52 +38,82 @@ If `node-html-markdown` is unavailable, raw HTML is returned — LLMs can parse 
 
 ```bash
 # Basic fetch
-curl -s -G --data-urlencode "url=https://example.com" \
+curl --proto =https -s -G --data-urlencode "url=https://example.com" \
   -H "Authorization: Bearer $MASSIVE_UNBLOCKER_TOKEN" \
   "https://unblocker.joinmassive.com/browser"
 
 # Skip JS rendering (faster, raw HTML only)
-curl -s -G --data-urlencode "url=https://example.com" \
+curl --proto =https -s -G --data-urlencode "url=https://example.com" \
   -H "Authorization: Bearer $MASSIVE_UNBLOCKER_TOKEN" \
   "https://unblocker.joinmassive.com/browser?format=raw"
 
 # Bypass cache
-curl -s -G --data-urlencode "url=https://example.com" \
+curl --proto =https -s -G --data-urlencode "url=https://example.com" \
   -H "Authorization: Bearer $MASSIVE_UNBLOCKER_TOKEN" \
   "https://unblocker.joinmassive.com/browser?expiration=0"
 
 # Extra delay for slow-loading dynamic content
-curl -s -G --data-urlencode "url=https://example.com" \
+curl --proto =https -s -G --data-urlencode "url=https://example.com" \
   -H "Authorization: Bearer $MASSIVE_UNBLOCKER_TOKEN" \
   "https://unblocker.joinmassive.com/browser?delay=3"
 
 # Use ISP IPs for less detection
-curl -s -G --data-urlencode "url=https://example.com" \
+curl --proto =https -s -G --data-urlencode "url=https://example.com" \
   -H "Authorization: Bearer $MASSIVE_UNBLOCKER_TOKEN" \
   "https://unblocker.joinmassive.com/browser?ip=isp"
 
 # Mobile device content
-curl -s -G --data-urlencode "url=https://example.com" \
+curl --proto =https -s -G --data-urlencode "url=https://example.com" \
   -H "Authorization: Bearer $MASSIVE_UNBLOCKER_TOKEN" \
   "https://unblocker.joinmassive.com/browser?device=mobile"
 
 # Multiple options combined
-curl -s -G --data-urlencode "url=https://example.com" \
+curl --proto =https -s -G --data-urlencode "url=https://example.com" \
   -H "Authorization: Bearer $MASSIVE_UNBLOCKER_TOKEN" \
   "https://unblocker.joinmassive.com/browser?expiration=0&delay=2&ip=isp"
 
 # Fetch multiple URLs sequentially
 for url in "https://example.com/page1" "https://example.com/page2"; do
   echo "=== $url ==="
-  curl -s -G --data-urlencode "url=$url" \
+  curl --proto =https -s -G --data-urlencode "url=$url" \
     -H "Authorization: Bearer $MASSIVE_UNBLOCKER_TOKEN" \
     "https://unblocker.joinmassive.com/browser"
 done
 ```
 
+### Google Search
+
+```bash
+# Basic search (HTML results)
+curl --proto =https -s -H "Authorization: Bearer $MASSIVE_UNBLOCKER_TOKEN" \
+  "https://unblocker.joinmassive.com/search?terms=foo+bar+baz"
+
+# Search with JSON output (structured results)
+curl --proto =https -s -H "Authorization: Bearer $MASSIVE_UNBLOCKER_TOKEN" \
+  "https://unblocker.joinmassive.com/search?terms=foo+bar+baz&format=json"
+
+# 100 results per page, skip the first 20
+curl --proto =https -s -H "Authorization: Bearer $MASSIVE_UNBLOCKER_TOKEN" \
+  "https://unblocker.joinmassive.com/search?terms=vpn+comparison&format=json&size=100&offset=20"
+
+# Multiple pages of results
+curl --proto =https -s -H "Authorization: Bearer $MASSIVE_UNBLOCKER_TOKEN" \
+  "https://unblocker.joinmassive.com/search?terms=best+restaurants&format=json&serps=3"
+
+# Search in a specific language
+curl --proto =https -s -H "Authorization: Bearer $MASSIVE_UNBLOCKER_TOKEN" \
+  "https://unblocker.joinmassive.com/search?terms=recetas+de+cocina&format=json&language=es"
+
+# Bypass cached results
+curl --proto =https -s -H "Authorization: Bearer $MASSIVE_UNBLOCKER_TOKEN" \
+  "https://unblocker.joinmassive.com/search?terms=latest+news&format=json&expiration=0"
+```
+
 ---
 
 ## API Parameters
+
+### Browser (`/browser`)
 
 | Parameter | Values | Default | Description |
 |-----------|--------|---------|-------------|
@@ -111,12 +124,26 @@ done
 | `device` | device name string | desktop | Device type for content |
 | `ip` | `residential`, `isp` | `residential` | ISP IPs for less detection |
 
+### Search (`/search`)
+
+| Parameter | Required | Values | Default | Description |
+|-----------|----------|--------|---------|-------------|
+| `terms` | yes | search query (`+` for spaces) | — | The search query |
+| `format` | no | `html`, `json` | `html` | Output format (`json` for structured data) |
+| `serps` | no | `1` to `10` | `1` | Number of results pages |
+| `size` | no | `0` to `100` | unset | Results per page |
+| `offset` | no | `0` to `100` | `0` | Number of initial results to skip |
+| `language` | no | name, ISO code, or Google code | unset | Search language |
+| `uule` | no | encoded location string | unset | Geo-target location |
+| `expiration` | no | `0` to N (days) | `1` | Cache age (`0` bypasses cache) |
+| `subaccount` | no | up to 255 chars | unset | Separate billing identifier |
+
 ---
 
 ## FAQ & Troubleshooting
 
 **Q: What are the system requirements?**
-> `curl` and an API token. Optionally Node.js for HTML-to-markdown conversion.
+> `curl` and an API token.
 
 **Q: Why is a request slow?**
 > Requests can take up to 2 minutes. The API handles JS rendering, CAPTCHA solving, and retries server-side.

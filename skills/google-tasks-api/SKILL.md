@@ -8,6 +8,11 @@ compatibility: Requires network access and valid Maton API key
 metadata:
   author: maton
   version: "1.0"
+  clawdbot:
+    emoji: 🧠
+    requires:
+      env:
+        - MATON_API_KEY
 ---
 
 # Google Tasks
@@ -18,7 +23,7 @@ Access the Google Tasks API with managed OAuth authentication. Manage task lists
 
 ```bash
 # List all task lists
-python3 <<'EOF'
+python <<'EOF'
 import urllib.request, os, json
 req = urllib.request.Request('https://gateway.maton.ai/google-tasks/tasks/v1/users/@me/lists')
 req.add_header('Authorization', f'Bearer {os.environ["MATON_API_KEY"]}')
@@ -61,7 +66,7 @@ Manage your Google Tasks OAuth connections at `https://ctrl.maton.ai`.
 ### List Connections
 
 ```bash
-python3 <<'EOF'
+python <<'EOF'
 import urllib.request, os, json
 req = urllib.request.Request('https://ctrl.maton.ai/connections?app=google-tasks&status=ACTIVE')
 req.add_header('Authorization', f'Bearer {os.environ["MATON_API_KEY"]}')
@@ -72,7 +77,7 @@ EOF
 ### Create Connection
 
 ```bash
-python3 <<'EOF'
+python <<'EOF'
 import urllib.request, os, json
 data = json.dumps({'app': 'google-tasks'}).encode()
 req = urllib.request.Request('https://ctrl.maton.ai/connections', data=data, method='POST')
@@ -85,7 +90,7 @@ EOF
 ### Get Connection
 
 ```bash
-python3 <<'EOF'
+python <<'EOF'
 import urllib.request, os, json
 req = urllib.request.Request('https://ctrl.maton.ai/connections/{connection_id}')
 req.add_header('Authorization', f'Bearer {os.environ["MATON_API_KEY"]}')
@@ -113,7 +118,7 @@ Open the returned `url` in a browser to complete OAuth authorization.
 ### Delete Connection
 
 ```bash
-python3 <<'EOF'
+python <<'EOF'
 import urllib.request, os, json
 req = urllib.request.Request('https://ctrl.maton.ai/connections/{connection_id}', method='DELETE')
 req.add_header('Authorization', f'Bearer {os.environ["MATON_API_KEY"]}')
@@ -126,7 +131,7 @@ EOF
 If you have multiple Google Tasks connections, specify which one to use with the `Maton-Connection` header:
 
 ```bash
-python3 <<'EOF'
+python <<'EOF'
 import urllib.request, os, json
 req = urllib.request.Request('https://gateway.maton.ai/google-tasks/tasks/v1/users/@me/lists')
 req.add_header('Authorization', f'Bearer {os.environ["MATON_API_KEY"]}')
@@ -544,7 +549,7 @@ echo $MATON_API_KEY
 2. Verify the API key is valid by listing connections:
 
 ```bash
-python3 <<'EOF'
+python <<'EOF'
 import urllib.request, os, json
 req = urllib.request.Request('https://ctrl.maton.ai/connections')
 req.add_header('Authorization', f'Bearer {os.environ["MATON_API_KEY"]}')

@@ -8,6 +8,7 @@ metadata:
   version: "1.0"
   clawdbot:
     emoji: 🧠
+    homepage: "https://maton.ai"
     requires:
       env:
         - MATON_API_KEY
@@ -21,7 +22,7 @@ Access the Notion API with managed OAuth authentication. Query databases, create
 
 ```bash
 # Search for pages
-python3 <<'EOF'
+python <<'EOF'
 import urllib.request, os, json
 data = json.dumps({'query': 'meeting notes'}).encode()
 req = urllib.request.Request('https://gateway.maton.ai/notion/v1/search', data=data, method='POST')
@@ -75,7 +76,7 @@ Manage your Notion OAuth connections at `https://ctrl.maton.ai`.
 ### List Connections
 
 ```bash
-python3 <<'EOF'
+python <<'EOF'
 import urllib.request, os, json
 req = urllib.request.Request('https://ctrl.maton.ai/connections?app=notion&status=ACTIVE')
 req.add_header('Authorization', f'Bearer {os.environ["MATON_API_KEY"]}')
@@ -86,7 +87,7 @@ EOF
 ### Create Connection
 
 ```bash
-python3 <<'EOF'
+python <<'EOF'
 import urllib.request, os, json
 data = json.dumps({'app': 'notion'}).encode()
 req = urllib.request.Request('https://ctrl.maton.ai/connections', data=data, method='POST')
@@ -99,7 +100,7 @@ EOF
 ### Get Connection
 
 ```bash
-python3 <<'EOF'
+python <<'EOF'
 import urllib.request, os, json
 req = urllib.request.Request('https://ctrl.maton.ai/connections/{connection_id}')
 req.add_header('Authorization', f'Bearer {os.environ["MATON_API_KEY"]}')
@@ -117,6 +118,7 @@ EOF
     "last_updated_time": "2026-01-31T20:03:32.593153Z",
     "url": "https://connect.maton.ai/?session_token=...",
     "app": "notion",
+    "method": "OAUTH2",
     "metadata": {}
   }
 }
@@ -127,7 +129,7 @@ Open the returned `url` in a browser to complete OAuth authorization.
 ### Delete Connection
 
 ```bash
-python3 <<'EOF'
+python <<'EOF'
 import urllib.request, os, json
 req = urllib.request.Request('https://ctrl.maton.ai/connections/{connection_id}', method='DELETE')
 req.add_header('Authorization', f'Bearer {os.environ["MATON_API_KEY"]}')
@@ -140,7 +142,7 @@ EOF
 If you have multiple Notion connections, specify which one to use with the `Maton-Connection` header:
 
 ```bash
-python3 <<'EOF'
+python <<'EOF'
 import urllib.request, os, json
 data = json.dumps({'query': 'meeting notes'}).encode()
 req = urllib.request.Request('https://gateway.maton.ai/notion/v1/search', data=data, method='POST')
@@ -478,7 +480,7 @@ echo $MATON_API_KEY
 2. Verify the API key is valid by listing connections:
 
 ```bash
-python3 <<'EOF'
+python <<'EOF'
 import urllib.request, os, json
 req = urllib.request.Request('https://ctrl.maton.ai/connections')
 req.add_header('Authorization', f'Bearer {os.environ["MATON_API_KEY"]}')
