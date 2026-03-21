@@ -1,0 +1,36 @@
+version: "3.8"
+
+# ============================================================
+# Actual Budget — Docker Compose
+# Auto-hébergé sur le VPS de DoudouClaw
+# Port interne : 5006
+# Volume persistant : ./actual-data
+# ============================================================
+
+services:
+  actual:
+    image: actualbudget/actual-server:latest
+    container_name: actual-budget
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:5006:5006"
+    environment:
+      # Le mot de passe du budget Actual Budget
+      - ACTUAL_SERVER_PASSWORD=${ACTUAL_PASSWORD}
+      # Désactive le mode Cloud (on est en auto-hébergé)
+      - NODE_ENV=production
+    volumes:
+      # Volume persistant pour les données du budget
+      - ./actual-data:/data
+    healthcheck:
+      test: ["CMD", "wget", "--spider", "-q", "http://localhost:5006"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+    networks:
+      - actual-network
+
+networks:
+  actual-network:
+    driver: bridge
