@@ -112,6 +112,10 @@
     "skill-creator-2": {
       "version": "0.1.0",
       "installedAt": 1774040549907
+    },
+    "discord-markdown": {
+      "version": "1.0.0",
+      "installedAt": 1774105598281
     }
   }
 }
