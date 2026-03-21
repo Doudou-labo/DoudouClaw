@@ -8,7 +8,7 @@
 ## 🎯 Objectif
 
 - **Actual Budget** auto-hébergé sur le VPS (port 5006)
-- Accessible via `https://actual.doudougen.xyz` (Caddy reverse proxy)
+- Accessible via `https://budget.doudougen.xyz` (Caddy reverse proxy)
 - **Skill OpenClaw** `thisisjeron/actual-budget` installé pour interaction en langage naturel
 - Alexandre pose une question → DoudouClaw interroge Actual → réponse en français
 
@@ -87,7 +87,7 @@ curl -f http://localhost:5006
 Ajouter le bloc dans `/etc/caddy/Caddyfile` :
 
 ```
-actual.doudougen.xyz {
+budget.doudougen.xyz {
     reverse_proxy localhost:5006
     basic_auth DoudouClaw MOT_DE_PASSE_CADDY
 }
@@ -100,7 +100,7 @@ sudo caddy reload --config /etc/caddy/Caddyfile
 
 ### Étape 5 — Récupérer le SYNC_ID
 
-1. Ouvrir `https://actual.doudougen.xyz` dans le navigateur
+1. Ouvrir `https://budget.doudougen.xyz` dans le navigateur
 2. Créer un budget (ou en ouvrir un existant)
 3. Le **SYNC_ID** apparaît dans l'URL ou dans les settings du budget
 4. Reporter dans le `.env` : `ACTUAL_SYNC_ID=xxx`
@@ -193,7 +193,7 @@ docker compose down -v      # stop + supprime les volumes
 
 - [ ] `docker compose ps` → container "running"
 - [ ] `curl http://localhost:5006` → 200 OK
-- [ ] `https://actual.doudougen.xyz` → UI Actual Budget accessible (auth Caddy)
+- [ ] `https://budget.doudougen.xyz` → UI Actual Budget accessible (auth Caddy)
 - [ ] Skill `thisisjeron/actual-budget` installé → `clawhub list`
 - [ ] Variables d'env configurées dans OpenClaw
 - [ ] Gateway redémarré après config

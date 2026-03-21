@@ -46,7 +46,7 @@ ACTUAL_SERVER_URL=http://actual:5006
 # Troubleshoot: Si "budget not found", c'est que ce champ est vide ou erroné.
 #
 # Comment le trouver :
-#   1. Ouvre https://actual.doudougen.xyz
+#   1. Ouvre https://budget.doudougen.xyz
 #   2. Va dans Settings (⚙️) du budget
 #   3. Cherche "Sync ID" ou "ID de synchronisation"
 #   4. Copie la valeur (format UUID, ex: a1b2c3d4-...)

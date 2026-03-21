@@ -105,6 +105,6 @@ Pas besoin d'être précis. DoudouClaw comprend :
 
 Si tu préfères ouvrir toi-même :
 
-👉 **https://actual.doudougen.xyz**
+👉 **https://budget.doudougen.xyz**
 
 (Mot de passe demandé par Caddy : tes identifiants DoudouClaw)
