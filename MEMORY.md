@@ -50,6 +50,7 @@
 
 ### Important Dates
 - Date de naissance: 03/08/2000
+- **Visite Marc (DR) : 31/03/2026** — 10 jours avant l'échéance
 
 ### Règles linguistiques
 - **Jamais de caractères chinois ou autres langues** dans les réponses en français — relire les outputs avant envoi pour éliminer les artefacts de génération (tokens débordés des modèles multilingues)
@@ -87,12 +88,13 @@
 - Migration orchestration (2026-03-10): passage **100% Agence-IA** — remplacement de tous les agents `spec-*` par les 112 agents Agence-IA — nouvelle architecture dans `notes/areas/agent-orchestration.md` — orchestrateur: `agents-orchestrator` — agents installés dans `~/.openclaw/agency-agents/`
 
 ### Tools & Infrastructure
-### n8n (2026-03-20)
+### n8n (2026-03-20/21)
 - **Skill v2.0.0** (ClawHub) installé + `n8n-workflow-automation` v1.0.0
-- Nouvelle clé API n8n générée le 20/03/2026 et stockée dans `~/.config/openclaw/settings.json`
+- Nouvelle clé API n8n générée le 20/03/2026 — stockée dans `~/.config/openclaw/settings.json` (champ: `n8n.apiKey`)
 - Instance Docker : `n8n-n8n-1`, port 5678, accessible `localhost:5678`
 - **9 workflows détectés** dans l'instance au 20/03/2026
 - Workflow extraction emails RDV opérationnel (IMAP → regex + Discord webhook)
+- Architecture privilégiée : Code node (offline/gratuit) vs LLM
 
 ### ClawMetry Safari/mobile fix (2026-03-19)
 - Cause: ClawMetry ouvre les EventSource (streams SSE) auto au boot de la page
@@ -117,6 +119,7 @@
 - Env vars configurés dans OpenClaw (`ACTUAL_BUDGET_API_KEY`)
 - **Sécurité** : .env + data supprimés de git (commit 62a9ab5)
 - Prêt pour déploiement/usage dès qu'Alexandre veut piloter son budget
+- **Prochaine action ouverte** : créer Gmail dédié `doudou.n8n@gmail.com` (journal 21/03)
 
 ### Things to Remember
 - Le N+1 Arnaud est une relation clé, positive (pro + perso)
