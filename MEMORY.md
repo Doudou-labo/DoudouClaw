@@ -111,6 +111,13 @@
 - **Tailscale** (2026-03-01) : VPN mesh (v1.94.2) — IP serveur `100.89.4.88`, tous dashboards accessibles
 - **Agence-IA** (2026-03-10) : 112 agents spécialisés intégrés — disponibles dans `~/.openclaw/agency-agents/` — orchestration via `agents-orchestrator` — routing dans `notes/areas/agent-orchestration.md`
 
+### Actual Budget (2026-03-21)
+- **Skill installé** (ClawHub) + API testée avec succès
+- **Projet finance perso** — `notes/projects/actual-budget-integration/`
+- Env vars configurés dans OpenClaw (`ACTUAL_BUDGET_API_KEY`)
+- **Sécurité** : .env + data supprimés de git (commit 62a9ab5)
+- Prêt pour déploiement/usage dès qu'Alexandre veut piloter son budget
+
 ### Things to Remember
 - Le N+1 Arnaud est une relation clé, positive (pro + perso)
 
@@ -132,5 +139,5 @@ Meilleure amie d’Alexandre, habite à Calais; relation amicale de longue date 
 
 ---
 
-*Dernière mise à jour: 2026-03-17*
+*Dernière mise à jour: 2026-03-21*
 Quand je te demande de tester une clé API tu le fais

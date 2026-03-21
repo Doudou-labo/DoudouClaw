@@ -15,6 +15,12 @@
 - [ ] Avant la fin du pilote (16/02) : noter 3 catégories à ajuster (si besoin) + 1 friction d'usage (ce qui bloque)
 - [ ] J+7 (16/02) : créer 1 objectif d'épargne + 1 récurrence (ex : Spotify) et valider que ça tient dans ta vraie vie
 
+### 💰 Actual Budget — Finance perso (2026-03-21)
+- [ ] Finaliser onboarding Actual Budget (catégories de suivi)
+- [ ] Connecter les comptes bancaires ou saisir manuellement les transactions
+- [ ] Définir 1 objectif d'épargne concret
+- [ ] Mettre en place le suivi récurrent (abonnements, revenus)
+
 ### Stack skills OpenClaw (maintenance)
 - [x] ~~Rattrapage `proactive-agent` (retard depuis le 10/02)~~ → **FAIT** : Migration v3.1.0 complète (WAL Protocol, Working Buffer, Autonomous Crons, Verify Implementation)
 - [x] ~~Mettre à jour `USER.md`~~ → **EN COURS** : Ajout objectifs détaillés + contraintes rythme

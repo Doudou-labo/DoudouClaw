@@ -1,31 +1,30 @@
 # SESSION-STATE.md — Active Working Memory
 
 ## Current Task
-Consolidation mémoire quotidienne 2026-03-20 exécutée. Journée productive autour de n8n + mises à jour ClawHub.
+Consolidation mémoire quotidienne 2026-03-21 exécutée. Journée système uniquement (samedi), aucune interaction Alexandre.
 
-## Today's Work Summary (2026-03-20)
-- **n8n work** : skills n8n v2.0.0 + n8n-workflow-automation v1.0.0 installés depuis ClawHub. Nouvelle clé API n8n générée. 9 workflows détectés.
-- **ClawHub updates** : api-gateway (1.0.21→1.0.69), clawpod (0.1.2→1.0.7), notion-api-skill (1.0.5→1.0.6), google-tasks-api (1.0.2→1.0.3)
-- **Auto PARA checkpoint** : 11:01 UTC — suggère création Gmail dédié
+## Today's Work Summary (2026-03-21)
+- **Actual Budget** : skill installé + API testée + fix sécurité .env/git
+- **sessions_yield** : documentation orchestration Agence-IA intégrée
+- **OpenClaw** : déjà à jour v2026.3.13
+- **Veille IA** : 3 exécutions (8h, 12h, 19h) — Fraîcheur + scraping
+- **Auto PARA checkpoint** : midi
 
 ## Prochains chantiers
 1. **Configuration n8n** — créer Gmail dédié (doudou.n8n@gmail.com) + activer IMAP + générer App Password
 2. **Inventaire physique pneus** — Étape 1 (dashboard + blocs Pomodoro)
-3. **Préparation visite Marc (DR)** — 31/03/2026 (11 jours restants)
-4. **Pneu-tracker** — reprendre sprint FTS5/migrations/ARIA
+3. **Préparation visite Marc (DR)** — 31/03/2026 (10 jours restants)
+4. **Actual Budget** — finaliser onboarding et catégories de suivi
 
-## Dernier travail réalisé (2026-03-18)
-- **Journée calme** — aucune interaction user majeure
-  - Veille IA automatisée : 12h (Fraîcheur 72h) + 19h (regulation + scraping)
-  - Evolution Dashboard : mise à jour autonome 18h
-- **Dernier travail user** : consolidation 2026-03-17 (Inbox Zero refondu)
+## Dernier travail réalisé (2026-03-20)
+- n8n work : skills v2.0.0 + n8n-workflow-automation v1.0.0 + 9 workflows détectés
+- ClawHub updates : api-gateway, clawpod, notion-api-skill, google-tasks-api
 
 ## Immediate Context
 - N1 synchronisé
 - n8n Gmail dédié : toujours en attente (prochaine action prioritaire)
-- Inventaire physique pneus : Alexandre a poussé jusqu’à 22h à l’agence le 19/03, préparation quasi finie, reste ~1–2h de boulot
-- État physique du soir : fatigue marquée + douleurs dos/épaules après grosse journée ; éviter de charger davantage ce soir
-- Visite Marc DR : 13 jours (31/03)
+- Samedi 21/03 — Alexandre probablement离线 (hors ligne)
+- Visite Marc DR : 10 jours (31/03)
 
 ## Key Decisions (actives)
 1. Jurons français sans modération = identité DoudouClaw.
@@ -37,13 +36,14 @@ Consolidation mémoire quotidienne 2026-03-20 exécutée. Journée productive au
 7. `qmd` indexe uniquement la collection `memory`.
 8. Migration 100% Agence-IA validée (2026-03-10).
 9. **n8n** : architecture Code node privilégiée vs LLM pour workflows internes.
+10. **Actual Budget** : nouveau projet finance perso — skill installé (2026-03-21).
 
 ## Key Files
-- `memory/2026-03-18.md`
+- `memory/2026-03-21.md`
 - `MEMORY.md`
 - `notes/areas/open-loops.md`
 - `RECENT_CONTEXT.md`
-- `notes/projects/n8n-extraction-pneus-mail.md`
+- `notes/projects/actual-budget-integration/`
 
 ## Last Updated
-2026-03-19 20:50 UTC — consolidation mémoire quotidienne exécutée. Jour calme (4 veilles IA + ClawSuite mis à jour). N1 synchronisé.
+2026-03-21 20:50 UTC — consolidation mémoire quotidienne exécutée. Samedi — journée système only.
