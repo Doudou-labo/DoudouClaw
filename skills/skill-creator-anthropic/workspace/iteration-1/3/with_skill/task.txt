@@ -1,0 +1,10 @@
+Task: Il faut absolument que je fasse ça aujourd'hui !!!
+
+You have access to the following skill:
+- Path: ../tdah-inbox-zero
+- File: ../tdah-inbox-zero/SKILL.md
+
+Please read the skill file before proceeding, then complete the task.
+Save all outputs to: /root/.openclaw/workspace/skills/skill-creator-anthropic/scripts/openclaw-wrappers/../../workspace/iteration-1/3/with_skill/outputs/
+
+Expected outputs: (specify in evals/evals.json)

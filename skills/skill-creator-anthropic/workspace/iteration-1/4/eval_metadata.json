@@ -1,0 +1,9 @@
+{
+  "eval_id": 3,
+  "eval_name": "4",
+  "prompt": "J'ai plein de trucs en tête : appeler X, facture Y, réunion Z, problème client, plus penser à acheter du savon...",
+  "skill_path": "../tdah-inbox-zero",
+  "timestamp": "20260320_220537",
+  "timeout": 300,
+  "assertions": []
+}

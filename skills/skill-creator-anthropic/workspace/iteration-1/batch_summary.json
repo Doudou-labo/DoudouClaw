@@ -1,0 +1,8 @@
+{
+  "iteration": 1,
+  "skill_path": "../tdah-inbox-zero",
+  "evals_file": "../tdah-inbox-zero/evals/evals.json",
+  "timestamp": "2026-03-20T22:05:37+00:00",
+  "baseline_enabled": true,
+  "output_dir": "/root/.openclaw/workspace/skills/skill-creator-anthropic/scripts/openclaw-wrappers/../../workspace/iteration-1"
+}

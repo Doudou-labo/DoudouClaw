@@ -1,0 +1,9 @@
+{
+  "eval_id": 8,
+  "eval_name": "9",
+  "prompt": "[En pleine conversation sur un sujet technique depuis 45min] Ah au fait, j'ai eu une idée pour le marketing...",
+  "skill_path": "../tdah-inbox-zero",
+  "timestamp": "20260320_220537",
+  "timeout": 300,
+  "assertions": []
+}

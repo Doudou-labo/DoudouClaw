@@ -1,0 +1,4 @@
+Task: Il faut absolument que je fasse ça aujourd'hui !!!
+
+Complete the task without any special skills.
+Save all outputs to: /root/.openclaw/workspace/skills/skill-creator-anthropic/scripts/openclaw-wrappers/../../workspace/iteration-1/3/without_skill/outputs/

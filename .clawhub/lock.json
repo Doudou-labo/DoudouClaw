@@ -62,8 +62,8 @@
       "installedAt": 1770676245149
     },
     "api-gateway": {
-      "version": "1.0.21",
-      "installedAt": 1770755578406
+      "version": "1.0.69",
+      "installedAt": 1774038874994
     },
     "google-calendar-api": {
       "version": "1.0.5",
@@ -108,6 +108,10 @@
     "n8n-workflow-automation": {
       "version": "1.0.0",
       "installedAt": 1773696360631
+    },
+    "skill-creator-2": {
+      "version": "0.1.0",
+      "installedAt": 1774040549907
     }
   }
 }

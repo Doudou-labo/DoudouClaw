@@ -1,0 +1,9 @@
+{
+  "eval_id": 0,
+  "eval_name": "1",
+  "prompt": "Rappelle-moi d'appeler le fournisseur Michelin demain",
+  "skill_path": "../tdah-inbox-zero",
+  "timestamp": "20260320_220536",
+  "timeout": 300,
+  "assertions": []
+}

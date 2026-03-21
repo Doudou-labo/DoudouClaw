@@ -1,0 +1,9 @@
+{
+  "eval_id": 1,
+  "eval_name": "2",
+  "prompt": "Je bloque sur la facturation, je sais pas par où commencer",
+  "skill_path": "../tdah-inbox-zero",
+  "timestamp": "20260320_220537",
+  "timeout": 300,
+  "assertions": []
+}

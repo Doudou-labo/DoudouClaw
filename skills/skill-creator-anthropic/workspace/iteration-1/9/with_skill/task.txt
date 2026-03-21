@@ -1,0 +1,10 @@
+Task: [En pleine conversation sur un sujet technique depuis 45min] Ah au fait, j'ai eu une idée pour le marketing...
+
+You have access to the following skill:
+- Path: ../tdah-inbox-zero
+- File: ../tdah-inbox-zero/SKILL.md
+
+Please read the skill file before proceeding, then complete the task.
+Save all outputs to: /root/.openclaw/workspace/skills/skill-creator-anthropic/scripts/openclaw-wrappers/../../workspace/iteration-1/9/with_skill/outputs/
+
+Expected outputs: (specify in evals/evals.json)

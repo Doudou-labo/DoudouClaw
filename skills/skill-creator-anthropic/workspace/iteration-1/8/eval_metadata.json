@@ -1,0 +1,9 @@
+{
+  "eval_id": 7,
+  "eval_name": "8",
+  "prompt": "Je suis trop stressé par rapport à Audrey, j'arrive pas à me concentrer sur le boulot",
+  "skill_path": "../tdah-inbox-zero",
+  "timestamp": "20260320_220537",
+  "timeout": 300,
+  "assertions": []
+}

@@ -1,0 +1,9 @@
+{
+  "eval_id": 2,
+  "eval_name": "3",
+  "prompt": "Il faut absolument que je fasse ça aujourd'hui !!!",
+  "skill_path": "../tdah-inbox-zero",
+  "timestamp": "20260320_220537",
+  "timeout": 300,
+  "assertions": []
+}

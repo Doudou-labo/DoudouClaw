@@ -1,0 +1,4 @@
+Task: [En pleine conversation sur un sujet technique depuis 45min] Ah au fait, j'ai eu une idée pour le marketing...
+
+Complete the task without any special skills.
+Save all outputs to: /root/.openclaw/workspace/skills/skill-creator-anthropic/scripts/openclaw-wrappers/../../workspace/iteration-1/9/without_skill/outputs/

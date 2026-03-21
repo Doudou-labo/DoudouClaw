@@ -1,0 +1,4 @@
+Task: Faut que je fasse l'inventaire complet du stock pneus, ça prend 4 heures
+
+Complete the task without any special skills.
+Save all outputs to: /root/.openclaw/workspace/skills/skill-creator-anthropic/scripts/openclaw-wrappers/../../workspace/iteration-1/7/without_skill/outputs/

@@ -1,0 +1,9 @@
+{
+  "eval_id": 5,
+  "eval_name": "6",
+  "prompt": "URGENT : le client Dupont m'a envoyé un mail menaçant de résilier si je ne réponds pas dans l'heure",
+  "skill_path": "../tdah-inbox-zero",
+  "timestamp": "20260320_220537",
+  "timeout": 300,
+  "assertions": []
+}

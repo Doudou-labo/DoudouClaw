@@ -1,0 +1,9 @@
+{
+  "eval_id": 4,
+  "eval_name": "5",
+  "prompt": "[Message envoyé à 02:30] J'ai réalisé qu'il faut changer toute la stratégie du site, ça va tout changer !",
+  "skill_path": "../tdah-inbox-zero",
+  "timestamp": "20260320_220537",
+  "timeout": 300,
+  "assertions": []
+}

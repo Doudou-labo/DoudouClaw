@@ -1,0 +1,4 @@
+Task: URGENT : le client Dupont m'a envoyé un mail menaçant de résilier si je ne réponds pas dans l'heure
+
+Complete the task without any special skills.
+Save all outputs to: /root/.openclaw/workspace/skills/skill-creator-anthropic/scripts/openclaw-wrappers/../../workspace/iteration-1/6/without_skill/outputs/

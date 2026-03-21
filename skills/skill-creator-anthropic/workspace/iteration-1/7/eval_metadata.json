@@ -1,0 +1,9 @@
+{
+  "eval_id": 6,
+  "eval_name": "7",
+  "prompt": "Faut que je fasse l'inventaire complet du stock pneus, ça prend 4 heures",
+  "skill_path": "../tdah-inbox-zero",
+  "timestamp": "20260320_220537",
+  "timeout": 300,
+  "assertions": []
+}
