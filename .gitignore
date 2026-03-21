@@ -38,3 +38,5 @@ memory/para-notion-sync-*.log
 # MIGRÉ vers repo séparé: Doudou-labo/DoudouClaw-memory
 # Plus de sync ici - voir scripts/sync-brv-to-github.sh
 .brv/context-tree/
+notes/projects/actual-budget-integration/.env
+notes/projects/actual-budget-integration/actual-data/
