@@ -54,5 +54,4 @@
 - [ ] Brancher recherche/ajout via référentiel pneus + préparer export Excel final
 
 ## Auto-checkpoints
-- [ ] [AUTO 2026-03-22 midi] Checkpoint 3-min fait. Next: Créer Gmail dédié (doudou.n8n@gmail.com)
 
