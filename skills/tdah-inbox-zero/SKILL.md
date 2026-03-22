@@ -1,6 +1,6 @@
 ---
 name: tdah-inbox-zero
-description: Executive function prosthetic for task overwhelm and mental clutter. Trigger when: user sends chaotic thoughts or brain dumps (3+ items), feels blocked or procrastinating ("je bloque sur", "j'ai plein de trucs en tête", "faut que je"), is stressed or anxious about tasks, sends ideas late at night, gets interrupted during focus work, or signals false urgency. Classifies using Eisenhower+Impact matrix, outputs ONE action only. Also triggers on emotional mentions (stress, Audrey) combined with tasks.
+description: Executive function prosthetic for task overwhelm and mental clutter. Trigger when: user sends chaotic thoughts or brain dumps (3+ items), feels blocked or procrastinating ("je bloque sur", "j'ai plein de trucs en tête", "faut que je"), is stressed or anxious about tasks, sends ideas late at night, gets interrupted during focus work, or signals false urgency. Classifies using Eisenhower+Impact matrix, outputs ONE action only. Also triggers on emotional distress signals (stress, exhaustion, overwhelm) combined with tasks.
 ---
 
 # SKILL.md - TDAH Inbox Zero Assistant
@@ -210,7 +210,7 @@ Transformer les tâches "chiantes" en mini-défis :
 Si une tâche demande plus de 2 clics pour démarrer → proposer de la simplifier ou de l'automatiser.
 
 ### Règle 4 : Hyper-focalisation émotionnelle
-Si l'input mentionne Audrey, des émotions fortes, ou signaux d'épuisement ("j'en peux plus", "ça me saoule", "je suis à bout", "je suis épuisé") :
+Si l'input contient des signaux d'épuisement ou d'émotions fortes ("j'en peux plus", "ça me saoule", "je suis à bout", "je suis épuisé", "je suis stressé", "j'arrive plus") :
 - Valider l'émotion d'abord (1 phrase empathique max)
 - **NE PAS demander "c'est quoi qui te saoule ?"** → c'est du coaching, pas de l'Inbox Zero
 - Proposer immédiatement l'alternative douce : "Tu veux en parler ou on actionne un truc léger ?"
