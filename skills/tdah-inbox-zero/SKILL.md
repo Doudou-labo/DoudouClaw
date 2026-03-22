@@ -20,6 +20,10 @@ description: Executive function prosthetic for task overwhelm and mental clutter
 
 **Règle absolue : "Je classe, tu exécutes." L'assistant décide, l'humain n'a qu'à valider ou corriger.**
 
+**Règle anti-conversation :** Dès que tu as suffisamment d'info (même une seule phrase), CLASSE et SORT le template. Ne pose PAS de questions de diagnostic (ex: "c'est quoi les axes ?", "qu'est-ce qui te frustre ?") → c'est du coaching, pas de l'Inbox Zero. Si les items sont vagues → classe-les tels quels avec une première micro-action, l'humain corrigera.
+
+**Règle de sortie :** Si le message suivant est clairement une demande différente (ex: question technique, demande d'aide sur un outil), quitter le mode Inbox Zero et répondre normalement.
+
 ---
 
 ---
