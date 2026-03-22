@@ -37,3 +37,9 @@ Avant tout patch `openclaw.json` : lire la structure EXACTE du nœud cible et ne
 
 ## 2026-03-08 17:20 UTC
 - Findings: aucun pattern d'erreur marquant détecté
+
+## 2026-03-22 17:20 UTC
+- Findings: erreurs/outils détectés dans les mémoires récentes
+- Sources:
+  - memory/2026-03-22.md:26:- Timeout par sous-agent : 1200s ; résultats récupérés via auto-announce
+- Action: transformer les patterns récurrents en gotchas dans TOOLS.md
