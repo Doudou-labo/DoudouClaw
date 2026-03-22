@@ -1,7 +1,7 @@
 # Tableau de Bord TDAH - Matrice de Priorisation
 
 > Vue temps réel des tâches classées selon la matrice Eisenhower + Impact/Effort.
-> Dernière mise à jour : 2026-03-16 23:11 UTC
+> Dernière mise à jour : 2026-03-22 22:24 UTC
 
 ---
 
@@ -50,10 +50,28 @@
 
 > Important + Rapide (≤15 min) → Faire 3 en 1 quand tu as 15 min
 
+- [ ] **Appeler X** (Ajouté 2026-03-22)
+  - 📅 Quand : Demain matin
+  - ⏱️ Durée : 5-10 min
+  - 💡 Si bloqué : Envoyer un SMS de relance
+  - 🎯 Case : Remplissage
+
+- [ ] **Traiter facture Y** (Ajouté 2026-03-22)
+  - 📅 Quand : Demain midi
+  - ⏱️ Durée : 10 min
+  - 💡 Si bloqué : Scanner juste le montant + date, traiter demain
+  - 🎯 Case : Remplissage
+
 - [ ] **Appeler fournisseur Michelin** (Ajouté 2026-03-18)
   - 📅 Quand : Demain matin (2026-03-19)
   - ⏱️ Durée : 10-15 min
   - 💡 Si bloqué : Ligner occupée → message vocal + mail de relance
+  - 🎯 Case : Remplissage
+
+- [ ] **Acheter du lait** (Ajouté 2026-03-22)
+  - 📅 Quand : Avant la prochaine sortie courses
+  - ⏱️ Durée : 5 min
+  - 💡 Si bloqué : Post-it sur la porte du frigo
   - 🎯 Case : Remplissage
 
 ---
