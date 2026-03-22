@@ -1,30 +1,31 @@
 # SESSION-STATE.md — Active Working Memory
 
 ## Current Task
-Consolidation mémoire quotidienne 2026-03-21 exécutée. Journée système uniquement (samedi), aucune interaction Alexandre.
+Consolidation mémoire quotidienne 2026-03-22 exécutée. Dimanche — exécutions automatiques uniquement, aucune interaction Alexandre.
 
-## Today's Work Summary (2026-03-21)
-- **Actual Budget** : skill installé + API testée + fix sécurité .env/git
-- **sessions_yield** : documentation orchestration Agence-IA intégrée
-- **OpenClaw** : déjà à jour v2026.3.13
-- **Veille IA** : 3 exécutions (8h, 12h, 19h) — Fraîcheur + scraping
-- **Auto PARA checkpoint** : midi
+## Today's Work Summary (2026-03-22)
+- **AUTO PARA 3-min** (11:01 UTC) : checkpoint exécuté.
+- **Benchmark LLM v10 flush** (13:33 UTC) : résultats session 2026-03-19 documentés — MiniMax-M2.5-highspeed → 44/50, classé 4e.
+- **PARA Weekly Review** (17:05 UTC) : Projects=10, Areas=18, Resources=16, Archive=3 | Open loops=30.
+- **Self-Improving Weekly Review** (17:20 UTC) : patterns erreurs détectés, corrections mises à jour.
 
 ## Prochains chantiers
 1. **Configuration n8n** — créer Gmail dédié (doudou.n8n@gmail.com) + activer IMAP + générer App Password
-2. **Inventaire physique pneus** — Étape 1 (dashboard + blocs Pomodoro)
-3. **Préparation visite Marc (DR)** — 31/03/2026 (10 jours restants)
+2. **Inventaire physique pneus** — Sprint soir : migrations + FTS5 + mode saisie rapide (session Claude Code active)
+3. **Préparation visite Marc (DR)** — 31/03/2026 (**9 jours restants**)
 4. **Actual Budget** — finaliser onboarding et catégories de suivi
 
-## Dernier travail réalisé (2026-03-20)
-- n8n work : skills v2.0.0 + n8n-workflow-automation v1.0.0 + 9 workflows détectés
-- ClawHub updates : api-gateway, clawpod, notion-api-skill, google-tasks-api
+## Dernier travail réalisé (2026-03-21)
+- Actual Budget : skill installé + API testée + env vars configurés + fix sécurité .env/git
+- sessions_yield : documentation orchestration intégrée
+- OpenClaw : déjà à jour v2026.3.13
+- Veille IA : 3 exécutions automatiques
 
 ## Immediate Context
 - N1 synchronisé
+- Dimanche 22/03 — Alexandre probablement离线 (jour de repos)
 - n8n Gmail dédié : toujours en attente (prochaine action prioritaire)
-- Samedi 21/03 — Alexandre probablement离线 (hors ligne)
-- Visite Marc DR : 10 jours (31/03)
+- Visite Marc DR : **9 jours** (31/03)
 
 ## Key Decisions (actives)
 1. Jurons français sans modération = identité DoudouClaw.
@@ -37,13 +38,15 @@ Consolidation mémoire quotidienne 2026-03-21 exécutée. Journée système uniq
 8. Migration 100% Agence-IA validée (2026-03-10).
 9. **n8n** : architecture Code node privilégiée vs LLM pour workflows internes.
 10. **Actual Budget** : nouveau projet finance perso — skill installé (2026-03-21).
+11. **Benchmark v10** : MiniMax-M2.5-highspeed (44/50, 4e) meilleur que MiniMax-M2.5 standard (41/50) — lesson: "highspeed" > standard.
 
 ## Key Files
-- `memory/2026-03-21.md`
+- `memory/2026-03-22.md`
 - `MEMORY.md`
 - `notes/areas/open-loops.md`
 - `RECENT_CONTEXT.md`
+- `notes/areas/proactive-tracker.md`
 - `notes/projects/actual-budget-integration/`
 
 ## Last Updated
-2026-03-21 20:50 UTC — consolidation mémoire quotidienne exécutée. Samedi — journée système only.
+2026-03-22 20:50 UTC — consolidation mémoire quotidienne exécutée. Dimanche — exécutions automatiques only.
