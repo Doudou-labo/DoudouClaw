@@ -76,5 +76,34 @@ L’utilisateur a signalé à juste titre que le nombre d’utilisations des out
 
 ---
 
+## [LRN-20260322-001] correction
+
+**Logged**: 2026-03-22T17:00:00Z
+**Priority**: high
+**Status**: pending
+**Area**: research
+
+### Summary
+Ne jamais répondre de mémoire sur les specs techniques de modèles LLM (fenêtre de contexte, pricing, capacités) — toujours faire une recherche web d'abord.
+
+### Details
+Question posée : quels modèles supportent 1M tokens de contexte ?
+Réponse initiale incorrecte : j'ai dit que Sonnet 4.6 était à 200k et GPT-5.4 à 128k, sans vérifier.
+Réalité : Sonnet 4.6 et Opus 4.6 ont bien 1M tokens (sorti mars 2026), GPT-5.4 a 1.05M tokens.
+Cause : réponse de mémoire statique sur des infos qui évoluent très rapidement.
+
+### Suggested Action
+- **Règle obligatoire** : toute question sur les capacités/specs/pricing de modèles LLM → `web_search` en premier, pas de réponse de mémoire
+- Pattern de détection : "contexte de X", "tokens", "fenêtre de contexte", "capacités de [modèle]", "combien de tokens", etc.
+- Appliquer même si la réponse semble évidente
+
+### Metadata
+- Source: user_feedback
+- Related Files: AGENTS.md
+- Tags: llm, specs, context-window, web-search, correction
+- See Also: -
+
+---
+
 ## 2026-03-08 17:20 UTC
 - Findings: pas de correction explicite détectée
