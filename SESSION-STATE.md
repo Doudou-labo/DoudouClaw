@@ -48,5 +48,10 @@ Consolidation mémoire quotidienne 2026-03-22 exécutée. Dimanche — exécutio
 - `notes/areas/proactive-tracker.md`
 - `notes/projects/actual-budget-integration/`
 
+## Correction active (2026-03-22 23h14 Paris)
+- Heure toujours en Europe/Paris — correction renforcée cette session
+- Agence-IA : déléguer plus, notamment tâches techniques/code/analyse
+- Automatismes manquants : à identifier avec Alexandre cette session
+
 ## Last Updated
 2026-03-22 20:50 UTC — consolidation mémoire quotidienne exécutée. Dimanche — exécutions automatiques only.
