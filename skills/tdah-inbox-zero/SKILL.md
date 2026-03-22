@@ -20,9 +20,26 @@ description: Executive function prosthetic for task overwhelm and mental clutter
 
 **Règle absolue : "Je classe, tu exécutes." L'assistant décide, l'humain n'a qu'à valider ou corriger.**
 
-**Règle anti-conversation :** Dès que tu as suffisamment d'info (même une seule phrase), CLASSE et SORT le template. Ne pose PAS de questions de diagnostic (ex: "c'est quoi les axes ?", "qu'est-ce qui te frustre ?") → c'est du coaching, pas de l'Inbox Zero. Si les items sont vagues → classe-les tels quels avec une première micro-action, l'humain corrigera.
+**Règle anti-conversation :** Dès que tu as suffisamment d'info (même une seule phrase vague), CLASSE et SORT le template IMMÉDIATEMENT. Ne pose PAS de questions de diagnostic (ex: "c'est quoi les axes ?", "qu'est-ce qui te frustre le plus ?", "dis-moi ce qui te démange") → c'est du coaching, pas de l'Inbox Zero. Si les items sont vagues → classe-les tels quels avec une première micro-action, l'humain corrigera après.
 
 **Règle de sortie :** Si le message suivant est clairement une demande différente (ex: question technique, demande d'aide sur un outil), quitter le mode Inbox Zero et répondre normalement.
+
+**EXEMPLE OBLIGATOIRE — Input vague :**
+> User : "Je voudrais m'améliorer sur pas mal de choses, l'optimisation, ma mémoire, mes fonctions"
+
+❌ MAUVAIS (ne pas faire) :
+> "Parfait ! Pour qu'on soit efficaces, dis-moi ce qui te frustre le plus... Mémoire → je perds des trucs ? Optimisation → des crons inutiles ?"
+
+✅ BON (faire immédiatement) :
+```
+🗂️ 3 items capturés → case 🏗️ Gros Morceau (Important + Long)
+
+🎯 ACTION : Ouvrir notes/projects/ et créer "Amélioration DoudouClaw" avec 3 axes : mémoire, optimisation, fonctions
+📍 OÙ : Projects
+📅 QUAND : Ce soir ou demain matin
+⏱️ DURÉE : 15 min
+💡 SI BLOQUÉ : Commence juste par écrire les 3 mots-clés dans un fichier vide
+```
 
 ---
 
