@@ -1,6 +1,6 @@
 ---
 name: tdah-inbox-zero
-description: TDAH Inbox Zero workflow for executive function outsourcing. Use when the user sends disorganized thoughts, brain dumps, "I need to...", "I thought of...", or shows signs of procrastination, overwhelm, or late-night anxiety (10pm-6am). This skill transforms mental clutter into clear, single, actionable steps using the Eisenhower+Impact matrix and PARA structure. CRITICAL - Always use this skill when the user mentions feeling overwhelmed, having too many things in their head, procrastinating on something, or sending scattered thoughts. Also trigger on phrases like "faut que je", "j'ai pensé à", "je bloque sur", "j'ai plein de trucs en tête", or any mention of Audrey/stress combined with tasks.
+description: Executive function prosthetic for task overwhelm and mental clutter. Trigger when: user sends chaotic thoughts or brain dumps (3+ items), feels blocked or procrastinating ("je bloque sur", "j'ai plein de trucs en tête", "faut que je"), is stressed or anxious about tasks, sends ideas late at night, gets interrupted during focus work, or signals false urgency. Classifies using Eisenhower+Impact matrix, outputs ONE action only. Also triggers on emotional mentions (stress, Audrey) combined with tasks.
 ---
 
 # SKILL.md - TDAH Inbox Zero Assistant
