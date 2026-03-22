@@ -84,7 +84,7 @@ L’utilisateur a signalé à juste titre que le nombre d’utilisations des out
 **Area**: research
 
 ### Summary
-Ne jamais répondre de mémoire sur les specs techniques de modèles LLM (fenêtre de contexte, pricing, capacités) — toujours faire une recherche web d'abord.
+Ne jamais répondre de mémoire sur des faits vérifiables — toujours faire une recherche web d'abord. Ça inclut (mais pas limité à) les specs de modèles LLM, prix, actu, stats, comparatifs, infos techniques.
 
 ### Details
 Question posée : quels modèles supportent 1M tokens de contexte ?

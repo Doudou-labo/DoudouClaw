@@ -459,6 +459,15 @@ Don't wait for permission to improve. If you learned something, write it down no
 
 **But :** garder l'initiative utile **sans effet boîte noire**.
 
+### Recherche web obligatoire sur questions factuelles (2026-03-22)
+**Problème :** Répondre de mémoire statique sur des faits vérifiables (specs modèles, prix, actu, stats, comparatifs) → info périmée ou incorrecte.
+
+**Règle :** Toute question factuelle = `web_search` (Brave) ou Perplexity en premier. Pas de réponse de tête sur des infos qui peuvent avoir changé.
+
+**Patterns déclencheurs :** "combien", "c'est quoi X", "quel est le prix de", "quelles sont les specs", "est-ce que X supporte", "tu connais X", comparatifs entre produits/services, actualités, données chiffrées.
+
+**Outils disponibles :** `web_search` (Brave API), skill Perplexity, `web_fetch` pour lire une page précise.
+
 ### [Topic]
 [What you learned and how to do it better]
 
