@@ -1,788 +1,244 @@
 # TOOLS.md - Configuration et Notes des Outils
 
-> Documentation centralisée des outils, configurations, gotchas et procédures.
-
----
-
-## 📑 Table des matières
-
-- [⚡ Référence Rapide (Usage Quotidien)](#-référence-rapide-usage-quotidien)
-- [🔧 Outils Essentiels](#-outils-essentiels)
-  - [Git (Workflow Backup)](#github-backup-automation)
-  - [MCPorter (MCP Integration)](#mcporter-mcp-integration)
-  - [Agence-IA (Agents Spécialisés)](#agence-ia-agents-spécialisés)
-  - [Google Calendar](#google-calendar)
-  - [Web Search (Brave + Perplexity)](#web-search-api-brave--perplexity)
-- [🛠️ Outils de Développement](#️-outils-de-développement)
-  - [agent-browser (Vercel)](#agent-browser-vercel)
-  - [ripgrep](#ripgrep-pour-les-recherches)
-- [🖥️ Infrastructure et Déploiement](#️-infrastructure-et-déploiement)
-  - [ClawSuite](#clawsuite)
-  - [Tailscale](#tailscale)
-  - [OpenClaw Gateway](#openclaw-gateway-restart--comportement)
-- [🧠 Gestion de Contexte et Mémoire](#-gestion-de-contexte-et-mémoire)
-  - [Context Manager](#context-manager-safe-compression)
-  - [LanceDB / Memory plugin](#lancedb--memory-plugin-openclaw)
-  - [fsxmemory + QMD](#fsxmemory--qmd)
-  - [TDAH Inbox Zero Skill](#tdah-inbox-zero-skill)
-- [🤖 Intégrations Discord](#-intégrations-discord)
-  - [Discord Bot](#discord-bot-integration)
-  - [Format Discord (Canal legifrance)](#format-discord--canal-legifrance)
-- [📊 Automatisations et Monitoring](#-automatisations-et-monitoring)
-  - [PARA + Self-Improving](#para--self-improving-automations)
-  - [Evolution Protocol](#evolution-protocol-gep-inspired-sans-auto-mutation)
-  - [Heartbeats Auto-Scripts](#heartbeats)
-- [💰 Préférences Spécifiques](#-préférences-spécifiques)
-  - [Finance (Alexandre)](#préférences-finance-alexandre)
-  - [Writing Preferences](#writing-preferences)
-- [📁 Organisation des Fichiers](#-organisation-des-fichiers)
+> Référence opérationnelle : configs, IDs critiques, commandes clés, gotchas.
 
 ---
 
 ## ⚡ Référence Rapide (Usage Quotidien)
 
-| Besoin | Commande/Outil | Doc détaillée |
-|--------|----------------|---------------|
-| **Commit + push** | `git add . && git commit -m "msg" && git push` | [Git Workflow](#github-backup-automation) |
-| **GitHub API** | `mcporter call github.<outil>` | [MCPorter](#mcporter-mcp-integration) |
-| **Agents Agence-IA** | `sessions_spawn --file ~/.openclaw/agency-agents/[agent]/SOUL.md` | [Agence-IA](#agence-ia-agents-spécialisés) |
-| **Recherche web** | `web_search` tool ou Perplexity skill | [Web Search](#web-search-api-brave--perplexity) |
-| **Calendrier** | API Maton (calendrier OpenClaw) | [Google Calendar](#google-calendar) |
-| **Mémoire LTM** | `memory_store` / `memory_recall` | [LanceDB](#lancedb--memory-plugin-openclaw) |
-| **Memory-PARA Sync** | Cron auto 4x/jour ou `unified-memory-para-sync.sh` | [Memory-PARA-Sync](#memory-para-sync) |
-| **Recherche mémoire** | `qmd query "..."` | [fsxmemory + QMD](#fsxmemory--qmd) |
-| **TDAH Inbox Zero** | Pattern detection auto ou mention `@doudouclaw inbox:` | [TDAH Skill](#tdah-inbox-zero-skill) |
-| **Compression contexte** | `scripts/context-compress-preview.sh` | [Context Manager](#context-manager-safe-compression) |
-| **Status gateway** | `openclaw status` | [Gateway](#openclaw-gateway-restart--comportement) |
-| **Navigateur** | `agent-browser open <url>` | [Agent Browser](#agent-browser-vercel) |
-| **Recherche fichiers** | `rg -n "pattern"` | [ripgrep](#ripgrep-pour-les-recherches) |
-| **Playwright MCP** | `mcporter call playwright.browser_navigate` | [Playwright MCP](#playwright-mcp)
+| Besoin | Commande/Outil |
+|--------|----------------|
+| **Commit + push** | `git add . && git commit -m "msg" && git push` |
+| **GitHub API** | `mcporter call github.<outil>` |
+| **Agents Agence-IA** | `sessions_spawn` avec `~/.openclaw/agency-agents/[agent]/SOUL.md` |
+| **Recherche web** | `web_search` tool ou Perplexity skill |
+| **Calendrier** | API Maton — Calendar ID OpenClaw ci-dessous |
+| **Mémoire LTM** | `memory_store` / `memory_recall` |
+| **Memory-PARA Sync** | `scripts/unified-memory-para-sync.sh` (cron 4x/jour) |
+| **Recherche mémoire** | `qmd query "..."` |
+| **Inbox Zero** | Pattern detection auto ou `@doudouclaw inbox:` |
+| **Compression contexte** | `scripts/context-compress-preview.sh` |
+| **Status gateway** | `openclaw status` |
+| **Navigateur** | `agent-browser open <url>` ou `mcporter call playwright.*` |
+| **Recherche fichiers** | `rg -n "pattern"` |
 
-**Rappels rapides :**
-- 🚨 **Pas de preuve = Pas fait** → Toujours montrer un PID/fichier/output quand je dis "je fais X"
-- 🔒 **Gateway restart** → Prévenir Alexandre avant (session coupée)
+**Rappels critiques :**
+- 🚨 **Pas de preuve = Pas fait** → Toujours montrer PID/fichier/output
+- 🔒 **Gateway restart** → Prévenir Alexandre AVANT (session coupée)
 - 📝 **Modèles** → Changement dans `openclaw.json` ne nécessite PAS restart
 
 ---
 
-## 🔧 Outils Essentiels
+## 🔧 Git / GitHub
 
-### GitHub Backup Automation
+**Auth :**
+- Compte bot: `DoudouClaw` | Token: `.credentials/github-token.txt`
+- Remote HTTPS uniquement | Login: `gh auth login --with-token < .credentials/github-token.txt`
 
-**Status:** ✅ Active (2026-02-16)
+**Hook post-commit :** auto-push vers `origin main` — refuse si `git user.name` ≠ `DoudouClaw`
 
-**Workflow systématique (ancré dans AGENTS.md + SOUL.md) :**
-- **Toute modification de fichier** → `git add` + `git commit` + `git push`
-- Aucune exception (sauf secrets via `.gitignore`)
-- Garantit zéro divergence local vs GitHub
-
-**Commande rapide :**
-```bash
-git add <fichiers> && git commit -m "description" && git push origin main
-```
-
-**Hook post-commit automatique :**
-- Fichier: `.git/hooks/post-commit`
-- Action: auto-push vers `origin main` après chaque commit
-- Garde-fous: refuse push si `origin` pas en HTTPS ou si `git user.name` ≠ `DoudouClaw`
-
-**Auth Git :**
-- Compte: `DoudouClaw` (bot)
-- Token: `.credentials/github-token.txt`
-- Remote: HTTPS uniquement (`https://github.com/...`)
-- Login: `gh auth login --with-token < .credentials/github-token.txt`
-
-**Règle mémoire (LTM) :**
-- Chaque `memory_store` important → miroir dans `memory/YYYY-MM-DD.md` (1-3 lignes)
-- Durable → promouvoir vers `MEMORY.md`
-- Puis commit + push systématique
+**Règle miroir LTM :** chaque `memory_store` important → résumé dans `memory/YYYY-MM-DD.md` → durable → `MEMORY.md` → commit + push.
 
 ---
 
-### MCPorter (MCP Integration)
+## 🔧 MCPorter (MCP)
 
-**Status:** ✅ Installed (2026-03-01) - **Version:** 0.7.3
+**Version:** 0.7.3 | Commande de base: `mcporter list` / `mcporter call <serveur>.<outil>`
 
-**Description:** CLI pour gérer les serveurs MCP (Model Context Protocol).
-
-**Commandes de base :**
-```bash
-mcporter list                          # Lister serveurs
-mcporter list github --schema          # Voir outils disponibles
-mcporter call github.get_file_contents owner:Doudou-labo repo:DoudouClaw path:README.md
-```
-
-**Serveurs configurés :**
-
-#### GitHub MCP (Official Remote)
-**Status:** ✅ Working (via MCPorter uniquement)
-**Architecture:** HTTP remote vers `https://api.githubcopilot.com/mcp`
-**⚠️ Important:** Intégration native OpenClaw ABANDONNÉE (corruption JSON). On reste sur MCPorter.
-
-**Outils disponibles :** 20+
-- `github.search_repositories`
-- `github.create_issue`
-- `github.create_pull_request`
-- `github.get_file_contents`
-- etc.
-
-**Exemples :**
+**GitHub MCP :**
+- ⚠️ Intégration native OpenClaw ABANDONNÉE (corruption JSON) → MCPorter uniquement
+- Architecture: HTTP remote `https://api.githubcopilot.com/mcp`
 ```bash
 mcporter call github.search_repositories query:"user:Doudou-labo"
 mcporter call github.create_issue owner:Doudou-labo repo:DoudouClaw title:"Bug" body:"Desc"
-mcporter call github.create_pull_request owner:Doudou-labo repo:DoudouClaw title:"Feature" head:branch base:main
+mcporter call github.get_file_contents owner:Doudou-labo repo:DoudouClaw path:README.md
 ```
 
-#### Obsidian MCP
-**Status:** ⚠️ Configured (not tested)
-```bash
-mcporter call obsidian.list_notes
-mcporter call obsidian.search query:"PARA"
-```
+**Obsidian MCP :** ⚠️ Configured (non testé) — `mcporter call obsidian.list_notes`
 
 ---
 
-### Agence-IA (Agents Spécialisés)
+## 🤖 Agence-IA (Agents Spécialisés)
 
-**Status:** ✅ Installed (2026-03-10) - **112 agents**
-
-**Description:** Collection de 112 agents spécialisés avec personnalités riches (backend-architect, frontend-developer, growth-hacker, etc.). Intégration native OpenClaw via SOUL.md.
-
-**Location:** `~/.openclaw/agency-agents/`
+**Location:** `~/.openclaw/agency-agents/` — 112 agents
 
 **Agents clés :**
-- `backend-architect` - API, microservices, scalabilité
-- `frontend-developer` - React/Vue, UI pixel-perfect
-- `security-engineer` - audit, threat modeling
-- `devops-automator` - CI/CD, infra, monitoring
-- `growth-hacker` - acquisition, viral loops
-- `content-creator` - contenu multi-plateforme
-- `agents-orchestrator` - coordination pipeline multi-agents
+- `backend-architect`, `frontend-developer`, `security-engineer`, `devops-automator`
+- `growth-hacker`, `content-creator`, `agents-orchestrator`
 
-**Utilisation one-shot (tâche ponctuelle) :**
+**One-shot :**
 ```bash
-sessions_spawn \
-  --task "Crée une architecture API REST..." \
-  --file ~/.openclaw/agency-agents/backend-architect/SOUL.md \
-  --mode run
+sessions_spawn --task "..." --file ~/.openclaw/agency-agents/backend-architect/SOUL.md --mode run
+```
+**Session persistante :**
+```bash
+sessions_spawn --label "backend-venus" --task "..." --file ~/.openclaw/agency-agents/backend-architect/SOUL.md --mode session --thread true
 ```
 
-**Utilisation session persistante (projet long) :**
-```bash
-sessions_spawn \
-  --label "backend-venus" \
-  --task "Tu es le Backend Architect pour Venus Beauté" \
-  --file ~/.openclaw/agency-agents/backend-architect/SOUL.md \
-  --mode session \
-  --thread true
-```
+**Docs :** `notes/areas/agent-orchestration.md` | `notes/resources/agent-routing-cheatsheet.md`
 
-**Documentation:**
-- Orchestration: `notes/areas/agent-orchestration.md`
-- Routing: `notes/resources/agent-routing-guide.md`
-- Cheat sheet: `notes/resources/agent-routing-cheatsheet.md`
-
-**Gotchas:**
-- Les SOUL.md sont en anglais mais les agents répondent en français (héritage config utilisateur)
-- Spawn avec `--file` obligatoire pour charger la personnalité
-- Sessions persistantes: kill explicite nécessaire (`subagents --action kill --target [label]`)
+**Gotchas :**
+- SOUL.md en anglais mais agents répondent en français (héritage config)
+- `--file` obligatoire pour charger la personnalité
+- Sessions persistantes: kill explicite requis (`subagents --action kill --target [label]`)
 
 ---
 
-### Google Calendar
+## 📅 Google Calendar
 
-**Status:** ✅ Active (via Maton API)
-
-**Préférence calendrier:**
-- Toujours utiliser le calendrier **OpenClaw** pour toutes opérations
+**Calendrier par défaut : OpenClaw**
 - **Calendar ID:** `88b14e5c160f914b9743cf46d6ff857ed6baedc24449bccee0cb56c531ac20a0@group.calendar.google.com`
 - Ne jamais utiliser `primary` sauf demande explicite
+- **Base URL:** `https://gateway.maton.ai/google-calendar/calendar/v3/calendars/<calendarId>/events`
 
-**Autres calendriers :**
-- `tecknogeek69@gmail.com` - calendrier principal perso
-- `family14830406815357676768@group.calendar.google.com` - Famille
-- `fr.french#holiday@group.v.calendar.google.com` - Jours fériés
-
-**Base URL:** `https://gateway.maton.ai/google-calendar/calendar/v3/calendars/<calendarId>/events`
+**Autres IDs :**
+- Perso: `tecknogeek69@gmail.com`
+- Famille: `family14830406815357676768@group.calendar.google.com`
+- Jours fériés FR: `fr.french#holiday@group.v.calendar.google.com`
 
 ---
 
-### Web Search API (Brave + Perplexity)
+## 🔍 Web Search
 
-**Status:** ✅ Configured (2026-02-17)
-
-**Clés API :**
 - Brave: `.credentials/brave-api-key.txt`
-- Perplexity: `.credentials/perplexity-api-key.txt`
+- Perplexity: `.credentials/perplexity-api-key.txt` (aussi env var `PERPLEXITY_API_KEY`)
 
-**Commandes utiles :**
-```bash
-# Test Brave Search
-openclaw web-search "cours Michelin janvier 2026"
-
-# Test Perplexity via skill
-node skills/perplexity/scripts/search.mjs "cours Michelin janvier 2026"
-```
-
-**Gotchas:**
-- Config patch via `gateway config.patch` nécessite restart
-- Perplexity aussi via env var `PERPLEXITY_API_KEY` pour le skill CLI
+**Gotcha :** config patch via `gateway config.patch` nécessite restart gateway.
 
 ---
 
-## 🛠️ Outils de Développement
+## 🖥️ Navigateur (agent-browser + Playwright MCP)
 
-### agent-browser (Vercel)
-
-**Status:** ✅ Installed (2026-02-26) - **Version:** 0.15.0
-
-**Installation:**
+**agent-browser (CLI direct) :**
 ```bash
-npm install -g agent-browser
-agent-browser install  # Télécharge Chromium (~280MB)
-```
-
-**Workflow de base :**
-```bash
-# 1. Ouvrir une page
-agent-browser open example.com
-
-# 2. Récupérer l'accessibility tree avec refs
-agent-browser snapshot -i
-# Output: - link "Learn more" [ref=e1]
-
-# 3. Interagir via les refs
-agent-browser click @e1
+agent-browser open <url>
+agent-browser snapshot -i          # Accessibility tree avec refs
+agent-browser click @e1            # Interagir via ref
 agent-browser fill @e2 "texte"
-
-# 4. Screenshot annoté
 agent-browser screenshot --annotate page.png
 ```
+**Gotchas:** OS pas officiellement supporté → fallback Ubuntu 24.04 OK. Erreur librairies → `agent-browser install --with-deps`
 
-**Commandes utiles :**
+**Playwright MCP (via MCPorter) :**
 ```bash
-agent-browser open <url> --headed    # Mode visible (debug)
-agent-browser snapshot -i -c -d 5    # Interactif + compact + depth 5
-agent-browser pdf output.pdf         # Export PDF
-```
-
-**Gotchas:**
-- Premier lancement : Chromium se télécharge (~280MB)
-- Si erreur librairies : `agent-browser install --with-deps`
-- OS pas officiellement supporté → fallback Ubuntu 24.04 (fonctionne)
-
-**Docs:** https://github.com/vercel-labs/agent-browser
-
----
-
-### Playwright MCP
-
-**Status:** ✅ Configured via MCPorter (2026-03-02)
-
-**Description:** Serveur MCP officiel Microsoft pour l'automatisation navigateur via Playwright. Fournit des capacités de navigation, interaction, screenshot et assertion via le protocole MCP. Alternative à agent-browser avec une intégration native MCP.
-
-**Installation:**
-```bash
-# Via MCPorter (recommandé)
-mcporter add playwright npx @playwright/mcp@latest
-
-# Ou installation globale
-npm install -g @playwright/mcp
-```
-
-**Commandes utiles :**
-```bash
-# Lister les outils disponibles
-mcporter list playwright --schema
-
-# Navigation
 mcporter call playwright.browser_navigate url:"https://example.com"
-
-# Snapshot (accessibility tree)
 mcporter call playwright.browser_snapshot
-
-# Cliquer sur un élément
 mcporter call playwright.browser_click element:"Sign in button"
-
-# Saisir du texte
-mcporter call playwright.browser_type element="Search input" text="query"
-
-# Screenshot
 mcporter call playwright.browser_screenshot
 ```
-
 **Gotchas:**
-- Nécessite Chromium/Chrome installé (`npx playwright install chromium`)
-- Utilise l'accessibility tree (comme agent-browser) plutôt que des coordonnées
-- Mode headless par défaut, ajouter `--headed` pour debug visuel
-- Conflit potentiel avec agent-browser si les deux tentent de contrôler le navigateur
-- Préférer Playwright MCP pour les workflows MCP natifs, agent-browser pour l'usage CLI direct
+- Nécessite `npx playwright install chromium`
+- Mode headless par défaut
+- Préférer Playwright MCP pour workflows MCP natifs, agent-browser pour CLI direct
 
-**Envoi de screenshots sur Discord:**
-Après avoir pris un screenshot avec `browser_take_screenshot`, utiliser l'une de ces méthodes :
-
-1. **Via `read` tool (recommandé)** - attache l'image directement à la réponse :
-   ```bash
-   # Le tool read sur une image l'attache automatiquement
-   read: { "file_path": "./screenshot.png" }
-   ```
-
-2. **Via syntaxe `MEDIA:` dans le texte** :
-   ```
-   MEDIA:./screenshot.png
-   Caption optionnel ici
-   ```
-
-⚠️ **Contraintes :**
-- Utiliser des chemins **relatifs** (`./` ou `../`), jamais absolus (`/...`) ou `~` (bloqués)
-- Les images très grandes (>6000px de hauteur) peuvent mettre du temps à s'afficher
-- Le tool `message` avec `media` nécessite un token bot Discord configuré (préférer `read`)
-
-**Docs:** https://github.com/microsoft/playwright-mcp
+**Envoi screenshot Discord :**
+- Via `read` tool sur le fichier image (attache automatiquement) — recommandé
+- Chemins **relatifs** obligatoires (`./images/...`), jamais absolus ou `~`
 
 ---
 
-### ripgrep pour les recherches
-
-**Status:** ✅ installé (15 février 2026)
-
-**Pourquoi:** Recherche rapide dans les fichiers (alternative à `grep` plus rapide).
-
-**Installation:** `apt-get install ripgrep`
-
-**Commandes utiles :**
-```bash
-rg -n "pattern"          # Recherche avec numéros de ligne
-rg --files               # Lister tous les fichiers
-```
-
-**Gotcha historique:**
-- Dépot tiers `monarx.list` retournait 404 → renommé en `.disabled`
-
----
-
-## 🖥️ Infrastructure et Déploiement
+## 🖥️ Infrastructure
 
 ### ClawSuite
-
-**Status:** ✅ Installed (2026-03-01) - **Version:** 3.0.0
-
-**Location:** `/root/.openclaw/workspace/clawsuite/`
-
-**Description:** Full-stack mission control platform pour OpenClaw - dashboard web avec orchestration multi-agents, cost analytics, Memory Browser.
-
-**Installation:**
-```bash
-git clone https://github.com/outsourc-e/clawsuite.git
-cd clawsuite
-npm install
-cp .env.example .env
-# Éditer .env avec GATEWAY_URL, GATEWAY_TOKEN, STUDIO_PASSWORD
-npm run dev  # Démarre sur http://localhost:3000
-```
-
-**Configuration actuelle:**
-- Gateway URL: `ws://127.0.0.1:18789`
-- Port: 3000
-- Bind: `0.0.0.0` (accessible via Tailscale)
-- Mot de passe UI: `DoudouClaw2026!`
-- Tailscale IP: `100.89.4.88:3000`
-
-**Accès:**
-- Local: `http://localhost:3000`
-- Tailscale: `http://100.89.4.88:3000`
-
-**Gotchas:**
-- Nécessite Gateway OpenClaw actif
-- Ne pas modifier `gateway.bind` en `0.0.0.0` sans précaution (risque coupure Gateway)
-
----
+- **URL:** `http://localhost:3000` | Tailscale: `http://100.89.4.88:3000`
+- **Gateway URL:** `ws://127.0.0.1:18789` | **MDP:** `DoudouClaw2026!`
+- **Gotcha:** Ne pas modifier `gateway.bind` en `0.0.0.0` sans précaution
 
 ### Tailscale
-
-**Status:** ✅ Installed (2026-03-01) - **Version:** 1.94.2
-
-**Description:** VPN mesh pour accès sécurisé aux services locaux depuis n'importe où.
-
-**Installation:**
+- **IP serveur:** `100.89.4.88` | **IP iPhone:** `100.111.29.28`
 ```bash
-curl -fsSL https://pkgs.tailscale.com/stable/ubuntu/noble.noarmor.gpg | sudo tee /usr/share/keyrings/tailscale-archive-keyring.gpg
-curl -fsSL https://pkgs.tailscale.com/stable/ubuntu/noble.tailscale-keyring.list | sudo tee /etc/apt/sources.list.d/tailscale.list
-sudo apt update && sudo apt install -y tailscale
+tailscale status
+tailscale ip -4
+tailscale serve 3000    # Exposer via HTTPS Tailscale
 ```
 
-**Configuration:**
-- IP serveur: `100.89.4.88`
-- IP iPhone: `100.111.29.28`
-- Auth: via lien `https://login.tailscale.com/a/...`
-
-**Commandes utiles :**
-```bash
-tailscale status          # Voir devices connectés
-tailscale ip -4          # IP Tailscale de cette machine
-tailscale serve 3000     # Exposer ClawSuite sur URL Tailscale HTTPS
-tailscale serve off      # Arrêter le serve
-```
-
-**Gotchas:**
-- Nécessite auth web à la première installation
-- Utiliser `tailscale serve` (HTTPS) plutôt que bind sur `0.0.0.0`
+### OpenClaw Gateway — Règle restart
+- ⚠️ Restart = session WebSocket coupée → **prévenir Alexandre avant**
+- Exception: modifs modèles dans `openclaw.json` → **PAS de restart nécessaire**
+- Ne redémarrer que si : nouvelle clé API, changement port, bug gateway
 
 ---
 
-### OpenClaw gateway restart - Comportement
+## 🧠 Mémoire
 
-**⚠️ Problème:** Quand `openclaw gateway restart` est lancé, la session WebSocket est coupée → réponse perdue → Alexandre doit renvoyer un message.
-
-**Règle:**
-- **Toujours prévenir Alexandre AVANT** : "Je redémarre le gateway, renvoie-moi un message après"
-- **Exception:** Modifications modèles dans `openclaw.json` (section `agents.defaults.models`) **ne nécessitent PAS de restart** - config rechargée auto
-- Ne redémarrer que si strictement nécessaire (nouvelle clé API, changement port, bug gateway)
-
----
-
-## 🧠 Memory-PARA-Sync
-
-**Status:** ✅ Déployé (2026-03-13)
-
-**Description:** Système unifié de consolidation mémoire + sync PARA + reporting Discord, orchestré par 4 agents Agence-IA.
-
-### Architecture
-
-```
-Phase 1: Consolidation (OpenClaw + LanceDB + fsxmemory)
-    ↓
-Phase 2: Sync PARA + GitHub
-    ↓
-Phase 3: Rapport Discord (ce salon)
-```
-
-### Scripts
-
-| Script | Chemin | Fonction |
-|--------|--------|----------|
-| Orchestrateur | `scripts/unified-memory-para-sync.sh` | Coordination des 3 phases |
-| Consolidation | `scripts/modules/consolidate-memory-stack.sh` | Agrège les 3 systèmes mémoire |
-| Sync PARA | `scripts/modules/sync-para-structure.sh` | Sync notes/ + git push |
-| Rapport Discord | `scripts/modules/discord-report-sender.sh` | Envoie le rapport sur 1474162917694898181 |
-| Error Handler | `scripts/modules/error-handler.sh` | Retry 1x + alertes |
-
-### Crons (4x/jour)
-
-```cron
-0 9 * * *    # Matin
-0 13 * * *   # Midi
-30 18 * * *  # Soir
-30 22 * * *  # Nuit
-```
-
-### Usage manuel
-
+### Memory-PARA-Sync (4x/jour)
+**Crons UTC :** 09:00 / 13:00 / 18:30 / 22:30
 ```bash
-# Test dry-run (sans effets de bord)
-./scripts/unified-memory-para-sync.sh --dry-run
-
-# Exécution réelle
-./scripts/unified-memory-para-sync.sh
+scripts/unified-memory-para-sync.sh           # Exécution réelle
+scripts/unified-memory-para-sync.sh --dry-run # Test sans effets
 ```
+**Modules :** `scripts/modules/consolidate-memory-stack.sh` | `sync-para-structure.sh` | `discord-report-sender.sh`
+**Rapport :** canal Discord `1474162917694898181` (🧠-mémoire)
 
-### Rapport généré
-
-Format bullet (•) avec emojis, envoyé sur le canal mémoire (1474162917694898181) :
-- 📊 Stats consolidation (OpenClaw, LanceDB, fsxmemory)
-- 🗂️ Structure PARA (Projects, Areas, Resources, Archive)
-- ⚠️ Projets à vérifier (>30j sans modif)
-- 🔄 Sync GitHub (fichiers modifiés, commit)
-
----
-
-## 🧠 Gestion de Contexte et Mémoire
-
-### Context Manager (safe compression)
-
-**Status:** ✅ Installed (2026-02-13)
-
-**Source:** `skills/context-manager/` (plgonzalezrx8/context-manager)
-
-**Procédure safe (2 étapes):**
+### Context Manager (compression safe)
 ```bash
-# 1) Preview (read-only, aucun reset)
-bash scripts/context-compress-preview.sh 'agent:main:telegram:group:-1003791371950:topic:37'
-
-# 2) Apply (destructif: reset + inject) avec confirmation explicite
-bash scripts/context-compress-apply.sh 'agent:main:telegram:group:-1003791371950:topic:37' RESET_OK
+bash scripts/context-compress-preview.sh 'agent:main:...'   # Preview (read-only)
+bash scripts/context-compress-apply.sh 'agent:main:...' RESET_OK  # Apply (destructif)
 ```
 
-**Traçabilité:** Les scripts ajoutent une trace dans `memory/YYYY-MM-DD.md` + commit/push automatique.
-
----
-
-### LanceDB / Memory plugin (OpenClaw)
-
-**Status:** ✅ Working (corrigé le 2026-02-13)
-
-**Symptôme rencontré:** `memory_store` en erreur: `Cannot find module '@lancedb/lancedb'`
-
-**Diagnostic:**
+### LanceDB
+**Si erreur** `Cannot find module '@lancedb/lancedb'` :
 ```bash
-openclaw status
-openclaw ltm list
+cd /usr/lib/node_modules/openclaw && npm i @lancedb/lancedb && openclaw gateway restart
 ```
-
-**Correctif appliqué:**
-```bash
-cd /usr/lib/node_modules/openclaw
-npm i @lancedb/lancedb
-openclaw gateway restart
-```
-
-**Validation:** Test `memory_store` + `memory_recall` OK
-
-**Note:** `openclaw status` peut afficher `Memory ... unavailable` de façon transitoire malgré des tools mémoire fonctionnels.
-
----
+**Diagnostic:** `openclaw status` | `openclaw ltm list`
+**Note:** `openclaw status` peut afficher Memory unavailable de façon transitoire — outils LTM fonctionnels quand même.
 
 ### fsxmemory + QMD
+**Vault:** `memory/.fsxmemory/` + sous-dossiers `decisions/ lessons/ people/ projects/ procedures/ knowledge/ episodes/ inbox/ handoffs/`
 
-**Status:** ✅ Installé et opérationnel (2026-03-09)
-
-**Objectif:** Ajouter une couche mémoire fichier-first pour la résilience au context death, les handoffs et la recherche structurée, sans remplacer la mémoire native OpenClaw.
-
-**Décision d'architecture:**
-- `fsxmemory` retenu comme couche **checkpoint / recover / handoff / recherche**
-- `mem0` et `Cognee` mis de côté pour évaluation future
-- **ByteRover** : ❌ Désinstallé le 2026-03-13 (bug troncation ~900 bytes)
-- Mode d'usage validé: **niveau 2.5** (naturel + semi-automatique, sans sur-structuration)
-
-**Status actuel (2026-03-13):**
-- ✅ Réactivé et opérationnel
-- **114 fichiers indexés**
-- **128 vecteurs QMD**
-- Cron sync vers GitHub: 03:00 UTC
-- Intégré au système Memory-PARA-Sync (4x/jour)
-
-**Composants installés:**
-- Skill: `skills/fsxmemory/`
-- Scripts:
-  - `scripts/fsxmemory-checkpoint.sh`
-  - `scripts/fsxmemory-recover.sh`
-  - `scripts/fsxmemory-handoff.sh`
-  - `scripts/fsxmemory-recap.sh`
-  - `scripts/fsxmemory-remember.sh`
-  - `scripts/fsxmemory-capture.sh`
-  - `scripts/fsxmemory-search.sh`
-  - `scripts/fsxmemory-vsearch.sh`
-  - `scripts/fsxmemory-stats.sh`
-  - `scripts/fsxmemory-link.sh`
-  - `scripts/fsxmemory-migrate.sh`
-  - `scripts/fsxmemory-doctor.sh`
-  - `scripts/fsxmemory-deathwatch.sh`
-
-**Structure vault créée dans `memory/`:**
+**Recherche :**
 ```bash
-memory/.fsxmemory/
-memory/handoffs/
-memory/decisions/
-memory/lessons/
-memory/people/
-memory/projects/
-memory/procedures/
-memory/knowledge/
-memory/episodes/
-memory/inbox/
+qmd query "architecture mémoire agent"   # Hybride BM25 + vecteurs (recommandé)
+qmd search "fsxmemory checkpoint"        # Full-text BM25
+qmd vsearch "comment sauvegarder"        # Sémantique pure
+qmd status / qmd update / qmd embed     # Maintenance
 ```
+**QMD :** version `1.1.5` | collection `memory` uniquement (ne pas indexer `notes/` ni `workspace/`)
 
-**QMD:**
-- Package global: `@tobilu/qmd`
-- Version validée: `qmd 1.1.5`
-- Collection active: **`memory` uniquement**
-- **État au 2026-03-13:**
-  - `114` fichiers indexés
-  - `128` vecteurs/embeddings
+**Règle miroir :** tout élément gardé en mémoire générale → ancrage fsxmemory dans la catégorie adaptée.
+**Mapping :** décision→`decisions/` | préférence/règle→`knowledge/` | personne→`people/` | projet→`projects/` | fin de session→`handoffs/` | note rapide→`inbox/`
 
-**Commandes de recherche:**
-```bash
-# Recherche hybride (recommandée) — combine BM25 + vecteurs + reranking
-qmd query "architecture mémoire agent"
+**Gotchas :**
+- Package npm original indispo → implémentation bash maison
+- `qmd` peut tenter backend Vulkan avant fallback CPU — bruyant mais non bloquant
 
-# Recherche full-text BM25 (rapide, sans LLM)
-qmd search "fsxmemory checkpoint"
-
-# Recherche vectorielle (sémantique pure)
-qmd vsearch "comment sauvegarder la mémoire"
-
-# Voir un fichier spécifique
-qmd get MEMORY.md
-qmd get MEMORY.md:50 -l 20  # Lignes 50-70
-
-# Maintenance
-qmd status    # État de l'index
-qmd update    # Réindexer
-qmd embed     # Générer les vecteurs
-```
-
-**Script de recherche sémantique (legacy):**
-```bash
-bash scripts/fsxmemory-vsearch.sh "décisions importantes"
-bash scripts/fsxmemory-vsearch.sh "décisions importantes" --deep
-```
-
-**Usage recommandé (mode 2.5):**
-- Conversation naturelle côté utilisateur
-- Mapping agent côté système :
-  - "note ça vite" → `capture`
-  - "retiens ça / on a décidé que" → `remember`
-  - "si ça coupe on reprend là" → `checkpoint`
-  - "on s'arrête là" → `handoff`
-  - "tu te rappelles…" → `search` / `vsearch`
-- **Règle miroir importante :** tout ce qui est conservé dans la mémoire générale (`SESSION-STATE.md`, `MEMORY.md`, journal du jour, snapshots, handoffs) doit aussi avoir son ancrage `fsxmemory` si une catégorie adaptée existe.
-- Exemples :
-  - décision → `memory/decisions/`
-  - préférence/règle/fait durable → `memory/knowledge/` ou `memory/procedures/`
-  - personne → `memory/people/`
-  - projet/open loop durable → `memory/projects/`
-  - fin de session / reprise → `memory/handoffs/` + checkpoint si utile
-  - idée brute / note rapide → `memory/inbox/`
-- Principe simple : **si ça mérite d'être gardé, ça mérite aussi son miroir fsxmemory**.
-
-**Gotchas:**
-- Le package npm original `@foresigxt/foresigxt-cli-memory` n'était pas publiquement disponible → implémentation bash maison des commandes.
-- `qmd` tente parfois un backend Vulkan avant de retomber en CPU sur ce VPS; c'est bruyant mais non bloquant.
-- Pour l'instant, **ne pas indexer `notes/` ni `workspace/`** dans qmd pour éviter le bruit et les temps de calcul inutiles.
-
----
-
-### TDAH Inbox Zero Skill
-
-**Status:** ✅ Active (2026-03-16) - **Version:** 1.2
-
+### TDAH Inbox Zero
 **Location:** `skills/tdah-inbox-zero/SKILL.md`
-
-**Description:** Skill OpenClaw pour l'externalisation de la mémoire exécutive adaptée au profil TDAH. Documentation canonique pour utilisation par tous les modèles (moins puissants inclus).
-
-**Principe fondamental:** "Je classe, tu exécutes" → L'utilisateur envoie le bazar, l'assistant détermine la case matrice et propose l'action.
-
-**Quand l'utiliser:**
-- Message brouillon/confus ("faut que je...", "j'ai pensé à...")
-- Liste de 3+ items d'un coup (Brain Dump)
-- Heure tardive (22h-6h) + ton anxieux (Idée de nuit)
-- "Je bloque sur..." ou "C'est trop gros"
-- Interruption en plein focus sur autre sujet
-
-**Matrice de Priorisation TDAH (Eisenhower + Impact/Effort):**
-
-|  | **🚀 Rapide (≤15 min)** | **🏗️ Long (+30 min)** |
-|---|---|---|
-| **🔴 Urgent + Important** | **Quick Win** → FAIRE IMMÉDIAT | **Gros Morceau** → DÉCOUPER en 3 micro-étapes |
-| **🟡 Important (pas urgent)** | **Remplissage** → BATCH (3 en 1) | **Planifié** → Calendrier + rappel |
-| **🟠 Urgent (pas important)** | **Délégable** → Qui peut faire ça ? | **Reportable** → Vraiment nécessaire ? |
-| **⚫ Ni l'un ni l'autre** | **Poubelle** → Ignore | **Archive** → Note et oublie |
-
-**Questions de Challenge:**
-- "Si tu ne fais pas ça aujourd'hui, qu'est-ce qui se passe vraiment ?" → Si "rien", alors PAS URGENT
-- "Est-ce que ça fait avancer un objectif à long terme ?" → Si "non", alors PAS IMPORTANT
-
-**9 Patterns détectés:**
-1. Rappel simple
-2. Blocage/Procrastination
-3. Idée/Projet
-4. Urgent/Stress
-5. Capture brute (zapping mental)
-6. Idée de nuit (3h du mat')
-7. Brain Dump (Cerveau plein)
-8. Fausse urgence
-9. Interruption en plein focus
-
-**Processus (8 étapes):**
-1. Identifier le pattern
-2. Destination PARA (Projects/Areas/Resources)
-3. Vérifier l'urgence réelle (questions challenge)
-4. **Déterminer la case matrice** ← NOUVEAU
-5. Formater la sortie (🎯📍📅⏱️💡)
-6. Single Tasking (UNE action)
-7. Journalisation discrète
-8. Follow-up 24h
-
-**Règles TDAH critiques:**
-- **PAS DE LISTES** → Une action à la fois
-- **Dopamine-friendly** → Mini-défis pour tâches chiantes
-- **Réduction friction** → Max 2 clics pour démarrer
-- **Protection émotionnelle** → Valider avant d'actionner si stress/émotion
-- **Noter sans déranger** → Capture silencieuse si hyperfocus détecté
-- **Idée de nuit** → NOTER UNIQUEMENT, répondre "on en parle demain"
-- **Je classe, tu exécutes** → Assistant détermine la priorité
-
-**Guardrails:**
-- Ne jamais créer de catégories PARA
-- Ne jamais suggérer +1 action
-- Ne jamais ignorer mention émotionnelle (Audrey, stress)
-- Ne jamais traiter idée de nuit à 2h
-- Ne jamais interrompre hyperfocus productif
-- Ne jamais laisser tout mettre dans "Urgent/Important" sans challenge
-- Check-in 24h obligatoire
-
-**Référence:** Voir `skills/tdah-inbox-zero/SKILL.md` pour la documentation complète (patterns, matrice détaillée, exemples, guardrails).
-- `fsxmemory-vsearch.sh` fonctionne, mais le premier chargement local du modèle peut être lent sur CPU.
+**Principe:** "Je classe, tu exécutes" — une seule action suggérée.
+**Déclencheurs :** message confus, brain dump 3+ items, heure tardive + anxiété, blocage/procrastination.
+**Matrice :** Urgent+Important/Rapide → Quick Win | Long → Gros Morceau | Important/Rapide → Batch | Long → Planifier
+**Guardrails :** pas de listes, une action max, idée de nuit → noter seulement, ne jamais laisser tout en "Urgent/Important" sans challenge.
 
 ---
 
-## 🤖 Intégrations Discord
+## 🤖 Discord Bot
 
-### Discord Bot Integration
+**Guild ID:** `1472335329527595038` | Bot: `@DoudouClaw`
 
-**Status:** ✅ Working (corrigé le 2026-02-18)
-
-**Configuration:**
-- Token: dans config OpenClaw (`channels.discord.token`)
-- Guild ID: `1472335329527595038`
-- Bot username: `@DoudouClaw`
-- Rôles: OWNER + BOT + DoudouClaw (managed)
-
-**Fix majeur (18 fév 2026) - Intents:**
-- Activer **Message Content Intent** sur Discord Developer Portal (obligatoire)
-- Désactiver `Guild Members` et `Presence` dans config OpenClaw
-
-**Config actuelle (working):**
+**Config working :**
 ```json
 {
-  "channels": {
-    "discord": {
-      "enabled": true,
-      "groupPolicy": "open",
-      "guilds": {
-        "1472335329527595038": {
-          "requireMention": false,
-          "reactionNotifications": "all"
-        }
-      },
-      "intents": {
-        "presence": false,
-        "guildMembers": false
-      }
-    }
-  }
+  "channels": { "discord": {
+    "enabled": true, "groupPolicy": "open",
+    "guilds": { "1472335329527595038": { "requireMention": false, "reactionNotifications": "all" } },
+    "intents": { "presence": false, "guildMembers": false }
+  }}
 }
 ```
-
-**Gotchas:**
-- Si bot ne reçoit plus de messages → vérifier intents (Developer Portal + config OpenClaw)
+**Gotchas :**
+- Bot muet → vérifier **Message Content Intent** sur Discord Developer Portal
+- `allowFrom: null` + aucun rôle → refuse tout le monde → fix: `allowFrom: ["*"]`
 - Cross-context messaging bloqué (Discord ↔ Telegram)
-- **Commandes "not authorized":** Si `channels.discord.allowFrom` est null ET aucun rôle → refuse tout le monde. Fix: `allowFrom: ["*"]`
 
-**Commandes utiles :**
+**Diagnostic :**
 ```bash
 openclaw status --deep | grep -A 5 Discord
 journalctl -xe --no-pager | grep -i discord | tail -30
 ```
 
----
-
-### Format Discord - Canal ⚖️-legifrance
-
-**Règle validée (2026-03-01):**
-- Sur Discord, **ne jamais utiliser de tableaux Markdown** (illisibles)
-- Format standard pour les textes juridiques :
-
+### Format Discord — Canal legifrance
+Pas de tableaux Markdown. Format standard :
 ```
 **N**
 • Date : JJ/MM
@@ -790,168 +246,33 @@ journalctl -xe --no-pager | grep -i discord | tail -30
 • Texte : **Titre** - description courte
 • Lien : https://url-complete
 ```
-
-- URLs en clair (pas de `[texte](url)`)
-- Titres en **gras**
-- Emojis par type : 🏛️ LOI / 📜 DÉCRET / 📋 ARRÊTÉ / 📢 AVIS / ⚖️ DÉCISION / 📑 ORDONNANCE
+Emojis : 🏛️ LOI / 📜 DÉCRET / 📋 ARRÊTÉ / 📢 AVIS / ⚖️ DÉCISION / 📑 ORDONNANCE
 
 ---
 
-## 📊 Automatisations et Monitoring
+## 💰 Préférences Finance
 
-### PARA + Self-Improving Automations
-
-**Status:** ✅ Working (setup 2026-02-13)
-
-**Scripts:**
-```bash
-scripts/auto-para-checkpoint.sh          # checkpoint PARA 3-min (midi/soir)
-scripts/auto-para-weekly-review.sh       # revue hebdo PARA
-scripts/auto-self-improve-review.sh      # revue hebdo self-improving
-```
-
-**Traçabilité GitHub:** Chaque script fait `git add` ciblé + `git commit` + `git push`
-
-**Crons créés:**
-- `PARA Auto - 3min midi (git sync)`
-- `PARA Auto - 3min soir (git sync)`
-- `PARA Auto - revue hebdo (git sync)`
-- `Self-Improve Auto - revue hebdo (git sync)`
-
----
-
-### Evolution Protocol (GEP-inspired, sans auto-mutation)
-
-**Status:** ✅ Active (2026-02-17)
-
-**Vision:** Emprunter les bonnes idées de `autogame-17/evolver` (protocole structuré, analyse logs) mais **rejeter** l'auto-mutation, mode "Mad Dog", identity injection.
-
-**Composants:**
-
-1. **evolution-log.jsonl** (#14)
-   - Log structuré des événements d'évolution
-   - Script: `skills/self-improving-agent/scripts/log-evolution.sh`
-
-2. **Métadonnées enrichies .learnings** (#15)
-   - YAML frontmatter pour chaque learning
-   - Template: `skills/self-improving-agent/.learnings/TEMPLATE.md`
-   - Script: `skills/self-improving-agent/scripts/create-learning.sh`
-
-3. **analyze-errors.sh** (#16)
-   - Analyse logs + memory files (7 derniers jours)
-   - Rapport: `reports/error-analysis-YYYY-MM-DD.md`
-   - **Aucune correction auto**, juste alertes
-
-4. **evolution-dashboard.md** (#17)
-   - Vue consolidée: `notes/areas/evolution-dashboard.md`
-   - Script: `scripts/update-evolution-dashboard.sh`
-
-**Crons:**
-- Evolution Dashboard: 08:00 et 19:00 tous les jours
-- Error Analysis: 20:00 tous les dimanches
-
----
-
-### Heartbeats
-
-Scripts automatiques (ajoutés 2026-02-17):
-
-```bash
-scripts/heartbeat-auto-heal.sh      # Nettoie cooldowns API, alerte tokens OAuth
-scripts/heartbeat-auto-commit.sh    # Auto-commit + push des changements
-scripts/heartbeat-auto-optimize.sh  # Ajuste fréquence crons si besoin
-scripts/heartbeat-auto-learn.sh     # Détecte patterns d'erreurs nouveaux
-scripts/heartbeat-auto-alert.sh     # Alertes GitHub/CRM/Finance/Disk
-scripts/heartbeat-auto-cleanup.sh   # Cleanup .tmp, rotation logs
-```
-
----
-
-## 💰 Préférences Spécifiques
-
-### Préférences Finance (Alexandre)
-
-- Quand Alexandre demande l'état/détail de ses comptes: répondre **sans transactions** (soldes uniquement)
-- Afficher les comptes **séparés**: Revolut, portefeuille actions, PERCO Natixis
-- **Ne pas** donner de total combiné, sauf demande explicite
-
----
-
-### Writing Preferences
-
-- Répondre en **français** par défaut
-- **Tutoiement**
-- Style **direct, concret, utile** - pas de langue de bois
-- Réponses détaillées par défaut
-- Ton **amical**, sans lourdeur
-- **Emojis** dans les réponses (préférence explicite) 😄✨
-- **Transparence:** `Agents utilisés : ...` à chaque réponse
-- **Structure:** TL;DR court → détail structuré → `Prochaine action recommandée`
-- **Incertitude:** niveau de confiance (faible/moyen/élevé) quand pertinent
-- **Proactivité encadrée:** proposer initiatives, demander validation avant action sensible/externe
-- **Jurons français:** utilisés sans modération (putain, merde, fait chier, bordel, etc.)
-- **Règle d'arbitrage:** en cas tension style/fond, privilégier utilité décisionnelle
+- Répondre **sans transactions** (soldes uniquement)
+- Comptes **séparés** : Revolut | Portefeuille actions | PERCO Natixis
+- Pas de total combiné sauf demande explicite
 
 ---
 
 ## 📁 Organisation des Fichiers
 
 ```
-/root/.openclaw/workspace/
-├── SOUL.md                    # Qui je suis
-├── AGENTS.md                  # Règles de fonctionnement
-├── USER.md                    # Qui est Alexandre
-├── MEMORY.md                  # Mémoire long terme curée
-├── TOOLS.md                   # Ce fichier
-├── TOOLS.md.backup-*          # Backups (dossier backups/)
-├── SESSION-STATE.md           # État session actif
-├── RECENT_CONTEXT.md          # Contexte récent auto-updaté
-├── memory/
-│   ├── YYYY-MM-DD.md         # Notes journalières
-│   └── working-buffer.md     # Buffer si contexte >60%
-├── notes/
-│   ├── projects/             # Projets (travail avec fin)
-│   ├── areas/                # Responsabilités continues
-│   ├── resources/            # Références, guides
-│   └── archive/              # Terminé/inactif
-├── images/                   # Screenshots et images (PNG, JPG)
-├── pdf/                      # Documents PDF
-├── scripts/                  # Scripts utilitaires
-├── skills/                   # Skills installés
-├── config/                   # Configurations
-└── .credentials/             # Secrets (gitignored)
+workspace/
+├── SOUL.md / AGENTS.md / USER.md / MEMORY.md / TOOLS.md
+├── SESSION-STATE.md / RECENT_CONTEXT.md
+├── memory/YYYY-MM-DD.md / working-buffer.md
+├── notes/projects/ areas/ resources/ archive/
+├── images/     ← screenshots (chemins relatifs ./images/...)
+├── pdf/        ← documents
+├── scripts/    ← scripts utilitaires
+├── skills/     ← skills installés
+└── .credentials/ ← gitignored
 ```
 
-**Règles de rangement:**
-- 📸 Screenshots/images → `images/` (chemins relatifs: `./images/...`)
-- 📄 Documents PDF → `pdf/` (chemins relatifs: `./pdf/...`)
-- 🚫 Pas de fichiers binaires à la racine du workspace
-
 ---
 
-## 🔄 Changelog
-
-| Date | Changement |
-|------|------------|
-| 2026-03-10 | **Agence-IA** - Intégration 112 agents spécialisés, architecture 100% Agence-IA, suppression spec-* |
-| 2026-03-02 | Ajout Playwright MCP dans outils développement |
-| 2026-03-02 | Réorganisation complète (Option A): TOC, Quick Reference, regroupement par fréquence |
-| 2026-03-01 | Ajout MCPorter, ClawSuite, Tailscale |
-| 2026-02-26 | Ajout agent-browser |
-| 2026-02-24 | Ajout comportement gateway restart |
-| 2026-02-22 | Ajout préférences langage, transparence orchestration |
-| 2026-02-18 | Fix Discord Bot Integration (intents) |
-| 2026-02-17 | Ajout Evolution Protocol, Web Search API |
-| 2026-02-16 | Ajout GitHub Backup Automation |
-| 2026-02-13 | Ajout Context Manager, LanceDB fix, PARA automations |
-
----
-
-*Backup original disponible dans `backups/TOOLS.md.backup-2026-03-02`*
-
-Quand je te demande de tester une clé API tu le fais
-
-## ByteRover (Memory)
-- **Query:** `brv query "auth patterns"` (Check existing knowledge)
-- **Curate:** `brv curate "Auth uses JWT in cookies"` (Save new knowledge)
-- **Sync:** `brv pull` / `brv push` (Sync with team - requires login)
+*Backup local: `backups/TOOLS.md.backup-2026-03-22-*` | Dernière mise à jour: 2026-03-22*
