@@ -10,7 +10,7 @@ Consolidation mémoire quotidienne 2026-03-22 exécutée. Dimanche — exécutio
 - **Self-Improving Weekly Review** (17:20 UTC) : patterns erreurs détectés, corrections mises à jour.
 
 ## Prochains chantiers
-1. **Configuration n8n** — créer Gmail dédié (doudou.n8n@gmail.com) + activer IMAP + générer App Password
+1. ~~**Configuration n8n**~~ — ❌ ANNULÉ (22/03) — service IT Euromaster bloque
 2. **Inventaire physique pneus** — Sprint soir : migrations + FTS5 + mode saisie rapide (session Claude Code active)
 3. **Préparation visite Marc (DR)** — 31/03/2026 (**9 jours restants**)
 4. **Actual Budget** — finaliser onboarding et catégories de suivi

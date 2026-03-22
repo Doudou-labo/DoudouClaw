@@ -4,12 +4,8 @@
 
 ## En cours
 
-### n8n — Configuration Gmail
-- [ ] Créer Gmail dédié (doudou.n8n@gmail.com)
-- [ ] Activer IMAP sur le compte
-- [ ] Générer App Password
-- [ ] Configurer credential IMAP dans n8n
-- [ ] Tester workflow en production avec vrais emails
+### ~~n8n — Configuration Gmail~~ ❌ ANNULÉ (2026-03-22)
+> Service IT Euromaster n'autorise pas — projet mis à l'eau définitivement.
 
 ### Finance Tracker - Pilotage 7 jours
 - [ ] Avant la fin du pilote (16/02) : noter 3 catégories à ajuster (si besoin) + 1 friction d'usage (ce qui bloque)
