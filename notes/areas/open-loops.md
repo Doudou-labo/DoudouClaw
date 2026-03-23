@@ -42,7 +42,7 @@
 - [ ] Ajouter pages légales (CGV, mentions légales, confidentialité)
 
 ## Pneu Tracker — confort / suite
-- [x] Export PDF binaire serveur livré (`pdfkit`) en remplacement de `window.print()`
+- [x] Export PDF binaire serveur livré (`pdfkit`, commit `b3f9a89`) en remplacement de `window.print()` ✅ (2026-03-23)
 - [ ] Ajouter une fiche visuelle du pneu sélectionné (formulaire + édition)
 - [ ] Ajouter un bouton d'admin pour réimporter le catalogue pneus depuis l'UI
 - [ ] Enrichir le dashboard avec stats par marque / saison / référence
