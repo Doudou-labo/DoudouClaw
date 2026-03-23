@@ -177,10 +177,20 @@ Afficher en bas de **chaque réponse**: `Agents utilisés : ...`
 **Point d'entrée unique:** `main`. Documentation canonique: `notes/areas/agent-orchestration.md`
 
 **Règles:**
-- Tâche courte/simple → `main` traite directement
-- Tâche technique mono-domaine → `main` délègue à une session spécialisée
+- Tâche courte/simple (<2 min estimée) → `main` traite directement
+- Tâche technique mono-domaine (≥2 min estimée) → `main` délègue via Agence-IA
 - Tâche multi-domaines (2+) → orchestration multi-sessions obligatoire
 - Message contenant "utilise les agents nécessaires" → orchestration forcée
+
+**🔴 Règles non négociables dès qu'un agent est spawné:**
+1. **`sessions_yield` obligatoire** après tout `sessions_spawn` — sans exception
+2. **Orchestrateur requis** : toujours passer par `agents-orchestrator` comme point d'entrée (sauf spawn direct explicitement demandé par Alexandre)
+3. **Seuil Agence-IA : 2 minutes** — si la tâche dépasse ~2 min de traitement, déléguer à l'agent Agence-IA approprié
+
+**Agence-IA First:**
+- Avant de traiter en direct une tâche technique/créative/analytique, vérifier si un agent Agence-IA spécialisé est plus adapté
+- Utiliser le skill `agence-ia-routing` pour identifier le bon agent
+- Agents disponibles : `~/.openclaw/agency-agents/` (112 agents)
 
 **Pratique:**
 - Une seule synthèse dans le salon courant
