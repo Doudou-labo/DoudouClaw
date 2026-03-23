@@ -42,10 +42,11 @@
 - [ ] Ajouter pages légales (CGV, mentions légales, confidentialité)
 
 ## Pneu Tracker — confort / suite
-- [ ] **🔴 EN COURS — Sprint soir** : migrations versionnées + FTS5 + mode saisie rapide + accessibilité ARIA (via Claude Code, session active)
+- [x] Export PDF binaire serveur livré (`pdfkit`) en remplacement de `window.print()`
 - [ ] Ajouter une fiche visuelle du pneu sélectionné (formulaire + édition)
 - [ ] Ajouter un bouton d'admin pour réimporter le catalogue pneus depuis l'UI
 - [ ] Enrichir le dashboard avec stats par marque / saison / référence
+- [ ] Reprendre si besoin les autres chantiers UX/tech restants : migrations versionnées, mode saisie rapide, accessibilité ARIA, FTS5
 
 ## Inventaire physique pneus — nouvelle app
 - [ ] Rédiger le backlog MVP technique (`inventaire.doudougen.xyz`) à partir du cadrage validé
