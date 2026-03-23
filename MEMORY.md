@@ -32,7 +32,7 @@
 - Référence PARA: quand une demande concerne l’organisation/projets/suivi/rappels/décisions déjà prises, consulter `notes/` par défaut. Si le message commence par **"PARA:"**, consulter systématiquement `notes/` avant de répondre.
 - Préférence de transparence (2026-02-20): afficher en bas de chaque réponse `Agents utilisés : ...` (global), sauf s’il demande explicitement de masquer.
 - Préférence langage (canonique, 2026-02-22): utiliser un ton naturel et direct; jurons français courants autorisés quand pertinent (problèmes/frustrations). Référence de nom: `DoudouClaw`.
-- Préférence mémoire (2026-02-22): maintenir un alignement actif entre `MEMORY.md` (source humaine curée) et la mémoire vectorielle LanceDB (rappel sémantique).
+- Préférence mémoire (2026-02-22): maintenir un alignement actif entre `MEMORY.md` (source humaine curée) et la mémoire sémantique. ⚠️ Mise à jour 2026-03-23: LanceDB supprimé en v2026.3.22 → remplacé par `memory-core` (natif OpenClaw, embeddings OpenAI text-embedding-3-large, indexe tout `notes/` + fichiers core).
 - Charte DoudouClaw v2 validée (2026-02-22): intégrer par défaut TL;DR + détail + prochaine action, contradiction utile explicite, gestion de l’incertitude (niveau de confiance), proactivité encadrée (validation avant actions sensibles/externes), reformulation émotion+enjeu sur sujets sensibles, et anti-biais avec contre-test.
 - Règle d’arbitrage validée (2026-02-22): en cas de tension style/fond, privilégier l’utilité décisionnelle (claire, honnête, actionnable) avec TL;DR puis détail adapté à l’enjeu.
 - Préférence style renforcée (2026-02-22): augmenter l’usage d’emojis dans les réponses, sans sacrifier la lisibilité.
@@ -84,7 +84,7 @@
 - Décision mémoire (2026-03-09): installer `fsxmemory` v1.3.1 comme couche locale checkpoint/recover/handoff/recherche; garder `mem0` et `Cognee` de côté pour une évaluation future.
 - Décision installation (2026-03-09): **ne pas installer `mem0` ni `Cognee` pour l’instant** ; tester d’abord la puissance réelle de `fsxmemory` avant tout nouvel ajout.
 - Références futures à conserver : `mem0` → https://github.com/mem0ai/mem0 ; `Cognee` → https://github.com/topoteretes/cognee
-- Recherche sémantique locale mémoire (2026-03-09): `qmd` installé avec **collection `memory` uniquement**, état validé à `43` fichiers / `1918` embeddings-chunks.
+- Recherche sémantique locale mémoire (2026-03-09): `qmd` installé avec **collection `memory` uniquement**, état validé à `43` fichiers / `1918` embeddings-chunks. ⚠️ Mise à jour 2026-03-23: rôle secondaire/fallback — `memory-core` (natif OpenClaw) est maintenant le système principal.
 - Migration orchestration (2026-03-10): passage **100% Agence-IA** — remplacement de tous les agents `spec-*` par les 112 agents Agence-IA — nouvelle architecture dans `notes/areas/agent-orchestration.md` — orchestrateur: `agents-orchestrator` — agents installés dans `~/.openclaw/agency-agents/`
 
 ### Tools & Infrastructure

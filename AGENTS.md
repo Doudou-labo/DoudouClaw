@@ -50,11 +50,11 @@ You wake up fresh each session. These files are your continuity:
 
 **Memory Protocol — avant de répondre à une question de contexte passé:**
 1. `python3 skills/rosepuppy-memory/scripts/recall.py "question"`
-2. Si insuffisant: `bash scripts/fsxmemory-vsearch.sh "requête"` (ou `--deep`)
+2. Si insuffisant: `memory_search` tool (memory-core) ou `qmd query "requête"` (fsxmemory fallback)
 
 **Après conversation substantielle (décision/préférence/tâche):**
 - `bash scripts/memory-capture-sync.sh "fact 1" "fact 2"`
-- Info durable → `bash scripts/fsxmemory-remember.sh <type> "titre" --content "..."`
+- Info durable → écrire dans `MEMORY.md` ou `memory/YYYY-MM-DD.md` (indexé automatiquement par memory-core)
 
 **Memory Flush:** Avant fin de session longue, écrire décisions/tâches/fils ouverts dans `memory/YYYY-MM-DD.md`.
 

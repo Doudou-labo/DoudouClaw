@@ -15,7 +15,7 @@
 | **Calendrier** | API Maton — Calendar ID OpenClaw ci-dessous |
 | **Mémoire LTM** | `memory_store` / `memory_recall` |
 | **Memory-PARA Sync** | `scripts/unified-memory-para-sync.sh` (cron 4x/jour) |
-| **Recherche mémoire** | `qmd query "..."` |
+| **Recherche mémoire** | `memory_search` tool (memory-core natif OpenClaw) |
 | **Inbox Zero** | Pattern detection auto ou `@doudouclaw inbox:` |
 | **Compression contexte** | `scripts/context-compress-preview.sh` |
 | **Status gateway** | `openclaw status` |
@@ -176,31 +176,24 @@ bash scripts/context-compress-preview.sh 'agent:main:...'   # Preview (read-only
 bash scripts/context-compress-apply.sh 'agent:main:...' RESET_OK  # Apply (destructif)
 ```
 
-### LanceDB
-**Si erreur** `Cannot find module '@lancedb/lancedb'` :
-```bash
-cd /usr/lib/node_modules/openclaw && npm i @lancedb/lancedb && openclaw gateway restart
-```
-**Diagnostic:** `openclaw status` | `openclaw ltm list`
-**Note:** `openclaw status` peut afficher Memory unavailable de façon transitoire — outils LTM fonctionnels quand même.
+### memory-core (v2026.3.22+)
+**Plugin natif OpenClaw** — remplace LanceDB depuis la v2026.3.22.
+- Recherche via `memory_search` tool (embeddings OpenAI `text-embedding-3-large`)
+- Sources indexées : `MEMORY.md`, `memory/YYYY-MM-DD.md`, `AGENTS.md`, `SOUL.md`, `USER.md`, `TOOLS.md`, `notes/**`
+- Coût : ~$0.065/M tokens, négligeable (~$0.02/mois max)
+- **Données LanceDB historiques** : toujours présentes dans `/root/.openclaw/memory/lancedb/` (3 Mo) — orphelines, inaccessibles sans migration manuelle
 
-### fsxmemory + QMD
+**Diagnostic:** `openclaw plugins list | grep memory`
+
+### fsxmemory + QMD (⚠️ secondaire / legacy)
 **Vault:** `memory/.fsxmemory/` + sous-dossiers `decisions/ lessons/ people/ projects/ procedures/ knowledge/ episodes/ inbox/ handoffs/`
-
-**Recherche :**
+- Utilisé comme fallback de recherche complémentaire si besoin
+- **QMD :** version `1.1.5` | collection `memory` uniquement
 ```bash
-qmd query "architecture mémoire agent"   # Hybride BM25 + vecteurs (recommandé)
-qmd search "fsxmemory checkpoint"        # Full-text BM25
-qmd vsearch "comment sauvegarder"        # Sémantique pure
+qmd query "architecture mémoire agent"   # Hybride BM25 + vecteurs
 qmd status / qmd update / qmd embed     # Maintenance
 ```
-**QMD :** version `1.1.5` | collection `memory` uniquement (ne pas indexer `notes/` ni `workspace/`)
-
-**Règle miroir :** tout élément gardé en mémoire générale → ancrage fsxmemory dans la catégorie adaptée.
-**Mapping :** décision→`decisions/` | préférence/règle→`knowledge/` | personne→`people/` | projet→`projects/` | fin de session→`handoffs/` | note rapide→`inbox/`
-
 **Gotchas :**
-- Package npm original indispo → implémentation bash maison
 - `qmd` peut tenter backend Vulkan avant fallback CPU — bruyant mais non bloquant
 
 ### TDAH Inbox Zero
