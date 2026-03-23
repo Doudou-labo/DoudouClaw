@@ -86,6 +86,10 @@
 - Références futures à conserver : `mem0` → https://github.com/mem0ai/mem0 ; `Cognee` → https://github.com/topoteretes/cognee
 - Recherche sémantique locale mémoire (2026-03-09): `qmd` installé avec **collection `memory` uniquement**, état validé à `43` fichiers / `1918` embeddings-chunks. ⚠️ Mise à jour 2026-03-23: rôle secondaire/fallback — `memory-core` (natif OpenClaw) est maintenant le système principal.
 - Migration orchestration (2026-03-10): passage **100% Agence-IA** — remplacement de tous les agents `spec-*` par les 112 agents Agence-IA — nouvelle architecture dans `notes/areas/agent-orchestration.md` — orchestrateur: `agents-orchestrator` — agents installés dans `~/.openclaw/agency-agents/`
+- **Pneu Tracker — export PDF binaire serveur** (2026-03-23): livré et confirmé fonctionnel — `pdfkit` + `serverExternalPackages` (fix Turbopack `__dirname`/fonts) — commit `b3f9a89`. Remplace `window.print()` côté client.
+- **Routine delegation Agence-IA** (2026-03-23): validée et bien appliquée — les tâches tech >2 min sont désormais systématiquement déléguées à Agence-IA (via `agents-orchestrator`).
+- **Routine veille IA nocturne** (2026-03-23): établie — thème tech, format Flash (21 lignes) + Deep Dive (140 lignes), push GitHub quotidien.
+- **Benchmark v10** (2026-03-22): MiniMax-M2.5-highspeed → 44/50 (4e/14), dépasse MiniMax-M2.5 standard (41/50). Fichier: `benchmark-results/README-v10.md`, commit `3b2b9dd`.
 
 ### Tools & Infrastructure
 ### n8n (2026-03-20/21 → **ANNULÉ 2026-03-22**)
@@ -140,5 +144,5 @@ Meilleure amie d’Alexandre, habite à Calais; relation amicale de longue date 
 
 ---
 
-*Dernière mise à jour: 2026-03-22*
+*Dernière mise à jour: 2026-03-23*
 Quand je te demande de tester une clé API tu le fais
