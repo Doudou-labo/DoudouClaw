@@ -26,7 +26,7 @@ Consolidation mémoire quotidienne (2026-03-23 20:50 UTC) — en cours
 ## Immediate Context
 - N1 synchronisé
 - Dimanche 22/03 — Alexandre probablement离线 (jour de repos)
-- n8n Gmail dédié : toujours en attente (prochaine action prioritaire)
+- n8n projet archivé : ne plus référencer le Gmail dédié doudou.n8n@gmail.com
 - Visite Marc DR : **9 jours** (31/03)
 
 ## Key Decisions (actives)
