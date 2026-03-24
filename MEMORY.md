@@ -50,7 +50,7 @@
 
 ### Important Dates
 - Date de naissance: 03/08/2000
-- **Visite Marc (DR) : 31/03/2026** — 10 jours avant l'échéance
+- **Visite Marc (DR) : 31/03/2026** — 6 jours (mise à jour 24/03)
 
 ### Règles linguistiques
 - **Jamais de caractères chinois ou autres langues** dans les réponses en français — relire les outputs avant envoi pour éliminer les artefacts de génération (tokens débordés des modèles multilingues)
@@ -73,7 +73,7 @@
 - Utiliser PARA + mémoire structurée pour améliorer la continuité de travail
 - Centraliser GitHub sur l'organisation `Doudou-labo` avec repo de travail `Doudou-labo/DoudouClaw`
 - Conserver l'identité bot `DoudouClaw` pour les commits/push
-- Modèle LLM par défaut : `anthropic/claude-sonnet-4-6` (2026-03-01)
+- Modèle LLM par défaut : `openai-codex/gpt-5.4` (runtime 2026-03-24, maj MEMORY.md)
 - Discord Streaming Mode : `partial` pour réponses streamées (2026-03-01)
 
 ### Key Decisions Made (suite)
@@ -90,6 +90,7 @@
 - **Routine delegation Agence-IA** (2026-03-23): validée et bien appliquée — les tâches tech >2 min sont désormais systématiquement déléguées à Agence-IA (via `agents-orchestrator`).
 - **Routine veille IA nocturne** (2026-03-23): établie — thème tech, format Flash (21 lignes) + Deep Dive (140 lignes), push GitHub quotidien.
 - **Benchmark v10** (2026-03-22): MiniMax-M2.5-highspeed → 44/50 (4e/14), dépasse MiniMax-M2.5 standard (41/50). Fichier: `benchmark-results/README-v10.md`, commit `3b2b9dd`.
+- **Pneu Tracker — Module Inversion** (2026-03-24): livré et fonctionnel — table `inversions`, bouton dans Historique (préremplit immat+quantité depuis sortie source), onglet Inversion dédié, exports CSV+PDF. Commit `90eebe1`, service redémarré 08:42 UTC.
 
 ### Tools & Infrastructure
 ### n8n (2026-03-20/21 → **ANNULÉ 2026-03-22**)
@@ -144,5 +145,5 @@ Meilleure amie d’Alexandre, habite à Calais; relation amicale de longue date 
 
 ---
 
-*Dernière mise à jour: 2026-03-23*
+*Dernière mise à jour: 2026-03-24*
 Quand je te demande de tester une clé API tu le fais
