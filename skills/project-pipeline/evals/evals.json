@@ -1,0 +1,15 @@
+{
+  "skill_name": "project-pipeline",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "J'ai une idée d'app pour suivre mes finances, comment je la transforme en vrai projet ?",
+      "expected_output": "Cadrage, version minimale, étapes et statut avec prochaine action"
+    },
+    {
+      "id": 2,
+      "prompt": "Je veux lancer un side project e-commerce, par où je commence ?",
+      "expected_output": "Pipeline complet avec but, MVP, étapes et décision de lancer/pauser"
+    }
+  ]
+}

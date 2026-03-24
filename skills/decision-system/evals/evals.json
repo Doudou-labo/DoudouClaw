@@ -1,0 +1,15 @@
+{
+  "skill_name": "decision-system",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "J'ai un projet qui traîne depuis 3 semaines, je sais pas si je continue ou j'arrête",
+      "expected_output": "Analyse avec les 5 questions et une décision claire (lancer/pauser/archiver)"
+    },
+    {
+      "id": 2,
+      "prompt": "Je veux créer une nouvelle app mais j'ai déjà 3 projets ouverts",
+      "expected_output": "Arbitrage entre nouvelle idée et projets existants avec décision et prochaine action"
+    }
+  ]
+}

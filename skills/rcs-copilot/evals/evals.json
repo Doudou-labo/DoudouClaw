@@ -1,0 +1,15 @@
+{
+  "skill_name": "rcs-copilot",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Je dois parler à Arnaud demain de ma progression RCS, comment je prépare ça ?",
+      "expected_output": "Réponse structurée avec contexte, objectif, message clé, 3 arguments, question et prochaine action"
+    },
+    {
+      "id": 2,
+      "prompt": "Marc (DR) vient me voir la semaine prochaine, qu'est-ce que je lui dis pour montrer que je suis prêt pour RCS ?",
+      "expected_output": "Préparation de visite avec posture managériale, preuves de montée en compétence, et message clair"
+    }
+  ]
+}
