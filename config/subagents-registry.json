@@ -75,7 +75,7 @@
       "label": "spec-ops",
       "purpose": "Crons, santé OpenClaw, auto-heal, maintenance scripts.",
       "triggers": ["cron", "automation", "heartbeat", "openclaw status"],
-      "defaultModel": "codex"
+      "defaultModel": "kimi/k2p5"
     }
   ]
 }
