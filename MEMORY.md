@@ -51,6 +51,7 @@
 ### Important Dates
 - Date de naissance: 03/08/2000
 - **Visite Marc (DR) : 31/03/2026** — 6 jours (mise à jour 24/03)
+- **3 mois DoudouClaw 🎂 : 26/03/2026** — milestone agent (première session: 26/12/2025)
 
 ### Règles linguistiques
 - **Jamais de caractères chinois ou autres langues** dans les réponses en français — relire les outputs avant envoi pour éliminer les artefacts de génération (tokens débordés des modèles multilingues)
@@ -145,5 +146,5 @@ Meilleure amie d’Alexandre, habite à Calais; relation amicale de longue date 
 
 ---
 
-*Dernière mise à jour: 2026-03-24*
+*Dernière mise à jour: 2026-03-25*
 Quand je te demande de tester une clé API tu le fais
