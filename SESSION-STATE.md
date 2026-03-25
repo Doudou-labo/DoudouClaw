@@ -1,30 +1,33 @@
 # SESSION-STATE.md — Active Working Memory
 
 ## Current Task
-Module Inversion Pneu Tracker livré (2026-03-24 08:42 UTC) — en cours de test utilisateur
+Veille IA 12h exécutée (2026-03-25 11:03 UTC) ✅ — Script v2 avec filtre fraîcheur 72h + scraping 5 URLs
 
-## Today's Work Summary (2026-03-24)
-- **Module Inversion Pneu Tracker** (08:42 UTC) : livré complet — 4 phases (data model, bouton Inversion Historique, onglet Inversion, exports CSV+PDF). Commit `90eebe1`. Service redémarré. Endpoints validés 200 OK.
+## Today's Work Summary (2026-03-25)
+- Veille IA 12h ✅ : filtre fraîcheur 72h, 5 URLs scrapées, fichier commité (`79e6eb3e`)
+- Auto-heal : tokens google expirés (antigravity + gemini-cli) — non critiques, usage suspendu
+- Auto-commit : rien à committer ✅
+- Auto-learn : aucune nouvelle erreur ✅
+- Auto-alert : RAS ✅
+- Auto-cleanup : 3 médias inbound >7j supprimés | Disque 81%
+- Prochains : reminder 26/03 (anniv 3 mois DoudouClaw) | Visite Marc DR 31/03 (**6 jours**)
 
 ## Prochains chantiers
 1. ~~**Configuration n8n**~~ — ❌ ANNULÉ (22/03) — service IT Euromaster bloque
 2. ~~**Inventaire physique pneus**~~ — ✅ FAIT le samedi 21/03/2026
-3. **Préparation visite Marc (DR)** — 31/03/2026 (**7 jours restants**)
+3. **Préparation visite Marc (DR)** — 31/03/2026 (**6 jours restants**)
 4. **Actual Budget** — finaliser onboarding et catégories de suivi
 5. **Pneu Tracker** — backlog remaining : fiche pneu sélectionnable, stats dashboard
 6. **Reminder 26/03** — 3 mois (naissance DoudouClaw)
 
-## Dernier travail réalisé (2026-03-23)
-- Pneu Tracker : export PDF binaire pdfkit livré (`b3f9a89`) + sprint UI/UX finalisé
-- Benchmark v10 flush : MiniMax-M2.5-highspeed (44/50)
-- Consolidation mémoire quotidienne (22:50 Paris)
-- Veille IA 19h : thème tech — push GitHub ✅
+## Dernier travail réalisé (2026-03-24)
+- Pneu Tracker : Module Inversion livré (`90eebe1`) — table inversions, bouton dans Historique, onglet Inversion, exports CSV+PDF
 
 ## Immediate Context
 - N1 synchronisé
-- 2026-03-24 : Module Inversion Pneu Tracker livré (7 jours avant visite Marc DR)
 - n8n projet archivé : ne plus référencer le Gmail dédié doudou.n8n@gmail.com
-- Visite Marc DR : **7 jours** (31/03)
+- Tokens Google expirés : google-antigravity + google-gemini-cli (historique, pas d'usage actif)
+- Disque à surveiller (81%) — pas d'action urgente
 
 ## Key Decisions (actives)
 1. Jurons français sans modération = identité DoudouClaw.
@@ -41,7 +44,7 @@ Module Inversion Pneu Tracker livré (2026-03-24 08:42 UTC) — en cours de test
 12. **Pneu Tracker module Inversion** : table `inversions`, bouton dans Historique ↔️, onglet Inversion, exports CSV+PDF (2026-03-24, commit `90eebe1`).
 
 ## Key Files
-- `memory/2026-03-24.md`
+- `memory/2026-03-25.md`
 - `MEMORY.md`
 - `notes/areas/open-loops.md`
 - `RECENT_CONTEXT.md`
@@ -54,4 +57,4 @@ Module Inversion Pneu Tracker livré (2026-03-24 08:42 UTC) — en cours de test
 - Automatismes manquants : à identifier avec Alexandre cette session
 
 ## Last Updated
-2026-03-24 20:50 UTC — Consolidation mémoire quotidienne ✅ | Pneu Tracker module Inversion fonctionnel | 7 jours avant visite Marc DR
+2026-03-25 11:03 UTC — Heartbeat midday ✅ | Veille 12h livrée | Disque 81% à surveiller | 6 jours avant visite Marc DR
