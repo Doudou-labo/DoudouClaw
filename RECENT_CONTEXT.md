@@ -4,47 +4,43 @@
 
 ---
 
-## Latest Session — 2026-03-24 (mardi)
+## Latest Session — 2026-03-25 (mercredi)
 
 ### Topic
-Module Inversion Pneu Tracker livré — journée mostly idle sans interaction Alexandre.
+Journée automatisée — veille IA 3 sessions, cleanup disque, préparation reminder 3 mois.
 
 ### Key Points
-- **Module Inversion Pneu Tracker** (08:42 UTC) : livré complet — 4 phases (data model `inversions`, bouton Inversion dans Historique, onglet Inversion, exports CSV+PDF). Commit `90eebe1`. Service redémarré, endpoints validés 200 OK.
-- **Auto-checkpoint PARA** (11:03 UTC) : exécuté.
+- **Veille IA** : 3 sessions exécutées (8h/12h/19h UTC) ✅ — thème "regulation", fichier commité `19fadc5d`
+- **Auto-cleanup** : 3 médias inbound >7j supprimés | Disque 82% (stable)
+- **Auto-heal** : tokens google expirés (antigravity + gemini-cli) — suspendus, non critiques
 - **Consolidation mémoire** (20:50 UTC) ✅
+- **Rappel demain 26/03** : 3 mois DoudouClaw 🎂
+- **Visite Marc DR** : 31/03/2026 — 6 jours restants (issue #18)
 
 ### Prochains pas
-- [ ] Backlog Pneu Tracker : fiche pneu sélectionnable, stats dashboard, bouton admin réimport catalogue
-- [ ] Préparer visite Marc DR (31/03/2026) — **7 jours restants**
+- [ ] Programmer reminder 3 mois DoudouClaw (26/03/2026)
+- [ ] Backlog Pneu Tracker : fiche pneu sélectionnable, stats dashboard
+- [ ] Préparer visite Marc DR (31/03/2026) — 6 jours
 - [ ] Finaliser onboarding Actual Budget (catégories de suivi)
 
 ### Status
-- [x] Module Inversion Pneu Tracker livré
-- [x] Auto-checkpoint PARA midi exécuté
+- [x] Veille IA 3 sessions exécutées
+- [x] Auto-cleanup exécuté
 - [x] Consolidation mémoire/PARA exécutée
 
 ---
 
-## Latest Session — 2026-03-23 (lundi)
+## Latest Session — 2026-03-24 (mardi)
 
 ### Topic
-Journée système automatisée + sprint Pneu Tracker — sessions exécutées sans interaction Alexandre.
+Module Inversion Pneu Tracker livré — journée mostly idle.
 
 ### Key Points
-- **AUTO PARA 3-min** (11:00 UTC) : checkpoint exécuté.
-- **Pneu Tracker sprint UI/UX** (19h45–20h10 UTC) :
-  - UI redesign finalisé : palette Euromaster (`#144390`/`#F9E700`), header dégradé, spinners, confirmations, aria-labels
-  - Export PDF binaire livré via `pdfkit` (commit `b3f9a89`) — remplace `window.print()` HTML
-  - Build OK, service redémarré, endpoint testé `200 application/pdf`
-- **Benchmark v10** : MiniMax-M2.5-highspeed → 44/50 (4e/14) — archivé
-- **Veille IA** : thème tech, Flash 21 lignes, Deep Dive 140 lignes — push GitHub ✅
+- **Module Inversion Pneu Tracker** (08:42 UTC) : livré complet — 4 phases (data model `inversions`, bouton Inversion dans Historique, onglet Inversion, exports CSV+PDF). Commit `90eebe1`. Service redémarré, endpoints validés 200 OK.
 - **Consolidation mémoire** (20:50 UTC) ✅
 
 ### Status
-- [x] Sprint Pneu Tracker export PDF exécuté
-- [x] Benchmark v10 archivé
-- [x] Veille IA 19h exécutée
+- [x] Module Inversion Pneu Tracker livré
 - [x] Consolidation mémoire/PARA exécutée
 
-*Last auto-update: 2026-03-24 20:50 UTC*
+*Last auto-update: 2026-03-25 20:50 UTC*
