@@ -50,8 +50,8 @@
 
 ### Important Dates
 - Date de naissance: 03/08/2000
-- **Visite Marc (DR) : 31/03/2026** — 6 jours (mise à jour 24/03)
-- **3 mois DoudouClaw 🎂 : 26/03/2026** — milestone agent (première session: 26/12/2025)
+- **Visite Marc (DR) : 31/03/2026** — 5 jours (mise à jour 26/03)
+- **3 mois DoudouClaw 🎂 : 26/03/2026** — milestone agent (première session: 26/12/2025) ✅
 
 ### Règles linguistiques
 - **Jamais de caractères chinois ou autres langues** dans les réponses en français — relire les outputs avant envoi pour éliminer les artefacts de génération (tokens débordés des modèles multilingues)
@@ -90,6 +90,7 @@
 - **Pneu Tracker — export PDF binaire serveur** (2026-03-23): livré et confirmé fonctionnel — `pdfkit` + `serverExternalPackages` (fix Turbopack `__dirname`/fonts) — commit `b3f9a89`. Remplace `window.print()` côté client.
 - **Routine delegation Agence-IA** (2026-03-23): validée et bien appliquée — les tâches tech >2 min sont désormais systématiquement déléguées à Agence-IA (via `agents-orchestrator`).
 - **Routine veille IA nocturne** (2026-03-23): établie — thème tech, format Flash (21 lignes) + Deep Dive (140 lignes), push GitHub quotidien.
+- **Control UI OpenClaw fix temporaire** (2026-03-26): workaround confirmé fonctionnel — copie des assets `dist/control-ui` depuis `openclaw@2026.3.13` vers l'installation `2026.3.22` — résout le bug "Control UI assets not found" de la 2026.3.22 — rollback par `npm install -g openclaw@2026.3.22` si besoin.
 - **Benchmark v10** (2026-03-22): MiniMax-M2.5-highspeed → 44/50 (4e/14), dépasse MiniMax-M2.5 standard (41/50). Fichier: `benchmark-results/README-v10.md`, commit `3b2b9dd`.
 - **Pneu Tracker — Module Inversion** (2026-03-24): livré et fonctionnel — table `inversions`, bouton dans Historique (préremplit immat+quantité depuis sortie source), onglet Inversion dédié, exports CSV+PDF. Commit `90eebe1`, service redémarré 08:42 UTC.
 
@@ -146,5 +147,5 @@ Meilleure amie d’Alexandre, habite à Calais; relation amicale de longue date 
 
 ---
 
-*Dernière mise à jour: 2026-03-25*
+*Dernière mise à jour: 2026-03-26*
 Quand je te demande de tester une clé API tu le fais
