@@ -1,7 +1,7 @@
 # SESSION-STATE.md — Active Working Memory
 
 ## Current Task
-Cadrage projet dashboard `pilotage.doudougen.xyz` à partir du tableau de pilotage XLSX — MVP avec KPI AGENCE / VL / PL uniquement, sans KPI métiers type EC/géo/BEG, + possibilité de modifier les données directement sur le site après import Excel
+Correction du MVP `pilotage.doudougen.xyz` en production : année affichée incorrecte (`2025` au lieu de `2026`) + sélecteur de mois non fonctionnel sur le scope `AGENCE`, tout en gardant import XLSX réel, mois, AGENCE/VL/PL et édition manuelle
 
 ## Today's Work Summary (2026-03-26)
 - **🎂 3 mois DoudouClaw !** — milestone : 26/12/2025 → 26/03/2026

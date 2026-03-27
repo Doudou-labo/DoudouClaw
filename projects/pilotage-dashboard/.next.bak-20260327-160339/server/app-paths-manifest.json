@@ -1,0 +1,10 @@
+{
+  "/api/imports/route": "app/api/imports/route.js",
+  "/api/overrides/route": "app/api/overrides/route.js",
+  "/_not-found/page": "app/_not-found/page.js",
+  "/agence/page": "app/agence/page.js",
+  "/imports/page": "app/imports/page.js",
+  "/page": "app/page.js",
+  "/vl/page": "app/vl/page.js",
+  "/pl/page": "app/pl/page.js"
+}

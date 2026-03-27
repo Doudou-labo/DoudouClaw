@@ -1,0 +1,10 @@
+{
+  "/api/imports/route": "/api/imports",
+  "/api/overrides/route": "/api/overrides",
+  "/_not-found/page": "/_not-found",
+  "/agence/page": "/agence",
+  "/imports/page": "/imports",
+  "/page": "/",
+  "/vl/page": "/vl",
+  "/pl/page": "/pl"
+}
