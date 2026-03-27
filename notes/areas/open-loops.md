@@ -55,5 +55,5 @@
 - [ ] Brancher recherche/ajout via référentiel pneus + préparer export Excel final
 
 ## Auto-checkpoints
-- [ ] [AUTO] Prochain checkpoint Actual Budget : formaliser les 3 catégories à ajuster + 1 friction d'usage (pilotage en cours)
+- [ ] [AUTO 2026-03-27 soir] Checkpoint 3-min fait. Next: Finaliser onboarding Actual Budget (catégories de suivi)
 
