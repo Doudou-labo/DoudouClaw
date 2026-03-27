@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+body {
+  @apply bg-bg text-slate-100;
+}
+
+input, select, textarea {
+  @apply bg-slate-900 border border-slate-700 rounded px-3 py-2 text-sm;
+}
+
+button {
+  @apply rounded px-4 py-2 font-medium transition;
+}
+
+.card {
+  @apply bg-panel border border-slate-800 rounded-xl p-4 shadow-lg shadow-black/20;
+}
+
+.table-wrap table {
+  @apply w-full text-sm;
+}
+
+.table-wrap th {
+  @apply text-left text-slate-300 font-semibold pb-3;
+}
+
+.table-wrap td {
+  @apply py-2 border-t border-slate-800;
+}
