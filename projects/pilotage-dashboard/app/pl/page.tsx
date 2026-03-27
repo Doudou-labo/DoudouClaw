@@ -5,5 +5,5 @@ export default async function PlPage({ searchParams }: { searchParams?: Promise<
   const params = searchParams ? await searchParams : undefined;
   const period = params?.period;
 
-  return <DashboardScope scope="PL" rows={getDashboardRows('PL', period)} periods={getAvailablePeriods()} selectedPeriod={period} />;
+  return <DashboardScope scope="PL" rows={getDashboardRows('PL')} periods={getAvailablePeriods()} selectedPeriod={period} />;
 }

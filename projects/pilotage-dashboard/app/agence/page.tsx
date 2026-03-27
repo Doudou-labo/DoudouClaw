@@ -5,5 +5,5 @@ export default async function AgencePage({ searchParams }: { searchParams?: Prom
   const params = searchParams ? await searchParams : undefined;
   const period = params?.period;
 
-  return <DashboardScope scope="AGENCE" rows={getDashboardRows('AGENCE', period)} periods={getAvailablePeriods()} selectedPeriod={period} />;
+  return <DashboardScope scope="AGENCE" rows={getDashboardRows('AGENCE')} periods={getAvailablePeriods()} selectedPeriod={period} />;
 }

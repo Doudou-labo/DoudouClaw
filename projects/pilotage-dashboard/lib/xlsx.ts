@@ -40,17 +40,10 @@ function toNumber(value: unknown) {
 
 function inferWorkbookYear(workbook: XLSX.WorkBook) {
   for (const sheetName of workbook.SheetNames) {
-    const rows = XLSX.utils.sheet_to_json<unknown[]>(workbook.Sheets[sheetName], { header: 1, defval: '' });
-    for (const row of rows) {
-      for (const cell of row) {
-        if (cell instanceof Date && Number.isFinite(cell.getFullYear())) {
-          return cell.getFullYear();
-        }
-        if (typeof cell === 'string') {
-          const match = cell.match(/\b(20\d{2})-\d{2}-\d{2}\b/);
-          if (match) return Number(match[1]);
-        }
-      }
+    const normalizedSheetName = normalizeText(sheetName);
+    const explicitYearMatch = normalizedSheetName.match(/\b(20\d{2})\b/);
+    if (explicitYearMatch) {
+      return Number(explicitYearMatch[1]);
     }
   }
 

@@ -5,5 +5,5 @@ export default async function VlPage({ searchParams }: { searchParams?: Promise<
   const params = searchParams ? await searchParams : undefined;
   const period = params?.period;
 
-  return <DashboardScope scope="VL" rows={getDashboardRows('VL', period)} periods={getAvailablePeriods()} selectedPeriod={period} />;
+  return <DashboardScope scope="VL" rows={getDashboardRows('VL')} periods={getAvailablePeriods()} selectedPeriod={period} />;
 }
