@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { formatPeriodLabel } from '@/lib/periods';
 import { getOverview } from '@/lib/repository';
 
 export default function HomePage() {
@@ -20,6 +21,17 @@ export default function HomePage() {
             <p className="mt-3 text-sm">{count} lignes exploitables</p>
           </Link>
         ))}
+      </section>
+
+      <section className="card">
+        <h2 className="text-xl font-semibold">Périodes détectées</h2>
+        <div className="mt-4 flex flex-wrap gap-2 text-sm text-slate-300">
+          {overview.periods.length ? overview.periods.map((period) => (
+            <span key={period} className="rounded-lg border border-slate-700 px-3 py-2">
+              {formatPeriodLabel(period)}
+            </span>
+          )) : <span>Aucune période détectée.</span>}
+        </div>
       </section>
 
       <section className="card">

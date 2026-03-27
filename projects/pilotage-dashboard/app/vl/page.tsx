@@ -1,6 +1,9 @@
 import { DashboardScope } from '@/components/dashboard-scope';
-import { getDashboardRows } from '@/lib/repository';
+import { getAvailablePeriods, getDashboardRows } from '@/lib/repository';
 
-export default function VlPage() {
-  return <DashboardScope scope="VL" rows={getDashboardRows('VL')} />;
+export default async function VlPage({ searchParams }: { searchParams?: Promise<{ period?: string }> }) {
+  const params = searchParams ? await searchParams : undefined;
+  const period = params?.period;
+
+  return <DashboardScope scope="VL" rows={getDashboardRows('VL', period)} periods={getAvailablePeriods()} selectedPeriod={period} />;
 }

@@ -1,6 +1,9 @@
 import { DashboardScope } from '@/components/dashboard-scope';
-import { getDashboardRows } from '@/lib/repository';
+import { getAvailablePeriods, getDashboardRows } from '@/lib/repository';
 
-export default function AgencePage() {
-  return <DashboardScope scope="AGENCE" rows={getDashboardRows('AGENCE')} />;
+export default async function AgencePage({ searchParams }: { searchParams?: Promise<{ period?: string }> }) {
+  const params = searchParams ? await searchParams : undefined;
+  const period = params?.period;
+
+  return <DashboardScope scope="AGENCE" rows={getDashboardRows('AGENCE', period)} periods={getAvailablePeriods()} selectedPeriod={period} />;
 }

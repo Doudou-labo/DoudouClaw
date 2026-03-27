@@ -1,4 +1,5 @@
 import db from './db';
+import { comparePeriods } from './periods';
 import { importRowSchema, overrideSchema } from './schema';
 import { KpiRow, Scope } from './types';
 
@@ -38,8 +39,8 @@ export function upsertOverride(payload: unknown) {
   `).run(parsed);
 }
 
-export function getDashboardRows(scope: Scope): KpiRow[] {
-  return db.prepare(`
+export function getDashboardRows(scope: Scope, period?: string): KpiRow[] {
+  const rows = db.prepare(`
     WITH latest_import AS (
       SELECT id FROM imports ORDER BY id DESC LIMIT 1
     )
@@ -61,13 +62,30 @@ export function getDashboardRows(scope: Scope): KpiRow[] {
     WHERE s.scope = ?
     ORDER BY s.period ASC, s.kpi_code ASC
   `).all(scope) as KpiRow[];
+
+  return period ? rows.filter((row) => row.period === period) : rows;
+}
+
+export function getAvailablePeriods() {
+  return db.prepare(`
+    WITH latest_import AS (
+      SELECT id FROM imports ORDER BY id DESC LIMIT 1
+    )
+    SELECT DISTINCT period
+    FROM kpi_snapshots
+    WHERE import_id = (SELECT id FROM latest_import)
+    ORDER BY period ASC
+  `).pluck().all() as string[];
 }
 
 export function getOverview() {
+  const periods = getAvailablePeriods().sort(comparePeriods);
+
   return {
     AGENCE: getDashboardRows('AGENCE'),
     VL: getDashboardRows('VL'),
     PL: getDashboardRows('PL'),
+    periods,
     imports: listImports(),
   };
 }

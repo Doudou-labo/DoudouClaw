@@ -25,7 +25,9 @@ export function ImportForm() {
     <form onSubmit={handleSubmit} className="card space-y-4">
       <div>
         <h2 className="text-xl font-semibold">Importer un XLSX</h2>
-        <p className="mt-1 text-sm text-slate-400">Colonnes attendues : scope, kpiCode, period, value.</p>
+        <p className="mt-1 text-sm text-slate-400">
+          Le parseur supporte maintenant le classeur réel de pilotage mensuel et extrait automatiquement les périodes.
+        </p>
       </div>
       <input type="file" name="file" accept=".xlsx,.xls" required />
       <button type="submit" className="bg-indigo-600 hover:bg-indigo-500">Lancer l'import</button>

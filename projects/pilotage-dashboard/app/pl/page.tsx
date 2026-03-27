@@ -1,6 +1,9 @@
 import { DashboardScope } from '@/components/dashboard-scope';
-import { getDashboardRows } from '@/lib/repository';
+import { getAvailablePeriods, getDashboardRows } from '@/lib/repository';
 
-export default function PlPage() {
-  return <DashboardScope scope="PL" rows={getDashboardRows('PL')} />;
+export default async function PlPage({ searchParams }: { searchParams?: Promise<{ period?: string }> }) {
+  const params = searchParams ? await searchParams : undefined;
+  const period = params?.period;
+
+  return <DashboardScope scope="PL" rows={getDashboardRows('PL', period)} periods={getAvailablePeriods()} selectedPeriod={period} />;
 }
