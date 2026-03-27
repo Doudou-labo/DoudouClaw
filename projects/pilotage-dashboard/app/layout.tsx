@@ -3,22 +3,30 @@ import { Nav } from '@/components/nav';
 
 export const metadata = {
   title: 'Pilotage Dashboard',
-  description: 'Dashboard de pilotage Euromaster V1',
+  description: 'Cockpit de pilotage Euromaster',
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="fr">
       <body>
-        <main className="mx-auto min-h-screen max-w-7xl px-6 py-8">
-          <header className="mb-8 flex flex-col gap-4 border-b border-slate-800 pb-6 md:flex-row md:items-center md:justify-between">
+        <main className="shell">
+          <header className="topbar">
             <div>
-              <h1 className="text-3xl font-bold">pilotage.doudougen.xyz</h1>
-              <p className="mt-2 text-sm text-slate-400">MVP V1 corrigé — scopes AGENCE / VL / PL, imports XLSX, overrides manuels.</p>
+              <p className="eyebrow">Tableau de pilotage opérationnel</p>
+              <h1>pilotage.doudougen.xyz</h1>
+              <p className="topbar__subtitle">
+                Vue bureau dense, pensée comme un cockpit agence : périodes, scopes, KPI, écarts et statuts en lecture immédiate.
+              </p>
             </div>
-            <Nav />
+            <div className="topbar__aside">
+              <div className="status-chip">Source active : dernier import + overrides</div>
+              <div className="status-chip">Mode : suivi mensuel AGENCE / VL / PL</div>
+            </div>
           </header>
-          {children}
+
+          <Nav />
+          <section className="page-frame">{children}</section>
         </main>
       </body>
     </html>

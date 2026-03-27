@@ -34,11 +34,11 @@ export function OverrideForm({
   }
 
   return (
-    <form onSubmit={onSubmit} className="grid gap-2 md:grid-cols-[120px_1fr_auto] md:items-center">
-      <input value={value} onChange={(e) => setValue(e.target.value)} inputMode="decimal" />
-      <input value={noteValue} onChange={(e) => setNoteValue(e.target.value)} placeholder="Note override" />
-      <button className="bg-indigo-600 hover:bg-indigo-500" type="submit">Sauver</button>
-      {message ? <p className="md:col-span-3 text-xs text-slate-400">{message}</p> : null}
+    <form onSubmit={onSubmit} className="override-form">
+      <input value={value} onChange={(e) => setValue(e.target.value)} inputMode="decimal" aria-label="Valeur override" />
+      <input value={noteValue} onChange={(e) => setNoteValue(e.target.value)} placeholder="Note override / explication" aria-label="Note override" />
+      <button className="btn-secondary" type="submit">Sauver</button>
+      {message ? <p className="override-form__message">{message}</p> : null}
     </form>
   );
 }

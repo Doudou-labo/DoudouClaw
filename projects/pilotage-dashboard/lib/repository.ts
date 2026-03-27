@@ -3,8 +3,15 @@ import { comparePeriods } from './periods';
 import { importRowSchema, overrideSchema } from './schema';
 import { KpiRow, Scope } from './types';
 
-export function listImports() {
-  return db.prepare(`SELECT id, filename, imported_at as importedAt, row_count as rowCount FROM imports ORDER BY id DESC`).all();
+export type ImportBatch = {
+  id: number;
+  filename: string;
+  importedAt: string;
+  rowCount: number;
+};
+
+export function listImports(): ImportBatch[] {
+  return db.prepare(`SELECT id, filename, imported_at as importedAt, row_count as rowCount FROM imports ORDER BY id DESC`).all() as ImportBatch[];
 }
 
 export function createImport(filename: string, rows: unknown[]) {
