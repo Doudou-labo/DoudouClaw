@@ -7,9 +7,7 @@
 ### ~~n8n — Configuration Gmail~~ ❌ ANNULÉ (2026-03-22)
 > Service IT Euromaster n'autorise pas — projet mis à l'eau définitivement.
 
-### Finance Tracker - Pilotage 7 jours
-- [ ] Avant la fin du pilote (16/02) : noter 3 catégories à ajuster (si besoin) + 1 friction d'usage (ce qui bloque)
-- [ ] J+7 (16/02) : créer 1 objectif d'épargne + 1 récurrence (ex : Spotify) et valider que ça tient dans ta vraie vie
+### Finance Tracker ~~❌ OBSOLÈTE~~ → remplacé par Actual Budget (2026-03-21)
 
 ### 💰 Actual Budget — Finance perso (2026-03-21)
 - [ ] Finaliser onboarding Actual Budget (catégories de suivi)
@@ -57,5 +55,5 @@
 - [ ] Brancher recherche/ajout via référentiel pneus + préparer export Excel final
 
 ## Auto-checkpoints
-- [ ] [AUTO 2026-03-27 midi] Checkpoint 3-min fait. Next: Avant la fin du pilote (16/02) : noter 3 catégories à ajuster (si besoin) + 1 friction d'usage (ce qui bloque)
+- [ ] [AUTO] Prochain checkpoint Actual Budget : formaliser les 3 catégories à ajuster + 1 friction d'usage (pilotage en cours)
 
