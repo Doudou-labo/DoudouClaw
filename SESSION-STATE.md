@@ -1,7 +1,7 @@
 # SESSION-STATE.md — Active Working Memory
 
 ## Current Task
-Consolidation mémoire quotidienne 2026-03-26 20:50 UTC ✅ — Fin de journée
+Cadrage projet dashboard `pilotage.doudougen.xyz` à partir du tableau de pilotage XLSX — définition MVP, stack et périmètre KPI (AGENCE / VL / PL uniquement, sans KPI métiers type EC/géo/BEG)
 
 ## Today's Work Summary (2026-03-26)
 - **🎂 3 mois DoudouClaw !** — milestone : 26/12/2025 → 26/03/2026
@@ -42,6 +42,7 @@ Consolidation mémoire quotidienne 2026-03-26 20:50 UTC ✅ — Fin de journée
 12. **Pneu Tracker module Inversion** : ✅ livrée 2026-03-24 (commit `90eebe1`).
 13. **Veille IA nocturne** : routine établie — 3 sessions/jour (8h/12h/19h UTC), thème tech, Flash 21l + Deep 140l + push GitHub.
 14. **Control UI OpenClaw** : fix temporaire ✅ (2026-03-26, confirmé fonctionnel) — copie assets `2026.3.13` dans `dist/control-ui/` de `2026.3.22`.
+15. **Projet dashboard pilotage** : cadrage MVP validé sur `pilotage.doudougen.xyz` — conserver KPI généraux `AGENCE / VL / PL`, exclure les KPI métiers détaillés (`EC`, géométrie, BEG, etc.) en V1.
 
 ## Key Files
 - `memory/2026-03-26.md`
