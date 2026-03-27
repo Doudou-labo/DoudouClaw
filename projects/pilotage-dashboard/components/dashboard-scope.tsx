@@ -27,7 +27,10 @@ export function DashboardScope({
   const latestRows = rows.filter((row) => row.period === summary.latestPeriod);
   const visibleRows = selectedPeriod ? rows.filter((row) => row.period === selectedPeriod) : latestRows;
   const periodSnapshot = matrix.find((item) => item.period === (selectedPeriod || summary.latestPeriod));
-  const latestGrouped = KPI_CODES.map((code) => latestRows.find((row) => row.kpiCode === code)).filter(Boolean) as KpiRow[];
+  const latestGrouped = KPI_CODES
+    .filter((code) => code !== 'OBJECTIF_N')
+    .map((code) => latestRows.find((row) => row.kpiCode === code))
+    .filter(Boolean) as KpiRow[];
 
   return (
     <div className="space-y-6">
