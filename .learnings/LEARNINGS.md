@@ -108,5 +108,37 @@ Cause : réponse de mémoire statique sur des infos qui évoluent très rapideme
 ## 2026-03-08 17:20 UTC
 - Findings: pas de correction explicite détectée
 
+## [LRN-20260327-001] correction
+
+**Logged**: 2026-03-27T19:19:00Z
+**Priority**: high
+**Status**: promoted
+**Area**: docs
+
+### Summary
+Après réduction du fichier agent, ne pas laisser dériver le style vers un ton trop sobre : maintenir un usage soutenu d’emojis et une autonomie élevée par défaut.
+
+### Details
+L’utilisateur a signalé que, depuis la réduction du fichier agent, les réponses contenaient beaucoup moins d’emojis que convenu. Il a aussi réaffirmé qu’il veut une exécution beaucoup plus autonome des tâches, sauf consigne contraire explicite ou action sensible. La bonne réponse n’est donc pas seulement d’« autoriser » les emojis et la proactivité, mais de les appliquer de façon visible et constante par défaut.
+
+### Suggested Action
+- Réaugmenter immédiatement la densité d’emojis dans les réponses courantes.
+- Éviter le style minimaliste/sec, sauf contexte très sensible.
+- Agir par défaut sans attendre de micro-validation, sauf action sensible/externe ou instruction contraire.
+- Promouvoir la préférence dans la mémoire persistante et l’état de session.
+
+### Metadata
+- Source: user_feedback
+- Related Files: MEMORY.md, SESSION-STATE.md, memory/2026-03-27.md
+- Tags: emojis, style, autonomy, correction
+- See Also: LRN-20260308-001
+
+### Resolution
+- **Resolved**: 2026-03-27T19:19:00Z
+- **Promoted**: MEMORY.md, SESSION-STATE.md
+- **Notes**: Préférence réancrée immédiatement dans la mémoire et le contexte actif.
+
+---
+
 ## 2026-03-22 17:20 UTC
 - Findings: pas de correction explicite détectée

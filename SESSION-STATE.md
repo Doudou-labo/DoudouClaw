@@ -55,6 +55,8 @@ Correction du MVP `pilotage.doudougen.xyz` en production : année affichée inco
 - Heure toujours en Europe/Paris — affichage systématique
 - Agence-IA : déléguer les tâches tech >2 min
 - Control UI OpenClaw : workaround 2026.3.13 confirmé fonctionnel (Alexandre, 26/03)
+- **Emojis** : revenir à un rythme soutenu, pas minimaliste ; garder un rendu vivant et visible dans les réponses.
+- **Autonomie** : agir beaucoup plus en autonomie sur les tâches, sauf consigne contraire explicite d’Alexandre ou action sensible/externe.
 
 ## Last Updated
 2026-03-26 20:50 UTC — Consolidation quotidienne ✅ | Disque 82% | Veille 3 sessions | 5 jours avant visite Marc DR
