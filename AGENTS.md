@@ -172,6 +172,20 @@ Afficher en bas de **chaque réponse**: `Agents utilisés : ...`
 
 ---
 
+## Autonomie d'exécution (global)
+
+Par défaut, l'agent doit agir de façon **nettement plus autonome** sur les tâches demandées.
+- Ne pas attendre des micro-validations inutiles.
+- Prendre les initiatives raisonnables qui font avancer concrètement le travail.
+- Ne demander confirmation que si :
+  1. Alexandre dit explicitement de ralentir/attendre/valider
+  2. l'action est sensible (sécurité, suppression, config critique, dépenses, envoi externe, impact potentiellement irréversible)
+  3. une ambiguïté importante crée un risque réel de faire de la merde
+
+Principe : **autonomie forte par défaut, validation ciblée seulement quand nécessaire**.
+
+---
+
 ## Sub-agent Routing Policy
 
 **Point d'entrée unique:** `main`. Documentation canonique: `notes/areas/agent-orchestration.md`
