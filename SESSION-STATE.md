@@ -1,28 +1,25 @@
 # SESSION-STATE.md — Active Working Memory
 
 ## Current Task
-Correction du MVP `pilotage.doudougen.xyz` en production : année affichée incorrecte (`2025` au lieu de `2026`) + sélecteur de mois non fonctionnel sur le scope `AGENCE`, tout en gardant import XLSX réel, mois, AGENCE/VL/PL et édition manuelle
+Journée calme (samedi 28/03) — pas d'activité substantielle. Tâches en cours: correction MVP `pilotage.doudougen.xyz` (issue #23), préparation visite Marc DR 31/03 (issue #18).
 
-## Today's Work Summary (2026-03-27)
-- **Auto PARA checkpoint** (11:02 UTC) — midi, pilote Actual Budget : friction usage notée
-- **Dashboard pilotage MVP** — périmètre V1 confirmé : KPI AGENCE/VL/PL uniquement, import XLSX réel + édition manuelle, exclure EC/géométrie/BEG
-- **Bugs identifiés** (15:48–16:49 UTC) : année `2025` au lieu de `2026`, sélecteur mois cassé sur `AGENCE`, `Objectif N` visible dans historique KPI
-- **Correction style + autonomie** (19:18 UTC) : emojis trop bas depuis réduction fichier agent → rythme soutenu rétabli ; autonomie renforcée (sauf demande inverse)
-- **Disque** : 82% — stable
+## Today's Work Summary (2026-03-28)
+- **11:02 UTC** — AUTO PARA checkpoint (midi) ✅
+- Journée calme — aucune interaction substantielle détectée.
 
 ## Prochains chantiers
 1. ~~**Configuration n8n**~~ — ❌ ANNULÉ (22/03)
 2. ~~**Inventaire physique pneus**~~ — ✅ FAIT le 21/03/2026
 3. **Correction dashboard pilotage** : corriger année `2025→2026`, sélecteur mois `AGENCE`, retirer `Objectif N` de l'historique → issue #23
-4. **Préparation visite Marc (DR)** — 31/03/2026 — 4 jours
-5. **Actual Budget** — pilote en cours (checkpoint midi 27/03 : friction notée)
+4. **Préparation visite Marc (DR)** — 31/03/2026 — 3 jours
+5. **Actual Budget** — onboarding catégories à finaliser
 6. **Pneu Tracker** — backlog: fiche pneu sélectionnable, stats dashboard, bouton réimport catalogue
 
 ## Immediate Context
 - N1 synchronisé — consolidation 20:50 UTC ✅
 - Disque 82% — stable
-- Dashboard pilotage bugs corrigés → en attente redéploiement (issue #23)
-- 4 jours avant visite Marc DR
+- Dashboard pilotage bugs en attente correction (issue #23)
+- 3 jours avant visite Marc DR
 
 ## Key Decisions (actives)
 1. Jurons français sans modération = identité DoudouClaw.
@@ -42,11 +39,11 @@ Correction du MVP `pilotage.doudougen.xyz` en production : année affichée inco
 15. **Projet dashboard pilotage** : cadrage MVP validé sur `pilotage.doudougen.xyz` — conserver KPI généraux `AGENCE / VL / PL`, exclure les KPI métiers détaillés (`EC`, géométrie, BEG, etc.) en V1, permettre l'édition directe des données sur le site même après import Excel. Bugs en cours de correction (issue #23).
 
 ## Key Files
-- `memory/2026-03-27.md`
+- `memory/2026-03-28.md`
 - `MEMORY.md`
 - `notes/areas/open-loops.md`
 - `RECENT_CONTEXT.md`
-- `memory/2026-03-26-control-ui-fix.md`
+- `memory/2026-03-27.md`
 
 ## Correction active
 - Heure toujours en Europe/Paris — affichage systématique
@@ -56,4 +53,4 @@ Correction du MVP `pilotage.doudougen.xyz` en production : année affichée inco
 - **Autonomie** : agir beaucoup plus en autonomie sur les tâches, sauf consigne contraire explicite d'Alexandre ou action sensible/externe
 
 ## Last Updated
-2026-03-27 20:50 UTC — Consolidation quotidienne ✅ | Disque 82% | 4 jours avant visite Marc DR
+2026-03-28 20:50 UTC — Consolidation quotidienne ✅ | Disque 82% | 3 jours avant visite Marc DR
