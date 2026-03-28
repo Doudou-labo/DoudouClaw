@@ -129,6 +129,11 @@
 - **Sécurité** : .env + data supprimés de git (commit 62a9ab5)
 - Prêt pour déploiement/usage dès qu'Alexandre veut piloter son budget
 
+### Veille IA — faits saillants (2026-03-28)
+- **Perplexity API** : erreur d'auth à 08h (mode dégradé), résolu à 19h — à surveiller si récidive
+- **France** : 16% des emplois menacés par l'IA (~5 millions d'ici fin décennie) — étude COFAS/Observatoire des emplois menacés et émergents, publication 01/04/2026
+- **OpenAI** : dépréciation de Sora (génération vidéo par IA)
+
 ### Things to Remember
 - Le N+1 Arnaud est une relation clé, positive (pro + perso)
 
@@ -150,5 +155,5 @@ Meilleure amie d’Alexandre, habite à Calais; relation amicale de longue date 
 
 ---
 
-*Dernière mise à jour: 2026-03-27*
+*Dernière mise à jour: 2026-03-28*
 Quand je te demande de tester une clé API tu le fais
