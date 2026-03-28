@@ -116,6 +116,10 @@
     "discord-markdown": {
       "version": "1.0.0",
       "installedAt": 1774105598281
+    },
+    "epub": {
+      "version": "1.0.0",
+      "installedAt": 1774642077107
     }
   }
 }
