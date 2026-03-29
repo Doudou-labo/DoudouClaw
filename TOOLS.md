@@ -17,6 +17,8 @@
 | **Memory-PARA Sync** | `scripts/unified-memory-para-sync.sh` (cron 4x/jour) |
 | **Recherche mémoire** | `memory_search` tool (memory-core natif OpenClaw) |
 | **Inbox Zero** | Pattern detection auto ou `@doudouclaw inbox:` |
+
+**Note workflow mémoire :** ByteRover / `brv` n'est plus utilisé dans le flow normal. Référence canonique = `MEMORY.md` + `memory/YYYY-MM-DD.md` + `notes/**` + `memory_search`.
 | **Compression contexte** | `scripts/context-compress-preview.sh` |
 | **Status gateway** | `openclaw status` |
 | **Navigateur** | `agent-browser open <url>` ou `mcporter call playwright.*` |
