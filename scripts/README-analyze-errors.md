@@ -5,7 +5,7 @@
 ## Purpose
 
 Automatically detect and analyze errors across:
-- OpenClaw daemon logs (`/tmp/clawdbot/*.log`)
+- OpenClaw daemon logs (`/tmp/openclaw/*.log`)
 - Session logs (`~/.openclaw/sessions/*.jsonl`)
 - Memory files (`memory/*.md`, `MEMORY.md`)
 
@@ -88,7 +88,7 @@ When errors are found:
 ## What It Scans
 
 ### 1. OpenClaw Logs
-- `/tmp/clawdbot/*.log` (last 7 days)
+- `/tmp/openclaw/*.log` (last 7 days)
 - Searches for: error, fail, exception, timeout
 
 ### 2. Session Logs

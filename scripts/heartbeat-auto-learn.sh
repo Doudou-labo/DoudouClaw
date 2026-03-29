@@ -15,7 +15,7 @@ NEW_LEARNINGS=0
 ERRORS=""
 
 # Logs openclaw
-for logdir in /tmp/clawdbot /tmp/openclaw-logs "$HOME/.openclaw/logs"; do
+for logdir in /tmp/openclaw /tmp/openclaw-logs "$HOME/.openclaw/logs"; do
   if [ -d "$logdir" ]; then
     RECENT_ERRORS=$(find "$logdir" -name "*.log" -mmin -60 -exec grep -il "error\|ECONNREFUSED\|timeout\|rate.limit\|ENOMEM" {} \; 2>/dev/null | head -5)
     if [ -n "$RECENT_ERRORS" ]; then

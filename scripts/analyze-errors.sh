@@ -26,8 +26,8 @@ trap "rm -f $TMP_ERRORS $TMP_TOOLS $TMP_PATTERNS" EXIT
 # -------------------------------------------------------------------
 echo "📋 Scanning OpenClaw logs..."
 
-if [ -d "/tmp/clawdbot" ]; then
-  find /tmp/clawdbot -name "*.log" -mtime -7 -type f 2>/dev/null | while read log; do
+if [ -d "/tmp/openclaw" ]; then
+  find /tmp/openclaw -name "*.log" -mtime -7 -type f 2>/dev/null | while read log; do
     grep -iE "error|fail|exception|timeout" "$log" 2>/dev/null || true
   done > "$TMP_ERRORS"
 fi

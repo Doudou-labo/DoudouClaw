@@ -15,7 +15,7 @@ if [ "$TMP_COUNT" -gt 0 ]; then
 fi
 
 # 2) Logs volumineux (>50MB) — rotation
-for logdir in /tmp/clawdbot /tmp/openclaw-logs; do
+for logdir in /tmp/openclaw /tmp/openclaw-logs; do
   if [ -d "$logdir" ]; then
     BIGFILES=$(find "$logdir" -type f -size +50M 2>/dev/null)
     for f in $BIGFILES; do
