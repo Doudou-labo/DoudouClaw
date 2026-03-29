@@ -65,6 +65,25 @@ When issues found:
 
 ---
 
+## 🧠 Proactive Observations (Surprises Utiles)
+
+**Système actif :** `notes/areas/proactive-observations.md`
+
+À chaque session substantielle :
+1. Observer les patterns dans les échanges (motivation, priorités, obstacles, réactions)
+2. Identifier les surprises potentielles basées sur ces patterns
+3. Lancer une surprise uniquement si confiant (pattern clair + haute pertinence)
+4. Noter le résultat (positif/négatif) et ajuster le système
+
+**Principe clé :** La surprise doit être utile ET inattendue. Alexandre ne doit pas y avoir pensé lui-même.
+
+**Fréquence d'enrichissement :**
+- Observations mises à jour après chaque session substantielle
+- Révision hebdo du système pour éliminer les faux positifs
+- Signaux à surveiller : répétition d'un sujet, évolution du mood, changement de rythme
+
+---
+
 ## 🧹 System Cleanup
 
 ### Close Unused Apps
