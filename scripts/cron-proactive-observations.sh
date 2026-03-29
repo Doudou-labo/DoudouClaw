@@ -247,10 +247,16 @@ send_report() {
         echo -e "$report"
     else
         log "📤 Envoi du rapport vers Discord..."
-        # Écrire dans un fichier pour le cron Discord
-        local report_file="$WORKSPACE/tmp/cron-proactive-report.txt"
-        echo -e "$report" > "$report_file"
-        log "✅ Rapport écrit dans $report_file (envoi Discord à configurer)"
+
+        # Envoyer via l'outil message si disponible
+        if command -v message &> /dev/null; then
+            echo -e "$report" | message action=send to="$ALERT_CHANNEL" || log "❌ Erreur d'envoi Discord"
+        else
+            # Fallback: écrire dans un fichier pour lecture manuelle
+            local report_file="$WORKSPACE/tmp/cron-proactive-report.txt"
+            echo -e "$report" > "$report_file"
+            log "⚠️ Rapport écrit dans $report_file (outil message non disponible depuis cron système)"
+        fi
     fi
 }
 
