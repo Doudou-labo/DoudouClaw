@@ -96,6 +96,8 @@
 - **Benchmark v10** (2026-03-22): MiniMax-M2.5-highspeed → 44/50 (4e/14), dépasse MiniMax-M2.5 standard (41/50). Fichier: `benchmark-results/README-v10.md`, commit `3b2b9dd`.
 - **Pneu Tracker — Module Inversion** (2026-03-24): livrée et fonctionnel — table `inversions`, bouton dans Historique (préremplit immat+quantité depuis sortie source), onglet Inversion dédié, exports CSV+PDF. Commit `90eebe1`, service redémarré 08:42 UTC.
 - **Dashboard pilotage MVP** (2026-03-27): périmètre V1 validé sur `pilotage.doudougen.xyz` — KPI AGENCE/VL/PL uniquement, import XLSX réel + édition manuelle, exclure EC/géométrie/BEG. Bugs correction en cours (issue #23) : année affichée `2025→2026`, sélecteur mois AGENCE cassé, `Objectif N` visible dans historique KPI.
+- **Proactive Observations** (2026-03-29): nouveau système validé pour générer des surprises utiles basées sur l’observation de patterns réels (motivation, priorités, blocages, réactions), et non sur des rappels génériques. Fichier canonique : `notes/areas/proactive-observations.md`.
+- **Crons Proactive Observations** (2026-03-29): 4 crons OpenClaw prompt-based configurés à 07:00 / 12:00 / 17:00 / 21:00 heure de Paris, `sessionTarget=isolated`, exécution du script `scripts/cron-proactive-observations.sh`, lecture de `tmp/cron-proactive-report.txt`, puis delivery Discord dans le salon dédié `1487873994769174588`.
 
 ### Tools & Infrastructure
 ### n8n (2026-03-20/21 → **ANNULÉ 2026-03-22**)

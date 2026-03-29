@@ -170,6 +170,33 @@ scripts/unified-memory-para-sync.sh --dry-run # Test sans effets
 **Modules :** `scripts/modules/consolidate-memory-stack.sh` | `sync-para-structure.sh` | `discord-report-sender.sh`
 **Rapport :** canal Discord `1474162917694898181` (🧠-mémoire)
 
+### Proactive Observations (4x/jour — cron OpenClaw)
+**Principe :** ne pas utiliser `crontab` système pour un reporting Discord de ce type. Utiliser des **crons OpenClaw prompt-based** qui exécutent un script, lisent le résultat, puis publient un compte rendu dans Discord comme les autres crons (veille IA, bourse, etc.).
+
+**Script source :**
+```bash
+bash scripts/cron-proactive-observations.sh
+```
+Ce script produit un rapport intermédiaire dans :
+```bash
+tmp/cron-proactive-report.txt
+```
+
+**Crons actifs (heure Paris) :** 07:00 / 12:00 / 17:00 / 21:00
+
+**Jobs OpenClaw :**
+- `59117dfc-a0ec-4933-8435-5c1ed75d5c5d` — Morning
+- `c784b13c-8a05-4bda-85b3-276bddc0417b` — Noon
+- `f6c6f552-1153-4753-930c-3b504bee0363` — Afternoon
+- `ee31cff3-1ece-478c-93a1-6f31a214e794` — Evening
+
+**Salon Discord dédié :** `1487873994769174588`
+
+**Gotchas :**
+- Ne pas forcer un modèle de cron si ça déclenche un `LiveSessionModelSwitchError` ; laisser `default` si besoin.
+- Le prompt du cron doit faire 3 choses : exécuter le script, lire `tmp/cron-proactive-report.txt`, reformuler proprement pour Discord.
+- Si tu veux changer le salon, éditer les jobs via `openclaw cron edit <id> --channel discord --to <channelId>`.
+
 ### Context Manager (compression safe)
 ```bash
 bash scripts/context-compress-preview.sh 'agent:main:...'   # Preview (read-only)

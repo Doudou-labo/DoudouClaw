@@ -86,6 +86,15 @@ Générer des **surprises utiles** qui :
 - **Résultat** : ❌ Alexandre a dit que c'est inutile car ces trucs existent déjà
 - **Apprentissage** : Éviter les scans techniques/rappels génériques. Focus sur l'observation des patterns de comportement.
 
+### 2026-03-29 - Architecture cron validée
+- **Surprise / décision** : Transformer le système en **crons OpenClaw prompt-based** plutôt qu’en `crontab` système, avec publication dans un salon Discord dédié.
+- **Résultat** : ✅ Alexandre a validé le process attendu (même logique que les autres crons type bourse / veille IA).
+- **Apprentissage** : pour tout cron qui doit produire un compte rendu chat, penser **prompt planifié + delivery intégré**, pas exécution shell brute côté système.
+
+### 2026-03-29 - Signal utilisateur confirmé
+- **Feedback explicite** : Alexandre veut des initiatives qui le surprennent, qu’il n’aurait pas pensées lui-même, et qui le rendent concrètement plus avancé.
+- **Conséquence** : augmenter la valeur d’observation, la qualité des liens inattendus et la pertinence contextuelle ; réduire au maximum les rappels évidents.
+
 ---
 
 ## 🔄 Mécanisme d'enrichissement
