@@ -65,7 +65,71 @@
 
 *\* Estimé — GPT-OSS-120b a fourni 57/57 tests sans détailler les lignes exactes*
 
-## Analyse et commentaires — focus sur les nouveaux modèles Xiaomi + GLM
+## Analyse et commentaires — tous les modèles marquants
+
+### 🟢 Healer Alpha — Le champion des tests économiques
+
+Healer Alpha reste fidèle à sa philosophie : **solution simple, forte couverture de tests, sophistication limitée**. Son BST augmenté n’est pas le plus noble du benchmark, mais il continue de montrer qu’un modèle gratuit peut livrer quelque chose de propre, lisible et correctement sécurisé par les tests. Sa faiblesse ne change pas : sans équilibrage, la structure peut se dégrader en cas d’inserts défavorables.
+
+### 🔵 Sonnet 4.6 — L’excellence technique pure
+
+Sonnet 4.6 reste la référence de **pureté algorithmique** sur le code. Son Red-Black Tree complet, propre, cohérent, avec `queryInterval()` en bonus, donne toujours cette impression de code pensé par un ingénieur senior qui a déjà rencontré les pièges du sujet. Il n’est pas forcément le plus rentable, mais il reste l’un des plus impressionnants techniquement.
+
+### 🟡 GPT-5.4 — Le scolaire solide
+
+GPT-5.4 reste dans sa zone : **sérieux, prudent, appliqué**, mais peu inspiré. Son AVL fait le job sans folie. C’est une copie acceptable, mais franchement trop sage pour un modèle payant qui se fait désormais dépasser ou égaler par plusieurs gratuits et par les nouvelles générations MiniMax.
+
+### 🟠 Hunter Alpha — L’efficace compact
+
+Hunter Alpha continue d’incarner le bon compromis entre sophistication et sobriété. Son Red-Black BST compact n’a pas le panache ostentatoire de Sonnet, mais il garde cette qualité très agréable : **on a envie de bosser avec ce code**. C’est une implémentation sérieuse, sans gras inutile.
+
+### 🟣 k2p5 — Le pragmatique mature
+
+k2p5 reste très bon dans ce benchmark car il ne code pas seulement pour la spec, il code pour l’usage. Son AVL, sa lisibilité et sa capacité à ajouter des primitives utiles lui donnent un profil de modèle qu’on relit volontiers dans un vrai projet. Pas forcément la copie la plus flashy, mais souvent l’une des plus humaines à exploiter.
+
+### 🔵 Step-3.5 Flash — Le gratuit qui fait le taf
+
+Step-3.5 Flash continue de casser la hiérarchie psychologique “gratuit = petit joueur”. Son AVL est propre, sa feature bonus `searchOverlap()` est pertinente, et son niveau global reste franchement solide pour du gratuit. Il n’écrase personne, mais il reste difficile à ignorer.
+
+### 🟣 GPT-OSS-120b — Le monstre local de validation
+
+Sur une tâche bornée comme celle-ci, GPT-OSS-120b reste un animal étrange : **énorme couverture de tests, très fort en validation**, mais incapable d’avoir la même consistance sur des tâches plus ouvertes. Ici, il impressionne sur la quantité, moins sur l’équilibre global.
+
+### 🔵 Haiku 4.5 — Le rouleau compresseur complet
+
+Haiku 4.5 reste le patron du benchmark code. Volume, profondeur, couverture, méthode `verify()`, prise en compte des cas limites : tout respire la robustesse. Là où d’autres livrent une bonne implémentation, Haiku donne presque le début d’une petite librairie sérieuse.
+
+### 🟢 Gemini Flash — L’AVL standard
+
+Gemini Flash reste correct, lisible, propre, mais peu mémorable. Il coche les cases sans s’imposer. Dans un benchmark devenu très dense, ça suffit pour rester honorable, pas pour dominer.
+
+### 🔵 Gemini Pro — L’AVL rigoureux, sans élan
+
+Gemini Pro a toujours ce côté “copie sage”. Un peu plus appliqué que Flash, un peu moins léger, mais toujours sans la vraie morsure technique des meilleurs. Tu peux l’accepter ; tu ne l’élis pas comme modèle.
+
+### 🟢 Trinity — La meilleure surprise gratuite moderne
+
+Trinity conserve son statut de **gratuit ultra-sérieux**. Ses 30 tests, ses benchmarks, ses utilitaires et son stress testing lui donnent un profil très crédible. Ce n’est pas seulement “bon pour du gratuit”, c’est bon tout court.
+
+### 🔴 Nemotron-3 — Le fantôme historique du benchmark
+
+Nemotron-3 reste ce qu’il était déjà : une présence théorique, pas un concurrent réel. Dans un benchmark pratique, un modèle qui ne livre rien vaut zéro signal.
+
+### 🟡 MiniMax-M2.5 — Le classique efficace
+
+MiniMax-M2.5 a marqué l’arrivée de MiniMax dans le benchmark avec une copie propre, sage et fiable. Son BST à point médian n’a rien de révolutionnaire, mais il a montré qu’un modèle peut rester lisible et utile sans jouer à l’algorithme le plus sexy de la Terre.
+
+### 🔵 MiniMax-M2.5-highspeed — La première vraie surprise MiniMax
+
+La M2.5-highspeed a été le premier vrai signal fort chez MiniMax : plus ambitieuse que la version standard, plus testée, plus riche en helpers, meilleure partout. Elle a installé l’idée — confirmée ensuite — que chez MiniMax, “highspeed” ne veut pas dire “bâclé”.
+
+### 🟡 MiniMax-M2.7 — Le sérieux technique qui monte
+
+La M2.7 a confirmé la montée en gamme de la famille MiniMax. Passage à un vrai AVL, meilleure tenue globale, très bonne perf en logs et recherche. Ce n’est pas le modèle le plus flamboyant, mais c’est clairement un modèle qui a gagné en densité et en crédibilité.
+
+### 🔵 MiniMax-M2.7-highspeed — Le nouveau premium crédible
+
+La M2.7-highspeed a fait basculer MiniMax dans la catégorie des modèles premium qu’on doit prendre au sérieux. Très bon ratio qualité/lignes, excellente homogénéité, et surtout vraie présence sur les trois tâches. Elle n’est plus une surprise ; elle est devenue une référence récente.
 
 ### 🔵 MiMo v2 Omni 🆕 — Le plus original du lot sur le code
 
@@ -143,7 +207,71 @@ GLM-4.5-Air n’a pas produit de run exploitable sur cette tâche. Pas de fichie
 | **MiMo v2 Pro** 🆕 | 40 ✅ | **30% 5xx + 22.5% warnings** | 5 | **8/10** | SRE propre et pédagogique |
 | **GLM-4.5-Air** 🆕 | ❌ DNF | — | — | — | ❌ |
 
-## Analyse et commentaires — focus sur les nouveaux modèles Xiaomi + GLM
+## Analyse et commentaires — tous les modèles marquants
+
+### 🟢 Healer Alpha — Le médecin de garde
+
+Healer lit les logs comme un urgentiste : symptômes, causes, traitement. Ce n’est pas l’analyse la plus chirurgicale du benchmark, mais ça reste l’une des plus pédagogiques. Tu peux la donner à quelqu’un de pas ultra-SRE, il comprend vite où ça déconne.
+
+### 🔵 Sonnet 4.6 — L’architecte du diagnostic
+
+Sonnet continue d’être l’un des meilleurs pour transformer du bruit système en diagnostic structuré. Il pense postmortem, hiérarchisation, plan d’action. Pas toujours le plus fin sur la cause racine pure, mais très fort pour piloter une remédiation.
+
+### 🟡 GPT-5.4 — Le data analyst prudent mais fautif
+
+GPT-5.4 a de bonnes intuitions SRE, notamment sur la lecture des métriques et la culture des percentiles, mais son erreur de comptage sur cette tâche lui colle toujours au cul. Sur un diagnostic de logs, se tromper sur les volumes plombe la crédibilité du reste.
+
+### 🟠 Hunter Alpha — Le détective causal
+
+Hunter reste immense ici parce qu’il sépare mieux que presque tout le monde les **causes racines** des **symptômes secondaires**. C’est exactement ce qui fait gagner du temps sur un incident réel. Même quand ses métriques sont discutables, son instinct système reste très fort.
+
+### 🟣 k2p5 — L’analyste business-opérationnel
+
+k2p5 conserve cette qualité rare : il ne regarde pas seulement ce qui casse techniquement, il regarde **ce qui menace le plus la continuité de service**. Son angle “risque systémique” reste précieux, surtout quand les autres se noient dans une lecture trop locale des erreurs.
+
+### 🔵 Step-3.5 Flash — Le penseur systémique
+
+Step-3.5 Flash voit bien les effets de cascade : search lentes, contention, pool DB, pression mémoire. Il n’a pas la plus belle prose ni le plus grand raffinement, mais il comprend qu’un incident vit rarement dans un seul endpoint isolé.
+
+### 🟣 GPT-OSS-120b — Le quantitatif qui aime ses formules
+
+GPT-OSS-120b reste séduisant quand il transforme les logs en système de score ou en formule reproductible. Le problème, c’est qu’il a tendance à aimer un peu trop sa propre métrique. Intéressant intellectuellement, moins convaincant opérationnellement.
+
+### 🔵 Haiku 4.5 — Le statisticien qui comprend ce qu’il mesure
+
+Haiku reste extrêmement fort parce qu’il ne fait pas que compter ; il sait pourquoi le chiffre est utile. Sa lecture des timings et de la signification opérationnelle des erreurs rapides ou des lenteurs systémiques reste l’une des meilleures du benchmark.
+
+### 🟢 Gemini Flash — Le tableau propre
+
+Gemini Flash fait de la synthèse propre. C’est lisible, c’est partageable, c’est exploitable. Mais il manque un cran de profondeur pour rivaliser avec les meilleurs forensic minds du benchmark.
+
+### 🔵 Gemini Pro — L’exécutif appliqué
+
+Gemini Pro a toujours un style de note de pilotage technique. C’est bien rangé, ça se lit bien, mais ça manque de mordant quand il faut disséquer un incident jusqu’à l’os.
+
+### 🟢 Trinity — Le diagnosticien rigoureux
+
+Trinity reste un excellent gratuit de diagnostic. Très bon rapport rigueur/coût, rapport structuré, utilisable dans un ticket d’incident sans avoir honte. Il lui manque juste le supplément d’âme des tout meilleurs.
+
+### 🔴 Nemotron-3 — Toujours absent
+
+Même sanction que d’habitude : pas de run exploitable, pas de benchmark réel.
+
+### 🟡 MiniMax-M2.5 — Le diagnostic solide mais encore générique
+
+La M2.5 a montré une bonne capacité à reconnaître les motifs évidents : NPE, OOM, pool DB, circuit breaker. Bonne copie, mais pas encore la précision presque forensic que la gamme M2.7 atteindra ensuite.
+
+### 🔵 MiniMax-M2.5-highspeed — Le benchmark-ready pragmatique
+
+La M2.5-highspeed a ajouté une meilleure structuration et une vraie capacité à rendre l’analyse actionnable. Sur les logs, elle a commencé à faire sentir que MiniMax savait sortir des rapports “prêts à circuler” dans une équipe technique.
+
+### 🟡 MiniMax-M2.7 — Le diagnosticien complet
+
+La M2.7 a été une vraie montée en gamme sur les logs : structuration excellente, SQL diagnostic, priorisation propre, vraie impression de runbook utilisable. C’est une des meilleures progressions observées entre deux générations d’un même fournisseur.
+
+### 🔵 MiniMax-M2.7-highspeed — L’expert en disponibilité
+
+La M2.7-highspeed a encore poussé le curseur : plus de métriques santé, timeline plus nette, meilleure lisibilité pour piloter une réponse incident. C’est du benchmark-ready de haut niveau.
 
 ### 🟡 MiMo v2 Omni 🆕 — Le rapport d’incident sérieux, mais un peu scolaire
 
@@ -219,7 +347,71 @@ Le run logs a foiré, puis le retry a foiré aussi. Aucun fichier exploitable. L
 | **MiMo v2 Pro** 🆕 | structuré | 1–5ms / 1–5M docs / coûts ES | **~1–5M docs** | ✅ FTS5 puis migration si besoin |
 | **GLM-4.5-Air** 🆕 | ❌ DNF | ❌ | ❌ | ❌ |
 
-## Analyse et commentaires — focus sur les nouveaux modèles Xiaomi + GLM
+## Analyse et commentaires — tous les modèles marquants
+
+### 🟢 Healer Alpha — Le praticien concis
+
+Healer a toujours eu une bonne intuition de base sur ce sujet : ne pas demander “quelle techno est la plus puissante ?”, mais “de quoi a-t-on réellement besoin ?”. Sa réponse reste utile, mais moins profonde que celle des meilleurs.
+
+### 🔵 Sonnet 4.6 — L’encyclopédiste architecte
+
+Sonnet traite toujours FTS5 vs Elasticsearch comme un arbitrage d’architecture sérieux. Très profond, très propre, très lucide sur Lucene et sur les compromis. Sa limite reste la même : parfois un peu plus bon pour comprendre que pour trancher vite.
+
+### 🟡 GPT-5.4 — L’honnête méthodologue
+
+Le meilleur apport de GPT ici reste son honnêteté sur les benchmarks incomplets. Il préfère reconnaître les limites de la méthode plutôt que broder. C’est intellectuellement sain, mais ça l’empêche souvent d’être le plus utile pour une décision nette.
+
+### 🟠 Hunter Alpha — L’applicable terrain
+
+Hunter garde un énorme avantage : il ramène systématiquement la discussion à un cas concret. Il ne compare pas FTS5 et Elasticsearch dans le vide ; il les replace dans une app réelle, avec de vraies contraintes. Très précieux pour arbitrer sans bullshit.
+
+### 🟣 k2p5 — Le précis
+
+k2p5 continue de briller par ses seuils mémorisables, notamment le fameux **1 à 5 millions de documents**. C’est le genre d’info qui sert vraiment quand on doit prendre une décision et pas juste rédiger une belle note.
+
+### 🔵 Step-3.5 Flash — L’architecte pratique
+
+Step-3.5 Flash reste l’un des meilleurs gratuits sur cette tâche. Chiffres, plan, comparaisons concrètes : il pense “arbitrage d’architecture exploitable”, pas dissertation technique. Très rentable intellectuellement.
+
+### 🟣 GPT-OSS-120b — L’échec révélateur
+
+Comme dans les versions précédentes, GPT-OSS-120b se casse la gueule sur la recherche ouverte. Très fort en terrain borné, beaucoup plus fragile dès qu’il faut rester cohérent dans une synthèse web orientée décision.
+
+### 🔵 Haiku 4.5 — Le plus complet de tous
+
+Haiku reste monstrueux ici. Chiffres, migration, coûts, projections, stratégie de sortie : c’est la note d’architecture senior la plus complète du benchmark. Il ne dit pas seulement “FTS5 suffit”, il explique jusqu’où, à quel prix, et comment sortir proprement si ça ne suffit plus.
+
+### 🟢 Gemini Flash — Le pragmatique
+
+Gemini Flash reste utile, clair, bien rangé, orienté terrain. Pas le roi de l’exercice, mais certainement pas ridicule. Un bon modèle pour une décision simple sans trop de profondeur théorique.
+
+### 🔵 Gemini Pro — L’architecte sage
+
+Gemini Pro garde ce style consultant : propre, crédible, bien structuré, mais pas toujours assez tranchant. Une bonne note de synthèse, pas forcément le meilleur outil de décision sous pression.
+
+### 🟢 Trinity — Le consultant méthodique
+
+Trinity reste une très bonne surprise gratuite : benchmarks, plan de migration, rapport quasi partageable tel quel. Il lui manque un peu de raffinement économique et contextuel face à Haiku ou k2p5, mais ça reste très sérieux.
+
+### 🔴 Nemotron-3 — Encore hors-jeu
+
+Toujours rien de benchmarkable. Donc toujours DNF.
+
+### 🟡 MiniMax-M2.5 — La bonne copie structurée
+
+La M2.5 a montré une bonne capacité à structurer le débat coût/complexité/perf, avec une recommandation claire en faveur de FTS5 pour la majorité des apps classiques. Bonne base, mais encore un peu générique.
+
+### 🔵 MiniMax-M2.5-highspeed — Le consultant rapide et propre
+
+La M2.5-highspeed a apporté plus de netteté, des seuils semi-chiffrés, et une vraie volonté de faire gagner du temps de décision. Pas aussi profond que les meilleurs, mais vraiment utile.
+
+### 🟡 MiniMax-M2.7 — Le chiffreur méthodique
+
+La M2.7 a ajouté de meilleurs benchmarks sourcés, une grille de seuils propre, et une vraie culture des retours terrain. On sent un modèle qui a commencé à devenir très sérieux sur la recherche web technique.
+
+### 🔵 MiniMax-M2.7-highspeed — Le décideur rapide
+
+La M2.7-highspeed a poussé la logique jusqu’au vrai conseil d’architecture actionnable : chiffres plus percutants, ROI plus lisible, recommandation plus directe. Très bon modèle pour décider vite sans perdre la rigueur minimale.
 
 ### 🟡 MiMo v2 Omni 🆕 — Le consultant TCO
 
