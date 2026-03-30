@@ -19,7 +19,8 @@ Mise à jour de la mémoire journalière du 29/03/2026 à partir de l’activit�
 - Disque stable
 - Visite Marc DR toujours proche
 - Mode cinéma activé pour les échanges sur séries/films
-- **For All Mankind** en cours : Alexandre vient de finir l’épisode 6 de la saison 1, sans spoil
+- **For All Mankind** en cours : Alexandre a commencé l’épisode 7 de la saison 1, sans spoil
+- **Préférence canonique ciné/séries** : utiliser systématiquement `web_search` + Perplexity pour répondre dès qu’on parle de films ou de séries
 
 ## Last Updated
-2026-03-30 18:54 UTC — Contexte série + mode cinéma ajoutés
+2026-03-30 18:59 UTC — Préférence web+Perplexity films/séries ajoutée

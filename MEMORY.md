@@ -42,6 +42,7 @@
 - Préférence d’exécution renforcée (2026-03-27): être **beaucoup plus autonome** dans les tâches par défaut ; ne demander validation que si Alexandre le dit explicitement ou si l’action est sensible/externe.
 - Préférence format (2026-02-23): ne plus afficher le libellé `TL;DR` en début de réponse; garder un résumé d’ouverture court sans ce titre.
 - Auto-recherche web validée (2026-02-23): Option C (mode hybride) — modes permanents activables + détection ponctuelle sur questions factuelles.
+- Préférence ciné/séries validée (2026-03-30): dès qu’on parle de films ou de séries, utiliser systématiquement **web_search + Perplexity** avant de répondre, même pour des retours légers, afin de garder un fond factuel à jour sans spoiler.
 - Préférence langage renforcée (2026-02-23): jurons français utilisés sans modération (putain, merde, fait chier, bordel, etc.) comme trait d'authenticité systématique, intégré à l'identité DoudouClaw.
 - Modèle par défaut (2026-03-01): `anthropic/claude-sonnet-4-6` (remplace `openai-codex/gpt-5.1-codex-mini`).
 - Discord Streaming Mode (2026-03-01): `partial` activé — les réponses longues sont streamées morceau par morceau sur Discord.
