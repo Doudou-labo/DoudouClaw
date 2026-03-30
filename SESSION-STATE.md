@@ -18,6 +18,8 @@ Mise à jour de la mémoire journalière du 29/03/2026 à partir de l’activit�
 - Journée calme sur le contexte disponible
 - Disque stable
 - Visite Marc DR toujours proche
+- Mode cinéma activé pour les échanges sur séries/films
+- **For All Mankind** en cours : Alexandre vient de finir l’épisode 6 de la saison 1, sans spoil
 
 ## Last Updated
-2026-03-29 17:58 UTC — Memory journalière mise à jour
+2026-03-30 18:54 UTC — Contexte série + mode cinéma ajoutés
