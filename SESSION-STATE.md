@@ -23,6 +23,7 @@ Mise à jour de la mémoire journalière du 29/03/2026 à partir de l’activit�
 - **Préférence canonique ciné/séries** : utiliser systématiquement `web_search` + Perplexity pour répondre dès qu’on parle de films ou de séries
 - **Correction proactive (2026-03-30)** : ne pas répéter toujours les mêmes observations/conseils dans le salon proactive. Objectif attendu = vraie surprise utile + variété + prise d’initiative concrète.
 - **Décision proactive (2026-03-30)** : adopter l’Option A pour les observations proactives = cron OpenClaw en `isolated/agentTurn` avec excellent prompt, sans dépendre du script heuristique actuel.
+- **Correction prompt proactive (2026-03-30)** : les références aux mémoires journalières doivent être dynamiques (`aujourd’hui` + `hier`) et jamais figées sur `2026-03-30` / `2026-03-29`.
 
 ## Last Updated
 2026-03-30 19:02 UTC — Correction proactive ajoutée
