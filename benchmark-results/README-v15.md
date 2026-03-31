@@ -50,6 +50,7 @@
 | Hunter Alpha | Red-Black BST (LLRB) | 238 | 206 | 15 | — |
 | k2p5 | AVL Tree | 364 | 282 | 12+ | `searchInterval()` |
 | Step-3.5 Flash (free) | AVL Tree | 281 | 267 | 12 | `searchOverlap()` |
+| **Step-3.5 Flash (payant)** 💰 | **BST augmenté** | **~200** | **~180** | **12** | `maxEnd`, stress 1000, intervalles invalides |
 | GPT-OSS-120b | AVL Tree | ~250 | ~400 | 57 | `toArray()`, pruning |
 | Haiku 4.5 | Red-Black Tree | 556 | 622 | 42 | `verify()`, floats, négatifs |
 | Gemini Flash | AVL Tree | 210 | 110 | 8 | — |
@@ -283,9 +284,15 @@ C'est **probablement la meilleure réponse de tout le benchmark** sur cette tâc
 |--------|------|------|-----|----------:|
 | Haiku 4.5 | 10 | 8 | 10 | **50** |
 | GLM-4.7 | 10 | 10 | 10 | **49** |
-| **Step-3.5-Flash (payant)** 💰 | **0** | **8** | **10** | **18** |
 | Sonnet 4.6 | 9 | 9 | 9 | **47** |
 | MiniMax-M2.7-highspeed | 9 | 9 | 10 | **47** |
+| GLM-5 | 9 | 10 | 10 | **48** |
+| k2p5 | 8 | 9 | 10 | **45** |
+| Trinity | 8 | 9 | 9 | **45** |
+| Hunter Alpha | 8 | 10 | 9 | **44** |
+| MiniMax-M2.5-highspeed | 9 | 8 | 9 | **44** |
+| MiniMax-M2.7 | 8 | 10 | 8 | **44** |
+| **Step-3.5-Flash (payant)** 💰 | **7** | **8** | **10** | **25** |
 | GLM-5 | 9 | 10 | 10 | **48** |
 | k2p5 | 8 | 9 | 10 | **45** |
 | Trinity | 8 | 9 | 9 | **45** |
