@@ -4,53 +4,49 @@
 
 ---
 
-## Latest Session — 2026-03-28 (samedi) 🧠
+## Latest Session — 2026-03-31 (mardi) 🔴
 
 ### Topic
-Journée calme — consolidation mémoire quotidienne.
+Journée visite Marc (DR) — consolidation mémoire de fin de journée.
 
 ### Key Points
-- **Journée calme** : pas d'interaction substantielle détectée (samedi).
-- **Checkpoint PARA** (11:02 UTC) ✅ — prochaine action: finaliser onboarding Actual Budget.
-- **3 jours avant visite Marc DR** (31/03/2026).
-- **Disque** : 82% — stable.
+- **🔴 Jour J — Visite Marc (DR)** : 31/03/2026 — AUJOURD'HUI.
+- Aucune interaction substantielle avec l'agent (journée probablement DR).
+- Fichier `memory/2026-03-31.md` créé avec état des lieux complet.
+- Retour DR à capturer dès qu'Alexandre revient (feedback, décisions, next steps).
 
 ### Prochains pas
-- [ ] **Correction dashboard pilotage** → issue #23 : année `2025→2026`, sélecteur mois AGENCE, retirer `Objectif N` historique
-- [ ] **3 jours avant visite Marc DR** (31/03/2026) — issue #18
-- [ ] Actual Budget : finaliser onboarding (catégories de suivi)
+- [ ] **🔴 PRIORITÉ IMMÉDIATE — Retour visite Marc DR** : décisions, feedback, next steps
+- [ ] Correction dashboard pilotage → issue #23 (année, sélecteur AGENCE, Objectif N)
+- [ ] Actual Budget : finaliser onboarding catégories
 - [ ] Backlog Pneu Tracker : fiche pneu, stats dashboard, bouton réimport catalogue
+- [ ] Inventaire physique pneus : implémenter import XLSX + contrôle conforme/écarts
 
 ### Status
-- [x] Checkpoint PARA midi exécuté
-- [x] Consolidation mémoire/PARA exécutée
-- [x] SESSION-STATE synchronisé sur 2026-03-28
+- [x] Consolidation mémoire/PARA exécutée (20:56 UTC)
+- [x] SESSION-STATE synchronisé sur 2026-03-31
+- [ ] Retour DR à capturer (pending)
 
 ---
 
-## Latest Session — 2026-03-27 (vendredi) 🔧
+## Latest Session — 2026-03-30 (lundi) 🎬
 
 ### Topic
-Correction MVP dashboard pilotage + rappel style/autonomie.
+Mode cinéma activé + correction prompt proactive.
 
 ### Key Points
-- **Dashboard pilotage** : périmètre V1 confirmé (KPI AGENCE/VL/PL, import XLSX + édition manuelle) — bugs identifiés et correction en cours (année 2025→2026, sélecteur mois AGENCE cassé, Objectif N dans historique)
-- **Style emojis** : rythme soutenu rétabli après signalement d'Alexandre — ne pas retomber dans un ton trop sobre
-- **Autonomie** : renforcée (actionner sans demander validation sauf externe/sensible) — confirmé par Alexandre
-- **Actual Budget** : checkpoint midi — friction d'usage notée
-- **Disque** : 82% — stable
-- **Consolidation mémoire** (20:50 UTC) ✅
+- **Mode cinéma** : activation pour échanges films/séries → web_search + Perplexity systématique.
+- **For All Mankind** : saison 1, épisode 7 terminé.
+- **Option A proactive** : prompt corrigé (3 jours glissants, anti-répétition, `NO_REPLY` si rien de fort).
+- Disque : ~82% — stable.
 
 ### Prochains pas
-- [ ] **Correction dashboard pilotage** → issue #23 : année `2025→2026`, sélecteur mois AGENCE, retirer `Objectif N` historique
-- [ ] **4 jours avant visite Marc DR** (31/03/2026) — issue #18
-- [ ] Pilote Actual Budget : 3 catégories à ajuster + 1 friction (checkpoint à formaliser)
-- [ ] Backlog Pneu Tracker : fiche pneu, stats dashboard, bouton réimport catalogue
+- [ ] **🔴 Visite Marc DR** (31/03/2026) — jour J aujourd'hui même
+- [ ] Issues #18 à #23 : pilotage RCS (DR, parking sollicitations, compte exploitation, 25 incontournables, documentation, pilotage dashboard)
 
 ### Status
-- [x] Périmètre V1 dashboard pilotage confirmé
-- [x] Bugs dashboard identifiés et correction lancée (issue #23)
-- [x] Style emojis + autonomie renforcés
-- [x] Consolidation mémoire/PARA exécutée
+- [x] Mode cinéma activé
+- [x] Prompt Option A corrigé
+- [x] Consolidation mémoire exécutée
 
-*Last auto-update: 2026-03-28 20:50 UTC*
+*Last auto-update: 2026-03-31 20:56 UTC*

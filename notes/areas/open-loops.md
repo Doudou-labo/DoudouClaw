@@ -28,7 +28,7 @@
 ### Évolution RCS — Suivi post-entretien Arnaud ✅
 - [x] ~~Entretien individuel avec Arnaud~~ → **FAIT le 16/02/2026** — RCS confirmé, timeline 6 mois–2 ans
 - [x] ~~Augmentation~~ → **REÇUE le 25/02/2026** : 2040 → 2091€, spontanée par Arnaud
-- [ ] **🔴 PRIORITÉ — Préparer la visite de Marc (DR) le 31/03/2026** → Issue #18
+- [ ] **🔴 PRIORITÉ — Retour visite Marc (DR) 31/03/2026** → Issue #18 — **⚠️ outcome à capturer**
 - [ ] **Mettre en place le parking sollicitations** → Issue #20
 - [ ] **Maîtriser la lecture du compte d'exploitation** → Issue #19
 - [ ] **Documenter 1 tâche RCS par semaine** → Issue #21
