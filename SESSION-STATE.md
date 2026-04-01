@@ -1,11 +1,20 @@
 # SESSION-STATE.md — Active Working Memory
 
 ## Current Task
-Consolidation mémoire quotidienne — fin de journée 2026-03-31.
+Heartbeat du matin — système stable.
 
-## Today's Work Summary (2026-03-31)
+## Today's Work Summary (2026-04-01)
+- **06:01 UTC** — Dashboard mis à jour avec succès.
+- **06:06 UTC** — Veille IA 8h00 exécutée avec succès (thème Regulation).
+  - Flash : AI Act européen, calendrier d'application, sanctions
+  - Deep Dive : Digital Omnibus, trilogue interinstitutionnel, ajustements RGPD
+  - Commit : `a19e4fc2`
+- **6:34 UTC** — Heartbeat complet : auto-heal ✓, auto-commit ✓, auto-learn ✓, auto-alert ✓, auto-cleanup ✓
+- 3 learnings existants (100% appliqués, 0 en attente)
+
+## Yesterday's Summary (2026-03-31)
 - **20:56 UTC** — Cron quotidien de consolidation mémoire + PARA.
-- **🔴 Événement clé** : Visite Marc (DR) AUJOURD'HUI 31/03/2026.
+- **🔴 Événement clé** : Visite Marc (DR).
 - Aucune interaction substantielle avec l'agent ce jour (journée DR probablement).
 - Fichier `memory/2026-03-31.md` créé avec état des lieux.
 
