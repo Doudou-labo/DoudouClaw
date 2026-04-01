@@ -17,6 +17,13 @@ Heartbeat du matin — système stable.
   - 📊 Contexte session : 14% (stable)
   - 📦 7 learnings existants (100% appliqués, 0 en attente)
   - 💾 Disque : 49% (OK)
+- **14:56 UTC** — Rapports bourse livrés avec succès
+  - EU Mi-séance : CAC 40 -0.41%, Michelin +2.60%
+  - US Ouverture : S&P 500 +0.40%, indices verts (3/3)
+- **15:22 UTC** — Heartbeat complet : auto-heal ✓, auto-commit ✓, auto-learn ✓, auto-alert ✓, auto-cleanup ✓
+  - 💾 Disque : 49% (stable)
+  - ⚠️ Note : 5102 erreurs dans logs du jour (flood CLI 14:45-14:47, système stable maintenant)
+  - ⚠️ Note : API Perplexity en erreur d'auth → à surveiller
 
 ## Yesterday's Summary (2026-03-31)
 - **20:56 UTC** — Cron quotidien de consolidation mémoire + PARA.
