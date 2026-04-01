@@ -9,8 +9,14 @@ Heartbeat du matin — système stable.
   - Flash : AI Act européen, calendrier d'application, sanctions
   - Deep Dive : Digital Omnibus, trilogue interinstitutionnel, ajustements RGPD
   - Commit : `a19e4fc2`
-- **6:34 UTC** — Heartbeat complet : auto-heal ✓, auto-commit ✓, auto-learn ✓, auto-alert ✓, auto-cleanup ✓
-- 3 learnings existants (100% appliqués, 0 en attente)
+- **14:52 UTC** — Veille IA 12h00 exécutée (⚠️ Perplexity API error)
+  - Fichier : `notes/areas/veille-ia/daily-flash/2026-04-01/12h-flash.md`
+  - Commit : `8c90368e`
+  - ⚠️ Problème : API Perplexity en erreur d'authentification → à corriger
+- **14:53 UTC** — Heartbeat complet : auto-heal ✓, auto-commit ✓, auto-learn ✓, auto-alert ✓, auto-cleanup ✓
+  - 📊 Contexte session : 14% (stable)
+  - 📦 7 learnings existants (100% appliqués, 0 en attente)
+  - 💾 Disque : 49% (OK)
 
 ## Yesterday's Summary (2026-03-31)
 - **20:56 UTC** — Cron quotidien de consolidation mémoire + PARA.
