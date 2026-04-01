@@ -1,7 +1,7 @@
 # SESSION-STATE.md — Active Working Memory
 
 ## Current Task
-Veille IA 19h00 terminée avec succès — système stable.
+Consolidation mémoire quotidienne terminée — système stable, problème Perplexity API à surveiller.
 
 ## Today's Work Summary (2026-04-01)
 - **06:01 UTC** — Dashboard mis à jour avec succès.
@@ -33,6 +33,7 @@ Veille IA 19h00 terminée avec succès — système stable.
   - 📦 7 learnings existants (0 en attente)
   - 💾 Disque : 49% (OK)
   - ⚠️ Note : 5122 erreurs dans logs du jour (stable, pas de nouveaux patterns)
+- **21:50 UTC** — Cron consolidation mémoire quotidienne exécuté avec succès.
 
 ## Yesterday's Summary (2026-03-31)
 - **20:56 UTC** — Cron quotidien de consolidation mémoire + PARA.

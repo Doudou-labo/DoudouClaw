@@ -49,4 +49,30 @@ Mode cinéma activé + correction prompt proactive.
 - [x] Prompt Option A corrigé
 - [x] Consolidation mémoire exécutée
 
-*Last auto-update: 2026-03-31 20:56 UTC*
+---
+
+## Latest Session — 2026-04-01 (mercredi) 🧠
+
+### Topic
+Consolidation mémoire quotidienne — système stable, problème Perplexity API.
+
+### Key Points
+- **Veille IA** : 3 exécutions complètes (8h, 12h, 19h) — thème Régulation.
+- **Bourse** : rapports livrés avec succès (CAC 40 -0.41%, Michelin +2.60%, US verts).
+- **⚠️ Problème Perplexity API** : erreur d'auth détectée à 14:52 UTC — à surveiller.
+- **Système stable** : contexte session 14%, disque 49%, 5122 erreurs logs (flood CLI).
+
+### Prochains pas
+- [ ] **🔴 Retour visite Marc DR** : décisions, feedback, next steps (priorité immédiate)
+- [ ] Correction dashboard pilotage → issue #23 (année, sélecteur AGENCE, Objectif N)
+- [ ] Actual Budget : finaliser onboarding catégories
+- [ ] Backlog Pneu Tracker : fiche pneu, stats dashboard, bouton réimport catalogue
+- [ ] Inventaire physique pneus : implémenter import XLSX + contrôle conforme/écarts
+
+### Status
+- [x] Consolidation mémoire/PARA exécutée (21:50 UTC)
+- [x] Veille IA complète (3 exécutions)
+- [x] Rapports bourse livrés
+- [ ] Perplexity API : erreur d'auth à corriger
+
+*Last auto-update: 2026-04-01 21:50 UTC*
