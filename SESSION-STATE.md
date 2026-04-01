@@ -1,7 +1,7 @@
 # SESSION-STATE.md — Active Working Memory
 
 ## Current Task
-Consolidation mémoire quotidienne terminée — système stable, problème Perplexity API à surveiller.
+38 crons + heartbeat basculés sur `zai/glm-5-turbo` (remplaçant `zai/glm-4.7`) — devrait corriger les erreurs `LiveSessionModelSwitchError` sur les crons hebdo.
 
 ## Today's Work Summary (2026-04-01)
 - **06:01 UTC** — Dashboard mis à jour avec succès.
@@ -58,4 +58,4 @@ Consolidation mémoire quotidienne terminée — système stable, problème Perp
 - Style emojis soutenu
 
 ## Last Updated
-2026-04-01 17:02 UTC — veille IA 19h00 terminée
+2026-04-01 20:07 UTC — heartbeat OK, tous les crons/heartbeat migrés sur zai/glm-5-turbo
