@@ -342,7 +342,7 @@ Sur la tâche FTS5 vs Elasticsearch, GLM-5.1 confirme son profil : **pratique, c
 | MiniMax-M2.7 | 8 | 9 | 8 | **25** |
 | Qwen3.6-plus 🆓 | 8 | 8 | 9 | **25** |
 | MiMo v2 Pro | 8 | 8 | 8 | **24** |
-| Step-3.5-Flash (payant) | 0 | 8 | 10 | **18** |
+| Step-3.5-Flash (payant) | 7 | 8 | 10 | **25** |
 | GLM-4.7-Flash | 7 | 7 | 8 | **22** |
 | GLM-5-Turbo | 7 | 8 | 7 | **22** |
 | Step-3.5 Flash (free) 🆓 | 7 | 2 | 8 | **17** |
@@ -384,7 +384,10 @@ Sur la tâche FTS5 vs Elasticsearch, GLM-5.1 confirme son profil : **pratique, c
 6e k2p5 (26/30) ← EX-ÆQUO
    L'équilibre premium.
 
-9e Trinity 🆓 (25/30)
+9e Step-3.5-Flash (payant) 💰 (25/30)
+   Excellence absolue sur FTS5/ES et logs, code correct (7/10). Très bon profil analyste/architecte.
+
+9e Trinity 🆓 (25/30) ← EX-ÆQUO
    Le gratuit ultra-sérieux. Tient la comparaison avec les payants.
 
 9e MiniMax-M2.5-highspeed (25/30) ← EX-ÆQUO
@@ -396,29 +399,26 @@ Sur la tâche FTS5 vs Elasticsearch, GLM-5.1 confirme son profil : **pratique, c
 9e Qwen3.6-plus 🆓 (25/30) ← EX-ÆQUO
    Gratuit sérieux, fiable sur les 3 tâches.
 
-13e MiMo v2 Pro (24/30)
+14e MiMo v2 Pro (24/30)
    Propre, équilibré, sans surprise.
 
-14e GLM-4.7-Flash (22/30)
+15e GLM-4.7-Flash (22/30)
    Flash solide, mais nettement sous les gros modèles z.ai.
 
-14e MiMo v2 Omni (22/30) ← EX-ÆQUO
+15e MiMo v2 Omni (22/30) ← EX-ÆQUO
    Très bon en code, plus moyen ailleurs.
 
-14e GLM-5-Turbo (22/30) ← EX-ÆQUO
+15e GLM-5-Turbo (22/30) ← EX-ÆQUO
    Compact, utile, moins premium.
 
-17e MiniMax-M2.5 (21/30)
+18e MiniMax-M2.5 (21/30)
    Bon modèle global, plus classique.
 
-18e Gemini Flash (18/30)
-   Bon partout, roi nulle part.
-
-19e Step-3.5-Flash (payant) 💰 (18/30)
-   Excellence absolue sur FTS5/ES et logs, mais échec total sur code.
-
-20e Healer Alpha 🆓 (19/30)
+19e Healer Alpha 🆓 (19/30)
    Bonne valeur de prototypage.
+
+20e Gemini Flash (18/30)
+   Bon partout, roi nulle part.
 
 21e GPT-5.4 (17/30)
    Le payant qui souffre le plus de la comparaison.
@@ -429,7 +429,7 @@ Sur la tâche FTS5 vs Elasticsearch, GLM-5.1 confirme son profil : **pratique, c
 21e Step-3.5 Flash (free) 🆓 (17/30) ← EX-ÆQUO
    Bon rapport qualité/prix malgré le score logs bas.
 
-21e GPT-OSS-120b 🆓 (14/30)
+24e GPT-OSS-120b 🆓 (14/30)
    Titan local sur code, fragile ailleurs.
 
 ❌ Nemotron-3 🆓 (0/30 — DNF)
