@@ -1,7 +1,7 @@
 # SESSION-STATE.md — Active Working Memory
 
 ## Current Task
-Heartbeat du matin — système stable.
+Veille IA 19h00 terminée avec succès — système stable.
 
 ## Today's Work Summary (2026-04-01)
 - **06:01 UTC** — Dashboard mis à jour avec succès.
@@ -24,6 +24,15 @@ Heartbeat du matin — système stable.
   - 💾 Disque : 49% (stable)
   - ⚠️ Note : 5102 erreurs dans logs du jour (flood CLI 14:45-14:47, système stable maintenant)
   - ⚠️ Note : API Perplexity en erreur d'auth → à surveiller
+- **17:01 UTC** — Veille IA 19h00 exécutée avec succès (thème Regulation, fraîcheur 72h)
+  - Flash soir : 21 lignes
+  - Deep soir : 28 lignes
+  - Commit : `7da15dbd`
+- **17:02 UTC** — Heartbeat complet : auto-heal ✓, auto-commit ✓, auto-learn ✓, auto-alert ✓, auto-cleanup ✓
+  - 📊 Contexte session : 14% (stable)
+  - 📦 7 learnings existants (0 en attente)
+  - 💾 Disque : 49% (OK)
+  - ⚠️ Note : 5122 erreurs dans logs du jour (stable, pas de nouveaux patterns)
 
 ## Yesterday's Summary (2026-03-31)
 - **20:56 UTC** — Cron quotidien de consolidation mémoire + PARA.
@@ -48,4 +57,4 @@ Heartbeat du matin — système stable.
 - Style emojis soutenu
 
 ## Last Updated
-2026-03-31 20:56 UTC — consolidation quotidienne
+2026-04-01 17:02 UTC — veille IA 19h00 terminée
