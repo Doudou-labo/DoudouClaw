@@ -1,259 +1,243 @@
 "use strict";
 /**
- * IntervalTree - Un arbre binaire de recherche équilibré (AVL) pour les intervalles
+ * ============================================================================
+ * IntervalTree — Arbre d'intervalles augmenté (basé sur un AVL)
+ * ============================================================================
  *
- * Cette implémentation utilise un arbre AVL augmenté avec un champ `maxEnd`
- * permettant de trouver tous les intervalles contenant un point en temps logarithmique.
+ * Architecture choisie :
+ * Un **arbre binaire de recherche augmenté** auto-équilibré (AVL), où chaque
+ * nœud stocke :
+ *   - Un intervalle [start, end] associé à une valeur de type T
+ *   - Le champ `maxEnd` : le maximum de `end` dans tout le sous-arbre
  *
- * Complexité:
- * - insert: O(log n)
- * - delete: O(log n)
- * - search: O(log n + k) où k est le nombre d'intervalles trouvés
+ * L'ordre de l'arbre est déterminé par la borne `start` des intervalles.
+ * Le champ `maxEnd` permet d'élaguer efficacement les branches lors des
+ * requêtes par point : si `point < node.maxEnd` on ne descend pas dans
+ * un sous-arbre qui ne peut contenir aucune correspondance.
+ *
+ * Complexités :
+ *   - insert : O(log n)
+ *   - query  : O(log n + k)  (k = nombre de résultats)
+ *   - remove : O(log n)
+ *
+ * Contraintes : pas de dépendance externe, TypeScript strict uniquement.
+ * ============================================================================
  */
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.IntervalTree = void 0;
-class IntervalTree {
-    constructor() {
-        this.root = null;
-    }
-    /**
-     * Insère un intervalle dans l'arbre
-     * @param start - Début de l'intervalle (inclusif)
-     * @param end - Fin de l'intervalle (exclusif)
-     * @param value - Valeur associée à l'intervalle
-     */
-    insert(start, end, value) {
-        if (start >= end) {
-            throw new Error(`Invalid interval: start (${start}) must be < end (${end})`);
-        }
-        this.root = this.insertNode(this.root, start, end, value);
-    }
-    /**
-     * Supprime un intervalle de l'arbre
-     * @param start - Début de l'intervalle à supprimer
-     * @param end - Fin de l'intervalle à supprimer
-     * @param value - Valeur optionnelle pour cibler une suppression spécifique
-     * @returns true si au moins un intervalle a été supprimé, false sinon
-     */
-    delete(start, end, value) {
-        const initialSize = this.size;
-        this.root = this.deleteNode(this.root, start, end, value);
-        return this.size < initialSize;
-    }
-    /**
-     * Recherche tous les intervalles contenant un point
-     * @param point - Point à tester
-     * @returns Liste des intervalles contenant le point
-     */
-    search(point) {
-        const result = [];
-        this.searchNode(this.root, point, result);
-        return result;
-    }
-    /**
-     * Retourne le nombre d'intervalles dans l'arbre
-     */
-    get size() {
-        return this.countNodes(this.root);
-    }
-    /**
-     * Vérifie si l'arbre est vide
-     */
-    get isEmpty() {
-        return this.root === null;
-    }
-    // ============ Méthodes privées ============
-    insertNode(node, start, end, value) {
-        if (node === null) {
-            return new IntervalNode(start, end, value);
-        }
-        if (start < node.start) {
-            node.left = this.insertNode(node.left, start, end, value);
-        }
-        else if (start > node.start) {
-            node.right = this.insertNode(node.right, start, end, value);
-        }
-        else {
-            // Même start, insérer à droite pour éviter conflit
-            node.right = this.insertNode(node.right, start, end, value);
-        }
-        this.updateNode(node);
-        return this.balance(node);
-    }
-    deleteNode(node, start, end, value) {
-        if (node === null) {
-            return null;
-        }
-        if (start < node.start) {
-            node.left = this.deleteNode(node.left, start, end, value);
-        }
-        else if (start > node.start) {
-            node.right = this.deleteNode(node.right, start, end, value);
-        }
-        else {
-            // start égal : vérifier end et value si fourni
-            if (node.end === end && (value === undefined || node.value === value)) {
-                // Nœud à supprimer
-                if (node.left === null) {
-                    return node.right;
-                }
-                else if (node.right === null) {
-                    return node.left;
-                }
-                else {
-                    // Deux enfants : remplacer par le successeur
-                    const successor = this.minNode(node.right);
-                    node.start = successor.start;
-                    node.end = successor.end;
-                    node.value = successor.value;
-                    node.right = this.deleteMin(node.right);
-                }
-            }
-            else if (node.end === end) {
-                // Même start et end mais valeur différente : chercher ailleurs
-                // Essaye d'abord à droite
-                node.right = this.deleteNode(node.right, start, end, value);
-                if (node.right === null || !this.containsExact(node.right, start, end, value)) {
-                    // Pas trouvé à droite, essayer à gauche (cas improbable mais possible)
-                    node.left = this.deleteNode(node.left, start, end, value);
-                }
-            }
-            else {
-                // Même start mais end différent : continuer la recherche
-                node.right = this.deleteNode(node.right, start, end, value);
-            }
-        }
-        this.updateNode(node);
-        return this.balance(node);
-    }
-    containsExact(node, start, end, value) {
-        if (node.start === start && node.end === end && (value === undefined || node.value === value)) {
-            return true;
-        }
-        return false;
-    }
-    deleteMin(node) {
-        if (node.left === null) {
-            return node.right;
-        }
-        node.left = this.deleteMin(node.left);
-        this.updateNode(node);
-        return this.balance(node);
-    }
-    minNode(node) {
-        while (node.left !== null) {
-            node = node.left;
-        }
-        return node;
-    }
-    searchNode(node, point, result) {
-        if (node === null) {
-            return;
-        }
-        // Si le sous-arbre gauche peut contenir des intervalles avec le point
-        if (node.left !== null && node.left.maxEnd > point) {
-            this.searchNode(node.left, point, result);
-        }
-        // Vérifier le nœud actuel
-        if (point >= node.start && point < node.end) {
-            result.push({ start: node.start, end: node.end, value: node.value });
-        }
-        // Si le point est >= start du nœud courant, alors le sous-arbre droit
-        // peut contenir des intervalles avec start <= point.
-        // On peut aussi optimiser avec maxEnd: si le maxEnd du droit <= point, aucun intervalle du droit ne peut contenir le point.
-        if (node.right !== null && point >= node.start && node.right.maxEnd > point) {
-            this.searchNode(node.right, point, result);
-        }
-    }
-    updateNode(node) {
-        const leftHeight = node.left?.height ?? 0;
-        const rightHeight = node.right?.height ?? 0;
-        node.height = Math.max(leftHeight, rightHeight) + 1;
-        const leftMax = node.left?.maxEnd ?? -Infinity;
-        const rightMax = node.right?.maxEnd ?? -Infinity;
-        node.maxEnd = Math.max(node.end, leftMax, rightMax);
-    }
-    balance(node) {
-        const balanceFactor = this.getBalance(node);
-        // Déséquilibre à gauche
-        if (balanceFactor > 1) {
-            if (this.getBalance(node.left) < 0) {
-                node.left = this.rotateLeft(node.left);
-            }
-            return this.rotateRight(node);
-        }
-        // Déséquilibre à droite
-        if (balanceFactor < -1) {
-            if (this.getBalance(node.right) > 0) {
-                node.right = this.rotateRight(node.right);
-            }
-            return this.rotateLeft(node);
-        }
-        return node;
-    }
-    rotateRight(y) {
-        const x = y.left;
-        const T2 = x.right;
-        x.right = y;
-        y.left = T2;
-        this.updateNode(y);
-        this.updateNode(x);
-        return x;
-    }
-    rotateLeft(x) {
-        const y = x.right;
-        const T2 = y.left;
-        y.left = x;
-        x.right = T2;
-        this.updateNode(x);
-        this.updateNode(y);
-        return y;
-    }
-    getBalance(node) {
-        const leftHeight = node.left?.height ?? 0;
-        const rightHeight = node.right?.height ?? 0;
-        return leftHeight - rightHeight;
-    }
-    countNodes(node) {
-        if (node === null)
-            return 0;
-        return 1 + this.countNodes(node.left) + this.countNodes(node.right);
-    }
-    // ============ Méthodes utilitaires (optionnelles) ============
-    /**
-     * Retourne tous les intervalles de l'arbre (parcours in-order)
-     */
-    getAll() {
-        const result = [];
-        this.inOrder(this.root, result);
-        return result;
-    }
-    inOrder(node, result) {
-        if (node === null)
-            return;
-        this.inOrder(node.left, result);
-        result.push({ start: node.start, end: node.end, value: node.value });
-        this.inOrder(node.right, result);
-    }
-    /**
-     * Efface tous les intervalles
-     */
-    clear() {
-        this.root = null;
-    }
-}
-exports.IntervalTree = IntervalTree;
-/**
- * Nœud interne de l'arbre AVL
- */
+// ---------------------------------------------------------------------------
+// Node interne
+// ---------------------------------------------------------------------------
 class IntervalNode {
+    start;
+    end;
+    value;
+    left = null;
+    right = null;
+    height = 1; // pour l'équilibrage AVL
+    maxEnd; // champ augmenté : max(end) du sous-arbre
     constructor(start, end, value) {
-        this.left = null;
-        this.right = null;
         this.start = start;
         this.end = end;
         this.value = value;
-        this.height = 1;
         this.maxEnd = end;
     }
 }
+// ---------------------------------------------------------------------------
+// Fonctions utilitaires AVL
+// ---------------------------------------------------------------------------
+function height(node) {
+    return node ? node.height : 0;
+}
+function updateAugmentedFields(node) {
+    node.height = 1 + Math.max(height(node.left), height(node.right));
+    node.maxEnd = Math.max(node.end, node.left ? node.left.maxEnd : -Infinity, node.right ? node.right.maxEnd : -Infinity);
+}
+function balanceFactor(node) {
+    return height(node.left) - height(node.right);
+}
+function rotateRight(y) {
+    const x = y.left;
+    const T2 = x.right;
+    x.right = y;
+    y.left = T2;
+    updateAugmentedFields(y);
+    updateAugmentedFields(x);
+    return x;
+}
+function rotateLeft(x) {
+    const y = x.right;
+    const T2 = y.left;
+    y.left = x;
+    x.right = T2;
+    updateAugmentedFields(x);
+    updateAugmentedFields(y);
+    return y;
+}
+function balance(node) {
+    updateAugmentedFields(node);
+    const bf = balanceFactor(node);
+    // Left-heavy
+    if (bf > 1) {
+        if (node.left && balanceFactor(node.left) < 0) {
+            node.left = rotateLeft(node.left); // Left-Right
+        }
+        return rotateRight(node); // Left-Left
+    }
+    // Right-heavy
+    if (bf < -1) {
+        if (node.right && balanceFactor(node.right) > 0) {
+            node.right = rotateRight(node.right); // Right-Left
+        }
+        return rotateLeft(node); // Right-Right
+    }
+    return node;
+}
+// ---------------------------------------------------------------------------
+// Insertion — insère par ordre croissant de `start`, avec dé-duplication
+// ---------------------------------------------------------------------------
+function insert(node, start, end, value) {
+    if (!node) {
+        return new IntervalNode(start, end, value);
+    }
+    if (start < node.start) {
+        node.left = insert(node.left, start, end, value);
+    }
+    else if (start > node.start) {
+        node.right = insert(node.right, start, end, value);
+    }
+    else {
+        // Même start : on insère à droite pour accepter les doublons
+        node.right = insert(node.right, start, end, value);
+        updateAugmentedFields(node);
+        return node;
+    }
+    return balance(node);
+}
+// ---------------------------------------------------------------------------
+// Suppression — supprime le premier nœud dont l'intervalle correspond
+// ---------------------------------------------------------------------------
+function remove(node, start, end) {
+    if (!node) {
+        return { root: null, removed: false };
+    }
+    if (start < node.start) {
+        const result = remove(node.left, start, end);
+        if (!result.removed)
+            return { root: node, removed: false };
+        node.left = result.root;
+        return { root: balance(node), removed: true };
+    }
+    if (start > node.start) {
+        const result = remove(node.right, start, end);
+        if (!result.removed)
+            return { root: node, removed: false };
+        node.right = result.root;
+        return { root: balance(node), removed: true };
+    }
+    // start match — vérifier end
+    if (node.end !== end) {
+        // Même start mais end différent : chercher à droite (les doublons vont à droite)
+        const result = remove(node.right, start, end);
+        if (!result.removed)
+            return { root: node, removed: false };
+        node.right = result.root;
+        return { root: balance(node), removed: true };
+    }
+    // Nœud trouvé — suppression classique AVL
+    if (!node.left) {
+        return { root: node.right, removed: true };
+    }
+    if (!node.right) {
+        return { root: node.left, removed: true };
+    }
+    // Deux enfants : remplacer par le minimum du sous-arbre droit
+    let successor = node.right;
+    while (successor.left) {
+        successor = successor.left;
+    }
+    node.start = successor.start;
+    node.end = successor.end;
+    node.value = successor.value;
+    const result = remove(node.right, successor.start, successor.end);
+    node.right = result.root;
+    return { root: balance(node), removed: true };
+}
+// ---------------------------------------------------------------------------
+// Query — collecte toutes les valeurs dont l'intervalle contient `point`
+// ---------------------------------------------------------------------------
+function query(node, point, results) {
+    if (!node)
+        return;
+    // Élagage : si le point est plus grand que le maxEnd du sous-arbre,
+    // aucun intervalle dans ce sous-arbre ne peut contenir le point.
+    if (point > node.maxEnd)
+        return;
+    // Descendre à gauche si le point pourrait s'y trouver
+    if (node.left && point <= node.left.maxEnd) {
+        query(node.left, point, results);
+    }
+    // Vérifier le nœud courant
+    if (point >= node.start && point <= node.end) {
+        results.push(node.value);
+    }
+    // Descendre à droite : comme l'arbre est trié par start, les noeuds
+    // du sous-arbre droit ont un start >= celui du noeud courant.
+    // On descend si au moins un de ces intervalles pourrait couvrir le point
+    // (élagage par maxEnd, pas par start — les intervalles commencent après
+    // mais peuvent quand même s'étendre au-delà du point).
+    if (node.right && point <= node.right.maxEnd) {
+        query(node.right, point, results);
+    }
+}
+// ---------------------------------------------------------------------------
+// Parcours in-order (pour débogage / export)
+// ---------------------------------------------------------------------------
+function inOrder(node) {
+    if (!node)
+        return [];
+    return [
+        ...inOrder(node.left),
+        [node.start, node.end, node.value],
+        ...inOrder(node.right),
+    ];
+}
+// ---------------------------------------------------------------------------
+// Export publique
+// ---------------------------------------------------------------------------
+class IntervalTree {
+    root = null;
+    /** Insère un intervalle [start, end] associé à une valeur */
+    insert(start, end, value) {
+        if (start > end) {
+            throw new Error(`Invalid interval: start (${start}) > end (${end})`);
+        }
+        this.root = insert(this.root, start, end, value);
+    }
+    /** Retourne toutes les valeurs dont l'intervalle contient `point` */
+    query(point) {
+        const results = [];
+        query(this.root, point, results);
+        return results;
+    }
+    /** Supprime le premier intervalle dont [start, end] correspond exactement.
+     *  Retourne `true` si une suppression a eu lieu. */
+    remove(start, end) {
+        const result = remove(this.root, start, end);
+        this.root = result.root;
+        return result.removed;
+    }
+    /** Retourne `true` si l'arbre est vide */
+    isEmpty() {
+        return this.root === null;
+    }
+    /** Retourne le nombre de nœuds — O(n) */
+    size() {
+        return inOrder(this.root).length;
+    }
+    /** Dump in-order pour inspection */
+    dump() {
+        return inOrder(this.root);
+    }
+}
+exports.IntervalTree = IntervalTree;

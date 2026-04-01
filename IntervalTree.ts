@@ -1,315 +1,209 @@
 /**
- * IntervalTree - Un arbre binaire de recherche équilibré (AVL) pour les intervalles
+ * IntervalTree - Arbre d'intervalles générique
  *
- * Cette implémentation utilise un arbre AVL augmenté avec un champ `maxEnd`
- * permettant de trouver tous les intervalles contenant un point en temps logarithmique.
+ * Architecture : BST (Binary Search Tree) augmenté avec suivi de maxEnd
  *
- * Complexité:
- * - insert: O(log n)
- * - delete: O(log n)
- * - search: O(log n + k) où k est le nombre d'intervalles trouvés
+ * - Chaque nœud contient start, end, value et maxEnd (borne max du sous-arbre)
+ * - Ordre d'insertion/suppression basé sur start (clé de tri)
+ * - Lors des requêtes, on utilise maxEnd pour élaguer les branches inutiles
+ *
+ * Complexités moyennes :
+ *   insert : O(log n)
+ *   query  : O(log n + k)   (k = nombre de résultats)
+ *   remove : O(log n)
+ *
+ * Copyright 2026 - DoudouClaw
  */
 
-export interface Interval<T = any> {
-    start: number;
-    end: number;
-    value: T;
-}
+export class IntervalTree<T> {
+  private root: Node<T> | null = null;
 
-export class IntervalTree<T = any> {
-    private root: IntervalNode<T> | null = null;
+  /**
+   * Insère un intervalle [start, end) avec une valeur associée
+   * @param start Borne inférieure inclusive
+   * @param end   Borne supérieure exclusive
+   * @param value Valeur à stocker
+   * @throws Si start >= end
+   */
+  insert(start: number, end: number, value: T): void {
+    if (start >= end) {
+      throw new Error(`Interval invalide: start(${start}) >= end(${end})`);
+    }
+    this.root = this._insert(this.root, start, end, value);
+  }
 
-    /**
-     * Insère un intervalle dans l'arbre
-     * @param start - Début de l'intervalle (inclusif)
-     * @param end - Fin de l'intervalle (exclusif)
-     * @param value - Valeur associée à l'intervalle
-     */
-    insert(start: number, end: number, value: T): void {
-        if (start >= end) {
-            throw new Error(`Invalid interval: start (${start}) must be < end (${end})`);
-        }
-        this.root = this.insertNode(this.root, start, end, value);
+  private _insert(
+    node: Node<T> | null,
+    start: number,
+    end: number,
+    value: T
+  ): Node<T> {
+    if (node === null) {
+      return new Node(start, end, value);
     }
 
-    /**
-     * Supprime un intervalle de l'arbre
-     * @param start - Début de l'intervalle à supprimer
-     * @param end - Fin de l'intervalle à supprimer
-     * @param value - Valeur optionnelle pour cibler une suppression spécifique
-     * @returns true si au moins un intervalle a été supprimé, false sinon
-     */
-    delete(start: number, end: number, value?: T): boolean {
-        const initialSize = this.size;
-        this.root = this.deleteNode(this.root, start, end, value);
-        return this.size < initialSize;
+    if (start < node.start) {
+      node.left = this._insert(node.left, start, end, value);
+    } else {
+      node.right = this._insert(node.right, start, end, value);
     }
 
-    /**
-     * Recherche tous les intervalles contenant un point
-     * @param point - Point à tester
-     * @returns Liste des intervalles contenant le point
-     */
-    search(point: number): Interval<T>[] {
-        const result: Interval<T>[] = [];
-        this.searchNode(this.root, point, result);
-        return result;
+    this.updateMaxEnd(node);
+    return node;
+  }
+
+  /**
+   * Recherche toutes les valeurs dont l'intervalle contient le point donné
+   * @param point Point à tester (doit être >= start ET < end)
+   * @returns Tableau des valeurs trouvées
+   */
+  query(point: number): T[] {
+    const results: T[] = [];
+    this._query(this.root, point, results);
+    return results;
+  }
+
+  private _query(node: Node<T> | null, point: number, results: T[]): void {
+    if (node === null) return;
+
+    // Si le point est dans l'intervalle du nœud courant, ajouter la valeur
+    if (point >= node.start && point < node.end) {
+      results.push(node.value);
     }
 
-    /**
-     * Retourne le nombre d'intervalles dans l'arbre
-     */
-    get size(): number {
-        return this.countNodes(this.root);
+    // Si le sous-arbre gauche pourrait contenir le point (maxEnd > point)
+    if (node.left !== null && node.left.maxEnd > point) {
+      this._query(node.left, point, results);
     }
 
-    /**
-     * Vérifie si l'arbre est vide
-     */
-    get isEmpty(): boolean {
-        return this.root === null;
+    // Si le point est >= start du nœud courant, le sous-arbre droit pourrait contenir le point
+    if (node.right !== null && point >= node.start) {
+      this._query(node.right, point, results);
+    }
+  }
+
+  /**
+   * Supprime un intervalle spécifique (identifié par start et end)
+   * @param start Borne inférieure de l'intervalle à supprimer
+   * @param end   Borne supérieure de l'intervalle à supprimer
+   * @returns true si l'intervalle a été trouvé et supprimé, false sinon
+   * @throws Si start >= end
+   */
+  remove(start: number, end: number): boolean {
+    if (start >= end) {
+      throw new Error(`Interval invalide: start(${start}) >= end(${end})`);
+    }
+    const result = this._remove(this.root, start, end);
+    this.root = result.node;
+    return result.removed;
+  }
+
+  private _remove(
+    node: Node<T> | null,
+    start: number,
+    end: number
+  ): { node: Node<T> | null; removed: boolean } {
+    if (node === null) {
+      return { node: null, removed: false };
     }
 
-    // ============ Méthodes privées ============
+    let removed = false;
 
-    private insertNode(
-        node: IntervalNode<T> | null,
-        start: number,
-        end: number,
-        value: T
-    ): IntervalNode<T> {
-        if (node === null) {
-            return new IntervalNode(start, end, value);
-        }
-
-        if (start < node.start) {
-            node.left = this.insertNode(node.left, start, end, value);
-        } else if (start > node.start) {
-            node.right = this.insertNode(node.right, start, end, value);
-        } else {
-            // Même start, insérer à droite pour éviter conflit
-            node.right = this.insertNode(node.right, start, end, value);
-        }
-
-        this.updateNode(node);
-        return this.balance(node);
-    }
-
-    private deleteNode(
-        node: IntervalNode<T> | null,
-        start: number,
-        end: number,
-        value?: T
-    ): IntervalNode<T> | null {
-        if (node === null) {
-            return null;
-        }
-
-        if (start < node.start) {
-            node.left = this.deleteNode(node.left, start, end, value);
-        } else if (start > node.start) {
-            node.right = this.deleteNode(node.right, start, end, value);
-        } else {
-            // start égal : vérifier end et value si fourni
-            if (node.end === end && (value === undefined || node.value === value)) {
-                // Nœud à supprimer
-                if (node.left === null) {
-                    return node.right;
-                } else if (node.right === null) {
-                    return node.left;
-                } else {
-                    // Deux enfants : remplacer par le successeur
-                    const successor = this.minNode(node.right);
-                    node.start = successor.start;
-                    node.end = successor.end;
-                    node.value = successor.value;
-                    node.right = this.deleteMin(node.right);
-                }
-            } else if (node.end === end) {
-                // Même start et end mais valeur différente : chercher ailleurs
-                // Essaye d'abord à droite
-                node.right = this.deleteNode(node.right, start, end, value);
-                if (node.right === null || !this.containsExact(node.right!, start, end, value)) {
-                    // Pas trouvé à droite, essayer à gauche (cas improbable mais possible)
-                    node.left = this.deleteNode(node.left, start, end, value);
-                }
-            } else {
-                // Même start mais end différent : continuer la recherche
-                node.right = this.deleteNode(node.right, start, end, value);
-            }
-        }
-
-        this.updateNode(node);
-        return this.balance(node);
-    }
-
-    private containsExact(
-        node: IntervalNode<T>,
-        start: number,
-        end: number,
-        value?: T
-    ): boolean {
-        if (node.start === start && node.end === end && (value === undefined || node.value === value)) {
-            return true;
-        }
-        return false;
-    }
-
-    private deleteMin(node: IntervalNode<T>): IntervalNode<T> | null {
+    if (start < node.start) {
+      const result = this._remove(node.left, start, end);
+      node.left = result.node;
+      removed = result.removed;
+    } else if (start > node.start) {
+      const result = this._remove(node.right, start, end);
+      node.right = result.node;
+      removed = result.removed;
+    } else {
+      // start == node.start, vérifier aussi end
+      if (end === node.end) {
+        // Trouvé! Supprimer ce nœud
+        removed = true;
         if (node.left === null) {
-            return node.right;
+          return { node: node.right, removed: true };
+        } else if (node.right === null) {
+          return { node: node.left, removed: true };
+        } else {
+          // Deux enfants: remplacer par le successeur (plus petit du sous-arbre droit)
+          const successor = this._minNode(node.right);
+          node.start = successor.start;
+          node.end = successor.end;
+          node.value = successor.value;
+          const result = this._remove(node.right, successor.start, successor.end);
+          node.right = result.node;
         }
-        node.left = this.deleteMin(node.left);
-        this.updateNode(node);
-        return this.balance(node);
+      } else {
+        // start identique mais end différent → continuer recherche
+        const result = this._remove(node.right, start, end);
+        node.right = result.node;
+        removed = result.removed;
+      }
     }
 
-    private minNode(node: IntervalNode<T>): IntervalNode<T> {
-        while (node.left !== null) {
-            node = node.left;
-        }
-        return node;
+    if (removed) {
+      this.updateMaxEnd(node);
     }
 
-    private searchNode(
-        node: IntervalNode<T> | null,
-        point: number,
-        result: Interval<T>[]
-    ): void {
-        if (node === null) {
-            return;
-        }
+    return { node, removed };
+  }
 
-        // Si le sous-arbre gauche peut contenir des intervalles avec le point
-        if (node.left !== null && node.left.maxEnd > point) {
-            this.searchNode(node.left, point, result);
-        }
-
-        // Vérifier le nœud actuel
-        if (point >= node.start && point < node.end) {
-            result.push({ start: node.start, end: node.end, value: node.value });
-        }
-
-        // Si le point est >= start du nœud courant, alors le sous-arbre droit
-        // peut contenir des intervalles avec start <= point.
-        // On peut aussi optimiser avec maxEnd: si le maxEnd du droit <= point, aucun intervalle du droit ne peut contenir le point.
-        if (node.right !== null && point >= node.start && node.right.maxEnd > point) {
-            this.searchNode(node.right, point, result);
-        }
+  private _minNode(node: Node<T>): Node<T> {
+    while (node.left !== null) {
+      node = node.left;
     }
+    return node;
+  }
 
-    private updateNode(node: IntervalNode<T>): void {
-        const leftHeight = node.left?.height ?? 0;
-        const rightHeight = node.right?.height ?? 0;
-        node.height = Math.max(leftHeight, rightHeight) + 1;
-
-        const leftMax = node.left?.maxEnd ?? -Infinity;
-        const rightMax = node.right?.maxEnd ?? -Infinity;
-        node.maxEnd = Math.max(node.end, leftMax, rightMax);
+  private updateMaxEnd(node: Node<T>): void {
+    let max = node.end;
+    if (node.left !== null && node.left.maxEnd > max) {
+      max = node.left.maxEnd;
     }
-
-    private balance(node: IntervalNode<T>): IntervalNode<T> {
-        const balanceFactor = this.getBalance(node);
-
-        // Déséquilibre à gauche
-        if (balanceFactor > 1) {
-            if (this.getBalance(node.left!) < 0) {
-                node.left = this.rotateLeft(node.left!);
-            }
-            return this.rotateRight(node);
-        }
-
-        // Déséquilibre à droite
-        if (balanceFactor < -1) {
-            if (this.getBalance(node.right!) > 0) {
-                node.right = this.rotateRight(node.right!);
-            }
-            return this.rotateLeft(node);
-        }
-
-        return node;
+    if (node.right !== null && node.right.maxEnd > max) {
+      max = node.right.maxEnd;
     }
+    node.maxEnd = max;
+  }
 
-    private rotateRight(y: IntervalNode<T>): IntervalNode<T> {
-        const x = y.left!;
-        const T2 = x.right;
+  /**
+   * Retourne tous les intervalles de l'arbre (pour debugging/tests)
+   * @returns Liste des {start, end, value} triés par start
+   */
+  toArray(): { start: number; end: number; value: T }[] {
+    const arr: { start: number; end: number; value: T }[] = [];
+    this._inorder(this.root, arr);
+    return arr;
+  }
 
-        x.right = y;
-        y.left = T2;
-
-        this.updateNode(y);
-        this.updateNode(x);
-
-        return x;
-    }
-
-    private rotateLeft(x: IntervalNode<T>): IntervalNode<T> {
-        const y = x.right!;
-        const T2 = y.left;
-
-        y.left = x;
-        x.right = T2;
-
-        this.updateNode(x);
-        this.updateNode(y);
-
-        return y;
-    }
-
-    private getBalance(node: IntervalNode<T>): number {
-        const leftHeight = node.left?.height ?? 0;
-        const rightHeight = node.right?.height ?? 0;
-        return leftHeight - rightHeight;
-    }
-
-    private countNodes(node: IntervalNode<T> | null): number {
-        if (node === null) return 0;
-        return 1 + this.countNodes(node.left) + this.countNodes(node.right);
-    }
-
-    // ============ Méthodes utilitaires (optionnelles) ============
-
-    /**
-     * Retourne tous les intervalles de l'arbre (parcours in-order)
-     */
-    getAll(): Interval<T>[] {
-        const result: Interval<T>[] = [];
-        this.inOrder(this.root, result);
-        return result;
-    }
-
-    private inOrder(node: IntervalNode<T> | null, result: Interval<T>[]): void {
-        if (node === null) return;
-        this.inOrder(node.left, result);
-        result.push({ start: node.start, end: node.end, value: node.value });
-        this.inOrder(node.right, result);
-    }
-
-    /**
-     * Efface tous les intervalles
-     */
-    clear(): void {
-        this.root = null;
-    }
+  private _inorder(
+    node: Node<T> | null,
+    arr: { start: number; end: number; value: T }[]
+  ): void {
+    if (node === null) return;
+    this._inorder(node.left, arr);
+    arr.push({ start: node.start, end: node.end, value: node.value });
+    this._inorder(node.right, arr);
+  }
 }
 
 /**
- * Nœud interne de l'arbre AVL
+ * Nœud interne de l'arbre
  */
-class IntervalNode<T> {
-    start: number;
-    end: number;
-    value: T;
-    height: number;
-    maxEnd: number;
-    left: IntervalNode<T> | null = null;
-    right: IntervalNode<T> | null = null;
+class Node<T> {
+  start: number;
+  end: number;
+  value: T;
+  left: Node<T> | null = null;
+  right: Node<T> | null = null;
+  maxEnd: number; // maximum de end dans le sous-arbre (inclut ce nœud)
 
-    constructor(start: number, end: number, value: T) {
-        this.start = start;
-        this.end = end;
-        this.value = value;
-        this.height = 1;
-        this.maxEnd = end;
-    }
+  constructor(start: number, end: number, value: T) {
+    this.start = start;
+    this.end = end;
+    this.value = value;
+    this.maxEnd = end;
+  }
 }
