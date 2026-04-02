@@ -10,7 +10,7 @@
 ### Finance Tracker ~~❌ OBSOLÈTE~~ → remplacé par Actual Budget (2026-03-21)
 
 ### 💰 Actual Budget — Finance perso (2026-03-21)
-- [ ] Finaliser onboarding Actual Budget (catégories de suivi)
+- [x] **FINALISÉ** : Onboarding categories de suivi (validation consolidation 2026-04-02)
 - [ ] Connecter les comptes bancaires ou saisir manuellement les transactions
 - [ ] Définir 1 objectif d'épargne concret
 - [ ] Mettre en place le suivi récurrent (abonnements, revenus)
@@ -23,6 +23,7 @@
 - [ ] Aujourd'hui : lire 1 chapitre + écrire 5 lignes de notes (1 idée clé + 1 application concrète au boulot)
 
 ### Boulot — Actions ponctuelles
+- [ ] **🔴 PRIORITÉ ABSOLUE — Retour visite Marc (DR) 31/03/2026** → Issue #18 — **outcome à capturer**
 - [ ] **🟡 Voir avec Arnaud la commande de vêtement pour Julien** _(ajouté 09/03/2026)_
 
 ### Évolution RCS — Suivi post-entretien Arnaud ✅
@@ -55,5 +56,6 @@
 - [ ] Brancher recherche/ajout via référentiel pneus + préparer export Excel final
 
 ## Auto-checkpoints
-- [ ] [AUTO 2026-04-02 midi] Checkpoint 3-min fait. Next: Finaliser onboarding Actual Budget (catégories de suivi)
+- [x] **[AUTO 2026-04-02 midi] Checkpoint 3-min fait** → Actual Budget categories finalisées ✅
+- [ ] [AUTO 2026-04-02 soir] Prochain checkpoint: système stable, attente retour Marc DR
 

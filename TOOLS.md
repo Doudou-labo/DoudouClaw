@@ -297,4 +297,12 @@ workspace/
 
 ---
 
-*Backup local: `backups/TOOLS.md.backup-2026-03-22-*` | Dernière mise à jour: 2026-03-22*
+*Backup local: `backups/TOOLS.md.backup-2026-03-22-*` | Dernière mise à jour: 2026-04-02*
+
+## 🔍 Web Search
+
+- Brave: `.credentials/brave-api-key.txt`
+- Perplexity: `.credentials/perplexity-api-key.txt` (aussi env var `PERPLEXITY_API_KEY`)
+
+**Gotcha :** config patch via `gateway config.patch` nécessite restart gateway.
+**⚠️ Gotcha 2026-04-02:** API Perplexity en erreur d'auth récurrente → surveiller pattern défaillance régulière (~1/semaine)
