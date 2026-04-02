@@ -1,7 +1,15 @@
 # SESSION-STATE.md — Active Working Memory
 
 ## Current Task
-Fix cron Discord (3 crons corrigés) — en attente validation à 07:30 Paris.
+Aucune tâche active en cours.
+
+## Today's Work Summary (2026-04-02)
+- **06:03 UTC** — Veille IA 8h00 exécutée (thème BUSINESS).
+- **07:35 UTC** — Gateway mis à jour vers 2026.4.1 (npm latest).
+- **08:03 UTC** — Heartbeat complet : auto-heal ✓, auto-commit ✓, auto-learn ✓, auto-alert ✓, auto-cleanup ✓
+  - 💾 Disque : 50% (stable)
+  - ⚠️ Note : timeouts zai:glm-4.7 correctement gérés par fallback MiniMax
+  - ⚠️ Note : 141 erreurs dans logs du jour (flood timeouts glm-4.7, système stable)
 
 ## Today's Work Summary (2026-04-02)
 - **06:03 UTC** — Veille IA 8h00 exécutée (thème BUSINESS).
@@ -35,11 +43,11 @@ Fix cron Discord (3 crons corrigés) — en attente validation à 07:30 Paris.
   - ⚠️ Note : 5122 erreurs dans logs du jour (stable, pas de nouveaux patterns)
 - **21:50 UTC** — Cron consolidation mémoire quotidienne exécuté avec succès.
 
-## Yesterday's Summary (2026-03-31)
-- **20:56 UTC** — Cron quotidien de consolidation mémoire + PARA.
-- **🔴 Événement clé** : Visite Marc (DR).
-- Aucune interaction substantielle avec l'agent ce jour (journée DR probablement).
-- Fichier `memory/2026-03-31.md` créé avec état des lieux.
+## Yesterday's Summary (2026-04-01)
+- **04:11 UTC** — Heartbeat complet (nocturne).
+- **04:11 UTC** — Git cleanup : suppression `.gitignore` manquant → ajout des patterns (`research-archives/`, `src/`, `tmp/`, `.clawmetry*`).
+- **Aucune interaction substantielle** — journée calme probablement.
+
 
 ## Prochains chantiers
 1. **🔴 Retour visite Marc (DR) — CAPTER** : décisions, feedback, next steps (priorité immédiate dès qu'Alexandre revient)
@@ -49,13 +57,12 @@ Fix cron Discord (3 crons corrigés) — en attente validation à 07:30 Paris.
 5. **Inventaire physique pneus** — backlog MVP à implémenter sur `inventaire.doudougen.xyz`
 
 ## Immediate Context
-- **Aujourd'hui : 31/03/2026 — jour de la visite Marc (DR)**
-- Disque stable (~82%)
+- **Gateway** : 2026.4.1 (mise à jour ce matin)
+- Disque stable à 50%
 - Crons Proactive Observations actifs (07:00/12:00/17:00/21:00 Paris)
-- For All Mankind : saison 1, episode 7 terminé (état au 30/03)
 - Mode cinéma activé (films/séries → web_search + Perplexity)
 - Autonomie d'exécution renforcée (ne pas demander validation sauf externe/sensible)
 - Style emojis soutenu
 
 ## Last Updated
-2026-04-01 20:07 UTC — heartbeat OK, tous les crons/heartbeat migrés sur zai/glm-5-turbo
+2026-04-02 08:03 UTC — heartbeat OK, gateway mis à jour en 2026.4.1
