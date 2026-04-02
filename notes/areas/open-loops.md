@@ -56,6 +56,5 @@
 - [ ] Brancher recherche/ajout via référentiel pneus + préparer export Excel final
 
 ## Auto-checkpoints
-- [x] **[AUTO 2026-04-02 midi] Checkpoint 3-min fait** → Actual Budget categories finalisées ✅
-- [ ] [AUTO 2026-04-02 soir] Prochain checkpoint: système stable, attente retour Marc DR
+- [ ] [AUTO 2026-04-02 soir] Checkpoint 3-min fait. Next: Connecter les comptes bancaires ou saisir manuellement les transactions
 
