@@ -48,6 +48,11 @@ Aucune tâche active en cours.
 - **17:03 UTC** — Heartbeat complété : mémoire capturée (`memory-capture-sync.sh`), prochains chantiers mis à jour
   - 📝 3 faits capturés : veille IA 19h00 exécutée, script en partie terminé, fichier sauvegardé
 - **21:50 UTC** — Cron consolidation mémoire quotidienne exécuté avec succès.
+- **21:01 UTC** — Heartbeat du soir : auto-heal ✓, auto-commit ✓, auto-learn ✓, auto-alert ✓, auto-cleanup ✓
+  - 💾 Disque : 52% (stable)
+  - ⚠️ Token OpenAI-Codex expiré : `openai-codex:default` (à régénérer)
+  - ⚠️ 5400 erreurs logs du jour (patterns connus, système stable)
+  - 💤 **Memory flush complété** : fichier du jour créé, SESSION-STATE mis à jour
 
 ## Yesterday's Summary (2026-04-01)
 - **04:11 UTC** — Heartbeat complet (nocturne).
@@ -63,12 +68,14 @@ Aucune tâche active en cours.
 5. **Inventaire physique pneus** — backlog MVP à implémenter sur `inventaire.doudougen.xyz`
 
 ## Immediate Context
-- **Gateway** : 2026.4.1 (mise à jour ce matin)
-- Disque stable à 50%
+- **Gateway** : 2026.4.2 (mise à jour soir)
+- Disque stable à 52%
 - Crons Proactive Observations actifs (07:00/12:00/17:00/21:00 Paris)
+- **⚠️ Token OpenAI-Codex expiré** → à régénérer
 - Mode cinéma activé (films/séries → web_search + Perplexity)
 - Autonomie d'exécution renforcée (ne pas demander validation sauf externe/sensible)
 - Style emojis soutenu
+- **Heure Paris** : 23:00 → préparation coucher (réveil 06:30)
 
 ## Last Updated
-2026-04-02 21:50 UTC — consolidation mémoire/PARA complète, heartbeat OK, système stable
+2026-04-02 21:01 UTC — heartbeat du soir, memory flush complété, système stable
