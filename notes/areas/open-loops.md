@@ -55,5 +55,5 @@
 - [ ] Brancher recherche/ajout via référentiel pneus + préparer export Excel final
 
 ## Auto-checkpoints
-- [ ] [AUTO 2026-04-01 soir] Checkpoint 3-min fait. Next: Finaliser onboarding Actual Budget (catégories de suivi)
+- [ ] [AUTO 2026-04-02 midi] Checkpoint 3-min fait. Next: Finaliser onboarding Actual Budget (catégories de suivi)
 
