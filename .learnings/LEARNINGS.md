@@ -142,3 +142,30 @@ L’utilisateur a signalé que, depuis la réduction du fichier agent, les répo
 
 ## 2026-03-22 17:20 UTC
 - Findings: pas de correction explicite détectée
+
+---
+**Date:** 2026-04-02  
+**Type:** TOOL_GOTCHA  
+**Title:** Message tool Discord syntax error in cron payloads
+
+**What happened:**
+Three cron jobs (Routine pro Top 3, Proactive pings, Bedtime reminder) were failing with error `Action send requires a target`. The cron payloads were instructing agents to use the `message` tool with `channel="1472597511838367920"` (passing the Discord channel ID as the `channel` parameter).
+
+**Root cause:**
+The `message` tool parameters are:
+- `channel`: specifies the PROVIDER (telegram|whatsapp|discord|irc|googlechat|slack|signal|imessage|line)
+- `to` (or `target`): specifies the DESTINATION (channel ID, user ID, phone number, etc.)
+
+The confusion came from ambiguous wording in cron prompts like "send via Discord to channel X", which could be interpreted as using the `channel` parameter with the channel ID value.
+
+**Fix applied:**
+Updated 3 cron payloads to use correct syntax:
+- Before: `channel="1472597511838367920"`
+- After: `channel=discord to=1472597511838367920`
+
+**Learnings:**
+1. When writing cron payloads that use the `message` tool, always use explicit syntax: `channel=<provider> to=<destination>`
+2. Avoid ambiguous wording like "via Discord to channel X" in prompts; use "via message tool with channel=discord and to=X"
+3. Test cron payloads after creation by running them manually or checking logs for syntax errors
+
+**Status:** APPLIED
