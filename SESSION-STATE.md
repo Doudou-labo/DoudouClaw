@@ -35,15 +35,18 @@ Aucune tâche active en cours.
   - 💾 Disque : 49% (stable)
   - ⚠️ Note : 5102 erreurs dans logs du jour (flood CLI 14:45-14:47, système stable maintenant)
   - ⚠️ Note : API Perplexity en erreur d'auth → à surveiller
-- **17:01 UTC** — Veille IA 19h00 exécutée avec succès (thème Regulation, fraîcheur 72h)
-  - Flash soir : 21 lignes
-  - Deep soir : 28 lignes
-  - Commit : `7da15dbd`
+- **17:01 UTC** — Veille IA 19h00 exécutée (thème BUSINESS, fraîcheur 72h)
+  - Flash soir : 65 lignes avec faits marquants (suspension sanctions Anthropic, loi Bernie Sanders, erreur reconnaissance faciale, croissance radiologie IA)
+  - ⚠️ Deep Dive interrompu (SIGKILL pendant exécution)
+  - Fichier sauvegardé : `notes/areas/veille-ia/daily-flash/2026-04-02/19h-flash.md`
+  - Commit : `757290b6`
 - **17:02 UTC** — Heartbeat complet : auto-heal ✓, auto-commit ✓, auto-learn ✓, auto-alert ✓, auto-cleanup ✓
   - 📊 Contexte session : 14% (stable)
   - 📦 7 learnings existants (0 en attente)
   - 💾 Disque : 49% (OK)
   - ⚠️ Note : 5122 erreurs dans logs du jour (stable, pas de nouveaux patterns)
+- **17:03 UTC** — Heartbeat complété : mémoire capturée (`memory-capture-sync.sh`), prochains chantiers mis à jour
+  - 📝 3 faits capturés : veille IA 19h00 exécutée, script en partie terminé, fichier sauvegardé
 - **21:50 UTC** — Cron consolidation mémoire quotidienne exécuté avec succès.
 
 ## Yesterday's Summary (2026-04-01)
@@ -68,4 +71,4 @@ Aucune tâche active en cours.
 - Style emojis soutenu
 
 ## Last Updated
-2026-04-02 08:03 UTC — heartbeat OK, gateway mis à jour en 2026.4.1
+2026-04-02 17:03 UTC — heartbeat OK, mémoire capturée, système stable
