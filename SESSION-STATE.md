@@ -1,11 +1,11 @@
 # SESSION-STATE.md — Active Working Memory
 
 ## Current Task
-38 crons + heartbeat basculés sur `zai/glm-5-turbo` (remplaçant `zai/glm-4.7`) — devrait corriger les erreurs `LiveSessionModelSwitchError` sur les crons hebdo.
+Fix cron Discord (3 crons corrigés) — en attente validation à 07:30 Paris.
 
-## Today's Work Summary (2026-04-01)
-- **06:01 UTC** — Dashboard mis à jour avec succès.
-- **06:06 UTC** — Veille IA 8h00 exécutée avec succès (thème Regulation).
+## Today's Work Summary (2026-04-02)
+- **06:03 UTC** — Veille IA 8h00 exécutée (thème BUSINESS).
+- **07:03 UTC** — Heartbeat complet : détection et correction erreur crons Discord (3 jobs).
   - Flash : AI Act européen, calendrier d'application, sanctions
   - Deep Dive : Digital Omnibus, trilogue interinstitutionnel, ajustements RGPD
   - Commit : `a19e4fc2`
