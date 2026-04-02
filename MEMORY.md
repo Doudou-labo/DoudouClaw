@@ -102,6 +102,28 @@
 - **Proactive Observations** (2026-03-29): nouveau système validé pour générer des surprises utiles basées sur l'observation de patterns réels (motivation, priorités, blocages, réactions), et non sur des rappels génériques. Fichier canonique : `notes/areas/proactive-observations.md`.
 - **Crons Proactive Observations** (2026-03-29): 4 crons OpenClaw prompt-based configurés à 07:00 / 12:00 / 17:00 / 21:00 heure de Paris, `sessionTarget=isolated`, exécution du script `scripts/cron-proactive-observations.sh`, lecture de `tmp/cron-proactive-report.txt`, puis delivery Discord dans le salon dédié `1487873994769174588`.
 
+### Patterns & Learnings
+
+**Discord Cron Syntax Pattern (2026-04-02)** - Importance: 0.95
+- Quand l'outil `message` est appelé dans les crons, le paramètre `channel` indique le PROVIDER (telegram/discord/etc.) et `to` indique la DESTINATION (channel ID)
+- **Problème critique identifié**: confusion entre `channel="1472597511838367920"` (wrong) et `channel=discord to=1472597511838367920` (correct)
+- **Impact**: plusieurs crons affichaient "Message failed" avec erreur `Action send requires a target`
+- **Solution**: correction de 3 payloads cron (`819278af-5fcc-49ed-8633-31744105c94f`, `1eaf6c91-8680-4966-8c7a-5fcc5de7c328`, `3598d292-14ea-42bc-897c-1dcefed6a1fe`)
+- **Pattern critique à retenir**: toujours utiliser `channel=provider to=channel_id` dans les crons OpenClaw
+
+### Auto-Heal Status (2026-04-02) - Importance: 0.8
+- ✅ Auto-heal: RAS (pas de cooldowns, tokens OK)
+- ✅ Auto-commit: RAS
+- ✅ Auto-alert: RAS (5 issues GitHub, CRM OK, finance: no-db)
+- ✅ Auto-cleanup: Disque 50%, RAS
+- **Leçon**: système d'auto-surveillance heartbeat robuste et fiable
+
+### Auto-Learn Errors (2026-04-02) - Importance: 0.85
+- 60 erreurs détectées dans le log du jour
+- **Cause identifiée**: problème cron Discord (syntaxe incorrecte channel/to)
+- **Action**: correction immédiate du pattern critique
+- **Leçon**: les erreurs de logs sont souvent des indicateurs de problèmes systémiques sous-jacents
+
 ### Tools & Infrastructure
 ### n8n (2026-03-20/21 → **ANNULÉ 2026-03-22**)
 - Skill v2.0.0 (ClawHub) installé + `n8n-workflow-automation` v1.0.0
