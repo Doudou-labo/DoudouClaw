@@ -67,7 +67,6 @@
 
 ### API Perplexity (urgence)
 - [x] [2026-04-03] Problème d'authentification récurrent identifié (8h, 12h, 19h)
-- [ ] Vérifier configuration API Perplexity dans OpenClaw
-- [ ] Tester clé API actuelle et régénérer si nécessaire
-- [ ] Investiger pattern erreurs (intervalle ~1 semaine)
+- [x] [2026-04-03] Configuration API vérifiée - erreurs persistantes sur pattern hebdomadaire
+- [ ] Attendre prochaine erreur pour test de régénération clé (pattern: ~1 semaine)
 
