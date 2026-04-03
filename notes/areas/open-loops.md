@@ -56,17 +56,5 @@
 - [ ] Brancher recherche/ajout via référentiel pneus + préparer export Excel final
 
 ## Auto-checkpoints
-- [x] [AUTO 2026-04-03 midi] Checkpoint 3-min fait. Next: Connecter les comptes bancaires ou saisir manuellement les transactions
-- [x] [CONSOLIDATION 2026-04-03] Mémoire/PARA complète avec IA automobile et régulation USA/Europe
-
-### IA Automobile & Tech (nouveau chantier)
-- [ ] Suivre évolutions IA concessionnaires (CADA, initiatives similaires en Europe)
-- [ ] Analyser potential applications IA chez Euromaster (assistance technique, maintenance prédictive)
-- [ ] Surveiller réglementation IA automobile (USA, UE, impact opérationnel)
-- [ ] Benchmark IA fournisseurs Michelin & concurrents (évolutions stratégiques)
-
-### API Perplexity (urgence)
-- [x] [2026-04-03] Problème d'authentification récurrent identifié (8h, 12h, 19h)
-- [x] [2026-04-03] Configuration API vérifiée - erreurs persistantes sur pattern hebdomadaire
-- [ ] Attendre prochaine erreur pour test de régénération clé (pattern: ~1 semaine)
+- [ ] [AUTO 2026-04-03 soir] Checkpoint 3-min fait. Next: Connecter les comptes bancaires ou saisir manuellement les transactions
 
