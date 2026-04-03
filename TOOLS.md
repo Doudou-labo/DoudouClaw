@@ -305,4 +305,4 @@ workspace/
 - Perplexity: `.credentials/perplexity-api-key.txt` (aussi env var `PERPLEXITY_API_KEY`)
 
 **Gotcha :** config patch via `gateway config.patch` nécessite restart gateway.
-**⚠️ Gotcha 2026-04-02:** API Perplexity en erreur d'auth récurrente → surveiller pattern défaillance régulière (~1/semaine)
+**⚠️ Gotcha 2026-04-03:** API Perplexity en erreur d'auth récurrente → surveiller pattern défaillance régulière (~1/semaine, 14:52, 17:00, 19:03 aujourd'hui)

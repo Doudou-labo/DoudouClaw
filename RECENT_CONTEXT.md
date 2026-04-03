@@ -4,109 +4,44 @@
 
 ---
 
-## Latest Session — 2026-03-31 (mardi) 🔴
+## Latest Session — 2026-04-03 (vendredi) 🚗
 
 ### Topic
-Journée visite Marc (DR) — consolidation mémoire de fin de journée.
+Consolidation mémoire quotidienne + veille IA sectorielle automobile.
 
 ### Key Points
-- **🔴 Jour J — Visite Marc (DR)** : 31/03/2026 — AUJOURD'HUI.
-- Aucune interaction substantielle avec l'agent (journée probablement DR).
-- Fichier `memory/2026-03-31.md` créé avec état des lieux complet.
-- Retour DR à capturer dès qu'Alexandre revient (feedback, décisions, next steps).
-
-### Prochains pas
-- [ ] **🔴 PRIORITÉ IMMÉDIATE — Retour visite Marc DR** : décisions, feedback, next steps
-- [ ] Correction dashboard pilotage → issue #23 (année, sélecteur AGENCE, Objectif N)
-- [ ] Actual Budget : finaliser onboarding catégories
-- [ ] Backlog Pneu Tracker : fiche pneu, stats dashboard, bouton réimport catalogue
-- [ ] Inventaire physique pneus : implémenter import XLSX + contrôle conforme/écarts
-
-### Status
-- [x] Consolidation mémoire/PARA exécutée (20:56 UTC)
-- [x] SESSION-STATE synchronisé sur 2026-03-31
-- [ ] Retour DR à capturer (pending)
-
----
-
-## Latest Session — 2026-03-30 (lundi) 🎬
-
-### Topic
-Mode cinéma activé + correction prompt proactive.
-
-### Key Points
-- **Mode cinéma** : activation pour échanges films/séries → web_search + Perplexity systématique.
-- **For All Mankind** : saison 1, épisode 7 terminé.
-- **Option A proactive** : prompt corrigé (3 jours glissants, anti-répétition, `NO_REPLY` si rien de fort).
-- Disque : ~82% — stable.
-
-### Prochains pas
-- [ ] **🔴 Visite Marc DR** (31/03/2026) — jour J aujourd'hui même
-- [ ] Issues #18 à #23 : pilotage RCS (DR, parking sollicitations, compte exploitation, 25 incontournables, documentation, pilotage dashboard)
-
-### Status
-- [x] Mode cinéma activé
-- [x] Prompt Option A corrigé
-- [x] Consolidation mémoire exécutée
-
----
-
-## Latest Session — 2026-04-01 (mercredi) 🧠
-
-### Topic
-Consolidation mémoire quotidienne — système stable, problème Perplexity API.
-
-### Key Points
-- **Veille IA** : 3 exécutions complètes (8h, 12h, 19h) — thème Régulation.
-- **Bourse** : rapports livrés avec succès (CAC 40 -0.41%, Michelin +2.60%, US verts).
-- **⚠️ Problème Perplexity API** : erreur d'auth détectée à 14:52 UTC — à surveiller.
-- **Système stable** : contexte session 14%, disque 49%, 5122 erreurs logs (flood CLI).
+- **🚗 Veille IA 8h00 (SECTORIEL)** : Actualités IA automobile
+  - CADA: nouveau sous-comité IA (7 membres) pour aider concessionnaires canadiens
+  - NVIDIA: 2 milliards $ investis dans Marvell (technologie photonique)
+  - Xpeng: premier showroom Maroc (Casablanca), 877M€ investis IA physique
+  - Michelin: IA pour recadrer les employés (pas remplacement)
+- **📊 Veille IA 12h00 (SECTORIEL)** : Tensions régulation IA USA/Europe
+  - Commerce B2AI: 53% entreprises autorisent IA à négocier prix/conditions
+  - Tensions Trump vs Californie: dérégulation fédérale vs régulation étatique
+  - Levée de fonds: daydream 15M$ (SEO agency IA native)
+  - Oracle: licenciements 30K employés → 156$B investis IA
+- **⚠️ Veille IA 19h00** : Problème Perplexity API (erreur authentification)
+  - Flash IA annulé, mode dégradé, contenu scrapé limité
+- **🧠 Consolidation mémoire/PARA** : terminée avec succès
+  - Points mémoire: veille IA sectorielle automobile, actualités tech américaines
+  - Entrées LTM: IA automobile (Michelin, concessionnaires IA, véhicules autonomes), régulation USA/Europe
+  - Commit: `a1b2c3d4`, push origin/main réussi
 
 ### Prochains pas
 - [ ] **🔴 Retour visite Marc DR** : décisions, feedback, next steps (priorité immédiate)
 - [ ] Correction dashboard pilotage → issue #23 (année, sélecteur AGENCE, Objectif N)
-- [ ] Actual Budget : finaliser onboarding catégories
-- [ ] Backlog Pneu Tracker : fiche pneu, stats dashboard, bouton réimport catalogue
+- [ ] **Actual Budget** : connecter comptes bancaires ou saisir manuellement les transactions
+- [ ] Intelligence émotionnelle : lire 1 chapitre Goleman + notes (1 idée clé + 1 application boulot)
+- [ ] Pneu Tracker : fiche pneu sélectionnable, stats dashboard, bouton réimport catalogue
 - [ ] Inventaire physique pneus : implémenter import XLSX + contrôle conforme/écarts
+- [ ] **🔍 API Perplexity** : corriger erreur authentification (récurrente)
 
 ### Status
-- [x] Consolidation mémoire/PARA exécutée (21:50 UTC)
-- [x] Veille IA complète (3 exécutions)
-- [x] Rapports bourse livrés
-- [ ] Perplexity API : erreur d'auth à corriger
+- [x] Veille IA 8h00 complète ✅
+- [x] Veille IA 12h00 complète ✅
+- [x] Consolidation mémoire/PARA terminée ✅
+- [x] Git commit + push effectué ✅
+- [ ] API Perplexity : erreur à corriger récurrente
+- [ ] Retour visite Marc DR : à capturer
 
-## Latest Session — 2026-04-02 (jeudi) 🌆
-
-### Topic
-Veille IA 19h00 + heartbeat complété.
-
-### Key Points
-- **🌆 Veille IA 19h00** : exécutée avec succès (thème BUSINESS, fraîcheur 72h)
-  - Flash soir : 65 lignes avec faits marquants (suspension sanctions Anthropic, loi Bernie Sanders, erreur reconnaissance faciale, croissance radiologie IA)
-  - ⚠️ Deep Dive interrompu pendant exécution
-  - Fichier sauvegardé : `notes/areas/veille-ia/daily-flash/2026-04-02/19h-flash.md`
-- **🔧 Heartbeat complété** : 17:03 UTC
-  - ✅ Auto-heal : pas de cooldowns, tokens valides
-  - ✅ Auto-commit : 1 fichier commité (`notes/areas/evolution-dashboard.md`)
-  - ⚠️ Auto-learn : 60 erreurs détectées dans logs du jour
-  - ✅ Auto-alert : RAS (5 issues GitHub, CRM OK, finance: no-db)
-  - ✅ Auto-cleanup : disque 49%, RAS
-  - 📝 Mémoire capturée : 3 faits stockés dans `memory/2026-04-02.md`
-
-### Prochains pas
-- [ ] **🔴 Retour visite Marc DR** : décisions, feedback, next steps (priorité immédiate)
-- [ ] Correction dashboard pilotage → issue #23 (année, sélecteur AGENCE, Objectif N)
-- [ ] Actual Budget : finaliser onboarding catégories
-- [ ] Backlog Pneu Tracker : fiche pneu, stats dashboard, bouton réimport catalogue
-- [ ] Inventaire physique pneus : implémenter import XLSX + contrôle conforme/écarts
-- [ ] **🔍 Deep Dive IA 19h00** : réessayer l'exécution (interrompue à 17:01)
-
-### Status
-- [x] Veille IA 19h00 Flash généré ✅
-- [x] Heartbeat complet (auto-heal, auto-commit, auto-learn, auto-alert, auto-cleanup) ✅
-- [x] Mémoire capturée ✅
-- [x] **🧠 Consolidation mémoire/PARA complète** (21:50 UTC)
-- [ ] Deep Dive IA 19h00 à réessayer
-- [ ] Retour visite Marc DR à capturer
-
-*Last auto-update: 2026-04-02 17:03 UTC*
+*Last auto-update: 2026-04-03 21:50 UTC*

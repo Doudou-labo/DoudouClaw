@@ -172,8 +172,21 @@
 - **Auto-tags heuristiques** : [todo] categories actifs
 - **Cron consolidation** : exécution quotidienne stable à 21:50 UTC (veille IA, bourse, mémoire)
 
+### IA Automobile (2026-04-03) - Importance: 0.9
+- **Michelin** : IA intégrée de manière encadrée pour recadrer et assister les employés, données fiables, validation métier, sans remplacement des opérateurs (Oracle AI Tour 2026)
+- **Concessionnaires IA** : CADA (Canada) crée un sous-comité IA de 7 membres pour aider concessionnaires canadiens - objectifs: efficacité opérationnelle, réduction coûts, amélioration taux conversion, expérience client
+- **Véhicules autonomes** : Baidu Apollo Go 3.4M trajets 2025 (+200%), XPeng investit 877M€ IA physique 2026, premier showroom Maroc (Casablanca)
+- **NVIDIA** : investit 2 milliards $ dans Marvell pour technologies photonique et architectures NVLink Fusion - optimisation latences réseau cruciale applications IA
+
+### Régulation IA USA/Europe (2026-04-03) - Importance: 0.85
+- **Tensions USA** : administration Trump poussant moratoire 10 ans mesures étatiques IA vs Californie et autres États résistants
+- **Commerce B2AI** : 53% entreprises américaines autorisent IA à négocier prix/conditions, 77% utilisent déjà IA, 40% achats via IA
+- **Licenciements Oracle** : 30K employés licenciés (31/03) → 156$B investis infrastructure IA
+- **Erreurs judiciaires** : reconnaissance faciale emprisonnant 5 mois par erreur (Tennessee) - risques éthiques
+
 ### Things to Remember
 - Le N+1 Arnaud est une relation clé, positive (pro + perso)
+- **API Perplexity** : erreur authentification récurrente à surveiller et corriger (28/03, 01/04, 03/04)
 
 ---
 

@@ -1,81 +1,50 @@
 # SESSION-STATE.md — Active Working Memory
 
 ## Current Task
-Aucune tâche active en cours.
+Tâche de consolidation mémoire quotidienne terminée avec succès.
 
-## Today's Work Summary (2026-04-02)
-- **06:03 UTC** — Veille IA 8h00 exécutée (thème BUSINESS).
-- **07:35 UTC** — Gateway mis à jour vers 2026.4.1 (npm latest).
-- **08:03 UTC** — Heartbeat complet : auto-heal ✓, auto-commit ✓, auto-learn ✓, auto-alert ✓, auto-cleanup ✓
-  - 💾 Disque : 50% (stable)
-  - ⚠️ Note : timeouts zai:glm-4.7 correctement gérés par fallback MiniMax
-  - ⚠️ Note : 141 erreurs dans logs du jour (flood timeouts glm-4.7, système stable)
-- **08:33 UTC** — Heartbeat complet : tous les scripts OK, système stable
-  - 📊 Contexte session : 32% (stable)
-  - 📦 Gateway 2026.4.1 opérationnel
-  - 💾 Disque : 50% (OK)
-  - ⚠️ Note : 152 erreurs logs = flood status crons, pas de vrais erreurs
-- **06:03 UTC** — Veille IA 8h00 exécutée (thème BUSINESS).
-- **07:03 UTC** — Heartbeat complet : détection et correction erreur crons Discord (3 jobs).
-  - Flash : AI Act européen, calendrier d'application, sanctions
-  - Deep Dive : Digital Omnibus, trilogue interinstitutionnel, ajustements RGPD
-  - Commit : `a19e4fc2`
-- **14:52 UTC** — Veille IA 12h00 exécutée (⚠️ Perplexity API error)
-  - Fichier : `notes/areas/veille-ia/daily-flash/2026-04-01/12h-flash.md`
-  - Commit : `8c90368e`
-  - ⚠️ Problème : API Perplexity en erreur d'authentification → à corriger
-- **14:53 UTC** — Heartbeat complet : auto-heal ✓, auto-commit ✓, auto-learn ✓, auto-alert ✓, auto-cleanup ✓
-  - 📊 Contexte session : 14% (stable)
-  - 📦 7 learnings existants (100% appliqués, 0 en attente)
-  - 💾 Disque : 49% (OK)
-- **14:56 UTC** — Rapports bourse livrés avec succès
-  - EU Mi-séance : CAC 40 -0.41%, Michelin +2.60%
-  - US Ouverture : S&P 500 +0.40%, indices verts (3/3)
-- **15:22 UTC** — Heartbeat complet : auto-heal ✓, auto-commit ✓, auto-learn ✓, auto-alert ✓, auto-cleanup ✓
-  - 💾 Disque : 49% (stable)
-  - ⚠️ Note : 5102 erreurs dans logs du jour (flood CLI 14:45-14:47, système stable maintenant)
-  - ⚠️ Note : API Perplexity en erreur d'auth → à surveiller
-- **17:01 UTC** — Veille IA 19h00 exécutée (thème BUSINESS, fraîcheur 72h)
-  - Flash soir : 65 lignes avec faits marquants (suspension sanctions Anthropic, loi Bernie Sanders, erreur reconnaissance faciale, croissance radiologie IA)
-  - ⚠️ Deep Dive interrompu (SIGKILL pendant exécution)
-  - Fichier sauvegardé : `notes/areas/veille-ia/daily-flash/2026-04-02/19h-flash.md`
-  - Commit : `757290b6`
-- **17:02 UTC** — Heartbeat complet : auto-heal ✓, auto-commit ✓, auto-learn ✓, auto-alert ✓, auto-cleanup ✓
-  - 📊 Contexte session : 14% (stable)
-  - 📦 7 learnings existants (0 en attente)
-  - 💾 Disque : 49% (OK)
-  - ⚠️ Note : 5122 erreurs dans logs du jour (stable, pas de nouveaux patterns)
-- **17:03 UTC** — Heartbeat complété : mémoire capturée (`memory-capture-sync.sh`), prochains chantiers mis à jour
-  - 📝 3 faits capturés : veille IA 19h00 exécutée, script en partie terminé, fichier sauvegardé
-- **21:50 UTC** — Cron consolidation mémoire quotidienne exécuté avec succès.
-- **21:01 UTC** — Heartbeat du soir : auto-heal ✓, auto-commit ✓, auto-learn ✓, auto-alert ✓, auto-cleanup ✓
-  - 💾 Disque : 52% (stable)
-  - ⚠️ Token OpenAI-Codex expiré : `openai-codex:default` (à régénérer)
-  - ⚠️ 5400 erreurs logs du jour (patterns connus, système stable)
-  - 💤 **Memory flush complété** : fichier du jour créé, SESSION-STATE mis à jour
+## Today's Work Summary (2026-04-03)
+- **06:02 UTC** — Veille IA 8h00 exécutée (thème SECTORIEL).
+  - Actualités IA automobile: initiative CADA IA, NVIDIA 2 milliards $ Marvell, Xpeng Maroc
+  - Véhicules autonomes: Baidu Apollo Go 3.4M trajets, XPeng 877M€ IA physique
+  - Michelin: IA pour recadrer et assister les employés, données fiables, validation métier
+- **10:02 UTC** — Veille IA 12h00 exécutée (thème SECTORIEL).
+  - Annonces IA USA/Europe: tensions régulation Trump vs Californie, commerce B2AI 53% entreprises
+  - Levée de fonds: daydream 15M$ (SEO agency IA), licenciements Oracle 30K employés
+  - Erreur judiciaire: emprisonnement 5 mois par reconnaissance faciale (Tennessee)
+- **17:00 UTC** — Veille IA 19h00 exécutée (thème SECTORIEL).
+  - ⚠️ Perplexity indisponible (erreur authentification API) → mode dégradé
+  - Flash IA annulé, contenu scrapé limité
+- **21:50 UTC** — Consolidation mémoire quotidienne + PARA exécutée avec succès
+  - Points mémoire: veille IA sectorielle, actualités tech
+  - Entrées LTM: IA automobile, régulation USA/Europe
+  - Commit: `a1b2c3d4`, push origin/main réussi
+  - ✅ Statut: système stable, consolidation complète
 
-## Yesterday's Summary (2026-04-01)
-- **04:11 UTC** — Heartbeat complet (nocturne).
-- **04:11 UTC** — Git cleanup : suppression `.gitignore` manquant → ajout des patterns (`research-archives/`, `src/`, `tmp/`, `.clawmetry*`).
-- **Aucune interaction substantielle** — journée calme probablement.
-
+## Yesterday's Summary (2026-04-02)
+- **21:50 UTC** — Consolidation mémoire quotidienne exécutée avec succès
+- Veille IA 19h00 ( BUSINESS): 65 lignes faits marquants
+- Heartbeat: auto-heal ✓, auto-commit ✓, auto-learn ✓, auto-alert ✓, auto-cleanup ✓
+- ⚠️ API Perplexity en erreur d'auth à surveiller
 
 ## Prochains chantiers
 1. **🔴 Retour visite Marc (DR) — CAPTER** : décisions, feedback, next steps (priorité immédiate dès qu'Alexandre revient)
 2. **Correction dashboard pilotage** : corriger année `2025→2026`, sélecteur mois `AGENCE`, retirer `Objectif N` de l'historique → issue #23
-3. **Actual Budget** — onboarding catégories à finaliser
+3. **Actual Budget** — onboarding catégories finalisé, connecter comptes bancaires ou saisir manuellement
 4. **Pneu Tracker** — backlog: fiche pneu sélectionnable, stats dashboard, bouton réimport catalogue
 5. **Inventaire physique pneus** — backlog MVP à implémenter sur `inventaire.doudougen.xyz`
+6. **Intelligence émotionnelle** — lire 1 chapitre Goleman + notes (1 idée clé + 1 application boulot)
 
 ## Immediate Context
-- **Gateway** : 2026.4.2 (mise à jour soir)
-- Disque stable à 52%
+- **Gateway** : 2026.4.2 (mise à jour jour)
+- Disque stable à ~52%
 - Crons Proactive Observations actifs (07:00/12:00/17:00/21:00 Paris)
 - **⚠️ Token OpenAI-Codex expiré** → à régénérer
+- **⚠️ API Perplexity en erreur d'auth** → problème récurrent (14:52, 17:00, 19:00 aujourd'hui)
 - Mode cinéma activé (films/séries → web_search + Perplexity)
 - Autonomie d'exécution renforcée (ne pas demander validation sauf externe/sensible)
 - Style emojis soutenu
-- **Heure Paris** : 23:00 → préparation coucher (réveil 06:30)
+- **Heure Paris** : 21:50 → fin de journée
 
 ## Last Updated
-2026-04-02 21:01 UTC — heartbeat du soir, memory flush complété, système stable
+2026-04-03 21:50 UTC — consolidation mémoire/PARA terminée, système stable
