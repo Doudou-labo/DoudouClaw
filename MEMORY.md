@@ -172,6 +172,12 @@
 - **Auto-tags heuristiques** : [todo] categories actifs
 - **Cron consolidation** : exécution quotidienne stable à 21:50 UTC (veille IA, bourse, mémoire)
 
+### Consolidation mémoire (2026-04-04)
+- **Système robuste** : heartbeat auto-surveillance opérationnelle (auto-heal ✓, auto-commit ✓, auto-learn ✓, auto-alert ✓, auto-cleanup ✓)
+- **Pattern heartbeat** : systèmes simples fiables vs complexes instables (observation proactive)
+- **Gestion tokens** : expiration OpenAI-Codex (44h) → besoin système de monitoring/regénération automatique
+- **API monitoring** : Perplexity instabilité récurrente → nécessité fallback système
+
 ### IA Automobile (2026-04-03) - Importance: 0.9
 - **Michelin** : IA intégrée de manière encadrée pour recadrer et assister les employés, données fiables, validation métier, sans remplacement des opérateurs (Oracle AI Tour 2026)
 - **Concessionnaires IA** : CADA (Canada) crée un sous-comité IA de 7 membres pour aider concessionnaires canadiens - objectifs: efficacité opérationnelle, réduction coûts, amélioration taux conversion, expérience client

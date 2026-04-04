@@ -61,3 +61,7 @@
 ### Systèmes d'automatisation
 - [ ] Étendre le modèle cron simple à d'autres domaines (revue projet, consolidation automatique) basé sur patterns observés
 
+### Monitoring API tokens
+- [ ] Mettre en place système de monitoring/regénération automatique pour API tokens (OpenAI-Codex expiration détectée à 44h)
+- [ ] Configurer fallback système pour API Perplexity (erreurs authentification récurrentes)
+
