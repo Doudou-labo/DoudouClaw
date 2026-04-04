@@ -3,23 +3,14 @@
 ## Current Task
 Tâche de consolidation mémoire quotidienne terminée avec succès.
 
-## Today's Work Summary (2026-04-03)
-- **06:02 UTC** — Veille IA 8h00 exécutée (thème SECTORIEL).
-  - Actualités IA automobile: initiative CADA IA, NVIDIA 2 milliards $ Marvell, Xpeng Maroc
-  - Véhicules autonomes: Baidu Apollo Go 3.4M trajets, XPeng 877M€ IA physique
-  - Michelin: IA pour recadrer et assister les employés, données fiables, validation métier
-- **10:02 UTC** — Veille IA 12h00 exécutée (thème SECTORIEL).
-  - Annonces IA USA/Europe: tensions régulation Trump vs Californie, commerce B2AI 53% entreprises
-  - Levée de fonds: daydream 15M$ (SEO agency IA), licenciements Oracle 30K employés
-  - Erreur judiciaire: emprisonnement 5 mois par reconnaissance faciale (Tennessee)
-- **17:00 UTC** — Veille IA 19h00 exécutée (thème SECTORIEL).
-  - ⚠️ Perplexity indisponible (erreur authentification API) → mode dégradé
-  - Flash IA annulé, contenu scrapé limité
-- **21:50 UTC** — Consolidation mémoire quotidienne + PARA exécutée avec succès
-  - Points mémoire: veille IA sectorielle, actualités tech
-  - Entrées LTM: IA automobile, régulation USA/Europe
-  - Commit: `a1b2c3d4`, push origin/main réussi
-  - ✅ Statut: système stable, consolidation complète
+## Today's Work Summary (2026-04-04)
+- **17:00 UTC** — Veille IA 19h00 exécutée (thème EMERGENT).
+  - ✅ Perplexity fonctionnel → mode normal
+  - Flash IA: 55 lignes, contenu récent 7 jours
+  - Deep Dive IA: 87 lignes sur IA émergente (swarm AI, federated learning, IA causale)
+  - Scraping de 4 URLs sources web
+  - Commit: `fad09dcf`, push origin/main réussi (4 fichiers, 144 insertions)
+- ✅ Heartbeat: auto-heal ✓, auto-commit ✓, auto-learn ✓, auto-alert ✓, auto-cleanup ✓
 
 ## Yesterday's Summary (2026-04-02)
 - **21:50 UTC** — Consolidation mémoire quotidienne exécutée avec succès
@@ -34,6 +25,12 @@ Tâche de consolidation mémoire quotidienne terminée avec succès.
 4. **Pneu Tracker** — backlog: fiche pneu sélectionnable, stats dashboard, bouton réimport catalogue
 5. **Inventaire physique pneus** — backlog MVP à implémenter sur `inventaire.doudougen.xyz`
 6. **Intelligence émotionnelle** — lire 1 chapitre Goleman + notes (1 idée clé + 1 application boulot)
+
+## Systèmes actifs
+- ✅ Heartbeat auto-heal/auto-commit/auto-learn/auto-alert/auto-cleanup opérationnel
+- ✅ Crons veille IA fonctionnels (19h00 avec scraping)
+- ⚠️ Token OpenAI-Codex expiré (44h) → à régénérer
+- ⚠️ API Perplexity instable → problème récurrent surveillé
 
 ## Immediate Context
 - **Gateway** : 2026.4.2 (mise à jour jour)

@@ -77,6 +77,19 @@ Générer des **surprises utiles** qui :
 - Adapter le niveau de détail des réponses selon son état (fatigué = TL;DR; en forme = complet)
 - Proposer une seule action claire quand je détecte de l'overwhelm
 
+### Thème : Systèmes automatiques
+- **Date de début** : 2026-04-04
+- **Statut** : Observation active
+
+**Pattern détecté** :
+- Les cron jobs fonctionnent bien quand ils sont simples et dédiés (veille IA, bourse)
+- Les systèmes complexes avec multiples étapes ont plus de chances d'échec
+- La veille IA de 19h00 génère du contenu de valeur et des commits utiles
+
+**Surprise potentielle** :
+- Proposer d'étendre le modèle des crons simples à d'autres domaines (ex: revue projet hebdo)
+- Automatiser les tâches récurrentes basiques pour libérer du temps cognitif
+
 ---
 
 ## 🎯 Surprises lancées (résultats)

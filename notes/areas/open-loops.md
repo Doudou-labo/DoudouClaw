@@ -56,5 +56,8 @@
 - [ ] Brancher recherche/ajout via référentiel pneus + préparer export Excel final
 
 ## Auto-checkpoints
-- [ ] [AUTO 2026-04-04 midi] Checkpoint 3-min fait. Next: Connecter les comptes bancaires ou saisir manuellement les transactions
+- [x] [AUTO 2026-04-04 midi] Checkpoint 3-min fait. Next: Connecter les comptes bancaires ou saisir manuellement les transactions
+
+### Systèmes d'automatisation
+- [ ] Étendre le modèle cron simple à d'autres domaines (revue projet, consolidation automatique) basé sur patterns observés
 

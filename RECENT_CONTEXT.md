@@ -44,4 +44,46 @@ Consolidation mémoire quotidienne + veille IA sectorielle automobile.
 - [ ] API Perplexity : erreur à corriger récurrente
 - [ ] Retour visite Marc DR : à capturer
 
-*Last auto-update: 2026-04-03 21:50 UTC*
+## Latest Session — 2026-04-04 (samedi) 🌆
+
+### Topic
+Veille IA 19h00 - thème EMERGENT + heartbeat maintenance.
+
+### Key Points
+- **🌆 Veille IA 19h00 (EMERGENT)** : IA émergente et paradigmes futurs
+  - ✅ Perplexity fonctionnel → mode normal
+  - Flash IA: 55 lignes, contenu récent 7 jours (actualités IA France/USA)
+  - Deep Dive IA: 87 lignes sur IA émergente
+    - Swarm AI, federated learning, IA causale
+    - Applications concrètes entreprises USA/Europe 2026
+  - Scraping de 4 URLs sources web (contenu détaillé extrait)
+  - Commit: `fad09dcf`, push origin/main réussi (4 fichiers, 144 insertions)
+- **🤖 Heartbeat maintenance** : tous systèmes opérationnels
+  - Auto-heal: ✅ (1 token OpenAI-Codex expiré à surveiller)
+  - Auto-commit: ✅ (1 fichier modifié: memory/2026-04-04.md)
+  - Auto-learn: ✅ (295 errors dans logs à analyser)
+  - Auto-alert: ✅ (pas d'alertes urgentes)
+  - Auto-cleanup: ✅ (disque à 52%, rien à nettoyer)
+- **📊 Observations proactives** : mise à jour système
+  - Pattern: systèmes automatiques simples fonctionnent bien
+  - Surprise potentielle: étendre crons simples à d'autres domaines
+
+### Prochaines étapes
+- [ ] **🔴 Retour visite Marc DR** : décisions, feedback, next steps (priorité immédiate)
+- [ ] Correction dashboard pilotage → issue #23 (année, sélecteur AGENCE, Objectif N)
+- [ ] **Actual Budget** : connecter comptes bancaires ou saisir manuellement les transactions
+- [ ] Intelligence émotionnelle : lire 1 chapitre Goleman + notes (1 idée clé + 1 application boulot)
+- [ ] Pneu Tracker : fiche pneu sélectionnable, stats dashboard, bouton réimport catalogue
+- [ ] Inventaire physique pneus : implémenter import XLSX + contrôle conforme/écarts
+- [ ] **🔍 Token OpenAI-Codex expiré** : régénérer (44h d'expiration)
+- [ ] **🔍 API Perplexity** : surveiller instabilité récurrente
+
+### Status
+- [x] Veille IA 19h00 complète ✅
+- [x] Heartbeat maintenance terminée ✅
+- [x] Git commit + push effectué ✅
+- [x] Observations proactives mises à jour ✅
+- [ ] Token OpenAI-Codex : à régénérer
+- [ ] Retour visite Marc DR : à capturer
+
+*Last auto-update: 2026-04-04 17:01 UTC*
