@@ -45,13 +45,47 @@ Ne pas laisser ce sujet se noyer dans le reste des open loops.
 2. **Discours RCS** : L'ambition a été clairement annoncée à Marc (DR) — c'est maintenant sur le radar hiérarchique
 
 ### Feedbacks reçus
-- Aucun feedback explicite ou détaillé
-- Format de visite = "tour des lieux" plutôt qu'échange approfondi
+⚠️ **ÉLÉMENT CLÉ** — Feedback de Marc : **« Arnaud ne me parle que de toi, Alexandre Alexandre Alexandre, il ne voit que par toi bien souvent »**
+
+**Interprétation :**
+- Arnaud recommande activement Alexandre au niveau DR
+- Le DR est déjà au courant du potentiel RCS
+- La confiance d'Arnaud est **explicite et récurrente** dans ses échanges avec Marc
+- Alexandre est déjà sur le radar comme "jeu naturel" pour la progression RCS
+
+**Format de visite :**
+- Discrète, très peu de discussion réelle
+- Probablement parce qu'Arnaud a déjà fait le plaidoyer en amont auprès de Marc
 
 ### Leçons & ressentis
-- **Visite discrète** : Pas grand-chose de décisif s'est dit
+- **Visite "de validation"** : Pas grand-chose de décisif s'est dit parce qu'Arnaud a déjà plaidé en amont
 - **Objectif RCS affiché** : Maintenant connu au niveau DR — c'est positif pour la visibilité
 - **Permis** : Bloquant récurrent pour la progression (mobilité, crédibilité)
+- **Momentum Arnaud** : La recommandation récurrente est **puissante** — il ne faut pas la gâcher
+
+---
+
+## 🎯 Analyse de fond
+
+### Pourquoi la visite était discrète ?
+Marc a sûrement fait le tour des agences pour **valider sur le terrain** ce qu'Arnaud lui a déjà dit :
+- "Il y a un gars à Arras qui outrepasse sa fonction"
+- "Il veut devenir RCS"
+- "Il est prêt"
+
+La visite n'était pas une découverte, mais une **confirmation visuelle**.
+
+### Ce que ça change pour toi
+1. **Tu as l'air d'être le "jeu naturel" RCS** — Arnaud te vend à Marc
+2. **C'est un énorme atout** — quand ton N+1 tient ce discours, ça porte
+3. **La barre est haute** — tu dois continuer à outrepasser et tenir tes engagements
+4. **Le permis est encore plus bloquant** — c'est le seul point noir qui peut freiner le momentum
+
+### Risque à surveiller
+Si Arnaud te vend aussi fort à Marc, tu dois être sûr de **ne pas le décevoir** :
+- Continue à outrepasser ta fonction ACS
+- Garde la rigueur et la posture
+- Ne laisse pas des trucs tomber (permis, délais, engagements)
 
 ---
 
