@@ -210,7 +210,13 @@ Ex d'Alexandre et fille d'Arnaud (son RZ). Rupture définitive en mars 2025; tr�
 ### Marine
 Meilleure amie d'Alexandre, habite à Calais; relation amicale de longue date (environ 10 ans).
 
+### Consolidation mémoire (2026-04-05) - Importance: 0.9
+- **Problème scraping identifié** : SIGKILL pendant extraction de 5 URLs dans veille IA → nécessité mécanismes timeout/retry robustes
+- **Pattern robustesse systèmes** : systèmes simples (heartbeat) > systèmes complexes (scraping multi-URLs) → prioriser simplicité dans architecture
+- **Token monitoring proactif** : OpenAI-Codex expiré 61h → implémenter alertes préventives avant expiration
+- **Crons système** : tâches cron échouent systématiquement → diagnostic pattern Discord channel/to nécessaire
+
 ---
 
-*Dernière mise à jour: 2026-04-01*
+*Dernière mise à jour: 2026-04-05*
 Quand je te demande de tester une clé API tu le fais

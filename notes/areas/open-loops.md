@@ -58,3 +58,8 @@
 ## Auto-checkpoints
 - [ ] [AUTO 2026-04-05 midi] Checkpoint 3-min fait. Next: Connecter les comptes bancaires ou saisir manuellement les transactions
 
+## Système monitoring technique
+- [ ] **🔧 Investiger problème scraping SIGKILL** : Tester individuellement `scrape-urls.py`, identifier cause exacte du kill (timeout, mémoire, processus zombie)
+- [ ] **🛡️ Implémenter monitoring proactif tokens API** : Système d'alertes avant expiration (OpenAI, Perplexity) - auto-regen ou notification préventive
+- [ ] **🔍 Diagnostic crons système** : Analyser les tâches cron échouées systématiquement (pattern Discord channel/to identifié)
+

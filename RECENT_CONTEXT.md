@@ -87,4 +87,44 @@ Veille IA 19h00 - thème EMERGENT + heartbeat maintenance.
 - [ ] Token OpenAI-Codex : à régénérer
 - [ ] Retour visite Marc DR : à capturer
 
-*Last auto-update: 2026-04-04 21:50 UTC (consolidation mémoire)*
+## Latest Session — 2026-04-05 (dimanche) 🔧
+
+### Topic
+Consolidation mémoire quotidienne + systèmes techniques monitoring.
+
+### Key Points
+- **🔧 Consolidation mémoire/PARA** : terminée avec succès
+  - Points mémoire: problèmes techniques scraping veille IA, token OpenAI expiré, cron errors
+  - Entrées LTM: surveillance proactive tokens API, robustesse systèmes simples vs complexes
+  - Git commit: consolidation traçable + push origin/main
+- **📊 AUTO PARA Weekly Review** : exécutée à 16:05 UTC
+  - Stats: Projects=13, Areas=22, Resources=16, Archive=6, open loops=24
+  - Action: revue hebdo + trace dans notes/areas/proactive-tracker.md
+- **🤖 AUTO Self-Improving Weekly Review** : exécutée à 16:20 UTC
+  - Patterns erreurs détectés: oui (scraping, tokens expirés, crons)
+  - Corrections utilisateur: non
+  - Traces mises à jour: .learnings/ERRORS.md + .learnings/LEARNINGS.md
+- **⚠️ Problèmes techniques identifiés** :
+  - Scraping veille IA SIGKILL (5 URLs tuées pendant extraction)
+  - Token OpenAI-Codex expiré (61h)
+  - Crons systématiquement en erreur (diagnostic nécessaire)
+
+### Prochaines étapes
+- [ ] **🔴 Retour visite Marc DR** : décisions, feedback, next steps (priorité immédiate)
+- [ ] Correction dashboard pilotage → issue #23 (année, sélecteur AGENCE, Objectif N)
+- [ ] **Actual Budget** : connecter comptes bancaires ou saisir manuellement les transactions
+- [ ] Intelligence émotionnelle : lire 1 chapitre Goleman + notes (1 idée clé + 1 application boulot)
+- [ ] Pneu Tracker : fiche pneu sélectionnable, stats dashboard, bouton réimport catalogue
+- [ ] Inventaire physique pneus : implémenter import XLSX + contrôle conforme/écarts
+- [ ] **🔧 Système scraping veille IA** : investiguer SIGKILL, ajouter timeouts/retry
+- [ ] **🔐 Token monitoring API** : implémenter monitoring proactif tokens expirés
+- [ ] **🔍 Crons en erreur** : diagnostic et correction
+
+### Status
+- [x] Consolidation mémoire/PARA terminée ✅
+- [x] AUTO PARA Weekly Review terminée ✅
+- [x] AUTO Self-Improving Weekly Review terminée ✅
+- [ ] Problèmes techniques : scraping, tokens, crons (à résoudre)
+- [ ] Retour visite Marc DR : à capturer
+
+*Last auto-update: 2026-04-05 21:50 UTC (consolidation mémoire)*
