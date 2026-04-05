@@ -169,3 +169,6 @@ Updated 3 cron payloads to use correct syntax:
 3. Test cron payloads after creation by running them manually or checking logs for syntax errors
 
 **Status:** APPLIED
+
+## 2026-04-05 16:20 UTC
+- Findings: pas de correction explicite détectée

@@ -43,3 +43,11 @@ Avant tout patch `openclaw.json` : lire la structure EXACTE du nœud cible et ne
 - Sources:
   - memory/2026-03-22.md:26:- Timeout par sous-agent : 1200s ; résultats récupérés via auto-announce
 - Action: transformer les patterns récurrents en gotchas dans TOOLS.md
+
+## 2026-04-05 16:20 UTC
+- Findings: erreurs/outils détectés dans les mémoires récentes
+- Sources:
+  - memory/2026-04-05.md:11:- **Veille IA 12h**: Échec de scraping - processus tué (SIGKILL) pendant l'extraction de contenu de 5 URLs
+  - memory/2026-04-05.md:32:4. 🔄 **Script veille**: Ajouter des timeouts et mécanismes de retry
+  - memory/2026-04-05.md:37:- ❌ Crons défaillants diagnostiqués
+- Action: transformer les patterns récurrents en gotchas dans TOOLS.md
