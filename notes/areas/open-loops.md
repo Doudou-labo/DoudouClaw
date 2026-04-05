@@ -56,7 +56,7 @@
 - [ ] Brancher recherche/ajout via référentiel pneus + préparer export Excel final
 
 ## Auto-checkpoints
-- [ ] [AUTO 2026-04-05 midi] Checkpoint 3-min fait. Next: Connecter les comptes bancaires ou saisir manuellement les transactions
+- [ ] [AUTO 2026-04-05 soir] Checkpoint 3-min fait. Next: Connecter les comptes bancaires ou saisir manuellement les transactions
 
 ## Système monitoring technique
 - [ ] **🔧 Investiger problème scraping SIGKILL** : Tester individuellement `scrape-urls.py`, identifier cause exacte du kill (timeout, mémoire, processus zombie)
