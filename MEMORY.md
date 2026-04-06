@@ -117,6 +117,36 @@
 - **Impact**: résolution des erreurs `LiveSessionModelSwitchError` sur crons hebdo
 - **Pattern**: les préférences modèles sont critiques pour la stabilité du système - suivre l'évolution des modèles par défaut
 
+**LiveSessionModelSwitchError Resolution (2026-04-06)** - Importance: 0.9
+- **Problème**: erreurs `LiveSessionModelSwitchError` sur crons hebdo
+- **Solution**: migration des 38 crons + heartbeat vers `zai/glm-5-turbo`
+- **Résultat**: résolution complète des erreurs de basculement de modèle
+- **Leçon**: les préférences modèles sont un facteur critique de stabilité système
+
+**API Perplexity Authentication Issues (2026-04-06)** - Importance: 0.85
+- **Problème**: erreur d'authentification API récurrente (déjà observée 28/03, 01/04, 03/04)
+- **Impact**: veille IA en mode dégradé pendant pannes
+- **Priorité**: nécessité d'un fallback système ou correction immédiate
+- **Pattern**: erreur récurrente hebdomadaire, souvent en milieu d'après-midi
+
+**OpenAI-Codex Token Expiration (2026-04-06)** - Importance: 0.8
+- **État**: token expiré depuis 81h
+- **Impact**: potentiel blocage des dépendances OpenAI-Codex
+- **Action nécessaire**: régénération proactive avant expiration
+- **Pattern**: nécessité de monitoring proactif des tokens API
+
+**Scraping SIGKILL Issues (2026-04-06)** - Importance: 0.8
+- **Problème**: processus SIGKILL pendant extraction multi-URLs veille IA
+- **Impact**: pertes de données scraping, instabilité système
+- **Solution nécessaire**: implémentation timeout/retry robuste
+- **Leçon**: systèmes simples > systèmes complexes pour la stabilité
+
+**AI Act UE Phase 2 Adoption (2026-04-06)** - Importance: 0.85
+- **Événement**: adoption de la Phase 2 de l'AI Act européenne
+- **Impact**: audits obligatoires modèles généralistes à partir juillet 2026
+- **Conséquence**: régulation renforcée pour modèles haut de gamme
+- **Veille à maintenir**: suivi des impacts opérationnels concrets
+
 ### Auto-Heal Status (2026-04-02) - Importance: 0.8
 - ✅ Auto-heal: RAS (pas de cooldowns, tokens OK)
 - ✅ Auto-commit: RAS
@@ -162,10 +192,13 @@
 - **Sécurité** : .env + data supprimés de git (commit 62a9ab5)
 - Prêt pour déploiement/usage dès qu'Alexandre veut piloter son budget
 
-### Veille IA - faits saillants (2026-03-28 → 2026-04-01)
-- **Perplexity API** : erreur d'auth à 08h le 28/03 (mode dégradé), résolu à 19h - **nouvelle erreur d'auth le 01/04 à 14:52 UTC** → à corriger en priorité, pattern récurrent
+### Veille IA - faits saillants (2026-03-28 → 2026-04-06)
+- **Perplexity API** : erreur d'auth à 08h le 28/03 (mode dégradé), résolu à 19h - **nouvelle erreur d'auth le 01/04 à 14:52 UTC** - **erreur récurrente le 03/04 et 06/04** → à corriger en priorité, pattern hebdomadaire
 - **France** : 16% des emplois menacés par l'IA (~5 millions d'ici fin décennie) - étude COFAS/Observatoire des emplois menacés et émergents, publication 01/04/2026
 - **OpenAI** : dépréciation de Sora (génération vidéo par IA)
+- **GPT-5 Orion bêta** : ouverture accès multimodale 10M tokens, 40% moins d'hallucinations - milestone importante IA
+- **AI Act UE Phase 2** : adoption définitive - audits obligatoires modèles généralistes à partir juillet 2026
+- **Benchmarks ARC-AGI-3** : saturation des benchmarks - avancement significatif IA générale
 - **Routine veille** : 3 exécutions quotidiennes (8h, 12h, 19h heure de Paris) - format Flash (21 lignes) + Deep Dive (28-140 lignes selon thème), commits GitHub quotidiens
 
 ### Bourse (2026-04-01)
@@ -178,11 +211,13 @@
 - **Auto-tags heuristiques** : [todo] categories actifs
 - **Cron consolidation** : exécution quotidienne stable à 21:50 UTC (veille IA, bourse, mémoire)
 
-### Consolidation mémoire (2026-04-04)
+### Consolidation mémoire (2026-04-06)
 - **Système robuste** : heartbeat auto-surveillance opérationnelle (auto-heal ✓, auto-commit ✓, auto-learn ✓, auto-alert ✓, auto-cleanup ✓)
 - **Pattern heartbeat** : systèmes simples fiables vs complexes instables (observation proactive)
-- **Gestion tokens** : expiration OpenAI-Codex (44h) → besoin système de monitoring/regénération automatique
-- **API monitoring** : Perplexity instabilité récurrente → nécessité fallback système
+- **Gestion tokens** : expiration OpenAI-Codex (81h) → implémentation monitoring proactif nécessaire
+- **API monitoring** : Perplexity instabilité récurrente → nécessité fallback système immédiat
+- **Scraping robustesse** : SIGKILL multi-URLs → nécessité mécanismes timeout/retry robustes
+- **Modèles système** : migration réussie zai/glm-5-turbo pour 38 crons + heartbeat - résolution LiveSessionModelSwitchError
 
 ### IA Automobile (2026-04-03) - Importance: 0.9
 - **Michelin** : IA intégrée de manière encadrée pour recadrer et assister les employés, données fiables, validation métier, sans remplacement des opérateurs (Oracle AI Tour 2026)
