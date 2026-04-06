@@ -1,9 +1,13 @@
 # SESSION-STATE.md — Active Working Memory
 
 ## Current Task
-Consolidation mémoire quotidienne + PARA terminée avec succès. Système stable avec problèmes techniques identifiés et plan d'action en cours.
+Veille IA 8h00 - thème tech LLM et régulation - ✅ Flash 5min généré (9492 lignes), sauvegardé et commité. Deep Dive en attente d'exécution complète.
 
-## Today's Work Summary (2026-04-05)
+## Today's Work Summary (2026-04-06)
+- **06:02 UTC** — Veille IA 8h00 - Flash tech généré avec succès (GPT-5 Orion, AI Act UE, benchmarks ARC-AGI-3)
+- **06:01 UTC** — Heartbeat: auto-heal ✓ (pas d'erreurs), auto-commit ✓, auto-optimize ✓, auto-learn ✓ (pas d'erreurs), auto-alert ✓, auto-cleanup ✓
+
+## Yesterday's Summary (2026-04-05)
 - **21:50 UTC** — Consolidation mémoire quotidienne + PARA terminée avec succès
 - **16:05 UTC** — AUTO PARA Weekly Review: revue hebdo exécutée (Projects=13, Areas=22, Resources=16, Archive=6, open loops=24)
 - **16:20 UTC** — AUTO Self-Improving Weekly Review: erreurs patterns détectées, traces mises à jour
@@ -29,9 +33,9 @@ Consolidation mémoire quotidienne + PARA terminée avec succès. Système stabl
 
 ## Systèmes actifs
 - ✅ Heartbeat auto-heal/auto-commit/auto-learn/auto-alert/auto-cleanup opérationnel
-- ✅ Crons veille IA fonctionnels (19h00 avec scraping)
-- ⚠️ Token OpenAI-Codex expiré (44h) → à régénérer
-- ⚠️ API Perplexity instable → problème récurrent surveillé
+- ✅ Crons veille IA fonctionnels (8h00 tech, 19h00 business)
+- ⚠️ Token OpenAI-Codex expiré → à surveiller
+- ⚠️ API Perplexity en erreur d'auth récurrente → problème identifié mais veille continue
 
 ## Immediate Context
 - **Gateway** : 2026.4.2 (mise à jour jour)
@@ -39,12 +43,12 @@ Consolidation mémoire quotidienne + PARA terminée avec succès. Système stabl
 - Crons Proactive Observations actifs (07:00/12:00/17:00/21:00 Paris)
 - **⚠️ Token OpenAI-Codex expiré** → à régénérer (61h d'expiration)
 - **⚠️ API Perplexity en erreur d'auth** → problème récurrent (14:52, 17:00, 19:00, 12:00 aujourd'hui)
-- **⚠️ Scraping veille IA échoué** → SIGKILL pendant extraction 5 URLs
-- **⚠️ Crons systématiquement en erreur** → diagnostic nécessaire
-- Mode cinéma activé (films/séries → web_search + Perplexity)
+- **⚠️ Scraping veille IA SIGKILL** → à investiguer (script 8h00 bloqué pendant scraping)
+- ⚠️ Crons systématiquement en erreur → diagnostic nécessaire
+- Mode tech activé (IA → web_search + Perplexity intensif)
 - Autonomie d'exécution renforcée (ne pas demander validation sauf externe/sensible)
 - Style emojis soutenu
-- **Heure Paris** : 21:50 → fin de journée
+- **Heure Paris** : 08:02 → début de journée
 
 ## Last Updated
-2026-04-05 21:50 UTC — consolidation mémoire/PARA terminée, système stable avec problèmes techniques identifiés
+2026-04-06 06:02 UTC — veille IA 8h00 tech terminée avec succès, flash généré et commité
