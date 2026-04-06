@@ -111,6 +111,12 @@
 - **Solution**: correction de 3 payloads cron (`819278af-5fcc-49ed-8633-31744105c94f`, `1eaf6c91-8680-4966-8c7a-5fcc5de7c328`, `3598d292-14ea-42bc-897c-1dcefed6a1fe`)
 - **Pattern critique à retenir**: toujours utiliser `channel=provider to=channel_id` dans les crons OpenClaw
 
+**Model Preference Update (2026-04-06)** - Importance: 0.9
+- **Preference identifiée**: Alexandre souhaite que tous les crons + heartbeat tournent sur `zai/glm-5-turbo` (performance supérieure)
+- **Action exécutée**: mise à jour de 38 crons + heartbeat de `zai/glm-4.7` vers `zai/glm-5-turbo`
+- **Impact**: résolution des erreurs `LiveSessionModelSwitchError` sur crons hebdo
+- **Pattern**: les préférences modèles sont critiques pour la stabilité du système - suivre l'évolution des modèles par défaut
+
 ### Auto-Heal Status (2026-04-02) - Importance: 0.8
 - ✅ Auto-heal: RAS (pas de cooldowns, tokens OK)
 - ✅ Auto-commit: RAS

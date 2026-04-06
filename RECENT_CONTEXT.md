@@ -1,6 +1,6 @@
 # RECENT_CONTEXT.md - Points Clés Contexte Récent
 
-**Dernière mise à jour** : 2026-04-06 06:02 UTC
+**Dernière mise à jour** : 2026-04-06 21:50 UTC
 
 ## Session Actuelle
 - **Tâche** : Exécution veille IA 8h - thème tech LLM et régulation
@@ -14,6 +14,7 @@
 - **Benchmarks** : ARC-AGI-3 tests d'apprentissage inconnu - tous modèles <1% (humains 100%)
 - **Hardware** : NVIDIA Blackwell B300 GPU 20 petaflops pour IA
 - **Application** : IA médicale Insilico Medicine médicament Alzheimer phase 1 en 18 mois
+- **Optimisation** : 38 crons + heartbeat passés en `zai/glm-5-turbo` pour corriger LiveSessionModelSwitchError
 
 ## Contexte Utilisateur
 - **Alexandre** : Progression vers RCS chez Euromaster
@@ -22,8 +23,9 @@
 
 ## Prochaines Étapes
 - Lecture et analyse du flash IA généré
-- Préparation du deep dive tech (en attente exécution script)
 - Suivi progression RCS avec Arnaud (points hebdo 15min)
+- Investiguer scraping SIGKILL veille IA
+- Régénérer token OpenAI-Codex expiré
 
 ---
 *Contexte auto-mis à jour après session significative*

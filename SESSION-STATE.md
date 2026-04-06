@@ -1,10 +1,13 @@
 # SESSION-STATE.md — Active Working Memory
 
 ## Current Task
-Veille IA 8h00 - thème tech LLM et régulation - ✅ Flash 5min généré (9492 lignes), sauvegardé et commité. Deep Dive en attente d'exécution complète.
+Consolidation mémoire quotidienne + PARA en cours ✅
 
 ## Today's Work Summary (2026-04-06)
 - **06:02 UTC** — Veille IA 8h00 - Flash tech généré avec succès (GPT-5 Orion, AI Act UE, benchmarks ARC-AGI-3)
+- **10:19 UTC** — Mise à jour modèles crons : 38 crons + heartbeat passés en `zai/glm-5-turbo` (résoudre LiveSessionModelSwitchError)
+- **10:02 UTC** — AUTO PARA 3-min checkpoint exécuté
+- **17:00 UTC** — Consolidation mémoire quotidienne + terminée
 - **06:01 UTC** — Heartbeat: auto-heal ✓ (pas d'erreurs), auto-commit ✓, auto-optimize ✓, auto-learn ✓ (pas d'erreurs), auto-alert ✓, auto-cleanup ✓
 
 ## Yesterday's Summary (2026-04-05)
@@ -51,4 +54,4 @@ Veille IA 8h00 - thème tech LLM et régulation - ✅ Flash 5min généré (9492
 - **Heure Paris** : 08:02 → début de journée
 
 ## Last Updated
-2026-04-06 06:02 UTC — veille IA 8h00 tech terminée avec succès, flash généré et commité
+2026-04-06 21:50 UTC — consolidation mémoire quotidienne + PARA terminée avec succès
