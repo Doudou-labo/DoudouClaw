@@ -23,5 +23,12 @@
 - **Aujourd'hui** : Lancer exécution complète script deep dive tech
 - **Cette semaine** : Régénérer token OpenAI-Codex, investiguer scraping SIGKILL
 
+## Actions Todo
+- [ ] [MIDI 2026-04-06 10:02] Exécution checkpoint PARA automatique
+
 ---
 *Mis à jour lors du heartbeat*
+
+## Auto-checkpoints
+- [ ] [AUTO 2026-04-06 midi] Checkpoint 3-min fait. Next: [MIDI 2026-04-06 10:02] Exécution checkpoint PARA automatique
+
