@@ -306,3 +306,20 @@ workspace/
 
 **Gotcha :** config patch via `gateway config.patch` nécessite restart gateway.
 **⚠️ Gotcha 2026-04-03:** API Perplexity en erreur d'auth récurrente → surveiller pattern défaillance régulière (~1/semaine, 14:52, 17:00, 19:03 aujourd'hui)
+
+---
+
+## 🔧 OpenClaw Exec — Gotchas
+
+**⚠️ Gotcha 2026-04-06 (Exec Preflight):**
+Les commandes complexes avec `cd &&` sont refusées par OpenClaw pour des raisons de sécurité.
+
+**Symptôme:**
+```
+exec preflight: complex interpreter invocation detected; refusing to run without script preflight validation.
+```
+
+**Solution:**
+- Utiliser des commandes directes : `python3 /path/to/script.py` au lieu de `cd /root/.openclaw/workspace && python3 scripts/script.py`
+- Ou wrapper dans un script shell qui fait le `cd` : `bash scripts/run-script.sh`
+- Les crons concernés doivent être mis à jour pour utiliser la syntaxe directe
