@@ -57,6 +57,7 @@ Générer des **surprises utiles** qui :
 **Surprise potentielle** :
 - "Je remarque que tu ne parles jamais de ton IE depuis 2 semaines. Tout va bien ?"
 - Proposer des alternatives adaptées aux contraintes (ex: sport sans impact pour l'épaule)
+- Créer des templates structurés pour faciliter la reprise (ex: templates EI notes + application hebdo)
 
 ---
 
@@ -100,13 +101,19 @@ Générer des **surprises utiles** qui :
 - **Apprentissage** : Éviter les scans techniques/rappels génériques. Focus sur l'observation des patterns de comportement.
 
 ### 2026-03-29 - Architecture cron validée
-- **Surprise / décision** : Transformer le système en **crons OpenClaw prompt-based** plutôt qu’en `crontab` système, avec publication dans un salon Discord dédié.
+- **Surprise / décision** : Transformer le système en **crons OpenClaw prompt-based** plutôt qu'en `crontab` système, avec publication dans un salon Discord dédié.
 - **Résultat** : ✅ Alexandre a validé le process attendu (même logique que les autres crons type bourse / veille IA).
 - **Apprentissage** : pour tout cron qui doit produire un compte rendu chat, penser **prompt planifié + delivery intégré**, pas exécution shell brute côté système.
 
+### 2026-04-07 - Templates EI créés
+- **Surprise** : Créer 2 templates structurés pour relancer l'intelligence émotionnelle (lecture hebdo + application concrète)
+- **Pourquoi** : Lecture Goleman en pause depuis Mars 9, Alexandre veut appliquer 1 concept/semaine mais manque de méthode systématique
+- **Résultat** : En attente (templates créés, à tester)
+- **Apprentissage** : Les templates structurés peuvent réduire la friction de reprise sur les objectifs de développement personnel
+
 ### 2026-03-29 - Signal utilisateur confirmé
-- **Feedback explicite** : Alexandre veut des initiatives qui le surprennent, qu’il n’aurait pas pensées lui-même, et qui le rendent concrètement plus avancé.
-- **Conséquence** : augmenter la valeur d’observation, la qualité des liens inattendus et la pertinence contextuelle ; réduire au maximum les rappels évidents.
+- **Feedback explicite** : Alexandre veut des initiatives qui le surprennent, qu'il n'aurait pas pensées lui-même, et qui le rendent concrètement plus avancé.
+- **Conséquence** : augmenter la valeur d'observation, la qualité des liens inattendus et la pertinence contextuelle ; réduire au maximum les rappels évidents.
 
 ---
 
