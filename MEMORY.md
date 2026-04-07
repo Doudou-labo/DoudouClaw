@@ -233,7 +233,17 @@
 
 ### Things to Remember
 - Le N+1 Arnaud est une relation clé, positive (pro + perso)
-- **API Perplexity** : erreur authentification récurrente à surveiller et corriger (28/03, 01/04, 03/04)
+- **API Perplexity** : erreur authentification récurrente à surveiller et corriger (28/03, 01/04, 03/04, 07/04)
+
+### Daily Facts (2026-04-07) - Importance: 0.6-0.8
+- **veille IA produits** : Microsoft MAI-Models (transcription/voix/images), Databricks-STATION F (Lakebase/Genie), Ollama 0.19 MLX, Notion MCP
+- **flash IA sauvegardé** : daily-flash/2026-04-07/08h-flash.md - thème produits tech
+- **heartbeat opérationnel** : auto-heal ✓, auto-commit ✓, auto-optimize ✓, auto-learn ✓, auto-cleanup ✓
+- **AUTO PARA fonctionnel** : checkpoint automatique exécuté avec succès
+- **deep dive bloqué** : API Perplexity erreur auth récurrente empêche traitement complet
+- **git commit réussi** : malgré reset connexion temporaire
+- **pattern identifié** : systèmes simples fiables vs systèmes complexes instables
+- **priorités confirmées** : monitoring proactif tokens + mécanismes timeout/retry robustes
 
 ---
 
@@ -256,6 +266,24 @@ Meilleure amie d'Alexandre, habite à Calais; relation amicale de longue date (e
 - **Pattern robustesse systèmes** : systèmes simples (heartbeat) > systèmes complexes (scraping multi-URLs) → prioriser simplicité dans architecture
 - **Token monitoring proactif** : OpenAI-Codex expiré 61h → implémenter alertes préventives avant expiration
 - **Crons système** : tâches cron échouent systématiquement → diagnostic pattern Discord channel/to nécessaire
+
+### API Critical Issues (2026-04-07) - Importance: 0.9
+- **API Perplexity** : erreur d'auth récurrente identifiée (28/03, 01/04, 03/04, 07/04) → impact critique sur veille IA et stabilité système
+- **OpenAI-Codex** : token expiré depuis 81h → surveillance proactive nécessaire pour éviter blocage dépendances
+- **Pattern** : erreurs récurrentes hebdomadaires → nécessité fallback système immédiat
+- **Priorité** : résolution API critique = facteur de stabilité système
+
+### Model System Evolution (2026-04-07) - Importance: 0.9
+- **Migration modèles système** : passage réussi de zai/glm-4.7 vers zai/glm-5-turbo pour 38 crons + heartbeat
+- **Résolution** : élimination complète des erreurs LiveSessionModelSwitchError sur crons hebdo
+- **Pattern** : préférences modèles = facteur critique de stabilité système
+- **Impact** : amélioration significative de la performance système
+
+### System Stability Priorities (2026-04-07) - Importance: 0.85
+- **Monitoring proactif tokens** : implémentation d'alertes préventives avant expiration API tokens
+- **Robustesse scraping** : mécanismes timeout/retry robustes pour éviter SIGKILL multi-URLs
+- **Simplification architecture** : privilégier systèmes simples (heartbeat) vs systèmes complexes (scraping)
+- **Fallback API** : mise en place de système de secours pour API critiques instables (Perplexity)
 
 ---
 
