@@ -27,6 +27,7 @@
 2. **Valeur visible** : Chaque automation doit produire une valeur concrète
 3. **Monitoring intégré** : Le système se surveille lui-même
 4. **Feedback rapide** : Les problèmes sont détectés et résolus rapidement
+5. **Robustesse progressive** : Solutions simples avant systèmes complexes (ex: heartbeat OK vs scraping multi-URLs KO)
 
 ## Guidelines pour nouvelles automations
 

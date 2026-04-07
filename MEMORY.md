@@ -211,9 +211,9 @@
 - **Auto-tags heuristiques** : [todo] categories actifs
 - **Cron consolidation** : exécution quotidienne stable à 21:50 UTC (veille IA, bourse, mémoire)
 
-### Consolidation mémoire (2026-04-06)
+### Consolidation mémoire (2026-04-07)
 - **Système robuste** : heartbeat auto-surveillance opérationnelle (auto-heal ✓, auto-commit ✓, auto-learn ✓, auto-alert ✓, auto-cleanup ✓)
-- **Pattern heartbeat** : systèmes simples fiables vs complexes instables (observation proactive)
+- **Pattern heartbeat** : systèmes simples fiables vs complexes instables (observation proactive confirmée)
 - **Gestion tokens** : expiration OpenAI-Codex (81h) → implémentation monitoring proactif nécessaire
 - **API monitoring** : Perplexity instabilité récurrente → nécessité fallback système immédiat
 - **Scraping robustesse** : SIGKILL multi-URLs → nécessité mécanismes timeout/retry robustes
