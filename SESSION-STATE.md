@@ -1,9 +1,14 @@
 # SESSION-STATE.md — Active Working Memory
 
 ## Current Task
-Consolidation mémoire quotidienne + PARA en cours ✅
+Heartbeat en cours — maintenance automatique ✅
 
-## Today's Work Summary (2026-04-06)
+## Today's Work Summary (2026-04-07)
+- **06:02 UTC** — Veille IA 8h00 - Flash produits généré avec succès (Microsoft MAI-Models, Databricks-STATION F, Ollama 0.19 MLX, Notion MCP)
+- **06:04 UTC** — Git push réussi (507d3680) malgré connexion reset
+- **06:06 UTC** — Heartbeat: auto-heal ✓, auto-commit ✓, auto-optimize ✓, auto-learn ✓, auto-cleanup ✓
+
+## Yesterday's Summary (2026-04-06)
 - **06:02 UTC** — Veille IA 8h00 - Flash tech généré avec succès (GPT-5 Orion, AI Act UE, benchmarks ARC-AGI-3)
 - **10:19 UTC** — Mise à jour modèles crons : 38 crons + heartbeat passés en `zai/glm-5-turbo` (résoudre LiveSessionModelSwitchError)
 - **10:02 UTC** — AUTO PARA 3-min checkpoint exécuté
@@ -42,16 +47,14 @@ Consolidation mémoire quotidienne + PARA en cours ✅
 
 ## Immediate Context
 - **Gateway** : 2026.4.2 (mise à jour jour)
-- Disque stable à ~52%
+- Disque stable à ~51%
 - Crons Proactive Observations actifs (07:00/12:00/17:00/21:00 Paris)
-- **⚠️ Token OpenAI-Codex expiré** → à régénérer (61h d'expiration)
-- **⚠️ API Perplexity en erreur d'auth** → problème récurrent (14:52, 17:00, 19:00, 12:00 aujourd'hui)
-- **⚠️ Scraping veille IA SIGKILL** → à investiguer (script 8h00 bloqué pendant scraping)
-- ⚠️ Crons systématiquement en erreur → diagnostic nécessaire
+- **⚠️ API Perplexity en erreur d'auth** → Deep Dive veille IA bloqué, Flash OK
+- **⚠️ Scraping veille IA SIGKILL** → script 8h00 bloqué pendant Deep Dive (Flash OK)
 - Mode tech activé (IA → web_search + Perplexity intensif)
 - Autonomie d'exécution renforcée (ne pas demander validation sauf externe/sensible)
 - Style emojis soutenu
-- **Heure Paris** : 08:02 → début de journée
+- **Heure Paris** : 08:07 → début de journée
 
 ## Last Updated
-2026-04-06 21:50 UTC — consolidation mémoire quotidienne + PARA terminée avec succès
+2026-04-07 06:07 UTC — heartbeat exécuté avec succès
