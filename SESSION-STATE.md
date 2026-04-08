@@ -1,22 +1,17 @@
 # SESSION-STATE.md — Active Working Memory
 
 ## Current Task
-Heartbeat en cours — maintenance automatique ✅ (2026-04-08 05:04 UTC)
+Heartbeat en cours — maintenance automatique ✅ (2026-04-08 06:04 UTC)
 
 ## Today's Work Summary (2026-04-08)
-- **05:04 UTC** — Heartbeat: auto-heal ✓, auto-commit ✓, auto-optimize ✓, auto-learn ✓ (14 errors today, 47 yesterday, no new learnings), auto-alert ✓, auto-cleanup ✓
+- **06:02 UTC** — Veille IA 8h00 - Flash regulation généré avec succès (Proposition de loi sénatoriale IA/droits d'auteur, interdiction images IA communications UE, AI Act report 2027-2028)
+- **06:04 UTC** — Heartbeat: auto-heal ✓, auto-commit ✓, auto-optimize ✓, auto-learn ✓ (14 errors today, 50 yesterday), auto-alert ✓, auto-cleanup ✓
+
+## Yesterday's Summary (2026-04-07)
 - **06:02 UTC** — Veille IA 8h00 - Flash produits généré avec succès (Microsoft MAI-Models, Databricks-STATION F, Ollama 0.19 MLX, Notion MCP)
-- **06:04 UTC** — Git push réussi (507d3680) malgré connexion reset
 - **06:06 UTC** — Heartbeat: auto-heal ✓, auto-commit ✓, auto-optimize ✓, auto-learn ✓, auto-cleanup ✓
 - **10:01 UTC** — AUTO PARA 3-min exécuté
 - **21:50 UTC** — Consolidation mémoire quotidienne + terminée
-
-## Yesterday's Summary (2026-04-07)
-- **06:02 UTC** — Veille IA 8h00 - Flash tech généré avec succès (GPT-5 Orion, AI Act UE, benchmarks ARC-AGI-3)
-- **10:19 UTC** — Mise à jour modèles crons : 38 crons + heartbeat passés en `zai/glm-5-turbo` (résoudre LiveSessionModelSwitchError)
-- **10:02 UTC** — AUTO PARA 3-min checkpoint exécuté
-- **17:00 UTC** — Consolidation mémoire quotidienne + terminée
-- **06:01 UTC** — Heartbeat: auto-heal ✓ (pas d'erreurs), auto-commit ✓, auto-optimize ✓, auto-learn ✓ (pas d'erreurs), auto-alert ✓, auto-cleanup ✓
 
 ## Yesterday's Summary (2026-04-05)
 - **21:50 UTC** — Consolidation mémoire quotidienne + PARA terminée avec succès
@@ -52,12 +47,11 @@ Heartbeat en cours — maintenance automatique ✅ (2026-04-08 05:04 UTC)
 - **Gateway** : 2026.4.2 (mise à jour jour)
 - Disque stable à ~51%
 - Crons Proactive Observations actifs (07:00/12:00/17:00/21:00 Paris)
-- **⚠️ API Perplexity en erreur d'auth** → Deep Dive veille IA bloqué, Flash OK
-- **⚠️ Scraping veille IA SIGKILL** → script 8h00 bloqué pendant Deep Dive (Flash OK)
+- **⚠️ API Perplexity en erreur d'auth** → Deep Dive veille IA bloqué, Flash OK (récurrence confirmée)
 - Mode tech activé (IA → web_search + Perplexity intensif)
 - Autonomie d'exécution renforcée (ne pas demander validation sauf externe/sensible)
 - Style emojis soutenu
-- **Heure Paris** : 08:07 → début de journée
+- **Heure Paris** : 08:04 → début de journée
 
 ## Last Updated
-2026-04-07 06:07 UTC — heartbeat exécuté avec succès
+2026-04-08 06:04 UTC — heartbeat exécuté avec succès
