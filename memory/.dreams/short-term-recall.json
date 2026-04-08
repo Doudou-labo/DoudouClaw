@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-04-08T19:51:48.579Z",
+  "updatedAt": "2026-04-08T20:01:21.234Z",
   "entries": {
     "memory:memory/2026-04-06.md:1:21": {
       "key": "memory:memory/2026-04-06.md:1:21",
@@ -101,17 +101,19 @@
       "endLine": 70,
       "source": "memory",
       "snippet": "**Réseau Euromaster (nouveau fichier: `notes/areas/reseau-euromaster.md`) :** - **Arnaud (RZ)** : soutien total, augmentation spontanée le 25/02 - **Marc (DR)** : pour l'évolution → **⚠️ visite au centre d'Arras le 31/03/2026**, longue discussion dans le bureau prévue (test implicite) - **Hélène (RRH)** : pour l'évolution (confirmé par Arnaud) - **Toute l'agence** : soutient Alexandre - **Technicien VI** : mutation probable à Lens comme chef d'atelier - **Léa (RCS Adjointe Lens)** : assessment à venir, pas vue d'un bon œil → scénario 6 mois probable (80%) **Fiches de poste RCS VL + VI** : envoyées par Alexandre, analysées et intégrées dans le gap analysis. --- ### 📊 Gap Analysis créé (`n",
-      "recallCount": 1,
+      "recallCount": 2,
       "dailyCount": 0,
-      "totalScore": 0.3970666646957397,
-      "maxScore": 0.3970666646957397,
+      "totalScore": 0.8010883450508117,
+      "maxScore": 0.404021680355072,
       "firstRecalledAt": "2026-04-07T20:00:49.078Z",
-      "lastRecalledAt": "2026-04-07T20:00:49.078Z",
+      "lastRecalledAt": "2026-04-08T20:01:21.234Z",
       "queryHashes": [
-        "ad4eddb1b055"
+        "ad4eddb1b055",
+        "fbb21428aa64"
       ],
       "recallDays": [
-        "2026-04-07"
+        "2026-04-07",
+        "2026-04-08"
       ],
       "conceptTags": [
         "notes/areas/reseau-euromaster.md",
