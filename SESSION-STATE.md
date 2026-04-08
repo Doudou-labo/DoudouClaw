@@ -1,11 +1,12 @@
 # SESSION-STATE.md — Active Working Memory
 
 ## Current Task
-Heartbeat en cours — maintenance automatique ✅ (2026-04-08 06:04 UTC)
+Consolidation mémoire quotidienne + PARA terminée ✅ (2026-04-08 19:50 UTC)
 
 ## Today's Work Summary (2026-04-08)
 - **06:02 UTC** — Veille IA 8h00 - Flash regulation généré avec succès (Proposition de loi sénatoriale IA/droits d'auteur, interdiction images IA communications UE, AI Act report 2027-2028)
 - **06:04 UTC** — Heartbeat: auto-heal ✓, auto-commit ✓, auto-optimize ✓, auto-learn ✓ (14 errors today, 50 yesterday), auto-alert ✓, auto-cleanup ✓
+- **19:50 UTC** — Consolidation mémoire quotidienne + PARA terminée (systèmes heartbeat robustes, pattern robustesse identifié, API Perplexity critique, migration modèle réussie)
 
 ## Yesterday's Summary (2026-04-07)
 - **06:02 UTC** — Veille IA 8h00 - Flash produits généré avec succès (Microsoft MAI-Models, Databricks-STATION F, Ollama 0.19 MLX, Notion MCP)
@@ -27,31 +28,36 @@ Heartbeat en cours — maintenance automatique ✅ (2026-04-08 06:04 UTC)
 - ⚠️ API Perplexity en erreur d'auth à surveiller
 
 ## Prochains chantiers
-1. **🔴 Retour visite Marc (DR) — CAPTER** : décisions, feedback, next steps (priorité immédiale dès qu'Alexandre revient)
-2. **Correction dashboard pilotage** : corriger année `2025→2026`, sélecteur mois `AGENCE`, retirer `Objectif N` de l'historique → issue #23
-3. **Actual Budget** — onboarding catégories finalisé, connecter comptes bancaires ou saisir manuellement
-4. **Pneu Tracker** — backlog: fiche pneu sélectionnable, stats dashboard, bouton réimport catalogue
-5. **Inventaire physique pneus** — backlog MVP à implémenter sur `inventaire.doudougen.xyz`
-6. **Intelligence émotionnelle** — lire 1 chapitre Goleman + notes (1 idée clé + 1 application boulot)
-7. **🔧 Système scraping veille IA** — investiguer SIGKILL, ajouter timeouts/retry mécanismes
-8. **🔐 Token monitoring API** — implémenter monitoring proactif tokens expirés (OpenAI, Perplexity)
-9. **🔍 Crons en erreur** — diagnostic et correction des tâches cron systématiquement échouées
+1. **🔴 API Perplexity erreur d'auth récurrente** - 5+ jours consécutifs → deep dive veille IA bloqué (priorité absolue)
+2. **🔴 Token OpenAI-Codex expiré** - 81h sans régénération → surveillance proactive nécessaire (priorité absolue)
+3. **🟡 Pattern robustesse systèmes** - systèmes simples > systèmes complexes confirmé → simplification architecture nécessaire
+4. **Correction dashboard pilotage** : corriger année `2025→2026`, sélecteur mois `AGENCE`, retirer `Objectif N` de l'historique → issue #23
+5. **Actual Budget** — onboarding catégories finalisé, connecter comptes bancaires ou saisir manuellement
+6. **Pneu Tracker** — backlog: fiche pneu sélectionnable, stats dashboard, bouton réimport catalogue
+7. **Inventaire physique pneus** — backlog MVP à implémenter sur `inventaire.doudougen.xyz`
+8. **Intelligence émotionnelle** — lire 1 chapitre Goleman + notes (1 idée clé + 1 application boulot)
+9. **🔧 Système scraping veille IA** — investiguer SIGKILL, ajouter timeouts/retry mécanismes (suite pattern robustesse)
+10. **🔐 Token monitoring API** — implémenter monitoring proactif tokens expirés (OpenAI, Perplexity)
+11. **🔍 Crons en erreur** — diagnostic et correction des tâches cron systématiquement échouées
 
 ## Systèmes actifs
 - ✅ Heartbeat auto-heal/auto-commit/auto-learn/auto-alert/auto-cleanup opérationnel
 - ✅ Crons veille IA fonctionnels (8h00 tech, 19h00 business)
-- ⚠️ Token OpenAI-Codex expiré → à surveiller
-- ⚠️ API Perplexity en erreur d'auth récurrente → problème identifié mais veille continue
+- ✅ **Modèles système migrés** : 38 crons + heartbeat en `zai/glm-5-turbo` → LiveSessionModelSwitchError résolu
+- ⚠️ API Perplexity en erreur d'auth récurrente → à surveiller et corriger
+- ⚠️ Token OpenAI-Codex expiré depuis 81h → régénération nécessaire
+- ⚠️ Pattern robustesse identifié : systèmes simples > systèmes complexes
 
 ## Immediate Context
 - **Gateway** : 2026.4.2 (mise à jour jour)
 - Disque stable à ~51%
 - Crons Proactive Observations actifs (07:00/12:00/17:00/21:00 Paris)
-- **⚠️ API Perplexity en erreur d'auth** → Deep Dive veille IA bloqué, Flash OK (récurrence confirmée)
+- **⚠️ API Perplexity en erreur d'auth récurrente** (5+ jours) → deep dive bloqué
+- **⚠️ Token OpenAI-Codex expiré** → régénération nécessaire
 - Mode tech activé (IA → web_search + Perplexity intensif)
 - Autonomie d'exécution renforcée (ne pas demander validation sauf externe/sensible)
 - Style emojis soutenu
-- **Heure Paris** : 08:04 → début de journée
+- **Heure Paris** : 21:50 → fin de journée
 
 ## Last Updated
-2026-04-08 06:04 UTC — heartbeat exécuté avec succès
+2026-04-08 19:50 UTC — consolidation mémoire quotidienne + PARA terminée

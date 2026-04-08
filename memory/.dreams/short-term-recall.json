@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-04-07T20:00:49.078Z",
+  "updatedAt": "2026-04-08T19:50:42.625Z",
   "entries": {
     "memory:memory/2026-04-06.md:1:21": {
       "key": "memory:memory/2026-04-06.md:1:21",
@@ -39,17 +39,19 @@
       "endLine": 58,
       "source": "memory",
       "snippet": "- ✅ Perplexity API fonctionnel ce soir (mode normal après erreurs récentes) - ✅ Heartbeat maintenance terminée (systèmes opérationnels) - ⚠️ Token OpenAI-Codex expiré depuis 44h (à régénérer) - ⚠️ API Perplexity instable pattern récurrent (surveiller) - 🔴 Retour visite Marc DR (CAPTER) : priorité absolue à capturer ### Entrées LTM candidates - IA émergente : swarm AI, federated learning, IA causale (applications 2026) - Systèmes heartbeat : auto-heal/auto-commit/auto-learn/auto-alert/auto-cleanup - Pattern observation proactives : systèmes simples fiables vs complexes instables ## 22:00 UTC — Sync LTM nightly ### Mémoire Long Terme - Ajouts importants identifiés 1. **Systèmes heartbeat**",
-      "recallCount": 1,
+      "recallCount": 2,
       "dailyCount": 0,
-      "totalScore": 0.3510389506816864,
-      "maxScore": 0.3510389506816864,
+      "totalScore": 0.7851439923048019,
+      "maxScore": 0.43410504162311553,
       "firstRecalledAt": "2026-04-07T19:51:13.485Z",
-      "lastRecalledAt": "2026-04-07T19:51:13.485Z",
+      "lastRecalledAt": "2026-04-08T19:50:35.610Z",
       "queryHashes": [
-        "018c6fd82e4f"
+        "018c6fd82e4f",
+        "6a256dafbeff"
       ],
       "recallDays": [
-        "2026-04-07"
+        "2026-04-07",
+        "2026-04-08"
       ],
       "conceptTags": [
         "openai",
@@ -150,6 +152,216 @@
         "migrated",
         "true",
         "source"
+      ]
+    },
+    "memory:memory/2026-04-07.md:1:29": {
+      "key": "memory:memory/2026-04-07.md:1:29",
+      "path": "memory/2026-04-07.md",
+      "startLine": 1,
+      "endLine": 29,
+      "source": "memory",
+      "snippet": "# 2026-04-07 ## 06:02 UTC - veille IA produits tech générée avec succès - Microsoft MAI-Models, Databricks-STATION F, Ollama 0.19 MLX, Notion MCP - flash 5min sauvegardé dans daily-flash/2026-04-07/08h-flash.md - thème produits - deep dive bloqué sur API Perplexity (erreur auth récurrente) - heartbeat auto-heal OK, auto-commit 1 fichier, auto-optimize OK, auto-learn OK, auto-cleanup OK ## 🏷️ Auto-tags (heuristique) ### [bug] - API Perplexity en erreur d'auth récurrente (4+ jours) → deep dive veille IA bloqué ### [veille] - flash IA produits : Microsoft MAI-Models (transcription/voix/images), Databricks-STATION F (Lakebase/Genie), Ollama 0.19 MLX, Notion MCP ## 10:01 UTC — AUTO PARA 3-m",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "totalScore": 0.45493149459362026,
+      "maxScore": 0.45493149459362026,
+      "firstRecalledAt": "2026-04-08T19:50:35.610Z",
+      "lastRecalledAt": "2026-04-08T19:50:35.610Z",
+      "queryHashes": [
+        "6a256dafbeff"
+      ],
+      "recallDays": [
+        "2026-04-08"
+      ],
+      "conceptTags": [
+        "mai-models",
+        "databricks-station",
+        "0.19",
+        "auto-heal",
+        "auto-commit",
+        "auto-optimize",
+        "auto-learn",
+        "auto-cleanup"
+      ]
+    },
+    "memory:memory/2026-04-01.md:1:43": {
+      "key": "memory:memory/2026-04-01.md:1:43",
+      "path": "memory/2026-04-01.md",
+      "startLine": 1,
+      "endLine": 43,
+      "source": "memory",
+      "snippet": "# Memory — 2026-04-01 ## 06:01 UTC — Dashboard mis à jour - Dashboard pilotage mis à jour avec succès. ## 06:06 UTC — Veille IA 8h00 (Régulation) - Flash : AI Act européen, calendrier d'application, sanctions. - Deep Dive : Digital Omnibus, trilogue interinstitutionnel, ajustements RGPD. - Commit : `a19e4fc2` ## 14:51 UTC — AUTO PARA 3-min (midi) - Checkpoint automatique exécuté. - Prochaine action suggérée: Finaliser onboarding Actual Budget (catégories de suivi) ## 14:52 UTC — Veille IA 12h00 (⚠️ Perplexity API error) - Fichier : `notes/areas/veille-ia/daily-flash/2026-04-01/12h-flash.md` - Commit : `8c90368e` - ⚠️ Problème : API Perplexity en erreur d'authentification → à corriger. #",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "totalScore": 0.44879074990749357,
+      "maxScore": 0.44879074990749357,
+      "firstRecalledAt": "2026-04-08T19:50:35.610Z",
+      "lastRecalledAt": "2026-04-08T19:50:35.610Z",
+      "queryHashes": [
+        "6a256dafbeff"
+      ],
+      "recallDays": [
+        "2026-04-08"
+      ],
+      "conceptTags": [
+        "3-min",
+        "utc",
+        "dashboard",
+        "mis",
+        "jour",
+        "pilotage",
+        "succès",
+        "veille"
+      ]
+    },
+    "memory:memory/2026-03-28.md:1:34": {
+      "key": "memory:memory/2026-03-28.md:1:34",
+      "path": "memory/2026-03-28.md",
+      "startLine": 1,
+      "endLine": 34,
+      "source": "memory",
+      "snippet": "# Memory — 2026-03-28 ## 11:02 UTC — AUTO PARA 3-min (midi) - Checkpoint automatique exécuté. - Prochaine action suggérée: Finaliser onboarding Actual Budget (catégories de suivi) - Objectif: garder une seule prochaine action claire à exécuter maintenant. ## 20:50 UTC — Consolidation mémoire quotidienne - Jour calme (samedi) — pas d'échanges substantiels détectés. -唯一的 activité: checkpoint PARA midi ✅ - Tâches en cours: correction dashboard pilotage (issue #23), visite Marc DR 31/03. - Mise à jour: SESSION-STATE → date 2026-03-28, RECENT_CONTEXT → flag \"Latest Session 2026-03-28\". ## 🏷️ Auto-tags (heuristique) ### [todo] - Prochaine action suggérée: Finaliser onboarding Actual Budget (c",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "totalScore": 0.43453896343708037,
+      "maxScore": 0.43453896343708037,
+      "firstRecalledAt": "2026-04-08T19:50:35.610Z",
+      "lastRecalledAt": "2026-04-08T19:50:35.610Z",
+      "queryHashes": [
+        "6a256dafbeff"
+      ],
+      "recallDays": [
+        "2026-04-08"
+      ],
+      "conceptTags": [
+        "3-min",
+        "31/03",
+        "session-state",
+        "recent-context",
+        "auto-tags",
+        "utc",
+        "auto",
+        "min"
+      ]
+    },
+    "memory:memory/2026-04-04.md:1:41": {
+      "key": "memory:memory/2026-04-04.md:1:41",
+      "path": "memory/2026-04-04.md",
+      "startLine": 1,
+      "endLine": 41,
+      "source": "memory",
+      "snippet": "# 2026-04-04 - Daily Notes ## Veille IA - 19h00 - Thème du jour : emergent - Flash IA généré (55 lignes) avec contenu récent 7 jours - Deep Dive IA généré (87 lignes) sur IA émergente - Contenu scrapé des sources web - Commit et push GitHub réussis - 4 fichiers modifiés, 144 insertions ## Proactive Observations - Pattern : Veille IA fonctionne bien en mode dégradé - Timing : Exécution à 19h00 fonctionne sans problème technique - Thématique : journée \"emergent\" avec focus sur paradigmes AI émergents ## Actions - ✅ Exécution veille IA hebdomadaire - ✅ Auto-commit des modifications - ⚠️ Crontab montre plusieurs jobs en erreur \"error\" (isolated mode) - à surveiller - ⚠️ Perplexity API parfo",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "totalScore": 0.4334963828325271,
+      "maxScore": 0.4334963828325271,
+      "firstRecalledAt": "2026-04-08T19:50:35.610Z",
+      "lastRecalledAt": "2026-04-08T19:50:35.610Z",
+      "queryHashes": [
+        "6a256dafbeff"
+      ],
+      "recallDays": [
+        "2026-04-08"
+      ],
+      "conceptTags": [
+        "auto-commit",
+        "veille",
+        "19h00",
+        "thème",
+        "jour",
+        "emergent",
+        "flash",
+        "généré"
+      ]
+    },
+    "memory:memory/2026-03-25.md:1:34": {
+      "key": "memory:memory/2026-03-25.md:1:34",
+      "path": "memory/2026-03-25.md",
+      "startLine": 1,
+      "endLine": 34,
+      "source": "memory",
+      "snippet": "# Memory — 2026-03-25 ## 11:02 UTC — AUTO PARA 3-min (midi) - Checkpoint automatique exécuté. - Prochaine action suggérée: Avant la fin du pilote (16/02) : noter 3 catégories à ajuster (si besoin) + 1 friction d'usage (ce qui bloque) - Objectif: garder une seule prochaine action claire à exécuter maintenant. ## 20:50 UTC — Consolidation mémoire quotidienne - **Veille IA** : 3 sessions exécutées ✅ (8h, 12h, 19h) — thème \"regulation\", scraping URLs, fichier commité `19fadc5d` - **Auto-heal** : tokens google expirés (antigravity + gemini-cli) — suspendus, non critiques - **Auto-cleanup** : 3 médias inbound >7j supprimés | Disque 82% (stable) - **Rappel demain 26/03** : 3 mois DoudouClaw — rem",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "totalScore": 0.4324534684419632,
+      "maxScore": 0.4324534684419632,
+      "firstRecalledAt": "2026-04-08T19:50:35.610Z",
+      "lastRecalledAt": "2026-04-08T19:50:35.610Z",
+      "queryHashes": [
+        "6a256dafbeff"
+      ],
+      "recallDays": [
+        "2026-04-08"
+      ],
+      "conceptTags": [
+        "3-min",
+        "16/02",
+        "auto-heal",
+        "gemini-cli",
+        "auto-cleanup",
+        "26/03",
+        "utc",
+        "auto"
+      ]
+    },
+    "memory:memory/2026-04-03.md:1:35": {
+      "key": "memory:memory/2026-04-03.md:1:35",
+      "path": "memory/2026-04-03.md",
+      "startLine": 1,
+      "endLine": 35,
+      "source": "memory",
+      "snippet": "# Memory — 2026-04-03 ## 10:00 UTC — AUTO PARA 3-min (midi) - Checkpoint automatique exécuté. - Prochaine action suggérée: Connecter les comptes bancaires ou saisir manuellement les transactions - Objectif: garder une seule prochaine action claire à exécuter maintenant. ## 21:50 UTC — Consolidation mémoire quotidienne - Consolidation mémoire/PARA complète exécutée avec succès. - Points mémoire ajoutés: veille IA sectorielle automobile (8h/12h/19h), actualités tech américaines. - Entrées LTM: IA automobile (Michelin, concessionnaires IA, véhicules autonomes), régulation IA USA/Europe. - Git commit: `a1b2c3d4` - push origin/main réussi. - Statut: consolidation complète, système stable. ##",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "totalScore": 0.4312085926532745,
+      "maxScore": 0.4312085926532745,
+      "firstRecalledAt": "2026-04-08T19:50:35.610Z",
+      "lastRecalledAt": "2026-04-08T19:50:35.610Z",
+      "queryHashes": [
+        "6a256dafbeff"
+      ],
+      "recallDays": [
+        "2026-04-08"
+      ],
+      "conceptTags": [
+        "3-min",
+        "mémoire/para",
+        "8h/12h/19h",
+        "usa/europe",
+        "origin/main",
+        "utc",
+        "auto",
+        "min"
+      ]
+    },
+    "memory:memory/2026-04-05.md:29:59": {
+      "key": "memory:memory/2026-04-05.md:29:59",
+      "path": "memory/2026-04-05.md",
+      "startLine": 29,
+      "endLine": 59,
+      "source": "memory",
+      "snippet": "1. 🔍 **Investigation scraping**: Tester le script `scrape-urls.py` individuellement 2. 🔧 **Token renewal**: Renouveler le token OpenAI expiré 3. 📊 **Cron diagnostics**: Analyser les crons en erreur systématique 4. 🔄 **Script veille**: Ajouter des timeouts et mécanismes de retry ## Open loops - ❌ Problème de scraping résolu - ❌ Token OpenAI renouvelé - ❌ Crons défaillants diagnostiqués --- *Généré automatiquement par heartbeat - 2026-04-05 10:04 UTC* ## 16:05 UTC — AUTO PARA Weekly Review - Snapshot PARA: Projects=13, Areas=22, Resources=16, Archive=6 - Open loops actifs: 24 - Action: revue hebdo effectuée + trace ajoutée dans notes/areas/proactive-tracker.md ## 16:20 UTC — AUTO Self-I",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "totalScore": 0.626859621983063,
+      "maxScore": 0.626859621983063,
+      "firstRecalledAt": "2026-04-08T19:50:42.625Z",
+      "lastRecalledAt": "2026-04-08T19:50:42.625Z",
+      "queryHashes": [
+        "9c7f10618d36"
+      ],
+      "recallDays": [
+        "2026-04-08"
+      ],
+      "conceptTags": [
+        "openai",
+        "scrape-urls.py",
+        "notes/areas/proactive-tracker.md",
+        "self-i",
+        "investigation",
+        "scraping",
+        "tester",
+        "script"
       ]
     }
   }
