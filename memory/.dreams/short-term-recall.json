@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-04-08T20:02:12.728Z",
+  "updatedAt": "2026-04-09T19:51:09.715Z",
   "entries": {
     "memory:memory/2026-04-06.md:1:21": {
       "key": "memory:memory/2026-04-06.md:1:21",
@@ -223,17 +223,19 @@
       "endLine": 34,
       "source": "memory",
       "snippet": "# Memory — 2026-03-28 ## 11:02 UTC — AUTO PARA 3-min (midi) - Checkpoint automatique exécuté. - Prochaine action suggérée: Finaliser onboarding Actual Budget (catégories de suivi) - Objectif: garder une seule prochaine action claire à exécuter maintenant. ## 20:50 UTC — Consolidation mémoire quotidienne - Jour calme (samedi) — pas d'échanges substantiels détectés. -唯一的 activité: checkpoint PARA midi ✅ - Tâches en cours: correction dashboard pilotage (issue #23), visite Marc DR 31/03. - Mise à jour: SESSION-STATE → date 2026-03-28, RECENT_CONTEXT → flag \"Latest Session 2026-03-28\". ## 🏷️ Auto-tags (heuristique) ### [todo] - Prochaine action suggérée: Finaliser onboarding Actual Budget (c",
-      "recallCount": 1,
+      "recallCount": 2,
       "dailyCount": 0,
-      "totalScore": 0.43453896343708037,
+      "totalScore": 0.7977402836084366,
       "maxScore": 0.43453896343708037,
       "firstRecalledAt": "2026-04-08T19:50:35.610Z",
-      "lastRecalledAt": "2026-04-08T19:50:35.610Z",
+      "lastRecalledAt": "2026-04-09T19:51:09.715Z",
       "queryHashes": [
-        "6a256dafbeff"
+        "6a256dafbeff",
+        "56bbe925680a"
       ],
       "recallDays": [
-        "2026-04-08"
+        "2026-04-08",
+        "2026-04-09"
       ],
       "conceptTags": [
         "3-min",
@@ -424,6 +426,96 @@
         "model",
         "preference",
         "zai"
+      ]
+    },
+    "memory:memory/2026-04-09.md:1:14": {
+      "key": "memory:memory/2026-04-09.md:1:14",
+      "path": "memory/2026-04-09.md",
+      "startLine": 1,
+      "endLine": 14,
+      "source": "memory",
+      "snippet": "# Memory — 2026-04-09 ## 10:01 UTC — AUTO PARA 3-min (midi) - Checkpoint automatique exécuté. - Prochaine action suggérée: [AUTO 2026-04-08 soir] Checkpoint 3-min fait. Next: [AUTO 2026-04-08 soir] Checkpoint 3-min fait. Next: [AUTO 2026-08-04 midi] Checkpoint 3-min fait. Next: [AUTO 2026-04-07 soir] Checkpoint 3-min fait. Next: [AUTO 2026-04-07 midi] Checkpoint 3-min fait. Next: [AUTO 2026-04-06 soir] Checkpoint 3-min fait. Next: [AUTO 2026-04-06 midi] Checkpoint 3-min fait. Next: [MIDI 2026-04-06 10:02] Exécution checkpoint PARA automatique - Objectif: garder une seule prochaine action claire à exécuter maintenant. ## 21:50 UTC — Consolidation mémoire quotidienne - **CRITICAL FIX**: Cron",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "totalScore": 0.674930232231177,
+      "maxScore": 0.674930232231177,
+      "firstRecalledAt": "2026-04-09T19:51:09.715Z",
+      "lastRecalledAt": "2026-04-09T19:51:09.715Z",
+      "queryHashes": [
+        "56bbe925680a"
+      ],
+      "recallDays": [
+        "2026-04-09"
+      ],
+      "conceptTags": [
+        "3-min",
+        "utc",
+        "auto",
+        "min",
+        "midi",
+        "checkpoint",
+        "automatique",
+        "exécuté"
+      ]
+    },
+    "memory:memory/2026-04-06.md:1:29": {
+      "key": "memory:memory/2026-04-06.md:1:29",
+      "path": "memory/2026-04-06.md",
+      "startLine": 1,
+      "endLine": 29,
+      "source": "memory",
+      "snippet": "# 2026-04-06 ## 06:02 UTC - veille IA tech générée avec succès - GPT-5 Orion bêta ouverte, AI Act Phase 2 UE, benchmarks ARC-AGI-3 saturés - flash 5min sauvegardé dans daily-flash/2026-04-06/08h-flash.md - thème tech LLM et régulation ## 10:02 UTC — AUTO PARA 3-min (midi) - Checkpoint automatique exécuté. - Prochaine action suggérée: [MIDI 2026-04-06 10:02] Exécution checkpoint PARA automatique - Objectif: garder une seule prochaine action claire à exécuter maintenant. ## 17:00 UTC — Consolidation - **Modification préférence modèles** : Alexandre demande tous les crons + heartbeat passés en `zai/glm-5-turbo` - **Action exécutée** : 38 crons mis à jour de `zai/glm-4.7` → `zai/glm-5-turbo`",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "totalScore": 0.3735799580812454,
+      "maxScore": 0.3735799580812454,
+      "firstRecalledAt": "2026-04-09T19:51:09.715Z",
+      "lastRecalledAt": "2026-04-09T19:51:09.715Z",
+      "queryHashes": [
+        "56bbe925680a"
+      ],
+      "recallDays": [
+        "2026-04-09"
+      ],
+      "conceptTags": [
+        "gpt",
+        "gpt-5",
+        "arc-agi-3",
+        "3-min",
+        "zai/glm-5-turbo",
+        "zai/glm-4.7",
+        "utc",
+        "veille"
+      ]
+    },
+    "memory:memory/2026-04-08.md:36:52": {
+      "key": "memory:memory/2026-04-08.md:36:52",
+      "path": "memory/2026-04-08.md",
+      "startLine": 36,
+      "endLine": 52,
+      "source": "memory",
+      "snippet": "- Veille IA regulation tech générée avec succès - Proposition de loi sénatoriale IA/droits d'auteur, interdiction images IA communications UE, AI Act report 2027-2028 - Flash 5min sauvegardé daily-flash/2026-04-08/08h-flash.md - thème regulation tech - Deep dive veille IA bloqué API Perplexity erreur auth récurrente 5+ jours - Pattern critique identifié: systèmes simples (heartbeat) > systèmes complexes (scraping multi-URLs) - Auto-systèmes heartbeat robustes: heal ✓, commit ✓, optimize ✓, learn ✓, alert ✓, cleanup ✓ - Token OpenAI-Codex expiré après 81h sans régénération - surveillance nécessaire - Modèles migrés: 38 crons + heartbeat passés en zai/glm-5-turbo (LiveSessionModelSwitchError r",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "totalScore": 0.36490851044654843,
+      "maxScore": 0.36490851044654843,
+      "firstRecalledAt": "2026-04-09T19:51:09.715Z",
+      "lastRecalledAt": "2026-04-09T19:51:09.715Z",
+      "queryHashes": [
+        "56bbe925680a"
+      ],
+      "recallDays": [
+        "2026-04-09"
+      ],
+      "conceptTags": [
+        "openai",
+        "ia/droits",
+        "2027-2028",
+        "multi-urls",
+        "auto-systèmes",
+        "openai-codex",
+        "zai/glm-5-turbo",
+        "veille"
       ]
     }
   }

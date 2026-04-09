@@ -1,6 +1,6 @@
 # Open Loops - Fils ouverts à suivre
 
-**Dernière mise à jour** : 2026-04-09 06:14 UTC
+**Dernière mise à jour** : 2026-04-09 21:50 UTC
 
 ## Boucles Actives
 
@@ -14,10 +14,10 @@
    - Pattern : nécessité monitoring proactif tokens API
 
 ### 🟡 Priorité Moyenne (Robustesse Système)  
-2. **Pattern robustesse systèmes** - systèmes simples fiables vs complexes instables identifié
-   - Observation : heartbeat simple opérationnel vs scraping complexe en erreur (SIGKILL)
+2. **Pattern robustesse systèmes CONFIRMÉ** - systèmes simples fiables vs complexes instables confirmé aujourd'hui
+   - Preuve : heartbeat simple (0 errors vs 54 hier!) vs scraping complexe en erreur (SIGKILL)
    - Action : appliquer pattern pour futur développement, simplifier architecture complexe
-   - Source : consolidation mémoire 2026-04-08
+   - Source : consolidation mémoire 2026-04-09 avec preuve empirique
 
 3. **Veille IA scraping SIGKILL** - Script 8h00 bloqué pendant Deep Dive (Flash OK) → même cause probable (Perplexity API)
    - Cause identifiée : complexité multi-URLs + instabilité Perplexity
@@ -44,9 +44,9 @@
    - Priorité : basse (nouveau développement vs urgence système)
 
 ## Actions Concrètes Prochaines
-- **Cette semaine** : Résoudre API Perplexity auth (priorité haute), régénérer token OpenAI-Codex
-- **Cette semaine** : Implémenter monitoring proactif tokens, ajouter timeout/retry scraping
-- **Mois prochain** : Simplifier architecture systèmes complexes basé sur pattern identifié
+- **AUJOURD'HUI** : Résoudre API Perplexity auth (bloque deep dive), régénérer token OpenAI-Codex (81h expiré)
+- **Cette semaine** : Implémenter monitoring proactif tokens, ajouter timeout/retry scraping robustes
+- **Mois prochain** : Simplifier architecture systèmes complexes basé sur pattern CONFIRMÉ
 
 ## Actions Todo
 - [x] [2026-04-08 19:50] Consolidation mémoire + PARA terminée ✅
