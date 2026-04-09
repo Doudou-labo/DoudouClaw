@@ -5,8 +5,8 @@ Consolidation mémoire quotidienne + PARA terminée ✅ (2026-04-08 19:50 UTC)
 
 ## Today's Work Summary (2026-04-09)
 - **06:03 UTC** — Heartbeat: auto-heal ✓, auto-commit ✓, auto-optimize ✓ (0 errors vs 54 hier!), auto-learn ✓, auto-alert ✓, auto-cleanup ✓
-- **06:07 UTC** — **CRITICAL FIX**: Cron "Veille IA - Synthèse Mensuelle" en erreur depuis 9 jours → corrigé (reset state error, backup créé) → gateway restart requis
-- **06:10 UTC** — Diagnostic système: `openclaw cron` timeout persistant → fix direct jobs.json appliqué
+- **06:07 UTC** — **CRITICAL FIX**: Cron "Veille IA - Synthèse Mensuelle" en erreur depuis 9 jours → corrigé (reset state error, backup créé)
+- **06:14 UTC** — **RESOLU**: Cron opérationnel (status ok, consecutive errors 0, modèle zai/glm-5-turbo) → prochaine exécution 28 avril 2026
 
 ## Yesterday's Work Summary (2026-04-08)
 - **06:02 UTC** — Veille IA 8h00 - Flash regulation généré avec succès (Proposition de loi sénatoriale IA/droits d'auteur, interdiction images IA communications UE, AI Act report 2027-2028)
@@ -33,8 +33,8 @@ Consolidation mémoire quotidienne + PARA terminée ✅ (2026-04-08 19:50 UTC)
 - ⚠️ API Perplexity en erreur d'auth à surveiller
 
 ## Prochains chantiers
-1. **🔴 CRON EN ERREUR CORRIGÉ** - "Veille IA - Synthèse Mensuelle" corrigé (LiveSessionModelSwitchError) → **gateway restart requis**
-2. **🟡 API Perplexity erreur d'auth récurrente** - 5+ jours consécutifs → deep dive veille IA bloqué (priorité haute)
+1. **🟡 API Perplexity erreur d'auth récurrente** - 5+ jours consécutifs → deep dive veille IA bloqué (priorité haute)
+2. **🟡 Token OpenAI-Codex expiré** - 81h sans régénération → surveillance proactive nécessaire (priorité haute)
 3. **🟡 Token OpenAI-Codex expiré** - 81h sans régénération → surveillance proactive nécessaire (priorité haute)
 3. **🟡 Pattern robustesse systèmes** - systèmes simples > systèmes complexes confirmé → simplification architecture nécessaire
 4. **Correction dashboard pilotage** : corriger année `2025→2026`, sélecteur mois `AGENCE`, retirer `Objectif N` de l'historique → issue #23
@@ -48,7 +48,7 @@ Consolidation mémoire quotidienne + PARA terminée ✅ (2026-04-08 19:50 UTC)
 
 ## Systèmes actifs
 - ✅ Heartbeat auto-heal/auto-commit/auto-learn/auto-alert/auto-cleanup opérationnel
-- ⚠️ Crons veille IA partiels: Flash OK, Deep Dive bloqué (API Perplexity), Synthèse Mensuelle corrigée (restart requis)
+- ✅ **Crons veille IA rétablis**: Flash OK, Synthèse Mensuelle OK (fixé), Deep Dive bloqué (API Perplexity)
 - ✅ **Modèles système migrés** : 38 crons + heartbeat en `zai/glm-5-turbo` → LiveSessionModelSwitchError résolu
 - ✅ **Modèles système migrés** : 38 crons + heartbeat en `zai/glm-5-turbo` → LiveSessionModelSwitchError résolu
 - ⚠️ API Perplexity en erreur d'auth récurrente → à surveiller et corriger
@@ -67,4 +67,4 @@ Consolidation mémoire quotidienne + PARA terminée ✅ (2026-04-08 19:50 UTC)
 - **Heure Paris** : 21:50 → fin de journée
 
 ## Last Updated
-2026-04-09 06:10 UTC — cron veille IA synthèse mensuelle corrigé, gateway restart requis
+2026-04-09 06:14 UTC — cron veille IA synthèse mensuelle opérationnel, fix confirmé
