@@ -1,11 +1,12 @@
 # Open Loops - Fils ouverts à suivre
 
-**Dernière mise à jour** : 2026-04-08 21:50 UTC
+**Dernière mise à jour** : 2026-04-09 06:10 UTC
 
 ## Boucles Actives
 
 ### 🔴 Priorité Haute (Critique Système)
-1. **API Perplexity erreur d'auth récurrente** - Confirmée 5+ jours consécutifs → Flash OK mais Deep Dive bloqué (2026-04-03→2026-04-08)
+1. **🔧 Cron "Veille IA - Synthèse Mensuelle" CORRIGÉ** - LiveSessionModelSwitchError résolu (state error reset) → **Gateway restart requis** (2026-04-09 06:10)
+2. **API Perplexity erreur d'auth récurrente** - Confirmée 5+ jours consécutifs → Flash OK mais Deep Dive bloqué (2026-04-03→2026-04-08)
    - Impact : veille IA incomplète, manque d'analyse approfondie
    - Pattern : erreur récurrente hebdomadaire → nécessité fallback système immédiat
 
@@ -44,7 +45,8 @@
    - Priorité : basse (nouveau développement vs urgence système)
 
 ## Actions Concrètes Prochaines
-- **Immédiat** : Résoudre API Perplexity auth (priorité absolue), régénérer token OpenAI-Codex
+- **Immédiat** : Redémarrer gateway pour recharger config cron corrigée (5 min downtime)
+- **Cette semaine** : Résoudre API Perplexity auth (priorité haute), régénérer token OpenAI-Codex
 - **Cette semaine** : Implémenter monitoring proactif tokens, ajouter timeout/retry scraping
 - **Mois prochain** : Simplifier architecture systèmes complexes basé sur pattern identifié
 

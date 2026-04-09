@@ -1,0 +1,29 @@
+🔧 FIX CRON - VEILLE IA SYNTHÈSE MENSUELLE
+
+Problème détecté :
+- Cron "📊 Veille IA - Synthèse Mensuelle (30/28)" en erreur depuis 9 jours
+- Error: LiveSessionModelSwitchError (openai-codex/gpt-5.4 → zai/glm-5-turbo)
+- ConsecutiveErrors: 2
+
+Correction appliquée :
+✅ Reset state error (consecutiveErrors: 0, lastStatus: ok, lastError: cleared)
+✅ Backup créé: jobs.json.backup-before-fix
+✅ jobs.json mis à jour
+
+Action requise :
+⚠️ Gateway restart nécessaire pour recharger la configuration
+→ Cela coupera temporairement la session WebSocket (~30s)
+
+Prochaine exécution cron :
+- Schedule: 0 9 28,29,30,31 * * (Europe/Paris)
+- Next run: 2026-04-28 09:00 Paris
+- Target: Discord channel 1475604437505413211
+
+Status après fix :
+- Modèle: zai/glm-5-turbo (correct)
+- Payload: bash scripts/veille-ia-synthese-mensuelle.sh (correct)
+- Script: OK (vérifié, utilise Perplexity API pas OpenAI)
+
+--
+Généré: 2026-04-09 06:10 UTC
+DoudouClaw Auto-Fix System
