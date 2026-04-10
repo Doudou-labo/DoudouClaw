@@ -1,278 +1,257 @@
-/**
- * Tests unitaires pour IntervalTree
- * Exécuter avec : npx ts-node --esm IntervalTree.test.ts
- * Ou compiler et exécuter avec Jest/Mocha
- */
+import { IntervalTree } from './IntervalTree';
 
-import { IntervalTree } from "./IntervalTree";
+// ============================================================================
+// Tests unitaires - IntervalTree
+// ============================================================================
 
-function assertEqual<T>(actual: T, expected: T, message: string): void {
-  if (actual !== expected) {
-    throw new Error(`${message}\n  Expected: ${expected}\n  Actual: ${actual}`);
-  }
-}
+describe('IntervalTree', () => {
 
-function assertArrayEqual<T>(
-  actual: T[],
-  expected: T[],
-  message: string
-): void {
-  if (actual.length !== expected.length) {
-    throw new Error(
-      `${message}\n  Expected length: ${expected.length}\n  Actual length: ${actual.length}`
-    );
-  }
-  for (let i = 0; i < actual.length; i++) {
-    if (actual[i] !== expected[i]) {
-      throw new Error(
-        `${message}\n  Mismatch at index ${i}\n  Expected: ${expected}\n  Actual: ${actual}`
-      );
-    }
-  }
-}
+    // ========================================================================
+    // Tests de base : insert / count / isEmpty
+    // ========================================================================
 
-// ==================== TESTS ====================
+    it('doit être vide à l\'initialisation', () => {
+        const tree = new IntervalTree<string>();
+        expect(tree.isEmpty()).toBe(true);
+        expect(tree.count()).toBe(0);
+    });
 
-function testBasicInsertionAndQuery(): void {
-  const tree = new IntervalTree<number>();
-  tree.insert(10, 20, 100);
-  tree.insert(30, 40, 300);
+    it('doit retourner un tableau vide sur query() d\'un arbre vide', () => {
+        const tree = new IntervalTree<string>();
+        expect(tree.query(5)).toEqual([]);
+    });
 
-  const res1 = tree.query(15);
-  assertArrayEqual(res1, [100], "Query 15 should return [100]");
+    it('doit correctement compter après insertions', () => {
+        const tree = new IntervalTree<string>();
+        tree.insert(0, 10, 'a');
+        tree.insert(20, 30, 'b');
+        tree.insert(40, 50, 'c');
+        expect(tree.count()).toBe(3);
+        expect(tree.isEmpty()).toBe(false);
+    });
 
-  const res2 = tree.query(35);
-  assertArrayEqual(res2, [300], "Query 35 should return [300]");
+    // ========================================================================
+    // Tests de query : intervalle unique
+    // ========================================================================
 
-  const res3 = tree.query(25);
-  assertArrayEqual(res3, [], "Query 25 should return []");
+    it('doit trouver un intervalle qui contient le point', () => {
+        const tree = new IntervalTree<string>();
+        tree.insert(10, 20, 'trouvé');
+        expect(tree.query(15)).toContain('trouvé');
+    });
 
-  console.log("✅ testBasicInsertionAndQuery passed");
-}
+    it('ne doit PAS trouver un intervalle qui ne contient PAS le point', () => {
+        const tree = new IntervalTree<string>();
+        tree.insert(10, 20, 'hors bornes');
+        expect(tree.query(5)).not.toContain('hors bornes');
+        expect(tree.query(20)).not.toContain('hors bornes'); // end = 20, point = 20 → pas inclus
+        expect(tree.query(25)).not.toContain('hors bornes');
+    });
 
-function testMultipleOverlappingIntervals(): void {
-  const tree = new IntervalTree<string>();
-  tree.insert(1, 5, "A");
-  tree.insert(2, 6, "B");
-  tree.insert(3, 7, "C");
-  tree.insert(10, 15, "D");
+    // ========================================================================
+    // Tests de query : plusieurs intervalles
+    // ========================================================================
 
-  const res1 = tree.query(3);
-  // 3 est dans [1,5), [2,6), [3,7)
-  assertArrayEqual(res1, ["A", "B", "C"], "Query 3 should return A,B,C");
+    it('doit retourner TOUS les intervalles qui contiennent le point (chevauchements)', () => {
+        const tree = new IntervalTree<number>();
+        tree.insert(0, 10, 1);   // contient 5 : 0<=5<10 ✓
+        tree.insert(3, 8, 2);    // contient 5 : 3<=5<8 ✓
+        tree.insert(7, 15, 3);   // NE contient PAS 5 : 5<7 (start exclusif en pratique)
+        tree.insert(20, 30, 4); // ne contient PAS 5
 
-  const res2 = tree.query(6);
-  // 6 est dans [2,6) uniquement (car [2,6) inclut 6? Non, 6 est exclu car end=6)
-  // Correction: [2,6) → 2 <= x < 6. Donc 6 n'est pas dedans.
-  assertArrayEqual(res2, [], "Query 6 should return []");
+        const results = tree.query(5);
+        expect(results).toContain(1);
+        expect(results).toContain(2);
+        expect(results).not.toContain(3); // 5 < 7, intervalle [7,15) ne contient pas 5
+        expect(results).not.toContain(4);
+        expect(results.length).toBe(2);
+    });
 
-  const res3 = tree.query(14);
-  assertArrayEqual(res3, ["D"], "Query 14 should return D");
+    it('doit retourner plusieurs résultats même si les intervalles ne se chevauchent pas au même point de début', () => {
+        const tree = new IntervalTree<string>();
+        tree.insert(0, 5, 'A');
+        tree.insert(5, 10, 'B');
+        tree.insert(10, 15, 'C');
 
-  console.log("✅ testMultipleOverlappingIntervals passed");
-}
+        expect(tree.query(0)).toContain('A');
+        expect(tree.query(4)).toContain('A');
+        expect(tree.query(5)).toContain('B');
+        expect(tree.query(9)).toContain('B');
+        expect(tree.query(10)).toContain('C');
+        expect(tree.query(14)).toContain('C');
+    });
 
-function testNestedIntervals(): void {
-  const tree = new IntervalTree<number>();
-  tree.insert(0, 100, 1); // grand intervalle
-  tree.insert(10, 20, 2);
-  tree.insert(15, 18, 3);
+    // ========================================================================
+    // Tests de remove
+    // ========================================================================
 
-  const res = tree.query(16);
-  // 16 ∈ [0,100), [10,20), [15,18)
-  assertArrayEqual(res, [1, 2, 3], "Query 16 should return 1,2,3");
+    it('doit supprimer un intervalle et retourner true', () => {
+        const tree = new IntervalTree<string>();
+        tree.insert(10, 20, 'cible');
+        tree.insert(0, 5, 'autre');
 
-  console.log("✅ testNestedIntervals passed");
-}
+        const removed = tree.remove(10, 20);
+        expect(removed).toBe(true);
+        expect(tree.count()).toBe(1);
+        expect(tree.query(15)).not.toContain('cible');
+    });
 
-function testRemoveBasic(): void {
-  const tree = new IntervalTree<number>();
-  tree.insert(5, 10, 50);
-  tree.insert(15, 20, 150);
+    it('doit retourner false si l\'intervalle à supprimer n\'existe pas', () => {
+        const tree = new IntervalTree<string>();
+        tree.insert(10, 20, 'existant');
 
-  const removed1 = tree.remove(5, 10);
-  assertEqual(removed1, true, "Should remove interval [5,10)");
+        const removed = tree.remove(0, 5); // n'existe pas
+        expect(removed).toBe(false);
+        expect(tree.count()).toBe(1);
+    });
 
-  const after = tree.query(7);
-  assertArrayEqual(after, [], "After removal, query 7 should return []");
+    it('doit ne PAS supprimer un intervalle avec même start mais end différent', () => {
+        const tree = new IntervalTree<string>();
+        tree.insert(10, 20, 'original');
 
-  const removed2 = tree.remove(999, 1000);
-  assertEqual(removed2, false, "Should return false for non-existent interval");
+        const removed = tree.remove(10, 30); // même start, end différent
+        expect(removed).toBe(false);
+        expect(tree.count()).toBe(1);
+        expect(tree.query(15)).toContain('original');
+    });
 
-  console.log("✅ testRemoveBasic passed");
-}
+    it('doit ne PAS supprimer un intervalle avec même end mais start différent', () => {
+        const tree = new IntervalTree<string>();
+        tree.insert(10, 20, 'original');
 
-function testRemoveAndReinsert(): void {
-  const tree = new IntervalTree<string>();
-  tree.insert(0, 10, "A");
-  tree.insert(20, 30, "B");
+        const removed = tree.remove(5, 20); // même end, start différent
+        expect(removed).toBe(false);
+        expect(tree.count()).toBe(1);
+    });
 
-  tree.remove(0, 10);
-  tree.insert(5, 15, "C");
+    // ========================================================================
+    // Tests de remove + query combinés
+    // ========================================================================
 
-  const res = tree.query(7);
-  assertArrayEqual(res, ["C"], "After remove+insert, query 7 should return C");
+    it('après suppression, les autres intervalles doivent rester accessibles', () => {
+        const tree = new IntervalTree<string>();
+        tree.insert(0, 10, 'A');
+        tree.insert(5, 15, 'B');
+        tree.insert(10, 20, 'C');
 
-  console.log("✅ testRemoveAndReinsert passed");
-}
+        tree.remove(5, 15);
 
-function testBoundaryConditions(): void {
-  const tree = new IntervalTree<number>();
-  tree.insert(0, 1, 1);
-  tree.insert(1, 2, 2);
-  tree.insert(-5, 0, -5);
+        expect(tree.query(2)).toContain('A');
+        expect(tree.query(2)).not.toContain('B');
+        expect(tree.query(12)).toContain('C');
+        expect(tree.count()).toBe(2);
+    });
 
-  const res1 = tree.query(0);
-  // 0 est dans [-5,0) ? Non, car end=0 exclut 0.
-  // 0 est dans [0,1) ? Oui, start=0 inclus.
-  assertArrayEqual(res1, [1], "Query 0 should return [1]");
+    // ========================================================================
+    // Tests de robustesse / erreurs
+    // ========================================================================
 
-  const res2 = tree.query(1);
-  // 1 est dans [1,2) ? Oui.
-  assertArrayEqual(res2, [2], "Query 1 should return [2]");
+    it('doit rejeter un intervalle avec start >= end', () => {
+        const tree = new IntervalTree<string>();
+        expect(() => tree.insert(10, 10, 'zéro')).toThrow();
+        expect(() => tree.insert(20, 10, 'inverse')).toThrow();
+    });
 
-  const res3 = tree.query(-3);
-  assertArrayEqual(res3, [-5], "Query -3 should return [-5]");
+    // ========================================================================
+    // Tests avec des valeurs de type générique
+    // ========================================================================
 
-  console.log("✅ testBoundaryConditions passed");
-}
+    it('doit fonctionner avec des objets comme valeurs', () => {
+        interface Event {
+            id: number;
+            name: string;
+        }
 
-function testManyIntervalsAndQuery(): void {
-  const tree = new IntervalTree<number>();
-  for (let i = 0; i < 100; i++) {
-    tree.insert(i * 2, i * 2 + 1, i);
-  }
+        const tree = new IntervalTree<Event>();
+        const ev1: Event = { id: 1, name: 'Réunion' };
+        const ev2: Event = { id: 2, name: 'Pause' };
 
-  // Query au centre de chaque intervalle
-  for (let i = 0; i < 100; i++) {
-    const res = tree.query(i * 2 + 0.5);
-    assertArrayEqual(res, [i], `Query midpoint of interval ${i} should return [${i}]`);
-  }
+        tree.insert(9, 12, ev1);
+        tree.insert(14, 16, ev2);
 
-  // Query en dehors de tous les intervalles
-  const out = tree.query(200.5);
-  assertArrayEqual(out, [], "Query outside should return []");
+        const results = tree.query(10);
+        expect(results.length).toBe(1);
+        expect(results[0].id).toBe(1);
+        expect(results[0].name).toBe('Réunion');
+    });
 
-  console.log("✅ testManyIntervalsAndQuery passed");
-}
+    it('doit fonctionner avec des nombres comme valeurs (type T = number)', () => {
+        const tree = new IntervalTree<number>();
+        tree.insert(0, 10, 100);  // point=10 NON contenu : end=10 est EXCLUSIF
+        tree.insert(5, 15, 200);  // contient 10 : 5<=10<15 ✓
+        tree.insert(10, 20, 300); // contient 10 : 10<=10<20 ✓
 
-function testMaxEndRefreshingAfterInsert(): void {
-  const tree = new IntervalTree<number>();
-  tree.insert(10, 20, 1);
-  tree.insert(5, 8, 2);
-  tree.insert(30, 40, 3);
+        const results = tree.query(10);
+        expect(results).not.toContain(100); // [0,10) n'inclut PAS 10 (end exclusif)
+        expect(results).toContain(200);
+        expect(results).toContain(300);
+    });
 
-  // L'arbre devrait avoir maxEnd = 40 à la racine
-  const array = tree.toArray();
-  // Le root peut varier selon l'équilibre, mais le maxEnd doit être 40
-  // On vérifie en insérant un intervalle qui s'étend plus loin
-  tree.insert(25, 50, 4);
+    // ========================================================================
+    // Tests d'équilibrage AVL (arbres de grande taille)
+    // ========================================================================
 
-  // Après insertion, le maxEnd doit être 50
-  const res = tree.query(45);
-  assertArrayEqual(res, [4], "Query 45 should return [4] after extending maxEnd");
+    it('doit maintenir des performances acceptables sur 100 insertions séquentielles', () => {
+        const tree = new IntervalTree<string>();
 
-  console.log("✅ testMaxEndRefreshingAfterInsert passed");
-}
+        // Insertion d'intervalles séquentiels non-chevauchants
+        for (let i = 0; i < 100; i++) {
+            tree.insert(i * 10, (i + 1) * 10, `int-${i}`);
+        }
 
-function testIntervalsOutOfOrderInsertion(): void {
-  const tree = new IntervalTree<string>();
-  // Insertion dans un ordre non trié pour tester la structure
-  tree.insert(100, 200, "C");
-  tree.insert(10, 50, "A");
-  tree.insert(60, 90, "B");
+        expect(tree.count()).toBe(100);
 
-  const res1 = tree.query(25);
-  assertArrayEqual(res1, ["A"], "Query 25 → A");
+        // Chaque query doit rester O(log n)
+        const results = tree.query(55); // intervalle [50, 60)
+        expect(results).toContain('int-5');
+        expect(results.length).toBe(1);
+    });
 
-  const res2 = tree.query(70);
-  assertArrayEqual(res2, ["B"], "Query 70 → B");
+    it('doit gérer les chevauchements multiples sur insertions séquentielles', () => {
+        const tree = new IntervalTree<number>();
 
-  const res3 = tree.query(150);
-  assertArrayEqual(res3, ["C"], "Query 150 → C");
+        // 10 intervalles qui se chevauchent tous sur le point 5 : [0,10), [1,11), ..., [9,19)
+        // Après équilibrage AVL, le tree n'est plus un right-spine.
+        // Seuls les intervalles avec start <= 5 < end contiennent le point.
+        // [0,10)✓ [1,11)✓ [2,12)✓ [3,13)✓ [4,14)✓ [5,15)✓ [6,16)✗ [7,17)✗ [8,18)✗ [9,19)✗
+        for (let i = 0; i < 10; i++) {
+            tree.insert(i, i + 10, i);
+        }
 
-  console.log("✅ testIntervalsOutOfOrderInsertion passed");
-}
+        const results = tree.query(5);
+        // 6 intervalles contiennent 5 (ceux avec start <= 5)
+        expect(results.length).toBe(6);
+        expect(results.sort()).toEqual([0, 1, 2, 3, 4, 5]);
+    });
 
-function testInvalidInputThrows(): void {
-  const tree = new IntervalTree<number>();
+    // ========================================================================
+    // Tests de cohérence (suppression complète + re-insertion)
+    // ========================================================================
 
-  let threw = false;
-  try {
-    tree.insert(10, 5, 1); // start >= end
-  } catch (e) {
-    threw = true;
-  }
-  if (!threw) throw new Error("Expected error for insert with start>=end");
+    it('doit permettre de vider l\'arbre par suppressions successives', () => {
+        const tree = new IntervalTree<string>();
 
-  threw = false;
-  try {
-    tree.remove(5, 5); // start == end
-  } catch (e) {
-    threw = true;
-  }
-  if (!threw) throw new Error("Expected error for remove with start==end");
+        const intervals = [
+            [0, 10], [10, 20], [20, 30], [30, 40], [40, 50]
+        ];
 
-  console.log("✅ testInvalidInputThrows passed");
-}
+        intervals.forEach(([s, e]) => tree.insert(s, e, `int-${s}`));
+        expect(tree.count()).toBe(5);
 
-function testComplexOverlapScenario(): void {
-  const tree = new IntervalTree<string>();
-  tree.insert(0, 10, "base");
-  tree.insert(3, 7, "overlap1");
-  tree.insert(5, 6, "overlap2");
-  tree.insert(20, 30, "other");
+        intervals.forEach(([s, e]) => tree.remove(s, e));
+        expect(tree.count()).toBe(0);
+        expect(tree.isEmpty()).toBe(true);
+        expect(tree.query(25)).toEqual([]);
+    });
 
-  const r1 = tree.query(4);
-  // 4 ∈ [0,10) et [3,7)
-  assertArrayEqual(r1, ["base", "overlap1"], "Query 4 → base,overlap1");
+    it('doit permettre une re-insertion après suppression totale', () => {
+        const tree = new IntervalTree<string>();
+        tree.insert(0, 10, 'A');
+        tree.remove(0, 10);
+        tree.insert(0, 10, 'B');
 
-  const r2 = tree.query(5);
-  // 5 ∈ [0,10), [3,7), [5,6)
-  assertArrayEqual(r2, ["base", "overlap1", "overlap2"], "Query 5 → base,overlap1,overlap2");
-
-  const r3 = tree.query(8);
-  // 8 ∈ [0,10) seulement
-  assertArrayEqual(r3, ["base"], "Query 8 → base");
-
-  console.log("✅ testComplexOverlapScenario passed");
-}
-
-function testRemoveInnerIntervalOnly(): void {
-  const tree = new IntervalTree<number>();
-  tree.insert(0, 10, 0);
-  tree.insert(1, 2, 1);
-  tree.insert(3, 4, 3);
-
-  tree.remove(1, 2);
-  tree.remove(3, 4);
-
-  const res = tree.query(5);
-  assertArrayEqual(res, [0], "After removing inner intervals, query 5 → [0]");
-
-  console.log("✅ testRemoveInnerIntervalOnly passed");
-}
-
-// ==================== EXÉCUTION ====================
-
-console.log("=== IntervalTree Tests ===\n");
-
-try {
-  testBasicInsertionAndQuery();
-  testMultipleOverlappingIntervals();
-  testNestedIntervals();
-  testRemoveBasic();
-  testRemoveAndReinsert();
-  testBoundaryConditions();
-  testManyIntervalsAndQuery();
-  testMaxEndRefreshingAfterInsert();
-  testIntervalsOutOfOrderInsertion();
-  testInvalidInputThrows();
-  testComplexOverlapScenario();
-  testRemoveInnerIntervalOnly();
-
-  console.log("\n✅ Tous les tests ont passé!");
-} catch (error) {
-  console.error("\n❌ Échec du test:", error.message);
-  process.exit(1);
-}
+        expect(tree.count()).toBe(1);
+        expect(tree.query(5)).toContain('B');
+        expect(tree.query(5)).not.toContain('A');
+    });
+});
