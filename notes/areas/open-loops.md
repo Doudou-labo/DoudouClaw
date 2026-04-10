@@ -5,7 +5,7 @@
 ## Boucles Actives
 
 ### 🔴 Priorité Haute (Critique Système)
-1. **API Perplexity erreur d'auth récurrente** - Confirmée 5+ jours consécutifs → Flash OK mais Deep Dive bloqué (2026-04-03→2026-04-08)
+1. **API Perplexity erreur d'auth récurrente** - Confirmée 5+ jours consécutifs → Flash OK mais Deep Dive bloqué (2026-04-03→2026-04-10)
    - Impact : veille IA incomplète, manque d'analyse approfondie
    - Pattern : erreur récurrente hebdomadaire → nécessité fallback système immédiat
 

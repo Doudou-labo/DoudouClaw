@@ -1,10 +1,24 @@
 # IA Automobile — Transformations Sectorielles
 
-**Dernière mise à jour :** 2026-04-03
+**Dernière mise à jour :** 2026-04-10
 
 ---
 
 ## 🚀 Tendances Clés
+
+### Tesla FSD v14.3 (avril 2026)
+- **Nouveauté technique** : réécriture complète compilateur IA avec MLIR
+- **Gain** : -20% temps réaction (dizaines de cm d'avance à autoroute)
+- **Améliorations** : encodeur vision 3D amélioré, meilleure lecture panneaux, faible visibilité
+- **Apprentissage continu** : millions de voitures alimentent corrections comportementales
+- **Prochainement** : système anti-nids-de-poule, surveillance regard mains libres
+
+### Michelin & IA
+- **Stratégie 2030** : IA comme levier stratégique clé d'innovation
+- **Formes IA** : IA générative, reconnaissance vocale, perception visuelle, traduction
+- **Déploiement** : Pneumatiques, Polymer Composite Solutions, Solutions connectées, Lifestyle
+- **Open innovation** : partenariats académiques (ex: Université technologie Troyes)
+- **Marketing** : Michelin recommandé par intelligences artificielles génératives
 
 ### Concessionnaires IA (CADA - Canada)
 - **Initiative** : Création d'un sous-comité IA dédié (mars 2026)
@@ -14,11 +28,6 @@
   - Amélioration taux conversion (opérations variables + fixes)
   - Amélioration expérience client en ligne + en concession
 - **Membres** : 7 expertsdont André-Martin Hobbs (développeur IA depuis 9 ans)
-
-### Michelin & IA
-- **Approche** : IA pour recadrer et assister les employés (pas remplacement)
-- **Méthodologie** : données fiables + validation métier + transformation numérique responsable
-- **Événement** : Présentation Oracle AI Tour 2026 (CNIT Forest Paris, 19/03/2026)
 
 ### Véhicules Autonomes
 - **Baidu Apollo Go** : 3.4M trajets 2025 (+200%), flotte 500+ véhicules à Wuhan

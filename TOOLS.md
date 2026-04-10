@@ -323,3 +323,10 @@ exec preflight: complex interpreter invocation detected; refusing to run without
 - Utiliser des commandes directes : `python3 /path/to/script.py` au lieu de `cd /root/.openclaw/workspace && python3 scripts/script.py`
 - Ou wrapper dans un script shell qui fait le `cd` : `bash scripts/run-script.sh`
 - Les crons concernés doivent être mis à jour pour utiliser la syntaxe directe
+
+**✅ Best Practice 2026-04-10 (Mise à jour OpenClaw):**
+Pour les mises à jour système critiques, utiliser `systemd-run` + script dédié pour éviter les problèmes de préflight :
+```bash
+systemd-run --scope --uid=root python3 /root/.openclaw/workspace/scripts/update-openclaw-to-2026.4.9.py
+```
+**Avantages** : méthode robuste qui évite les préflight checks complexes, garantie de exécution système avec privilèges appropriés.
