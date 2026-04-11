@@ -219,6 +219,16 @@
 - **MODÈLES STABLES** : migration réussie zai/glm-5-turbo pour 38 crons + heartbeat - LiveSessionModelSwitchError résolu
 - **VEILLE IA SECTORIELLE** : Tesla FSD v14.3 (-20% temps réaction), Michelin IA levier stratégique 2030, Pony AI bénéfice
 
+### Nouvelle version détectée (2026-04-11) - Importance: 0.8
+- **OpenClab 2026.4.10** détectée via cron "OpenClaw Update Check - 7h30" après réactivation → mise à jour potentielle disponible
+- **Test manuel réussi** : timeout augmenté à 120s, cron réactivé avec succès
+- **Impact** : maintenance système proactive en cours, nouvelle version disponible pour mise à jour
+
+### Heartbeat optimal confirmé (2026-04-11) - Importance: 0.8
+- **Statut exceptionnel** : heartbeat auto-surveillance opérationnelle avec **0 errors vs 54 hier!** → amélioration significative de la stabilité
+- **Systèmes opérationnels** : auto-heal ✓, auto-commit ✓, auto-optimize ✓, auto-learn ✓, auto-alert ✓, auto-cleanup ✓
+- **Pattern confirmé** : systèmes simples (heartbeat) > systèmes complexes (scraping multi-URLs) → priorité simplification architecture
+
 ### Consolidation mémoire (2026-04-10)
 - **MAJ OPENCLAW 2026.4.5 → 2026.4.9** ✅ via systemd-run + script dédié (méthode robuste)
 - **SYSTÈME OPTIMAL** : heartbeat auto-surveillance opérationnelle (0 errors vs 54 hier!), auto-systèmes complets opérationnels
