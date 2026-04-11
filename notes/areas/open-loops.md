@@ -1,17 +1,22 @@
 # Open Loops - Fils ouverts à suivre
 
-**Dernière mise à jour** : 2026-04-09 21:50 UTC
+**Dernière mise à jour** : 2026-04-11 21:50 UTC
 
 ## Boucles Actives
 
 ### 🔴 Priorité Haute (Critique Système)
-1. **API Perplexity erreur d'auth récurrente** - Confirmée 5+ jours consécutifs → Flash OK mais Deep Dive bloqué (2026-04-03→2026-04-10)
+1. **API Perplexity erreur d'auth récurrente** - Confirmée 5+ jours consécutifs → Flash OK mais Deep Dive bloqué (2026-04-03→2026-04-11)
    - Impact : veille IA incomplète, manque d'analyse approfondie
    - Pattern : erreur récurrente hebdomadaire → nécessité fallback système immédiat
 
-2. **Token OpenAI-Codex expiré** - Expired 81h → régénération nécessaire
+2. **Token OpenAI-Codex expiré** - Expired 81h+ → régénération nécessaire
    - Impact : potentiel blocage dépendances OpenAI-Codex
    - Pattern : nécessité monitoring proactif tokens API
+
+### 🟡 Priorité Moyenne (Robustesse Système)
+3. **OpenClab Update Check rétabli** - Cron réactivé avec timeout augmenté (120s), version 2026.4.10 détectée
+   - Impact : checks de mise à jour quotidiens opérationnels à partir de 07:30 Paris
+   - Action : mise à potentielle vers 2026.4.10 basée sur pattern robustesse (simplifications systémes)
 
 ### 🟡 Priorité Moyenne (Robustesse Système)  
 2. **Pattern robustesse systèmes CONFIRMÉ** - systèmes simples fiables vs complexes instables confirmé aujourd'hui
@@ -44,7 +49,7 @@
    - Priorité : basse (nouveau développement vs urgence système)
 
 ## Actions Concrètes Prochaines
-- **AUJOURD'HUI** : Résoudre API Perplexity auth (bloque deep dive), régénérer token OpenAI-Codex (81h expiré)
+- **AUJOURD'HUI** : Résoudre API Perplexity auth (bloque deep dive), régénérer token OpenAI-Codex (81h+ expiré), évaluer mise à jour OpenClab 2026.4.10
 - **Cette semaine** : Implémenter monitoring proactif tokens, ajouter timeout/retry scraping robustes
 - **Mois prochain** : Simplifier architecture systèmes complexes basé sur pattern CONFIRMÉ
 

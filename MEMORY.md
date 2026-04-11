@@ -211,6 +211,14 @@
 - **Auto-tags heuristiques** : [todo] categories actifs
 - **Cron consolidation** : exécution quotidienne stable à 21:50 UTC (veille IA, bourse, mémoire)
 
+### Consolidation mémoire (2026-04-11)
+- **OPENCLAB UPDATE CHECK RÉTABLI** : cron "OpenClaw Update Check - 7h30" réactivé avec timeout augmenté à 120s, nouvelle version 2026.4.10 détectée ✅
+- **SYSTÈME OPTIMAL** : heartbeat auto-surveillance opérationnelle (0 errors vs 54 hier!), auto-systèmes complets opérationnels
+- **PATTERN CONFIRMÉ** : systèmes simples (heartbeat) > systèmes complexes (scraping) → simplification architecture nécessaire
+- **API CRITIQUES** : Perplexity erreur auth récurrente (5+ jours), OpenAI-Codex expiré (81h+) → monitoring proactif urgent nécessaire
+- **MODÈLES STABLES** : migration réussie zai/glm-5-turbo pour 38 crons + heartbeat - LiveSessionModelSwitchError résolu
+- **VEILLE IA SECTORIELLE** : Tesla FSD v14.3 (-20% temps réaction), Michelin IA levier stratégique 2030, Pony AI bénéfice
+
 ### Consolidation mémoire (2026-04-10)
 - **MAJ OPENCLAW 2026.4.5 → 2026.4.9** ✅ via systemd-run + script dédié (méthode robuste)
 - **SYSTÈME OPTIMAL** : heartbeat auto-surveillance opérationnelle (0 errors vs 54 hier!), auto-systèmes complets opérationnels
