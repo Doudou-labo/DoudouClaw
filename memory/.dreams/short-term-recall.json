@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-04-10T20:01:22.814Z",
+  "updatedAt": "2026-04-11T11:21:03.781Z",
   "entries": {
     "memory:memory/2026-04-06.md:1:21": {
       "key": "memory:memory/2026-04-06.md:1:21",
@@ -104,20 +104,22 @@
       "endLine": 70,
       "source": "memory",
       "snippet": "**Réseau Euromaster (nouveau fichier: `notes/areas/reseau-euromaster.md`) :** - **Arnaud (RZ)** : soutien total, augmentation spontanée le 25/02 - **Marc (DR)** : pour l'évolution → **⚠️ visite au centre d'Arras le 31/03/2026**, longue discussion dans le bureau prévue (test implicite) - **Hélène (RRH)** : pour l'évolution (confirmé par Arnaud) - **Toute l'agence** : soutient Alexandre - **Technicien VI** : mutation probable à Lens comme chef d'atelier - **Léa (RCS Adjointe Lens)** : assessment à venir, pas vue d'un bon œil → scénario 6 mois probable (80%) **Fiches de poste RCS VL + VI** : envoyées par Alexandre, analysées et intégrées dans le gap analysis. --- ### 📊 Gap Analysis créé (`n",
-      "recallCount": 2,
+      "recallCount": 3,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 0.8010883450508117,
-      "maxScore": 0.404021680355072,
+      "totalScore": 1.2220194995403288,
+      "maxScore": 0.4209311544895172,
       "firstRecalledAt": "2026-04-07T20:00:49.078Z",
-      "lastRecalledAt": "2026-04-08T20:01:21.234Z",
+      "lastRecalledAt": "2026-04-11T11:20:42.049Z",
       "queryHashes": [
         "ad4eddb1b055",
-        "fbb21428aa64"
+        "fbb21428aa64",
+        "de648ede0ab8"
       ],
       "recallDays": [
         "2026-04-07",
-        "2026-04-08"
+        "2026-04-08",
+        "2026-04-11"
       ],
       "conceptTags": [
         "notes/areas/reseau-euromaster.md",
@@ -137,18 +139,21 @@
       "endLine": 42,
       "source": "memory",
       "snippet": "--- title: \"2026-02-25\" date: 2026-03-09 type: daily migrated: true source: openclaw --- # Journal 2026-02-25 ## Événements importants ### 💰 Augmentation salariale d'Alexandre - Entretien individuel avec Arnaud → augmentation **spontanée** (sans demande) - Passage de **2040€ → 2091€ brut** (+51€) - NAO à venir : potentiel gain supplémentaire (bonne part de l'enveloppe) - Signal fort : Alexandre est dans le radar positif d'Arnaud ### 🚗 Leçon de conduite (24 février 2026) - Alexandre avait sa leçon de conduite ce jour-là à 18h00 - Examen blanc prévu le jeudi 26 février 2026 à 15h00 ## Notes - Alexandre est bien positionné professionnellement, la non-nécessité de demander une augmentati",
-      "recallCount": 1,
+      "recallCount": 3,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 0.3778145760297775,
-      "maxScore": 0.3778145760297775,
+      "totalScore": 1.150619751214981,
+      "maxScore": 0.39808610975742337,
       "firstRecalledAt": "2026-04-07T20:00:49.078Z",
-      "lastRecalledAt": "2026-04-07T20:00:49.078Z",
+      "lastRecalledAt": "2026-04-11T11:21:03.781Z",
       "queryHashes": [
-        "ad4eddb1b055"
+        "ad4eddb1b055",
+        "de648ede0ab8",
+        "ca0cf28b10dc"
       ],
       "recallDays": [
-        "2026-04-07"
+        "2026-04-07",
+        "2026-04-11"
       ],
       "conceptTags": [
         "jour-là",
@@ -626,6 +631,99 @@
         "date",
         "type",
         "migrated"
+      ]
+    },
+    "memory:memory/2026-02-05.md:1:14": {
+      "key": "memory:memory/2026-02-05.md:1:14",
+      "path": "memory/2026-02-05.md",
+      "startLine": 1,
+      "endLine": 14,
+      "source": "memory",
+      "snippet": "--- title: \"2026-02-05\" date: 2026-03-09 type: daily migrated: true source: openclaw --- # 2026-02-05 - Alexandre se présente; il veut être appelé « Doudou ». - Le nom de l'assistant est « DoudouClaw ». - Fuseau horaire: Europe/Paris. Ville: Arras.",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.40019501149654385,
+      "maxScore": 0.40019501149654385,
+      "firstRecalledAt": "2026-04-11T11:21:03.781Z",
+      "lastRecalledAt": "2026-04-11T11:21:03.781Z",
+      "queryHashes": [
+        "ca0cf28b10dc"
+      ],
+      "recallDays": [
+        "2026-04-11"
+      ],
+      "conceptTags": [
+        "europe/paris",
+        "title",
+        "date",
+        "type",
+        "migrated",
+        "true",
+        "source",
+        "openclaw"
+      ]
+    },
+    "memory:memory/2026-02-17.md:1:45": {
+      "key": "memory:memory/2026-02-17.md:1:45",
+      "path": "memory/2026-02-17.md",
+      "startLine": 1,
+      "endLine": 45,
+      "source": "memory",
+      "snippet": "--- title: \"2026-02-17\" date: 2026-03-09 type: daily migrated: true source: openclaw --- # 2026-02-17 — Mardi ## 🌅 Brief du matin (8:30 AM) ### Contexte - Début de semaine travail (lundi-vendredi 8h-12h / 14h-18h) - Plan RCS 6 mois en cours (mois 1-2: bases, focus posture managériale + rigueur) - Lecture en cours: \"L'intelligence Émotionnelle\" (Goleman) ### Priorités jour 1. **Lecture IE**: 1 chapitre + 5 lignes de notes (1 idée clé + 1 application concrète boulot) 2. **Travail**: observer 1 situation où appliquer une compétence RCS (feedback/priorisation/cadrage) 3. **Finance Tracker**: ce soir 21:15 → saisir dépenses + vérifier (`finance recent 5`) + résumé ### Open loops importants",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.36857231259346007,
+      "maxScore": 0.36857231259346007,
+      "firstRecalledAt": "2026-04-11T11:21:03.781Z",
+      "lastRecalledAt": "2026-04-11T11:21:03.781Z",
+      "queryHashes": [
+        "ca0cf28b10dc"
+      ],
+      "recallDays": [
+        "2026-04-11"
+      ],
+      "conceptTags": [
+        "lundi-vendredi",
+        "8h-12h",
+        "14h-18h",
+        "1-2",
+        "feedback/priorisation/cadrage",
+        "title",
+        "date",
+        "type"
+      ]
+    },
+    "memory:memory/2026-02-07.md:1:21": {
+      "key": "memory:memory/2026-02-07.md:1:21",
+      "path": "memory/2026-02-07.md",
+      "startLine": 1,
+      "endLine": 21,
+      "source": "memory",
+      "snippet": "--- title: \"2026-02-07\" date: 2026-03-09 type: daily migrated: true source: openclaw --- # 2026-02-07 - Doudou a partagé des infos perso/pro importantes à retenir. - Préférence de style ajoutée: inclure aussi de l’humour dans les réponses (quand c’est approprié). - Travail: chez Euromaster (réseau centres auto / véhicule industriel), groupe Michelin. - Objectifs pro: améliorer rigueur, compétences administratives, compétences managériales. - Trajectoire pro: vise un poste de responsable d’agence; N+1 = Arnaud (bonne entente). - Objectif perso: développer l’intelligence émotionnelle; a acheté un livre de Daniel Goleman. - Forme/santé: veut prendre en muscle et s’affiner; a perdu 40 kg en 1",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.36546399295330045,
+      "maxScore": 0.36546399295330045,
+      "firstRecalledAt": "2026-04-11T11:21:03.781Z",
+      "lastRecalledAt": "2026-04-11T11:21:03.781Z",
+      "queryHashes": [
+        "ca0cf28b10dc"
+      ],
+      "recallDays": [
+        "2026-04-11"
+      ],
+      "conceptTags": [
+        "perso/pro",
+        "forme/santé",
+        "title",
+        "date",
+        "type",
+        "migrated",
+        "true",
+        "source"
       ]
     }
   }
