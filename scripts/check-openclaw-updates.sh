@@ -2,7 +2,7 @@
 # =============================================================================
 # check-openclaw-updates.sh
 # Vérifie si une nouvelle version d'OpenClaw est disponible sur GitHub
-# Compare avec la version installée et notifie sur Discord avec le changelog
+# Compare avec la version installée et génère un résumé explicatif du changelog
 # Ne notifie que si la version est NOUVELLE (pas déjà notifiée)
 # =============================================================================
 
@@ -33,15 +33,92 @@ LATEST_VERSION=$(echo "$RELEASE_JSON" | python3 -c "import sys,json; d=json.load
 RELEASE_NAME=$(echo "$RELEASE_JSON" | python3 -c "import sys,json; d=json.load(sys.stdin); print(d.get('name',''))" 2>/dev/null || echo "")
 RELEASE_URL=$(echo "$RELEASE_JSON" | python3 -c "import sys,json; d=json.load(sys.stdin); print(d.get('html_url',''))" 2>/dev/null || echo "")
 RELEASE_DATE=$(echo "$RELEASE_JSON" | python3 -c "import sys,json; d=json.load(sys.stdin); print(d.get('published_at','')[:10])" 2>/dev/null || echo "")
-CHANGELOG=$(echo "$RELEASE_JSON" | python3 -c "
+SUMMARY=$(echo "$RELEASE_JSON" | python3 -c "
 import sys, json, re
+
+def clean(text):
+    text = re.sub(r'\[#\d+\]\([^)]*\)', '', text)
+    text = re.sub(r'\s+', ' ', text).strip(' -')
+    return text
+
+def short(text, limit=180):
+    text = clean(text)
+    return text if len(text) <= limit else text[:limit-1].rstrip() + '…'
+
 d = json.load(sys.stdin)
-body = d.get('body','')
-# Tronquer à 1800 chars pour ne pas exploser Discord
-if len(body) > 1800:
-    body = body[:1800] + '\n...(tronqué, voir lien pour la suite)'
-print(body)
-" 2>/dev/null || echo "Changelog non disponible.")
+body = d.get('body', '')
+changes, fixes = [], []
+section = None
+for raw in body.splitlines():
+    line = raw.strip()
+    low = line.lower()
+    if low.startswith('### changes'):
+        section = 'changes'
+        continue
+    if low.startswith('### fixes'):
+        section = 'fixes'
+        continue
+    if not line.startswith('- '):
+        continue
+    text = line[2:].strip()
+    if section == 'changes':
+        changes.append(short(text))
+    elif section == 'fixes':
+        fixes.append(short(text))
+
+highlights = []
+for item in changes:
+    low = item.lower()
+    if any(k in low for k in ['dream', 'memory', 'ui', 'control ui', 'webchat', 'plugin', 'codex', 'oauth', 'video_generate', 'video', 'teams', 'feishu']):
+        highlights.append(item)
+seen = set()
+ordered = []
+for item in highlights + changes:
+    if item and item not in seen:
+        ordered.append(item)
+        seen.add(item)
+key_changes = ordered[:4]
+key_fixes = fixes[:3]
+impact = []
+for item in key_changes + key_fixes:
+    low = item.lower()
+    if 'dream' in low or 'memory' in low:
+        impact.append('Si tu suis Dreaming / Memory Wiki, cette release enrichit surtout cette zone.')
+    elif 'ui' in low or 'webchat' in low:
+        impact.append('L\'interface gagne en lisibilité sur les sorties riches, médias et réponses vocales.')
+    elif 'plugin' in low:
+        impact.append('Les plugins deviennent plus propres à configurer, avec des flows d\'activation/setup mieux décrits.')
+    elif 'codex' in low or 'oauth' in low:
+        impact.append('Le flux de connexion Codex/OpenAI-compatible est plus fiable, donc moins de friction côté auth.')
+    elif 'video' in low:
+        impact.append('La génération vidéo gagne des options plus avancées si tu l\'utilises.')
+seen = set()
+impact = [x for x in impact if not (x in seen or seen.add(x))][:3]
+if not key_changes and not key_fixes:
+    print('Résumé du changelog non disponible.')
+    sys.exit(0)
+print('### Ce qu\'il faut retenir\n')
+if key_changes:
+    print('**Nouveautés marquantes**')
+    for item in key_changes:
+        print(f'- {item}')
+    print()
+if key_fixes:
+    print('**Correctifs utiles**')
+    for item in key_fixes:
+        print(f'- {item}')
+    print()
+if impact:
+    print('**Impact concret**')
+    for item in impact:
+        print(f'- {item}')
+    print()
+print('**Mon avis**')
+if key_changes:
+    print('- Release intéressante surtout si tu testes les nouveautés mémoire/UI. Pas un énorme séisme, mais un bon lot d\'améliorations utiles.')
+else:
+    print('- Release plutôt orientée correctifs et stabilisation.')
+" 2>/dev/null || echo "Résumé du changelog non disponible.")
 
 if [ -z "$LATEST_VERSION" ]; then
   echo "⚠️ Impossible de parser la réponse GitHub. Vérification annulée."
@@ -84,12 +161,14 @@ cat << EOF
 
 ---
 
-### 📋 Changelog — $RELEASE_NAME
+### 📋 En clair — $RELEASE_NAME
 
-$CHANGELOG
+$SUMMARY
 
 ---
 
+📎 **Lien release complète :** $RELEASE_URL
+
 ⚠️ **Installation en attente de ton accord.**
-Pour installer, dis-moi **"installe la mise à jour OpenClaw"** et je m'en occupe avec \`npm install -g openclaw@latest\` + redémarrage du gateway. 🙂
+Si tu veux, je peux ensuite l'installer proprement et vérifier quelles nouveautés sont réellement activées chez toi.
 EOF

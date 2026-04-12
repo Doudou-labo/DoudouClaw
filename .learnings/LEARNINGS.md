@@ -172,3 +172,33 @@ Updated 3 cron payloads to use correct syntax:
 
 ## 2026-04-05 16:20 UTC
 - Findings: pas de correction explicite détectée
+
+## [LRN-20260412-001] correction
+
+**Logged**: 2026-04-12T09:14:00Z
+**Priority**: high
+**Status**: resolved
+**Area**: docs
+
+### Summary
+Le cron de veille des mises à jour OpenClaw doit produire une synthèse explicative du changelog, pas un copier-coller brut de la release.
+
+### Details
+L'utilisateur a corrigé explicitement le rendu attendu du cron `OpenClaw Update Check - 7h30`. Le message envoyé reprenait essentiellement le changelog GitHub tel quel, ce qui rate l'objectif du salon : comprendre vite ce qui change vraiment. Le bon comportement est de transformer la release en message lisible avec hiérarchie, points marquants, correctifs utiles et impact concret.
+
+### Suggested Action
+- Générer un résumé structuré côté script plutôt qu'un dump brut.
+- Formuler le prompt du cron pour interdire le copier-coller du changelog.
+- Favoriser un rendu orienté lecture rapide : nouveautés, correctifs, impact, avis.
+
+### Metadata
+- Source: user_feedback
+- Related Files: scripts/check-openclaw-updates.sh, /root/.openclaw/cron/jobs.json
+- Tags: cron, changelog, release-notes, formatting, correction
+- See Also: -
+
+### Resolution
+- **Resolved**: 2026-04-12T09:18:00Z
+- **Notes**: Script changé pour produire une synthèse explicative, prompt cron renforcé, timeout étendu à 180s.
+
+---
