@@ -51,3 +51,10 @@ Avant tout patch `openclaw.json` : lire la structure EXACTE du nœud cible et ne
   - memory/2026-04-05.md:32:4. 🔄 **Script veille**: Ajouter des timeouts et mécanismes de retry
   - memory/2026-04-05.md:37:- ❌ Crons défaillants diagnostiqués
 - Action: transformer les patterns récurrents en gotchas dans TOOLS.md
+
+## 2026-04-12 16:20 UTC
+- Findings: erreurs/outils détectés dans les mémoires récentes
+- Sources:
+  - memory/MEMORY.md:19:- [fact] Heartbeat system optimal : auto-heal ✅, auto-commit ✅, auto-optimize ✅ (0 errors vs 54 hier), auto-learn ✅, auto-alert ✅, auto-cleanup ✅
+  - memory/MEMORY.md:20:- [fact] API critique récurrente : Perplexité erreur auth depuis 5+ jours (défaillance pattern ~1/semaine à 14:52, 17:00, 19:03)
+- Action: transformer les patterns récurrents en gotchas dans TOOLS.md
