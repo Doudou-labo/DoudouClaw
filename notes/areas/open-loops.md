@@ -1,15 +1,15 @@
 # Open Loops - Fils ouverts à suivre
 
-**Dernière mise à jour** : 2026-04-11 21:50 UTC
+**Dernière mise à jour** : 2026-04-12 21:50 UTC
 
 ## Boucles Actives
 
 ### 🔴 Priorité Haute (Critique Système)
-1. **API Perplexity erreur d'auth récurrente** - Confirmée 5+ jours consécutifs → Flash OK mais Deep Dive bloqué (2026-04-03→2026-04-11)
+1. **API Perplexity erreur d'auth récurrente** - Confirmée 6+ jours consécutifs → Flash OK mais Deep Dive bloqué (2026-04-03→2026-04-12)
    - Impact : veille IA incomplète, manque d'analyse approfondie
    - Pattern : erreur récurrente hebdomadaire → nécessité fallback système immédiat
 
-2. **Token OpenAI-Codex expiré** - Expired 81h+ → régénération nécessaire
+2. **Token OpenAI-Codex expiré** - Expired 82h+ → régénération nécessaire
    - Impact : potentiel blocage dépendances OpenAI-Codex
    - Pattern : nécessité monitoring proactif tokens API
 
@@ -49,7 +49,7 @@
    - Priorité : basse (nouveau développement vs urgence système)
 
 ## Actions Concrètes Prochaines
-- **AUJOURD'HUI** : Résoudre API Perplexity auth (bloque deep dive), régénérer token OpenAI-Codex (81h+ expiré), évaluer mise à jour OpenClab 2026.4.10
+- **AUJOURD'HUI** : Résoudre API Perplexity auth (bloque deep dive), régénérer token OpenAI-Codex (82h+ expiré), évaluer mise à jour OpenClab 2026.4.10
 - **Cette semaine** : Implémenter monitoring proactif tokens, ajouter timeout/retry scraping robustes
 - **Mois prochain** : Simplifier architecture systèmes complexes basé sur pattern CONFIRMÉ
 
@@ -59,7 +59,7 @@
 - [x] [2026-04-08 06:04] Heartbeat auto-surveillance opérationnel ✅
 
 ## Auto-checkpoints
-- [ ] [AUTO 2026-04-12 midi] Checkpoint 3-min fait. Next: [AUTO 2026-04-11 soir] Checkpoint 3-min fait. Next: [AUTO 2026-04-11 midi] Checkpoint 3-min fait. Next: [AUTO 2026-04-10 soir] Checkpoint 3-min fait. Next: [AUTO 2026-04-10 midi] Checkpoint 3-min fait. Next: [AUTO 2026-04-09 soir] Checkpoint 3-min fait. Next: [AUTO 2026-04-09 midi] Checkpoint 3-min fait. Next: [AUTO 2026-04-08 soir] Checkpoint 3-min fait. Next: [AUTO 2026-04-08 soir] Checkpoint 3-min fait. Next: [AUTO 2026-08-04 midi] Checkpoint 3-min fait. Next: [AUTO 2026-04-07 soir] Checkpoint 3-min fait. Next: [AUTO 2026-04-07 midi] Checkpoint 3-min fait. Next: [AUTO 2026-04-06 soir] Checkpoint 3-min fait. Next: [AUTO 2026-04-06 midi] Checkpoint 3-min fait. Next: [MIDI 2026-04-06 10:02] Exécution checkpoint PARA automatique
+- [x] [AUTO 2026-04-12 midi] Checkpoint 3-min fait. Next: [AUTO 2026-04-11 soir] Checkpoint 3-min fait. Next: [AUTO 2026-04-11 midi] Checkpoint 3-min fait. Next: [AUTO 2026-04-10 soir] Checkpoint 3-min fait. Next: [AUTO 2026-04-10 midi] Checkpoint 3-min fait. Next: [AUTO 2026-04-09 soir] Checkpoint 3-min fait. Next: [AUTO 2026-04-09 midi] Checkpoint 3-min fait. Next: [AUTO 2026-04-08 soir] Checkpoint 3-min fait. Next: [AUTO 2026-04-08 soir] Checkpoint 3-min fait. Next: [AUTO 2026-08-04 midi] Checkpoint 3-min fait. Next: [AUTO 2026-04-07 soir] Checkpoint 3-min fait. Next: [AUTO 2026-04-07 midi] Checkpoint 3-min fait. Next: [AUTO 2026-04-06 soir] Checkpoint 3-min fait. Next: [AUTO 2026-04-06 midi] Checkpoint 3-min fait. Next: [MIDI 2026-04-06 10:02] Exécution checkpoint PARA automatique
 
 ## Pattern Robustesse Appliqué
 - **Principe** : systèmes simples (heartbeat) > systèmes complexes (scraping)
