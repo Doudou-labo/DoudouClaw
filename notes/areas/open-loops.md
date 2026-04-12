@@ -54,12 +54,13 @@
 - **Mois prochain** : Simplifier architecture systèmes complexes basé sur pattern CONFIRMÉ
 
 ## Actions Todo
+- [ ] [2026-04-12 21:01] Test unchecked task for PARA automation
 - [x] [2026-04-08 19:50] Consolidation mémoire + PARA terminée ✅
 - [x] [2026-04-08 10:00] AUTO PARA 3-min (midi) exécuté ✅
 - [x] [2026-04-08 06:04] Heartbeat auto-surveillance opérationnel ✅
 
 ## Auto-checkpoints
-- [x] [AUTO 2026-04-12 midi] Checkpoint 3-min fait. Next: [AUTO 2026-04-11 soir] Checkpoint 3-min fait. Next: [AUTO 2026-04-11 midi] Checkpoint 3-min fait. Next: [AUTO 2026-04-10 soir] Checkpoint 3-min fait. Next: [AUTO 2026-04-10 midi] Checkpoint 3-min fait. Next: [AUTO 2026-04-09 soir] Checkpoint 3-min fait. Next: [AUTO 2026-04-09 midi] Checkpoint 3-min fait. Next: [AUTO 2026-04-08 soir] Checkpoint 3-min fait. Next: [AUTO 2026-04-08 soir] Checkpoint 3-min fait. Next: [AUTO 2026-08-04 midi] Checkpoint 3-min fait. Next: [AUTO 2026-04-07 soir] Checkpoint 3-min fait. Next: [AUTO 2026-04-07 midi] Checkpoint 3-min fait. Next: [AUTO 2026-04-06 soir] Checkpoint 3-min fait. Next: [AUTO 2026-04-06 midi] Checkpoint 3-min fait. Next: [MIDI 2026-04-06 10:02] Exécution checkpoint PARA automatique
+- [ ] [AUTO 2026-04-12 soir] Checkpoint 3-min fait. Next: [2026-04-12 21:01] Test unchecked task for PARA automation
 
 ## Pattern Robustesse Appliqué
 - **Principe** : systèmes simples (heartbeat) > systèmes complexes (scraping)
