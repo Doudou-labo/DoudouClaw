@@ -219,6 +219,16 @@
 - **ROUTINE PRO ACTIVE** : Synthèse NAO avancée, projet call-out optimisé, progression RCS confirmée
 - **BOURSE US STABLE** : Mi-séance positive (S&P 500: +0.54%, NASDAQ: +0.77%, Dow Jones: +0.48%)
 
+### Consolidation mémoire (2026-04-14)
+- **SYSTÈME OPTIMAL CONFIRMÉ** : heartbeat auto-surveillance opérationnelle (0 errors vs 54 hier!), auto-systèmes complets opérationnels
+- **API CRITIQUES PERSISTENTES** : Perplexity erreur auth récurrente (7+ jours), OpenAI-Codex expiré (83h+) → monitoring proactif urgent nécessaire
+- **PATTERN ROBUSTESSE VALIDÉ** : systèmes simples (heartbeat) > systèmes complexes (scraping) → simplification architecture prioritaire
+- **VEILLE IA PRODUITS COMPLÈTE** : nouvelles outils IA (MAI-Voice-1, Gemini-TTS/Chirp 3 HD, FLUX.2/Midjourney V8), frameworks agents (LangChain, CrewAI), adoption NoCode France (72% grandes entreprises, 35% PME)
+- **ADOPTION NOCODE FRANCE 2026** : marché 5,2M€, outils phares Make.com/Zapier/n8n, ROI démontré dans formation digitale
+- **ROUTINE PRO ACTIVE** : synthèses quotidiennes générées, progression RCS maintenue
+- **DECISION STRATÉGIQUE** : maintenir focus sur résolution API critiques avant nouveaux développements
+- **ACTION PRIORITAIRE** : monitoring proactif tokens + fallback système Perplexity
+
 ### Consolidation mémoire (2026-04-11)
 - **OPENCLAB UPDATE CHECK RÉTABLI** : cron "OpenClaw Update Check - 7h30" réactivé avec timeout augmenté à 120s, nouvelle version 2026.4.10 détectée ✅
 - **SYSTÈME OPTIMAL** : heartbeat auto-surveillance opérationnelle (0 errors vs 54 hier!), auto-systèmes complets opérationnels
@@ -304,7 +314,14 @@ Meilleure amie d'Alexandre, habite à Calais; relation amicale de longue date (e
 - **API Perplexity** : erreur d'auth récurrente identifiée (28/03, 01/04, 03/04, 07/04) → impact critique sur veille IA et stabilité système
 - **OpenAI-Codex** : token expiré depuis 81h → surveillance proactive nécessaire pour éviter blocage dépendances
 - **Pattern** : erreurs récurrentes hebdomadaires → nécessité fallback système immédiat
-- **Priorité** : résolution API critique = facteur de stabilité système
+- **Priorité** : résolution API critique = facteur de stabilité system
+
+### API Critical Issues Evolution (2026-04-14) - Importance: 0.95
+- **API Perplexity** : erreur d'auth récurrente identifiée (28/03, 01/04, 03/04, 07/04, 14/04) → **7+ jours consécutifs** → deep dive veille IA bloqué, pattern hebdomadaire confirmé
+- **OpenAI-Codex** : token expiré depuis 83h → **pattern expiration régulière identifié** → nécessité monitoring proactif tokens système
+- **Impact** : veille IA incomplète (Flash OK mais Deep Dive bloqué), dépendances OpenAI potentiellement affectées
+- **Décision** : priorisation résolution API critiques > nouveaux développements
+- **Action** : implémentation monitoring proactif tokens + fallback système Perplexity
 
 ### Model System Evolution (2026-04-07) - Importance: 0.9
 - **Migration modèles système** : passage réussi de zai/glm-4.7 vers zai/glm-5-turbo pour 38 crons + heartbeat
