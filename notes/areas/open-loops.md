@@ -60,7 +60,7 @@
 - [x] [2026-04-08 06:04] Heartbeat auto-surveillance opérationnel ✅
 
 ## Auto-checkpoints
-- [ ] [AUTO 2026-04-15 midi] Checkpoint 3-min fait. Next: [2026-04-12 21:01] Test unchecked task for PARA automation
+- [ ] [AUTO 2026-04-15 soir] Checkpoint 3-min fait. Next: [2026-04-12 21:01] Test unchecked task for PARA automation
 
 ## Pattern Robustesse Appliqué
 - **Principe** : systèmes simples (heartbeat) > systèmes complexes (scraping)
