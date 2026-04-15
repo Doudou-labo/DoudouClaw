@@ -317,11 +317,18 @@ Meilleure amie d'Alexandre, habite à Calais; relation amicale de longue date (e
 - **Priorité** : résolution API critique = facteur de stabilité system
 
 ### API Critical Issues Evolution (2026-04-14) - Importance: 0.95
-- **API Perplexity** : erreur d'auth récurrente identifiée (28/03, 01/04, 03/04, 07/04, 14/04) → **7+ jours consécutifs** → deep dive veille IA bloqué, pattern hebdomadaire confirmé
-- **OpenAI-Codex** : token expiré depuis 83h → **pattern expiration régulière identifié** → nécessité monitoring proactif tokens système
+- **API Perplexity** : erreur d'auth récurrente identifiée (28/03, 01/04, 03/04, 07/04, 14/04, 15/04) → **8+ jours consécutifs** → deep dive veille IA bloqué, pattern hebdomadaire confirmé
+- **OpenAI-Codex** : token expiré depuis 84h → **pattern expiration régulière identifié** → nécessité monitoring proactif tokens système
 - **Impact** : veille IA incomplète (Flash OK mais Deep Dive bloqué), dépendances OpenAI potentiellement affectées
 - **Décision** : priorisation résolution API critiques > nouveaux développements
 - **Action** : implémentation monitoring proactif tokens + fallback système Perplexity
+
+### Scraping SIGKILL Issues (2026-04-15) - Importance: 0.85
+- **Problème identifié** : SIGKILL pendant extraction de 5 URLs dans veille IA 19h → session `lucky-ne` tuée probablement OOM
+- **Impact** : deep dive veille IA bloqué, pertes de données scraping
+- **Solution nécessaire** : implémentation timeout/retry robuste pour scraping multi-URLs
+- **Pattern confirmé** : systèmes complexes (scraping multi-URLs) instables vs systèmes simples (heartbeat) robustes
+- **Action** : ajouter mécanismes timeout/retry avec gestion mémoire pour éviter SIGKILL
 
 ### Model System Evolution (2026-04-07) - Importance: 0.9
 - **Migration modèles système** : passage réussi de zai/glm-4.7 vers zai/glm-5-turbo pour 38 crons + heartbeat
