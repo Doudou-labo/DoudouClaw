@@ -1,10 +1,17 @@
 # SESSION-STATE.md — Active Working Memory
 
 ## Current Task
-Consolidation mémoire quotidienne + PARA terminée ✅ (2026-04-15 21:50 UTC)
+Consolidation mémoire quotidienne + PARA terminée ✅ (2026-04-16 21:50 UTC)
 
-## Today's Work Summary (2026-04-15)
-- **21:50 UTC** — **CONSOLIDATION MÉMOIRE + PARA** terminée (heartbeat optimal 0 errors vs hier!, pattern robustesse confirmé, API critiques persistantes 8+ jours, problème SIGKILL scraping identifié)
+## Today's Work Summary (2026-04-16)
+- **21:50 UTC** — **CONSOLIDATION MÉMOIRE + PARA** terminée (heartbeat optimal 0 errors vs hier!, pattern robustesse confirmé, API Perplexity auth error 9+ jours, OpenAI-Codex token expiré 85h+, scraping SIGKILL persistant)
+- **17:01 UTC** — **VEILLE IA 19H** : Flash BUSINESS généré avec succès (Meta IA 21B$, Intel-Google partenariat, CoreWeave 21B$, Microsoft 30k GPUs Norvège, adoption IA entreprise 72% grandes entreprises), deep dive bloqué SIGKILL probable OOM
+- **16:45 UTC** — **BOURSE US MI-SEANCE** : S&P 500: +0.06%, NASDAQ: +0.13%, Dow Jones: +0.00% → marché neutre avec Apple (-1.00%), Microsoft (-0.09%)
+- **16:20 UTC** — **ROUTINE PRO SOIR** : debrief pro généré (rapport évolution, progression RCS maintenue)
+- **14:00 UTC** — **OBSERVATIONS PROACTIVES** : ping proactif utile pour décompression
+- **12:00 UTC** — **AUTO PARA 3-min** : checkpoint automatique exécuté
+- **10:01 UTC** — **AUTO PARA 3-min** : checkpoint automatique exécuté
+- **06:02 UTC** — **VEILLE IA 8H** : Flash IA sectoriel généré avec succès (tendances fonds IA 2026, stratégies Big Tech, adoption entreprise 72% France, marché IA 5,2M€)
 - **19:00 UTC** — **VEILLE IA 19H** : Flash IA produits généré avec succès (MAI-Voice-1, Gemini-TTS/Chirp 3 HD, FLUX.2/Midjourney V8, ChatGPT Apps, Anthropic cybersécurité, MuseSpark)
 - **17:36 UTC** — **BOURSE US MI-SEANCE** : S&P 500: +0.10%, NASDAQ: +0.64%, Dow Jones: -0.79% → marché volatile Apple (+2.39%), Microsoft (+2.83%)
 - **17:02 UTC** — **OBSTACLE FLASH 5 MIN SOIR** : session SIGKILL (probablement OOM) → deep dive bloqué
@@ -65,9 +72,10 @@ Consolidation mémoire quotidienne + PARA terminée ✅ (2026-04-15 21:50 UTC)
 - ⚠️ API Perplexity en erreur d'auth à surveiller
 
 ## Prochains chantiers
-1. **🔴 API Perplexity erreur d'auth récurrente** - 7+ jours consécutifs → deep dive veille IA bloqué (priorité critique)
-2. **🔴 Token OpenAI-Codex expiré** - 83h sans régénération → surveillance proactive nécessaire (priorité critique)
-3. **🟡 Pattern robustesse systèmes CONFIRMÉ** - systèmes simples > systèmes complexes confirmé → simplification architecture prioritaire
+1. **🔴 API Perplexity erreur d'auth récurrente** - 9+ jours consécutifs → deep dive veille IA bloqué (priorité critique)
+2. **🔴 Token OpenAI-Codex expiré** - 85h sans régénération → surveillance proactive nécessaire (priorité critique)
+3. **🔴 Scraping SIGKILL persistant** - session OOM pendant veille IA 19h → deep dive bloqué (priorité critique)
+4. **🟡 Pattern robustesse systèmes CONFIRMÉ** - systèmes simples > systèmes complexes confirmé → simplification architecture prioritaire
 4. **Correction dashboard pilotage** : corriger année `2025→2026`, sélecteur mois `AGENCE`, retirer `Objectif N` de l'historique → issue #23
 5. **Actual Budget** — onboarding catégories finalisé, connecter comptes bancaires ou saisir manuellement
 6. **Pneu Tracker** — backlog: fiche pneu sélectionnable, stats dashboard, bouton réimport catalogue
@@ -79,23 +87,24 @@ Consolidation mémoire quotidienne + PARA terminée ✅ (2026-04-15 21:50 UTC)
 
 ## Systèmes actifs
 - ✅ Heartbeat auto-heal/auto-commit/auto-learn/auto-alert/auto-cleanup opérationnel
-- ✅ **Crons veille IA rétablis**: Flash OK, Synthèse Mensuelle OK (fixé), Deep Dive bloqué (API Perplexity)
+- ✅ **Crons veille IA rétablis**: Flash OK (8h/12h/19h), Synthèse Mensuelle OK (fixé), Deep Dive bloqué (scraping SIGKILL)
 - ✅ **Modèles système migrés** : 38 crons + heartbeat en `zai/glm-5-turbo` → LiveSessionModelSwitchError résolu
-- ✅ **Modèles système migrés** : 38 crons + heartbeat en `zai/glm-5-turbo` → LiveSessionModelSwitchError résolu
-- ⚠️ API Perplexity en erreur d'auth récurrente → à surveiller et corriger
-- ⚠️ Token OpenAI-Codex expiré depuis 81h → régénération nécessaire
+- ⚠️ API Perplexity en erreur d'auth récurrente 9+ jours → à surveiller et corriger
+- ⚠️ Token OpenAI-Codex expiré depuis 85h → régénération nécessaire
+- ⚠️ Scraping SIGKILL persistant → session OOM pendant veille IA 19h → investiguer
 - ⚠️ Pattern robustesse identifié : systèmes simples > systèmes complexes
 
 ## Immediate Context
 - **Gateway** : 2026.4.2 (mise à jour jour)
 - Disque stable à ~51%
 - Crons Proactive Observations actifs (07:00/12:00/17:00/21:00 Paris)
-- **⚠️ API Perplexity en erreur d'auth récurrente** (5+ jours) → deep dive bloqué
-- **⚠️ Token OpenAI-Codex expiré** → régénération nécessaire
+- **⚠️ API Perplexity en erreur d'auth récurrente** (9+ jours) → deep dive bloqué
+- **⚠️ Token OpenAI-Codex expiré** → régénération nécessaire (85h+)
+- **⚠️ Scraping SIGKILL persistant** → session OOM pendant veille IA 19h → investiguer timeout/retry
 - Mode tech activé (IA → web_search + Perplexity intensif)
 - Autonomie d'exécution renforcée (ne pas demander validation sauf externe/sensible)
 - Style emojis soutenu
 - **Heure Paris** : 21:50 → fin de journée
 
 ## Last Updated
-2026-04-12 21:50 UTC — consolidation mémoire quotidienne terminée, dimanche calme confirmé
+2026-04-16 21:50 UTC — consolidation mémoire quotidienne terminée, API critiques persistantes identifiées

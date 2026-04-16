@@ -1,21 +1,22 @@
 # Open Loops - Fils ouverts à suivre
 
-**Dernière mise à jour** : 2026-04-12 21:50 UTC
+**Dernière mise à jour** : 2026-04-16 21:50 UTC
 
 ## Boucles Actives
 
 ### 🔴 Priorité Haute (Critique Système)
-1. **API Perplexity erreur d'auth récurrente** - Confirmée 8+ jours consécutifs → Flash OK mais Deep Dive bloqué (2026-04-03→2026-04-15)
+1. **API Perplexity erreur d'auth récurrente** - Confirmée 9+ jours consécutifs → Flash OK mais Deep Dive bloqué (2026-04-03→2026-04-16)
    - Impact : veille IA incomplète, manque d'analyse approfondie
    - Pattern : erreur récurrente hebdomadaire → nécessité fallback système immédiat
 
-2. **Token OpenAI-Codex expiré** - Expired 84h+ → régénération nécessaire
+2. **Token OpenAI-Codex expiré** - Expired 85h+ → régénération nécessaire
    - Impact : potentiel blocage dépendances OpenAI-Codex
    - Pattern : nécessité monitoring proactif tokens API
 
 3. **Scraping SIGKILL multi-URLs** - Session `lucky-ne` tuée OOM pendant veille IA 19h → deep dive bloqué
    - Impact : pertes données scraping, instabilité système complexe
    - Pattern : systèmes complexes (scraping multi-URLs) vs simples (heartbeat) → nécessité timeout/retry robustes
+   - **Mise à jour 2026-04-16** : problème persistant confirmé aujourd'hui
 
 ### 🟡 Priorité Moyenne (Robustesse Système)
 3. **OpenClab Update Check rétabli** - Cron réactivé avec timeout augmenté (120s), version 2026.4.10 détectée
@@ -49,7 +50,7 @@
     - Priorité : basse (nouveau développement vs urgence système)
 
 ## Actions Concrètes Prochaines
-- **AUJOURD'HUI** : Résoudre API Perplexity auth (bloque deep dive), régénérer token OpenAI-Codex (84h+ expiré), résoudre SIGKILL scraping multi-URLs
+- **AUJOURD'HUI** : Résoudre API Perplexity auth (9+ jours, bloque deep dive), régénérer token OpenAI-Codex (85h+ expiré), résoudre SIGKILL scraping multi-URLs
 - **Cette semaine** : Implémenter monitoring proactif tokens, ajouter timeout/retry scraping robustes
 - **Mois prochain** : Simplifier architecture systèmes complexes basé sur pattern CONFIRMÉ
 

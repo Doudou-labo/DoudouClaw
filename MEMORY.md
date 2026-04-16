@@ -317,8 +317,8 @@ Meilleure amie d'Alexandre, habite à Calais; relation amicale de longue date (e
 - **Priorité** : résolution API critique = facteur de stabilité system
 
 ### API Critical Issues Evolution (2026-04-14) - Importance: 0.95
-- **API Perplexity** : erreur d'auth récurrente identifiée (28/03, 01/04, 03/04, 07/04, 14/04, 15/04) → **8+ jours consécutifs** → deep dive veille IA bloqué, pattern hebdomadaire confirmé
-- **OpenAI-Codex** : token expiré depuis 84h → **pattern expiration régulière identifié** → nécessité monitoring proactif tokens système
+- **API Perplexity** : erreur d'auth récurrente identifiée (28/03, 01/04, 03/04, 07/04, 14/04, 15/04, 16/04) → **9+ jours consécutifs** → deep dive veille IA bloqué, pattern hebdomadaire confirmé
+- **OpenAI-Codex** : token expiré depuis 85h → **pattern expiration régulière identifié** → nécessité monitoring proactif tokens système
 - **Impact** : veille IA incomplète (Flash OK mais Deep Dive bloqué), dépendances OpenAI potentiellement affectées
 - **Décision** : priorisation résolution API critiques > nouveaux développements
 - **Action** : implémentation monitoring proactif tokens + fallback système Perplexity
@@ -329,6 +329,7 @@ Meilleure amie d'Alexandre, habite à Calais; relation amicale de longue date (e
 - **Solution nécessaire** : implémentation timeout/retry robuste pour scraping multi-URLs
 - **Pattern confirmé** : systèmes complexes (scraping multi-URLs) instables vs systèmes simples (heartbeat) robustes
 - **Action** : ajouter mécanismes timeout/retry avec gestion mémoire pour éviter SIGKILL
+- **Mise à jour 2026-04-16** : problème persistant identifié aujourd'hui → nécessité prioritaire
 
 ### Model System Evolution (2026-04-07) - Importance: 0.9
 - **Migration modèles système** : passage réussi de zai/glm-4.7 vers zai/glm-5-turbo pour 38 crons + heartbeat
@@ -341,10 +342,11 @@ Meilleure amie d'Alexandre, habite à Calais; relation amicale de longue date (e
 - **Robustesse scraping** : mécanismes timeout/retry robustes pour éviter SIGKILL multi-URLs
 - **Simplification architecture** : privilégier systèmes simples (heartbeat) vs systèmes complexes (scraping)
 - **Fallback API** : mise en place de système de secours pour API critiques instables (Perplexity)
+- **Mise à jour 2026-04-16** : 3 API critiques persistantes identifiées (Perplexity auth error 9+ jours, OpenAI-Codex expiré 85h+, scraping SIGKILL persistant) → priorisation absolue
 
 ---
 
-*Dernière mise à jour: 2026-04-05*
+*Dernière mise à jour: 2026-04-16*
 Quand je te demande de tester une clé API tu le fais
 
 ## Promoted From Short-Term Memory (2026-04-13)
