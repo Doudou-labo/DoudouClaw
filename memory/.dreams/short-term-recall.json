@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-04-17T05:36:50.600Z",
+  "updatedAt": "2026-04-17T06:08:40.191Z",
   "entries": {
     "memory:memory/2026-04-06.md:1:21": {
       "key": "memory:memory/2026-04-06.md:1:21",
@@ -245,20 +245,22 @@
       "endLine": 34,
       "source": "memory",
       "snippet": "# Memory — 2026-03-28 ## 11:02 UTC — AUTO PARA 3-min (midi) - Checkpoint automatique exécuté. - Prochaine action suggérée: Finaliser onboarding Actual Budget (catégories de suivi) - Objectif: garder une seule prochaine action claire à exécuter maintenant. ## 20:50 UTC — Consolidation mémoire quotidienne - Jour calme (samedi) — pas d'échanges substantiels détectés. -唯一的 activité: checkpoint PARA midi ✅ - Tâches en cours: correction dashboard pilotage (issue #23), visite Marc DR 31/03. - Mise à jour: SESSION-STATE → date 2026-03-28, RECENT_CONTEXT → flag \"Latest Session 2026-03-28\". ## 🏷️ Auto-tags (heuristique) ### [todo] - Prochaine action suggérée: Finaliser onboarding Actual Budget (c",
-      "recallCount": 2,
+      "recallCount": 3,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 0.7977402836084366,
+      "totalScore": 1.226898866891861,
       "maxScore": 0.43453896343708037,
       "firstRecalledAt": "2026-04-08T19:50:35.610Z",
-      "lastRecalledAt": "2026-04-09T19:51:09.715Z",
+      "lastRecalledAt": "2026-04-17T06:08:20.471Z",
       "queryHashes": [
         "6a256dafbeff",
-        "56bbe925680a"
+        "56bbe925680a",
+        "4163a919c1ed"
       ],
       "recallDays": [
         "2026-04-08",
-        "2026-04-09"
+        "2026-04-09",
+        "2026-04-17"
       ],
       "conceptTags": [
         "3-min",
@@ -340,18 +342,20 @@
       "endLine": 35,
       "source": "memory",
       "snippet": "# Memory — 2026-04-03 ## 10:00 UTC — AUTO PARA 3-min (midi) - Checkpoint automatique exécuté. - Prochaine action suggérée: Connecter les comptes bancaires ou saisir manuellement les transactions - Objectif: garder une seule prochaine action claire à exécuter maintenant. ## 21:50 UTC — Consolidation mémoire quotidienne - Consolidation mémoire/PARA complète exécutée avec succès. - Points mémoire ajoutés: veille IA sectorielle automobile (8h/12h/19h), actualités tech américaines. - Entrées LTM: IA automobile (Michelin, concessionnaires IA, véhicules autonomes), régulation IA USA/Europe. - Git commit: `a1b2c3d4` - push origin/main réussi. - Statut: consolidation complète, système stable. ##",
-      "recallCount": 1,
+      "recallCount": 2,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 0.4312085926532745,
+      "totalScore": 0.8440295189619064,
       "maxScore": 0.4312085926532745,
       "firstRecalledAt": "2026-04-08T19:50:35.610Z",
-      "lastRecalledAt": "2026-04-08T19:50:35.610Z",
+      "lastRecalledAt": "2026-04-17T06:08:20.471Z",
       "queryHashes": [
-        "6a256dafbeff"
+        "6a256dafbeff",
+        "4163a919c1ed"
       ],
       "recallDays": [
-        "2026-04-08"
+        "2026-04-08",
+        "2026-04-17"
       ],
       "conceptTags": [
         "3-min",
@@ -21975,18 +21979,20 @@
       "endLine": 17,
       "source": "memory",
       "snippet": "# Memory — 2026-04-09 ## 10:01 UTC — AUTO PARA 3-min (midi) - Checkpoint automatique exécuté. - Prochaine action suggérée: [AUTO 2026-04-08 soir] Checkpoint 3-min fait. Next: [AUTO 2026-04-08 soir] Checkpoint 3-min fait. Next: [AUTO 2026-08-04 midi] Checkpoint 3-min fait. Next: [AUTO 2026-04-07 soir] Checkpoint 3-min fait. Next: [AUTO 2026-04-07 midi] Checkpoint 3-min fait. Next: [AUTO 2026-04-06 soir] Checkpoint 3-min fait. Next: [AUTO 2026-04-06 midi] Checkpoint 3-min fait. Next: [MIDI 2026-04-06 10:02] Exécution checkpoint PARA automatique - Objectif: garder une seule prochaine action claire à exécuter maintenant. ## 22:00 UTC — Sync LTM nightly - **LTM ajouts (5)** : Résolution cron Ve",
-      "recallCount": 1,
+      "recallCount": 2,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 0.4160483032464981,
-      "maxScore": 0.4160483032464981,
+      "totalScore": 0.8475308507680892,
+      "maxScore": 0.43148254752159115,
       "firstRecalledAt": "2026-04-12T19:51:19.175Z",
-      "lastRecalledAt": "2026-04-12T19:51:19.175Z",
+      "lastRecalledAt": "2026-04-17T06:08:20.471Z",
       "queryHashes": [
-        "0a5cd2036e3c"
+        "0a5cd2036e3c",
+        "4163a919c1ed"
       ],
       "recallDays": [
-        "2026-04-12"
+        "2026-04-12",
+        "2026-04-17"
       ],
       "conceptTags": [
         "3-min",
@@ -83662,6 +83668,285 @@
         "following",
         "around",
         "like"
+      ]
+    },
+    "memory:memory/2026-03-23.md:1:35": {
+      "key": "memory:memory/2026-03-23.md:1:35",
+      "path": "memory/2026-03-23.md",
+      "startLine": 1,
+      "endLine": 35,
+      "source": "memory",
+      "snippet": "# Memory — 2026-03-23 ## 22:00 UTC — Sync LTM nightly ### Counts - **LTM long terme (MEMORY.md)** : +4 entrées ajoutées 1. Pneu Tracker export PDF binaire serveur (pdfkit+serverExternalPackages, b3f9a89) 2. Routine delegation Agence-IA pour tech >2 min validée 3. Routine veille IA nocturne établie (Flash 21l + Deep Dive 140l) 4. Benchmark v10: MiniMax-M2.5-highspeed 44/50 (4e/14) - **Journaliers (capture.py)** : +4 facts stockés dans memory/2026-03-23.md - **Corrections obsolete** : aucune (DoudouClaw déjà canonique) ### Fichiers modifiés - MEMORY.md (Dernière mise à jour → 2026-03-23) - memory/2026-03-23.md (sync section + 4 facts capture.py) --- ## 22:50 Paris — Consolidation",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.42340715825557707,
+      "maxScore": 0.42340715825557707,
+      "firstRecalledAt": "2026-04-17T06:08:20.471Z",
+      "lastRecalledAt": "2026-04-17T06:08:20.471Z",
+      "queryHashes": [
+        "4163a919c1ed"
+      ],
+      "recallDays": [
+        "2026-04-17"
+      ],
+      "conceptTags": [
+        "memory.md",
+        "agence-ia",
+        "minimax-m2.5-highspeed",
+        "44/50",
+        "4e/14",
+        "capture.py",
+        "memory/2026-03-23.md",
+        "utc"
+      ]
+    },
+    "memory:memory/2026-04-16.md:83:102": {
+      "key": "memory:memory/2026-04-16.md:83:102",
+      "path": "memory/2026-04-16.md",
+      "startLine": 83,
+      "endLine": 102,
+      "source": "memory",
+      "snippet": "- Candidate: 22:00 UTC — Sync LTM nightly: Fichiers lus : `MEMORY.md`, `memory/2026-04-10.md`; Entrées LTM ajoutées : **5** (system: 4, preference: 1); MAJ OpenClaw v2026.4.5 → v2026.4.9 réussie; Heartbeat system optimal confirmé - confidence: 0.00 - evidence: memory/2026-04-10.md:24-27 - recalls: 0 - status: staged - Candidate: 10:01 UTC — AUTO PARA 3-min (midi): Checkpoint automatique exécuté.; Prochaine action suggérée: [AUTO 2026-04-08 soir] Checkpoint 3-min fait. Next: [AUTO 2026-04-08 soir] Checkpoint 3-min fait. Next: [AUTO 2026-08-04 midi] Checkpoint 3-min fait. Next: [AUTO 2026-04-07 soir] Check - confidence: 0.00 - evidence: memory/2026-04-09.md:4-6 - recalls: 0 - s",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.4152080178260803,
+      "maxScore": 0.4152080178260803,
+      "firstRecalledAt": "2026-04-17T06:08:20.471Z",
+      "lastRecalledAt": "2026-04-17T06:08:20.471Z",
+      "queryHashes": [
+        "4163a919c1ed"
+      ],
+      "recallDays": [
+        "2026-04-17"
+      ],
+      "conceptTags": [
+        "memory.md",
+        "memory/2026-04-10.md",
+        "v2026.4.5",
+        "v2026.4.9",
+        "0.00",
+        "24-27",
+        "3-min",
+        "memory/2026-04-09.md"
+      ]
+    },
+    "memory:memory/2026-02-27.md:23:42": {
+      "key": "memory:memory/2026-02-27.md:23:42",
+      "path": "memory/2026-02-27.md",
+      "startLine": 23,
+      "endLine": 42,
+      "source": "memory",
+      "snippet": "- Contrôle `memory_recall` sur 3 règles critiques: N1/N2/N3, préavis avant `gateway restart`, interdiction `npm install -g openclaw` gateway actif. - Résultat: mémoire vectorielle cohérente avec N1, aucun `memory_store`/`memory_forget` nécessaire. ## 13:13 UTC — Memory-curator (reprise après timeout, passe 2) - Nouvelle passe de recall exécutée pour confirmer la cohérence sur les 3 décisions critiques envoyées par le parent. - Matches trouvés en LTM: règles bien présentes et alignées avec N1 (SESSION-STATE + journal du jour). - Action appliquée: rafraîchissement du timestamp `SESSION-STATE.md`. ## 13:07 UTC — Audit memory-curator (N1) - Vérification de cohérence N1 effectuée: `SESSION-STAT",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.414238765835762,
+      "maxScore": 0.414238765835762,
+      "firstRecalledAt": "2026-04-17T06:08:20.471Z",
+      "lastRecalledAt": "2026-04-17T06:08:20.471Z",
+      "queryHashes": [
+        "4163a919c1ed"
+      ],
+      "recallDays": [
+        "2026-04-17"
+      ],
+      "conceptTags": [
+        "gateway",
+        "memory-recall",
+        "n1/n2/n3",
+        "memory-store",
+        "memory-forget",
+        "memory-curator",
+        "session-state",
+        "session-state.md"
+      ]
+    },
+    "memory:memory/2026-04-14.md:63:82": {
+      "key": "memory:memory/2026-04-14.md:63:82",
+      "path": "memory/2026-04-14.md",
+      "startLine": 63,
+      "endLine": 82,
+      "source": "memory",
+      "snippet": "- Candidate: 22:00 UTC — Sync LTM nightly: **Ajouts LTM long terme** : 2 éléments (OpenClab 2026.4.10 version détectée, heartbeat optimal confirmé); **Ajouts journaliers** : 0 éléments (tous les faits importants déjà captés); **Total** : 2 nouveaux éléments en LTM, consolidation mémoire compl - confidence: 0.00 - evidence: memory/2026-04-11.md:27-29 - recalls: 0 - status: staged - Candidate: 10:01 UTC — AUTO PARA 3-min (midi): Checkpoint automatique exécuté.; Prochaine action suggérée: [AUTO 2026-04-09 soir] Checkpoint 3-min fait. Next: [AUTO 2026-04-09 midi] Checkpoint 3-min fait. Next: [AUTO 2026-04-08 soir] Checkpoint 3-min fait. Next: [AUTO 2026-04-08 soir] Check - confidence:",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.40902141928672786,
+      "maxScore": 0.40902141928672786,
+      "firstRecalledAt": "2026-04-17T06:08:20.471Z",
+      "lastRecalledAt": "2026-04-17T06:08:20.471Z",
+      "queryHashes": [
+        "4163a919c1ed"
+      ],
+      "recallDays": [
+        "2026-04-17"
+      ],
+      "conceptTags": [
+        "2026.4.10",
+        "0.00",
+        "memory/2026-04-11.md",
+        "27-29",
+        "3-min",
+        "candidate",
+        "utc",
+        "sync"
+      ]
+    },
+    "memory:memory/2026-03-09.md:117:149": {
+      "key": "memory:memory/2026-03-09.md:117:149",
+      "path": "memory/2026-03-09.md",
+      "startLine": 117,
+      "endLine": 149,
+      "source": "memory",
+      "snippet": "- Principe opératoire : **si ça mérite d’être gardé, ça mérite aussi son miroir `fsxmemory`**. ## 21:57 UTC — Sync mémoire générale -> fsxmemory - Sync lancée via migration `fsxmemory` depuis le vault OpenClaw. - Backup créé : `memory/.fsxmemory/backup-20260309-215711` - Frontmatter ajouté aux fichiers mémoire historiques pour les rendre compatibles `fsxmemory`. - Fichier de config créé : `memory/.fsxmemory/.fsxmemory.json` - Résultat : la mémoire générale est désormais synchronisée structurellement avec `fsxmemory`. ## 22:05 UTC — Règle source canonique pour sync fsxmemory - Pour la sync qualitative vers `fsxmemory`, utiliser uniquement : - `MEMORY.md` - `SESSION-STATE.md` - `memory",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.40759173035621643,
+      "maxScore": 0.40759173035621643,
+      "firstRecalledAt": "2026-04-17T06:08:20.471Z",
+      "lastRecalledAt": "2026-04-17T06:08:20.471Z",
+      "queryHashes": [
+        "4163a919c1ed"
+      ],
+      "recallDays": [
+        "2026-04-17"
+      ],
+      "conceptTags": [
+        "backup",
+        "fsxmemory/backup-20260309-215711",
+        "fsxmemory.json",
+        "memory.md",
+        "session-state.md",
+        "principe",
+        "opératoire",
+        "mérite"
+      ]
+    },
+    "memory:memory/2026-04-16.md:383:389": {
+      "key": "memory:memory/2026-04-16.md:383:389",
+      "path": "memory/2026-04-16.md",
+      "startLine": 383,
+      "endLine": 389,
+      "source": "memory",
+      "snippet": "- 1. 🔍 **Investigation scraping**: Tester le script `scrape-urls.py` individuellement 2. 🔧 **Token renewal**: Renouveler le token OpenAI expiré 3. 📊 **Cron diagnostics**: Analyser les crons en erreur systématique 4. 🔄 **Script veille**: Ajouter des timeouts et mécanismes de retry ## Open loops - ❌ Problème de scraping résolu - ❌ Token OpenAI renouvelé - ❌ Crons défaillants diagnostiqués --- *Généré automatiquement par heartbeat - 2026-04-05 10:04 UTC* ## 16:05 UTC — AUTO PARA Weekly Review - Snapshot PARA: Projects=13, Areas=22, Resources=16, Archive=6 - Open loops actifs: 24 - Action: revue hebdo effectuée + trace ajoutée dans notes/areas/proactive-tracker.md ## 16:20 UTC — AUTO Self-I",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.4203295052051544,
+      "maxScore": 0.4203295052051544,
+      "firstRecalledAt": "2026-04-17T06:08:40.191Z",
+      "lastRecalledAt": "2026-04-17T06:08:40.191Z",
+      "queryHashes": [
+        "705146999ab1"
+      ],
+      "recallDays": [
+        "2026-04-17"
+      ],
+      "conceptTags": [
+        "openai",
+        "scrape-urls.py",
+        "notes/areas/proactive-tracker.md",
+        "self-i",
+        "investigation",
+        "scraping",
+        "tester",
+        "script"
+      ]
+    },
+    "memory:memory/2026-04-14.md:403:404": {
+      "key": "memory:memory/2026-04-14.md:403:404",
+      "path": "memory/2026-04-14.md",
+      "startLine": 403,
+      "endLine": 404,
+      "source": "memory",
+      "snippet": "- 1. 🔍 **Investigation scraping**: Tester le script `scrape-urls.py` individuellement 2. 🔧 **Token renewal**: Renouveler le token OpenAI expiré 3. 📊 **Cron diagnostics**: Analyser les crons en erreur systématique 4. 🔄 **Script veille**: Ajouter des timeouts et mécanismes de retry ## Open loops - ❌ Problème de scraping résolu - ❌ Token OpenAI renouvelé - ❌ Crons défaillants diagnostiqués --- *Généré automatiquement par heartbeat - 2026-04-05 10:04 UTC* ## 16:05 UTC — AUTO PARA Weekly Review - Snapshot PARA: Projects=13, Areas=22, Resources=16, Archive=6 - Open loops actifs: 24 - Action: revue hebdo effectuée + trace ajoutée dans notes/areas/proactive-tracker.md ## 16:20 UTC — AUTO Self-I",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.41249535977840424,
+      "maxScore": 0.41249535977840424,
+      "firstRecalledAt": "2026-04-17T06:08:40.191Z",
+      "lastRecalledAt": "2026-04-17T06:08:40.191Z",
+      "queryHashes": [
+        "705146999ab1"
+      ],
+      "recallDays": [
+        "2026-04-17"
+      ],
+      "conceptTags": [
+        "openai",
+        "scrape-urls.py",
+        "notes/areas/proactive-tracker.md",
+        "self-i",
+        "investigation",
+        "scraping",
+        "tester",
+        "script"
+      ]
+    },
+    "memory:memory/2026-04-15.md:347:348": {
+      "key": "memory:memory/2026-04-15.md:347:348",
+      "path": "memory/2026-04-15.md",
+      "startLine": 347,
+      "endLine": 348,
+      "source": "memory",
+      "snippet": "- 1. 🔍 **Investigation scraping**: Tester le script `scrape-urls.py` individuellement 2. 🔧 **Token renewal**: Renouveler le token OpenAI expiré 3. 📊 **Cron diagnostics**: Analyser les crons en erreur systématique 4. 🔄 **Script veille**: Ajouter des timeouts et mécanismes de retry ## Open loops - ❌ Problème de scraping résolu - ❌ Token OpenAI renouvelé - ❌ Crons défaillants diagnostiqués --- *Généré automatiquement par heartbeat - 2026-04-05 10:04 UTC* ## 16:05 UTC — AUTO PARA Weekly Review - Snapshot PARA: Projects=13, Areas=22, Resources=16, Archive=6 - Open loops actifs: 24 - Action: revue hebdo effectuée + trace ajoutée dans notes/areas/proactive-tracker.md ## 16:20 UTC — AUTO Self-I",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.41249535977840424,
+      "maxScore": 0.41249535977840424,
+      "firstRecalledAt": "2026-04-17T06:08:40.191Z",
+      "lastRecalledAt": "2026-04-17T06:08:40.191Z",
+      "queryHashes": [
+        "705146999ab1"
+      ],
+      "recallDays": [
+        "2026-04-17"
+      ],
+      "conceptTags": [
+        "openai",
+        "scrape-urls.py",
+        "notes/areas/proactive-tracker.md",
+        "self-i",
+        "investigation",
+        "scraping",
+        "tester",
+        "script"
+      ]
+    },
+    "memory:memory/2026-04-17.md:383:384": {
+      "key": "memory:memory/2026-04-17.md:383:384",
+      "path": "memory/2026-04-17.md",
+      "startLine": 383,
+      "endLine": 384,
+      "source": "memory",
+      "snippet": "- 1. 🔍 **Investigation scraping**: Tester le script `scrape-urls.py` individuellement 2. 🔧 **Token renewal**: Renouveler le token OpenAI expiré 3. 📊 **Cron diagnostics**: Analyser les crons en erreur systématique 4. 🔄 **Script veille**: Ajouter des timeouts et mécanismes de retry ## Open loops - ❌ Problème de scraping résolu - ❌ Token OpenAI renouvelé - ❌ Crons défaillants diagnostiqués --- *Généré automatiquement par heartbeat - 2026-04-05 10:04 UTC* ## 16:05 UTC — AUTO PARA Weekly Review - Snapshot PARA: Projects=13, Areas=22, Resources=16, Archive=6 - Open loops actifs: 24 - Action: revue hebdo effectuée + trace ajoutée dans notes/areas/proactive-tracker.md ## 16:20 UTC — AUTO Self-I",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.41249535977840424,
+      "maxScore": 0.41249535977840424,
+      "firstRecalledAt": "2026-04-17T06:08:40.191Z",
+      "lastRecalledAt": "2026-04-17T06:08:40.191Z",
+      "queryHashes": [
+        "705146999ab1"
+      ],
+      "recallDays": [
+        "2026-04-17"
+      ],
+      "conceptTags": [
+        "openai",
+        "scrape-urls.py",
+        "notes/areas/proactive-tracker.md",
+        "self-i",
+        "investigation",
+        "scraping",
+        "tester",
+        "script"
       ]
     }
   }
