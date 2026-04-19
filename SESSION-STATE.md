@@ -1,7 +1,15 @@
 # SESSION-STATE.md — Active Working Memory
 
 ## Current Task
-Consolidation mémoire quotidienne + PARA terminée ✅ (2026-04-16 21:50 UTC)
+Consolidation mémoire quotidienne + PARA terminée ✅ (2026-04-19 21:50 UTC)
+
+## Today's Work Summary (2026-04-19)
+- **21:50 UTC** — **CONSOLIDATION MÉMOIRE + PARA** terminée (heartbeat optimal 0 errors, pattern robustesse confirmé, API Perplexity auth error 9+ jours, OpenAI-Codex token expiré 85h+, scraping SIGKILL persistant)
+- **17:00 UTC** — **VEILLE IA 19H** : Flash BUSINESS généré avec succès (Meta IA 21B$, Intel-Google partenariat, CoreWeave 21B$, Microsoft 30k GPUs Norvège, adoption IA entreprise 72% grandes entreprises)
+- **14:00 UTC** — **OBSERVATIONS PROACTIVES** : ping proactif utile pour décompression
+- **12:00 UTC** — **AUTO PARA 3-min** : checkpoint automatique exécuté
+- **10:01 UTC** — **AUTO PARA 3-min** : checkpoint automatique exécuté
+- **06:02 UTC** — **VEILLE IA 8H** : Flash IA sectoriel généré avec succès (tendances fonds IA 2026, stratégies Big Tech, adoption entreprise 72% France, marché IA 5,2M€)
 
 ## Today's Work Summary (2026-04-16)
 - **21:50 UTC** — **CONSOLIDATION MÉMOIRE + PARA** terminée (heartbeat optimal 0 errors vs hier!, pattern robustesse confirmé, API Perplexity auth error 9+ jours, OpenAI-Codex token expiré 85h+, scraping SIGKILL persistant)
@@ -12,15 +20,6 @@ Consolidation mémoire quotidienne + PARA terminée ✅ (2026-04-16 21:50 UTC)
 - **12:00 UTC** — **AUTO PARA 3-min** : checkpoint automatique exécuté
 - **10:01 UTC** — **AUTO PARA 3-min** : checkpoint automatique exécuté
 - **06:02 UTC** — **VEILLE IA 8H** : Flash IA sectoriel généré avec succès (tendances fonds IA 2026, stratégies Big Tech, adoption entreprise 72% France, marché IA 5,2M€)
-- **19:00 UTC** — **VEILLE IA 19H** : Flash IA produits généré avec succès (MAI-Voice-1, Gemini-TTS/Chirp 3 HD, FLUX.2/Midjourney V8, ChatGPT Apps, Anthropic cybersécurité, MuseSpark)
-- **17:36 UTC** — **BOURSE US MI-SEANCE** : S&P 500: +0.10%, NASDAQ: +0.64%, Dow Jones: -0.79% → marché volatile Apple (+2.39%), Microsoft (+2.83%)
-- **17:02 UTC** — **OBSTACLE FLASH 5 MIN SOIR** : session SIGKILL (probablement OOM) → deep dive bloqué
-- **16:36 UTC** — **ROUTINE PRO SOIR** : debrief pro généré (suivi emails clients, rapport hebbo, progression RCS confirmée)
-- **16:05 UTC** — **DASHBOARD ÉVOLUTION** : mise à jour réussie (3 learnings appliqués, 0 pending, 41 événements loggés)
-- **14:00 UTC** — **OBSERVATIONS PROACTIVES** : ping proactif utile pour décompression, reverse hebdo en préparation
-- **12:00 UTC** — **AUTO PARA 3-min** : checkpoint automatique exécuté
-- **10:01 UTC** — **AUTO PARA 3-min** : checkpoint automatique exécuté
-- **06:02 UTC** — **VEILLE IA 8H** : Flash IA régulation généré avec succès (proposition loi IA/droits d'auteur, interdiction images IA UE, AI Act report 2027-2028)
 
 ## Today's Work Summary (2026-04-13)
 - **19:50 UTC** — **CONSOLIDATION MÉMOIRE + PARA** en cours (heartbeat optimal 0 errors vs 54 hier!, pattern robustesse confirmé, API critiques identifiées)
@@ -28,62 +27,21 @@ Consolidation mémoire quotidienne + PARA terminée ✅ (2026-04-16 21:50 UTC)
 - **16:45 UTC** — **BOURSE US** : Mi-séance - S&P 500: +0.54%, NASDAQ: +0.77%, Dow Jones: +0.48%
 - **16:36 UTC** — **ROUTINE PRO** : Synthèse NAO avancée, projet call-out optimisé
 - **09:01 UTC** — **AUTO PARA 3-min** : checkpoint automatique exécuté
-- **06:02 UTC** — **VEILLE IA** : Flash sectoriel généré avec succès
-
-## Today's Work Summary (2026-04-12)
-- **10:00 UTC** — **AUTO PARA 3-min (midi)** exécuté (checkpoint automatique)
-- **16:18-16:24 UTC** — **CHECKS OPENCLAB RÉTABLIS** : cron "OpenClaw Update Check - 7h30" réactivé, timeout passé à 120s, nouvelle version détectée (2026.4.10)
-- **19:50 UTC** — **CONSOLIDATION MÉMOIRE + PARA** terminée (heartbeat optimal 0 errors vs 54 hier!, pattern robustesse confirmé, API critiques identifiées)
-
-## Today's Work Summary (2026-04-10)
-- **09:36 UTC** — **MAJ OPENCLAW 2026.4.5 → 2026.4.9** via systemd-run + script dédié (méthode robuste)
-- **09:49 UTC** — Heartbeat: auto-heal ✅, auto-commit ✅, auto-optimize ✅, auto-learn ✅, auto-alert ✅, auto-cleanup ✅
-- **09:50 UTC** — **WARNINGS**: `memos-cloud-openclaw-plugin` chargé comme code local non piné/trusté explicitement (à nettoyer plus tard)
-- **21:50 UTC** — Consolidation mémoire quotidienne + PARA terminée (heartbeat optimal à 0 errors vs 54 hier!, pattern robustesse systèmes identifié, veille IA automobile sectorielle traitée)
-
-## Today's Work Summary (2026-04-09)
-- **06:03 UTC** — Heartbeat: auto-heal ✓, auto-commit ✓, auto-optimize ✓ (0 errors vs 54 hier!), auto-learn ✓, auto-alert ✓, auto-cleanup ✓
-- **06:07 UTC** — **CRITICAL FIX**: Cron "Veille IA - Synthèse Mensuelle" en erreur depuis 9 jours → corrigé (reset state error, backup créé)
-- **06:14 UTC** — **RESOLU**: Cron opérationnel (status ok, consecutive errors 0, modèle zai/glm-5-turbo) → prochaine exécution 28 avril 2026
-- **21:50 UTC** — Consolidation mémoire quotidienne + PARA terminée (fix cron critique, pattern robustesse identifié, système heartbeat optimisé)
-
-## Yesterday's Work Summary (2026-04-08)
-- **06:02 UTC** — Veille IA 8h00 - Flash regulation généré avec succès (Proposition de loi sénatoriale IA/droits d'auteur, interdiction images IA communications UE, AI Act report 2027-2028)
-- **06:04 UTC** — Heartbeat: auto-heal ✓, auto-commit ✓, auto-optimize ✓, auto-learn ✓ (14 errors today, 50 yesterday), auto-alert ✓, auto-cleanup ✓
-- **19:50 UTC** — Consolidation mémoire quotidienne + PARA terminée (systèmes heartbeat robustes, pattern robustesse identifié, API Perplexity critique, migration modèle réussie)
-
-## Yesterday's Summary (2026-04-07)
-- **06:02 UTC** — Veille IA 8h00 - Flash produits généré avec succès (Microsoft MAI-Models, Databricks-STATION F, Ollama 0.19 MLX, Notion MCP)
-- **06:06 UTC** — Heartbeat: auto-heal ✓, auto-commit ✓, auto-optimize ✓, auto-learn ✓, auto-cleanup ✓
-- **10:01 UTC** — AUTO PARA 3-min exécuté
-- **21:50 UTC** — Consolidation mémoire quotidienne + terminée
-
-## Yesterday's Summary (2026-04-05)
-- **21:50 UTC** — Consolidation mémoire quotidienne + PARA terminée avec succès
-- **16:05 UTC** — AUTO PARA Weekly Review: revue hebdo exécutée (Projects=13, Areas=22, Resources=16, Archive=6, open loops=24)
-- **16:20 UTC** — AUTO Self-Improving Weekly Review: erreurs patterns détectées, traces mises à jour
-- **12:00 UTC** — Veille IA: échec technique (SIGKILL pendant scraping), token OpenAI expiré détecté
-- **10:04 UTC** — Heartbeat: auto-heal ✓ (token expiré identifié), auto-commit ✗, auto-optimize ✗, auto-learn ✓ (295 errors), auto-alert ✓, auto-cleanup ✓
-
-## Yesterday's Summary (2026-04-02)
-- **21:50 UTC** — Consolidation mémoire quotidienne exécutée avec succès
-- Veille IA 19h00 ( BUSINESS): 65 lignes faits marquants
-- Heartbeat: auto-heal ✓, auto-commit ✓, auto-learn ✓, auto-alert ✓, auto-cleanup ✓
-- ⚠️ API Perplexity en erreur d'auth à surveiller
+- **06:02 UTC** — **VEILLE IA 8H** : Flash IA sectoriel généré avec succès (tendances fonds IA 2026, stratégies Big Tech, adoption entreprise 72% France, marché IA 5,2M€)
 
 ## Prochains chantiers
 1. **🔴 API Perplexity erreur d'auth récurrente** - 9+ jours consécutifs → deep dive veille IA bloqué (priorité critique)
 2. **🔴 Token OpenAI-Codex expiré** - 85h sans régénération → surveillance proactive nécessaire (priorité critique)
 3. **🔴 Scraping SIGKILL persistant** - session OOM pendant veille IA 19h → deep dive bloqué (priorité critique)
 4. **🟡 Pattern robustesse systèmes CONFIRMÉ** - systèmes simples > systèmes complexes confirmé → simplification architecture prioritaire
-4. **Correction dashboard pilotage** : corriger année `2025→2026`, sélecteur mois `AGENCE`, retirer `Objectif N` de l'historique → issue #23
-5. **Actual Budget** — onboarding catégories finalisé, connecter comptes bancaires ou saisir manuellement
-6. **Pneu Tracker** — backlog: fiche pneu sélectionnable, stats dashboard, bouton réimport catalogue
-7. **Inventaire physique pneus** — backlog MVP à implémenter sur `inventaire.doudougen.xyz`
-8. **Intelligence émotionnelle** — lire 1 chapitre Goleman + notes (1 idée clé + 1 application boulot)
-9. **🔧 Système scraping veille IA** — investiguer SIGKILL, ajouter timeouts/retry mécanismes (suite pattern robustesse)
-10. **🔐 Token monitoring API** — implémenter monitoring proactif tokens expirés (OpenAI, Perplexity)
-11. **🔍 Crons en erreur** — diagnostic et correction des tâches cron systématiquement échouées
+5. **Correction dashboard pilotage** : corriger année `2025→2026`, sélecteur mois `AGENCE`, retirer `Objectif N` de l'historique → issue #23
+6. **Actual Budget** — onboarding catégories finalisé, connecter comptes bancaires ou saisir manuellement
+7. **Pneu Tracker** — backlog: fiche pneu sélectionnable, stats dashboard, bouton réimport catalogue
+8. **Inventaire physique pneus** — backlog MVP à implémenter sur `inventaire.doudougen.xyz`
+9. **Intelligence émotionnelle** — lire 1 chapitre Goleman + notes (1 idée clé + 1 application boulot)
+10. **🔧 Système scraping veille IA** — investiguer SIGKILL, ajouter timeouts/retry mécanismes (suite pattern robustesse)
+11. **🔐 Token monitoring API** — implémenter monitoring proactif tokens expirés (OpenAI, Perplexity)
+12. **🔍 Crons en erreur** — diagnostic et correction des tâches cron systématiquement échouées
 
 ## Systèmes actifs
 - ✅ Heartbeat auto-heal/auto-commit/auto-learn/auto-alert/auto-cleanup opérationnel
@@ -92,19 +50,19 @@ Consolidation mémoire quotidienne + PARA terminée ✅ (2026-04-16 21:50 UTC)
 - ⚠️ API Perplexity en erreur d'auth récurrente 9+ jours → à surveiller et corriger
 - ⚠️ Token OpenAI-Codex expiré depuis 85h → régénération nécessaire
 - ⚠️ Scraping SIGKILL persistant → session OOM pendant veille IA 19h → investiguer
-- ⚠️ Pattern robustesse identifié : systèmes simples > systèmes complexes
+- ⚠️ Pattern robustesse identifié : systèmes simples (heartbeat) > systèmes complexes (scraping multi-URLs)
 
 ## Immediate Context
 - **Gateway** : 2026.4.2 (mise à jour jour)
 - Disque stable à ~51%
 - Crons Proactive Observations actifs (07:00/12:00/17:00/21:00 Paris)
-- **⚠️ API Perplexity en erreur d'auth récurrente** (9+ jours) → deep dive bloqué
+- **⚠️ API Perplexity en erreur d'auth récurrente** (9+ jours) → à surveiller et corriger
 - **⚠️ Token OpenAI-Codex expiré** → régénération nécessaire (85h+)
 - **⚠️ Scraping SIGKILL persistant** → session OOM pendant veille IA 19h → investiguer timeout/retry
 - Mode tech activé (IA → web_search + Perplexity intensif)
 - Autonomie d'exécution renforcée (ne pas demander validation sauf externe/sensible)
 - Style emojis soutenu
-- **Heure Paris** : 21:50 → fin de journée
+- **Heure Paris** : 23:50 → fin de journée
 
 ## Last Updated
-2026-04-16 21:50 UTC — consolidation mémoire quotidienne terminée, API critiques persistantes identifiées
+2026-04-19 21:50 UTC — consolidation mémoire quotidienne terminée, API critiques persistantes identifiées
