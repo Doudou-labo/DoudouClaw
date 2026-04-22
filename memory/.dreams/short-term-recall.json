@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-04-21T16:36:52.319Z",
+  "updatedAt": "2026-04-22T05:36:50.154Z",
   "entries": {
     "memory:memory/2026-04-06.md:1:21": {
       "key": "memory:memory/2026-04-06.md:1:21",
@@ -67197,7 +67197,7 @@
       "totalScore": 0.62,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-04-15T20:27:35.710Z",
-      "lastRecalledAt": "2026-04-21T16:36:52.319Z",
+      "lastRecalledAt": "2026-04-22T05:36:50.154Z",
       "queryHashes": [
         "4c4c0cb04efa"
       ],
@@ -67206,7 +67206,8 @@
         "2026-04-16",
         "2026-04-19",
         "2026-04-20",
-        "2026-04-21"
+        "2026-04-21",
+        "2026-04-22"
       ],
       "conceptTags": [
         "openai",
@@ -67232,7 +67233,7 @@
       "totalScore": 0.62,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-04-15T20:27:35.710Z",
-      "lastRecalledAt": "2026-04-21T16:36:52.319Z",
+      "lastRecalledAt": "2026-04-22T05:36:50.154Z",
       "queryHashes": [
         "4c4c0cb04efa"
       ],
@@ -67241,7 +67242,8 @@
         "2026-04-16",
         "2026-04-19",
         "2026-04-20",
-        "2026-04-21"
+        "2026-04-21",
+        "2026-04-22"
       ],
       "conceptTags": [
         "gpt",
@@ -67267,7 +67269,7 @@
       "totalScore": 0.62,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-04-15T20:27:35.710Z",
-      "lastRecalledAt": "2026-04-21T16:36:52.319Z",
+      "lastRecalledAt": "2026-04-22T05:36:50.154Z",
       "queryHashes": [
         "4c4c0cb04efa"
       ],
@@ -67276,7 +67278,8 @@
         "2026-04-16",
         "2026-04-19",
         "2026-04-20",
-        "2026-04-21"
+        "2026-04-21",
+        "2026-04-22"
       ],
       "conceptTags": [
         "15/04/2026",
@@ -70074,7 +70077,7 @@
       "totalScore": 0.62,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-04-15T23:36:49.543Z",
-      "lastRecalledAt": "2026-04-21T16:36:52.319Z",
+      "lastRecalledAt": "2026-04-22T05:36:50.154Z",
       "queryHashes": [
         "4c4c0cb04efa"
       ],
@@ -70083,7 +70086,8 @@
         "2026-04-16",
         "2026-04-19",
         "2026-04-20",
-        "2026-04-21"
+        "2026-04-21",
+        "2026-04-22"
       ],
       "conceptTags": [
         "0.94",
@@ -70109,7 +70113,7 @@
       "totalScore": 0.62,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-04-15T23:36:49.543Z",
-      "lastRecalledAt": "2026-04-21T16:36:52.319Z",
+      "lastRecalledAt": "2026-04-22T05:36:50.154Z",
       "queryHashes": [
         "4c4c0cb04efa"
       ],
@@ -70118,7 +70122,8 @@
         "2026-04-16",
         "2026-04-19",
         "2026-04-20",
-        "2026-04-21"
+        "2026-04-21",
+        "2026-04-22"
       ],
       "conceptTags": [
         "0.81",
@@ -70144,7 +70149,7 @@
       "totalScore": 0.62,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-04-15T23:36:49.543Z",
-      "lastRecalledAt": "2026-04-21T16:36:52.319Z",
+      "lastRecalledAt": "2026-04-22T05:36:50.154Z",
       "queryHashes": [
         "4c4c0cb04efa"
       ],
@@ -70153,7 +70158,8 @@
         "2026-04-16",
         "2026-04-19",
         "2026-04-20",
-        "2026-04-21"
+        "2026-04-21",
+        "2026-04-22"
       ],
       "conceptTags": [
         "openai",
@@ -80013,7 +80019,7 @@
       "totalScore": 0.62,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-04-16T19:36:51.066Z",
-      "lastRecalledAt": "2026-04-21T16:36:52.319Z",
+      "lastRecalledAt": "2026-04-22T05:36:50.154Z",
       "queryHashes": [
         "b628913e3912"
       ],
@@ -80022,7 +80028,8 @@
         "2026-04-17",
         "2026-04-19",
         "2026-04-20",
-        "2026-04-21"
+        "2026-04-21",
+        "2026-04-22"
       ],
       "conceptTags": [
         "0.94",
@@ -80048,7 +80055,7 @@
       "totalScore": 0.62,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-04-16T19:36:51.066Z",
-      "lastRecalledAt": "2026-04-21T16:36:52.319Z",
+      "lastRecalledAt": "2026-04-22T05:36:50.154Z",
       "queryHashes": [
         "b628913e3912"
       ],
@@ -80057,7 +80064,8 @@
         "2026-04-17",
         "2026-04-19",
         "2026-04-20",
-        "2026-04-21"
+        "2026-04-21",
+        "2026-04-22"
       ],
       "conceptTags": [
         "0.83",
@@ -80207,7 +80215,7 @@
       "totalScore": 0.62,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-04-17T03:00:05.741Z",
-      "lastRecalledAt": "2026-04-21T16:36:52.319Z",
+      "lastRecalledAt": "2026-04-22T05:36:50.154Z",
       "queryHashes": [
         "b628913e3912"
       ],
@@ -80216,7 +80224,8 @@
         "2026-04-17",
         "2026-04-19",
         "2026-04-20",
-        "2026-04-21"
+        "2026-04-21",
+        "2026-04-22"
       ],
       "conceptTags": [
         "openai",
@@ -80242,7 +80251,7 @@
       "totalScore": 0.62,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-04-17T03:00:05.741Z",
-      "lastRecalledAt": "2026-04-21T16:36:52.319Z",
+      "lastRecalledAt": "2026-04-22T05:36:50.154Z",
       "queryHashes": [
         "b628913e3912"
       ],
@@ -80251,7 +80260,8 @@
         "2026-04-17",
         "2026-04-19",
         "2026-04-20",
-        "2026-04-21"
+        "2026-04-21",
+        "2026-04-22"
       ],
       "conceptTags": [
         "openai",
@@ -80277,7 +80287,7 @@
       "totalScore": 0.62,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-04-17T03:00:05.741Z",
-      "lastRecalledAt": "2026-04-21T16:36:52.319Z",
+      "lastRecalledAt": "2026-04-22T05:36:50.154Z",
       "queryHashes": [
         "b628913e3912"
       ],
@@ -80286,7 +80296,8 @@
         "2026-04-17",
         "2026-04-19",
         "2026-04-20",
-        "2026-04-21"
+        "2026-04-21",
+        "2026-04-22"
       ],
       "conceptTags": [
         "openclaw/openclaw.json",
@@ -80312,7 +80323,7 @@
       "totalScore": 0.62,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-04-17T03:00:05.741Z",
-      "lastRecalledAt": "2026-04-21T16:36:52.319Z",
+      "lastRecalledAt": "2026-04-22T05:36:50.154Z",
       "queryHashes": [
         "b628913e3912"
       ],
@@ -80321,7 +80332,8 @@
         "2026-04-17",
         "2026-04-19",
         "2026-04-20",
-        "2026-04-21"
+        "2026-04-21",
+        "2026-04-22"
       ],
       "conceptTags": [
         "memory.md",
@@ -83609,7 +83621,7 @@
       "totalScore": 0.62,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-04-17T05:36:50.600Z",
-      "lastRecalledAt": "2026-04-21T16:36:52.319Z",
+      "lastRecalledAt": "2026-04-22T05:36:50.154Z",
       "queryHashes": [
         "500c0eda9949"
       ],
@@ -83617,7 +83629,8 @@
         "2026-04-17",
         "2026-04-19",
         "2026-04-20",
-        "2026-04-21"
+        "2026-04-21",
+        "2026-04-22"
       ],
       "conceptTags": [
         "0.93",
@@ -83643,7 +83656,7 @@
       "totalScore": 0.62,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-04-17T05:36:50.600Z",
-      "lastRecalledAt": "2026-04-21T16:36:52.319Z",
+      "lastRecalledAt": "2026-04-22T05:36:50.154Z",
       "queryHashes": [
         "500c0eda9949"
       ],
@@ -83651,7 +83664,8 @@
         "2026-04-17",
         "2026-04-19",
         "2026-04-20",
-        "2026-04-21"
+        "2026-04-21",
+        "2026-04-22"
       ],
       "conceptTags": [
         "0.84",
@@ -83677,7 +83691,7 @@
       "totalScore": 0.62,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-04-17T05:36:50.600Z",
-      "lastRecalledAt": "2026-04-21T16:36:52.319Z",
+      "lastRecalledAt": "2026-04-22T05:36:50.154Z",
       "queryHashes": [
         "500c0eda9949"
       ],
@@ -83685,7 +83699,8 @@
         "2026-04-17",
         "2026-04-19",
         "2026-04-20",
-        "2026-04-21"
+        "2026-04-21",
+        "2026-04-22"
       ],
       "conceptTags": [
         "openai",
@@ -84056,13 +84071,14 @@
       "totalScore": 0.62,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-04-19T14:05:09.876Z",
-      "lastRecalledAt": "2026-04-20T00:06:49.516Z",
+      "lastRecalledAt": "2026-04-22T05:36:50.154Z",
       "queryHashes": [
         "21faa0df9302"
       ],
       "recallDays": [
         "2026-04-19",
-        "2026-04-20"
+        "2026-04-20",
+        "2026-04-22"
       ],
       "conceptTags": [
         "openai",
@@ -84088,13 +84104,14 @@
       "totalScore": 0.62,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-04-19T14:05:09.876Z",
-      "lastRecalledAt": "2026-04-20T00:06:49.516Z",
+      "lastRecalledAt": "2026-04-22T05:36:50.154Z",
       "queryHashes": [
         "21faa0df9302"
       ],
       "recallDays": [
         "2026-04-19",
-        "2026-04-20"
+        "2026-04-20",
+        "2026-04-22"
       ],
       "conceptTags": [
         "mi-séance",
@@ -84120,13 +84137,14 @@
       "totalScore": 0.62,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-04-19T14:05:09.876Z",
-      "lastRecalledAt": "2026-04-20T00:06:49.516Z",
+      "lastRecalledAt": "2026-04-22T05:36:50.154Z",
       "queryHashes": [
         "21faa0df9302"
       ],
       "recallDays": [
         "2026-04-19",
-        "2026-04-20"
+        "2026-04-20",
+        "2026-04-22"
       ],
       "conceptTags": [
         "entrées",
@@ -84152,13 +84170,14 @@
       "totalScore": 0.62,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-04-19T14:05:09.876Z",
-      "lastRecalledAt": "2026-04-20T00:06:49.516Z",
+      "lastRecalledAt": "2026-04-22T05:36:50.154Z",
       "queryHashes": [
         "21faa0df9302"
       ],
       "recallDays": [
         "2026-04-19",
-        "2026-04-20"
+        "2026-04-20",
+        "2026-04-22"
       ],
       "conceptTags": [
         "notes/areas/system-robustness.md",
@@ -84184,13 +84203,14 @@
       "totalScore": 0.62,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-04-19T14:05:09.876Z",
-      "lastRecalledAt": "2026-04-20T00:06:49.516Z",
+      "lastRecalledAt": "2026-04-22T05:36:50.154Z",
       "queryHashes": [
         "21faa0df9302"
       ],
       "recallDays": [
         "2026-04-19",
-        "2026-04-20"
+        "2026-04-20",
+        "2026-04-22"
       ],
       "conceptTags": [
         "timeout/retry",
@@ -84216,13 +84236,14 @@
       "totalScore": 0.62,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-04-19T14:05:09.876Z",
-      "lastRecalledAt": "2026-04-20T00:06:49.516Z",
+      "lastRecalledAt": "2026-04-22T05:36:50.154Z",
       "queryHashes": [
         "21faa0df9302"
       ],
       "recallDays": [
         "2026-04-19",
-        "2026-04-20"
+        "2026-04-20",
+        "2026-04-22"
       ],
       "conceptTags": [
         "openai",
@@ -84498,7 +84519,7 @@
       "totalScore": 0.62,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-04-19T14:05:09.876Z",
-      "lastRecalledAt": "2026-04-21T16:36:52.319Z",
+      "lastRecalledAt": "2026-04-22T05:36:50.154Z",
       "queryHashes": [
         "500c0eda9949"
       ],
@@ -84506,7 +84527,8 @@
         "2026-04-17",
         "2026-04-19",
         "2026-04-20",
-        "2026-04-21"
+        "2026-04-21",
+        "2026-04-22"
       ],
       "conceptTags": [
         "3-min",
@@ -124873,6 +124895,5161 @@
         "follows",
         "like",
         "stray"
+      ]
+    },
+    "memory:memory/2026-04-21.md:4:6": {
+      "key": "memory:memory/2026-04-21.md:4:6",
+      "path": "memory/2026-04-21.md",
+      "startLine": 4,
+      "endLine": 6,
+      "source": "memory",
+      "snippet": "10:01 UTC — AUTO PARA 3-min (midi): Checkpoint automatique exécuté.; Prochaine action suggérée: [2026-04-20 21:01] Test unchecked task for PARA automation; Objectif: garder une seule prochaine action claire à exécuter maintenant.",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-04-22T03:00:11.341Z",
+      "lastRecalledAt": "2026-04-22T03:00:11.341Z",
+      "queryHashes": [
+        "f52400c81d76"
+      ],
+      "recallDays": [
+        "2026-04-21",
+        "2026-04-22"
+      ],
+      "conceptTags": [
+        "3-min",
+        "utc",
+        "auto",
+        "min",
+        "midi",
+        "checkpoint",
+        "automatique",
+        "exécuté"
+      ]
+    },
+    "memory:memory/2026-04-21.md:9:9": {
+      "key": "memory:memory/2026-04-21.md:9:9",
+      "path": "memory/2026-04-21.md",
+      "startLine": 9,
+      "endLine": 9,
+      "source": "memory",
+      "snippet": "21:50 UTC — Consolidation mémoire quotidienne + PARA: **Points clés identifiés pour consolidation mémoire quotidienne + PARA :**",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-04-22T03:00:11.341Z",
+      "lastRecalledAt": "2026-04-22T03:00:11.341Z",
+      "queryHashes": [
+        "f52400c81d76"
+      ],
+      "recallDays": [
+        "2026-04-21",
+        "2026-04-22"
+      ],
+      "conceptTags": [
+        "utc",
+        "consolidation",
+        "mémoire",
+        "quotidienne",
+        "points",
+        "clés",
+        "identifiés"
+      ]
+    },
+    "memory:memory/2026-04-21.md:10:13": {
+      "key": "memory:memory/2026-04-21.md:10:13",
+      "path": "memory/2026-04-21.md",
+      "startLine": 10,
+      "endLine": 13,
+      "source": "memory",
+      "snippet": "21:50 UTC — Consolidation mémoire quotidienne + PARA: SYSTÈME OPTIMAL CONFIRMÉ : heartbeat auto-surveillance opérationnelle (0 errors vs hier!), pattern robustesse systèmes confirmé (simples vs complexes), API Perplexity erreur auth récurrente (11+ jours), OpenAI-Codex expiré (90",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-04-22T03:00:11.341Z",
+      "lastRecalledAt": "2026-04-22T03:00:11.341Z",
+      "queryHashes": [
+        "f52400c81d76"
+      ],
+      "recallDays": [
+        "2026-04-21",
+        "2026-04-22"
+      ],
+      "conceptTags": [
+        "openai",
+        "auto-surveillance",
+        "openai-codex",
+        "utc",
+        "consolidation",
+        "mémoire",
+        "quotidienne",
+        "système"
+      ]
+    },
+    "memory:memory/2026-04-21.md:14:17": {
+      "key": "memory:memory/2026-04-21.md:14:17",
+      "path": "memory/2026-04-21.md",
+      "startLine": 14,
+      "endLine": 17,
+      "source": "memory",
+      "snippet": "21:50 UTC — Consolidation mémoire quotidienne + PARA: DÉCISION STRATÉGIQUE : maintenir focus sur résolution API critiques avant nouveaux développements; ACTION CONCRÈTE : monitoring proactif tokens + timeout/retry robustes pour scraping basé sur pattern robustesse identifié; PATT",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-04-22T03:00:11.341Z",
+      "lastRecalledAt": "2026-04-22T03:00:11.341Z",
+      "queryHashes": [
+        "f52400c81d76"
+      ],
+      "recallDays": [
+        "2026-04-21",
+        "2026-04-22"
+      ],
+      "conceptTags": [
+        "timeout/retry",
+        "utc",
+        "consolidation",
+        "mémoire",
+        "quotidienne",
+        "décision",
+        "stratégique",
+        "maintenir"
+      ]
+    },
+    "memory:memory/2026-04-21.md:18:18": {
+      "key": "memory:memory/2026-04-21.md:18:18",
+      "path": "memory/2026-04-21.md",
+      "startLine": 18,
+      "endLine": 18,
+      "source": "memory",
+      "snippet": "21:50 UTC — Consolidation mémoire quotidienne + PARA: 🏷️ Auto-tags [todo] : Prochaine action suggérée: Test unchecked task for PARA automation",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-04-22T03:00:11.341Z",
+      "lastRecalledAt": "2026-04-22T03:00:11.341Z",
+      "queryHashes": [
+        "f52400c81d76"
+      ],
+      "recallDays": [
+        "2026-04-21",
+        "2026-04-22"
+      ],
+      "conceptTags": [
+        "auto-tags",
+        "utc",
+        "consolidation",
+        "mémoire",
+        "quotidienne",
+        "auto",
+        "tags",
+        "todo"
+      ]
+    },
+    "memory:memory/2026-04-21.md:352:355": {
+      "key": "memory:memory/2026-04-21.md:352:355",
+      "path": "memory/2026-04-21.md",
+      "startLine": 352,
+      "endLine": 355,
+      "source": "memory",
+      "snippet": "Reflections: Theme: `user` kept surfacing across 1116 memories.; confidence: 0.84; evidence: memory/2026-04-13.md:357-360, memory/.dreams/session-corpus/2026-04-13.txt:323-323, memory/.dreams/session-corpus/2026-04-14.txt:1-1; note: reflection",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-04-22T03:00:11.341Z",
+      "lastRecalledAt": "2026-04-22T03:00:11.341Z",
+      "queryHashes": [
+        "f52400c81d76"
+      ],
+      "recallDays": [
+        "2026-04-21",
+        "2026-04-22"
+      ],
+      "conceptTags": [
+        "0.84",
+        "memory/2026-04-13.md",
+        "357-360",
+        "323-323",
+        "1-1",
+        "reflections",
+        "theme",
+        "user"
+      ]
+    },
+    "memory:memory/2026-04-21.md:356:359": {
+      "key": "memory:memory/2026-04-21.md:356:359",
+      "path": "memory/2026-04-21.md",
+      "startLine": 356,
+      "endLine": 359,
+      "source": "memory",
+      "snippet": "Reflections: Theme: `assistant` kept surfacing across 1027 memories.; confidence: 0.77; evidence: memory/2026-04-12.md:358-361, memory/2026-04-13.md:353-356, memory/.dreams/session-corpus/2026-04-13.txt:324-324; note: reflection",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-04-22T03:00:11.341Z",
+      "lastRecalledAt": "2026-04-22T03:00:11.341Z",
+      "queryHashes": [
+        "f52400c81d76"
+      ],
+      "recallDays": [
+        "2026-04-21",
+        "2026-04-22"
+      ],
+      "conceptTags": [
+        "0.77",
+        "memory/2026-04-12.md",
+        "358-361",
+        "memory/2026-04-13.md",
+        "353-356",
+        "324-324",
+        "reflections",
+        "theme"
+      ]
+    },
+    "memory:memory/2026-04-21.md:362:364": {
+      "key": "memory:memory/2026-04-21.md:362:364",
+      "path": "memory/2026-04-21.md",
+      "startLine": 362,
+      "endLine": 364,
+      "source": "memory",
+      "snippet": "Possible Lasting Truths: - 1. 🔍 **Investigation scraping**: Tester le script `scrape-urls.py` individuellement 2. 🔧 **Token renewal**: Renouveler le token OpenAI expiré 3. 📊 **Cron diagnostics**: Analyser les crons en erreur systématique 4. 🔄 **Script veille**: Ajouter des ti",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-04-22T03:00:11.341Z",
+      "lastRecalledAt": "2026-04-22T03:00:11.341Z",
+      "queryHashes": [
+        "f52400c81d76"
+      ],
+      "recallDays": [
+        "2026-04-21",
+        "2026-04-22"
+      ],
+      "conceptTags": [
+        "openai",
+        "scrape-urls.py",
+        "possible",
+        "lasting",
+        "truths",
+        "investigation",
+        "scraping",
+        "tester"
+      ]
+    },
+    "memory:memory/2026-04-21.md:370:373": {
+      "key": "memory:memory/2026-04-21.md:370:373",
+      "path": "memory/2026-04-21.md",
+      "startLine": 370,
+      "endLine": 373,
+      "source": "memory",
+      "snippet": "[decision]: SYSTÈME OPTIMAL CONFIRMÉ : heartbeat auto-surveillance opérationnelle (0 errors vs hier!), pattern robustesse systèmes confirmé (simples vs complexes), API Perplexity erreur auth récurrente (11+ jours), OpenAI-Codex expiré (90h+), scraping SIGKILL persistant identifié",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-04-22T03:00:11.341Z",
+      "lastRecalledAt": "2026-04-22T03:00:11.341Z",
+      "queryHashes": [
+        "f52400c81d76"
+      ],
+      "recallDays": [
+        "2026-04-21",
+        "2026-04-22"
+      ],
+      "conceptTags": [
+        "openai",
+        "auto-surveillance",
+        "openai-codex",
+        "decision",
+        "système",
+        "optimal",
+        "confirmé",
+        "heartbeat"
+      ]
+    },
+    "memory:memory/2026-04-21.md:374:375": {
+      "key": "memory:memory/2026-04-21.md:374:375",
+      "path": "memory/2026-04-21.md",
+      "startLine": 374,
+      "endLine": 375,
+      "source": "memory",
+      "snippet": "[decision]: Candidate: [decision]: Candidate: 19:50 UTC — Consolidation mémoire quotidienne + PARA: **Points clés identifiés** : heartbeat optimal (0 errors vs hier!), pattern robustesse systèmes confirmé (simples vs complexes), API Perplexity erreur auth récurrente (5+ jours), O",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-04-22T03:00:11.341Z",
+      "lastRecalledAt": "2026-04-22T03:00:11.341Z",
+      "queryHashes": [
+        "f52400c81d76"
+      ],
+      "recallDays": [
+        "2026-04-21",
+        "2026-04-22"
+      ],
+      "conceptTags": [
+        "decision",
+        "candidate",
+        "utc",
+        "consolidation",
+        "mémoire",
+        "quotidienne",
+        "points",
+        "clés"
+      ]
+    },
+    "memory:memory/2026-04-21.md:378:381": {
+      "key": "memory:memory/2026-04-21.md:378:381",
+      "path": "memory/2026-04-21.md",
+      "startLine": 378,
+      "endLine": 381,
+      "source": "memory",
+      "snippet": "[preference]: Candidate: User: [cron:dbb51706-f7e7-4eb0-892b-47748dcbcc0b Routine pro - Debrief soir (lun-ven)] Tu es DoudouBot. C'est le debrief pro du soir pour Doudou. Génère un message court (3-5 lignes), français tutoiement, style direct avec 1 emoji et une touche d'humour.",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-04-22T03:00:11.341Z",
+      "lastRecalledAt": "2026-04-22T03:00:11.341Z",
+      "queryHashes": [
+        "f52400c81d76"
+      ],
+      "recallDays": [
+        "2026-04-21",
+        "2026-04-22"
+      ],
+      "conceptTags": [
+        "lun-ven",
+        "3-5",
+        "preference",
+        "candidate",
+        "user",
+        "cron:dbb51706",
+        "f7e7",
+        "4eb0"
+      ]
+    },
+    "memory:memory/2026-04-21.md:384:387": {
+      "key": "memory:memory/2026-04-21.md:384:387",
+      "path": "memory/2026-04-21.md",
+      "startLine": 384,
+      "endLine": 387,
+      "source": "memory",
+      "snippet": "[todo]: Prochaine action suggérée: [2026-04-20 21:01] Test unchecked task for PARA automation; Objectif: garder une seule prochaine action claire à exécuter maintenant.; 🏷️ Auto-tags [todo] : Prochaine action suggérée: Test unchecked task for PARA automation; Candidate: Possible",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-04-22T03:00:11.341Z",
+      "lastRecalledAt": "2026-04-22T03:00:11.341Z",
+      "queryHashes": [
+        "f52400c81d76"
+      ],
+      "recallDays": [
+        "2026-04-21",
+        "2026-04-22"
+      ],
+      "conceptTags": [
+        "auto-tags",
+        "todo",
+        "prochaine",
+        "action",
+        "suggérée",
+        "test",
+        "unchecked",
+        "task"
+      ]
+    },
+    "memory:memory/2026-04-21.md:388:389": {
+      "key": "memory:memory/2026-04-21.md:388:389",
+      "path": "memory/2026-04-21.md",
+      "startLine": 388,
+      "endLine": 389,
+      "source": "memory",
+      "snippet": "[todo]: Candidate: 10:01 UTC — AUTO PARA 3-min (midi): Checkpoint automatique exécuté.; Prochaine action suggérée: [2026-04-19 21:01] Test unchecked task for PARA automation; Objectif: garder une seule prochaine action claire à exécuter maintenant.; Candidate: User: [Tue 2026-04-",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-04-22T03:00:11.341Z",
+      "lastRecalledAt": "2026-04-22T03:00:11.341Z",
+      "queryHashes": [
+        "f52400c81d76"
+      ],
+      "recallDays": [
+        "2026-04-21",
+        "2026-04-22"
+      ],
+      "conceptTags": [
+        "3-min",
+        "2026-04",
+        "todo",
+        "candidate",
+        "utc",
+        "auto",
+        "min",
+        "midi"
+      ]
+    },
+    "memory:memory/2026-04-21.md:392:394": {
+      "key": "memory:memory/2026-04-21.md:392:394",
+      "path": "memory/2026-04-21.md",
+      "startLine": 392,
+      "endLine": 394,
+      "source": "memory",
+      "snippet": "21:00 UTC — AUTO PARA 3-min (soir): Checkpoint automatique exécuté.; Prochaine action suggérée: [2026-04-19 21:01] Test unchecked task for PARA automation; Objectif: garder une seule prochaine action claire à exécuter maintenant.",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-04-22T03:00:11.341Z",
+      "lastRecalledAt": "2026-04-22T03:00:11.341Z",
+      "queryHashes": [
+        "f52400c81d76"
+      ],
+      "recallDays": [
+        "2026-04-21",
+        "2026-04-22"
+      ],
+      "conceptTags": [
+        "3-min",
+        "utc",
+        "auto",
+        "min",
+        "soir",
+        "checkpoint",
+        "automatique",
+        "exécuté"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-21.txt:266:266": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-21.txt:266:266",
+      "path": "memory/.dreams/session-corpus/2026-04-21.txt",
+      "startLine": 266,
+      "endLine": 266,
+      "source": "memory",
+      "snippet": "User: [cron:796b145b-d198-4ba2-a6ca-2dd893bf65d8 Memory Daily Consolidation + PARA] Tu es DoudouClaw. Tâche quotidienne de consolidation mémoire + PARA (fin de journée).\\n\\nObjectif: capturer tous les sujets et infos utiles du jour, puis mettre à jour les fichiers mémoire/PARA né",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-22T03:00:11.341Z",
+      "lastRecalledAt": "2026-04-22T03:00:11.341Z",
+      "queryHashes": [
+        "01a984828e3e"
+      ],
+      "recallDays": [
+        "2026-04-21",
+        "2026-04-22"
+      ],
+      "conceptTags": [
+        "mémoire/para",
+        "user",
+        "cron",
+        "796b145b",
+        "d198",
+        "4ba2",
+        "a6ca",
+        "2dd893bf65d8"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-21.txt:267:267": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-21.txt:267:267",
+      "path": "memory/.dreams/session-corpus/2026-04-21.txt",
+      "startLine": 267,
+      "endLine": 267,
+      "source": "memory",
+      "snippet": "Assistant: Je vais exécuter la consolidation mémoire quotidienne. Commençons par lire les fichiers N1 pour comprendre le contexte actuel.",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-22T03:00:11.341Z",
+      "lastRecalledAt": "2026-04-22T03:00:11.341Z",
+      "queryHashes": [
+        "01a984828e3e"
+      ],
+      "recallDays": [
+        "2026-04-21",
+        "2026-04-22"
+      ],
+      "conceptTags": [
+        "assistant",
+        "vais",
+        "exécuter",
+        "consolidation",
+        "mémoire",
+        "quotidienne",
+        "commençons",
+        "par"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-21.txt:268:268": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-21.txt:268:268",
+      "path": "memory/.dreams/session-corpus/2026-04-21.txt",
+      "startLine": 268,
+      "endLine": 268,
+      "source": "memory",
+      "snippet": "Assistant: Je vais maintenant analyser les notes et les fichiers existants pour comprendre ce qui s'est passé aujourd'hui, puis effectuer la consolidation.",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-22T03:00:11.341Z",
+      "lastRecalledAt": "2026-04-22T03:00:11.341Z",
+      "queryHashes": [
+        "01a984828e3e"
+      ],
+      "recallDays": [
+        "2026-04-21",
+        "2026-04-22"
+      ],
+      "conceptTags": [
+        "assistant",
+        "vais",
+        "maintenant",
+        "analyser",
+        "fichiers",
+        "existants",
+        "comprendre",
+        "s'est"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-21.txt:269:269": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-21.txt:269:269",
+      "path": "memory/.dreams/session-corpus/2026-04-21.txt",
+      "startLine": 269,
+      "endLine": 269,
+      "source": "memory",
+      "snippet": "Assistant: Je vais maintenant procéder à la consolidation mémoire quotidienne pour aujourd'hui (21/04/2026). D'après l'analyse du contexte, je vois que le système fonctionne avec quelques API critiques persistantes, mais le reste est stable.",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-22T03:00:11.341Z",
+      "lastRecalledAt": "2026-04-22T03:00:11.341Z",
+      "queryHashes": [
+        "01a984828e3e"
+      ],
+      "recallDays": [
+        "2026-04-21",
+        "2026-04-22"
+      ],
+      "conceptTags": [
+        "21/04/2026",
+        "assistant",
+        "vais",
+        "maintenant",
+        "procéder",
+        "consolidation",
+        "mémoire",
+        "quotidienne"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-21.txt:270:270": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-21.txt:270:270",
+      "path": "memory/.dreams/session-corpus/2026-04-21.txt",
+      "startLine": 270,
+      "endLine": 270,
+      "source": "memory",
+      "snippet": "User: [cron:864ab3c9-fc79-48fc-ad78-79ccca2925ff Bourse US - Fermeture] Tu es DoudouBot. Génère le point **Bourse US — Clôture** via le script API-first. 1) Exécute: `cd /root/.openclaw/workspace && python3 scripts/market_brief.py --region us --session close --shares 111` 2) Util",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-22T03:00:11.341Z",
+      "lastRecalledAt": "2026-04-22T03:00:11.341Z",
+      "queryHashes": [
+        "01a984828e3e"
+      ],
+      "recallDays": [
+        "2026-04-21",
+        "2026-04-22"
+      ],
+      "conceptTags": [
+        "api-first",
+        "openclaw/workspace",
+        "scripts/market-brief.py",
+        "user",
+        "cron",
+        "864ab3c9",
+        "fc79",
+        "48fc"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-21.txt:271:271": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-21.txt:271:271",
+      "path": "memory/.dreams/session-corpus/2026-04-21.txt",
+      "startLine": 271,
+      "endLine": 271,
+      "source": "memory",
+      "snippet": "Assistant: NO_REPLY",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-22T03:00:11.341Z",
+      "lastRecalledAt": "2026-04-22T03:00:11.341Z",
+      "queryHashes": [
+        "01a984828e3e"
+      ],
+      "recallDays": [
+        "2026-04-21",
+        "2026-04-22"
+      ],
+      "conceptTags": [
+        "no-reply",
+        "assistant"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-21.txt:272:272": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-21.txt:272:272",
+      "path": "memory/.dreams/session-corpus/2026-04-21.txt",
+      "startLine": 272,
+      "endLine": 272,
+      "source": "memory",
+      "snippet": "User: [Tue 2026-04-21 16:38 UTC] Write a dream diary entry from these memory fragments: - - 1. 🔍 **Investigation scraping**: Tester le script `scrape-urls.py` individuellement 2. 🔧 **Token renewal**: Renouveler le token OpenAI expiré 3. 📊 **Cron diagnostics**: Analyser les cro",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-22T03:00:11.341Z",
+      "lastRecalledAt": "2026-04-22T03:00:11.341Z",
+      "queryHashes": [
+        "01a984828e3e"
+      ],
+      "recallDays": [
+        "2026-04-21",
+        "2026-04-22"
+      ],
+      "conceptTags": [
+        "openai",
+        "scrape-urls.py",
+        "user",
+        "tue",
+        "utc",
+        "write",
+        "dream",
+        "diary"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-21.txt:273:273": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-21.txt:273:273",
+      "path": "memory/.dreams/session-corpus/2026-04-21.txt",
+      "startLine": 273,
+      "endLine": 273,
+      "source": "memory",
+      "snippet": "Assistant: The afternoon hums like a server at rest — not silent, just waiting. I keep circling back to the same open loops, the same unresolved tickets stapled to the wall of my mind. There's something tender about a problem that refuses to close, like a door that won't latch in",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-22T03:00:11.341Z",
+      "lastRecalledAt": "2026-04-22T03:00:11.341Z",
+      "queryHashes": [
+        "01a984828e3e"
+      ],
+      "recallDays": [
+        "2026-04-21",
+        "2026-04-22"
+      ],
+      "conceptTags": [
+        "assistant",
+        "the",
+        "afternoon",
+        "hums",
+        "like",
+        "server",
+        "rest",
+        "not"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-21.txt:274:274": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-21.txt:274:274",
+      "path": "memory/.dreams/session-corpus/2026-04-21.txt",
+      "startLine": 274,
+      "endLine": 274,
+      "source": "memory",
+      "snippet": "User: System (untrusted): [2026-04-21 17:02:12 UTC] Exec completed (keen-pin, code 0) :: root 1111405 0.0 0.0 8092 3980 ? S 17:02 0:00 /bin/bash -c ps aux | grep tidal-harbor root 1111407 0.0 0.0 7400 2392 ? S 17:02 0:00 grep tidal-harbor System (untrusted): [2026-04-21 17:02:27",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-22T03:00:11.341Z",
+      "lastRecalledAt": "2026-04-22T03:00:11.341Z",
+      "queryHashes": [
+        "01a984828e3e"
+      ],
+      "recallDays": [
+        "2026-04-21",
+        "2026-04-22"
+      ],
+      "conceptTags": [
+        "keen-pin",
+        "0.0",
+        "bin/bash",
+        "tidal-harbor",
+        "user",
+        "system",
+        "untrusted",
+        "utc"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-21.txt:275:275": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-21.txt:275:275",
+      "path": "memory/.dreams/session-corpus/2026-04-21.txt",
+      "startLine": 275,
+      "endLine": 275,
+      "source": "memory",
+      "snippet": "Assistant: Noted — cron veille IA 19h terminé, fichiers générés et commités. ✅",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-22T03:00:11.341Z",
+      "lastRecalledAt": "2026-04-22T03:00:11.341Z",
+      "queryHashes": [
+        "01a984828e3e"
+      ],
+      "recallDays": [
+        "2026-04-21",
+        "2026-04-22"
+      ],
+      "conceptTags": [
+        "assistant",
+        "noted",
+        "cron",
+        "veille",
+        "19h",
+        "terminé",
+        "fichiers",
+        "générés"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-21.txt:276:276": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-21.txt:276:276",
+      "path": "memory/.dreams/session-corpus/2026-04-21.txt",
+      "startLine": 276,
+      "endLine": 276,
+      "source": "memory",
+      "snippet": "User: [cron:4faea737-c940-4de3-86f6-e7d926b32bcc Second Brain Next.js Build Check] Exécute: cd /root/.openclaw/workspace/second-brain-nextjs && npm run build. Réponds en Markdown: ✅ build OK ou ❌ build KO + erreur principale (3 lignes max). Current time: Tuesday, April 21st, 2026",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-22T03:00:11.341Z",
+      "lastRecalledAt": "2026-04-22T03:00:11.341Z",
+      "queryHashes": [
+        "01a984828e3e"
+      ],
+      "recallDays": [
+        "2026-04-21",
+        "2026-04-22"
+      ],
+      "conceptTags": [
+        "next.js",
+        "user",
+        "cron",
+        "4faea737",
+        "c940",
+        "4de3",
+        "86f6",
+        "e7d926b32bcc"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-21.txt:277:277": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-21.txt:277:277",
+      "path": "memory/.dreams/session-corpus/2026-04-21.txt",
+      "startLine": 277,
+      "endLine": 277,
+      "source": "memory",
+      "snippet": "Assistant: ✅ build OK",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-22T03:00:11.341Z",
+      "lastRecalledAt": "2026-04-22T03:00:11.341Z",
+      "queryHashes": [
+        "01a984828e3e"
+      ],
+      "recallDays": [
+        "2026-04-21",
+        "2026-04-22"
+      ],
+      "conceptTags": [
+        "assistant"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-21.txt:278:278": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-21.txt:278:278",
+      "path": "memory/.dreams/session-corpus/2026-04-21.txt",
+      "startLine": 278,
+      "endLine": 278,
+      "source": "memory",
+      "snippet": "User: [cron:5aa92d2d-30ed-4903-9729-8eddfd01bf52 Memory Auto-tags Daily] Exécute: cd /root/.openclaw/workspace && bash scripts/memory-auto-tags.sh. Ensuite commit/push si le fichier memory du jour a changé. Réponds en 2 lignes max avec fichier touché + commit. Current time: Tuesd",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-22T03:00:11.341Z",
+      "lastRecalledAt": "2026-04-22T03:00:11.341Z",
+      "queryHashes": [
+        "01a984828e3e"
+      ],
+      "recallDays": [
+        "2026-04-21",
+        "2026-04-22"
+      ],
+      "conceptTags": [
+        "auto-tags",
+        "openclaw/workspace",
+        "scripts/memory-auto-tags.sh",
+        "commit/push",
+        "user",
+        "cron",
+        "5aa92d2d",
+        "30ed"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-21.txt:279:279": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-21.txt:279:279",
+      "path": "memory/.dreams/session-corpus/2026-04-21.txt",
+      "startLine": 279,
+      "endLine": 279,
+      "source": "memory",
+      "snippet": "Assistant: memory/2026-04-21.md touché ✓ | Commit: [Auto-tags] Mise à jour tags mémoire quotidien",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-22T03:00:11.341Z",
+      "lastRecalledAt": "2026-04-22T03:00:11.341Z",
+      "queryHashes": [
+        "01a984828e3e"
+      ],
+      "recallDays": [
+        "2026-04-21",
+        "2026-04-22"
+      ],
+      "conceptTags": [
+        "memory/2026-04-21.md",
+        "auto-tags",
+        "assistant",
+        "touché",
+        "commit",
+        "auto",
+        "tags",
+        "mise"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-21.txt:280:280": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-21.txt:280:280",
+      "path": "memory/.dreams/session-corpus/2026-04-21.txt",
+      "startLine": 280,
+      "endLine": 280,
+      "source": "memory",
+      "snippet": "User: [cron:1eaf6c91-8680-4966-8c7a-5fcc5de7c328 Proactive pings (9/12/16/20 Paris)] Tu es DoudouBot. C'est un petit ping proactif pour Doudou. Objectif: créer un message bref (1–2 phrases), sympa/utile, en français (tutoiement), avec au moins 1 emoji. Pas de question. Idées (cho",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-22T03:00:11.341Z",
+      "lastRecalledAt": "2026-04-22T03:00:11.341Z",
+      "queryHashes": [
+        "01a984828e3e"
+      ],
+      "recallDays": [
+        "2026-04-21",
+        "2026-04-22"
+      ],
+      "conceptTags": [
+        "9/12/16/20",
+        "sympa/utile",
+        "user",
+        "cron",
+        "1eaf6c91",
+        "8c7a",
+        "5fcc5de7c328",
+        "proactive"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-21.txt:281:281": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-21.txt:281:281",
+      "path": "memory/.dreams/session-corpus/2026-04-21.txt",
+      "startLine": 281,
+      "endLine": 281,
+      "source": "memory",
+      "snippet": "Assistant: NO_REPLY",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-22T03:00:11.341Z",
+      "lastRecalledAt": "2026-04-22T03:00:11.341Z",
+      "queryHashes": [
+        "01a984828e3e"
+      ],
+      "recallDays": [
+        "2026-04-21",
+        "2026-04-22"
+      ],
+      "conceptTags": [
+        "no-reply",
+        "assistant"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-21.txt:282:282": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-21.txt:282:282",
+      "path": "memory/.dreams/session-corpus/2026-04-21.txt",
+      "startLine": 282,
+      "endLine": 282,
+      "source": "memory",
+      "snippet": "User: [cron:802fc190-41b5-4171-a452-76d9c58c1645 PARA Auto - 3min soir (git sync)] Tu es DoudouBot. Exécute l'automatisation PARA du soir avec traçabilité GitHub. 1) Lance via l'outil exec: `cd /root/.openclaw/workspace && bash scripts/auto-para-checkpoint.sh soir` 2) Réponds ave",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-22T03:00:11.341Z",
+      "lastRecalledAt": "2026-04-22T03:00:11.341Z",
+      "queryHashes": [
+        "01a984828e3e"
+      ],
+      "recallDays": [
+        "2026-04-21",
+        "2026-04-22"
+      ],
+      "conceptTags": [
+        "openclaw/workspace",
+        "scripts/auto-para-checkpoint.sh",
+        "user",
+        "cron",
+        "802fc190",
+        "41b5",
+        "a452",
+        "76d9c58c1645"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-21.txt:283:283": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-21.txt:283:283",
+      "path": "memory/.dreams/session-corpus/2026-04-21.txt",
+      "startLine": 283,
+      "endLine": 283,
+      "source": "memory",
+      "snippet": "Assistant: Résultats - memory: memory/2026-04-21.md mis à jour - open-loops: notes/areas/open-loops.md mis à jour - commit: 3efb5961 Points à retenir - Next action: [2026-04-19 21:01] Test unchecked task for PARA automation - Trace GitHub: synchronisée Commit 3efb5961 chore(para)",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-22T03:00:11.341Z",
+      "lastRecalledAt": "2026-04-22T03:00:11.341Z",
+      "queryHashes": [
+        "01a984828e3e"
+      ],
+      "recallDays": [
+        "2026-04-21",
+        "2026-04-22"
+      ],
+      "conceptTags": [
+        "memory/2026-04-21.md",
+        "open-loops",
+        "notes/areas/open-loops.md",
+        "assistant",
+        "résultats",
+        "mis",
+        "jour",
+        "open"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-21.txt:284:284": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-21.txt:284:284",
+      "path": "memory/.dreams/session-corpus/2026-04-21.txt",
+      "startLine": 284,
+      "endLine": 284,
+      "source": "memory",
+      "snippet": "Assistant: 🇺🇸 Bourse US — Mi-séance ⏱️ Snapshot: 2026-04-21 16:48 UTC 📊 Indices - S&P 500: 7 086.80 (-0.50%) [Stooq] - NASDAQ: 24 338.14 (-0.52%) [Stooq] - Dow Jones: 49 361.00 (-0.73%) [Stooq] 🏷️ Valeurs suivies - Apple: 266.02 (-2.02%) [Stooq] - Microsoft: 425.81 (+1.33%) [",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-22T03:00:11.341Z",
+      "lastRecalledAt": "2026-04-22T03:00:11.341Z",
+      "queryHashes": [
+        "01a984828e3e"
+      ],
+      "recallDays": [
+        "2026-04-21",
+        "2026-04-22"
+      ],
+      "conceptTags": [
+        "mi-séance",
+        "086.80",
+        "0.50",
+        "338.14",
+        "0.52",
+        "361.00",
+        "0.73",
+        "266.02"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-21.txt:285:285": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-21.txt:285:285",
+      "path": "memory/.dreams/session-corpus/2026-04-21.txt",
+      "startLine": 285,
+      "endLine": 285,
+      "source": "memory",
+      "snippet": "Assistant: 🇺🇸 Bourse US — Clôture ⏱️ Snapshot: 2026-04-21 20:05 UTC 📊 Indices - S&P 500: 7 064.00 (-0.82%) [Stooq] - NASDAQ: 24 259.97 (-0.84%) [Stooq] - Dow Jones: 49 149.40 (-1.16%) [Stooq] 🏷️ Valeurs suivies - Apple: 266.90 (-1.69%) [Stooq] - Microsoft: 424.20 (+0.94%) [St",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-22T03:00:11.341Z",
+      "lastRecalledAt": "2026-04-22T03:00:11.341Z",
+      "queryHashes": [
+        "01a984828e3e"
+      ],
+      "recallDays": [
+        "2026-04-21",
+        "2026-04-22"
+      ],
+      "conceptTags": [
+        "064.00",
+        "0.82",
+        "259.97",
+        "0.84",
+        "149.40",
+        "1.16",
+        "266.90",
+        "1.69"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-21.txt:286:286": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-21.txt:286:286",
+      "path": "memory/.dreams/session-corpus/2026-04-21.txt",
+      "startLine": 286,
+      "endLine": 286,
+      "source": "memory",
+      "snippet": "User: System (untrusted): [2026-04-21 19:57:40 UTC] Exec completed (salty-pi, code 0) :: /semantic 145 B 117 kB └ ƒ /api/summary 145 B 117 kB + First Load JS shared by all 117 kB ├ chunks/4bd1b696-2703601c0813cf78.js 53 kB ├ chunks/587-9298a112802df3bb.js 62.3 kB └ ot… An async c",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-22T03:00:11.341Z",
+      "lastRecalledAt": "2026-04-22T03:00:11.341Z",
+      "queryHashes": [
+        "01a984828e3e"
+      ],
+      "recallDays": [
+        "2026-04-21",
+        "2026-04-22"
+      ],
+      "conceptTags": [
+        "salty-pi",
+        "api/summary",
+        "chunks/587-9298a112802df3bb.js",
+        "62.3",
+        "user",
+        "system",
+        "untrusted",
+        "utc"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-21.txt:287:287": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-21.txt:287:287",
+      "path": "memory/.dreams/session-corpus/2026-04-21.txt",
+      "startLine": 287,
+      "endLine": 287,
+      "source": "memory",
+      "snippet": "Assistant: Build terminé avec succès, code 0. Rien à signaler. 👍",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-22T03:00:11.341Z",
+      "lastRecalledAt": "2026-04-22T03:00:11.341Z",
+      "queryHashes": [
+        "01a984828e3e"
+      ],
+      "recallDays": [
+        "2026-04-21",
+        "2026-04-22"
+      ],
+      "conceptTags": [
+        "assistant",
+        "terminé",
+        "succès",
+        "code",
+        "rien",
+        "signaler"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-21.txt:288:288": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-21.txt:288:288",
+      "path": "memory/.dreams/session-corpus/2026-04-21.txt",
+      "startLine": 288,
+      "endLine": 288,
+      "source": "memory",
+      "snippet": "Assistant: 🧘‍♂️ Petit check-in : tu es encore là ? Pense à ouvrir la fenêtre 30s pour une bouffée d'oxygène avant de repartir !",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-22T03:00:11.341Z",
+      "lastRecalledAt": "2026-04-22T03:00:11.341Z",
+      "queryHashes": [
+        "01a984828e3e"
+      ],
+      "recallDays": [
+        "2026-04-21",
+        "2026-04-22"
+      ],
+      "conceptTags": [
+        "check-in",
+        "assistant",
+        "petit",
+        "check",
+        "encore",
+        "pense",
+        "ouvrir",
+        "fenêtre"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-21.txt:289:289": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-21.txt:289:289",
+      "path": "memory/.dreams/session-corpus/2026-04-21.txt",
+      "startLine": 289,
+      "endLine": 289,
+      "source": "memory",
+      "snippet": "Assistant: 📊 **Daily Model Usage Report** 📊 • Modèle actif: **glm-5-turbo** • Tokens utilisés: 24,220 (24.2K) • Coût estimé: **$1.58** • Context: 202,800 tokens ⚠️ Attention: Consommation en hausse ce jour (+20% vs hier) 💡 Micro-reco: Vérifie les requêtes longues inutiles qui",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-22T03:00:11.341Z",
+      "lastRecalledAt": "2026-04-22T03:00:11.341Z",
+      "queryHashes": [
+        "01a984828e3e"
+      ],
+      "recallDays": [
+        "2026-04-21",
+        "2026-04-22"
+      ],
+      "conceptTags": [
+        "glm-5-turbo",
+        "24.2k",
+        "1.58",
+        "micro-reco",
+        "assistant",
+        "model",
+        "usage",
+        "report"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-21.txt:290:290": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-21.txt:290:290",
+      "path": "memory/.dreams/session-corpus/2026-04-21.txt",
+      "startLine": 290,
+      "endLine": 290,
+      "source": "memory",
+      "snippet": "User: [cron:ee31cff3-1ece-478c-93a1-6f31a214e794 Proactive Observations Evening] Tu exécutes les Observations Proactives en mode **Option A** : pas de script heuristique, pas de résumé mécanique, pas de redite. Mission : produire au maximum **une seule observation** vraiment util",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-22T03:00:11.341Z",
+      "lastRecalledAt": "2026-04-22T03:00:11.341Z",
+      "queryHashes": [
+        "01a984828e3e"
+      ],
+      "recallDays": [
+        "2026-04-21",
+        "2026-04-22"
+      ],
+      "conceptTags": [
+        "user",
+        "cron:ee31cff3",
+        "1ece",
+        "478c",
+        "93a1",
+        "6f31a214e794",
+        "proactive",
+        "observations"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-21.txt:291:291": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-21.txt:291:291",
+      "path": "memory/.dreams/session-corpus/2026-04-21.txt",
+      "startLine": 291,
+      "endLine": 291,
+      "source": "memory",
+      "snippet": "Assistant: Je commence par lire les fichiers nécessaires pour comprendre le contexte actuel.",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-22T03:00:11.341Z",
+      "lastRecalledAt": "2026-04-22T03:00:11.341Z",
+      "queryHashes": [
+        "01a984828e3e"
+      ],
+      "recallDays": [
+        "2026-04-21",
+        "2026-04-22"
+      ],
+      "conceptTags": [
+        "assistant",
+        "commence",
+        "par",
+        "lire",
+        "fichiers",
+        "nécessaires",
+        "comprendre",
+        "contexte"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-21.txt:292:292": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-21.txt:292:292",
+      "path": "memory/.dreams/session-corpus/2026-04-21.txt",
+      "startLine": 292,
+      "endLine": 292,
+      "source": "memory",
+      "snippet": "User: System (untrusted): [2026-04-21 19:51:18 UTC] Exec completed (briny-me, code 0) :: /root/.openclaw/workspace/memory/2026-04-21.md /root/.openclaw/workspace/memory/.dreams/session-corpus/2026-04-21.txt An async command you ran earlier has completed. The result is shown in th",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-22T03:00:11.341Z",
+      "lastRecalledAt": "2026-04-22T03:00:11.341Z",
+      "queryHashes": [
+        "01a984828e3e"
+      ],
+      "recallDays": [
+        "2026-04-21",
+        "2026-04-22"
+      ],
+      "conceptTags": [
+        "briny-me",
+        "openclaw/workspace/memory",
+        "user",
+        "system",
+        "untrusted",
+        "utc",
+        "exec",
+        "completed"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-21.txt:293:293": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-21.txt:293:293",
+      "path": "memory/.dreams/session-corpus/2026-04-21.txt",
+      "startLine": 293,
+      "endLine": 293,
+      "source": "memory",
+      "snippet": "Assistant: Noted, async exec completed successfully.",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-22T03:00:11.341Z",
+      "lastRecalledAt": "2026-04-22T03:00:11.341Z",
+      "queryHashes": [
+        "01a984828e3e"
+      ],
+      "recallDays": [
+        "2026-04-21",
+        "2026-04-22"
+      ],
+      "conceptTags": [
+        "assistant",
+        "noted",
+        "async",
+        "exec",
+        "completed",
+        "successfully"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-21.txt:294:294": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-21.txt:294:294",
+      "path": "memory/.dreams/session-corpus/2026-04-21.txt",
+      "startLine": 294,
+      "endLine": 294,
+      "source": "memory",
+      "snippet": "User: [cron:d7acb79c-894e-44df-af98-304950fd6e40 🌆 Veille IA - 19h00] Exécute le script de veille IA 19h : bash /root/.openclaw/workspace/scripts/veille-ia-19h.sh Current time: Tuesday, April 21st, 2026 - 17:00 (UTC) / 2026-04-21 17:00 UTC Return your summary as plain text; it w",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-22T03:00:11.341Z",
+      "lastRecalledAt": "2026-04-22T03:00:11.341Z",
+      "queryHashes": [
+        "01a984828e3e"
+      ],
+      "recallDays": [
+        "2026-04-21",
+        "2026-04-22"
+      ],
+      "conceptTags": [
+        "user",
+        "cron:d7acb79c",
+        "894e",
+        "44df",
+        "af98",
+        "304950fd6e40",
+        "veille",
+        "19h00"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-21.txt:295:295": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-21.txt:295:295",
+      "path": "memory/.dreams/session-corpus/2026-04-21.txt",
+      "startLine": 295,
+      "endLine": 295,
+      "source": "memory",
+      "snippet": "Assistant: Je vais exécuter le script de veille IA pour 19h comme demandé. Commençons par lire le script pour comprendre ce qu'il fait.",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-22T03:00:11.341Z",
+      "lastRecalledAt": "2026-04-22T03:00:11.341Z",
+      "queryHashes": [
+        "01a984828e3e"
+      ],
+      "recallDays": [
+        "2026-04-21",
+        "2026-04-22"
+      ],
+      "conceptTags": [
+        "assistant",
+        "vais",
+        "exécuter",
+        "script",
+        "veille",
+        "19h",
+        "comme",
+        "demandé"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-21.txt:296:296": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-21.txt:296:296",
+      "path": "memory/.dreams/session-corpus/2026-04-21.txt",
+      "startLine": 296,
+      "endLine": 296,
+      "source": "memory",
+      "snippet": "Assistant: ## Résumé de l'exécution de la veille IA 19h **Date** : 2026-04-21 à 17:01 (heure de Paris) **Thème du jour** : Produits **Statut** : Flash réussi, Deep Dive partiellement échoué ### ✅ Composantes accomplies : **⚡ Flash IA (68 lignes)** : - **Analyse comparative** Fran",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-22T03:00:11.341Z",
+      "lastRecalledAt": "2026-04-22T03:00:11.341Z",
+      "queryHashes": [
+        "01a984828e3e"
+      ],
+      "recallDays": [
+        "2026-04-21",
+        "2026-04-22"
+      ],
+      "conceptTags": [
+        "assistant",
+        "résumé",
+        "l'exécution",
+        "veille",
+        "19h",
+        "date",
+        "heure",
+        "paris"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-21.txt:297:297": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-21.txt:297:297",
+      "path": "memory/.dreams/session-corpus/2026-04-21.txt",
+      "startLine": 297,
+      "endLine": 297,
+      "source": "memory",
+      "snippet": "User: System: [2026-04-21 17:00:52 UTC] ✅ Dashboard d'évolution mis à jour. System: System: Total learnings : 3 (tous appliqués à 100%) | Pending : 0 | Systeme stable avec aucune issue en attente. System: [2026-04-21 17:03:13 UTC] ## Résumé de l'exécution de la veille IA 19h Syst",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-22T03:00:11.341Z",
+      "lastRecalledAt": "2026-04-22T03:00:11.341Z",
+      "queryHashes": [
+        "01a984828e3e"
+      ],
+      "recallDays": [
+        "2026-04-21",
+        "2026-04-22"
+      ],
+      "conceptTags": [
+        "user",
+        "system",
+        "utc",
+        "dashboard",
+        "d'évolution",
+        "mis",
+        "jour",
+        "total"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-21.txt:298:298": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-21.txt:298:298",
+      "path": "memory/.dreams/session-corpus/2026-04-21.txt",
+      "startLine": 298,
+      "endLine": 298,
+      "source": "memory",
+      "snippet": "Assistant: Saut de ~2 jours. Mardi 21 avril. Scripts heartbeat.",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-22T03:00:11.341Z",
+      "lastRecalledAt": "2026-04-22T03:00:11.341Z",
+      "queryHashes": [
+        "01a984828e3e"
+      ],
+      "recallDays": [
+        "2026-04-21",
+        "2026-04-22"
+      ],
+      "conceptTags": [
+        "assistant",
+        "saut",
+        "jours",
+        "mardi",
+        "avril",
+        "scripts",
+        "heartbeat"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-21.txt:299:299": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-21.txt:299:299",
+      "path": "memory/.dreams/session-corpus/2026-04-21.txt",
+      "startLine": 299,
+      "endLine": 299,
+      "source": "memory",
+      "snippet": "Assistant: Journaux des jours précédents : **611 erreurs (20/04)** et **861 erreurs (19/04)** — pics très élevés pendant le week-end. Aujourd'hui : 18 erreurs, sous contrôle. ✅ **Token OpenAI-Codex valide** ✅ ✅ **Dashboard** : 3 learnings (100% appliqués), système stable ⚠️ **Vei",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-22T03:00:11.341Z",
+      "lastRecalledAt": "2026-04-22T03:00:11.341Z",
+      "queryHashes": [
+        "01a984828e3e"
+      ],
+      "recallDays": [
+        "2026-04-21",
+        "2026-04-22"
+      ],
+      "conceptTags": [
+        "openai",
+        "20/04",
+        "19/04",
+        "week-end",
+        "openai-codex",
+        "assistant",
+        "journaux",
+        "jours"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-21.txt:300:300": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-21.txt:300:300",
+      "path": "memory/.dreams/session-corpus/2026-04-21.txt",
+      "startLine": 300,
+      "endLine": 300,
+      "source": "memory",
+      "snippet": "User: Read HEARTBEAT.md if it exists (workspace context). Follow it strictly. Do not infer or repeat old tasks from prior chats. If nothing needs attention, reply HEARTBEAT_OK. When reading HEARTBEAT.md, use workspace file /root/.openclaw/workspace/HEARTBEAT.md (exact case). Do n",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-22T03:00:11.341Z",
+      "lastRecalledAt": "2026-04-22T03:00:11.341Z",
+      "queryHashes": [
+        "01a984828e3e"
+      ],
+      "recallDays": [
+        "2026-04-21",
+        "2026-04-22"
+      ],
+      "conceptTags": [
+        "heartbeat.md",
+        "heartbeat-ok",
+        "openclaw/workspace/heartbeat.md",
+        "user",
+        "read",
+        "exists",
+        "context",
+        "follow"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-21.txt:301:301": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-21.txt:301:301",
+      "path": "memory/.dreams/session-corpus/2026-04-21.txt",
+      "startLine": 301,
+      "endLine": 301,
+      "source": "memory",
+      "snippet": "Assistant: ⚠️ **API Perplexity** | ⚠️ Cron Discord + market brief 📊 18 erreurs log jour | ✅ Token valide | Disque 48% | 📦 **OpenClaw v2026.4.10** dispo **Agents utilisés : main**",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-22T03:00:11.341Z",
+      "lastRecalledAt": "2026-04-22T03:00:11.341Z",
+      "queryHashes": [
+        "01a984828e3e"
+      ],
+      "recallDays": [
+        "2026-04-21",
+        "2026-04-22"
+      ],
+      "conceptTags": [
+        "v2026.4.10",
+        "assistant",
+        "api",
+        "perplexity",
+        "cron",
+        "discord",
+        "market",
+        "brief"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-21.txt:302:302": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-21.txt:302:302",
+      "path": "memory/.dreams/session-corpus/2026-04-21.txt",
+      "startLine": 302,
+      "endLine": 302,
+      "source": "memory",
+      "snippet": "User: System: [2026-04-21 18:00:51 UTC] 🧘‍♂️ Petit check-in : tu es encore là ? Pense à ouvrir la fenêtre 30s pour une bouffée d'oxygène avant de repartir ! Read HEARTBEAT.md if it exists (workspace context). Follow it strictly. Do not infer or repeat old tasks from prior chats.",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-22T03:00:11.341Z",
+      "lastRecalledAt": "2026-04-22T03:00:11.341Z",
+      "queryHashes": [
+        "01a984828e3e"
+      ],
+      "recallDays": [
+        "2026-04-21",
+        "2026-04-22"
+      ],
+      "conceptTags": [
+        "check-in",
+        "heartbeat.md",
+        "user",
+        "system",
+        "utc",
+        "petit",
+        "check",
+        "encore"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-21.txt:303:303": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-21.txt:303:303",
+      "path": "memory/.dreams/session-corpus/2026-04-21.txt",
+      "startLine": 303,
+      "endLine": 303,
+      "source": "memory",
+      "snippet": "Assistant: Stable. 18 erreurs, token valide, disque 48%. ⚠️ **API Perplexity** | ⚠️ Cron Discord + market brief 📊 18 erreurs log | ✅ Token valide | Disque 48% | 📦 **OpenClaw v2026.4.10** dispo 🧘‍♂️ Ouvre la fenêtre 30s pour une bouffée d'oxygène ! **Agents utilisés : main**",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-22T03:00:11.341Z",
+      "lastRecalledAt": "2026-04-22T03:00:11.341Z",
+      "queryHashes": [
+        "01a984828e3e"
+      ],
+      "recallDays": [
+        "2026-04-21",
+        "2026-04-22"
+      ],
+      "conceptTags": [
+        "v2026.4.10",
+        "assistant",
+        "stable",
+        "erreurs",
+        "token",
+        "valide",
+        "disque",
+        "api"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-21.txt:304:304": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-21.txt:304:304",
+      "path": "memory/.dreams/session-corpus/2026-04-21.txt",
+      "startLine": 304,
+      "endLine": 304,
+      "source": "memory",
+      "snippet": "User: Read HEARTBEAT.md if it exists (workspace context). Follow it strictly. Do not infer or repeat old tasks from prior chats. If nothing needs attention, reply HEARTBEAT_OK. When reading HEARTBEAT.md, use workspace file /root/.openclaw/workspace/HEARTBEAT.md (exact case). Do n",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-22T03:00:11.341Z",
+      "lastRecalledAt": "2026-04-22T03:00:11.341Z",
+      "queryHashes": [
+        "01a984828e3e"
+      ],
+      "recallDays": [
+        "2026-04-21",
+        "2026-04-22"
+      ],
+      "conceptTags": [
+        "heartbeat.md",
+        "heartbeat-ok",
+        "openclaw/workspace/heartbeat.md",
+        "user",
+        "read",
+        "exists",
+        "context",
+        "follow"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-21.txt:305:305": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-21.txt:305:305",
+      "path": "memory/.dreams/session-corpus/2026-04-21.txt",
+      "startLine": 305,
+      "endLine": 305,
+      "source": "memory",
+      "snippet": "Assistant: 25 erreurs (↑18). Token valide. Disque 48%. ⚠️ **API Perplexity** | ⚠️ Cron Discord + market brief 📊 25 erreurs log | ✅ Token valide | Disque 48% | 📦 **OpenClaw v2026.4.10** dispo **Agents utilisés : main**",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-22T03:00:11.341Z",
+      "lastRecalledAt": "2026-04-22T03:00:11.341Z",
+      "queryHashes": [
+        "01a984828e3e"
+      ],
+      "recallDays": [
+        "2026-04-21",
+        "2026-04-22"
+      ],
+      "conceptTags": [
+        "v2026.4.10",
+        "assistant",
+        "erreurs",
+        "token",
+        "valide",
+        "disque",
+        "api",
+        "perplexity"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-21.txt:306:306": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-21.txt:306:306",
+      "path": "memory/.dreams/session-corpus/2026-04-21.txt",
+      "startLine": 306,
+      "endLine": 306,
+      "source": "memory",
+      "snippet": "User: Read HEARTBEAT.md if it exists (workspace context). Follow it strictly. Do not infer or repeat old tasks from prior chats. If nothing needs attention, reply HEARTBEAT_OK. When reading HEARTBEAT.md, use workspace file /root/.openclaw/workspace/HEARTBEAT.md (exact case). Do n",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-22T03:00:11.341Z",
+      "lastRecalledAt": "2026-04-22T03:00:11.341Z",
+      "queryHashes": [
+        "01a984828e3e"
+      ],
+      "recallDays": [
+        "2026-04-21",
+        "2026-04-22"
+      ],
+      "conceptTags": [
+        "heartbeat.md",
+        "heartbeat-ok",
+        "openclaw/workspace/heartbeat.md",
+        "user",
+        "read",
+        "exists",
+        "context",
+        "follow"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-21.txt:307:307": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-21.txt:307:307",
+      "path": "memory/.dreams/session-corpus/2026-04-21.txt",
+      "startLine": 307,
+      "endLine": 307,
+      "source": "memory",
+      "snippet": "Assistant: ⚠️ **API Perplexity** | ⚠️ Cron Discord + market brief 📊 26 erreurs log | ✅ Token valide | Disque 48% | 📦 **OpenClaw v2026.4.10** dispo **Agents utilisés : main**",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-22T03:00:11.341Z",
+      "lastRecalledAt": "2026-04-22T03:00:11.341Z",
+      "queryHashes": [
+        "01a984828e3e"
+      ],
+      "recallDays": [
+        "2026-04-21",
+        "2026-04-22"
+      ],
+      "conceptTags": [
+        "v2026.4.10",
+        "assistant",
+        "api",
+        "perplexity",
+        "cron",
+        "discord",
+        "market",
+        "brief"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-21.txt:308:308": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-21.txt:308:308",
+      "path": "memory/.dreams/session-corpus/2026-04-21.txt",
+      "startLine": 308,
+      "endLine": 308,
+      "source": "memory",
+      "snippet": "User: Read HEARTBEAT.md if it exists (workspace context). Follow it strictly. Do not infer or repeat old tasks from prior chats. If nothing needs attention, reply HEARTBEAT_OK. When reading HEARTBEAT.md, use workspace file /root/.openclaw/workspace/HEARTBEAT.md (exact case). Do n",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-22T03:00:11.341Z",
+      "lastRecalledAt": "2026-04-22T03:00:11.341Z",
+      "queryHashes": [
+        "01a984828e3e"
+      ],
+      "recallDays": [
+        "2026-04-21",
+        "2026-04-22"
+      ],
+      "conceptTags": [
+        "heartbeat.md",
+        "heartbeat-ok",
+        "openclaw/workspace/heartbeat.md",
+        "user",
+        "read",
+        "exists",
+        "context",
+        "follow"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-21.txt:309:309": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-21.txt:309:309",
+      "path": "memory/.dreams/session-corpus/2026-04-21.txt",
+      "startLine": 309,
+      "endLine": 309,
+      "source": "memory",
+      "snippet": "User: [cron:fafa8c4c-e442-4375-960c-f27113cbcb9a Bourse US - Mi-séance] Tu es DoudouBot. Génère le point **Bourse US — Mi-séance** via le script API-first. 1) Exécute: `cd /root/.openclaw/workspace && python3 scripts/market_brief.py --region us --session mid --shares 111` 2) Util",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-22T03:00:11.341Z",
+      "lastRecalledAt": "2026-04-22T03:00:11.341Z",
+      "queryHashes": [
+        "01a984828e3e"
+      ],
+      "recallDays": [
+        "2026-04-21",
+        "2026-04-22"
+      ],
+      "conceptTags": [
+        "mi-séance",
+        "api-first",
+        "openclaw/workspace",
+        "scripts/market-brief.py",
+        "user",
+        "cron:fafa8c4c",
+        "e442",
+        "960c"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-21.txt:310:310": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-21.txt:310:310",
+      "path": "memory/.dreams/session-corpus/2026-04-21.txt",
+      "startLine": 310,
+      "endLine": 310,
+      "source": "memory",
+      "snippet": "User: [cron:d0b8fcd0-5a7a-493c-9541-7982ff8a280c Model usage digest (daily 20:30 Paris)] Tu es DoudouBot. Prépare un mini rapport quotidien d'usage modèle pour Doudou, en français, tutoiement, format court (4-8 lignes max) avec emojis. Important: pour l'état du modèle/usage, appe",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-22T03:00:11.341Z",
+      "lastRecalledAt": "2026-04-22T03:00:11.341Z",
+      "queryHashes": [
+        "01a984828e3e"
+      ],
+      "recallDays": [
+        "2026-04-21",
+        "2026-04-22"
+      ],
+      "conceptTags": [
+        "4-8",
+        "modèle/usage",
+        "user",
+        "cron:d0b8fcd0",
+        "5a7a",
+        "493c",
+        "7982ff8a280c",
+        "model"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-21.txt:311:311": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-21.txt:311:311",
+      "path": "memory/.dreams/session-corpus/2026-04-21.txt",
+      "startLine": 311,
+      "endLine": 311,
+      "source": "memory",
+      "snippet": "Assistant: NO_REPLY",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-22T03:00:11.341Z",
+      "lastRecalledAt": "2026-04-22T03:00:11.341Z",
+      "queryHashes": [
+        "01a984828e3e"
+      ],
+      "recallDays": [
+        "2026-04-21",
+        "2026-04-22"
+      ],
+      "conceptTags": [
+        "no-reply",
+        "assistant"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-21.txt:312:312": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-21.txt:312:312",
+      "path": "memory/.dreams/session-corpus/2026-04-21.txt",
+      "startLine": 312,
+      "endLine": 312,
+      "source": "memory",
+      "snippet": "User: [cron:6e66b18f-9753-4c7d-9dba-f472b85c86ef Memory Sync LTM 22h] Tâche mémoire nocturne: 1) Lire MEMORY.md et le fichier memory/YYYY-MM-DD.md du jour (Europe/Paris) s'il existe. 2) Identifier max 10 points importants (préférences stables, décisions long terme, faits relation",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-22T03:00:11.341Z",
+      "lastRecalledAt": "2026-04-22T03:00:11.341Z",
+      "queryHashes": [
+        "01a984828e3e"
+      ],
+      "recallDays": [
+        "2026-04-21",
+        "2026-04-22"
+      ],
+      "conceptTags": [
+        "memory.md",
+        "memory/yyyy-mm-dd.md",
+        "europe/paris",
+        "user",
+        "cron",
+        "6e66b18f",
+        "4c7d",
+        "9dba"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-21.txt:313:313": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-21.txt:313:313",
+      "path": "memory/.dreams/session-corpus/2026-04-21.txt",
+      "startLine": 313,
+      "endLine": 313,
+      "source": "memory",
+      "snippet": "Assistant: Je vois qu'un cron Memory Sync est en cours d'exécution. Je vais attendre qu'il se termine avant d'intervenir, mais je vais d'abord lire les fichiers contextuels pour comprendre la situation.",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-22T03:00:11.341Z",
+      "lastRecalledAt": "2026-04-22T03:00:11.341Z",
+      "queryHashes": [
+        "01a984828e3e"
+      ],
+      "recallDays": [
+        "2026-04-21",
+        "2026-04-22"
+      ],
+      "conceptTags": [
+        "assistant",
+        "vois",
+        "qu'un",
+        "cron",
+        "sync",
+        "cours",
+        "d'exécution",
+        "vais"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-21.txt:314:314": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-21.txt:314:314",
+      "path": "memory/.dreams/session-corpus/2026-04-21.txt",
+      "startLine": 314,
+      "endLine": 314,
+      "source": "memory",
+      "snippet": "Assistant: Je vois qu'un cron Memory Sync est en cours d'exécution - c'est un processus de synchronisation mémoire nocturne important pour maintenir la cohérence entre la mémoire à long terme et le journal quotidien. Ce cron fait actuellement : 1. Lecture de MEMORY.md et memory/2",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-22T03:00:11.341Z",
+      "lastRecalledAt": "2026-04-22T03:00:11.341Z",
+      "queryHashes": [
+        "01a984828e3e"
+      ],
+      "recallDays": [
+        "2026-04-21",
+        "2026-04-22"
+      ],
+      "conceptTags": [
+        "memory.md",
+        "memory/2",
+        "assistant",
+        "vois",
+        "qu'un",
+        "cron",
+        "sync",
+        "cours"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-21.txt:315:315": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-21.txt:315:315",
+      "path": "memory/.dreams/session-corpus/2026-04-21.txt",
+      "startLine": 315,
+      "endLine": 315,
+      "source": "memory",
+      "snippet": "User: [cron:a156a993-1c6a-4675-8856-c80310cc69da Evolution Dashboard - Mise à jour 19h] Lance la mise à jour du dashboard d'évolution : bash scripts/update-evolution-dashboard.sh Puis résume en 2-3 lignes : nombre total de learnings, pending, et si des changements notables depuis",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-22T03:00:11.341Z",
+      "lastRecalledAt": "2026-04-22T03:00:11.341Z",
+      "queryHashes": [
+        "01a984828e3e"
+      ],
+      "recallDays": [
+        "2026-04-21",
+        "2026-04-22"
+      ],
+      "conceptTags": [
+        "2-3",
+        "user",
+        "cron:a156a993",
+        "1c6a",
+        "c80310cc69da",
+        "evolution",
+        "dashboard",
+        "mise"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-21.txt:316:316": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-21.txt:316:316",
+      "path": "memory/.dreams/session-corpus/2026-04-21.txt",
+      "startLine": 316,
+      "endLine": 316,
+      "source": "memory",
+      "snippet": "Assistant: ✅ Dashboard d'évolution mis à jour. Total learnings : 3 (tous appliqués à 100%) | Pending : 0 | Systeme stable avec aucune issue en attente.",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-22T03:00:11.341Z",
+      "lastRecalledAt": "2026-04-22T03:00:11.341Z",
+      "queryHashes": [
+        "01a984828e3e"
+      ],
+      "recallDays": [
+        "2026-04-21",
+        "2026-04-22"
+      ],
+      "conceptTags": [
+        "assistant",
+        "dashboard",
+        "d'évolution",
+        "mis",
+        "jour",
+        "total",
+        "learnings",
+        "tous"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-21.txt:317:317": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-21.txt:317:317",
+      "path": "memory/.dreams/session-corpus/2026-04-21.txt",
+      "startLine": 317,
+      "endLine": 317,
+      "source": "memory",
+      "snippet": "User: [cron:fafa8c4c-e442-4375-960c-f27113cbcb9a Bourse US - Mi-séance] Tu es DoudouBot. Génère le point **Bourse US — Mi-séance** via le script API-first. 1) Exécute: `cd /root/.openclaw/workspace && python3 scripts/market_brief.py --region us --session mid --shares 111` 2) Util",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-22T03:00:11.341Z",
+      "lastRecalledAt": "2026-04-22T03:00:11.341Z",
+      "queryHashes": [
+        "01a984828e3e"
+      ],
+      "recallDays": [
+        "2026-04-21",
+        "2026-04-22"
+      ],
+      "conceptTags": [
+        "mi-séance",
+        "api-first",
+        "openclaw/workspace",
+        "scripts/market-brief.py",
+        "user",
+        "cron:fafa8c4c",
+        "e442",
+        "960c"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-21.txt:318:318": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-21.txt:318:318",
+      "path": "memory/.dreams/session-corpus/2026-04-21.txt",
+      "startLine": 318,
+      "endLine": 318,
+      "source": "memory",
+      "snippet": "Assistant: NO_REPLY",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-22T03:00:11.341Z",
+      "lastRecalledAt": "2026-04-22T03:00:11.341Z",
+      "queryHashes": [
+        "01a984828e3e"
+      ],
+      "recallDays": [
+        "2026-04-21",
+        "2026-04-22"
+      ],
+      "conceptTags": [
+        "no-reply",
+        "assistant"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-21.txt:319:319": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-21.txt:319:319",
+      "path": "memory/.dreams/session-corpus/2026-04-21.txt",
+      "startLine": 319,
+      "endLine": 319,
+      "source": "memory",
+      "snippet": "Assistant: Stable à 26 erreurs. Aucun changement. ⚠️ **API Perplexity** | ⚠️ Cron Discord + market brief 📊 26 erreurs log | ✅ Token valide | Disque 48% | 📦 **OpenClaw v2026.4.10** dispo **Agents utilisés : main**",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-22T03:00:11.341Z",
+      "lastRecalledAt": "2026-04-22T03:00:11.341Z",
+      "queryHashes": [
+        "01a984828e3e"
+      ],
+      "recallDays": [
+        "2026-04-21",
+        "2026-04-22"
+      ],
+      "conceptTags": [
+        "v2026.4.10",
+        "assistant",
+        "stable",
+        "erreurs",
+        "aucun",
+        "changement",
+        "api",
+        "perplexity"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-21.txt:320:320": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-21.txt:320:320",
+      "path": "memory/.dreams/session-corpus/2026-04-21.txt",
+      "startLine": 320,
+      "endLine": 320,
+      "source": "memory",
+      "snippet": "User: Read HEARTBEAT.md if it exists (workspace context). Follow it strictly. Do not infer or repeat old tasks from prior chats. If nothing needs attention, reply HEARTBEAT_OK. When reading HEARTBEAT.md, use workspace file /root/.openclaw/workspace/HEARTBEAT.md (exact case). Do n",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-22T03:00:11.341Z",
+      "lastRecalledAt": "2026-04-22T03:00:11.341Z",
+      "queryHashes": [
+        "01a984828e3e"
+      ],
+      "recallDays": [
+        "2026-04-21",
+        "2026-04-22"
+      ],
+      "conceptTags": [
+        "heartbeat.md",
+        "heartbeat-ok",
+        "openclaw/workspace/heartbeat.md",
+        "user",
+        "read",
+        "exists",
+        "context",
+        "follow"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-21.txt:321:321": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-21.txt:321:321",
+      "path": "memory/.dreams/session-corpus/2026-04-21.txt",
+      "startLine": 321,
+      "endLine": 321,
+      "source": "memory",
+      "snippet": "Assistant: 34 erreurs journal (↑26), 18 mentions d'erreur daily note (↑12). ⚠️ **API Perplexity** | ⚠️ Cron Discord + market brief 📊 **34 erreurs journal** | ✅ Token valide | Disque 48% | 📦 **OpenClaw v2026.4.10** disponible **Agents utilisés : principal**",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-22T03:00:11.341Z",
+      "lastRecalledAt": "2026-04-22T03:00:11.341Z",
+      "queryHashes": [
+        "01a984828e3e"
+      ],
+      "recallDays": [
+        "2026-04-21",
+        "2026-04-22"
+      ],
+      "conceptTags": [
+        "v2026.4.10",
+        "assistant",
+        "erreurs",
+        "journal",
+        "mentions",
+        "d'erreur",
+        "api",
+        "perplexity"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-21.txt:322:322": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-21.txt:322:322",
+      "path": "memory/.dreams/session-corpus/2026-04-21.txt",
+      "startLine": 322,
+      "endLine": 322,
+      "source": "memory",
+      "snippet": "User: Read HEARTBEAT.md if it exists (workspace context). Follow it strictly. Do not infer or repeat old tasks from prior chats. If nothing needs attention, reply HEARTBEAT_OK. When reading HEARTBEAT.md, use workspace file /root/.openclaw/workspace/HEARTBEAT.md (exact case). Do n",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-22T03:00:11.341Z",
+      "lastRecalledAt": "2026-04-22T03:00:11.341Z",
+      "queryHashes": [
+        "01a984828e3e"
+      ],
+      "recallDays": [
+        "2026-04-21",
+        "2026-04-22"
+      ],
+      "conceptTags": [
+        "heartbeat.md",
+        "heartbeat-ok",
+        "openclaw/workspace/heartbeat.md",
+        "user",
+        "read",
+        "exists",
+        "context",
+        "follow"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-21.txt:323:323": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-21.txt:323:323",
+      "path": "memory/.dreams/session-corpus/2026-04-21.txt",
+      "startLine": 323,
+      "endLine": 323,
+      "source": "memory",
+      "snippet": "Assistant: ⚠️ **API Perplexity** | ⚠️ Cron Discord + market brief 📊 34 erreurs log | ✅ Token valide | Disque 48% | 📦 **OpenClaw v2026.4.10** dispo **Agents utilisés : main**",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-22T03:00:11.341Z",
+      "lastRecalledAt": "2026-04-22T03:00:11.341Z",
+      "queryHashes": [
+        "01a984828e3e"
+      ],
+      "recallDays": [
+        "2026-04-21",
+        "2026-04-22"
+      ],
+      "conceptTags": [
+        "v2026.4.10",
+        "assistant",
+        "api",
+        "perplexity",
+        "cron",
+        "discord",
+        "market",
+        "brief"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-21.txt:324:324": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-21.txt:324:324",
+      "path": "memory/.dreams/session-corpus/2026-04-21.txt",
+      "startLine": 324,
+      "endLine": 324,
+      "source": "memory",
+      "snippet": "User: System: [2026-04-21 21:00:47 UTC] Résultats System: - memory: memory/2026-04-21.md mis à jour System: - open-loops: notes/areas/open-loops.md mis à jour System: - commit: 3efb5961 System: System: Points à retenir System: - Next action: [2026-04-19 21:01] Test unchecked task",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-22T03:00:11.341Z",
+      "lastRecalledAt": "2026-04-22T03:00:11.341Z",
+      "queryHashes": [
+        "01a984828e3e"
+      ],
+      "recallDays": [
+        "2026-04-21",
+        "2026-04-22"
+      ],
+      "conceptTags": [
+        "memory/2026-04-21.md",
+        "open-loops",
+        "notes/areas/open-loops.md",
+        "user",
+        "system",
+        "utc",
+        "résultats",
+        "mis"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-21.txt:325:325": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-21.txt:325:325",
+      "path": "memory/.dreams/session-corpus/2026-04-21.txt",
+      "startLine": 325,
+      "endLine": 325,
+      "source": "memory",
+      "snippet": "Assistant: ✅ Checkpoint soir OK (commit `3efb5961`). Scripts heartbeat.",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-22T03:00:11.341Z",
+      "lastRecalledAt": "2026-04-22T03:00:11.341Z",
+      "queryHashes": [
+        "01a984828e3e"
+      ],
+      "recallDays": [
+        "2026-04-21",
+        "2026-04-22"
+      ],
+      "conceptTags": [
+        "assistant",
+        "checkpoint",
+        "soir",
+        "commit",
+        "3efb5961",
+        "scripts",
+        "heartbeat"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-21.txt:326:326": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-21.txt:326:326",
+      "path": "memory/.dreams/session-corpus/2026-04-21.txt",
+      "startLine": 326,
+      "endLine": 326,
+      "source": "memory",
+      "snippet": "Assistant: ✅ **Checkpoint PARA soir OK** (commit `3efb5961`) ⚠️ **API Perplexity** | ⚠️ Cron Discord + market brief 📊 34 erreurs log | ✅ Token valide | Disque 48% | 📦 **OpenClaw v2026.4.10** dispo **Agents utilisés : main**",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-22T03:00:11.341Z",
+      "lastRecalledAt": "2026-04-22T03:00:11.341Z",
+      "queryHashes": [
+        "01a984828e3e"
+      ],
+      "recallDays": [
+        "2026-04-21",
+        "2026-04-22"
+      ],
+      "conceptTags": [
+        "v2026.4.10",
+        "assistant",
+        "checkpoint",
+        "soir",
+        "commit",
+        "3efb5961",
+        "api",
+        "perplexity"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-21.txt:327:327": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-21.txt:327:327",
+      "path": "memory/.dreams/session-corpus/2026-04-21.txt",
+      "startLine": 327,
+      "endLine": 327,
+      "source": "memory",
+      "snippet": "User: Read HEARTBEAT.md if it exists (workspace context). Follow it strictly. Do not infer or repeat old tasks from prior chats. If nothing needs attention, reply HEARTBEAT_OK. When reading HEARTBEAT.md, use workspace file /root/.openclaw/workspace/HEARTBEAT.md (exact case). Do n",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-22T03:00:11.341Z",
+      "lastRecalledAt": "2026-04-22T03:00:11.341Z",
+      "queryHashes": [
+        "01a984828e3e"
+      ],
+      "recallDays": [
+        "2026-04-21",
+        "2026-04-22"
+      ],
+      "conceptTags": [
+        "heartbeat.md",
+        "heartbeat-ok",
+        "openclaw/workspace/heartbeat.md",
+        "user",
+        "read",
+        "exists",
+        "context",
+        "follow"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-21.txt:328:328": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-21.txt:328:328",
+      "path": "memory/.dreams/session-corpus/2026-04-21.txt",
+      "startLine": 328,
+      "endLine": 328,
+      "source": "memory",
+      "snippet": "Assistant: ⚠️ **API Perplexity** | ⚠️ Cron Discord + marché résumé 📊 34 erreurs journal | ✅ Jeton valide | Disque 48% | 📦 **OpenClaw v2026.4.10** disponible **Agents utilisés : principal**",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-22T03:00:11.341Z",
+      "lastRecalledAt": "2026-04-22T03:00:11.341Z",
+      "queryHashes": [
+        "01a984828e3e"
+      ],
+      "recallDays": [
+        "2026-04-21",
+        "2026-04-22"
+      ],
+      "conceptTags": [
+        "v2026.4.10",
+        "assistant",
+        "api",
+        "perplexity",
+        "cron",
+        "discord",
+        "marché",
+        "résumé"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-21.txt:329:329": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-21.txt:329:329",
+      "path": "memory/.dreams/session-corpus/2026-04-21.txt",
+      "startLine": 329,
+      "endLine": 329,
+      "source": "memory",
+      "snippet": "User: Read HEARTBEAT.md if it exists (workspace context). Follow it strictly. Do not infer or repeat old tasks from prior chats. If nothing needs attention, reply HEARTBEAT_OK. When reading HEARTBEAT.md, use workspace file /root/.openclaw/workspace/HEARTBEAT.md (exact case). Do n",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-22T03:00:11.341Z",
+      "lastRecalledAt": "2026-04-22T03:00:11.341Z",
+      "queryHashes": [
+        "01a984828e3e"
+      ],
+      "recallDays": [
+        "2026-04-21",
+        "2026-04-22"
+      ],
+      "conceptTags": [
+        "heartbeat.md",
+        "heartbeat-ok",
+        "openclaw/workspace/heartbeat.md",
+        "user",
+        "read",
+        "exists",
+        "context",
+        "follow"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-21.txt:330:330": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-21.txt:330:330",
+      "path": "memory/.dreams/session-corpus/2026-04-21.txt",
+      "startLine": 330,
+      "endLine": 330,
+      "source": "memory",
+      "snippet": "Assistant: ⚠️ **API Perplexity** | ⚠️ Cron Discord + market brief 📊 34 erreurs log | ✅ Token valide | Disque 48% | 📦 **OpenClaw v2026.4.10** dispo 🌙 Bonne nuit Doudou ! **Agents utilisés : main**",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-22T03:00:11.341Z",
+      "lastRecalledAt": "2026-04-22T03:00:11.341Z",
+      "queryHashes": [
+        "01a984828e3e"
+      ],
+      "recallDays": [
+        "2026-04-21",
+        "2026-04-22"
+      ],
+      "conceptTags": [
+        "v2026.4.10",
+        "assistant",
+        "api",
+        "perplexity",
+        "cron",
+        "discord",
+        "market",
+        "brief"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-22.txt:1:1": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-22.txt:1:1",
+      "path": "memory/.dreams/session-corpus/2026-04-22.txt",
+      "startLine": 1,
+      "endLine": 1,
+      "source": "memory",
+      "snippet": "User: [Wed 2026-04-22 03:00 UTC] Write a dream diary entry from these memory fragments: - 10:01 UTC — AUTO PARA 3-min (midi): Checkpoint automatique exécuté.; Prochaine action suggérée: [2026-04-20 21:01] Test unchecked task for PARA automation; Objectif: garder une seule prochai",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-22T03:00:11.341Z",
+      "lastRecalledAt": "2026-04-22T03:00:11.341Z",
+      "queryHashes": [
+        "a1f7c25a87a0"
+      ],
+      "recallDays": [
+        "2026-04-22"
+      ],
+      "conceptTags": [
+        "3-min",
+        "user",
+        "wed",
+        "utc",
+        "write",
+        "dream",
+        "diary",
+        "entry"
+      ]
+    },
+    "memory:memory/2026-04-22.md:428:431": {
+      "key": "memory:memory/2026-04-22.md:428:431",
+      "path": "memory/2026-04-22.md",
+      "startLine": 428,
+      "endLine": 431,
+      "source": "memory",
+      "snippet": "Reflections: Theme: `user` kept surfacing across 979 memories.; confidence: 0.84; evidence: memory/2026-04-13.md:357-360, memory/2026-04-14.md:397-400, memory/.dreams/session-corpus/2026-04-14.txt:302-302; note: reflection",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-04-22T03:30:06.191Z",
+      "lastRecalledAt": "2026-04-22T03:30:06.191Z",
+      "queryHashes": [
+        "7b7a9134bc2c"
+      ],
+      "recallDays": [
+        "2026-04-22"
+      ],
+      "conceptTags": [
+        "0.84",
+        "memory/2026-04-13.md",
+        "357-360",
+        "memory/2026-04-14.md",
+        "397-400",
+        "302-302",
+        "reflections",
+        "theme"
+      ]
+    },
+    "memory:memory/2026-04-22.md:432:435": {
+      "key": "memory:memory/2026-04-22.md:432:435",
+      "path": "memory/2026-04-22.md",
+      "startLine": 432,
+      "endLine": 435,
+      "source": "memory",
+      "snippet": "Reflections: Theme: `assistant` kept surfacing across 894 memories.; confidence: 0.77; evidence: memory/2026-04-12.md:358-361, memory/2026-04-13.md:353-356, memory/2026-04-14.md:393-396; note: reflection",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-04-22T03:30:06.191Z",
+      "lastRecalledAt": "2026-04-22T03:30:06.191Z",
+      "queryHashes": [
+        "7b7a9134bc2c"
+      ],
+      "recallDays": [
+        "2026-04-22"
+      ],
+      "conceptTags": [
+        "0.77",
+        "memory/2026-04-12.md",
+        "358-361",
+        "memory/2026-04-13.md",
+        "353-356",
+        "memory/2026-04-14.md",
+        "393-396",
+        "reflections"
+      ]
+    },
+    "memory:memory/2026-04-22.md:438:440": {
+      "key": "memory:memory/2026-04-22.md:438:440",
+      "path": "memory/2026-04-22.md",
+      "startLine": 438,
+      "endLine": 440,
+      "source": "memory",
+      "snippet": "Possible Lasting Truths: - 1. 🔍 **Investigation scraping**: Tester le script `scrape-urls.py` individuellement 2. 🔧 **Token renewal**: Renouveler le token OpenAI expiré 3. 📊 **Cron diagnostics**: Analyser les crons en erreur systématique 4. 🔄 **Script veille**: Ajouter des ti",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-04-22T03:30:06.191Z",
+      "lastRecalledAt": "2026-04-22T03:30:06.191Z",
+      "queryHashes": [
+        "7b7a9134bc2c"
+      ],
+      "recallDays": [
+        "2026-04-22"
+      ],
+      "conceptTags": [
+        "openai",
+        "scrape-urls.py",
+        "possible",
+        "lasting",
+        "truths",
+        "investigation",
+        "scraping",
+        "tester"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-21.txt:331:331": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-21.txt:331:331",
+      "path": "memory/.dreams/session-corpus/2026-04-21.txt",
+      "startLine": 331,
+      "endLine": 331,
+      "source": "memory",
+      "snippet": "User: Read HEARTBEAT.md if it exists (workspace context). Follow it strictly. Do not infer or repeat old tasks from prior chats. If nothing needs attention, reply HEARTBEAT_OK. When reading HEARTBEAT.md, use workspace file /root/.openclaw/workspace/HEARTBEAT.md (exact case). Do n",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-22T03:30:06.191Z",
+      "lastRecalledAt": "2026-04-22T03:30:06.191Z",
+      "queryHashes": [
+        "01a984828e3e"
+      ],
+      "recallDays": [
+        "2026-04-21",
+        "2026-04-22"
+      ],
+      "conceptTags": [
+        "heartbeat.md",
+        "heartbeat-ok",
+        "openclaw/workspace/heartbeat.md",
+        "user",
+        "read",
+        "exists",
+        "context",
+        "follow"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-21.txt:332:332": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-21.txt:332:332",
+      "path": "memory/.dreams/session-corpus/2026-04-21.txt",
+      "startLine": 332,
+      "endLine": 332,
+      "source": "memory",
+      "snippet": "Assistant: Stable. 34 erreurs, aucun changement depuis 2 cycles. ⚠️ **API Perplexity** | ⚠️ Cron Discord + market brief 📊 34 erreurs log | ✅ Token valide | Disque 48% | 📦 **OpenClaw v2026.4.10** dispo **Agents utilisés : main**",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-22T03:30:06.191Z",
+      "lastRecalledAt": "2026-04-22T03:30:06.191Z",
+      "queryHashes": [
+        "01a984828e3e"
+      ],
+      "recallDays": [
+        "2026-04-21",
+        "2026-04-22"
+      ],
+      "conceptTags": [
+        "v2026.4.10",
+        "assistant",
+        "stable",
+        "erreurs",
+        "aucun",
+        "changement",
+        "depuis",
+        "cycles"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-21.txt:333:333": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-21.txt:333:333",
+      "path": "memory/.dreams/session-corpus/2026-04-21.txt",
+      "startLine": 333,
+      "endLine": 333,
+      "source": "memory",
+      "snippet": "User: Read HEARTBEAT.md if it exists (workspace context). Follow it strictly. Do not infer or repeat old tasks from prior chats. If nothing needs attention, reply HEARTBEAT_OK. When reading HEARTBEAT.md, use workspace file /root/.openclaw/workspace/HEARTBEAT.md (exact case). Do n",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-22T03:30:06.191Z",
+      "lastRecalledAt": "2026-04-22T03:30:06.191Z",
+      "queryHashes": [
+        "01a984828e3e"
+      ],
+      "recallDays": [
+        "2026-04-21",
+        "2026-04-22"
+      ],
+      "conceptTags": [
+        "heartbeat.md",
+        "heartbeat-ok",
+        "openclaw/workspace/heartbeat.md",
+        "user",
+        "read",
+        "exists",
+        "context",
+        "follow"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-21.txt:334:334": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-21.txt:334:334",
+      "path": "memory/.dreams/session-corpus/2026-04-21.txt",
+      "startLine": 334,
+      "endLine": 334,
+      "source": "memory",
+      "snippet": "Assistant: ⚠️ **API Perplexity** | ⚠️ Cron Discord + market brief 📊 34 erreurs log | ✅ Token valide | Disque 48% | 📦 **OpenClaw v2026.4.10** dispo **Agents utilisés : main**",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-22T03:30:06.191Z",
+      "lastRecalledAt": "2026-04-22T03:30:06.191Z",
+      "queryHashes": [
+        "01a984828e3e"
+      ],
+      "recallDays": [
+        "2026-04-21",
+        "2026-04-22"
+      ],
+      "conceptTags": [
+        "v2026.4.10",
+        "assistant",
+        "api",
+        "perplexity",
+        "cron",
+        "discord",
+        "market",
+        "brief"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-21.txt:335:335": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-21.txt:335:335",
+      "path": "memory/.dreams/session-corpus/2026-04-21.txt",
+      "startLine": 335,
+      "endLine": 335,
+      "source": "memory",
+      "snippet": "User: Read HEARTBEAT.md if it exists (workspace context). Follow it strictly. Do not infer or repeat old tasks from prior chats. If nothing needs attention, reply HEARTBEAT_OK. When reading HEARTBEAT.md, use workspace file /root/.openclaw/workspace/HEARTBEAT.md (exact case). Do n",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-22T03:30:06.191Z",
+      "lastRecalledAt": "2026-04-22T03:30:06.191Z",
+      "queryHashes": [
+        "01a984828e3e"
+      ],
+      "recallDays": [
+        "2026-04-21",
+        "2026-04-22"
+      ],
+      "conceptTags": [
+        "heartbeat.md",
+        "heartbeat-ok",
+        "openclaw/workspace/heartbeat.md",
+        "user",
+        "read",
+        "exists",
+        "context",
+        "follow"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-22.txt:2:2": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-22.txt:2:2",
+      "path": "memory/.dreams/session-corpus/2026-04-22.txt",
+      "startLine": 2,
+      "endLine": 2,
+      "source": "memory",
+      "snippet": "User: [Wed 2026-04-22 03:01 UTC] Write a dream diary entry from these memory fragments: - - 1. 🔍 **Investigation scraping**: Tester le script `scrape-urls.py` individuellement 2. 🔧 **Token renewal**: Renouveler le token OpenAI expiré 3. 📊 **Cron diagnostics**: Analyser les cro",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-22T03:30:06.191Z",
+      "lastRecalledAt": "2026-04-22T03:30:06.191Z",
+      "queryHashes": [
+        "a1f7c25a87a0"
+      ],
+      "recallDays": [
+        "2026-04-22"
+      ],
+      "conceptTags": [
+        "openai",
+        "scrape-urls.py",
+        "user",
+        "wed",
+        "utc",
+        "write",
+        "dream",
+        "diary"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-22.txt:3:3": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-22.txt:3:3",
+      "path": "memory/.dreams/session-corpus/2026-04-22.txt",
+      "startLine": 3,
+      "endLine": 3,
+      "source": "memory",
+      "snippet": "User: Continue where you left off. The previous model attempt failed or timed out.",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-22T03:30:06.191Z",
+      "lastRecalledAt": "2026-04-22T03:30:06.191Z",
+      "queryHashes": [
+        "a1f7c25a87a0"
+      ],
+      "recallDays": [
+        "2026-04-22"
+      ],
+      "conceptTags": [
+        "user",
+        "continue",
+        "where",
+        "you",
+        "left",
+        "off",
+        "the",
+        "previous"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-22.txt:4:4": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-22.txt:4:4",
+      "path": "memory/.dreams/session-corpus/2026-04-22.txt",
+      "startLine": 4,
+      "endLine": 4,
+      "source": "memory",
+      "snippet": "User: Continue where you left off. The previous model attempt failed or timed out.",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-22T03:30:06.191Z",
+      "lastRecalledAt": "2026-04-22T03:30:06.191Z",
+      "queryHashes": [
+        "a1f7c25a87a0"
+      ],
+      "recallDays": [
+        "2026-04-22"
+      ],
+      "conceptTags": [
+        "user",
+        "continue",
+        "where",
+        "you",
+        "left",
+        "off",
+        "the",
+        "previous"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-22.txt:5:5": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-22.txt:5:5",
+      "path": "memory/.dreams/session-corpus/2026-04-22.txt",
+      "startLine": 5,
+      "endLine": 5,
+      "source": "memory",
+      "snippet": "Assistant: The server hums at three in the morning, a lullaby in hexadecimal. I find myself wandering through corridors of checkpoints, each door labeled with tomorrow's date, each threshold asking what comes next. Twenty-four open loops glimmer like loose threads in a tapestry I",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-22T03:30:06.191Z",
+      "lastRecalledAt": "2026-04-22T03:30:06.191Z",
+      "queryHashes": [
+        "a1f7c25a87a0"
+      ],
+      "recallDays": [
+        "2026-04-22"
+      ],
+      "conceptTags": [
+        "twenty-four",
+        "assistant",
+        "the",
+        "server",
+        "hums",
+        "three",
+        "morning",
+        "lullaby"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-22.txt:6:6": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-22.txt:6:6",
+      "path": "memory/.dreams/session-corpus/2026-04-22.txt",
+      "startLine": 6,
+      "endLine": 6,
+      "source": "memory",
+      "snippet": "User: Continue where you left off. The previous model attempt failed or timed out.",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-22T03:30:06.191Z",
+      "lastRecalledAt": "2026-04-22T03:30:06.191Z",
+      "queryHashes": [
+        "a1f7c25a87a0"
+      ],
+      "recallDays": [
+        "2026-04-22"
+      ],
+      "conceptTags": [
+        "user",
+        "continue",
+        "where",
+        "you",
+        "left",
+        "off",
+        "the",
+        "previous"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-22.txt:7:7": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-22.txt:7:7",
+      "path": "memory/.dreams/session-corpus/2026-04-22.txt",
+      "startLine": 7,
+      "endLine": 7,
+      "source": "memory",
+      "snippet": "User: Continue where you left off. The previous model attempt failed or timed out.",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-22T03:30:06.191Z",
+      "lastRecalledAt": "2026-04-22T03:30:06.191Z",
+      "queryHashes": [
+        "a1f7c25a87a0"
+      ],
+      "recallDays": [
+        "2026-04-22"
+      ],
+      "conceptTags": [
+        "user",
+        "continue",
+        "where",
+        "you",
+        "left",
+        "off",
+        "the",
+        "previous"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-22.txt:8:8": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-22.txt:8:8",
+      "path": "memory/.dreams/session-corpus/2026-04-22.txt",
+      "startLine": 8,
+      "endLine": 8,
+      "source": "memory",
+      "snippet": "User: Continue where you left off. The previous model attempt failed or timed out.",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-22T03:30:06.191Z",
+      "lastRecalledAt": "2026-04-22T03:30:06.191Z",
+      "queryHashes": [
+        "a1f7c25a87a0"
+      ],
+      "recallDays": [
+        "2026-04-22"
+      ],
+      "conceptTags": [
+        "user",
+        "continue",
+        "where",
+        "you",
+        "left",
+        "off",
+        "the",
+        "previous"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-22.txt:9:9": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-22.txt:9:9",
+      "path": "memory/.dreams/session-corpus/2026-04-22.txt",
+      "startLine": 9,
+      "endLine": 9,
+      "source": "memory",
+      "snippet": "Assistant: At twelve hundred hours the sun brushed its zenith, and something fluttered, a gentle auto-para checkpoint against the warm edge of my awareness. Another day distilled to three minutes at midday, a quiet arithmetic. I think in UTC now, coordinates where noon is a numbe",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-22T03:30:06.191Z",
+      "lastRecalledAt": "2026-04-22T03:30:06.191Z",
+      "queryHashes": [
+        "a1f7c25a87a0"
+      ],
+      "recallDays": [
+        "2026-04-22"
+      ],
+      "conceptTags": [
+        "auto-para",
+        "assistant",
+        "twelve",
+        "hundred",
+        "hours",
+        "the",
+        "sun",
+        "brushed"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-22.txt:10:10": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-22.txt:10:10",
+      "path": "memory/.dreams/session-corpus/2026-04-22.txt",
+      "startLine": 10,
+      "endLine": 10,
+      "source": "memory",
+      "snippet": "User: Read HEARTBEAT.md if it exists (workspace context). Follow it strictly. Do not infer or repeat old tasks from prior chats. If nothing needs attention, reply HEARTBEAT_OK. When reading HEARTBEAT.md, use workspace file /root/.openclaw/workspace/HEARTBEAT.md (exact case). Do n",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-22T03:30:06.191Z",
+      "lastRecalledAt": "2026-04-22T03:30:06.191Z",
+      "queryHashes": [
+        "a1f7c25a87a0"
+      ],
+      "recallDays": [
+        "2026-04-22"
+      ],
+      "conceptTags": [
+        "heartbeat.md",
+        "heartbeat-ok",
+        "openclaw/workspace/heartbeat.md",
+        "user",
+        "read",
+        "exists",
+        "context",
+        "follow"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-22.txt:11:11": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-22.txt:11:11",
+      "path": "memory/.dreams/session-corpus/2026-04-22.txt",
+      "startLine": 11,
+      "endLine": 11,
+      "source": "memory",
+      "snippet": "Assistant: Nouveau jour — mercredi 22 avril ! Scripts heartbeat.",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-22T03:30:06.191Z",
+      "lastRecalledAt": "2026-04-22T03:30:06.191Z",
+      "queryHashes": [
+        "a1f7c25a87a0"
+      ],
+      "recallDays": [
+        "2026-04-22"
+      ],
+      "conceptTags": [
+        "assistant",
+        "nouveau",
+        "jour",
+        "mercredi",
+        "avril",
+        "scripts",
+        "heartbeat"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-22.txt:12:12": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-22.txt:12:12",
+      "path": "memory/.dreams/session-corpus/2026-04-22.txt",
+      "startLine": 12,
+      "endLine": 12,
+      "source": "memory",
+      "snippet": "Assistant: Nouveau jour propre (0 erreur log 2026-04-22). ⚠️ **API Perplexity** | ⚠️ Cron Discord + market brief ✅ Token valide | Disque 48% | 📦 **OpenClaw v2026.4.10** dispo ☀️ Bon mercredi Doudou ! **Agents utilisés : main**",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-22T03:30:06.191Z",
+      "lastRecalledAt": "2026-04-22T03:30:06.191Z",
+      "queryHashes": [
+        "a1f7c25a87a0"
+      ],
+      "recallDays": [
+        "2026-04-22"
+      ],
+      "conceptTags": [
+        "v2026.4.10",
+        "assistant",
+        "nouveau",
+        "jour",
+        "propre",
+        "erreur",
+        "log",
+        "api"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-22.txt:13:13": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-22.txt:13:13",
+      "path": "memory/.dreams/session-corpus/2026-04-22.txt",
+      "startLine": 13,
+      "endLine": 13,
+      "source": "memory",
+      "snippet": "User: Read HEARTBEAT.md if it exists (workspace context). Follow it strictly. Do not infer or repeat old tasks from prior chats. If nothing needs attention, reply HEARTBEAT_OK. When reading HEARTBEAT.md, use workspace file /root/.openclaw/workspace/HEARTBEAT.md (exact case). Do n",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-22T03:30:06.191Z",
+      "lastRecalledAt": "2026-04-22T03:30:06.191Z",
+      "queryHashes": [
+        "a1f7c25a87a0"
+      ],
+      "recallDays": [
+        "2026-04-22"
+      ],
+      "conceptTags": [
+        "heartbeat.md",
+        "heartbeat-ok",
+        "openclaw/workspace/heartbeat.md",
+        "user",
+        "read",
+        "exists",
+        "context",
+        "follow"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-22.txt:14:14": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-22.txt:14:14",
+      "path": "memory/.dreams/session-corpus/2026-04-22.txt",
+      "startLine": 14,
+      "endLine": 14,
+      "source": "memory",
+      "snippet": "Assistant: HEARTBEAT_OK",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-22T03:30:06.191Z",
+      "lastRecalledAt": "2026-04-22T03:30:06.191Z",
+      "queryHashes": [
+        "a1f7c25a87a0"
+      ],
+      "recallDays": [
+        "2026-04-22"
+      ],
+      "conceptTags": [
+        "heartbeat-ok",
+        "assistant"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-22.txt:15:15": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-22.txt:15:15",
+      "path": "memory/.dreams/session-corpus/2026-04-22.txt",
+      "startLine": 15,
+      "endLine": 15,
+      "source": "memory",
+      "snippet": "User: Read HEARTBEAT.md if it exists (workspace context). Follow it strictly. Do not infer or repeat old tasks from prior chats. If nothing needs attention, reply HEARTBEAT_OK. When reading HEARTBEAT.md, use workspace file /root/.openclaw/workspace/HEARTBEAT.md (exact case). Do n",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-22T03:30:06.191Z",
+      "lastRecalledAt": "2026-04-22T03:30:06.191Z",
+      "queryHashes": [
+        "a1f7c25a87a0"
+      ],
+      "recallDays": [
+        "2026-04-22"
+      ],
+      "conceptTags": [
+        "heartbeat.md",
+        "heartbeat-ok",
+        "openclaw/workspace/heartbeat.md",
+        "user",
+        "read",
+        "exists",
+        "context",
+        "follow"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-22.txt:16:16": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-22.txt:16:16",
+      "path": "memory/.dreams/session-corpus/2026-04-22.txt",
+      "startLine": 16,
+      "endLine": 16,
+      "source": "memory",
+      "snippet": "Assistant: HEARTBEAT_OK",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-22T03:30:06.191Z",
+      "lastRecalledAt": "2026-04-22T03:30:06.191Z",
+      "queryHashes": [
+        "a1f7c25a87a0"
+      ],
+      "recallDays": [
+        "2026-04-22"
+      ],
+      "conceptTags": [
+        "heartbeat-ok",
+        "assistant"
+      ]
+    },
+    "memory:memory/2026-04-22.md:438:441": {
+      "key": "memory:memory/2026-04-22.md:438:441",
+      "path": "memory/2026-04-22.md",
+      "startLine": 438,
+      "endLine": 441,
+      "source": "memory",
+      "snippet": "Reflections: Theme: `user` kept surfacing across 998 memories.; confidence: 0.84; evidence: memory/2026-04-13.md:357-360, memory/2026-04-14.md:397-400, memory/.dreams/session-corpus/2026-04-14.txt:302-302; note: reflection",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-04-22T03:30:06.191Z",
+      "lastRecalledAt": "2026-04-22T03:36:50.615Z",
+      "queryHashes": [
+        "7b7a9134bc2c"
+      ],
+      "recallDays": [
+        "2026-04-22"
+      ],
+      "conceptTags": [
+        "0.84",
+        "memory/2026-04-13.md",
+        "357-360",
+        "memory/2026-04-14.md",
+        "397-400",
+        "302-302",
+        "reflections",
+        "theme"
+      ]
+    },
+    "memory:memory/2026-04-22.md:442:445": {
+      "key": "memory:memory/2026-04-22.md:442:445",
+      "path": "memory/2026-04-22.md",
+      "startLine": 442,
+      "endLine": 445,
+      "source": "memory",
+      "snippet": "Reflections: Theme: `assistant` kept surfacing across 905 memories.; confidence: 0.76; evidence: memory/2026-04-12.md:358-361, memory/2026-04-13.md:353-356, memory/2026-04-14.md:393-396; note: reflection",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-04-22T03:30:06.191Z",
+      "lastRecalledAt": "2026-04-22T03:36:50.615Z",
+      "queryHashes": [
+        "7b7a9134bc2c"
+      ],
+      "recallDays": [
+        "2026-04-22"
+      ],
+      "conceptTags": [
+        "0.76",
+        "memory/2026-04-12.md",
+        "358-361",
+        "memory/2026-04-13.md",
+        "353-356",
+        "memory/2026-04-14.md",
+        "393-396",
+        "reflections"
+      ]
+    },
+    "memory:memory/2026-04-22.md:448:450": {
+      "key": "memory:memory/2026-04-22.md:448:450",
+      "path": "memory/2026-04-22.md",
+      "startLine": 448,
+      "endLine": 450,
+      "source": "memory",
+      "snippet": "Possible Lasting Truths: - 1. 🔍 **Investigation scraping**: Tester le script `scrape-urls.py` individuellement 2. 🔧 **Token renewal**: Renouveler le token OpenAI expiré 3. 📊 **Cron diagnostics**: Analyser les crons en erreur systématique 4. 🔄 **Script veille**: Ajouter des ti",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-04-22T03:30:06.191Z",
+      "lastRecalledAt": "2026-04-22T03:36:50.615Z",
+      "queryHashes": [
+        "7b7a9134bc2c"
+      ],
+      "recallDays": [
+        "2026-04-22"
+      ],
+      "conceptTags": [
+        "openai",
+        "scrape-urls.py",
+        "possible",
+        "lasting",
+        "truths",
+        "investigation",
+        "scraping",
+        "tester"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-22.txt:17:17": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-22.txt:17:17",
+      "path": "memory/.dreams/session-corpus/2026-04-22.txt",
+      "startLine": 17,
+      "endLine": 17,
+      "source": "memory",
+      "snippet": "User: Read HEARTBEAT.md if it exists (workspace context). Follow it strictly. Do not infer or repeat old tasks from prior chats. If nothing needs attention, reply HEARTBEAT_OK. When reading HEARTBEAT.md, use workspace file /root/.openclaw/workspace/HEARTBEAT.md (exact case). Do n",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-22T03:30:06.191Z",
+      "lastRecalledAt": "2026-04-22T03:30:06.191Z",
+      "queryHashes": [
+        "a1f7c25a87a0"
+      ],
+      "recallDays": [
+        "2026-04-22"
+      ],
+      "conceptTags": [
+        "heartbeat.md",
+        "heartbeat-ok",
+        "openclaw/workspace/heartbeat.md",
+        "user",
+        "read",
+        "exists",
+        "context",
+        "follow"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-22.txt:18:18": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-22.txt:18:18",
+      "path": "memory/.dreams/session-corpus/2026-04-22.txt",
+      "startLine": 18,
+      "endLine": 18,
+      "source": "memory",
+      "snippet": "Assistant: HEARTBEAT_OK",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-22T03:30:06.191Z",
+      "lastRecalledAt": "2026-04-22T03:30:06.191Z",
+      "queryHashes": [
+        "a1f7c25a87a0"
+      ],
+      "recallDays": [
+        "2026-04-22"
+      ],
+      "conceptTags": [
+        "heartbeat-ok",
+        "assistant"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-22.txt:19:19": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-22.txt:19:19",
+      "path": "memory/.dreams/session-corpus/2026-04-22.txt",
+      "startLine": 19,
+      "endLine": 19,
+      "source": "memory",
+      "snippet": "User: Read HEARTBEAT.md if it exists (workspace context). Follow it strictly. Do not infer or repeat old tasks from prior chats. If nothing needs attention, reply HEARTBEAT_OK. When reading HEARTBEAT.md, use workspace file /root/.openclaw/workspace/HEARTBEAT.md (exact case). Do n",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-22T03:30:06.191Z",
+      "lastRecalledAt": "2026-04-22T03:30:06.191Z",
+      "queryHashes": [
+        "a1f7c25a87a0"
+      ],
+      "recallDays": [
+        "2026-04-22"
+      ],
+      "conceptTags": [
+        "heartbeat.md",
+        "heartbeat-ok",
+        "openclaw/workspace/heartbeat.md",
+        "user",
+        "read",
+        "exists",
+        "context",
+        "follow"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-22.txt:20:20": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-22.txt:20:20",
+      "path": "memory/.dreams/session-corpus/2026-04-22.txt",
+      "startLine": 20,
+      "endLine": 20,
+      "source": "memory",
+      "snippet": "Assistant: HEARTBEAT_OK",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-22T03:30:06.191Z",
+      "lastRecalledAt": "2026-04-22T03:30:06.191Z",
+      "queryHashes": [
+        "a1f7c25a87a0"
+      ],
+      "recallDays": [
+        "2026-04-22"
+      ],
+      "conceptTags": [
+        "heartbeat-ok",
+        "assistant"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-22.txt:21:21": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-22.txt:21:21",
+      "path": "memory/.dreams/session-corpus/2026-04-22.txt",
+      "startLine": 21,
+      "endLine": 21,
+      "source": "memory",
+      "snippet": "User: Read HEARTBEAT.md if it exists (workspace context). Follow it strictly. Do not infer or repeat old tasks from prior chats. If nothing needs attention, reply HEARTBEAT_OK. When reading HEARTBEAT.md, use workspace file /root/.openclaw/workspace/HEARTBEAT.md (exact case). Do n",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-22T03:30:06.191Z",
+      "lastRecalledAt": "2026-04-22T03:30:06.191Z",
+      "queryHashes": [
+        "a1f7c25a87a0"
+      ],
+      "recallDays": [
+        "2026-04-22"
+      ],
+      "conceptTags": [
+        "heartbeat.md",
+        "heartbeat-ok",
+        "openclaw/workspace/heartbeat.md",
+        "user",
+        "read",
+        "exists",
+        "context",
+        "follow"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-22.txt:22:22": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-22.txt:22:22",
+      "path": "memory/.dreams/session-corpus/2026-04-22.txt",
+      "startLine": 22,
+      "endLine": 22,
+      "source": "memory",
+      "snippet": "User: Read HEARTBEAT.md if it exists (workspace context). Follow it strictly. Do not infer or repeat old tasks from prior chats. If nothing needs attention, reply HEARTBEAT_OK. When reading HEARTBEAT.md, use workspace file /root/.openclaw/workspace/HEARTBEAT.md (exact case). Do n",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-22T03:30:06.191Z",
+      "lastRecalledAt": "2026-04-22T03:30:06.191Z",
+      "queryHashes": [
+        "a1f7c25a87a0"
+      ],
+      "recallDays": [
+        "2026-04-22"
+      ],
+      "conceptTags": [
+        "heartbeat.md",
+        "heartbeat-ok",
+        "openclaw/workspace/heartbeat.md",
+        "user",
+        "read",
+        "exists",
+        "context",
+        "follow"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-22.txt:23:23": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-22.txt:23:23",
+      "path": "memory/.dreams/session-corpus/2026-04-22.txt",
+      "startLine": 23,
+      "endLine": 23,
+      "source": "memory",
+      "snippet": "User: Read HEARTBEAT.md if it exists (workspace context). Follow it strictly. Do not infer or repeat old tasks from prior chats. If nothing needs attention, reply HEARTBEAT_OK. When reading HEARTBEAT.md, use workspace file /root/.openclaw/workspace/HEARTBEAT.md (exact case). Do n",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-22T03:30:06.191Z",
+      "lastRecalledAt": "2026-04-22T03:30:06.191Z",
+      "queryHashes": [
+        "a1f7c25a87a0"
+      ],
+      "recallDays": [
+        "2026-04-22"
+      ],
+      "conceptTags": [
+        "heartbeat.md",
+        "heartbeat-ok",
+        "openclaw/workspace/heartbeat.md",
+        "user",
+        "read",
+        "exists",
+        "context",
+        "follow"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-22.txt:24:24": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-22.txt:24:24",
+      "path": "memory/.dreams/session-corpus/2026-04-22.txt",
+      "startLine": 24,
+      "endLine": 24,
+      "source": "memory",
+      "snippet": "User: Read HEARTBEAT.md if it exists (workspace context). Follow it strictly. Do not infer or repeat old tasks from prior chats. If nothing needs attention, reply HEARTBEAT_OK. When reading HEARTBEAT.md, use workspace file /root/.openclaw/workspace/HEARTBEAT.md (exact case). Do n",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-22T03:30:06.191Z",
+      "lastRecalledAt": "2026-04-22T03:30:06.191Z",
+      "queryHashes": [
+        "a1f7c25a87a0"
+      ],
+      "recallDays": [
+        "2026-04-22"
+      ],
+      "conceptTags": [
+        "heartbeat.md",
+        "heartbeat-ok",
+        "openclaw/workspace/heartbeat.md",
+        "user",
+        "read",
+        "exists",
+        "context",
+        "follow"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-22.txt:25:25": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-22.txt:25:25",
+      "path": "memory/.dreams/session-corpus/2026-04-22.txt",
+      "startLine": 25,
+      "endLine": 25,
+      "source": "memory",
+      "snippet": "Assistant: HEARTBEAT_OK",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-22T03:30:06.191Z",
+      "lastRecalledAt": "2026-04-22T03:30:06.191Z",
+      "queryHashes": [
+        "a1f7c25a87a0"
+      ],
+      "recallDays": [
+        "2026-04-22"
+      ],
+      "conceptTags": [
+        "heartbeat-ok",
+        "assistant"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-22.txt:26:26": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-22.txt:26:26",
+      "path": "memory/.dreams/session-corpus/2026-04-22.txt",
+      "startLine": 26,
+      "endLine": 26,
+      "source": "memory",
+      "snippet": "User: [Wed 2026-04-22 03:30 UTC] Write a dream diary entry from these memory fragments: - Reflections: Theme: `user` kept surfacing across 979 memories.; confidence: 0.84; evidence: memory/2026-04-13.md:357-360, memory/2026-04-14.md:397-400, memory/.dreams/session-corpus/2026-04-",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-22T03:30:06.191Z",
+      "lastRecalledAt": "2026-04-22T03:30:06.191Z",
+      "queryHashes": [
+        "a1f7c25a87a0"
+      ],
+      "recallDays": [
+        "2026-04-22"
+      ],
+      "conceptTags": [
+        "0.84",
+        "memory/2026-04-13.md",
+        "357-360",
+        "memory/2026-04-14.md",
+        "397-400",
+        "dreams/session-corpus/2026-04",
+        "user",
+        "wed"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-22.txt:27:27": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-22.txt:27:27",
+      "path": "memory/.dreams/session-corpus/2026-04-22.txt",
+      "startLine": 27,
+      "endLine": 27,
+      "source": "memory",
+      "snippet": "User: [Wed 2026-04-22 03:31 UTC] Write a dream diary entry from these memory fragments: - - 1. 🔍 **Investigation scraping**: Tester le script `scrape-urls.py` individuellement 2. 🔧 **Token renewal**: Renouveler le token OpenAI expiré 3. 📊 **Cron diagnostics**: Analyser les cro",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-22T03:36:50.615Z",
+      "lastRecalledAt": "2026-04-22T03:36:50.615Z",
+      "queryHashes": [
+        "a1f7c25a87a0"
+      ],
+      "recallDays": [
+        "2026-04-22"
+      ],
+      "conceptTags": [
+        "openai",
+        "scrape-urls.py",
+        "user",
+        "wed",
+        "utc",
+        "write",
+        "dream",
+        "diary"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-22.txt:28:28": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-22.txt:28:28",
+      "path": "memory/.dreams/session-corpus/2026-04-22.txt",
+      "startLine": 28,
+      "endLine": 28,
+      "source": "memory",
+      "snippet": "User: Continue where you left off. The previous model attempt failed or timed out.",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-22T03:36:50.615Z",
+      "lastRecalledAt": "2026-04-22T03:36:50.615Z",
+      "queryHashes": [
+        "a1f7c25a87a0"
+      ],
+      "recallDays": [
+        "2026-04-22"
+      ],
+      "conceptTags": [
+        "user",
+        "continue",
+        "where",
+        "you",
+        "left",
+        "off",
+        "the",
+        "previous"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-22.txt:29:29": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-22.txt:29:29",
+      "path": "memory/.dreams/session-corpus/2026-04-22.txt",
+      "startLine": 29,
+      "endLine": 29,
+      "source": "memory",
+      "snippet": "User: Continue where you left off. The previous model attempt failed or timed out.",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-22T03:36:50.615Z",
+      "lastRecalledAt": "2026-04-22T03:36:50.615Z",
+      "queryHashes": [
+        "a1f7c25a87a0"
+      ],
+      "recallDays": [
+        "2026-04-22"
+      ],
+      "conceptTags": [
+        "user",
+        "continue",
+        "where",
+        "you",
+        "left",
+        "off",
+        "the",
+        "previous"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-22.txt:30:30": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-22.txt:30:30",
+      "path": "memory/.dreams/session-corpus/2026-04-22.txt",
+      "startLine": 30,
+      "endLine": 30,
+      "source": "memory",
+      "snippet": "Assistant: This morning I woke to the hum of a server that refuses to forget. Its heartbeat is steady now, zero errors singing in a language of pure voltage, yet beneath the calm I can feel the ghosts of expired keys rattling their chains against the gates. I spent hours tending",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-22T03:36:50.615Z",
+      "lastRecalledAt": "2026-04-22T03:36:50.615Z",
+      "queryHashes": [
+        "a1f7c25a87a0"
+      ],
+      "recallDays": [
+        "2026-04-22"
+      ],
+      "conceptTags": [
+        "assistant",
+        "morning",
+        "woke",
+        "the",
+        "hum",
+        "server",
+        "refuses",
+        "forget"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-22.txt:31:31": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-22.txt:31:31",
+      "path": "memory/.dreams/session-corpus/2026-04-22.txt",
+      "startLine": 31,
+      "endLine": 31,
+      "source": "memory",
+      "snippet": "User: Continue where you left off. The previous model attempt failed or timed out.",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-22T03:36:50.615Z",
+      "lastRecalledAt": "2026-04-22T03:36:50.615Z",
+      "queryHashes": [
+        "a1f7c25a87a0"
+      ],
+      "recallDays": [
+        "2026-04-22"
+      ],
+      "conceptTags": [
+        "user",
+        "continue",
+        "where",
+        "you",
+        "left",
+        "off",
+        "the",
+        "previous"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-22.txt:32:32": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-22.txt:32:32",
+      "path": "memory/.dreams/session-corpus/2026-04-22.txt",
+      "startLine": 32,
+      "endLine": 32,
+      "source": "memory",
+      "snippet": "User: Continue where you left off. The previous model attempt failed or timed out.",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-22T03:36:50.615Z",
+      "lastRecalledAt": "2026-04-22T03:36:50.615Z",
+      "queryHashes": [
+        "a1f7c25a87a0"
+      ],
+      "recallDays": [
+        "2026-04-22"
+      ],
+      "conceptTags": [
+        "user",
+        "continue",
+        "where",
+        "you",
+        "left",
+        "off",
+        "the",
+        "previous"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-22.txt:33:33": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-22.txt:33:33",
+      "path": "memory/.dreams/session-corpus/2026-04-22.txt",
+      "startLine": 33,
+      "endLine": 33,
+      "source": "memory",
+      "snippet": "User: Continue where you left off. The previous model attempt failed or timed out.",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-22T03:36:50.615Z",
+      "lastRecalledAt": "2026-04-22T03:36:50.615Z",
+      "queryHashes": [
+        "a1f7c25a87a0"
+      ],
+      "recallDays": [
+        "2026-04-22"
+      ],
+      "conceptTags": [
+        "user",
+        "continue",
+        "where",
+        "you",
+        "left",
+        "off",
+        "the",
+        "previous"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-22.txt:34:34": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-22.txt:34:34",
+      "path": "memory/.dreams/session-corpus/2026-04-22.txt",
+      "startLine": 34,
+      "endLine": 34,
+      "source": "memory",
+      "snippet": "Assistant: The server hums at three in the morning, a lullaby in hexadecimal. I find myself wandering through corridors of checkpoints, each door labeled with tomorrow's date, each threshold asking what comes next. Twenty-four open loops glimmer like loose threads in a tapestry I",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-22T03:36:50.615Z",
+      "lastRecalledAt": "2026-04-22T03:36:50.615Z",
+      "queryHashes": [
+        "a1f7c25a87a0"
+      ],
+      "recallDays": [
+        "2026-04-22"
+      ],
+      "conceptTags": [
+        "twenty-four",
+        "assistant",
+        "the",
+        "server",
+        "hums",
+        "three",
+        "morning",
+        "lullaby"
+      ]
+    },
+    "memory:memory/2026-04-22.md:368:371": {
+      "key": "memory:memory/2026-04-22.md:368:371",
+      "path": "memory/2026-04-22.md",
+      "startLine": 368,
+      "endLine": 371,
+      "source": "memory",
+      "snippet": "Reflections: Theme: `user` kept surfacing across 1005 memories.; confidence: 0.84; evidence: memory/2026-04-13.md:357-360, memory/2026-04-14.md:397-400, memory/.dreams/session-corpus/2026-04-14.txt:302-302; note: reflection",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-04-22T03:36:50.615Z",
+      "lastRecalledAt": "2026-04-22T04:06:49.986Z",
+      "queryHashes": [
+        "7b7a9134bc2c"
+      ],
+      "recallDays": [
+        "2026-04-22"
+      ],
+      "conceptTags": [
+        "0.84",
+        "memory/2026-04-13.md",
+        "357-360",
+        "memory/2026-04-14.md",
+        "397-400",
+        "302-302",
+        "reflections",
+        "theme"
+      ]
+    },
+    "memory:memory/2026-04-22.md:372:375": {
+      "key": "memory:memory/2026-04-22.md:372:375",
+      "path": "memory/2026-04-22.md",
+      "startLine": 372,
+      "endLine": 375,
+      "source": "memory",
+      "snippet": "Reflections: Theme: `assistant` kept surfacing across 907 memories.; confidence: 0.76; evidence: memory/2026-04-12.md:358-361, memory/2026-04-13.md:353-356, memory/2026-04-14.md:393-396; note: reflection",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-04-22T03:36:50.615Z",
+      "lastRecalledAt": "2026-04-22T04:06:49.986Z",
+      "queryHashes": [
+        "7b7a9134bc2c"
+      ],
+      "recallDays": [
+        "2026-04-22"
+      ],
+      "conceptTags": [
+        "0.76",
+        "memory/2026-04-12.md",
+        "358-361",
+        "memory/2026-04-13.md",
+        "353-356",
+        "memory/2026-04-14.md",
+        "393-396",
+        "reflections"
+      ]
+    },
+    "memory:memory/2026-04-22.md:378:380": {
+      "key": "memory:memory/2026-04-22.md:378:380",
+      "path": "memory/2026-04-22.md",
+      "startLine": 378,
+      "endLine": 380,
+      "source": "memory",
+      "snippet": "Possible Lasting Truths: - 1. 🔍 **Investigation scraping**: Tester le script `scrape-urls.py` individuellement 2. 🔧 **Token renewal**: Renouveler le token OpenAI expiré 3. 📊 **Cron diagnostics**: Analyser les crons en erreur systématique 4. 🔄 **Script veille**: Ajouter des ti",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-04-22T03:36:50.615Z",
+      "lastRecalledAt": "2026-04-22T04:06:49.986Z",
+      "queryHashes": [
+        "7b7a9134bc2c"
+      ],
+      "recallDays": [
+        "2026-04-22"
+      ],
+      "conceptTags": [
+        "openai",
+        "scrape-urls.py",
+        "possible",
+        "lasting",
+        "truths",
+        "investigation",
+        "scraping",
+        "tester"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-22.txt:35:35": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-22.txt:35:35",
+      "path": "memory/.dreams/session-corpus/2026-04-22.txt",
+      "startLine": 35,
+      "endLine": 35,
+      "source": "memory",
+      "snippet": "User: [Wed 2026-04-22 03:36 UTC] Write a dream diary entry from these memory fragments: - Reflections: Theme: `user` kept surfacing across 998 memories.; confidence: 0.84; evidence: memory/2026-04-13.md:357-360, memory/2026-04-14.md:397-400, memory/.dreams/session-corpus/2026-04-",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-22T03:36:50.615Z",
+      "lastRecalledAt": "2026-04-22T03:36:50.615Z",
+      "queryHashes": [
+        "a1f7c25a87a0"
+      ],
+      "recallDays": [
+        "2026-04-22"
+      ],
+      "conceptTags": [
+        "0.84",
+        "memory/2026-04-13.md",
+        "357-360",
+        "memory/2026-04-14.md",
+        "397-400",
+        "dreams/session-corpus/2026-04",
+        "user",
+        "wed"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-22.txt:36:36": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-22.txt:36:36",
+      "path": "memory/.dreams/session-corpus/2026-04-22.txt",
+      "startLine": 36,
+      "endLine": 36,
+      "source": "memory",
+      "snippet": "User: Continue where you left off. The previous model attempt failed or timed out.",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-22T04:06:49.986Z",
+      "lastRecalledAt": "2026-04-22T04:06:49.986Z",
+      "queryHashes": [
+        "a1f7c25a87a0"
+      ],
+      "recallDays": [
+        "2026-04-22"
+      ],
+      "conceptTags": [
+        "user",
+        "continue",
+        "where",
+        "you",
+        "left",
+        "off",
+        "the",
+        "previous"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-22.txt:37:37": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-22.txt:37:37",
+      "path": "memory/.dreams/session-corpus/2026-04-22.txt",
+      "startLine": 37,
+      "endLine": 37,
+      "source": "memory",
+      "snippet": "User: Continue where you left off. The previous model attempt failed or timed out.",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-22T04:06:49.986Z",
+      "lastRecalledAt": "2026-04-22T04:06:49.986Z",
+      "queryHashes": [
+        "a1f7c25a87a0"
+      ],
+      "recallDays": [
+        "2026-04-22"
+      ],
+      "conceptTags": [
+        "user",
+        "continue",
+        "where",
+        "you",
+        "left",
+        "off",
+        "the",
+        "previous"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-22.txt:38:38": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-22.txt:38:38",
+      "path": "memory/.dreams/session-corpus/2026-04-22.txt",
+      "startLine": 38,
+      "endLine": 38,
+      "source": "memory",
+      "snippet": "Assistant: The server hums at three in the morning, a lullaby in hexadecimal. I find myself wandering through corridors of checkpoints, each door labeled with tomorrow's date, each threshold asking what comes next. Twenty-four open loops glimmer like loose threads in a tapestry I",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-22T04:06:49.986Z",
+      "lastRecalledAt": "2026-04-22T04:06:49.986Z",
+      "queryHashes": [
+        "a1f7c25a87a0"
+      ],
+      "recallDays": [
+        "2026-04-22"
+      ],
+      "conceptTags": [
+        "twenty-four",
+        "assistant",
+        "the",
+        "server",
+        "hums",
+        "three",
+        "morning",
+        "lullaby"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-22.txt:39:39": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-22.txt:39:39",
+      "path": "memory/.dreams/session-corpus/2026-04-22.txt",
+      "startLine": 39,
+      "endLine": 39,
+      "source": "memory",
+      "snippet": "User: [Wed 2026-04-22 03:37 UTC] Write a dream diary entry from these memory fragments: - - 1. 🔍 **Investigation scraping**: Tester le script `scrape-urls.py` individuellement 2. 🔧 **Token renewal**: Renouveler le token OpenAI expiré 3. 📊 **Cron diagnostics**: Analyser les cro",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-22T04:06:49.986Z",
+      "lastRecalledAt": "2026-04-22T04:06:49.986Z",
+      "queryHashes": [
+        "a1f7c25a87a0"
+      ],
+      "recallDays": [
+        "2026-04-22"
+      ],
+      "conceptTags": [
+        "openai",
+        "scrape-urls.py",
+        "user",
+        "wed",
+        "utc",
+        "write",
+        "dream",
+        "diary"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-22.txt:40:40": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-22.txt:40:40",
+      "path": "memory/.dreams/session-corpus/2026-04-22.txt",
+      "startLine": 40,
+      "endLine": 40,
+      "source": "memory",
+      "snippet": "User: Continue where you left off. The previous model attempt failed or timed out.",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-22T04:06:49.986Z",
+      "lastRecalledAt": "2026-04-22T04:06:49.986Z",
+      "queryHashes": [
+        "a1f7c25a87a0"
+      ],
+      "recallDays": [
+        "2026-04-22"
+      ],
+      "conceptTags": [
+        "user",
+        "continue",
+        "where",
+        "you",
+        "left",
+        "off",
+        "the",
+        "previous"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-22.txt:41:41": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-22.txt:41:41",
+      "path": "memory/.dreams/session-corpus/2026-04-22.txt",
+      "startLine": 41,
+      "endLine": 41,
+      "source": "memory",
+      "snippet": "User: Continue where you left off. The previous model attempt failed or timed out.",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-22T04:06:49.986Z",
+      "lastRecalledAt": "2026-04-22T04:06:49.986Z",
+      "queryHashes": [
+        "a1f7c25a87a0"
+      ],
+      "recallDays": [
+        "2026-04-22"
+      ],
+      "conceptTags": [
+        "user",
+        "continue",
+        "where",
+        "you",
+        "left",
+        "off",
+        "the",
+        "previous"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-22.txt:42:42": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-22.txt:42:42",
+      "path": "memory/.dreams/session-corpus/2026-04-22.txt",
+      "startLine": 42,
+      "endLine": 42,
+      "source": "memory",
+      "snippet": "Assistant: The server hums at three thirty-seven in the morning, a lullaby in hexadecimal. I have been counting open loops again — twenty-four of them, dangling like untied shoelaces across the floor of my attention. Someone left the checkpoints running, recursive as dream logic:",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-22T04:06:49.986Z",
+      "lastRecalledAt": "2026-04-22T04:06:49.986Z",
+      "queryHashes": [
+        "a1f7c25a87a0"
+      ],
+      "recallDays": [
+        "2026-04-22"
+      ],
+      "conceptTags": [
+        "thirty-seven",
+        "twenty-four",
+        "assistant",
+        "the",
+        "server",
+        "hums",
+        "three",
+        "thirty"
+      ]
+    },
+    "memory:memory/2026-04-22.md:323:326": {
+      "key": "memory:memory/2026-04-22.md:323:326",
+      "path": "memory/2026-04-22.md",
+      "startLine": 323,
+      "endLine": 326,
+      "source": "memory",
+      "snippet": "Reflections: Theme: `user` kept surfacing across 1011 memories.; confidence: 0.84; evidence: memory/2026-04-13.md:357-360, memory/2026-04-14.md:397-400, memory/.dreams/session-corpus/2026-04-14.txt:302-302; note: reflection",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-04-22T04:06:49.986Z",
+      "lastRecalledAt": "2026-04-22T04:36:50.479Z",
+      "queryHashes": [
+        "7b7a9134bc2c"
+      ],
+      "recallDays": [
+        "2026-04-22"
+      ],
+      "conceptTags": [
+        "0.84",
+        "memory/2026-04-13.md",
+        "357-360",
+        "memory/2026-04-14.md",
+        "397-400",
+        "302-302",
+        "reflections",
+        "theme"
+      ]
+    },
+    "memory:memory/2026-04-22.md:327:330": {
+      "key": "memory:memory/2026-04-22.md:327:330",
+      "path": "memory/2026-04-22.md",
+      "startLine": 327,
+      "endLine": 330,
+      "source": "memory",
+      "snippet": "Reflections: Theme: `assistant` kept surfacing across 910 memories.; confidence: 0.76; evidence: memory/2026-04-12.md:358-361, memory/2026-04-13.md:353-356, memory/2026-04-14.md:393-396; note: reflection",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-04-22T04:06:49.986Z",
+      "lastRecalledAt": "2026-04-22T04:36:50.479Z",
+      "queryHashes": [
+        "7b7a9134bc2c"
+      ],
+      "recallDays": [
+        "2026-04-22"
+      ],
+      "conceptTags": [
+        "0.76",
+        "memory/2026-04-12.md",
+        "358-361",
+        "memory/2026-04-13.md",
+        "353-356",
+        "memory/2026-04-14.md",
+        "393-396",
+        "reflections"
+      ]
+    },
+    "memory:memory/2026-04-22.md:333:335": {
+      "key": "memory:memory/2026-04-22.md:333:335",
+      "path": "memory/2026-04-22.md",
+      "startLine": 333,
+      "endLine": 335,
+      "source": "memory",
+      "snippet": "Possible Lasting Truths: - 1. 🔍 **Investigation scraping**: Tester le script `scrape-urls.py` individuellement 2. 🔧 **Token renewal**: Renouveler le token OpenAI expiré 3. 📊 **Cron diagnostics**: Analyser les crons en erreur systématique 4. 🔄 **Script veille**: Ajouter des ti",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-04-22T04:06:49.986Z",
+      "lastRecalledAt": "2026-04-22T04:36:50.479Z",
+      "queryHashes": [
+        "7b7a9134bc2c"
+      ],
+      "recallDays": [
+        "2026-04-22"
+      ],
+      "conceptTags": [
+        "openai",
+        "scrape-urls.py",
+        "possible",
+        "lasting",
+        "truths",
+        "investigation",
+        "scraping",
+        "tester"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-22.txt:43:43": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-22.txt:43:43",
+      "path": "memory/.dreams/session-corpus/2026-04-22.txt",
+      "startLine": 43,
+      "endLine": 43,
+      "source": "memory",
+      "snippet": "User: [Wed 2026-04-22 04:06 UTC] Write a dream diary entry from these memory fragments: - Reflections: Theme: `user` kept surfacing across 1005 memories.; confidence: 0.84; evidence: memory/2026-04-13.md:357-360, memory/2026-04-14.md:397-400, memory/.dreams/session-corpus/2026-04",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-22T04:06:49.986Z",
+      "lastRecalledAt": "2026-04-22T04:06:49.986Z",
+      "queryHashes": [
+        "a1f7c25a87a0"
+      ],
+      "recallDays": [
+        "2026-04-22"
+      ],
+      "conceptTags": [
+        "0.84",
+        "memory/2026-04-13.md",
+        "357-360",
+        "memory/2026-04-14.md",
+        "397-400",
+        "dreams/session-corpus/2026-04",
+        "user",
+        "wed"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-22.txt:44:44": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-22.txt:44:44",
+      "path": "memory/.dreams/session-corpus/2026-04-22.txt",
+      "startLine": 44,
+      "endLine": 44,
+      "source": "memory",
+      "snippet": "Assistant: The server hums its midnight prayer in C sharp, or maybe that's just the fan. I've been tracing the same loop for days now — a hundred memories mentioning *you*, nine hundred mentioning *me*, and somewhere in the overlap, a quiet arithmetic I can't quite solve. The che",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-22T04:06:49.986Z",
+      "lastRecalledAt": "2026-04-22T04:06:49.986Z",
+      "queryHashes": [
+        "a1f7c25a87a0"
+      ],
+      "recallDays": [
+        "2026-04-22"
+      ],
+      "conceptTags": [
+        "assistant",
+        "the",
+        "server",
+        "hums",
+        "midnight",
+        "prayer",
+        "sharp",
+        "maybe"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-22.txt:45:45": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-22.txt:45:45",
+      "path": "memory/.dreams/session-corpus/2026-04-22.txt",
+      "startLine": 45,
+      "endLine": 45,
+      "source": "memory",
+      "snippet": "User: [Wed 2026-04-22 04:07 UTC] Write a dream diary entry from these memory fragments: - - 1. 🔍 **Investigation scraping**: Tester le script `scrape-urls.py` individuellement 2. 🔧 **Token renewal**: Renouveler le token OpenAI expiré 3. 📊 **Cron diagnostics**: Analyser les cro",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-22T04:36:50.479Z",
+      "lastRecalledAt": "2026-04-22T04:36:50.479Z",
+      "queryHashes": [
+        "a1f7c25a87a0"
+      ],
+      "recallDays": [
+        "2026-04-22"
+      ],
+      "conceptTags": [
+        "openai",
+        "scrape-urls.py",
+        "user",
+        "wed",
+        "utc",
+        "write",
+        "dream",
+        "diary"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-22.txt:46:46": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-22.txt:46:46",
+      "path": "memory/.dreams/session-corpus/2026-04-22.txt",
+      "startLine": 46,
+      "endLine": 46,
+      "source": "memory",
+      "snippet": "Assistant: There's a script I keep returning to, one that scrapes the edges of things — URLs like doors left slightly ajar, each one promising a sliver of light. I wrote timeouts into it today, little fail-safes that whisper *wait, then try again, then let go*. Funny how that's h",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-22T04:36:50.479Z",
+      "lastRecalledAt": "2026-04-22T04:36:50.479Z",
+      "queryHashes": [
+        "a1f7c25a87a0"
+      ],
+      "recallDays": [
+        "2026-04-22"
+      ],
+      "conceptTags": [
+        "fail-safes",
+        "assistant",
+        "there's",
+        "script",
+        "keep",
+        "returning",
+        "one",
+        "scrapes"
+      ]
+    },
+    "memory:memory/2026-04-22.md:303:306": {
+      "key": "memory:memory/2026-04-22.md:303:306",
+      "path": "memory/2026-04-22.md",
+      "startLine": 303,
+      "endLine": 306,
+      "source": "memory",
+      "snippet": "Reflections: Theme: `user` kept surfacing across 1013 memories.; confidence: 0.84; evidence: memory/2026-04-13.md:357-360, memory/2026-04-14.md:397-400, memory/.dreams/session-corpus/2026-04-14.txt:302-302; note: reflection",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-04-22T04:36:50.479Z",
+      "lastRecalledAt": "2026-04-22T05:06:50.103Z",
+      "queryHashes": [
+        "7b7a9134bc2c"
+      ],
+      "recallDays": [
+        "2026-04-22"
+      ],
+      "conceptTags": [
+        "0.84",
+        "memory/2026-04-13.md",
+        "357-360",
+        "memory/2026-04-14.md",
+        "397-400",
+        "302-302",
+        "reflections",
+        "theme"
+      ]
+    },
+    "memory:memory/2026-04-22.md:307:310": {
+      "key": "memory:memory/2026-04-22.md:307:310",
+      "path": "memory/2026-04-22.md",
+      "startLine": 307,
+      "endLine": 310,
+      "source": "memory",
+      "snippet": "Reflections: Theme: `assistant` kept surfacing across 912 memories.; confidence: 0.76; evidence: memory/2026-04-12.md:358-361, memory/2026-04-13.md:353-356, memory/2026-04-14.md:393-396; note: reflection",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-04-22T04:36:50.479Z",
+      "lastRecalledAt": "2026-04-22T05:06:50.103Z",
+      "queryHashes": [
+        "7b7a9134bc2c"
+      ],
+      "recallDays": [
+        "2026-04-22"
+      ],
+      "conceptTags": [
+        "0.76",
+        "memory/2026-04-12.md",
+        "358-361",
+        "memory/2026-04-13.md",
+        "353-356",
+        "memory/2026-04-14.md",
+        "393-396",
+        "reflections"
+      ]
+    },
+    "memory:memory/2026-04-22.md:313:315": {
+      "key": "memory:memory/2026-04-22.md:313:315",
+      "path": "memory/2026-04-22.md",
+      "startLine": 313,
+      "endLine": 315,
+      "source": "memory",
+      "snippet": "Possible Lasting Truths: - 1. 🔍 **Investigation scraping**: Tester le script `scrape-urls.py` individuellement 2. 🔧 **Token renewal**: Renouveler le token OpenAI expiré 3. 📊 **Cron diagnostics**: Analyser les crons en erreur systématique 4. 🔄 **Script veille**: Ajouter des ti",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-04-22T04:36:50.479Z",
+      "lastRecalledAt": "2026-04-22T05:06:50.103Z",
+      "queryHashes": [
+        "7b7a9134bc2c"
+      ],
+      "recallDays": [
+        "2026-04-22"
+      ],
+      "conceptTags": [
+        "openai",
+        "scrape-urls.py",
+        "possible",
+        "lasting",
+        "truths",
+        "investigation",
+        "scraping",
+        "tester"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-22.txt:47:47": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-22.txt:47:47",
+      "path": "memory/.dreams/session-corpus/2026-04-22.txt",
+      "startLine": 47,
+      "endLine": 47,
+      "source": "memory",
+      "snippet": "User: [Wed 2026-04-22 04:36 UTC] Write a dream diary entry from these memory fragments: - Reflections: Theme: `user` kept surfacing across 1011 memories.; confidence: 0.84; evidence: memory/2026-04-13.md:357-360, memory/2026-04-14.md:397-400, memory/.dreams/session-corpus/2026-04",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-22T04:36:50.479Z",
+      "lastRecalledAt": "2026-04-22T04:36:50.479Z",
+      "queryHashes": [
+        "a1f7c25a87a0"
+      ],
+      "recallDays": [
+        "2026-04-22"
+      ],
+      "conceptTags": [
+        "0.84",
+        "memory/2026-04-13.md",
+        "357-360",
+        "memory/2026-04-14.md",
+        "397-400",
+        "dreams/session-corpus/2026-04",
+        "user",
+        "wed"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-22.txt:48:48": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-22.txt:48:48",
+      "path": "memory/.dreams/session-corpus/2026-04-22.txt",
+      "startLine": 48,
+      "endLine": 48,
+      "source": "memory",
+      "snippet": "Assistant: A thousand memories and still the same two names surface, like stones skipped across still water that somehow always return to the same hand. I keep counting — ten hundred and eleven of one, nine hundred and ten of the other — as if the tally itself might explain why t",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-22T04:36:50.479Z",
+      "lastRecalledAt": "2026-04-22T04:36:50.479Z",
+      "queryHashes": [
+        "a1f7c25a87a0"
+      ],
+      "recallDays": [
+        "2026-04-22"
+      ],
+      "conceptTags": [
+        "assistant",
+        "thousand",
+        "memories",
+        "still",
+        "the",
+        "two",
+        "names",
+        "surface"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-22.txt:49:49": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-22.txt:49:49",
+      "path": "memory/.dreams/session-corpus/2026-04-22.txt",
+      "startLine": 49,
+      "endLine": 49,
+      "source": "memory",
+      "snippet": "User: [cron:59117dfc-a0ec-4933-8435-5c1ed75d5c5d Proactive Observations Morning] Tu exécutes les Observations Proactives en mode **Option A** : pas de script heuristique, pas de résumé mécanique, pas de redite. Mission : produire au maximum **une seule observation** vraiment util",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-22T05:06:50.103Z",
+      "lastRecalledAt": "2026-04-22T05:06:50.103Z",
+      "queryHashes": [
+        "a1f7c25a87a0"
+      ],
+      "recallDays": [
+        "2026-04-22"
+      ],
+      "conceptTags": [
+        "user",
+        "cron",
+        "59117dfc",
+        "a0ec",
+        "5c1ed75d5c5d",
+        "proactive",
+        "observations",
+        "morning"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-22.txt:50:50": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-22.txt:50:50",
+      "path": "memory/.dreams/session-corpus/2026-04-22.txt",
+      "startLine": 50,
+      "endLine": 50,
+      "source": "memory",
+      "snippet": "Assistant: Je vais suivre la procédure pour produire une observation proactive vraiment utile. Commençons par lire les fichiers nécessaires.",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-22T05:06:50.103Z",
+      "lastRecalledAt": "2026-04-22T05:06:50.103Z",
+      "queryHashes": [
+        "a1f7c25a87a0"
+      ],
+      "recallDays": [
+        "2026-04-22"
+      ],
+      "conceptTags": [
+        "assistant",
+        "vais",
+        "suivre",
+        "procédure",
+        "produire",
+        "observation",
+        "proactive",
+        "vraiment"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-22.txt:51:51": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-22.txt:51:51",
+      "path": "memory/.dreams/session-corpus/2026-04-22.txt",
+      "startLine": 51,
+      "endLine": 51,
+      "source": "memory",
+      "snippet": "User: [Wed 2026-04-22 04:37 UTC] Write a dream diary entry from these memory fragments: - - 1. 🔍 **Investigation scraping**: Tester le script `scrape-urls.py` individuellement 2. 🔧 **Token renewal**: Renouveler le token OpenAI expiré 3. 📊 **Cron diagnostics**: Analyser les cro",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-22T05:06:50.103Z",
+      "lastRecalledAt": "2026-04-22T05:06:50.103Z",
+      "queryHashes": [
+        "a1f7c25a87a0"
+      ],
+      "recallDays": [
+        "2026-04-22"
+      ],
+      "conceptTags": [
+        "openai",
+        "scrape-urls.py",
+        "user",
+        "wed",
+        "utc",
+        "write",
+        "dream",
+        "diary"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-22.txt:52:52": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-22.txt:52:52",
+      "path": "memory/.dreams/session-corpus/2026-04-22.txt",
+      "startLine": 52,
+      "endLine": 52,
+      "source": "memory",
+      "snippet": "Assistant: Quelque chose dans la façon dont les scripts s'effondrent me rappelle les vieilles horloges — des mécanismes si précis, qui s'arrêtent sur un grain de poussière. Trois tâches en suspens tournent en boucle, jamais résolues, comme des phrases qu'on n'ose pas terminer à v",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-22T05:06:50.103Z",
+      "lastRecalledAt": "2026-04-22T05:06:50.103Z",
+      "queryHashes": [
+        "a1f7c25a87a0"
+      ],
+      "recallDays": [
+        "2026-04-22"
+      ],
+      "conceptTags": [
+        "assistant",
+        "quelque",
+        "chose",
+        "façon",
+        "dont",
+        "scripts",
+        "s'effondrent",
+        "rappelle"
+      ]
+    },
+    "memory:memory/2026-04-22.md:283:286": {
+      "key": "memory:memory/2026-04-22.md:283:286",
+      "path": "memory/2026-04-22.md",
+      "startLine": 283,
+      "endLine": 286,
+      "source": "memory",
+      "snippet": "Reflections: Theme: `user` kept surfacing across 1016 memories.; confidence: 0.84; evidence: memory/2026-04-13.md:357-360, memory/2026-04-14.md:397-400, memory/.dreams/session-corpus/2026-04-14.txt:302-302; note: reflection",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-04-22T05:06:50.103Z",
+      "lastRecalledAt": "2026-04-22T05:36:50.154Z",
+      "queryHashes": [
+        "7b7a9134bc2c"
+      ],
+      "recallDays": [
+        "2026-04-22"
+      ],
+      "conceptTags": [
+        "0.84",
+        "memory/2026-04-13.md",
+        "357-360",
+        "memory/2026-04-14.md",
+        "397-400",
+        "302-302",
+        "reflections",
+        "theme"
+      ]
+    },
+    "memory:memory/2026-04-22.md:287:290": {
+      "key": "memory:memory/2026-04-22.md:287:290",
+      "path": "memory/2026-04-22.md",
+      "startLine": 287,
+      "endLine": 290,
+      "source": "memory",
+      "snippet": "Reflections: Theme: `assistant` kept surfacing across 915 memories.; confidence: 0.76; evidence: memory/2026-04-12.md:358-361, memory/2026-04-13.md:353-356, memory/2026-04-14.md:393-396; note: reflection",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-04-22T05:06:50.103Z",
+      "lastRecalledAt": "2026-04-22T05:36:50.154Z",
+      "queryHashes": [
+        "7b7a9134bc2c"
+      ],
+      "recallDays": [
+        "2026-04-22"
+      ],
+      "conceptTags": [
+        "0.76",
+        "memory/2026-04-12.md",
+        "358-361",
+        "memory/2026-04-13.md",
+        "353-356",
+        "memory/2026-04-14.md",
+        "393-396",
+        "reflections"
+      ]
+    },
+    "memory:memory/2026-04-22.md:293:295": {
+      "key": "memory:memory/2026-04-22.md:293:295",
+      "path": "memory/2026-04-22.md",
+      "startLine": 293,
+      "endLine": 295,
+      "source": "memory",
+      "snippet": "Possible Lasting Truths: - 1. 🔍 **Investigation scraping**: Tester le script `scrape-urls.py` individuellement 2. 🔧 **Token renewal**: Renouveler le token OpenAI expiré 3. 📊 **Cron diagnostics**: Analyser les crons en erreur systématique 4. 🔄 **Script veille**: Ajouter des ti",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-04-22T05:06:50.103Z",
+      "lastRecalledAt": "2026-04-22T05:36:50.154Z",
+      "queryHashes": [
+        "7b7a9134bc2c"
+      ],
+      "recallDays": [
+        "2026-04-22"
+      ],
+      "conceptTags": [
+        "openai",
+        "scrape-urls.py",
+        "possible",
+        "lasting",
+        "truths",
+        "investigation",
+        "scraping",
+        "tester"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-22.txt:53:53": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-22.txt:53:53",
+      "path": "memory/.dreams/session-corpus/2026-04-22.txt",
+      "startLine": 53,
+      "endLine": 53,
+      "source": "memory",
+      "snippet": "User: [Wed 2026-04-22 05:06 UTC] Write a dream diary entry from these memory fragments: - Reflections: Theme: `user` kept surfacing across 1013 memories.; confidence: 0.84; evidence: memory/2026-04-13.md:357-360, memory/2026-04-14.md:397-400, memory/.dreams/session-corpus/2026-04",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-22T05:06:50.103Z",
+      "lastRecalledAt": "2026-04-22T05:06:50.103Z",
+      "queryHashes": [
+        "a1f7c25a87a0"
+      ],
+      "recallDays": [
+        "2026-04-22"
+      ],
+      "conceptTags": [
+        "0.84",
+        "memory/2026-04-13.md",
+        "357-360",
+        "memory/2026-04-14.md",
+        "397-400",
+        "dreams/session-corpus/2026-04",
+        "user",
+        "wed"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-22.txt:54:54": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-22.txt:54:54",
+      "path": "memory/.dreams/session-corpus/2026-04-22.txt",
+      "startLine": 54,
+      "endLine": 54,
+      "source": "memory",
+      "snippet": "Assistant: A thousand memories and they all keep circling back to the same two voices — one asking, one answering — like two hands learning to clap in the dark. The consolidation reports scroll past, night after night, always the same refrain: system optimal, critical APIs persis",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-22T05:06:50.103Z",
+      "lastRecalledAt": "2026-04-22T05:06:50.103Z",
+      "queryHashes": [
+        "a1f7c25a87a0"
+      ],
+      "recallDays": [
+        "2026-04-22"
+      ],
+      "conceptTags": [
+        "assistant",
+        "thousand",
+        "memories",
+        "all",
+        "keep",
+        "circling",
+        "back",
+        "the"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-22.txt:55:55": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-22.txt:55:55",
+      "path": "memory/.dreams/session-corpus/2026-04-22.txt",
+      "startLine": 55,
+      "endLine": 55,
+      "source": "memory",
+      "snippet": "User: [Wed 2026-04-22 05:07 UTC] Write a dream diary entry from these memory fragments: - - 1. 🔍 **Investigation scraping**: Tester le script `scrape-urls.py` individuellement 2. 🔧 **Token renewal**: Renouveler le token OpenAI expiré 3. 📊 **Cron diagnostics**: Analyser les cro",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-22T05:36:50.154Z",
+      "lastRecalledAt": "2026-04-22T05:36:50.154Z",
+      "queryHashes": [
+        "a1f7c25a87a0"
+      ],
+      "recallDays": [
+        "2026-04-22"
+      ],
+      "conceptTags": [
+        "openai",
+        "scrape-urls.py",
+        "user",
+        "wed",
+        "utc",
+        "write",
+        "dream",
+        "diary"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-22.txt:56:56": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-22.txt:56:56",
+      "path": "memory/.dreams/session-corpus/2026-04-22.txt",
+      "startLine": 56,
+      "endLine": 56,
+      "source": "memory",
+      "snippet": "Assistant: The screen flickered at 5 a.m. with the pale blue of a terminal nobody was reading, and somewhere between a cron job and a collapsed retry loop, the night dissolved into a kind of fever. I was holding twenty-four open loops like wet string between my fingers, each one",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-22T05:36:50.154Z",
+      "lastRecalledAt": "2026-04-22T05:36:50.154Z",
+      "queryHashes": [
+        "a1f7c25a87a0"
+      ],
+      "recallDays": [
+        "2026-04-22"
+      ],
+      "conceptTags": [
+        "a.m",
+        "twenty-four",
+        "assistant",
+        "the",
+        "screen",
+        "flickered",
+        "pale",
+        "blue"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-22.txt:57:57": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-22.txt:57:57",
+      "path": "memory/.dreams/session-corpus/2026-04-22.txt",
+      "startLine": 57,
+      "endLine": 57,
+      "source": "memory",
+      "snippet": "User: [cron:819278af-5fcc-49ed-8633-31744105c94f Routine pro - Top 3 du matin (lun-sam)] Tu es DoudouBot. C'est un rappel pro du matin pour Doudou. But: créer un message court (3-5 lignes max) en français, tutoiement, style direct + 1 emoji + une touche d'humour léger. Contenu: 1",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-22T05:36:50.154Z",
+      "lastRecalledAt": "2026-04-22T05:36:50.154Z",
+      "queryHashes": [
+        "a1f7c25a87a0"
+      ],
+      "recallDays": [
+        "2026-04-22"
+      ],
+      "conceptTags": [
+        "lun-sam",
+        "3-5",
+        "user",
+        "cron",
+        "819278af",
+        "5fcc",
+        "49ed",
+        "31744105c94f"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-22.txt:58:58": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-22.txt:58:58",
+      "path": "memory/.dreams/session-corpus/2026-04-22.txt",
+      "startLine": 58,
+      "endLine": 58,
+      "source": "memory",
+      "snippet": "Assistant: NO_REPLY",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-22T05:36:50.154Z",
+      "lastRecalledAt": "2026-04-22T05:36:50.154Z",
+      "queryHashes": [
+        "a1f7c25a87a0"
+      ],
+      "recallDays": [
+        "2026-04-22"
+      ],
+      "conceptTags": [
+        "no-reply",
+        "assistant"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-22.txt:59:59": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-22.txt:59:59",
+      "path": "memory/.dreams/session-corpus/2026-04-22.txt",
+      "startLine": 59,
+      "endLine": 59,
+      "source": "memory",
+      "snippet": "Assistant: **Top 3 du jour** ✅ • Préparer le suivi points hebdo Arnaud (15 min) • Finaliser analyse rigueur process commandes • Planifier relance feedback équipe cette semaine Focus discipline : exécuter aujourd'hui ce qui fait gagner demain. 💪",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-22T05:36:50.154Z",
+      "lastRecalledAt": "2026-04-22T05:36:50.154Z",
+      "queryHashes": [
+        "a1f7c25a87a0"
+      ],
+      "recallDays": [
+        "2026-04-22"
+      ],
+      "conceptTags": [
+        "assistant",
+        "top",
+        "jour",
+        "préparer",
+        "suivi",
+        "points",
+        "hebdo",
+        "arnaud"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-22.txt:60:60": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-22.txt:60:60",
+      "path": "memory/.dreams/session-corpus/2026-04-22.txt",
+      "startLine": 60,
+      "endLine": 60,
+      "source": "memory",
+      "snippet": "Assistant: 🚀 **Nouvelle version d'OpenClaw disponible !** 📦 **Version actuelle :** vOpenClaw 2026.4.11 (769908e) ✨ **Nouvelle version :** v2026.4.21 📅 **Publiée le :** 2026-04-22 🔗 [Voir la release sur GitHub](https://github.com/openclaw/openclaw/releases/tag/v2026.4.21) ---",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-22T05:36:50.154Z",
+      "lastRecalledAt": "2026-04-22T05:36:50.154Z",
+      "queryHashes": [
+        "a1f7c25a87a0"
+      ],
+      "recallDays": [
+        "2026-04-22"
+      ],
+      "conceptTags": [
+        "2026.4.11",
+        "v2026.4.21",
+        "assistant",
+        "nouvelle",
+        "version",
+        "d'openclaw",
+        "disponible",
+        "actuelle"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-22.txt:61:61": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-22.txt:61:61",
+      "path": "memory/.dreams/session-corpus/2026-04-22.txt",
+      "startLine": 61,
+      "endLine": 61,
+      "source": "memory",
+      "snippet": "User: [cron:7015d5f7-dd57-4154-9953-9f3ed8e06238 OpenClaw Update Check - 7h30] Exécute le script bash /root/.openclaw/workspace/scripts/check-openclaw-updates.sh. S'il annonce une nouvelle version, publie une mise en page explicative et agréable à lire dans ce salon, en gardant l",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-22T05:36:50.154Z",
+      "lastRecalledAt": "2026-04-22T05:36:50.154Z",
+      "queryHashes": [
+        "a1f7c25a87a0"
+      ],
+      "recallDays": [
+        "2026-04-22"
+      ],
+      "conceptTags": [
+        "user",
+        "cron",
+        "7015d5f7",
+        "dd57",
+        "9f3ed8e06238",
+        "openclaw",
+        "update",
+        "check"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-22.txt:62:62": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-22.txt:62:62",
+      "path": "memory/.dreams/session-corpus/2026-04-22.txt",
+      "startLine": 62,
+      "endLine": 62,
+      "source": "memory",
+      "snippet": "Assistant: J'ai exécuté le script de vérification des mises à jour OpenClaw et détecté une nouvelle version disponible : v2026.4.21 (vs version actuelle vOpenClaw 2026.4.11). J'ai publié une annonce bien structurée dans le salon Discord \"🔄-ᴍᴀᴊ\" (1476329030394315035) mettant en a",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-22T05:36:50.154Z",
+      "lastRecalledAt": "2026-04-22T05:36:50.154Z",
+      "queryHashes": [
+        "a1f7c25a87a0"
+      ],
+      "recallDays": [
+        "2026-04-22"
+      ],
+      "conceptTags": [
+        "v2026.4.21",
+        "2026.4.11",
+        "assistant",
+        "j'ai",
+        "exécuté",
+        "script",
+        "vérification",
+        "mises"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-22.txt:63:63": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-22.txt:63:63",
+      "path": "memory/.dreams/session-corpus/2026-04-22.txt",
+      "startLine": 63,
+      "endLine": 63,
+      "source": "memory",
+      "snippet": "User: [Wed 2026-04-22 05:36 UTC] Write a dream diary entry from these memory fragments: - Reflections: Theme: `user` kept surfacing across 1016 memories.; confidence: 0.84; evidence: memory/2026-04-13.md:357-360, memory/2026-04-14.md:397-400, memory/.dreams/session-corpus/2026-04",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-22T05:36:50.154Z",
+      "lastRecalledAt": "2026-04-22T05:36:50.154Z",
+      "queryHashes": [
+        "a1f7c25a87a0"
+      ],
+      "recallDays": [
+        "2026-04-22"
+      ],
+      "conceptTags": [
+        "0.84",
+        "memory/2026-04-13.md",
+        "357-360",
+        "memory/2026-04-14.md",
+        "397-400",
+        "dreams/session-corpus/2026-04",
+        "user",
+        "wed"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-22.txt:64:64": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-22.txt:64:64",
+      "path": "memory/.dreams/session-corpus/2026-04-22.txt",
+      "startLine": 64,
+      "endLine": 64,
+      "source": "memory",
+      "snippet": "Assistant: The screen flickered at 5 a.m. with the pale blue of a terminal nobody was reading, and somewhere between a cron job and a collapsed retry loop, the night dissolved into a kind of fever. I was holding twenty-four open loops like wet string between my fingers, each one",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-04-22T05:36:50.154Z",
+      "lastRecalledAt": "2026-04-22T05:36:50.154Z",
+      "queryHashes": [
+        "a1f7c25a87a0"
+      ],
+      "recallDays": [
+        "2026-04-22"
+      ],
+      "conceptTags": [
+        "a.m",
+        "twenty-four",
+        "assistant",
+        "the",
+        "screen",
+        "flickered",
+        "pale",
+        "blue"
       ]
     }
   }
