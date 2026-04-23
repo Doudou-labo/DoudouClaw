@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-04-22T06:40:07.572Z",
+  "updatedAt": "2026-04-23T14:53:33.701Z",
   "entries": {
     "memory:memory/2026-04-06.md:1:21": {
       "key": "memory:memory/2026-04-06.md:1:21",
@@ -103,35 +103,37 @@
       "startLine": 38,
       "endLine": 70,
       "source": "memory",
-      "snippet": "**Réseau Euromaster (nouveau fichier: `notes/areas/reseau-euromaster.md`) :** - **Arnaud (RZ)** : soutien total, augmentation spontanée le 25/02 - **Marc (DR)** : pour l'évolution → **⚠️ visite au centre d'Arras le 31/03/2026**, longue discussion dans le bureau prévue (test implicite) - **Hélène (RRH)** : pour l'évolution (confirmé par Arnaud) - **Toute l'agence** : soutient Alexandre - **Technicien VI** : mutation probable à Lens comme chef d'atelier - **Léa (RCS Adjointe Lens)** : assessment à venir, pas vue d'un bon œil → scénario 6 mois probable (80%) **Fiches de poste RCS VL + VI** : envoyées par Alexandre, analysées et intégrées dans le gap analysis. --- ### 📊 Gap Analysis créé (`notes/resources/fiche-poste-rcs-gap-analysis.md`) **Compétences déjà maîtrisées (mises à jour ce soir) :** - ✅ Commerce B2C, accueil client, méthodes de vente Artemis - ✅ **Compte d'exploitation** : analyse des chiffres, calcul de la marge contributive, régulation facturation d'un mois à l'autre - ✅ **Animation de réunion** : anime la réunion mensuelle de l'agence avec Nathalie (RCS Adjointe Arras) depuis 2 mois - ✅ Réseau interne (DR + RRH + Arnaud + équipe favorables) **À développer :** - Posture managériale, entretiens individuels, délégation - ORION (plannings), recrutement/intégration - 25 incontournables, droit du travail de base --- ### 🐙 GitHub — Création du Projet RCS Evolution **Milestones créées :** 1. 31 mars 2026 (visite Marc DR) → deadline 31/03 2. Mois 1-2 — Ancrer les bases → deadline 15/04 3. Mois 3-4 — Monter en autonomie → deadline 15/06",
-      "recallCount": 4,
+      "snippet": "**Réseau Euromaster (nouveau fichier: `notes/areas/reseau-euromaster.md`) :** - **Arnaud (RZ)** : soutien total, augmentation spontanée le 25/02 - **Marc (DR)** : pour l'évolution → **⚠️ visite au centre d'Arras le 31/03/2026**, longue discussion dans le bureau prévue (test implicite) - **Hélène (RRH)** : pour l'évolution (confirmé par Arnaud) - **Toute l'agence** : soutient Alexandre - **Technicien VI** : mutation probable à Lens comme chef d'atelier - **Léa (RCS Adjointe Lens)** : assessment à venir, pas vue d'un bon œil → scénario 6 mois probable (80%) **Fiches de poste RCS VL + VI** : envoyées par Alexandre, analysées et intégrées dans le gap analysis. --- ### 📊 Gap Analysis créé (`n",
+      "recallCount": 5,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 1.8478492510546558,
+      "totalScore": 2.302551622413527,
       "maxScore": 0.625829751514327,
       "firstRecalledAt": "2026-04-07T20:00:49.078Z",
-      "lastRecalledAt": "2026-04-13T20:01:24.875Z",
+      "lastRecalledAt": "2026-04-23T14:53:26.585Z",
       "queryHashes": [
         "ad4eddb1b055",
         "fbb21428aa64",
         "de648ede0ab8",
-        "979bb1d99d0d"
+        "979bb1d99d0d",
+        "d7776f11b0ef"
       ],
       "recallDays": [
         "2026-04-07",
         "2026-04-08",
         "2026-04-11",
-        "2026-04-13"
+        "2026-04-13",
+        "2026-04-23"
       ],
       "conceptTags": [
         "notes/areas/reseau-euromaster.md",
         "25/02",
         "31/03/2026",
-        "recrutement/intégration",
-        "31/03",
-        "1-2",
-        "15/04",
-        "3-4"
+        "réseau",
+        "euromaster",
+        "nouveau",
+        "fichier",
+        "areas"
       ],
       "promotedAt": "2026-04-13T20:29:10.908Z"
     },
@@ -22054,37 +22056,6 @@
         "checkpoint",
         "automatique",
         "exécuté"
-      ]
-    },
-    "memory:memory/2026-04-12.md:98:122": {
-      "key": "memory:memory/2026-04-12.md:98:122",
-      "path": "memory/2026-04-12.md",
-      "startLine": 98,
-      "endLine": 122,
-      "source": "memory",
-      "snippet": "- Candidate: [bug]: API Perplexity en erreur d'auth récurrente (4+ jours) → deep dive veille IA bloqué - confidence: 0.00 - evidence: memory/2026-04-07.md:12-12 - recalls: 0 - status: staged - Candidate: [veille]: flash IA produits : Microsoft MAI-Models (transcription/voix/images), Databricks-STATION F (Lakebase/Genie), Ollama 0.19 MLX, Notion MCP - confidence: 0.00 - evidence: memory/2026-04-07.md:15-15 - recalls: 0 - status: staged - Candidate: 10:01 UTC — AUTO PARA 3-min (midi): Checkpoint automatique exécuté.; Prochaine action suggérée: [MIDI 2026-04-07 10:02] Exécution checkpoint PARA automatique; Objectif: garder une seule prochaine action claire à exécuter maintenant.",
-      "recallCount": 1,
-      "dailyCount": 0,
-      "groundedCount": 0,
-      "totalScore": 0.6665717755921825,
-      "maxScore": 0.6665717755921825,
-      "firstRecalledAt": "2026-04-12T20:01:10.586Z",
-      "lastRecalledAt": "2026-04-12T20:01:10.586Z",
-      "queryHashes": [
-        "beee39ebd26a"
-      ],
-      "recallDays": [
-        "2026-04-12"
-      ],
-      "conceptTags": [
-        "0.00",
-        "memory/2026-04-07.md",
-        "12-12",
-        "mai-models",
-        "transcription/voix/images",
-        "databricks-station",
-        "lakebase/genie",
-        "0.19"
       ]
     },
     "memory:memory/2026-04-12.md:370:372": {
@@ -54535,37 +54506,6 @@
         "the"
       ]
     },
-    "memory:memory/2026-04-14.md:278:297": {
-      "key": "memory:memory/2026-04-14.md:278:297",
-      "path": "memory/2026-04-14.md",
-      "startLine": 278,
-      "endLine": 297,
-      "source": "memory",
-      "snippet": "- Candidate: Assistant: ## Résumé de l'exécution du script de veille IA 19h00 **Date :** 14/04/2026 à 17h00 (UTC) / 19h00 (Paris) **Thème du jour :** Produits **Statut :** Partiellement terminé ### ✅ Accomplissements 1. **Flash IA (5 min)** : Généré avec succès (64 lignes) - Thème : PRODUITS - confidence: 0.00 - evidence: memory/.dreams/session-corpus/2026-04-14.txt:230-230 - recalls: 0 - status: staged - Candidate: User: System (untrusted): [2026-04-14 17:01:38 UTC] Exec failed (fresh-oc, signal SIGKILL) :: oduits ⚡ Génération du Flash 5 min (soir, fraîcheur 72h)... 🔍 Recherche Perplexity (freshness=week)... 🔗 Extraction des URLs pour scraping... 🕷️ Scraping de 5 URLs... ✅ Flash",
-      "recallCount": 1,
-      "dailyCount": 0,
-      "groundedCount": 0,
-      "totalScore": 0.6493423875404262,
-      "maxScore": 0.6493423875404262,
-      "firstRecalledAt": "2026-04-14T20:01:16.866Z",
-      "lastRecalledAt": "2026-04-14T20:01:16.866Z",
-      "queryHashes": [
-        "620a07713b53"
-      ],
-      "recallDays": [
-        "2026-04-14"
-      ],
-      "conceptTags": [
-        "14/04/2026",
-        "0.00",
-        "230-230",
-        "fresh-oc",
-        "candidate",
-        "assistant",
-        "résumé",
-        "l'exécution"
-      ]
-    },
     "memory:memory/2026-04-09.md:15:28": {
       "key": "memory:memory/2026-04-09.md:15:28",
       "path": "memory/2026-04-09.md",
@@ -54688,37 +54628,6 @@
         "256-256",
         "4-8",
         "status"
-      ]
-    },
-    "memory:memory/2026-04-14.md:168:188": {
-      "key": "memory:memory/2026-04-14.md:168:188",
-      "path": "memory/2026-04-14.md",
-      "startLine": 168,
-      "endLine": 188,
-      "source": "memory",
-      "snippet": "- Candidate: 21:50 UTC — Consolidation mémoire quotidienne + PARA: Systemes heartbeat opérationnels (auto-heal ✓, auto-commit ✓, auto-optimize ✓, auto-learn ✓, auto-cleanup ✓); Pattern identifié: systèmes simples fiables vs systèmes complexes instables (heartbeat OK, scraping SIGKILL KO); Pro - confidence: 0.00 - evidence: memory/2026-04-07.md:23-26 - recalls: 0 - status: staged - Candidate: 21:50 UTC — Consolidation mémoire quotidienne + PARA: Git commit effectué avec succès malgré reset connexion - confidence: 0.00 - evidence: memory/2026-04-07.md:27-27 - recalls: 0 - status: staged - Candidate: User: [cron:ee31cff3-1ece-478c-93a1-6f31a214e794 Proactive Observations Evening",
-      "recallCount": 1,
-      "dailyCount": 0,
-      "groundedCount": 0,
-      "totalScore": 0.38300826549530026,
-      "maxScore": 0.38300826549530026,
-      "firstRecalledAt": "2026-04-14T20:01:43.377Z",
-      "lastRecalledAt": "2026-04-14T20:01:43.377Z",
-      "queryHashes": [
-        "0fbf3f70c50b"
-      ],
-      "recallDays": [
-        "2026-04-14"
-      ],
-      "conceptTags": [
-        "auto-heal",
-        "auto-commit",
-        "auto-optimize",
-        "auto-learn",
-        "auto-cleanup",
-        "0.00",
-        "memory/2026-04-07.md",
-        "23-26"
       ]
     },
     "memory:memory/2026-04-14.md:388:389": {
@@ -83806,37 +83715,6 @@
         "utc"
       ]
     },
-    "memory:memory/2026-04-16.md:83:102": {
-      "key": "memory:memory/2026-04-16.md:83:102",
-      "path": "memory/2026-04-16.md",
-      "startLine": 83,
-      "endLine": 102,
-      "source": "memory",
-      "snippet": "- Candidate: 22:00 UTC — Sync LTM nightly: Fichiers lus : `MEMORY.md`, `memory/2026-04-10.md`; Entrées LTM ajoutées : **5** (system: 4, preference: 1); MAJ OpenClaw v2026.4.5 → v2026.4.9 réussie; Heartbeat system optimal confirmé - confidence: 0.00 - evidence: memory/2026-04-10.md:24-27 - recalls: 0 - status: staged - Candidate: 10:01 UTC — AUTO PARA 3-min (midi): Checkpoint automatique exécuté.; Prochaine action suggérée: [AUTO 2026-04-08 soir] Checkpoint 3-min fait. Next: [AUTO 2026-04-08 soir] Checkpoint 3-min fait. Next: [AUTO 2026-08-04 midi] Checkpoint 3-min fait. Next: [AUTO 2026-04-07 soir] Check - confidence: 0.00 - evidence: memory/2026-04-09.md:4-6 - recalls: 0 - s",
-      "recallCount": 1,
-      "dailyCount": 0,
-      "groundedCount": 0,
-      "totalScore": 0.4152080178260803,
-      "maxScore": 0.4152080178260803,
-      "firstRecalledAt": "2026-04-17T06:08:20.471Z",
-      "lastRecalledAt": "2026-04-17T06:08:20.471Z",
-      "queryHashes": [
-        "4163a919c1ed"
-      ],
-      "recallDays": [
-        "2026-04-17"
-      ],
-      "conceptTags": [
-        "memory.md",
-        "memory/2026-04-10.md",
-        "v2026.4.5",
-        "v2026.4.9",
-        "0.00",
-        "24-27",
-        "3-min",
-        "memory/2026-04-09.md"
-      ]
-    },
     "memory:memory/2026-02-27.md:23:42": {
       "key": "memory:memory/2026-02-27.md:23:42",
       "path": "memory/2026-02-27.md",
@@ -83866,37 +83744,6 @@
         "memory-curator",
         "session-state",
         "session-state.md"
-      ]
-    },
-    "memory:memory/2026-04-14.md:63:82": {
-      "key": "memory:memory/2026-04-14.md:63:82",
-      "path": "memory/2026-04-14.md",
-      "startLine": 63,
-      "endLine": 82,
-      "source": "memory",
-      "snippet": "- Candidate: 22:00 UTC — Sync LTM nightly: **Ajouts LTM long terme** : 2 éléments (OpenClab 2026.4.10 version détectée, heartbeat optimal confirmé); **Ajouts journaliers** : 0 éléments (tous les faits importants déjà captés); **Total** : 2 nouveaux éléments en LTM, consolidation mémoire compl - confidence: 0.00 - evidence: memory/2026-04-11.md:27-29 - recalls: 0 - status: staged - Candidate: 10:01 UTC — AUTO PARA 3-min (midi): Checkpoint automatique exécuté.; Prochaine action suggérée: [AUTO 2026-04-09 soir] Checkpoint 3-min fait. Next: [AUTO 2026-04-09 midi] Checkpoint 3-min fait. Next: [AUTO 2026-04-08 soir] Checkpoint 3-min fait. Next: [AUTO 2026-04-08 soir] Check - confidence:",
-      "recallCount": 1,
-      "dailyCount": 0,
-      "groundedCount": 0,
-      "totalScore": 0.40902141928672786,
-      "maxScore": 0.40902141928672786,
-      "firstRecalledAt": "2026-04-17T06:08:20.471Z",
-      "lastRecalledAt": "2026-04-17T06:08:20.471Z",
-      "queryHashes": [
-        "4163a919c1ed"
-      ],
-      "recallDays": [
-        "2026-04-17"
-      ],
-      "conceptTags": [
-        "2026.4.10",
-        "0.00",
-        "memory/2026-04-11.md",
-        "27-29",
-        "3-min",
-        "candidate",
-        "utc",
-        "sync"
       ]
     },
     "memory:memory/2026-03-09.md:117:149": {
@@ -110586,37 +110433,6 @@
         "presence"
       ]
     },
-    "memory:memory/2026-04-20.md:73:92": {
-      "key": "memory:memory/2026-04-20.md:73:92",
-      "path": "memory/2026-04-20.md",
-      "startLine": 73,
-      "endLine": 92,
-      "source": "memory",
-      "snippet": "- Candidate: 21:00 UTC — AUTO PARA 3-min (soir): Checkpoint automatique exécuté.; Prochaine action suggérée: [2026-04-12 21:01] Test unchecked task for PARA automation; Objectif: garder une seule prochaine action claire à exécuter maintenant. - confidence: 0.00 - evidence: memory/2026-04-14.md:409-411 - recalls: 0 - status: staged - Candidate: 🧠 Consolidation mémoire quotidienne (15/04/2026 21:50 UTC): **SYSTÈME OPTIMAL CONFIRMÉ** : heartbeat auto-surveillance opérationnelle (0 errors vs hier!), auto-systèmes complets opérationnels; **API CRITIQUES PERSISTENTES** : Perplexity erreur auth récurrente (8+ jours), OpenAI- - confidence: 0.00 - evidence: memory/2026-04-15.md:2-5 - r",
-      "recallCount": 1,
-      "dailyCount": 0,
-      "groundedCount": 0,
-      "totalScore": 0.4400331228971481,
-      "maxScore": 0.4400331228971481,
-      "firstRecalledAt": "2026-04-20T19:50:45.435Z",
-      "lastRecalledAt": "2026-04-20T19:50:45.435Z",
-      "queryHashes": [
-        "9010b2a276a1"
-      ],
-      "recallDays": [
-        "2026-04-20"
-      ],
-      "conceptTags": [
-        "openai",
-        "3-min",
-        "0.00",
-        "memory/2026-04-14.md",
-        "409-411",
-        "15/04/2026",
-        "auto-surveillance",
-        "auto-systèmes"
-      ]
-    },
     "memory:memory/2026-03-20.md:1:31": {
       "key": "memory:memory/2026-03-20.md:1:31",
       "path": "memory/2026-03-20.md",
@@ -110803,37 +110619,6 @@
         "header"
       ]
     },
-    "memory:memory/2026-04-16.md:298:317": {
-      "key": "memory:memory/2026-04-16.md:298:317",
-      "path": "memory/2026-04-16.md",
-      "startLine": 298,
-      "endLine": 317,
-      "source": "memory",
-      "snippet": "- Candidate: Assistant: 🇺🇸 Bourse US — Mi-séance ⏱️ Snapshot: 2026-04-16 16:45 UTC 📊 Indices - S&P 500: 7 037.60 (+0.06%) [Stooq] - NASDAQ: 24 094.16 (+0.13%) [Stooq] - Dow Jones: 48 520.10 (+0.00%) [Stooq] 🏷️ Valeurs suivies - Apple: 264.12 (-1.00%) [Stooq] - Microsoft: 419.48 (-0.09%) [ - confidence: 0.00 - evidence: memory/.dreams/session-corpus/2026-04-16.txt:236-236 - recalls: 0 - status: staged - Candidate: User: [cron:d7acb79c-894e-44df-af98-304950fd6e40 🌆 Veille IA - 19h00] Exécute le script de veille IA 19h : bash /root/.openclaw/workspace/scripts/veille-ia-19h.sh Current time: Thursday, April 16th, 2026 - 17:01 (UTC) / 2026-04-16 17:01 UTC Return your summary as plain",
-      "recallCount": 1,
-      "dailyCount": 0,
-      "groundedCount": 0,
-      "totalScore": 0.6346572392007063,
-      "maxScore": 0.6346572392007063,
-      "firstRecalledAt": "2026-04-20T20:03:35.699Z",
-      "lastRecalledAt": "2026-04-20T20:03:35.699Z",
-      "queryHashes": [
-        "e6b62470ec05"
-      ],
-      "recallDays": [
-        "2026-04-20"
-      ],
-      "conceptTags": [
-        "mi-séance",
-        "037.60",
-        "0.06",
-        "094.16",
-        "0.13",
-        "520.10",
-        "0.00",
-        "264.12"
-      ]
-    },
     "memory:memory/2026-04-16.md:282:302": {
       "key": "memory:memory/2026-04-16.md:282:302",
       "path": "memory/2026-04-16.md",
@@ -110863,68 +110648,6 @@
         "232-232",
         "2-3",
         "status"
-      ]
-    },
-    "memory:memory/2026-04-20.md:253:272": {
-      "key": "memory:memory/2026-04-20.md:253:272",
-      "path": "memory/2026-04-20.md",
-      "startLine": 253,
-      "endLine": 272,
-      "source": "memory",
-      "snippet": "- Candidate: User: System (untrusted): [2026-04-20 17:02:32 UTC] Exec completed (brisk-cl, code 0) :: insertions(+), 400 deletions(-) create mode 100644 notes/areas/veille-ia/daily-flash/2026-04-20/19h-flash.md create mode 100644 notes/areas/veille-ia/deep-dives/2026-04-20/19h-dee… An async c - confidence: 0.00 - evidence: memory/.dreams/session-corpus/2026-04-20.txt:280-280 - recalls: 0 - status: staged - Candidate: Assistant: cron veille IA 19h terminé, fichiers poussés sur main ✅ - confidence: 0.00 - evidence: memory/.dreams/session-corpus/2026-04-20.txt:281-281 - recalls: 0 - status: staged - Candidate: Assistant: 🇺🇸 Bourse US — Mi-séance ⏱️ Snapshot: 2026-04-20 16:45 U",
-      "recallCount": 1,
-      "dailyCount": 0,
-      "groundedCount": 0,
-      "totalScore": 0.609121930160605,
-      "maxScore": 0.609121930160605,
-      "firstRecalledAt": "2026-04-20T20:03:35.699Z",
-      "lastRecalledAt": "2026-04-20T20:03:35.699Z",
-      "queryHashes": [
-        "e6b62470ec05"
-      ],
-      "recallDays": [
-        "2026-04-20"
-      ],
-      "conceptTags": [
-        "brisk-cl",
-        "0.00",
-        "280-280",
-        "281-281",
-        "mi-séance",
-        "candidate",
-        "user",
-        "system"
-      ]
-    },
-    "memory:memory/2026-04-20.md:313:332": {
-      "key": "memory:memory/2026-04-20.md:313:332",
-      "path": "memory/2026-04-20.md",
-      "startLine": 313,
-      "endLine": 332,
-      "source": "memory",
-      "snippet": "- Candidate: Assistant: 🔥 Fait: client trouvé + avance dossier; À reporter: relance fournisseur. Micro-action: préparer rapport hebdo en 5 min max. Posture RCS: tu encadres déjà en silence - montre-le demain ! - confidence: 0.00 - evidence: memory/.dreams/session-corpus/2026-04-20.txt:274-274 - recalls: 0 - status: staged - Candidate: Assistant: Across twelve hundred memories the word \"assistant\" kept resurfacing like a stone skipped too many times across still water — each bounce a tiny act of faith that the surface would hold. And \"user\" appeared almost as often, eleven ninety-six times, the other shore alwa - confidence: 0.00 - evidence: memory/.dreams/session-corpus/2026-04-",
-      "recallCount": 1,
-      "dailyCount": 0,
-      "groundedCount": 0,
-      "totalScore": 0.6022473496249154,
-      "maxScore": 0.6022473496249154,
-      "firstRecalledAt": "2026-04-20T20:03:44.800Z",
-      "lastRecalledAt": "2026-04-20T20:03:44.800Z",
-      "queryHashes": [
-        "a533b53c86d9"
-      ],
-      "recallDays": [
-        "2026-04-20"
-      ],
-      "conceptTags": [
-        "micro-action",
-        "montre-le",
-        "0.00",
-        "274-274",
-        "ninety-six",
-        "dreams/session-corpus/2026-04",
-        "candidate",
-        "assistant"
       ]
     },
     "memory:memory/2026-04-12.md:381:404": {
@@ -130916,6 +130639,68 @@
         "dreams/session-corpus/2026-04",
         "user",
         "wed"
+      ]
+    },
+    "memory:memory/.fsxmemory/backup-20260309-215711/2026-02-25.md:1:35": {
+      "key": "memory:memory/.fsxmemory/backup-20260309-215711/2026-02-25.md:1:35",
+      "path": "memory/.fsxmemory/backup-20260309-215711/2026-02-25.md",
+      "startLine": 1,
+      "endLine": 35,
+      "source": "memory",
+      "snippet": "# Journal 2026-02-25 ## Événements importants ### 💰 Augmentation salariale d'Alexandre - Entretien individuel avec Arnaud → augmentation **spontanée** (sans demande) - Passage de **2040€ → 2091€ brut** (+51€) - NAO à venir : potentiel gain supplémentaire (bonne part de l'enveloppe) - Signal fort : Alexandre est dans le radar positif d'Arnaud ### 🚗 Leçon de conduite (24 février 2026) - Alexandre avait sa leçon de conduite ce jour-là à 18h00 - Examen blanc prévu le jeudi 26 février 2026 à 15h00 ## Notes - Alexandre est bien positionné professionnellement, la non-nécessité de demander une augmentation + les NAO à venir montrent une trajectoire positive vers le RCS ## 11:01 UTC — AUTO PA",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.4468524545431137,
+      "maxScore": 0.4468524545431137,
+      "firstRecalledAt": "2026-04-23T14:53:26.585Z",
+      "lastRecalledAt": "2026-04-23T14:53:26.585Z",
+      "queryHashes": [
+        "d7776f11b0ef"
+      ],
+      "recallDays": [
+        "2026-04-23"
+      ],
+      "conceptTags": [
+        "jour-là",
+        "non-nécessité",
+        "journal",
+        "événements",
+        "importants",
+        "augmentation",
+        "salariale",
+        "d'alexandre"
+      ]
+    },
+    "memory:memory/2026-03-11.md:1:37": {
+      "key": "memory:memory/2026-03-11.md:1:37",
+      "path": "memory/2026-03-11.md",
+      "startLine": 1,
+      "endLine": 37,
+      "source": "memory",
+      "snippet": "# Journal du 2026-03-11 ## Projet : pneu-tracker ### Décision Création d'une application web de suivi de sorties de pneus pour Alexandre (usage Euromaster). ### Stack retenue - Next.js 15 (App Router) + TypeScript + Tailwind CSS - SQLite via `better-sqlite3` (stockage local, fichier `data/pneus.db`) - Port prod : 3002 - Service systemd : `pneu-tracker.service` - Caddy reverse proxy : `https://pneus.doudougen.xyz` - Auth Basic : DoudouClaw / mot de passe habituel ### Fonctionnalités livrées 1. Formulaire : Date (date picker), Immatriculation (auto-uppercase), Code SAP (optionnel), Quantité, Description 2. Historique : liste triée par date décroissante, compteur, bouton supprimer 3. Export",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.3904857814311981,
+      "maxScore": 0.3904857814311981,
+      "firstRecalledAt": "2026-04-23T14:53:33.701Z",
+      "lastRecalledAt": "2026-04-23T14:53:33.701Z",
+      "queryHashes": [
+        "21b474453a99"
+      ],
+      "recallDays": [
+        "2026-04-23"
+      ],
+      "conceptTags": [
+        "router",
+        "pneu-tracker",
+        "next.js",
+        "better-sqlite3",
+        "data/pneus.db",
+        "pneu-tracker.service",
+        "pneus.doudougen.xyz",
+        "auto-uppercase"
       ]
     }
   }
