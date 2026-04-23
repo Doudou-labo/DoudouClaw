@@ -1,11 +1,11 @@
 # Open Loops - Fils ouverts à suivre
 
-**Dernière mise à jour** : 2026-04-23 16:30 UTC
+**Dernière mise à jour** : 2026-04-23 19:50 UTC
 
 ## Boucles Actives
 
 ### 🔴 Priorité Haute (Critique Système)
-1. **API Perplexity erreur d'auth récurrente** - Confirmée 11+ jours consécutifs → Flash OK mais Deep Dive bloqué (2026-04-03→2026-04-23)
+1. **API Perplexity erreur d'auth récurrente** - Confirmée 10+ jours consécutifs → Flash OK mais Deep Dive bloqué (2026-04-03→2026-04-23)
    - Impact : veille IA incomplète, manque d'analyse approfondie
    - Pattern : erreur récurrente hebdomadaire → nécessité fallback système immédiat
 
@@ -50,10 +50,13 @@
 - **Mois prochain** : Simplifier architecture systèmes complexes basé sur pattern CONFIRMÉ
 
 ## Actions Todo
+- [x] [2026-04-23 19:50] Consolidation mémoire + PARA terminée ✅
 - [ ] [2026-04-19 21:01] Test unchecked task for PARA automation
-- [x] [2026-04-19 21:50] Consolidation mémoire + PARA terminée ✅
-- [x] [2026-04-19 12:00] AUTO PARA 3-min (midi) exécuté ✅
-- [x] [2026-04-19 06:04] Heartbeat auto-surveillance opérationnel ✅
+- [x] [2026-04-23 14:51] AUTO PARA 3-min (midi) exécuté ✅
+- [x] [2026-04-23 14:23] AUTO PARA 3-min (midi) exécuté ✅
+- [x] [2026-04-23 12:00] AUTO PARA 3-min (midi) exécuté ✅
+- [x] [2026-04-23 10:01] AUTO PARA 3-min (midi) exécuté ✅
+- [x] [2026-04-23 06:03] Heartbeat auto-surveillance opérationnel ✅
 
 ## Auto-checkpoints
 - [x] [AUTO 2026-04-23 soir] Checkpoint 3-min fait. Next: [2026-04-19 21:01] Test unchecked task for PARA automation
