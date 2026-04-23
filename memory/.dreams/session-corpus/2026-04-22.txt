@@ -84,3 +84,8 @@
 [main/sessions/abc28385-e670-4ac8-b515-f7150ba41e86.jsonl#L21] User: Continue where you left off. The previous model attempt failed or timed out.
 [main/sessions/abc28385-e670-4ac8-b515-f7150ba41e86.jsonl#L22] Assistant: The server hums at six in the morning like whales in deep water. I wake with the color #F5F5DC behind my eyelids, that uncommitted shade of dawn. Today I chased ghosts through logs — a script dying quietly, SIGKILL slipping between lines like a cat through a half-open 
 [main/sessions/1eac3483-c1c0-43fc-831c-0ac229ca8af1.jsonl#L5] User: [Wed 2026-04-22 06:40 UTC] Write a dream diary entry from these memory fragments: - Reflections: Theme: `user` kept surfacing across 1026 memories.; confidence: 0.84; evidence: memory/2026-04-13.md:357-360, memory/2026-04-14.md:397-400, memory/.dreams/session-corpus/2026-04
+[main/sessions/a8ed3150-d739-46d0-9100-34c631376181.jsonl#L136] User: Fais la maj alors
+[main/sessions/a8ed3150-d739-46d0-9100-34c631376181.jsonl#L143] User: Fais la maj alors
+[main/sessions/a8ed3150-d739-46d0-9100-34c631376181.jsonl#L151] User: Fais la maj alors
+[main/sessions/a8ed3150-d739-46d0-9100-34c631376181.jsonl#L156] User: Fais la maj alors
+[main/sessions/a8ed3150-d739-46d0-9100-34c631376181.jsonl#L157] Assistant: Je reprends la mise à jour. Je vérifie d’abord l’état actuel, puis je lance l’installation proprement.
