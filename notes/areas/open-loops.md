@@ -1,11 +1,11 @@
 # Open Loops - Fils ouverts à suivre
 
-**Dernière mise à jour** : 2026-04-20 21:50 UTC
+**Dernière mise à jour** : 2026-04-23 16:30 UTC
 
 ## Boucles Actives
 
 ### 🔴 Priorité Haute (Critique Système)
-1. **API Perplexity erreur d'auth récurrente** - Confirmée 10+ jours consécutifs → Flash OK mais Deep Dive bloqué (2026-04-03→2026-04-20)
+1. **API Perplexity erreur d'auth récurrente** - Confirmée 11+ jours consécutifs → Flash OK mais Deep Dive bloqué (2026-04-03→2026-04-23)
    - Impact : veille IA incomplète, manque d'analyse approfondie
    - Pattern : erreur récurrente hebdomadaire → nécessité fallback système immédiat
 
@@ -16,7 +16,7 @@
 3. **Scraping SIGKILL multi-URLs** - Session `lucky-ne` tuée OOM pendant veille IA 19h → deep dive bloqué
    - Impact : pertes données scraping, instabilité système complexe
    - Pattern : systèmes complexes (scraping multi-URLs) vs simples (heartbeat) → nécessité timeout/retry robustes
-   - **Mise à jour 2026-04-20** : problème persistant confirmé aujourd'hui + veille TECH complété sans deep dive
+   - **Mise à jour 2026-04-23** : problème persistant confirmé → veille Flash fonctionnelle mais deep dive bloqué API critique
 
 ### 🟡 Priorité Moyenne (Robustesse Système)
 4. **Pattern robustesse systèmes CONFIRMÉ** - systèmes simples fiables vs complexes instables confirmé
@@ -56,7 +56,7 @@
 - [x] [2026-04-19 06:04] Heartbeat auto-surveillance opérationnel ✅
 
 ## Auto-checkpoints
-- [ ] [AUTO 2026-04-23 soir] Checkpoint 3-min fait. Next: [2026-04-19 21:01] Test unchecked task for PARA automation
+- [x] [AUTO 2026-04-23 soir] Checkpoint 3-min fait. Next: [2026-04-19 21:01] Test unchecked task for PARA automation
 
 ## Pattern Robustesse Appliqué
 - **Principe** : systèmes simples (heartbeat) > systèmes complexes (scraping)
