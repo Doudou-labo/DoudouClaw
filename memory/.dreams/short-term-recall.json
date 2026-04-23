@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-04-23T14:53:33.701Z",
+  "updatedAt": "2026-04-23T14:57:04.963Z",
   "entries": {
     "memory:memory/2026-04-06.md:1:21": {
       "key": "memory:memory/2026-04-06.md:1:21",
@@ -94177,21 +94177,23 @@
       "endLine": 22,
       "source": "memory",
       "snippet": "# Journal 2026-04-19 ## Consolidation mémoire quotidienne + PARA ### 🧠 Points mémoire ajoutés - **SYSTÈME STABLE**: Heartbeat optimal maintenu (0 errors), auto-surveillance opérationnelle - **API CRITIQUES PERSISTANTES**: Perplexity erreur auth récurrente (9+ jours), OpenAI-Codex expiré (85h+), scraping SIGKILL persistant → monitoring proactif urgent nécessaire - **VEILLE IA BUSINESS COMPLÈTE**: Flash 8h/12h/19h générés avec succès (Meta IA 21B$, Intel-Google partenariat, CoreWeave 21B$, Microsoft 30k GPUs Norvège, adoption IA 72% grandes entreprises) - **DEEP DIVE BUSINESS**: Analyse marché IA 2026 (levées fonds record, stratégies Big Tech, adoption entreprise 40% France) - **BOURSE US N",
-      "recallCount": 3,
+      "recallCount": 4,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 1.7912718928011038,
+      "totalScore": 2.512458444484619,
       "maxScore": 0.721595912817367,
       "firstRecalledAt": "2026-04-19T20:01:32.420Z",
-      "lastRecalledAt": "2026-04-20T19:53:37.453Z",
+      "lastRecalledAt": "2026-04-23T14:57:04.963Z",
       "queryHashes": [
         "18bcc4d087bf",
         "7ba944a17f1e",
-        "8e910278ea02"
+        "8e910278ea02",
+        "9024df095d1b"
       ],
       "recallDays": [
         "2026-04-19",
-        "2026-04-20"
+        "2026-04-20",
+        "2026-04-23"
       ],
       "conceptTags": [
         "openai",
@@ -130701,6 +130703,68 @@
         "pneu-tracker.service",
         "pneus.doudougen.xyz",
         "auto-uppercase"
+      ]
+    },
+    "memory:memory/2026-04-21.md:370:377": {
+      "key": "memory:memory/2026-04-21.md:370:377",
+      "path": "memory/2026-04-21.md",
+      "startLine": 370,
+      "endLine": 377,
+      "source": "memory",
+      "snippet": "- SYSTÈME OPTIMAL CONFIRMÉ : heartbeat auto-surveillance opérationnelle (0 errors vs hier!), pattern robustesse systèmes confirmé (simples vs complexes), API Perplexity erreur auth récurrente (11+ jours), OpenAI-Codex expiré (90h+), scraping SIGKILL persistant identifié - BOUCLE CRITIQUE CONFIRMÉE : 3 API critiques persistantes (Perplexity auth, OpenAI-Codex expiré, scraping SIGKILL) → impact sur stabilité système - DÉCISION STRATÉGIQUE : maintenir focus sur résolution API critiques avant nouveaux développements - Candidate: 🧠 Consolidation mémoire quotidienne (15/04/2026 21:50 UTC): **SYSTÈME OPTIMAL CONFIRMÉ** : heartbeat auto-surveillance opérationnelle (0 errors vs hier!), auto-systèmes",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.694516109588455,
+      "maxScore": 0.694516109588455,
+      "firstRecalledAt": "2026-04-23T14:57:04.963Z",
+      "lastRecalledAt": "2026-04-23T14:57:04.963Z",
+      "queryHashes": [
+        "9024df095d1b"
+      ],
+      "recallDays": [
+        "2026-04-23"
+      ],
+      "conceptTags": [
+        "openai",
+        "auto-surveillance",
+        "openai-codex",
+        "15/04/2026",
+        "auto-systèmes",
+        "système",
+        "optimal",
+        "confirmé"
+      ]
+    },
+    "memory:memory/2026-04-21.md:1:17": {
+      "key": "memory:memory/2026-04-21.md:1:17",
+      "path": "memory/2026-04-21.md",
+      "startLine": 1,
+      "endLine": 17,
+      "source": "memory",
+      "snippet": "# Memory — 2026-04-21 ## 10:01 UTC — AUTO PARA 3-min (midi) - Checkpoint automatique exécuté. - Prochaine action suggérée: [2026-04-20 21:01] Test unchecked task for PARA automation - Objectif: garder une seule prochaine action claire à exécuter maintenant. ## 21:50 UTC — Consolidation mémoire quotidienne + PARA **Points clés identifiés pour consolidation mémoire quotidienne + PARA :** - SYSTÈME OPTIMAL CONFIRMÉ : heartbeat auto-surveillance opérationnelle (0 errors vs hier!), pattern robustesse systèmes confirmé (simples vs complexes), API Perplexity erreur auth récurrente (11+ jours), OpenAI-Codex expiré (90h+), scraping SIGKILL persistant identifié - VEILLE IA GÉNÉRÉE : Flash 8h/12h/19h",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.6875244486639269,
+      "maxScore": 0.6875244486639269,
+      "firstRecalledAt": "2026-04-23T14:57:04.963Z",
+      "lastRecalledAt": "2026-04-23T14:57:04.963Z",
+      "queryHashes": [
+        "9024df095d1b"
+      ],
+      "recallDays": [
+        "2026-04-23"
+      ],
+      "conceptTags": [
+        "openai",
+        "3-min",
+        "auto-surveillance",
+        "openai-codex",
+        "8h/12h/19h",
+        "utc",
+        "auto",
+        "min"
       ]
     }
   }
