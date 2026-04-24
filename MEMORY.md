@@ -349,6 +349,17 @@ Meilleure amie d'Alexandre, habite à Calais; relation amicale de longue date (e
 *Dernière mise à jour: 2026-04-16*
 Quand je te demande de tester une clé API tu le fais
 
+## Consolidation mémoire (2026-04-24) - Importance: 0.9
+- **SYSTÈME OPTIMAL CONFIRMÉ**: Heartbeat optimal maintenu (0 errors), auto-surveillance opérationnelle
+- **API CRITIQUES PERSISTANTES**: Perplexity erreur auth récurrente (10+ jours), OpenAI-Codex expiré (87h+), scraping SIGKILL persistant → monitoring proactif urgent nécessaire
+- **VEILLE IA TECH COMPLÈTE**: Flash 8h/12h/19h générés avec succès (Edge AI Europe/USA, puces AI comparatif, alternatives Transformers Mamba/RWKV)
+- **DEEP DIVE TECH**: Bloqué par API Perplexity erreur auth récurrente → nécessité fallback système
+- **BOURSE EU HAUSSIÈRE**: CAC 40: +1.93%, DAX: +2.28%, Euro Stoxx 50: +2.10% (marché haussier en Europe)
+- **ROUTINE PRO ACTIVE**: Debrief pro généré (rapport évolution, progression RCS maintenue)
+- **PATTERN ROBUSTESSE CONFIRMÉ**: systèmes simples (heartbeat) > systèmes complexes (scraping) → simplification architecture prioritaire
+- **DECISION STRATÉGIQUE**: Maintenir focus sur résolution API critiques + mécanismes robustes avant nouveaux développements
+- **ACTION PRIORITAIRE**: Implémenter monitoring proactif tokens + fallback système Perplexity + timeout/retry scraping
+
 ## Promoted From Short-Term Memory (2026-04-13)
 
 <!-- openclaw-memory-promotion:memory:memory/2026-02-25.md:38:70 -->
