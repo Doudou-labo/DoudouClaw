@@ -346,7 +346,34 @@ Meilleure amie d'Alexandre, habite à Calais; relation amicale de longue date (e
 
 ---
 
-*Dernière mise à jour: 2026-04-16*
+## Bourse EU haussière significative (2026-04-24) - Importance: 0.8
+- **MARCHÉ EU HAUSSIÈRE SIGNIFICATIVE**: CAC 40 +1.93%, DAX +2.28%, Euro Stoxx 50 +2.10% → tendance positive distincte en Europe, confirmation des marchés haussiers récents
+
+## Routine pro active confirmée (2026-04-24) - Importance: 0.85
+- **ROUTINE PRO ACTIVE CONFIRMÉE**: Debrief pro généré avec succès, progression RCS maintenue, stabilité de l'évolution professionnelle confirmée, routine opérationnelle efficace
+
+## Veille IA tech complète avec contraintes (2026-04-24) - Importance: 0.9
+- **VEILLE IA TECH COMPLÈTE AVEC CONTRAINTES**: Flash 8h/12h/19h générés avec succès (Edge AI Europe/USA, puces AI comparatif, alternatives Transformers Mamba/RWKV) mais deep dive bloqué par API Perplexity erreur auth récurrente → nécessité fallback système immédiat
+
+## Faits concrets journaliers 24/04/2026 - Importance: 0.6-0.8
+- **FLASH IA TECH COMPLET**: Veille IA sectorielle technique complète avec succès (Edge AI Europe/USA, puces AI comparatif, alternatives Transformers Mamba/RWKV)
+- **DEEP DIVE BLOQUÉ**: Analyse approfondie bloquée par API Perplexity erreur auth récurrente (10+ jours consécutifs)
+- **SCRAPING SIGKILL PERSISTANT**: Session `lucky-ne` tuée OOM pendant veille IA 19h → nécessité timeout/retry robustes
+- **SYSTÈME STABLE CONFIRMÉ**: Heartbeat optimal maintenu (0 errors), auto-surveillance opérationnelle, auto-systèmes complets opérationnels
+- **PATTERN ROBUSTESSE CONFIRMÉ**: systèmes simples (heartbeat) > systèmes complexes (scraping) → simplification architecture prioritaire
+- **BOURSE EU HAUSSIÈRE**: CAC 40: +1.93%, DAX: +2.28%, Euro Stoxx 50: +2.10% (marché haussier en Europe)
+- **ROUTINE PRO ACTIVE**: Debrief pro généré (rapport évolution, progression RCS maintenue)
+- **DECISION STRATÉGIQUE**: Maintenir focus sur résolution API critiques + mécanismes robustes avant nouveaux développements
+- **ACTION PRIORITAIRE**: Implémenter monitoring proactif tokens + fallback système Perplexity + timeout/retry scraping
+
+## API Critical Issues Evolution (2026-04-14) - Importance: 0.95
+- **API Perplexity** : erreur d'auth récurrente identifiée (28/03, 01/04, 03/04, 07/04, 14/04, 15/04, 16/04) → **9+ jours consécutifs** → deep dive veille IA bloqué, pattern hebdomadaire confirmé
+- **OpenAI-Codex** : token expiré depuis 85h → **pattern expiration régulière identifié** → nécessité monitoring proactif tokens système
+- **Impact** : veille IA incomplète (Flash OK mais Deep Dive bloqué), dépendances OpenAI potentiellement affectées
+- **Décision** : priorisation résolution API critiques > nouveaux développements
+- **Action** : implémentation monitoring proactif tokens + fallback système Perplexity
+
+*Dernière mise à jour: 2026-04-24*
 Quand je te demande de tester une clé API tu le fais
 
 ## Consolidation mémoire (2026-04-24) - Importance: 0.9
