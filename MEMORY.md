@@ -373,7 +373,60 @@ Meilleure amie d'Alexandre, habite à Calais; relation amicale de longue date (e
 - **Décision** : priorisation résolution API critiques > nouveaux développements
 - **Action** : implémentation monitoring proactif tokens + fallback système Perplexity
 
-*Dernière mise à jour: 2026-04-24*
+## Pattern Robustness Systems (2026-04-25) - Importance: 0.95
+- **PATTERN ROBUSTESSE CONFIRMÉ**: systèmes simples (heartbeat) > systèmes complexes (scraping) → simplification architecture prioritaire identifiée et validée
+- **IMPACT**: systèmes simples fiables avec 0 errors vs systèmes complexes instables (scraping SIGKILL, multi-URLs instables)
+- **LEARNINGS**: privilégier architecture simple > complexe pour stabilité système, implémenter timeout/retry robustes pour systèmes complexes
+- **NEXT**: priorité résolution problèmes complexes avant nouveaux développements
+
+## API Critical Issues Evolution (2026-04-25) - Importance: 0.95
+- **API Perplexity**: erreur d'auth récurrente identifiée (28/03, 01/04, 03/04, 07/04, 14/04, 15/04, 16/04, 25/04) → **10+ jours consécutifs** → deep dive veille IA bloqué, pattern hebdomadaire confirmé
+- **OpenAI-Codex**: token expiré depuis 87h → **pattern expiration régulière identifiée** → nécessité monitoring proactif tokens système
+- **Impact**: veille IA incomplète (Flash OK mais Deep Dive bloqué), dépendances OpenAI potentiellement affectées
+- **Décision**: priorisation résolution API critiques > nouveaux développements
+- **Action**: implémentation monitoring proactif tokens + fallback système Perplexity + timeout/retry scraping
+
+## Routine Pro Active Confirmée (2026-04-25) - Importance: 0.85
+- **ROUTINE PRO ACTIVE CONFIRMÉE**: Debrief pro généré avec succès, progression RCS maintenue, stabilité de l'évolution professionnelle confirmée
+- **PATTERN**: routine opérationnelle stabilisée après période d'ajustement, rapport hebdo fonctionnel
+- **NEXT**: maintenance continue de la routine pro active
+
+## Bourse EU Hausse Significative (2026-04-25) - Importance: 0.8
+- **MARCHÉ EU HAUSSIÈRE SIGNIFICATIVE**: CAC 40 +1.93%, DAX +2.28%, Euro Stoxx 50 +2.10% → tendance positive distincte en Europe, confirmation des marchés haussiers récents
+- **IMPACT**: contexte marché favorable pour investissements européens
+- **NEXT**: suivi continue des tendances européennes
+
+## Veille IA Tech Complète avec Contraintes (2026-04-25) - Importance: 0.85
+- **VEILLE IA TECH COMPLÈTE AVEC CONTRAINTES**: Flash 8h/12h/19h générés avec succès (Edge AI Europe/USA, puces AI comparatif, alternatives Transformers Mamba/RWKV)
+- **DEEP DIVE BLOQUÉ**: Analyse approfondie bloquée par API Perplexity erreur auth récurrente → nécessité fallback système immédiat
+- **IMPACT**: veille IA incomplète mais flashs opérationnels maintenus
+- **NEXT**: implémentation fallback système pour deep dives
+
+## Daily Facts 2026-04-25 - Importance: 0.6-0.8
+- **FLASH IA TECH COMPLET**: Veille IA sectorielle technique complète avec succès (Edge AI Europe/USA, puces AI comparatif, alternatives Transformers Mamba/RWKV)
+- **AUTO PARA EXÉCUTÉ**: Checkpoint automatique exécuté avec action suggérée [2026-04-19 21:01] Test unchecked task for PARA automation
+- **SYSTÈME STABLE CONFIRMÉ**: Heartbeat optimal maintenu (0 errors), auto-surveillance opérationnelle, auto-systèmes complets opérationnels
+- **SCRAPING SIGKILL PERSISTANT**: Session OOM pendant veille IA 19h → nécessité timeout/retry robustes
+- **PATTERN ROBUSTESSE CONFIRMÉ**: systèmes simples (heartbeat) > systèmes complexes (scraping) → simplification architecture prioritaire
+- **ROUTINE PRO ACTIVE**: Debrief pro généré (rapport évolution, progression RCS maintenue)
+- **BOURSE EU HAUSSIÈRE**: CAC 40: +1.93%, DAX: +2.28%, Euro Stoxx 50: +2.10% (marché haussier en Europe)
+- **DECISION STRATÉGIQUE**: Maintenir focus sur résolution API critiques + mécanismes robustes avant nouveaux développements
+- **ACTION PRIORITAIRE**: Implémenter monitoring proactif tokens + fallback système Perplexity + timeout/retry scraping
+- **NEXT**: résolution API critiques avant nouveaux développements
+
+## Promoted From Short-Term Memory (2026-04-25)
+<!-- openclaw-memory-promotion:memory:memory/2026-04-25.md:1:42 -->
+- **SYSTÈME OPTIMAL CONFIRMÉ**: Heartbeat optimal maintenu (0 errors), auto-surveillance opérationnelle
+- **API CRITIQUES PERSISTANTES**: Perplexity erreur auth récurrente (10+ jours), OpenAI-Codex expiré (87h+), scraping SIGKILL persistant → monitoring proactif urgent nécessaire
+- **VEILLE IA TECH COMPLÈTE**: Flash 8h/12h/19h générés avec succès (Edge AI Europe/USA, puces AI comparatif, alternatives Transformers Mamba/RWKV)
+- **DEEP DIVE TECH**: Bloqué par API Perplexity erreur auth récurrente → nécessité fallback système
+- **BOURSE EU HAUSSIÈRE**: CAC 40: +1.93%, DAX: +2.28%, Euro Stoxx 50: +2.10% (marché haussier en Europe)
+- **ROUTINE PRO ACTIVE**: Debrief pro généré (rapport évolution, progression RCS maintenue)
+- **PATTERN ROBUSTESSE CONFIRMÉ**: systèmes simples (heartbeat) > systèmes complexes (scraping) → simplification architecture prioritaire
+- **DECISION STRATÉGIQUE**: Maintenir focus sur résolution API critiques + mécanismes robustes avant nouveaux développements
+- **ACTION PRIORITAIRE**: Implémenter monitoring proactif tokens + fallback système Perplexity + timeout/retry scraping
+
+*Dernière mise à jour: 2026-04-25*
 Quand je te demande de tester une clé API tu le fais
 
 ## Consolidation mémoire (2026-04-24) - Importance: 0.9
