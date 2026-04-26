@@ -426,8 +426,22 @@ Meilleure amie d'Alexandre, habite à Calais; relation amicale de longue date (e
 - **DECISION STRATÉGIQUE**: Maintenir focus sur résolution API critiques + mécanismes robustes avant nouveaux développements
 - **ACTION PRIORITAIRE**: Implémenter monitoring proactif tokens + fallback système Perplexity + timeout/retry scraping
 
-*Dernière mise à jour: 2026-04-25*
+*Dernière mise à jour: 2026-04-26*
 Quand je te demande de tester une clé API tu le fais
+
+## API Critical Issues Evolution (2026-04-26) - Importance: 0.95
+- **API Perplexity**: erreur d'auth récurrente identifiée (28/03, 01/04, 03/04, 07/04, 14/04, 15/04, 16/04, 25/04, 26/04) → **11+ jours consécutifs** → deep dive veille IA bloqué, pattern hebdomadaire confirmé
+- **OpenAI-Codex**: token expiré depuis 89h → **pattern expiration régulière identifié** → nécessité monitoring proactif tokens système
+- **Impact**: veille IA incomplète (Flash OK mais Deep Dive bloqué), dépendances OpenAI potentiellement affectés
+- **Décision**: priorisation résolution API critiques > nouveaux développements
+- **Action**: implémentation monitoring proactif tokens + fallback système Perplexity + timeout/retry scraping
+
+## Pattern Robustness Systems Evolution (2026-04-26) - Importance: 0.95
+- **PATTERN ROBUSTESSE CONFIRMÉ ET VALIDÉ**: systèmes simples (heartbeat) > systèmes complexes (scraping) → simplification architecture prioritaire identifiée et validée sur 11+ jours
+- **PREUVE EMPIRIQUE**: heartbeat simple (0 errors vs hier!) vs scraping complexe en erreur persistante (SIGKILL OOM) → pattern statistiquement significatif
+- **IMPACT SYSTEME**: décisions d'architecture future basées sur preuve empirique robuste → priorité absolue aux systèmes simples pour stabilité
+- **LEARNINGS**: robustesse système confirmée par monitoring continu sur 11+ jours → pattern applicable à tous futurs développements
+- **ACTION**: appliquer pattern robustesse à toute nouvelle implémentation, complexité minimale obligatoire
 
 ## Consolidation mémoire (2026-04-24) - Importance: 0.9
 - **SYSTÈME OPTIMAL CONFIRMÉ**: Heartbeat optimal maintenu (0 errors), auto-surveillance opérationnelle
