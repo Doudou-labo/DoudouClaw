@@ -3,6 +3,11 @@
 ## Current Task
 Consolidation mémoire quotidienne + PARA terminée ✅ (2026-04-26 21:50 UTC)
 
+## Today's Work Summary (2026-04-27)
+- **06:04 UTC** — **VEILLE IA 8H** : Flash TECH généré avec succès (actualités IA, nouveaux modèles LLM, benchmarks), deep dive bloqué par API Perplexity erreur d'auth récurrente (11+ jours) → nécessité fallback système
+- **Pattern robustesse confirmé** : systèmes simples (Flash OK) > systèmes complexes (Deep Dive bloqué API)
+- **API critiques persistantes** : Perplexity auth error 11+ jours, OpenAI-Codex token expiré 89h+, scraping SIGKILL persistant
+
 ## Today's Work Summary (2026-04-26)
 - **21:50 UTC** — **CONSOLIDATION MÉMOIRE + PARA** terminée ✅ (heartbeat optimal 0 errors, pattern robustesse confirmé, API Perplexity auth error 11+ jours, OpenAI-Codex token expiré 89h+, scraping SIGKILL persistant identifié, veille IA TECH complète générée, deep dive bloqué API critique)
 - **16:20 UTC** — **AUTO SELF-IMPROVING WEEKLY REVIEW** : Revue exécutée sur MEMORY.md et working-buffer.md, patterns erreurs détectés, traces mises à jour .learnings/ERRORS.md + .learnings/LEARNINGS.md
@@ -75,13 +80,13 @@ Consolidation mémoire quotidienne + PARA terminée ✅ (2026-04-26 21:50 UTC)
 - **Gateway** : 2026.4.2 (mise à jour jour)
 - Disque stable à ~51%
 - Crons Proactive Observations actifs (07:00/12:00/17:00/21:00 Paris)
-- **⚠️ API Perplexity en erreur d'auth récurrente** (9+ jours) → à surveiller et corriger
-- **⚠️ Token OpenAI-Codex expiré** → régénération nécessaire (85h+)
+- **⚠️ API Perplexity en erreur d'auth récurrente** (12+ jours) → deep dive veille IA bloqué → nécessité fallback système
+- **⚠️ Token OpenAI-Codex expiré** → régénération nécessaire (91h+)
 - **⚠️ Scraping SIGKILL persistant** → session OOM pendant veille IA 19h → investiguer timeout/retry
 - Mode tech activé (IA → web_search + Perplexity intensif)
 - Autonomie d'exécution renforcée (ne pas demander validation sauf externe/sensible)
 - Style emojis soutenu
-- **Heure Paris** : 23:50 → fin de journée
+- **Heure Paris** : 08:01 → matinée
 
 ## Last Updated
-2026-04-23 16:30 UTC — consolidation mémoire quotidienne terminée, veille IA Flash générée, API critiques persistantes identifiées
+2026-04-27 06:04 UTC — veille IA 8h exécutée, Flash généré, deep dive bloqué API critiques identifiées
