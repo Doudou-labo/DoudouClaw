@@ -4,8 +4,8 @@
 Consolidation mémoire quotidienne + PARA terminée ✅ (2026-04-26 21:50 UTC)
 
 ## Today's Work Summary (2026-04-27)
-- **06:04 UTC** — **VEILLE IA 8H** : Flash TECH généré avec succès (actualités IA, nouveaux modèles LLM, benchmarks), deep dive bloqué par API Perplexity erreur d'auth récurrente (11+ jours) → nécessité fallback système
-- **Pattern robustesse confirmé** : systèmes simples (Flash OK) > systèmes complexes (Deep Dive bloqué API)
+- **06:04 UTC** — **VEILLE IA 8H** : Flash TECH généré avec succès (actualités IA, nouveaux modèles LLM, benchmarks), deep dive généré après délai API Perplexity instable (11+ jours de patterns erratiques) → veille complète validée
+- **Pattern robustesse confirmé** : systèmes simples résilients (heartbeat, Flash) mais deep dive aussi opérationnel malgré latence API
 - **API critiques persistantes** : Perplexity auth error 11+ jours, OpenAI-Codex token expiré 89h+, scraping SIGKILL persistant
 
 ## Today's Work Summary (2026-04-26)
