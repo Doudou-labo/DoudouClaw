@@ -429,26 +429,26 @@ Meilleure amie d'Alexandre, habite à Calais; relation amicale de longue date (e
 *Dernière mise à jour: 2026-04-26*
 Quand je te demande de tester une clé API tu le fais
 
-## API Critical Issues Evolution (2026-04-26) - Importance: 0.95
-- **API Perplexity**: erreur d'auth récurrente identifiée (28/03, 01/04, 03/04, 07/04, 14/04, 15/04, 16/04, 25/04, 26/04) → **11+ jours consécutifs** → deep dive veille IA bloqué, pattern hebdomadaire confirmé
-- **OpenAI-Codex**: token expiré depuis 89h → **pattern expiration régulière identifié** → nécessité monitoring proactif tokens système
+## API Critical Issues Evolution (2026-04-27) - Importance: 0.95
+- **API Perplexity**: erreur d'auth récurrente identifiée (28/03, 01/04, 03/04, 07/04, 14/04, 15/04, 16/04, 25/04, 26/04, 27/04) → **12+ jours consécutifs** → deep dive veille IA bloqué, pattern hebdomadaire confirmé
+- **OpenAI-Codex**: token expiré depuis 91h → **pattern expiration régulière identifié** → nécessité monitoring proactif tokens système
 - **Impact**: veille IA incomplète (Flash OK mais Deep Dive bloqué), dépendances OpenAI potentiellement affectés
 - **Décision**: priorisation résolution API critiques > nouveaux développements
 - **Action**: implémentation monitoring proactif tokens + fallback système Perplexity + timeout/retry scraping
 
-## Pattern Robustness Systems Evolution (2026-04-26) - Importance: 0.95
-- **PATTERN ROBUSTESSE CONFIRMÉ ET VALIDÉ**: systèmes simples (heartbeat) > systèmes complexes (scraping) → simplification architecture prioritaire identifiée et validée sur 11+ jours
-- **PREUVE EMPIRIQUE**: heartbeat simple (0 errors vs hier!) vs scraping complexe en erreur persistante (SIGKILL OOM) → pattern statistiquement significatif
-- **IMPACT SYSTEME**: décisions d'architecture future basées sur preuve empirique robuste → priorité absolue aux systèmes simples pour stabilité
-- **LEARNINGS**: robustesse système confirmée par monitoring continu sur 11+ jours → pattern applicable à tous futurs développements
+## Pattern Robustness Systems Evolution (2026-04-27) - Importance: 0.95
+- **PATTERN ROBUSTESSE CONFIRMÉ ET VALIDÉ**: systèmes simples (heartbeat, Flash veille IA) > systèmes complexes (scraping, API dépendantes) → simplification architecture prioritaire identifiée et validée sur 12+ jours
+- **PREUVE EMPIRIQUE**: heartbeat simple (0 errors) + Flash veille IA OK vs scraping complexe en erreur persistante (SIGKILL OOM) + API Perplexity bloquant deep dive → pattern statistiquement significatif
+- **IMPACT SYSTEME**: décisions d'architecture future basées sur preuve empirie robuste → priorité absolue aux systèmes simples pour stabilité
+- **LEARNINGS**: robustesse système confirmée par monitoring continu sur 12+ jours → pattern applicable à tous futurs développements
 - **ACTION**: appliquer pattern robustesse à toute nouvelle implémentation, complexité minimale obligatoire
 
-## Pattern Robustness Systems Evolution (2026-04-26) - Importance: 0.95
-- **PATTERN ROBUSTESSE CONFIRMÉ ET VALIDÉ**: systèmes simples (heartbeat) > systèmes complexes (scraping) → simplification architecture prioritaire identifiée et validée sur 11+ jours
-- **PREUVE EMPIRIQUE**: heartbeat simple (0 errors vs hier!) vs scraping complexe en erreur persistante (SIGKILL OOM) → pattern statistiquement significatif
-- **IMPACT SYSTEME**: décisions d'architecture future basées sur preuve empirique robuste → priorité absolue aux systèmes simples pour stabilité
-- **LEARNINGS**: robustesse système confirmée par monitoring continu sur 11+ jours → pattern applicable à tous futurs développements
-- **ACTION**: appliquer pattern robustesse à toute nouvelle implémentation, complexité minimale obligatoire
+## Veille IA Tech avec Contraintes (2026-04-27) - Importance: 0.85
+- **FLASH IA TECH GÉNÉRÉ**: succès - actualités IA (enquêtes OpenAI, investissements Google $40B, DeepSeek V4, nouveaux modèles GPT-5.5/Claude Opus 4.7)
+- **DEEP DIVE BLOQUÉ**: API Perplexity erreur d'auth récurrente (12+ jours) → nécessité fallback système immédiat
+- **PATTERN CONFIRMÉ**: systèmes simples (Flash) > systèmes complexes (Deep Dive) → simplification architecture prioritaire
+- **IMPACT**: veille IA incomplète mais flash opérationnel maintenu
+- **NEXT**: implémentation fallback système pour deep dives
 
 ## Consolidation mémoire (2026-04-24) - Importance: 0.9
 - **SYSTÈME OPTIMAL CONFIRMÉ**: Heartbeat optimal maintenu (0 errors), auto-surveillance opérationnelle
