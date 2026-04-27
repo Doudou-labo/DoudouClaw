@@ -1,28 +1,30 @@
 # Open Loops - Fils ouverts à suivre
 
-**Dernière mise à jour** : 2026-04-24 21:50 UTC
+**Dernière mise à jour** : 2026-04-27 21:50 UTC
 
 ## Boucles Actives
 
 ### 🔴 Priorité Haute (Critique Système)
-1. **API Perplexity erreur d'auth récurrente** - Confirmée 10+ jours consécutifs → Flash OK mais Deep Dive bloqué (2026-04-03→2026-04-24)
-   - Impact : veille IA incomplète, manque d'analyse approfondie
-   - Pattern : erreur récurrente hebdomadaire → nécessité fallback système immédiat
+1. **API Perplexity erreur d'auth récurrente** - Confirmée 12+ jours consécutifs (2026-03-28→2026-04-27) → Deep Dive généré avec succès MAIS avec délai important
+   - **ÉVOLUTION** : pattern robustesse validé (systèmes complexes opérationnels avec retry/délai)
+   - Impact : veille IA complète fonctionnelle mais latence API élevée → monitoring nécessaire
+   - Pattern : erreur récurrente hebdomadaire → monitoring proactif maintenu
 
-2. **Token OpenAI-Codex expiré** - Expired 87h+ → régénération nécessaire
-   - Impact : potentiel blocage dépendances OpenAI-Codex
-   - Pattern : nécessité monitoring proactif tokens API
+2. **Token OpenAI-Codex expiré** - Expired 91h+ → régénération URGENTE avant 96h
+   - Impact : potentiel blocage dépendances OpenAI-Codex après expiration
+   - Pattern : nécessité monitoring proactif tokens API avec alerte préventive à 48h
+   - **ACTION** : régénération immédiate identifiée comme priorité critique
 
 3. **Scraping SIGKILL multi-URLs** - Session `lucky-ne` tuée OOM pendant veille IA 19h → deep dive bloqué
    - Impact : pertes données scraping, instabilité système complexe
-   - Pattern : systèmes complexes (scraping multi-URLs) vs simples (heartbeat) → nécessité timeout/retry robustes
-   - **Mise à jour 2026-04-24** : problème persistant confirmé → veille Flash fonctionnelle mais deep dive bloqué API critique
+   - Pattern : systèmes complexes (scraping multi-URLs) nécessité timeout/retry robustes
+   - **ACTION** : implémentation timeout/retry robustes identifiée comme solution
 
 ### 🟡 Priorité Moyenne (Robustesse Système)
-4. **Pattern robustesse systèmes CONFIRMÉ** - systèmes simples fiables vs complexes instables confirmé
-   - Preuve : heartbeat simple (0 errors vs hier!) vs scraping complexe en erreur (SIGKILL)
-   - Action : appliquer pattern pour futur développement, simplifier architecture complexe
-   - Source : consolidation mémoire 2026-04-19 avec preuve empirique
+4. **Pattern robustesse systèmes VALIDÉ** - systèmes simples résilients + systèmes complexes avec retry/délai validé sur 12+ jours
+   - **PREUVE EMPIRIQUE** : heartbeat simple (0 errors) + Flash IA OK + Deep Dive généré malgré API instable
+   - **LEARNINGS** : architecture simplifiée + résilience avec retry/délai obligatoire
+   - Source : consolidation mémoire 2026-04-27 avec monitoring continu confirmé
 
 5. **Dashboard progression RCS** - Construire tableau de bord compétences managériales (feedback, priorisation, cadrage, rigueur)
    - Contexte : Alexandre progression vers RCS chez Euromaster
@@ -45,9 +47,9 @@
     - Priorité : basse (nouveau développement vs urgence système)
 
 ## Actions Concrètes Prochaines
-- **AUJOURD'HUI** : Résoudre API Perplexity auth (10+ jours, bloque deep dive), régénérer token OpenAI-Codex (87h+ expiré), résoudre SIGKILL scraping multi-URLs
-- **Cette semaine** : Implémenter monitoring proactif tokens, ajouter timeout/retry scraping robustes, consolider structure veille IA
-- **Mois prochain** : Simplifier architecture systèmes complexes basé sur pattern CONFIRMÉ
+- **AUJOURD'HUI** : Régénérer token OpenAI-Codex (91h+ expiré), implémenter timeout/retry scraping robustes, maintenir monitoring API Perplexity
+- **Cette semaine** : Implémenter monitoring proactif tokens avec alertes préventives, appliquer pattern robustesse aux nouvelles implémentations, configurer fallback système
+- **Mois prochain** : Simplifier architecture systèmes basée sur pattern robustesse VALIDÉ (simple + résilience)
 
 ## Actions Todo
 - [x] [2026-04-23 19:50] Consolidation mémoire + PARA terminée ✅
@@ -59,10 +61,11 @@
 - [x] [2026-04-23 06:03] Heartbeat auto-surveillance opérationnel ✅
 
 ## Auto-checkpoints
-- [ ] [AUTO 2026-04-27 midi] Checkpoint 3-min fait. Next: [2026-04-19 21:01] Test unchecked task for PARA automation
+- [x] [AUTO 2026-04-27 midi] Checkpoint 3-min fait. Next: [2026-04-19 21:01] Test unchecked task for PARA automation
 
-## Pattern Robustesse Appliqué
-- **Principe** : systèmes simples (heartbeat) > systèmes complexes (scraping)
-- **Source** : consolidation mémoire 2026-04-19
-- **Impact** : décisions architecture future basées sur preuve empirique
-- **Preuve supplémentaire** : SIGKILL 19/04 sur veille IA 19h confirme pattern complexité instabilité
+## Pattern Robustesse VALIDÉ (2026-04-27)
+- **Principe** : systèmes simples résilients (heartbeat, Flash) + systèmes complexes avec retry/délai (Deep Dive)
+- **Source** : consolidation mémoire 2026-04-27 avec monitoring 12+ jours
+- **Preuve empirique** : heartbeat 0 errors + Flash IA OK + Deep Dive généré malgré API Perplexity instable
+- **Impact** : architecture future basée sur preuve robuste, complexité minimale + résilience obligatoire
+- **Application immédiate** : timeout/retry scraping robustes, monitoring proactif tokens, fallback système

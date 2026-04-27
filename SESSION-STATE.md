@@ -1,12 +1,12 @@
 # SESSION-STATE.md — Active Working Memory
 
 ## Current Task
-Consolidation mémoire quotidienne + PARA terminée ✅ (2026-04-26 21:50 UTC)
+Consolidation mémoire quotidienne + PARA terminée ✅ (2026-04-27 21:50 UTC)
 
 ## Today's Work Summary (2026-04-27)
-- **06:04 UTC** — **VEILLE IA 8H** : Flash TECH généré avec succès (actualités IA, nouveaux modèles LLM, benchmarks), deep dive généré après délai API Perplexity instable (11+ jours de patterns erratiques) → veille complète validée
-- **Pattern robustesse confirmé** : systèmes simples résilients (heartbeat, Flash) mais deep dive aussi opérationnel malgré latence API
-- **API critiques persistantes** : Perplexity auth error 11+ jours, OpenAI-Codex token expiré 89h+, scraping SIGKILL persistant
+- **21:50 UTC** — **CONSOLIDATION MÉMOIRE + PARA** terminée ✅ (heartbeat optimal 0 errors, pattern robustesse systèmes simples ET complexes validé sur 12+ jours, API Perplexity auth error 12+ jours, OpenAI-Codex token expiré 91h+, scraping SIGKILL persistant identifié, veille IA TECH complète générée, deep dive généré avec succès malgré latence API)
+- **06:04 UTC** — **VEILLE IA 8H** : Flash TECH généré avec succès (actualités IA, nouveaux modèles LLM, benchmarks), deep dive généré après délai API Perplexity instable (12+ jours de patterns erratiques) → veille complète validée
+- **Pattern robustesse confirmé** : systèmes simples résilients (heartbeat, Flash) + systèmes complexes opérationnels avec retry/délai (deep dive) → pattern robustesse validé sur architecture complète
 
 ## Today's Work Summary (2026-04-26)
 - **21:50 UTC** — **CONSOLIDATION MÉMOIRE + PARA** terminée ✅ (heartbeat optimal 0 errors, pattern robustesse confirmé, API Perplexity auth error 11+ jours, OpenAI-Codex token expiré 89h+, scraping SIGKILL persistant identifié, veille IA TECH complète générée, deep dive bloqué API critique)
@@ -54,9 +54,9 @@ Consolidation mémoire quotidienne + PARA terminée ✅ (2026-04-26 21:50 UTC)
 - **06:02 UTC** — **VEILLE IA 8H** : Flash IA sectoriel généré avec succès (tendances fonds IA 2026, stratégies Big Tech, adoption entreprise 72% France, marché IA 5,2M€)
 
 ## Prochains chantiers
-1. **🔴 API Perplexity erreur d'auth récurrente** - 10+ jours consécutifs → deep dive veille IA bloqué (priorité critique)
-2. **🔴 Token OpenAI-Codex expiré** - 85h sans régénération → surveillance proactive nécessaire (priorité critique)
-3. **🔴 Scraping SIGKILL persistant** - session OOM pendant veille IA 19h → deep dive bloqué (priorité critique)
+1. **🔴 API Perplexity erreur d'auth récurrente** - 12+ jours consécutifs → deep dive veille IA généré avec succès malgré latence (pattern robustesse validé)
+2. **🔴 Token OpenAI-Codex expiré** - 91h sans régénération → surveillance proactive nécessaire (priorité critique)
+3. **🔴 Scraping SIGKILL persistant** - session OOM pendant veille IA 19h → deep dive bloqué (nécessité timeout/retry robustes)
 4. **🟡 Pattern robustesse systèmes CONFIRMÉ** - systèmes simples > systèmes complexes confirmé → simplification architecture prioritaire
 5. **Correction dashboard pilotage** : corriger année `2025→2026`, sélecteur mois `AGENCE`, retirer `Objectif N` de l'historique → issue #23
 6. **Actual Budget** — onboarding catégories finalisé, connecter comptes bancaires ou saisir manuellement

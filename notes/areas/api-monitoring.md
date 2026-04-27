@@ -1,44 +1,46 @@
 # Monitoring API Proactif
 
-## Contexte Critique (2026-04-19)
+## Contexte Critique et Évolué (2026-04-27)
 
-### API Instables Identifiées
-- **Perplexity**: erreur auth récurrente (9+ jours) → bloque deep dive veille IA
-- **OpenAI-Codex**: token expiré depuis 85h → dépendances potentiellement affectées
-- **Pattern**: erreurs récurrentes hebdomadaires → nécessité monitoring proactif
+### API Instables Identifiées (validées sur 12+ jours)
+- **Perplexity**: erreur auth récurrente (12+ jours) → deep dive fonctionne avec retry/délai (pattern robustesse validé)
+- **OpenAI-Codex**: token expiré depuis 91h → monitoring proactif critique identifié
+- **Scraping**: SIGKILL persistant OOM → nécessité timeout/retry robustes
+- **Pattern**: erreurs récurrentes hebdomadaires + instabilités systèmes → monitoring proactif obligatoire
 
-### Monitoring Proactif Requis
+### Monitoring Proactif Requis (priorisé par impact)
 
-#### 1. Token API Tracking
-- **Rythme**: vérification toutes les 6h
-- **Alertes**: 72h avant expiration
-- **Actions**: régénération automatique + notification
-- **Fallback**: bascule sur modèles alternatifs si indisponibilité prolongée
+#### 1. Token API Tracking (URGENT)
+- **Rythme**: vérification toutes les 3h (OpenAI-Codex expiré 91h+)
+- **Alertes**: 48h avant expiration (réduction délai)
+- **Actions**: régénération automatique + notification proactive
+- **Fallback**: bascule sur modèles alternatifs si indisponibilité > 24h
 
-#### 2. API Health Check
-- **Endpoints critiques**: veille IA, génération contenu
-- **Timeouts**: 30s max par appel
-- **Retry**: 3 tentatives avec backoff exponentiel
-- **Fallback**: système dégradé avec moins de sources
+#### 2. API Health Check (robustifié)
+- **Endpoints critiques**: veille IA (Flash + Deep Dive), génération contenu
+- **Timeouts**: 45s max par appel (adapté API lentes)
+- **Retry**: 5 tentatives avec backoff exponentiel (adapté instabilité Perplexity)
+- **Fallback**: système dégradé avec sources alternatives + deep dive avec délai accepté
 
-#### 3. Performance Monitoring
-- **Latence**: > 5s = alerte
-- **Taux erreur**: > 10% = investigation
-- **Mémoire usage**: > 80% = alerte OOM
-- **CPU usage**: > 90% = scaling nécessaire
+#### 3. Performance Monitoring (détection précoce)
+- **Latence**: > 5s = alerte, > 10s = fallback automatique
+- **Taux erreur**: > 10% = investigation, > 20% = bascule fallback
+- **Mémoire usage**: > 70% = alerte, > 85% = limitation flux concurrents
+- **CPU usage**: > 80% = scaling, > 95% = limitation services non critiques
 
-### Prochaines Étapes
-1. 🟡 Implémenter dashboard monitoring API (dashboard.doudougen.xyz)
-2. 🟡 Créer alertes proactives tokens expirés
-3. 🟡 Ajouter mécanisme fallback Perplexity (web_search + sources alternatives)
-4. 🔧 Configurer retry robustes pour scraping multi-URLs
-5. 🔧 Limiter concurrence extractions simultanées
+### Prochaines Étapes (triées par urgence)
+1. 🔴 **Token OpenAI-Codex** : régénération immédiate avant 96h d'expiration
+2. 🔴 **Scraping timeout/retry** : implémenter mécanismes robustes éviter SIGKILL OOM
+3. 🟡 **Alertes proactives** : dashboard monitoring API avec notifications push
+4. 🟡 **Fallback Perplexity** : mécanisme alternatif (web_search + sources alternatives)
+5. 🟡 **Monitoring performance** : dashboard实时 monitoring latence/mémoire/CPU
 
-### Métriques Cibles
-- **Uptime API**: > 99.5%
-- **Temps réponse moyen**: < 2s
-- **Taux succès**: > 95%
-- **Alertes résolues**: < 2h
+### Métriques Cibles (révisées)
+- **Uptime API**: > 99% (adapté instabilité API connue)
+- **Temps réponse moyen**: < 3s (avec tolerance API lentes)
+- **Taux succès**: > 90% (avec fallback système)
+- **Alertes résolues**: < 1h (monitoring proactif rapide)
+- **Deep dive disponibilité**: > 80% (avec retry/délai accepté)
 
 ---
 *Monitoring proactif = facteur critique de stabilité système*

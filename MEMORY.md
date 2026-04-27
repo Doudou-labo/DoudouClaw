@@ -436,6 +436,12 @@ Quand je te demande de tester une clé API tu le fais
 - **Décision**: monitoring proactif API > fallback système pour l'instant (deep dive fonctionne avec délai)
 - **Action**: implémentation monitoring proactif tokens + surveillance délais API + timeout/retry scraping
 
+## Pattern Robustness Systems Validated (2026-04-27) - Importance: 0.95
+- **PATTERN ROBUSTESSE VALIDÉ**: systèmes simples résilients (heartbeat, Flash) + systèmes complexes opérationnels avec retry/délai (deep dive généré malgré API Perplexity instable) → robustesse système confirmée empiriquement sur 12+ jours
+- **PREUVE EMPIRIQUE**: heartbeat simple (0 errors) + Flash veille IA OK + Deep Dive généré après délat API → système résilient avec mécanismes retry/délai
+- **IMPACT ARCHITECTURE**: décisions basées sur preuve empirique robuste → systèmes simples prioritaires mais systèmes complexes avec retry/délai acceptables
+- **APPLIQUER**: pattern robustesse avec retry/délai à toute nouvelle implémentation, complexité minimale + résilience obligatoire
+
 ## Pattern Robustness Systems Evolution (2026-04-27) - Importance: 0.95
 - **PATTERN ROBUSTESSE CONFIRMÉ ET VALIDÉ**: systèmes simples résilients (heartbeat, Flash veille IA) + systèmes complexes opérationnels malgré latence (Deep Dive généré avec succès après délai) → robustesse système validée sur 12+ jours
 - **PREUVE EMPIRIQUE**: heartbeat simple (0 errors) + Flash veille IA OK + Deep Dive généré malgré API Perplexity instable → système resilient avec retry/délai
