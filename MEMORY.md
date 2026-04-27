@@ -541,3 +541,8 @@ Quand je te demande de tester une clé API tu le fais
 - **PATTERN ROBUSTESSE CONFIRMÉ**: systèmes simples (heartbeat) > systèmes complexes (scraping) → simplification architecture priorité
 - **DECISION STRATÉGIQUE**: Maintenir focus sur résolution API critiques + mécanismes robustes avant nouveaux développements
 - **ACTION PRIORITAIRE**: Implémenter monitoring proactif tokens + fallback système Perplexity + timeout/retry scraping
+
+## Promoted From Short-Term Memory (2026-04-27)
+
+<!-- openclaw-memory-promotion:memory:memory/2026-04-22.md:318:320 -->
+- - Candidate: Possible Lasting Truths: - 1. 🔍 **Investigation scraping**: Tester le script `scrape-urls.py` individuellement 2. 🔧 **Token renewal**: Renouveler le token OpenAI expiré 3. 📊 **Cron diagnostics**: Analyser les crons en erreur systématique 4. 🔄 **Script veille**: Ajouter des ti - confidence: 0.00 - evidence: memory/2026-04-22.md:323-325 [score=0.830 recalls=0 avg=0.620 source=memory/2026-04-22.md:13-15]
