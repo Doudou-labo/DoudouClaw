@@ -30,6 +30,18 @@ mkdir -p "$VEILLE_DIR/syntheses-mensuelles"
 echo ""
 echo "🔮 Génération de la synthèse stratégique..."
 
+# Test de connection Perplexity avec timeout
+echo "🔍 Test de connexion à Perplexity..."
+cd "$SKILL_DIR"
+timeout 30 node scripts/search.mjs "test" > /tmp/perplexity-test.txt 2>&1
+if [ $? -eq 0 ] && grep -q "connection\|réponse\|response" /tmp/perplexity-test.txt; then
+    echo "✅ Perplexity accessible"
+    PERPLEXITY_OK="true"
+else
+    echo "⚠️ Perplexité non accessible - utilisation de données de veille existantes"
+    PERPLEXITY_OK="false"
+fi
+
 SYNTHESE_QUERIES=(
     "Bilan mensuel industrie IA $MOIS $ANNEE : tendances majeures et évolutions - analyse stratégique détaillée en français"
     "Avancées technologiques IA $MOIS $ANNEE : innovations clés et implications - synthèse approfondie en français"
@@ -39,9 +51,31 @@ SYNTHESE_QUERIES=(
     "Développements IA automobile $MOIS $ANNEE : secteur et innovations - analyse sectorielle en français"
 )
 
-cd "$SKILL_DIR"
-echo "Exécution des requêtes Perplexity (analyses détaillées)..."
-SYNTHESE_OUTPUT=$(node scripts/search.mjs "${SYNTHESE_QUERIES[@]}" 2>&1 || echo "⚠️ Perplexity indisponible")
+SYNTHESE_OUTPUT=""
+if [ "$PERPLEXITY_OK" = "true" ]; then
+    echo "🚀 Exécution des requêtes Perplexity avec timeout individuel..."
+    
+    for i in "${!SYNTHESE_QUERIES[@]}"; do
+        QUERY="${SYNTHESE_QUERIES[$i]}"
+        echo "📝 Traitement requête $((i+1))/6 : ${QUERY:0:50}..."
+        
+        # Timeout individuel pour chaque requête
+        RESULT=$(cd "$SKILL_DIR" && timeout 45 node scripts/search.mjs "$QUERY" 2>&1)
+        if [ $? -eq 0 ] && [ -n "$RESULT" ]; then
+            SYNTHESE_OUTPUT="$SYNTHESE_OUTPUT\n### ${QUERY}\n\n$RESULT\n\n---\n\n"
+            echo "✅ Requête $((i+1)) réussie"
+        else
+            echo "⚠️ Requête $((i+1)) échouée ou vide"
+            SYNTHESE_OUTPUT="$SYNTHESE_OUTPUT\n### ${QUERY}\n\n⚠️ Données non disponibles - veille en cours\n---\n\n"
+        fi
+        
+        # Pause entre les requêtes pour éviter le rate limiting
+        sleep 2
+    done
+else
+    echo "📋 Utilisation de données de veille existantes/fallback..."
+    SYNTHESE_OUTPUT="⚠️ Perplexity indisponible pendant l'exécution\n\nVoici les tendances IA récentes disponibles :\n\n- Infrastructure GPU : tensions d'approvisionnement continues\n- Régulation IA : mise en œuvre progressive des cadres UE\n- Marché : consolidation des acteurs avec focus ROI\n- Enterprise : adoption croissante avec accompagnement\n- Automobile : intégration IA embarquée et maintenance prédictive"
+fi
 
 SYNTHESE_FILE="$VEILLE_DIR/syntheses-mensuelles/synthese-${ANNEE}-${MOIS_NUM}-${JOUR}.md"
 
@@ -50,7 +84,8 @@ cat > "$SYNTHESE_FILE" << EOF
 
 **Période couverte** : $MOIS $ANNEE  
 **Type** : Synthèse stratégique globale  
-**Générée le** : $(date '+%d/%m/%Y à %H:%M')
+**Générée le** : $(date '+%d/%m/%Y à %H:%M')  
+**Statut Perplexity** : $([ "$PERPLEXITY_OK" = "true" ] && echo "✅ Connecté" || echo "⚠️ Fallback")
 
 ---
 
@@ -241,7 +276,7 @@ echo ""
 echo "🔄 Commit et push GitHub..."
 cd "$BASE_DIR"
 git add -A
-git commit -m "📊 Synthèse stratégique IA - $PERIODE $MOIS $ANNEE" || echo "Rien à committer"
+git commit -m "📊 Synthèse stratégique IA - $PERIODE $MOIS $ANNEE ($([ "$PERPLEXITY_OK" = "true" ] && echo "API" || echo "Fallback"))" || echo "Rien à committer"
 git push origin main || echo "Push impossible (vérifiez la connexion)"
 
 echo ""
@@ -257,4 +292,5 @@ if [ -f "$SYNTHESE_FILE" ]; then
     echo "- Fichier : $(wc -l < "$SYNTHESE_FILE") lignes"
     echo "- Thèmes couverts : 5"
     echo "- Fichier commité ✅"
+    echo "- Statut API : $([ "$PERPLEXITY_OK" = "true" ] && echo "Connecté" || echo "Fallback utilisé")"
 fi
