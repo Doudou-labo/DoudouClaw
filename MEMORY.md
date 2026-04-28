@@ -456,6 +456,15 @@ Quand je te demande de tester une clé API tu le fais
 - **IMPACT**: veille IA complète (Flash + Deep Dive) malgré instabilité API
 - **NEXT**: monitoring API pour anticiper délais, pas fallback nécessaire immédiatement
 
+## Veille IA Products Complete with Timeout Optimization (2026-04-28) - Importance: 0.9
+- **FLASH IA 12H/19H GÉNÉRÉS**: succès total (103 lignes Flash 12h, 70 lignes Flash 19h, 5 URLs scrapées)
+- **DEEP DIVE PRODUITS GÉNÉRÉ**: succès - analyse automatisation/intégration enterprise (147 lignes, Mistral AI, UiPath, Microsoft Copilot, outils no-code)
+- **SYNTHÈSE MENSUELLE GÉNÉRÉE**: succès en mode fallback (timeout individuel 45s, test connexion préalable, pause entre requêtes, 193 lignes)
+- **PATTERN ROBUSTESSE VALIDÉ**: systèmes simples (heartbeat) > systèmes complexes (scraping) avec retry/délai → robustesse confirmée empiriquement
+- **OPTIMISATIONS TIMEOUT**: implémentation timeout court (45s) pour chaque requête Perplexity, gestion proactive erreurs
+- **IMPACT**: veille IA complète maintenue malgré API contraintes, dashboard pilotage corrigé (issue #23 résolue)
+- **DECISION STRATÉGIQUE**: maintenir focus sur résolution API critiques + mécanismes robustes avant nouveaux développements
+
 ## Consolidation mémoire (2026-04-24) - Importance: 0.9
 - **SYSTÈME OPTIMAL CONFIRMÉ**: Heartbeat optimal maintenu (0 errors), auto-surveillance opérationnelle
 - **API CRITIQUES PERSISTANTES**: Perplexity erreur auth récurrente (10+ jours), OpenAI-Codex expiré (87h+), scraping SIGKILL persistant → monitoring proactif urgent nécessaire
@@ -536,6 +545,13 @@ Quand je te demande de tester une clé API tu le fais
 - **IMPACT**: confirmation des marchés haussiers récents, contexte favorable pour investissements européens
 - **PATTERN**: reprise européenne identifiée sur plusieurs indices majeurs
 - **NEXT**: suivi continue des tendances européennes
+
+## Dashboard Pilotage Correction Résolue (2026-04-28) - Importance: 0.85
+- **ISSUE #23 RÉSOLUE**: correction dashboard pilotage appliquée avec succès
+- **CORRECTIONS APPLIQUÉES**: année `2025→2026` corrigée, sélecteur mois `AGENCE` fonctionnel, `Objectif N` retiré de l'historique
+- **IMPACT**: dashboard opérationnel et fiable pour suivi KPI AGENCE/VL/PL
+- **STATUT**: correction livrée et commitée (commit hash disponible)
+- **NEXT**: monitoring continu de l'outil pour identifier besoins d'amélioration
 
 ## Daily Facts 2026-04-26 - Importance: 0.6-0.8
 - **FLASH IA TECH COMPLET**: Veille IA sectorielle technique complète avec succès (Edge AI Europe/USA, puces AI comparatif, alternatives Transformers Mamba/RWKV)

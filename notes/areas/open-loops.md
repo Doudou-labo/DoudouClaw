@@ -5,51 +5,52 @@
 ## Boucles Actives
 
 ### 🔴 Priorité Haute (Critique Système)
-1. **API Perplexity erreur d'auth récurrente** - Confirmée 12+ jours consécutifs (2026-03-28→2026-04-27) → Deep Dive généré avec succès MAIS avec délai important
+1. **API Perplexity erreur d'auth récurrente** - Confirmée 12+ jours consécutifs (2026-03-28→2026-04-28) → Deep Dive généré avec succès AVEC timeout optimisé 45s
    - **ÉVOLUTION** : pattern robustesse validé (systèmes complexes opérationnels avec retry/délai)
-   - Impact : veille IA complète fonctionnelle mais latence API élevée → monitoring nécessaire
-   - Pattern : erreur récurrente hebdomadaire → monitoring proactif maintenu
+   - **RÉSULTAT** : veille IA complète maintenue avec timeout court appliqué (45s par requête)
+   - Pattern : erreur récurrente hebdomadaire → monitoring proactif + timeout court appliqués
 
 2. **Token OpenAI-Codex expiré** - Expired 91h+ → régénération URGENTE avant 96h
-   - Impact : potentiel blocage dépendances OpenAI-Codex après expiration
+   - Impact : potentiel blocage dépendances OpenAI-Codex après expiration (déjà 91h+)
    - Pattern : nécessité monitoring proactif tokens API avec alerte préventive à 48h
-   - **ACTION** : régénération immédiate identifiée comme priorité critique
+   - **ACTION** : régénération immédiate toujours prioritaire critique
 
 3. **Scraping SIGKILL multi-URLs** - Session `lucky-ne` tuée OOM pendant veille IA 19h → deep dive bloqué
    - Impact : pertes données scraping, instabilité système complexe
    - Pattern : systèmes complexes (scraping multi-URLs) nécessité timeout/retry robustes
-   - **ACTION** : implémentation timeout/retry robustes identifiée comme solution
+   - **ACTION** : implémentation timeout/retry robustes identifiée comme solution NON implémentée
 
 ### 🟡 Priorité Moyenne (Robustesse Système)
-4. **Pattern robustesse systèmes VALIDÉ** - systèmes simples résilients + systèmes complexes avec retry/délai validé sur 12+ jours
-   - **PREUVE EMPIRIQUE** : heartbeat simple (0 errors) + Flash IA OK + Deep Dive généré malgré API instable
-   - **LEARNINGS** : architecture simplifiée + résilience avec retry/délai obligatoire
-   - Source : consolidation mémoire 2026-04-27 avec monitoring continu confirmé
+4. **✅ PATTERN ROBUSTESSE CONFIRMÉ** - systèmes simples résilients + systèmes complexes avec retry/délai validé sur 12+ jours
+   - **RÉSULTAT** : heartbeat simple (0 errors) + Flash IA OK + Deep Dive généré malgré API instable + synthèse mensuelle IA générée en mode fallback
+   - **APP LIÉ** : ✅ Dashboard pilotage CORRIGÉ (issue #23 résolue: année 2025→2026, sélecteur mois AGENCE, Objectif N retiré)
+   - **NEXT** : appliquer pattern robustesse aux nouvelles implémentations (simple + résilience)
 
 5. **Dashboard progression RCS** - Construire tableau de bord compétences managériales (feedback, priorisation, cadrage, rigueur)
    - Contexte : Alexandre progression vers RCS chez Euromaster
    - Priorité : moyenne (développement pro vs urgence système)
+   - **STATUT** : outil pilotage déjà opérationnel → se concentrer sur compétences managériales
 
 ### 🟢 Priorité Basse (Développement)
 6. **Crons systématiquement en erreur** - Diagnostic et correction des tâches cron échouées
    - Pattern identifié : syntaxe Discord channel/to dans crons → déjà corrigé précédemment
    - Statut : surveillance continue
 
-7. **Deep dive tech** - Terminer exécution script en attente (bloqué par Perplexity API)
-   - Dépend : résolution API Perplexity auth récurrente
+7. **Deep dive tech** - Terminer exécution script en attente (dépend de timeout optimisé appliqué)
+   - STATUT : Deep Dive généré avec succès aujourd'hui malgré API contraintes
 
 8. **Monitoring tokens proactif** - Implémenter système alertes tokens expirés (OpenAI, Perplexity)
-   - Pattern appris : expiration prédictive nécessaire (OpenAI-Codex 85h)
-   - Action : basé sur pattern robustesse identifié
+   - Pattern appris : expiration prédictive nécessaire (OpenAI-Codex 91h+)
+   - Action : basé sur pattern robustesse identifié et API instables connues
 
 9. **Inventaire physique pneus** - MVP à implémenter sur `inventaire.doudougen.xyz`
     - Contexte : projet séparé de pneu-tracker actuel
     - Priorité : basse (nouveau développement vs urgence système)
 
 ## Actions Concrètes Prochaines
-- **AUJOURD'HUI** : Régénérer token OpenAI-Codex (91h+ expiré), implémenter timeout/retry scraping robustes, maintenir monitoring API Perplexity
-- **Cette semaine** : Implémenter monitoring proactif tokens avec alertes préventives, appliquer pattern robustesse aux nouvelles implémentations, configurer fallback système
-- **Mois prochain** : Simplifier architecture systèmes basée sur pattern robustesse VALIDÉ (simple + résilience)
+- **AUJOURD'HUI** : Régénérer token OpenAI-Codex (91h+ expiré), implémenter timeout/retry scraping robustes, maintenir monitoring API Perplexity avec timeout 45s appliqué
+- **Cette semaine** : Implémenter monitoring proactif tokens avec alertes préventives, appliquer pattern robustesse aux nouvelles implémentations, configurer fallback système basé sur preuve empirique 12+ jours
+- **Mois prochain** : Simplifier architecture systèmes basée sur pattern robustesse VALIDÉ (simple + résilience) + dashboard RCS compétences managériales
 
 ## Actions Todo
 - [x] [2026-04-23 19:50] Consolidation mémoire + PARA terminée ✅
@@ -63,9 +64,9 @@
 ## Auto-checkpoints
 - [ ] [AUTO 2026-04-28 midi] Checkpoint 3-min fait. Next: [2026-04-19 21:01] Test unchecked task for PARA automation
 
-## Pattern Robustesse VALIDÉ (2026-04-27)
+## Pattern Robustesse VALIDÉ (2026-04-28)
 - **Principe** : systèmes simples résilients (heartbeat, Flash) + systèmes complexes avec retry/délai (Deep Dive)
-- **Source** : consolidation mémoire 2026-04-27 avec monitoring 12+ jours
-- **Preuve empirique** : heartbeat 0 errors + Flash IA OK + Deep Dive généré malgré API Perplexity instable
+- **Source** : consolidation mémoire 2026-04-28 avec monitoring 12+ jours + preuve empirique aujourd'hui
+- **Preuve empirique** : heartbeat 0 errors + Flash IA OK + Deep Dive généré malgré API Perplexity instable + synthèse mensuelle IA générée avec timeout optimisé 45s
 - **Impact** : architecture future basée sur preuve robuste, complexité minimale + résilience obligatoire
-- **Application immédiate** : timeout/retry scraping robustes, monitoring proactif tokens, fallback système
+- **Application immédiate** : timeout/retry scraping robustes, monitoring proactif tokens, fallback système + dashboard pilotage corrigé

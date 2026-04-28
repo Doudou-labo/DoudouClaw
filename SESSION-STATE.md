@@ -1,11 +1,13 @@
 # SESSION-STATE.md — Active Working Memory
 
 ## Current Task
-Consolidation mémoire quotidienne + PARA terminée ✅ (2026-04-27 21:50 UTC)
+Consolidation mémoire quotidienne + PARA terminée ✅ (2026-04-28 21:50 UTC)
 
-## Today's Work Summary (2026-04-27)
-- **21:50 UTC** — **CONSOLIDATION MÉMOIRE + PARA** terminée ✅ (heartbeat optimal 0 errors, pattern robustesse systèmes simples ET complexes validé sur 12+ jours, API Perplexity auth error 12+ jours, OpenAI-Codex token expiré 91h+, scraping SIGKILL persistant identifié, veille IA TECH complète générée, deep dive généré avec succès malgré latence API)
-- **06:04 UTC** — **VEILLE IA 8H** : Flash TECH généré avec succès (actualités IA, nouveaux modèles LLM, benchmarks), deep dive généré après délai API Perplexity instable (12+ jours de patterns erratiques) → veille complète validée
+## Today's Work Summary (2026-04-28)
+- **21:50 UTC** — **CONSOLIDATION MÉMOIRE + PARA** terminée ✅ (heartbeat optimal 0 errors, pattern robustesse systèmes simples ET complexes validé sur 12+ jours, API Perplexity auth error 12+ jours mais deep dive généré avec succès malgré latence, OpenAI-Codex token expiré 91h+, scraping SIGKILL persistant identifié, synthèse mensuelle IA générée avec succès en mode fallback, veille IA complète Flash + Deep Dive produits)
+- **17:00 UTC** — **VEILLE IA 19H** : Flash et Deep Dive produits générés avec succès malgré déclenchement prématuré (timeout optimisé 45s, API Perplexité fonctionnelle avec fallback, 217 lignes au total)
+- **10:00 UTC** — **VEILLE IA 12H** : Flash IA généré avec succès (103 lignes, 5 URLs scrapées, commit 82b5fdb5)
+- **07:00 UTC** — **SYNTHÈSE MENSUELLE IA** : générée avec succès en mode fallback (timeout individuel 45s, test connexion préalable, pause entre requêtes, synthèse 193 lignes commit 1fa2a9d5)
 - **Pattern robustesse confirmé** : systèmes simples résilients (heartbeat, Flash) + systèmes complexes opérationnels avec retry/délai (deep dive) → pattern robustesse validé sur architecture complète
 
 ## Today's Work Summary (2026-04-26)
