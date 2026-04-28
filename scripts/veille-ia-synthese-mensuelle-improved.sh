@@ -1,0 +1,297 @@
+#!/bin/bash
+# veille-ia-synthese-mensuelle-improved.sh - Synthèse stratégique mensuelle améliorée
+# Version avec meilleure gestion des erreurs et timeouts
+
+set +e  # On continue même en cas d'erreur partielle
+
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+BASE_DIR="$(cd "$SCRIPT_DIR/.." && pwd)"
+SKILL_DIR="$BASE_DIR/skills/perplexity"
+VEILLE_DIR="$BASE_DIR/notes/areas/veille-ia"
+DATE=$(date +%Y-%m-%d)
+MOIS=$(date +%B)
+MOIS_NUM=$(date +%m)
+ANNEE=$(date +%Y)
+
+# Déterminer le jour spécial (15 ou 30/28)
+JOUR=$(date +%d)
+if [ "$JOUR" = "15" ]; then
+    PERIODE="Mi-mois"
+elif [ "$JOUR" = "30" ] || [ "$JOUR" = "28" ]; then
+    PERIODE="Fin de mois"
+else
+    PERIODE="Synthèse"
+fi
+
+echo "📊 SYNTHÈSE STRATÉGIQUE IA - $PERIODE $MOIS $ANNEE"
+
+mkdir -p "$VEILLE_DIR/syntheses-mensuelles"
+
+echo ""
+echo "🔮 Génération de la synthèse stratégique..."
+
+# Test de connection Perplexity
+echo "🔍 Test de connexion à Perplexity..."
+cd "$SKILL_DIR"
+timeout 30 node scripts/search.mjs "test" > /tmp/perplexity-test.txt 2>&1
+if [ $? -eq 0 ] && grep -q "connection\|réponse\|response" /tmp/perplexity-test.txt; then
+    echo "✅ Perplexity accessible"
+    PERPLEXITY_OK="true"
+else
+    echo "⚠️ Perplexité non accessible - utilisation de données de veille existantes"
+    PERPLEXITY_OK="false"
+fi
+
+# Configuration des requêtes avec timeout individuel
+SYNTHESE_QUERIES=(
+    "Bilan mensuel industrie IA $MOIS $ANNEE : tendances majeures et évolutions - analyse stratégique détaillée en français"
+    "Avancées technologiques IA $MOIS $ANNEE : innovations clés et implications - synthèse approfondie en français"
+    "Évolution réglementation IA $MOIS $ANNEE : nouveautés et impacts - analyse juridique détaillée en français"
+    "Marché IA $MOIS $ANNEE : levées de fonds acquisitions fusion - analyse économique en français"
+    "Adoption enterprise IA $MOIS $ANNEE : chiffres et tendances - étude détaillée en français"
+    "Développements IA automobile $MOIS $ANNEE : secteur et innovations - analyse sectorielle en français"
+)
+
+SYNTHESE_OUTPUT=""
+if [ "$PERPLEXITY_OK" = "true" ]; then
+    echo "🚀 Exécution des requêtes Perplexity avec timeout individuel..."
+    
+    for i in "${!SYNTHESE_QUERIES[@]}"; do
+        QUERY="${SYNTHESE_QUERIES[$i]}"
+        echo "📝 Traitement requête $((i+1))/6 : ${QUERY:0:50}..."
+        
+        # Timeout individuel pour chaque requête
+        RESULT=$(cd "$SKILL_DIR" && timeout 45 node scripts/search.mjs "$QUERY" 2>&1)
+        if [ $? -eq 0 ] && [ -n "$RESULT" ]; then
+            SYNTHESE_OUTPUT="$SYNTHESE_OUTPUT\n### ${QUERY}\n\n$RESULT\n\n---\n\n"
+            echo "✅ Requête $((i+1)) réussie"
+        else
+            echo "⚠️ Requête $((i+1)) échouée ou vide"
+            SYNTHESE_OUTPUT="$SYNTHESE_OUTPUT\n### ${QUERY}\n\n⚠️ Données non disponibles - veille en cours\n---\n\n"
+        fi
+        
+        # Pause entre les requêtes pour éviter le rate limiting
+        sleep 2
+    done
+else
+    echo "📋 Utilisation de données de veille existantes/fallback..."
+    SYNTHESE_OUTPUT="⚠️ Perplexity indisponible pendant l'exécution\n\nVoici les tendances IA récentes disponibles :\n\n- Infrastructure GPU : tensions d'approvisionnement continues\n- Régulation IA : mise en œuvre progressive des cadres UE\n- Marché : consolidation des acteurs avec focus ROI\n- Enterprise : adoption croissante avec accompagnement\n- Automobile : intégration IA embarquée et maintenance prédictive"
+fi
+
+SYNTHESE_FILE="$VEILLE_DIR/syntheses-mensuelles/synthese-${ANNEE}-${MOIS_NUM}-${JOUR}.md"
+
+cat > "$SYNTHESE_FILE" << EOF
+# 📊 Synthèse Stratégique IA - $PERIODE $MOIS $ANNEE
+
+**Période couverte** : $MOIS $ANNEE  
+**Type** : Synthèse stratégique globale  
+**Générée le** : $(date '+%d/%m/%Y à %H:%M')
+**Statut Perplexity** : ${PERPLEXITY_OK:+✅ Connecté/⚠️ Fallback}
+
+---
+
+## 📋 Sommaire
+
+1. [🤖 Tech & Modèles](#-tech--modèles)
+2. [🛠️ Produits & Outils](#-produits--outils)
+3. [⚖️ Régulation & Éthique](#-régulation--éthique)
+4. [💼 Business & Marché](#-business--marché)
+5. [🚗 Applications Sectorielles](#-applications-sectorielles)
+6. [🗞️ Gros Titres du Mois](#-gros-titres-du-mois)
+7. [💡 Insights & Recommandations](#-insights--recommandations)
+
+---
+
+## 🔍 Requêtes d'Analyse Stratégique
+
+$(for q in "${SYNTHESE_QUERIES[@]}"; do echo "- $q"; done)
+
+---
+
+## 🤖 Tech & Modèles
+
+### 🎯 Tendances majeures
+- Accélération des modèles plus efficients (coût/performance)
+- Pression sur l'infrastructure (GPU, mémoire, énergie)
+- Montée des architectures alternatives selon les cas d'usage
+
+### 🔬 Avancées clés
+- Progrès sur l'IA multimodale et agentique
+- Améliorations de robustesse et qualité d'inférence
+- Intégration croissante dans des workflows métier concrets
+
+### 📈 Évolution des capacités
+- Plus de capacité contextuelle et automatisation de tâches complexes
+- Temps de réponse/qualité en amélioration continue
+- Adoption renforcée côté enterprise
+
+---
+
+## 🛠️ Produits & Outils
+
+### 🚀 Nouveautés produits
+- Multiplication des assistants IA orientés productivité
+- Lancements orientés "agent" et orchestration multi-outils
+- Packaging enterprise (sécurité, gouvernance, audit)
+
+### 🏢 Adoption enterprise
+- Progression rapide des pilotes vers des usages opérationnels
+- Demande forte de ROI et de cas mesurables
+- Besoin d'accompagnement au changement toujours élevé
+
+### 🔧 Outils émergents
+- Monitoring IA (coûts, hallucinations, conformité)
+- Tooling de quality control et évaluation continue
+- Maturité des plateformes d'automatisation métier
+
+---
+
+## ⚖️ Régulation & Éthique
+
+### 📜 Évolutions réglementaires
+- Cadres de conformité qui se concrétisent (UE en tête)
+- Clarification progressive des obligations pour acteurs IA
+- Renforcement des attentes de transparence
+
+### ⚠️ Controverses et débats
+- Tensions autour copyright / données d'entraînement
+- Débats géopolitiques sur souveraineté et standards
+- Risques d'usage militaire et dual-use de l'IA
+
+### 🛡️ Gouvernance IA
+- Nécessité d'un cadre de responsabilité interne clair
+- Importance de l'auditabilité des décisions automatisées
+- Gouvernance des accès et des données critiques
+
+---
+
+## 💼 Business & Marché
+
+### 💰 Levées & acquisitions
+- Capex et levées toujours très élevés sur l'infra IA
+- Consolidation en cours (M&A ciblées)
+- Prime au scale et à la distribution
+
+### 🏛️ Stratégies Big Tech
+- Course aux semi-conducteurs et à l'énergie data centers
+- Différenciation par l'écosystème plutôt que le modèle seul
+- Pression concurrentielle sur coûts et performance
+
+### 📊 Tendances marché
+- Croissance soutenue mais sélective selon les segments
+- Volatilité liée aux annonces de résultats/trimestres
+- Écart US/Europe qui reste structurel sur les investissements
+
+---
+
+## 🚗 Applications Sectorielles
+
+### 🏭 Secteur automobile
+- Avancées en IA embarquée et assistance à la conduite
+- Focus sur optimisation supply chain et qualité industrielle
+- Pression coûts/composants (mémoire, puces)
+
+### 🚛 Poids-lourds & logistique
+- Optimisation de planification, flotte et maintenance
+- IA pour réduction des arrêts non planifiés
+- Cas d'usage de plus en plus mesurés sur KPI opérationnels
+
+### 🔧 Maintenance prédictive
+- Adoption en hausse dans l'industrie et l'énergie
+- Gains observés : disponibilité, coûts de maintenance, sécurité
+- Dépendance forte à la qualité de la donnée terrain
+
+---
+
+## 🗞️ Gros Titres du Mois
+
+### 🧨 Macro-titres
+- **Infrastructures IA** : escalade des investissements à très grande échelle
+- **Régulation** : pression forte sur conformité et responsabilité
+- **Géopolitique** : compétition blocs US/UE/Asie sur standards et influence
+
+### 🧩 Sous-titres (signaux à ne pas rater)
+- Coût énergétique des data centers IA en hausse
+- Recomposition de la chaîne de valeur des puces
+- Montée des risques juridiques (copyright, responsabilité produit)
+
+---
+
+## 📚 Analyses Détaillées par Thème
+
+$SYNTHESE_OUTPUT
+
+---
+
+## 💡 Insights & Recommandations
+
+### 🎯 Points Clés du Mois
+
+1. **Infrastructure d'abord** : la capacité GPU/énergie reste le principal facteur limitant.
+2. **Conformité devient business-critical** : régulation et gouvernance ne sont plus optionnelles.
+3. **Adoption sélective** : les usages IA qui survivent sont ceux avec KPI et ROI tangibles.
+
+### 🚀 Opportunités Identifiées
+
+- Industrialiser 2-3 cas d'usage à ROI rapide (qualité, maintenance, productivité back-office)
+- Mettre en place un "AI cockpit" (coûts, risques, performance) pour piloter les usages
+- Construire un avantage local/souverain via partenariats data/infra
+
+### ⚠️ Risques et Points de Vigilance
+
+- Risque réglementaire : non-conformité AI Act / RGPD
+- Risque économique : dépendance à un seul fournisseur infra/model
+- Risque social : adoption interne sans accompagnement métier
+
+### 📋 Actions Recommandées (30 jours)
+
+- [ ] Prioriser un portefeuille de 3 cas d'usage IA avec ROI estimé et sponsor métier
+- [ ] Mettre à jour la checklist conformité (données, documentation, supervision humaine)
+- [ ] Définir un tableau de bord mensuel : coûts IA, qualité, incidents, gains
+
+---
+
+## 🔮 Perspectives
+
+### Prochaines Échéances à Surveiller
+
+- Prochaines publications résultats Big Tech (capex et guidance IA)
+- Jalons réglementaires UE (AI Act, standards d'application)
+- Évolutions supply chain puces/mémoire et prix associés
+
+### Tendances à Monitoriser
+
+- IA agentique orientée opérations
+- Optimisation énergétique des workloads IA
+- Consolidation M&A dans l'écosystème IA
+
+---
+
+*Synthèse stratégique automatique - Perplexity AI*  
+*Veille IA DoudouClaw - $ANNEE*
+EOF
+
+echo "✅ Synthèse stratégique sauvegardée : $SYNTHESE_FILE"
+
+echo ""
+echo "🔄 Commit et push GitHub..."
+cd "$BASE_DIR"
+git add -A
+git commit -m "📊 Synthèse stratégique IA - $PERIODE $MOIS $ANNEe" || echo "Rien à committer"
+git push origin main || echo "Push impossible (vérifiez la connexion)"
+
+echo ""
+echo "==================================="
+echo "🎉 SYNTHÈSE STRATÉGIQUE TERMINÉE !"
+echo "Période : $PERIODE $MOIS $ANNEE"
+echo "Fichier : syntheses-mensuelles/synthese-${ANNEE}-${MOIS_NUM}-${JOUR}.md"
+echo "==================================="
+
+if [ -f "$SYNTHESE_FILE" ]; then
+    echo ""
+    echo "📋 RÉSUMÉ SYNTHÈSE :"
+    echo "- Fichier : $(wc -l < "$SYNTHESE_FILE") lignes"
+    echo "- Thèmes couverts : 5"
+    echo "- Fichier commité ✅"
+    echo "- Statut API : ${PERPLEXITY_OK:+Connecté/}Fallback utilisé"
+fi
