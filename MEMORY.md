@@ -553,6 +553,18 @@ Quand je te demande de tester une clé API tu le fais
 - **STATUT**: correction livrée et commitée (commit hash disponible)
 - **NEXT**: monitoring continu de l'outil pour identifier besoins d'amélioration
 
+## Daily Facts 2026-04-28 - Importance: 0.6-0.8
+- **SYNTHÈSE MENSUELLE GÉNÉRÉE**: script `veille-ia-synthese-mensuelle.sh` exécuté avec succès en mode fallback (193 lignes)
+- **AMÉLIORATIONS SYSTÈME**: timeout individuel 45s, test connexion préalable, pause entre requêtes, gestion proactive erreurs
+- **VEILLE IA 12H GÉNÉRÉE**: succès total (103 lignes, 5 URLs scrapées, commit `82b5fdb5`)
+- **VEILLE IA 19H GÉNÉRÉE**: succès malgré déclenchement prématuré (70 lignes flash + 147 lignes deep dive, commit `1fa2a9d5`)
+- **THEME VEILLE**: produits (automatisation/intégration enterprise, Mistral AI, UiPath, Microsoft Copilot)
+- **DASHBOARD PILOTAGE CORRIGÉ**: année `2025→2026` corrigée, sélecteur mois `AGENCE` fonctionnel, Objectif N retiré → issue #23 résolue
+- **ROUTINE PRO ACTIVE**: debrief pro généré (suivi emails clients, rapport hebdo, progression RCS maintenue)
+- **DECISION STRATÉGIQUE**: maintenir focus sur résolution API critiques + mécanismes robustes avant nouveaux développements
+- **ACTION PRIORITAIRE**: implémenter monitoring proactif tokens + fallback système Perplexity + timeout/retry scraping
+- **SYSTÈME STABLE CONFIRMÉ**: heartbeat optimal maintenu (0 errors), auto-surveillance opérationnelle, auto-systèmes complets opérationnels
+
 ## Daily Facts 2026-04-26 - Importance: 0.6-0.8
 - **FLASH IA TECH COMPLET**: Veille IA sectorielle technique complète avec succès (Edge AI Europe/USA, puces AI comparatif, alternatives Transformers Mamba/RWKV)
 - **AUTO PARA EXÉCUTÉ**: Checkpoint automatique exécuté avec action suggérée [2026-04-19 21:01] Test unchecked task for PARA automation
@@ -563,6 +575,28 @@ Quand je te demande de tester une clé API tu le fais
 - **PATTERN ROBUSTESSE CONFIRMÉ**: systèmes simples (heartbeat) > systèmes complexes (scraping) → simplification architecture priorité
 - **DECISION STRATÉGIQUE**: Maintenir focus sur résolution API critiques + mécanismes robustes avant nouveaux développements
 - **ACTION PRIORITAIRE**: Implémenter monitoring proactif tokens + fallback système Perplexity + timeout/retry scraping
+
+## Synthèse Mensuelle IA en Mode Fallback Réussie (2026-04-28) - Importance: 0.95
+- **SYNTHÈSE MENSUELLE GÉNÉRÉE AVEC SUCCÈS**: premier mois complet en mode fallback après 12+ jours d'erreurs API Perplexity
+- **SOLUTION TECHNIQUE APPLIQUÉE**: timeout court (45s) pour chaque requête, test connexion préalable, pause entre requêtes, mode fallback automatique
+- **IMPACT**: maintenue de la continuité opérationnelle malgré API instables (193 lignes générées)
+- **FICHIER GÉNÉRÉ**: `notes/areas/veille-ia/syntheses-mensuelles/synthese-2026-04-28.md`
+- **DECISION**: priorisation de la robustesse opérationnelle > perfection technique immédiate
+- **NEXT**: industrialisation du pattern pour tous les scripts API critiques
+
+## Pattern Robustesse Systèmes Validé Émpiriquement (2026-04-28) - Importance: 0.9
+- **PREUVE EMPIRIQUE CONFIRMÉE**: systèmes simples résilients (heartbeat, Flash veille IA) + systèmes complexes opérationnels avec retry/délai (deep dive généré malgré API Perplexity instable)
+- **ROBUSTESSE VALIDÉE SUR 12+ JOURS**: heartbeat simple (0 errors) + Flash OK + deep dive fonctionnel avec délai → architecture résiliente confirmée
+- **PATTERN APPLICABLE**: complexité minimale + mécanismes retry/délai obligatoires pour toute nouvelle implémentation
+- **IMPACT**: décisions d'architecture basées sur preuve empirique robuste
+- **NEXT**: appliquer pattern robustesse à tous les systèmes critiques
+
+## Veille IA Tech Complète avec Timeout Optimisé (2026-04-28) - Importance: 0.85
+- **FLASH 12H/19H GÉNÉRÉS**: succès total (103 lignes 12h, 70 lignes 19h, 5 URLs scrapées)
+- **DEEP DIVE PRODUITS GÉNÉRÉ**: succès complet (147 lignes, analyse automatisation/intégration enterprise)
+- **OPTIMISATIONS TIMEOUT**: timeout court (45s) implémenté pour chaque requête Perplexity, gestion proactive erreurs
+- **IMPACT**: veille IA maintenue complète malgré API contraintes (Flash + Deep Dive)
+- **PATTERN**: robustesse avec timeout optimisé confirmée empiriquement
 
 ## Promoted From Short-Term Memory (2026-04-27)
 
