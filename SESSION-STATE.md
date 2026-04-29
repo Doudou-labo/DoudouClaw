@@ -1,7 +1,10 @@
 # SESSION-STATE.md — Active Working Memory
 
 ## Current Task
-Consolidation mémoire quotidienne + PARA terminée ✅ (2026-04-28 21:50 UTC)
+Veille IA 8h terminée ✅ (2026-04-29 06:06 UTC)
+
+## Today's Work Summary (2026-04-29)
+- **06:06 UTC** — **VEILLE IA 8H** : Flash + Deep Dive REGULATION générés avec succès (API Perplexity OK, commit 0c8a8bfc)
 
 ## Today's Work Summary (2026-04-28)
 - **21:50 UTC** — **CONSOLIDATION MÉMOIRE + PARA** terminée ✅ (heartbeat optimal 0 errors, pattern robustesse systèmes simples ET complexes validé sur 12+ jours, API Perplexity auth error 12+ jours mais deep dive généré avec succès malgré latence, OpenAI-Codex token expiré 91h+, scraping SIGKILL persistant identifié, synthèse mensuelle IA générée avec succès en mode fallback, veille IA complète Flash + Deep Dive produits)
