@@ -21,14 +21,16 @@ Architecture **simplifiée + résilience** : systèmes simples prioritaires, sys
 
 ### Actions en cours
 - ✅ **Pattern robustesse validé** : systèmes simples + complexes avec retry/délai opérationnels sur 12+ jours
+- ✅ **API Perplexity stabilisée** : retour à la normale après 12+ jours d'erreurs (synthèse mensuelle 371 lignes, 100% succès)
 - 🔍 **Scraping** : implémenter timeout/retry robustes pour éviter SIGKILL OOM
 - 📊 **Monitoring proactif** : tokens API expirés (OpenAI-Codex 91h+)
 - 🔄 **Fallback API** : systèmes de secours pour API critiques instables
 
 ### Next Steps
-1. Implémenter timeout/retry robustes pour scraping multi-URLs
-2. Déployer monitoring proactif tokens API avec alertes préventives
-3. Appliquer pattern robustesse aux nouvelles implémentations (simple + résilience)
+1. ✅ **API stabilisée** : confirmer si stabilisation durable après 12+ jours d'erreurs
+2. Implémenter timeout/retry robustes pour scraping multi-URLs
+3. Déployer monitoring proactif tokens API avec alertes préventives
+4. Appliquer pattern robustesse aux nouvelles implémentations (simple + résilience)
 
 ---
 *Pattern validé par monitoring heartbeat (0 errors vs systèmes complexes défaillants)*

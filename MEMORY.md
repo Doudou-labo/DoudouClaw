@@ -456,6 +456,13 @@ Quand je te demande de tester une clé API tu le fais
 - **IMPACT**: veille IA complète (Flash + Deep Dive) malgré instabilité API
 - **NEXT**: monitoring API pour anticiper délais, pas fallback nécessaire immédiatement
 
+## API Perplexity Stabilisation Confirmée (2026-04-29) - Importance: 0.9
+- **STABILISATION CONFIRMÉE**: API Perplexity revenue stable pour la première fois après 12+ jours d'erreurs auth récurrentes
+- **SYNTHÈSE MENSUELLE RÉUSSIE**: 371 lignes générées avec 6/6 requêtes réussies (100% taux de succès)
+- **IMPACT POSITIF**: retour à la normale opérationnelle pour veille IA, fin des contraintes techniques
+- **TENDENCE À SURVEILLER**: confirmer si stabilisation durable ou retour des erreurs hebdomadaires
+- **LEARNINGS**: résilience système confirmée - mécanismes timeout/pause entre requêtes efficaces
+
 ## Veille IA Products Complete with Timeout Optimization (2026-04-28) - Importance: 0.9
 - **FLASH IA 12H/19H GÉNÉRÉS**: succès total (103 lignes Flash 12h, 70 lignes Flash 19h, 5 URLs scrapées)
 - **DEEP DIVE PRODUITS GÉNÉRÉ**: succès - analyse automatisation/intégration enterprise (147 lignes, Mistral AI, UiPath, Microsoft Copilot, outils no-code)

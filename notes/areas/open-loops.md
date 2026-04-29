@@ -5,10 +5,10 @@
 ## Boucles Actives
 
 ### 🔴 Priorité Haute (Critique Système)
-1. **API Perplexity erreur d'auth récurrente** - Confirmée 12+ jours consécutifs (2026-03-28→2026-04-28) → Deep Dive généré avec succès AVEC timeout optimisé 45s
-   - **ÉVOLUTION** : pattern robustesse validé (systèmes complexes opérationnels avec retry/délai)
-   - **RÉSULTAT** : veille IA complète maintenue avec timeout court appliqué (45s par requête)
-   - Pattern : erreur récurrente hebdomadaire → monitoring proactif + timeout court appliqués
+1. **✅ API Perplexity STABILISÉE** - Retour stable après 12+ jours d'erreurs auth récurrentes (2026-03-28→2026-04-28) → Synthèse mensielle IA générée avec 100% succès (371 lignes)
+   - **ÉVOLUTION POSITIVE** : API revenue normale, pattern robustesse validé, fin des contraintes techniques
+   - **RÉSULTAT** : veille IA complète opérationnelle, retour à la normale système confirmée
+   - **SURVEILLER** : confirmer si stabilisation durable ou retour des erreurs hebdomadaires
 
 2. **Token OpenAI-Codex expiré** - Expired 91h+ → régénération URGENTE avant 96h
    - Impact : potentiel blocage dépendances OpenAI-Codex après expiration (déjà 91h+)
@@ -48,7 +48,7 @@
     - Priorité : basse (nouveau développement vs urgence système)
 
 ## Actions Concrètes Prochaines
-- **AUJOURD'HUI** : Régénérer token OpenAI-Codex (91h+ expiré), implémenter timeout/retry scraping robustes, maintenir monitoring API Perplexity avec timeout 45s appliqué
+- **AUJOURD'HUI** : Régénérer token OpenAI-Codex (91h+ expiré), implémenter timeout/retry scraping robustes, surveiller API Perplexity pour confirmer stabilité durable
 - **Cette semaine** : Implémenter monitoring proactif tokens avec alertes préventives, appliquer pattern robustesse aux nouvelles implémentations, configurer fallback système basé sur preuve empirique 12+ jours
 - **Mois prochain** : Simplifier architecture systèmes basée sur pattern robustesse VALIDÉ (simple + résilience) + dashboard RCS compétences managériales
 
@@ -62,7 +62,7 @@
 - [x] [2026-04-23 06:03] Heartbeat auto-surveillance opérationnel ✅
 
 ## Auto-checkpoints
-- [ ] [AUTO 2026-04-29 midi] Checkpoint 3-min fait. Next: [2026-04-19 21:01] Test unchecked task for PARA automation
+- [x] [AUTO 2026-04-29 midi] Checkpoint 3-min fait. Next: [2026-04-19 21:01] Test unchecked task for PARA automation
 
 ## Pattern Robustesse VALIDÉ (2026-04-28)
 - **Principe** : systèmes simples résilients (heartbeat, Flash) + systèmes complexes avec retry/délai (Deep Dive)
