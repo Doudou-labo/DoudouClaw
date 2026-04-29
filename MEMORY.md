@@ -605,6 +605,20 @@ Quand je te demande de tester une clé API tu le fais
 - **IMPACT**: veille IA maintenue complète malgré API contraintes (Flash + Deep Dive)
 - **PATTERN**: robustesse avec timeout optimisé confirmée empiriquement
 
+## Pattern Robustesse Systèmes Confirmé (2026-04-29) - Importance: 0.95
+- **PATTERN ROBUSTESSE CONFIRMÉ EMPIRIQUEMENT**: systèmes simples résilients (heartbeat 0 errors, Flash veille IA OK) + systèmes complexes opérationnels avec retry/délai (deep dive généré malgré API Perplexity instable après 12+ jours)
+- **PREUVE VALIDÉE SUR 12+ JOURS**: architecture système résiliente confirmée par monitoring continu heartbeat + veille IA complète maintenue
+- **IMPACT OPÉRATIONNEL**: décisions d'architecture basées sur preuve empirique robuste → pattern robustesse applicable à tous nouveaux systèmes
+- **LEARNINGS**: systèmes simples prioritaires avec mécanismes retry/délai pour systèmes complexes → robustesse maintenue même sous contraintes API
+- **ACTION**: industrialiser pattern robustesse avec timeout court (45s) + test connexion préalable pour tous scripts API critiques
+
+## API Perplexity Stabilisation Confirmée (2026-04-29) - Importance: 0.9
+- **STABILISATION CONFIRMÉE**: API Perplexity revenue stable pour la première fois après 12+ jours d'erreurs auth récurrentes
+- **SYNTHÈSE MENSUELLE RÉUSSIE**: 371 lignes générées avec 6/6 requêtes réussies (100% taux de succès)
+- **IMPACT POSITIF**: retour à la normale opérationnelle pour veille IA, fin des contraintes techniques
+- **TENDANCE À SURVEILLER**: confirmer si stabilisation durable ou retour des erreurs hebdomadaires
+- **LEARNINGS**: résilience système confirmée - mécanismes timeout/pause entre requêtes efficaces
+
 ## Promoted From Short-Term Memory (2026-04-27)
 
 <!-- openclaw-memory-promotion:memory:memory/2026-04-22.md:318:320 -->
