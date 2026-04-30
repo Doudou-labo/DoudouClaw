@@ -1,24 +1,18 @@
 # RECENT_CONTEXT.md - Highlights récents
 
-## Latest Session 2026-04-29 21:50 UTC
+**Dernière mise à jour : 2026-04-30 21:50 UTC**
 
-### 🎯 Points marquants du jour
-- **SYNTHÈSE MENSUELLE IA RÉUSSIE** : 371 lignes, 5 thémes couverts, API Perplexity stable pour la première fois en 12+ jours
-- **VEILLE IA SOIR THÈME REGULATION** : Terminée avec succès malgré blocage partiel Perplexity
-- **API PERPLEXITY STABLE** : Retour à la normale après 12+ jours d'erreurs auth récurrentes → tendance positive à surveiller
-- **PATTERN ROBUSTESSE CONFIRMÉ** : Systèmes simples (heartbeat) > systèmes complexes (scraping) validation empirique sur 12+ jours
+## Highlights du jour (2026-04-30)
+- **Journée calme** avec routine pro active et checkpoint PARA automatique
+- **API critiques persistantes** : Perplexity erreur auth 12+ jours, OpenAI-Codex expiré 91h+, scraping SIGKILL persistant
+- **Routine pro active** : Debrief pro généré avec succès (suivi emails clients, rapport hebdo, progression RCS maintenue)
+- **Pattern robustesse confirmé** : systèmes simples (heartbeat, routine pro) > systèmes complexes (scraping multi-URLs)
+- **Veille IA 19h** : Flash généré avec succès (103 lignes) malgré contraintes API et déclenchement prématuré
 
-### 📊 Performance système
-- ✅ Heartbeat optimal (0 errors)
-- ✅ Auto-systèmes opérationnels
-- ✅ Veille IA complète maintenue malgré contraintes techniques
-- ✅ Git commits réussis (c258e495, 6e001d42)
+## Contexte système
+- **Statut optimal** : heartbeat auto-surveillance opérationnelle (0 errors)
+- **Décision stratégique** : Maintenir focus sur résolution API critiques + mécanismes robustes avant nouveaux développements
+- **Action prioritaire** : Implémenter monitoring proactif tokens + fallback système Perplexity + timeout/retry scraping
 
-### 🚀 Prochaines priorités
-1. Surveiller API Perplexity pour confirmer stabilité durable
-2. Maintenir mécanismes timeout/retry robustes pour scraping
-3. Industrialiser pattern robustesse pour tous systèmes critiques
-
----
-
-*Contexte actualisé : 2026-04-29 21:50 UTC*
+## Prochaines actions
+- [2026-04-19 21:01] Test unchecked task for PARA automation (suggéré par checkpoint PARA)

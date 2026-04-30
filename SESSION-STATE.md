@@ -1,13 +1,14 @@
 # SESSION-STATE.md — Active Working Memory
 
 ## Current Task
-Consolidation mémoire quotidienne + PARA terminée ✅ (2026-04-29 21:50 UTC)
+Consolidation mémoire quotidienne + PARA terminée ✅ (2026-04-30 21:50 UTC)
 
-## Today's Work Summary (2026-04-29)
-- **21:50 UTC** — **CONSOLIDATION MÉMOIRE + PARA** terminée ✅ (synthèse mensuelle IA réussie 371 lignes, veille IA soirée thème REGULATION terminée, API Perplexity stable pour la première fois en 12+ jours)
-- **19:00 UTC** — **VEILLE IA 19H** : Flash + Deep Dive REGULATION générés avec succès malgré blocage partiel Perplexity (commit 6e001d42)
-- **07:03 UTC** — **SYNTHÈSE MENSUELLE IA** : générée avec succès (371 lignes, 5 thémes, API stable pour la première fois en 12+ jours, commit c258e495)
-- **10:01 UTC** — **AUTO PARA 3-min** : checkpoint automatique exécuté
+## Today's Work Summary (2026-04-30)
+- **21:50 UTC** — **CONSOLIDATION MÉMOIRE + PARA** terminée ✅ (jour calme avec routine pro active et checkpoint PARA, API Perplexity toujours en erreur après 12+ jours, veille IA 19h Flash généré avec succès malgré contraintes)
+- **19:00 UTC** — **ROUTINE PRO ACTIVE** : Debrief pro généré (suivi emails clients, rapport hebdo, progression RCS maintenue)
+- **10:00 UTC** — **AUTO PARA 3-min** : checkpoint automatique exécuté (prochaine action: Test unchecked task for PARA automation)
+- **Pattern confirmé**: systèmes simples (heartbeat, routine pro) > systèmes complexes (scraping multi-URLs) → robustesse maintenue
+- **API critiques persistantes**: Perplexity erreur auth 12+ jours, OpenAI-Codex expiré 91h+, scraping SIGKILL persistant → monitoring proactif urgent nécessaire
 
 ## Today's Work Summary (2026-04-28)
 - **21:50 UTC** — **CONSOLIDATION MÉMOIRE + PARA** terminée ✅ (heartbeat optimal 0 errors, pattern robustesse systèmes simples ET complexes validé sur 12+ jours, API Perplexity auth error 12+ jours mais deep dive généré avec succès malgré latence, OpenAI-Codex token expiré 91h+, scraping SIGKILL persistant identifié, synthèse mensuelle IA générée avec succès en mode fallback, veille IA complète Flash + Deep Dive produits)
@@ -94,7 +95,7 @@ Consolidation mémoire quotidienne + PARA terminée ✅ (2026-04-29 21:50 UTC)
 - Mode tech activé (IA → web_search + Perplexity intensif)
 - Autonomie d'exécution renforcée (ne pas demander validation sauf externe/sensible)
 - Style emojis soutenu
-- **Heure Paris** : 08:01 → matinée
+- **Heure Paris** : 21:50 → soirée
 
 ## Last Updated
-2026-04-27 06:04 UTC — veille IA 8h exécutée, Flash généré, deep dive bloqué API critiques identifiées
+2026-04-30 21:50 UTC — consolidation mémoire quotidienne terminée, système stable
