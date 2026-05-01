@@ -572,6 +572,14 @@ Quand je te demande de tester une clé API tu le fais
 - **ACTION PRIORITAIRE**: implémenter monitoring proactif tokens + fallback système Perplexity + timeout/retry scraping
 - **SYSTÈME STABLE CONFIRMÉ**: heartbeat optimal maintenu (0 errors), auto-surveillance opérationnelle, auto-systèmes complets opérationnels
 
+## Daily Facts 2026-05-01 - Importance: 0.6-0.8
+- **VEILLE IA 8H COMPLÈTE**: thème automobile (105 lignes Flash + 136 lignes Deep Dive) - IA conception auto (IBM+Dallara), robotaxis Pony AI Chine, Tesla Cybercab/Semi production pilote
+- **VEILLE IA 19H COMPLÈTE**: thème transformation digitale (70 lignes Flash + 147 lignes Deep Dive) - retail e-commerce personnalisation, services financiers IA 58% employés Europe
+- **API PERPLEXITY FONCTIONNELLE**: stabilisation confirmée après 12+ jours d'erreurs, veille IA normale rétablie
+- **AUTOMatisation SYSTÈME**: auto-tags opérationnels pour classification thématique (automobile, transformation digitale)
+- **COMMITS SUCCÈS**: b5880ade (8h) + 1fa2a9d5 (19h) pushés sur main avec contenu riche en insights sectoriels
+- **GESTION CONTRAINTES**: timeout optimisé + gestion proactive erreurs → robustesse maintenue malgré instabilité API passée
+
 ## Daily Facts 2026-04-26 - Importance: 0.6-0.8
 - **FLASH IA TECH COMPLET**: Veille IA sectorielle technique complète avec succès (Edge AI Europe/USA, puces AI comparatif, alternatives Transformers Mamba/RWKV)
 - **AUTO PARA EXÉCUTÉ**: Checkpoint automatique exécuté avec action suggérée [2026-04-19 21:01] Test unchecked task for PARA automation
@@ -605,15 +613,27 @@ Quand je te demande de tester une clé API tu le fais
 - **IMPACT**: veille IA maintenue complète malgré API contraintes (Flash + Deep Dive)
 - **PATTERN**: robustesse avec timeout optimisé confirmée empiriquement
 
-## Pattern Robustesse Systèmes Confirmé (2026-04-29) - Importance: 0.95
+## Pattern Robustesse Systèmes Confirmé (2026-04/05) - Importance: 0.95
 - **PATTERN ROBUSTESSE CONFIRMÉ EMPIRIQUEMENT**: systèmes simples résilients (heartbeat 0 errors, Flash veille IA OK) + systèmes complexes opérationnels avec retry/délai (deep dive généré malgré API Perplexity instable après 12+ jours)
 - **PREUVE VALIDÉE SUR 12+ JOURS**: architecture système résiliente confirmée par monitoring continu heartbeat + veille IA complète maintenue
 - **IMPACT OPÉRATIONNEL**: décisions d'architecture basées sur preuve empirique robuste → pattern robustesse applicable à tous nouveaux systèmes
 - **LEARNINGS**: systèmes simples prioritaires avec mécanismes retry/délai pour systèmes complexes → robustesse maintenue même sous contraintes API
 - **ACTION**: industrialiser pattern robustesse avec timeout court (45s) + test connexion préalable pour tous scripts API critiques
 
-## API Perplexity Stabilisation Confirmée (2026-04-29) - Importance: 0.9
-- **STABILISATION CONFIRMÉE**: API Perplexity revenue stable pour la première fois après 12+ jours d'erreurs auth récurrentes
+## Veille IA Sectorielle Opérationnelle (2026-05-01) - Importance: 0.85
+- **VEILLE IA COMPLÈTE**: Flash 8h (automobile/robotaxis) + Flash 19h (transformation digitale/retail/finance) générés avec succès
+- **THÈMES ABORDÉS**: IA conception auto (IBM+Dallara), robotaxis Pony AI Chine, retail e-commerce personnalisation, services financiers IA 58% employés
+- **API CONTRAINTES GÉRÉES**: timeout optimisé (45s) + test connexion préalable + pause entre requêtes → robustesse maintenue
+- **IMPACT**: veille IA maintenue complète malgré instabilité API passée, pattern timeout efficace validé
+
+## Système Stable Maintenu (2026-05-01) - Importance: 0.85
+- **ROBUSTESSE CONFIRMÉE**: heartbeat optimal (0 errors), auto-surveillance opérationnelle, auto-systèmes complets opérationnels
+- **SYNTHÈSE MENSUELLE**: succès en mode fallback (timeout court, pauses requêtes, test connexion préalable)
+- **GESTION API**: monitoring proactif implémenté pour éviter pannes futures, pattern stabilisé après 12+ jours d'erreurs
+- **LEARNINGS**: systèmes simples résilients > systèmes complexes avec retry/délai → architecture optimisée
+
+## API Perplexity Stabilisation Confirmée (2026-04/05) - Importance: 0.95
+- **STABILISATION CONFIRMÉE**: API Perplexity revenue stable pour la première fois après 12+ jours d'erreurs auth récurrentes (28/03-09/04, confirmation durable jusqu'au 01/05)
 - **SYNTHÈSE MENSUELLE RÉUSSIE**: 371 lignes générées avec 6/6 requêtes réussies (100% taux de succès)
 - **IMPACT POSITIF**: retour à la normale opérationnelle pour veille IA, fin des contraintes techniques
 - **TENDANCE À SURVEILLER**: confirmer si stabilisation durable ou retour des erreurs hebdomadaires
