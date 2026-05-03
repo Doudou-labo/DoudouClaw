@@ -79,7 +79,7 @@
 - Utiliser PARA + mémoire structurée pour améliorer la continuité de travail
 - Centraliser GitHub sur l'organisation `Doudou-labo` avec repo de travail `Doudou-labo/DoudouClaw`
 - Conserver l'identité bot `DoudouClaw` pour les commits/push
-- Modèle LLM par défaut : `openai-codex/gpt-5.4` (runtime 2026-03-24, maj MEMORY.md)
+- Modèle LLM par défaut : `kimi/k2p6` (runtime 2026-05-03, maj MEMORY.md)
 - Discord Streaming Mode : `partial` pour réponses streamées (2026-03-01)
 
 ### Key Decisions Made (suite)
@@ -426,7 +426,18 @@ Meilleure amie d'Alexandre, habite à Calais; relation amicale de longue date (e
 - **DECISION STRATÉGIQUE**: Maintenir focus sur résolution API critiques + mécanismes robustes avant nouveaux développements
 - **ACTION PRIORITAIRE**: Implémenter monitoring proactif tokens + fallback système Perplexity + timeout/retry scraping
 
-*Dernière mise à jour: 2026-04-26*
+## Daily Facts 2026-05-03 - Importance: 0.6-0.8
+- **ROUTINE WEEKLY PARA AUTO**: Revue hebdomadaire PARA exécutée automatiquement le dimanche 16:06 UTC (Projects=13, Areas=25, Resources=18, Archive=9, Open loops=2), trace ajoutée dans notes/areas/proactive-tracker.md
+- **ROUTINE SELF-IMPROVING AUTO**: Revue auto-exécutée automatiquement le dimanche 16:21 UTC (patterns erreurs détectés, traces mises à jour .learnings/)
+- **VEILLE IA RECAP HEBDO**: Flash 8h/12h/19h générés avec succès (bilan semaine IA, faits marquants cybersécurité/défense, tendances agentiques)
+- **SYSTÈME STABLE CONFIRMÉ**: Heartbeat optimal maintenu (0 errors), API Perplexity stable, auto-surveillance opérationnelle
+- **JOURNÉE CALME**: Aucun échange substantiel avec Alexandre (dimanche)
+
+## Modèle Système Mis à Jour (2026-05-03) - Importance: 0.8
+- **Modèle LLM par défaut**: `kimi/k2p6` (runtime 2026-05-03) — remplace `openai-codex/gpt-5.4` obsolète
+- **Impact**: alignement MEMORY.md avec runtime actuel pour éviter confusion modèle
+
+*Dernière mise à jour: 2026-05-03*
 Quand je te demande de tester une clé API tu le fais
 
 ## API Critical Issues Evolution (2026-04-27) - Importance: 0.95

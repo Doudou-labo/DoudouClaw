@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-05-03T03:00:01.710Z",
+  "updatedAt": "2026-05-03T20:03:45.360Z",
   "entries": {
     "memory:memory/2026-04-06.md:1:21": {
       "key": "memory:memory/2026-04-06.md:1:21",
@@ -180915,6 +180915,102 @@
       "conceptTags": [
         "heartbeat-ok",
         "assistant"
+      ]
+    },
+    "memory:memory/2026-04-26.md:23:35": {
+      "key": "memory:memory/2026-04-26.md:23:35",
+      "path": "memory/2026-04-26.md",
+      "startLine": 23,
+      "endLine": 35,
+      "source": "memory",
+      "snippet": "- **DEEP DIVE TECH**: Bloqué par API Perplexity erreur auth récurrente → nécessité fallback système - **ROUTINE PRO ACTIVE**: Debrief pro généré (rapport évolution, progression RCS maintenue) - **PATTERN ROBUSTESSE CONFIRMÉ**: systèmes simples (heartbeat) > systèmes complexes (scraping) → simplification architecture prioritaire - **DECISION STRATÉGIQUE**: Maintenir focus sur résolution API critiques + mécanismes robustes avant nouveaux développements - **ACTION PRIORITAIRE**: Implémenter monitoring proactif tokens + fallback système Perplexity + timeout/retry scraping - **RECENT_CONTEXT**: AUTO PARA Weekly Review (16:05 UTC) → Projects:13, Areas:25, Resources:18, Archive:9, OpenLoops:2 - **A",
+      "recallCount": 3,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 1.3367435455322265,
+      "maxScore": 0.475849050283432,
+      "firstRecalledAt": "2026-05-03T20:03:39.053Z",
+      "lastRecalledAt": "2026-05-03T20:03:45.360Z",
+      "queryHashes": [
+        "8c40136afa9c",
+        "72beb6596329",
+        "9c61c3c7b298"
+      ],
+      "recallDays": [
+        "2026-05-03"
+      ],
+      "conceptTags": [
+        "timeout/retry",
+        "recent-context",
+        "deep",
+        "dive",
+        "tech",
+        "bloqué",
+        "par",
+        "api"
+      ]
+    },
+    "memory:memory/2026-05-03.md:1:29": {
+      "key": "memory:memory/2026-05-03.md:1:29",
+      "path": "memory/2026-05-03.md",
+      "startLine": 1,
+      "endLine": 29,
+      "source": "memory",
+      "snippet": "# Memory — 2026-05-03 ## 10:05 UTC — AUTO PARA 3-min (midi) - Checkpoint automatique exécuté. - Prochaine action suggérée: [2026-04-19 21:01] Test unchecked task for PARA automation - Objectif: garder une seule prochaine action claire à exécuter maintenant. ## 16:06 UTC — AUTO PARA Weekly Review - Snapshot PARA: Projects=13, Areas=25, Resources=18, Archive=9 - Open loops actifs: 2 - Action: revue hebdo effectuée + trace ajoutée dans notes/areas/proactive-tracker.md ## 19:50 UTC — Consolidation mémoire quotidienne + PARA - **JOURNÉE CALME** (dimanche) — aucun échange substantiel avec Alexandre - **VEILLE IA RECAP COMPLÈTE** : Flash 8h/12h/19h générés avec succès (bilan semaine IA, faits ma",
+      "recallCount": 2,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.8757245242595673,
+      "maxScore": 0.4685084074735641,
+      "firstRecalledAt": "2026-05-03T20:03:42.185Z",
+      "lastRecalledAt": "2026-05-03T20:03:45.360Z",
+      "queryHashes": [
+        "72beb6596329",
+        "9c61c3c7b298"
+      ],
+      "recallDays": [
+        "2026-05-03"
+      ],
+      "conceptTags": [
+        "3-min",
+        "notes/areas/proactive-tracker.md",
+        "8h/12h/19h",
+        "utc",
+        "auto",
+        "min",
+        "midi",
+        "checkpoint"
+      ]
+    },
+    "memory:memory/2026-04-26.md:34:46": {
+      "key": "memory:memory/2026-04-26.md:34:46",
+      "path": "memory/2026-04-26.md",
+      "startLine": 34,
+      "endLine": 46,
+      "source": "memory",
+      "snippet": "- **PARA WEEKLY REVIEW**: Snapshot PARA: Projects=13, Areas=25, Resources=18, Archive=9, Open loops actifs: 2 → revue hebdo effectuée + trace ajoutée dans notes/areas/proactive-tracker.md - **AUTO SELF-IMPROVING WEEKLY REVIEW**: Revue auto exécutée sur: memory/MEMORY.md memory/working-buffer.md → Patterns erreurs détectés: oui, Corrections utilisateur détectées: non, Traces mises à jour: .learnings/ERRORS.md + .learnings/LEARNINGS.md - **SYSTÈME STABLE CONFIRMÉ**: Heartbeat optimal maintenu (0 errors), auto-surveillance opérationnelle, auto-systèmes complets opérationnels - **API CRITIQUES PERSISTANTES**: Perplexity erreur auth récurrente (11+ jours), OpenAI-Codex expiré (89h+), scraping SIG",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.4581129342317581,
+      "maxScore": 0.4581129342317581,
+      "firstRecalledAt": "2026-05-03T20:03:45.360Z",
+      "lastRecalledAt": "2026-05-03T20:03:45.360Z",
+      "queryHashes": [
+        "9c61c3c7b298"
+      ],
+      "recallDays": [
+        "2026-05-03"
+      ],
+      "conceptTags": [
+        "openai",
+        "notes/areas/proactive-tracker.md",
+        "self-improving",
+        "memory/memory.md",
+        "memory/working-buffer.md",
+        "learnings/errors.md",
+        "learnings/learnings.md",
+        "auto-surveillance"
       ]
     }
   }
