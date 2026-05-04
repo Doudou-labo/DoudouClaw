@@ -21,10 +21,9 @@
    - **ACTION** : implémentation timeout/retry robustes identifiée comme solution NON implémentée
 
 ### 🟡 Priorité Moyenne (Robustesse Système)
-4. **✅ PATTERN ROBUSTESSE CONFIRMÉ** - systèmes simples résilients + systèmes complexes avec retry/délai validé sur 12+ jours
-   - **RÉSULTAT** : heartbeat simple (0 errors) + Flash IA OK + Deep Dive généré malgré API instable + synthèse mensuelle IA générée en mode fallback
-   - **APP LIÉ** : ✅ Dashboard pilotage CORRIGÉ (issue #23 résolue: année 2025→2026, sélecteur mois AGENCE, Objectif N retiré)
-   - **NEXT** : appliquer pattern robustesse aux nouvelles implémentations (simple + résilience)
+4. **✅ API Perplexity STABILISÉE DURABLEMENT** - Stabilisation confirmée après 12+ jours d'erreurs auth récurrentes (2026-03-28→2026-04-28) → retour à la normale durable, veille IA complète opérationnelle
+   - **RÉSULTAT** : veille IA complète maintenue 8h/12h/19h sans interruption, pattern robustesse validé
+   - **SURVEILLER** : confirmer si stabilisation durable au-delà de 2 semaines
 
 5. **Dashboard progression RCS** - Construire tableau de bord compétences managériales (feedback, priorisation, cadrage, rigueur)
    - Contexte : Alexandre progression vers RCS chez Euromaster
