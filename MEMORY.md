@@ -650,6 +650,15 @@ Quand je te demande de tester une clé API tu le fais
 - **TENDANCE À SURVEILLER**: confirmer si stabilisation durable ou retour des erreurs hebdomadaires
 - **LEARNINGS**: résilience système confirmée - mécanismes timeout/pause entre requêtes efficaces
 
+## Daily Facts 2026-05-05 - Importance: 0.6-0.8
+- **VEILLE IA COMPLÈTE**: Flash 8h (produits : Adobe Firefly bêta, Claude Photoshop/Blender/Ableton, Gemini fichiers) + Flash 12h (fraîcheur 72h) + Flash 19h (produits : procès Musk vs OpenAI ouvert 05/05, IA militaire/drones autonomes, erreur ciblage Iran 168 victimes) — deep dives produits générés avec succès
+- **API PERPLEXITY STABLE**: stabilisation durable confirmée après 12+ jours d'erreurs, veille IA normale maintenue
+- **TOKEN OPENAI-CODEX**: toujours expiré (93h+) → monitoring proactif nécessaire
+- **FINANCE PERCO NATIXIS**: mensuel mai enregistré dans Actual Budget (+95,15 € : versement 50€ + abondement employeur 45,15€)
+- **SYSTÈME STABLE**: heartbeat optimal (0 errors), auto-surveillance opérationnelle, auto-systèmes complets opérationnels
+- **AUTO PARA**: checkpoint midi exécuté
+- **JOURNÉE TRAVAIL EUROMASTER**: aucun échange substantiel avec Alexandre
+
 ## Promoted From Short-Term Memory (2026-04-27)
 
 <!-- openclaw-memory-promotion:memory:memory/2026-04-22.md:318:320 -->

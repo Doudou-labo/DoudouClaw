@@ -1,14 +1,23 @@
 # SESSION-STATE.md — Active Working Memory
 
 ## Current Task
-Consolidation mémoire quotidienne + PARA terminée ✅ (2026-05-04 19:50 UTC)
+Consolidation mémoire quotidienne + PARA terminée ✅ (2026-05-05 19:50 UTC)
+
+## Today's Work Summary (2026-05-05)
+- **19:50 UTC** — **CONSOLIDATION MÉMOIRE + PARA** terminée ✅ (journée travail mardi Euromaster, aucun échange substantiel, veille IA complète 3/3 flashs)
+- **VEILLE IA COMPLÈTE** : Flash 8h/12h/19h générés avec succès (thème produits, Adobe Firefly bêta, Claude intégré Photoshop/Blender/Ableton, Gemini fichiers, procès Musk vs OpenAI, IA militaire/drones) — deep dives produits générés avec succès
+- **AUTO PARA** : checkpoint midi exécuté (`13fe48d0`)
+- **API PERPLEXITY STABLE** : stabilisation durable confirmée après 12+ jours d'erreurs
+- **TOKEN OPENAI-CODEX** : toujours expiré (93h+) → monitoring proactif nécessaire
+- **FINANCE** : PERCO Natixis mensuel mai enregistré dans Actual Budget (+95,15 €)
+- **SYSTÈME STABLE** : heartbeat optimal, auto-surveillance opérationnelle
 
 ## Today's Work Summary (2026-05-04)
 - **19:50 UTC** — **CONSOLIDATION MÉMOIRE + PARA** terminée ✅ (journée travail lundi Euromaster, aucun échange substantiel, veille IA complète 3/3 flashs)
 - **VEILLE IA COMPLÈTE** : Flash 8h/12h/19h générés avec succès (thème tech, fraîcheur + scraping) — commits `97e29a7c` `250a21b6` `40a8de1b`
-- **AUTO PARA** : checkpoint midi exécuté (`16d39966`)
+- **AUTO PARA** : checkpoint midi exécuté (`13fe48d0`)
 - **API PERPLEXITY STABLE** : stabilisation durable confirmée après 12+ jours d'erreurs
-- **TOKEN OPENAI-CODEX** : toujours expiré (91h+) → monitoring proactif nécessaire
+- **TOKEN OPENAI-CODEX** : toujours expiré (93h+) → monitoring proactif nécessaire
 - **SYSTÈME STABLE** : heartbeat optimal, auto-surveillance opérationnelle
 
 ## Today's Work Summary (2026-05-03)
@@ -17,14 +26,14 @@ Consolidation mémoire quotidienne + PARA terminée ✅ (2026-05-04 19:50 UTC)
 - **AUTO PARA WEEKLY REVIEW** : exécutée à 16h06 (Projects=13, Areas=25, Resources=18, Archive=9, Open loops=2)
 - **AUTO SELF-IMPROVING REVIEW** : exécutée à 16h21 (patterns erreurs détectés, traces mises à jour .learnings/)
 - **API STABILISÉE** : Perplexity stable, veille IA routines opérationnelles
-- **TOKEN OPENAI-CODEX** : toujours expiré (91h+) → monitoring proactif nécessaire
+- **TOKEN OPENAI-CODEX** : toujours expiré (93h+) → monitoring proactif nécessaire
 - **21:50 UTC** — **CONSOLIDATION MÉMOIRE + PARA** terminée ✅ (journée calme samedi, aucun échange substantiel, système stable)
 - **API STABILISÉE** : Perplexity stable (stabilisation confirmée après 12+ jours d'erreurs), veille IA routines 8h/12h/19h opérationnelles
-- **TOKEN OPENAI-CODEX** : toujours expiré (91h+) → monitoring proactif nécessaire
+- **TOKEN OPENAI-CODEX** : toujours expiré (93h+) → monitoring proactif nécessaire
 - **PATTERN ROBUSTESSE** : maintenu — systèmes simples résilients + systèmes complexes avec retry/délai
 
 ## Today's Work Summary (2026-05-01)
-- **21:50 UTC** — **CONSOLIDATION MÉMOIRE + PARA** terminée ✅ (heartbeat optimal 0 errors, pattern robustesse systèmes simples ET complexes validé sur 12+ jours, API Perplexity auth error 12+ jours mais deep dive généré avec succès malgré latence, OpenAI-Codex token expiré 91h+, scraping SIGKILL persistant identifié, synthèse mensuelle IA générée avec succès en mode fallback, veille IA complète Flash + Deep Dive produits)
+- **21:50 UTC** — **CONSOLIDATION MÉMOIRE + PARA** terminée ✅ (heartbeat optimal 0 errors, pattern robustesse systèmes simples ET complexes validé sur 12+ jours, API Perplexity auth error 12+ jours mais deep dive généré avec succès malgré latence, OpenAI-Codex token expiré 93h+, scraping SIGKILL persistant identifié, synthèse mensuelle IA générée avec succès en mode fallback, veille IA complète Flash + Deep Dive produits)
 - **17:00 UTC** — **VEILLE IA 19H** : Flash et Deep Dive produits générés avec succès malgré déclenchement prématuré (timeout optimisé 45s, API Perplexité fonctionnelle avec fallback, 217 lignes au total)
 - **10:00 UTC** — **VEILLE IA 12H** : Flash IA généré avec succès (103 lignes, 5 URLs scrapées, commit 82b5fdb5)
 - **07:00 UTC** — **SYNTHÈSE MENSUELLE IA** : générée avec succès en mode fallback (timeout individuel 45s, test connexion préalable, pause entre requêtes, synthèse 193 lignes commit 1fa2a9d5)
@@ -103,7 +112,7 @@ Consolidation mémoire quotidienne + PARA terminée ✅ (2026-05-04 19:50 UTC)
 - Disque stable à ~51%
 - Crons Proactive Observations actifs (07:00/12:00/17:00/21:00 Paris)
 - **⚠️ API Perplexity en erreur d'auth récurrente** (12+ jours) → deep dive veille IA bloqué → nécessité fallback système
-- **⚠️ Token OpenAI-Codex expiré** → régénération nécessaire (91h+)
+- **⚠️ Token OpenAI-Codex expiré** → régénération nécessaire (93h+)
 - **⚠️ Scraping SIGKILL persistant** → session OOM pendant veille IA 19h → investiguer timeout/retry
 - Mode tech activé (IA → web_search + Perplexity intensif)
 - Autonomie d'exécution renforcée (ne pas demander validation sauf externe/sensible)
