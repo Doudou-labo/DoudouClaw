@@ -185,12 +185,19 @@
 - **Tailscale** (2026-03-01) : VPN mesh (v1.94.2) - IP serveur `100.89.4.88`, tous dashboards accessibles
 - **Agence-IA** (2026-03-10) : 112 agents spécialisés intégrés - disponibles dans `~/.openclaw/agency-agents/` - orchestration via `agents-orchestrator` - routing dans `notes/areas/agent-orchestration.md`
 
-### Actual Budget (2026-03-21)
+### Actual Budget (2026-03-21 → usage actif 2026-05)
 - **Skill installé** (ClawHub) + API testée avec succès
 - **Projet finance perso** - `notes/projects/actual-budget-integration/`
+- **Utilisation active** : suivi mensuel PERCO Natixis (50€ versement + abondement employeur ~45€ = ~95€/mois, enregistré le 5 de chaque mois)
 - Env vars configurés dans OpenClaw (`ACTUAL_BUDGET_API_KEY`)
 - **Sécurité** : .env + data supprimés de git (commit 62a9ab5)
 - Prêt pour déploiement/usage dès qu'Alexandre veut piloter son budget
+
+### Finance — PERCO Natixis (routine mensuelle)
+- **Versement mensuel** : le 5 de chaque mois
+- **Montant** : 50€ versement personnel + ~45€ abondement employeur = ~95€/mois
+- **Tracking** : enregistré dans Actual Budget (mensuel mai 2026 validé : +95,15€)
+- **Source** : compte Revolut débité → virement PERCO Natixis
 
 ### Veille IA - faits saillants (2026-03-28 → 2026-04-06)
 - **Perplexity API** : erreur d'auth à 08h le 28/03 (mode dégradé), résolu à 19h - **nouvelle erreur d'auth le 01/04 à 14:52 UTC** - **erreur récurrente le 03/04 et 06/04** → à corriger en priorité, pattern hebdomadaire
