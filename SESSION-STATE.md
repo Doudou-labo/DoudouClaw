@@ -1,7 +1,15 @@
 # SESSION-STATE.md — Active Working Memory
 
 ## Current Task
-Consolidation mémoire quotidienne + PARA terminée ✅ (2026-05-05 19:50 UTC)
+Consolidation mémoire quotidienne + PARA terminée ✅ (2026-05-06 19:50 UTC)
+
+## Today's Work Summary (2026-05-06)
+- **19:50 UTC** — **CONSOLIDATION MÉMOIRE + PARA** terminée ✅ (journée travail mercredi Euromaster, aucun échange substantiel, veille IA complète 3/3 flashs)
+- **VEILLE IA COMPLÈTE** : Flash 8h/12h/19h générés avec succès (thème régulation AI Act Europe, Apple condamnée 250M$ IA trompeuse, Perplexity mode dégradé 19h) — deep dives régulation générés 8h/19h
+- **AUTO PARA** : checkpoint midi exécuté (`13fe48d0`)
+- **API PERPLEXITY** : stable matin/midi, retour mode dégradé soir (19h) → pattern erratique sporadique à surveiller après 12+ jours de stabilisation
+- **TOKEN OPENAI-CODEX** : toujours expiré (93h+) → monitoring proactif nécessaire
+- **SYSTÈME STABLE** : heartbeat optimal (0 errors), auto-surveillance opérationnelle
 
 ## Today's Work Summary (2026-05-05)
 - **19:50 UTC** — **CONSOLIDATION MÉMOIRE + PARA** terminée ✅ (journée travail mardi Euromaster, aucun échange substantiel, veille IA complète 3/3 flashs)
@@ -120,4 +128,4 @@ Consolidation mémoire quotidienne + PARA terminée ✅ (2026-05-05 19:50 UTC)
 - **Heure Paris** : 21:50 → soirée
 
 ## Last Updated
-2026-05-03 19:50 UTC — consolidation mémoire quotidienne terminée, système stable
+2026-05-06 19:50 UTC — consolidation mémoire quotidienne terminée, système stable

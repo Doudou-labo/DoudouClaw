@@ -666,7 +666,19 @@ Quand je te demande de tester une clé API tu le fais
 - **AUTO PARA**: checkpoint midi exécuté
 - **JOURNÉE TRAVAIL EUROMASTER**: aucun échange substantiel avec Alexandre
 
-## Promoted From Short-Term Memory (2026-04-27)
+## API Perplexity Instabilité Sporadique Retour (2026-05-06) - Importance: 0.85
+- **RETOUR INSTABILITÉ SPORADIQUE**: API Perplexity en mode dégradé à 19h après 12+ jours de stabilisation durable (29/04–05/05)
+- **PATTERN ERRATIQUE CONFIRMÉ**: stable matin/midi, dégradé soir → comportement intermittent non expliqué
+- **IMPACT**: veille IA 19h générée mais avec contenu réduit, deep dive régulation tout de même produit
+- **SURVEILLER**: confirmer si pattern hebdomadaire récurrent (erreurs historiques souvent en milieu d'après-midi/soir)
+- **LEÇON**: stabilisation ≠ fiabilité absolue → monitoring continu obligatoire même après période stable
 
-<!-- openclaw-memory-promotion:memory:memory/2026-04-22.md:318:320 -->
-- - Candidate: Possible Lasting Truths: - 1. 🔍 **Investigation scraping**: Tester le script `scrape-urls.py` individuellement 2. 🔧 **Token renewal**: Renouveler le token OpenAI expiré 3. 📊 **Cron diagnostics**: Analyser les crons en erreur systématique 4. 🔄 **Script veille**: Ajouter des ti - confidence: 0.00 - evidence: memory/2026-04-22.md:323-325 [score=0.830 recalls=0 avg=0.620 source=memory/2026-04-22.md:13-15]
+## Daily Facts 2026-05-06 - Importance: 0.6-0.8
+- **VEILLE IA COMPLÈTE**: Flash 8h (régulation AI Act Europe, scoring social interdit, biométrie temps réel) + Flash 12h (Apple condamnée 250M$ IA trompeuse, fraîcheur 72h) + Flash 19h (régulation, Perplexity mode dégradé) — deep dives régulation générés 8h/19h
+- **API PERPLEXITY**: retour instabilité sporadique soir après 12+ jours de stabilisation → pattern erratique à surveiller
+- **TOKEN OPENAI-CODEX**: toujours expiré (93h+) → monitoring proactif nécessaire
+- **SYSTÈME STABLE**: heartbeat optimal (0 errors), auto-surveillance opérationnelle, auto-systèmes complets opérationnels
+- **AUTO PARA**: checkpoint midi exécuté
+- **JOURNÉE TRAVAIL EUROMASTER**: aucun échange substantiel avec Alexandre (mercredi)
+
+*Dernière mise à jour: 2026-05-06*

@@ -1,17 +1,17 @@
 # Open Loops - Fils ouverts à suivre
 
-**Dernière mise à jour** : 2026-05-05 19:50 UTC
+**Dernière mise à jour** : 2026-05-06 19:50 UTC
 
 ## Boucles Actives
 
 ### 🔴 Priorité Haute (Critique Système)
-1. **✅ API Perplexity STABILISÉE** - Retour stable après 12+ jours d'erreurs auth récurrentes (2026-03-28→2026-04-28) → Synthèse mensielle IA générée avec 100% succès (371 lignes)
-   - **ÉVOLUTION POSITIVE** : API revenue normale, pattern robustesse validé, fin des contraintes techniques
-   - **RÉSULTAT** : veille IA complète opérationnelle, retour à la normale système confirmée
-   - **SURVEILLER** : confirmer si stabilisation durable ou retour des erreurs hebdomadaires
+1. **API Perplexity — RETOUR INSTABILITÉ SPORADIQUE** - Stabilisation durable remise en question : mode dégradé 19h ce soir après 12+ jours de fonctionnement normal
+   - **ÉVOLUTION** : API revenue normale le matin/midi, retour mode dégradé le soir (19h) → pattern erratique à surveiller
+   - **RÉSULTAT** : veille IA maintenue mais avec contraintes sporadiques
+   - **SURVEILLER** : confirmer si pattern hebdomadaire récurrent ou anomalie ponctuelle
 
-2. **Token OpenAI-Codex expiré** - Expired 91h+ → régénération URGENTE avant 96h
-   - Impact : potentiel blocage dépendances OpenAI-Codex après expiration (déjà 91h+)
+2. **Token OpenAI-Codex expiré** - Expired 93h+ → régénération URGENTE avant 96h
+   - Impact : potentiel blocage dépendances OpenAI-Codex après expiration
    - Pattern : nécessité monitoring proactif tokens API avec alerte préventive à 48h
    - **ACTION** : régénération immédiate toujours prioritaire critique
 
