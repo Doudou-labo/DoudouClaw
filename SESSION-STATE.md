@@ -3,6 +3,13 @@
 ## Current Task
 Consolidation mémoire quotidienne + PARA terminée ✅ (2026-05-06 19:50 UTC)
 
+## Today's Work Summary (2026-05-07)
+- **19:50 UTC** — **CONSOLIDATION MÉMOIRE + PARA** terminée ✅ (journée travail jeudi Euromaster, aucun échange substantiel, routines auto nominales)
+- **ROUTINES AUTO OPÉRATIONNELLES** : veille IA 8h/12h/19h, bourse, heartbeat, AUTO PARA midi — tout nominal
+- **API PERPLEXITY** : surveillance continue après retour sporadique hier soir (05/06 19h), pattern erratique intermittent à confirmer (stable matin/midi, dégradé soir)
+- **TOKEN OPENAI-CODEX** : toujours expiré (~117h+) → monitoring proactif critique
+- **SYSTÈME STABLE** : heartbeat optimal (0 errors), auto-surveillance opérationnelle
+
 ## Today's Work Summary (2026-05-06)
 - **19:50 UTC** — **CONSOLIDATION MÉMOIRE + PARA** terminée ✅ (journée travail mercredi Euromaster, aucun échange substantiel, veille IA complète 3/3 flashs)
 - **VEILLE IA COMPLÈTE** : Flash 8h/12h/19h générés avec succès (thème régulation AI Act Europe, Apple condamnée 250M$ IA trompeuse, Perplexity mode dégradé 19h) — deep dives régulation générés 8h/19h

@@ -1,6 +1,6 @@
 # Open Loops - Fils ouverts à suivre
 
-**Dernière mise à jour** : 2026-05-06 19:50 UTC
+**Dernière mise à jour** : 2026-05-07 19:50 UTC
 
 ## Boucles Actives
 
@@ -10,7 +10,7 @@
    - **RÉSULTAT** : veille IA maintenue mais avec contraintes sporadiques
    - **SURVEILLER** : confirmer si pattern hebdomadaire récurrent ou anomalie ponctuelle
 
-2. **Token OpenAI-Codex expiré** - Expired 93h+ → régénération URGENTE avant 96h
+2. **Token OpenAI-Codex expiré** - Expired ~117h+ → régénération URGENTE avant risque blocage total
    - Impact : potentiel blocage dépendances OpenAI-Codex après expiration
    - Pattern : nécessité monitoring proactif tokens API avec alerte préventive à 48h
    - **ACTION** : régénération immédiate toujours prioritaire critique
@@ -21,9 +21,10 @@
    - **ACTION** : implémentation timeout/retry robustes identifiée comme solution NON implémentée
 
 ### 🟡 Priorité Moyenne (Robustesse Système)
-4. **✅ API Perplexity STABILISÉE DURABLEMENT** - Stabilisation confirmée après 12+ jours d'erreurs auth récurrentes (2026-03-28→2026-04-28) → retour à la normale durable, veille IA complète opérationnelle
-   - **RÉSULTAT** : veille IA complète maintenue 8h/12h/19h sans interruption, pattern robustesse validé
-   - **SURVEILLER** : confirmer si stabilisation durable au-delà de 2 semaines
+4. **API Perplexity — SURVEILLANCE PATTERN ERRATIQUE** - Retour sporadique mode dégradé 19h le 05/06 après 12+ jours de stabilisation
+   - **ÉVOLUTION** : stable matin/midi, retour mode dégradé le soir (19h) → pattern erratique intermittent à confirmer
+   - **RÉSULTAT** : veille IA maintenue mais contraintes sporadiques possibles
+   - **SURVEILLER** : confirmer si pattern hebdomadaire récurrent ou anomalie ponctuelle isolée
 
 5. **Dashboard progression RCS** - Construire tableau de bord compétences managériales (feedback, priorisation, cadrage, rigueur)
    - Contexte : Alexandre progression vers RCS chez Euromaster
