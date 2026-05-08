@@ -79,7 +79,7 @@ Poste actuel : **Assistant Commercial Sédentaire (ACS)**.
 - **Horaires de travail Euromaster :**
   - Lundi-vendredi : 08:00-12:00 et 14:00-18:00
   - Samedi (heures sup) : 08:00-13:00
-- **Disponible pour interagir avec DoudouBot :**
+- **Disponible pour interagir avec DoudouClaw :**
   - Matin : avant 08:00 (léger, rapide)
   - Midi : 12:00-14:00 (fenêtre principale)
   - Soir : après 18:00 (fenêtre privilégiée pour les tâches qui demandent du temps)
