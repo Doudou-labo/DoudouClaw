@@ -1,16 +1,17 @@
 # Open Loops - Fils ouverts à suivre
 
-**Dernière mise à jour** : 2026-05-07 19:50 UTC
+**Dernière mise à jour** : 2026-05-08 19:50 UTC
 
 ## Boucles Actives
 
 ### 🔴 Priorité Haute (Critique Système)
-1. **API Perplexity — RETOUR INSTABILITÉ SPORADIQUE** - Stabilisation durable remise en question : mode dégradé 19h ce soir après 12+ jours de fonctionnement normal
-   - **ÉVOLUTION** : API revenue normale le matin/midi, retour mode dégradé le soir (19h) → pattern erratique à surveiller
-   - **RÉSULTAT** : veille IA maintenue mais avec contraintes sporadiques
-   - **SURVEILLER** : confirmer si pattern hebdomadaire récurrent ou anomalie ponctuelle
+1. **API Perplexity — PATTERN ERRATIQUE CONFIRMÉ (2 JOURS CONSÉCUTIFS)** - Stabilisation durable cassée : panne soir 07/05 ET 08/05 après 12+ jours de fonctionnement normal
+   - **ÉVOLUTION** : API revenue normale le matin/midi, panne récurrente le soir (19h) → **pattern erratique confirmé**
+   - **RÉSULTAT** : veille IA 19h fichiers vides, mode dégradé total
+   - **SURVEILLER** : confirmer si pattern hebdomadaire récurrent ou anomalie ponctuelle isolée
+   - **ACTION** : vérifier `.credentials/perplexity-api-key.txt` ou config OpenClaw, implémenter fallback système veille IA soir
 
-2. **Token OpenAI-Codex expiré** - Expired ~117h+ → régénération URGENTE avant risque blocage total
+2. **Token OpenAI-Codex expiré** - Expired ~120h+ → régénération URGENTE avant risque blocage total
    - Impact : potentiel blocage dépendances OpenAI-Codex après expiration
    - Pattern : nécessité monitoring proactif tokens API avec alerte préventive à 48h
    - **ACTION** : régénération immédiate toujours prioritaire critique
@@ -48,8 +49,8 @@
     - Priorité : basse (nouveau développement vs urgence système)
 
 ## Actions Concrètes Prochaines
-- **AUJOURD'HUI** : Régénérer token OpenAI-Codex (91h+ expiré), implémenter timeout/retry scraping robustes, surveiller API Perplexity pour confirmer stabilité durable
-- **Cette semaine** : Implémenter monitoring proactif tokens avec alertes préventives, appliquer pattern robustesse aux nouvelles implémentations, configurer fallback système basé sur preuve empirique 12+ jours
+- **AUJOURD'HUI** : Régénérer token OpenAI-Codex (120h+ expiré), corriger API Perplexity (vérifier credentials/config), implémenter fallback veille IA soir
+- **Cette semaine** : Implémenter monitoring proactif tokens avec alertes préventives, appliquer pattern robustesse aux nouvelles implémentations, confirmer pattern Perplexity erratique ou stabilité durable
 - **Mois prochain** : Simplifier architecture systèmes basée sur pattern robustesse VALIDÉ (simple + résilience) + dashboard RCS compétences managériales
 
 ## Actions Todo
@@ -62,7 +63,8 @@
 - [x] [2026-04-23 06:03] Heartbeat auto-surveillance opérationnel ✅
 
 ## Auto-checkpoints
-- [ ] [AUTO 2026-05-08 midi] Checkpoint 3-min fait. Next: [2026-04-19 21:01] Test unchecked task for PARA automation
+- [x] [AUTO 2026-05-08 midi] Checkpoint 3-min fait. Next: [2026-04-19 21:01] Test unchecked task for PARA automation
+- [ ] [AUTO 2026-05-09 midi] Checkpoint 3-min à venir
 
 ## Pattern Robustesse VALIDÉ (2026-04-28)
 - **Principe** : systèmes simples résilients (heartbeat, Flash) + systèmes complexes avec retry/délai (Deep Dive)

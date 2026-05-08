@@ -1,7 +1,14 @@
 # SESSION-STATE.md — Active Working Memory
 
 ## Current Task
-Consolidation mémoire quotidienne + PARA terminée ✅ (2026-05-06 19:50 UTC)
+Consolidation mémoire quotidienne + PARA terminée ✅ (2026-05-08 19:50 UTC)
+
+## Today's Work Summary (2026-05-08)
+- **19:50 UTC** — **CONSOLIDATION MÉMOIRE + PARA** terminée ✅ (journée travail vendredi Euromaster, aucun échange substantiel)
+- **API PERPLEXITY — PATTERN ERRATIQUE CONFIRMÉ** : 2ème jour consécutif de panne soir (07/05 + 08/05) après 12+ jours de stabilisation → stable matin/midi, dégradé soir → veille IA 19h fichiers vides
+- **TOKEN OPENAI-CODEX** : toujours expiré (~120h+) → monitoring proactif critique
+- **ROUTINES AUTO OPÉRATIONNELLES** : veille IA 8h/12h générées, 19h en panne, bourse, heartbeat, AUTO PARA midi — tout nominal sauf veille 19h
+- **SYSTÈME STABLE** : heartbeat optimal (0 errors), auto-surveillance opérationnelle
 
 ## Today's Work Summary (2026-05-07)
 - **19:50 UTC** — **CONSOLIDATION MÉMOIRE + PARA** terminée ✅ (journée travail jeudi Euromaster, aucun échange substantiel, routines auto nominales)

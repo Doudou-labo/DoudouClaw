@@ -673,6 +673,21 @@ Quand je te demande de tester une clé API tu le fais
 - **SURVEILLER**: confirmer si pattern hebdomadaire récurrent (erreurs historiques souvent en milieu d'après-midi/soir)
 - **LEÇON**: stabilisation ≠ fiabilité absolue → monitoring continu obligatoire même après période stable
 
+## API Perplexity Pattern Erratique Confirmé (2026-05-08) - Importance: 0.9
+- **PATTERN ERRATIQUE CONFIRMÉ SUR 2 JOURS CONSÉCUTIFS**: API Perplexity en panne soir (19h) le 07/05 ET 08/05 après 12+ jours de stabilisation
+- **COMPORTEMENT IDENTIFIÉ**: stable matin/midi, panne récurrente soir (19h UTC) → pattern erratique structuré
+- **IMPACT**: veille IA 19h fichiers vides, mode dégradé total, aucun contenu scrapé
+- **ACTION REQUISE**: vérifier `.credentials/perplexity-api-key.txt` ou config OpenClaw, implémenter fallback système veille IA soir
+- **SURVEILLER**: confirmer si pattern hebdomadaire récurrent ou anomalie temporaire
+
+## Daily Facts 2026-05-08 - Importance: 0.6-0.8
+- **JOURNÉE TRAVAIL** (vendredi Euromaster) — aucun échange substantiel avec Alexandre
+- **API PERPLEXITY EN PANNE SOIR** : erreur auth 19h, veille IA fichiers vides (2ème jour consécutif)
+- **TOKEN OPENAI-CODEX** : toujours expiré (~120h+) → monitoring proactif critique
+- **SYSTÈME STABLE** : heartbeat optimal (0 errors), auto-surveillance opérationnelle
+- **AUTO PARA** : checkpoint midi exécuté
+- **PATTERN ERRATIQUE CONFIRMÉ** : API Perplexity stable matin/midi, panne soir → fallback système nécessaire
+
 ## Daily Facts 2026-05-06 - Importance: 0.6-0.8
 - **VEILLE IA COMPLÈTE**: Flash 8h (régulation AI Act Europe, scoring social interdit, biométrie temps réel) + Flash 12h (Apple condamnée 250M$ IA trompeuse, fraîcheur 72h) + Flash 19h (régulation, Perplexity mode dégradé) — deep dives régulation générés 8h/19h
 - **API PERPLEXITY**: retour instabilité sporadique soir après 12+ jours de stabilisation → pattern erratique à surveiller
