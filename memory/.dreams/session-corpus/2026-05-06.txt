@@ -193,3 +193,34 @@
 [main/sessions/fef7715b-5d7d-4ac6-99fa-d65eec9d4eac.jsonl#L12] User: [cron:a156a993-1c6a-4675-8856-c80310cc69da Evolution Dashboard - Mise à jour 19h] Lance la mise à jour du dashboard d'évolution : bash scripts/update-evolution-dashboard.sh Puis résume en 2-3 lignes : nombre total de learnings, pending, et si des changements notables depuis
 [main/sessions/2c993de2-0c22-4394-8cb8-26686db61045.jsonl#L88] User: System (untrusted): [2026-05-06 19:52:12 UTC] Exec completed (glow-lob, code 0) :: y-flash/2026-05-06/19h-flash.md /root/.openclaw/workspace/notes/areas/veille-ia/daily-flash/2026-05-06/12h-flash.md /root/.openclaw/workspace/notes/areas/veille-ia/deep-dives/2026… An async c
 [main/sessions/2c993de2-0c22-4394-8cb8-26686db61045.jsonl#L89] Assistant: Rien à faire — c'était le résultat de la commande `find` déjà utilisée pour la consolidation. Terminé.
+[main/sessions/main/0900ae78-2adb-4c0e-9b8e-7cd072c97efa.jsonl#L57] Assistant: actions: 3 462.09 🧠 Commentaire d'analyse - Biais court terme: **haussier** (indices verts: 4/4, moyenne indices +1.51%) - Leadership: **Siemens** mène (+4.39%) ; **Sanofi** pèse (-4.69%) - Plan ouverture: surveiller la tenue de la direction dans la 1re heure avan
+[main/sessions/main/0900ae78-2adb-4c0e-9b8e-7cd072c97efa.jsonl#L58] Assistant: actions: 3 620.82 🧠 Commentaire d’analyse - Biais court terme: **haussier** (indices verts: 4/4, moyenne indices +2.38%) - Leadership: **Airbus** mène (+5.79%) ; **TotalEnergies** pèse (-5.44%) - Plan mi-séance: confirmer la tendance avec volumes ; sans confirmati
+[main/sessions/main/0900ae78-2adb-4c0e-9b8e-7cd072c97efa.jsonl#L59] Assistant: actions: 3 594.18 🧠 Commentaire d’analyse - Biais court terme: **haussier** (indices verts: 4/4, moyenne indices +2.11%) - Leadership: **Airbus** mène (+6.44%) ; **TotalEnergies** pèse (-3.35%) - Plan clôture: noter les leaders/faiblesse du jour pour préparer le b
+[main/sessions/main/0900ae78-2adb-4c0e-9b8e-7cd072c97efa.jsonl#L60] Assistant: - Biais court terme: **haussier** (indices verts: 3/3, moyenne indices +0.46%) - Leadership: **Tesla** mène (+2.84%) ; **Broadcom** pèse (-2.90%) - Volatilité: VIX 17.22 (-0.92%) - Plan mi-séance: confirmer la tendance avec volumes ; sans confirmation, privilégier 
+[main/sessions/main/0900ae78-2adb-4c0e-9b8e-7cd072c97efa.jsonl#L61] Assistant: - Biais court terme: **haussier** (indices verts: 3/3, moyenne indices +0.82%) - Leadership: **Tesla** mène (+3.61%) ; **Broadcom** pèse (-2.84%) - Volatilité: VIX 17.25 (-0.75%) - Plan clôture: noter les leaders/faiblesse du jour pour préparer le biais de demain. 
+[main/sessions/main/27069d8d-a8fd-42bd-bcb3-64e84739edd6.jsonl#L4370] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/27069d8d-a8fd-42bd-bcb3-64e84739edd6.jsonl#L4371] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/27069d8d-a8fd-42bd-bcb3-64e84739edd6.jsonl#L4372] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/27069d8d-a8fd-42bd-bcb3-64e84739edd6.jsonl#L4373] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/27069d8d-a8fd-42bd-bcb3-64e84739edd6.jsonl#L4377] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/27069d8d-a8fd-42bd-bcb3-64e84739edd6.jsonl#L4378] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/27069d8d-a8fd-42bd-bcb3-64e84739edd6.jsonl#L4379] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/27069d8d-a8fd-42bd-bcb3-64e84739edd6.jsonl#L4380] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/27069d8d-a8fd-42bd-bcb3-64e84739edd6.jsonl#L4384] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/27069d8d-a8fd-42bd-bcb3-64e84739edd6.jsonl#L4385] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/27069d8d-a8fd-42bd-bcb3-64e84739edd6.jsonl#L4397] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/27069d8d-a8fd-42bd-bcb3-64e84739edd6.jsonl#L4398] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/9d99911a-6800-4c37-82c2-146c9fe74c16.jsonl#L9] Assistant: sur GitHub ✅
+[main/sessions/main/d936b55f-2ff0-4128-b9f8-7fd7d133f865.jsonl.reset.2026-05-07T17-38-53.055Z#L11] Assistant: respecté pour les installs gérées par le doctor/onboarding. • **WhatsApp** — normalisation des numéros de téléphone (E.164, JID, whatsapp:) en ID chiffres purs. • **Gateway startup** — les plugins de génération (image, vidéo, musique)
+[main/sessions/main/27069d8d-a8fd-42bd-bcb3-64e84739edd6.jsonl#L4399] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/27069d8d-a8fd-42bd-bcb3-64e84739edd6.jsonl#L4400] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/27069d8d-a8fd-42bd-bcb3-64e84739edd6.jsonl#L4404] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/27069d8d-a8fd-42bd-bcb3-64e84739edd6.jsonl#L4405] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/27069d8d-a8fd-42bd-bcb3-64e84739edd6.jsonl#L4406] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/27069d8d-a8fd-42bd-bcb3-64e84739edd6.jsonl#L4407] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/27069d8d-a8fd-42bd-bcb3-64e84739edd6.jsonl#L4411] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/27069d8d-a8fd-42bd-bcb3-64e84739edd6.jsonl#L4423] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/27069d8d-a8fd-42bd-bcb3-64e84739edd6.jsonl#L4424] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/27069d8d-a8fd-42bd-bcb3-64e84739edd6.jsonl#L4425] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/27069d8d-a8fd-42bd-bcb3-64e84739edd6.jsonl#L4426] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/27069d8d-a8fd-42bd-bcb3-64e84739edd6.jsonl#L4430] Assistant: [assistant turn failed before producing content]
