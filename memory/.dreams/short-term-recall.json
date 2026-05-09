@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-05-09T03:00:00.773Z",
+  "updatedAt": "2026-05-09T10:10:44.831Z",
   "entries": {
     "memory:memory/2026-04-06.md:1:21": {
       "key": "memory:memory/2026-04-06.md:1:21",
@@ -220813,6 +220813,37 @@
         "crashing",
         "anything",
         "fragile"
+      ]
+    },
+    "memory:memory/.fsxmemory/backup-20260309-215711/2026-03-05.md:1:17": {
+      "key": "memory:memory/.fsxmemory/backup-20260309-215711/2026-03-05.md:1:17",
+      "path": "memory/.fsxmemory/backup-20260309-215711/2026-03-05.md",
+      "startLine": 1,
+      "endLine": 17,
+      "source": "memory",
+      "snippet": "# 2026-03-05 ## Journal - Doudou a demandé de retenir le contexte “visite appartement Arras” dans un Project PARA. - Source conversation confirmée: salon Discord `1478644352233373789`. - Création de la note projet: `notes/projects/appartement-arras-visite-et-due-diligence.md`. - Contenu consolidé: objectif achat (2 apparts), checklist visite, documents à exiger, docs reçus, risques et prochaines actions. - Analyse des premiers PDF reçus (Carrez, amiante, DPE, électricité, factures EDF 2024/2025) pour l’appartement 4 rue Léon Gambetta Arras (lot 4, 3e étage, 38,01 m²). - Pré-conclusion partagée à Doudou: technique globalement saine (amiante: RAS, électricité: pas d’anomalie avérée), conso ED",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.38103953301906585,
+      "maxScore": 0.38103953301906585,
+      "firstRecalledAt": "2026-05-09T10:10:44.831Z",
+      "lastRecalledAt": "2026-05-09T10:10:44.831Z",
+      "queryHashes": [
+        "a903b7a240b6"
+      ],
+      "recallDays": [
+        "2026-05-09"
+      ],
+      "conceptTags": [
+        "2024/2025",
+        "pré-conclusion",
+        "journal",
+        "doudou",
+        "demandé",
+        "retenir",
+        "contexte",
+        "visite"
       ]
     }
   }
