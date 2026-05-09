@@ -680,6 +680,14 @@ Quand je te demande de tester une clé API tu le fais
 - **ACTION REQUISE**: vérifier `.credentials/perplexity-api-key.txt` ou config OpenClaw, implémenter fallback système veille IA soir
 - **SURVEILLER**: confirmer si pattern hebdomadaire récurrent ou anomalie temporaire
 
+## Daily Facts 2026-05-09 - Importance: 0.6-0.8
+- **JOURNÉE CALME** (samedi Euromaster 08h-13h) — aucun échange substantiel avec Alexandre
+- **AUTO PARA** : checkpoint midi exécuté ✅
+- **SYSTÈME STABLE** : heartbeat optimal (0 errors), auto-surveillance opérationnelle, auto-systèmes complets opérationnels
+- **TOKEN OPENAI-CODEX** : toujours expiré (~123h+) → monitoring proactif critique
+- **API PERPLEXITY** : pas de veille IA aujourd'hui (routine lundi-vendredi), pattern erratique soir 07-08/05 à surveiller
+- **AUCUN FAIT NOUVEAU STRUCTURANT** : journée sans interaction agent
+
 ## Daily Facts 2026-05-08 - Importance: 0.6-0.8
 - **JOURNÉE TRAVAIL** (vendredi Euromaster) — aucun échange substantiel avec Alexandre
 - **API PERPLEXITY EN PANNE SOIR** : erreur auth 19h, veille IA fichiers vides (2ème jour consécutif)
@@ -696,4 +704,4 @@ Quand je te demande de tester une clé API tu le fais
 - **AUTO PARA**: checkpoint midi exécuté
 - **JOURNÉE TRAVAIL EUROMASTER**: aucun échange substantiel avec Alexandre (mercredi)
 
-*Dernière mise à jour: 2026-05-06*
+*Dernière mise à jour: 2026-05-09*
