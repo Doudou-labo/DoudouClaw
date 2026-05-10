@@ -11,7 +11,7 @@
    - **SURVEILLER** : confirmer si pattern hebdomadaire récurrent ou anomalie ponctuelle isolée
    - **ACTION** : vérifier `.credentials/perplexity-api-key.txt` ou config OpenClaw, implémenter fallback système veille IA soir
 
-2. **Token OpenAI-Codex expiré** - Expired ~120h+ → régénération URGENTE avant risque blocage total
+2. **Token OpenAI-Codex expiré** - Expired ~125h+ → régénération URGENTE avant risque blocage total
    - Impact : potentiel blocage dépendances OpenAI-Codex après expiration
    - Pattern : nécessité monitoring proactif tokens API avec alerte préventive à 48h
    - **ACTION** : régénération immédiate toujours prioritaire critique
@@ -49,7 +49,7 @@
     - Priorité : basse (nouveau développement vs urgence système)
 
 ## Actions Concrètes Prochaines
-- **AUJOURD'HUI** : Régénérer token OpenAI-Codex (120h+ expiré), corriger API Perplexity (vérifier credentials/config), implémenter fallback veille IA soir
+- **AUJOURD'HUI** : Régénérer token OpenAI-Codex (125h+ expiré), corriger API Perplexity (vérifier credentials/config), implémenter fallback veille IA soir
 - **Cette semaine** : Implémenter monitoring proactif tokens avec alertes préventives, appliquer pattern robustesse aux nouvelles implémentations, confirmer pattern Perplexity erratique ou stabilité durable
 - **Mois prochain** : Simplifier architecture systèmes basée sur pattern robustesse VALIDÉ (simple + résilience) + dashboard RCS compétences managériales
 
@@ -63,7 +63,9 @@
 - [x] [2026-04-23 06:03] Heartbeat auto-surveillance opérationnel ✅
 
 ## Auto-checkpoints
-- [ ] [AUTO 2026-05-10 midi] Checkpoint 3-min fait. Next: [2026-04-19 21:01] Test unchecked task for PARA automation
+- [x] [AUTO 2026-05-10 midi] Checkpoint 3-min fait. Next: [2026-04-19 21:01] Test unchecked task for PARA automation
+- [x] [AUTO 2026-05-10 16:06] Weekly Review PARA effectuée
+- [x] [AUTO 2026-05-10 16:21] Self-Improving Weekly Review effectuée
 
 ## Pattern Robustesse VALIDÉ (2026-04-28)
 - **Principe** : systèmes simples résilients (heartbeat, Flash) + systèmes complexes avec retry/délai (Deep Dive)

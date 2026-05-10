@@ -1,7 +1,15 @@
 # SESSION-STATE.md — Active Working Memory
 
 ## Current Task
-Consolidation mémoire quotidienne + PARA terminée ✅ (2026-05-09 19:50 UTC)
+Consolidation mémoire quotidienne + PARA terminée ✅ (2026-05-10 19:50 UTC)
+
+## Today's Work Summary (2026-05-10)
+- **19:50 UTC** — **CONSOLIDATION MÉMOIRE + PARA** terminée ✅ (journée calme dimanche, aucun échange substantiel)
+- **AUTO PARA WEEKLY REVIEW** : exécutée à 16:06 UTC (Projects=13, Areas=25, Resources=18, Archive=9, Open loops=2) ✅
+- **AUTO SELF-IMPROVING WEEKLY REVIEW** : exécutée à 16:21 UTC (patterns erreurs détectés, traces mises à jour) ✅
+- **SYSTÈME STABLE** : heartbeat optimal (0 errors), auto-surveillance opérationnelle
+- **TOKEN OPENAI-CODEX** : toujours expiré (~125h+) → monitoring proactif critique
+- **ROUTINES AUTO** : aucune veille IA le dimanche (routine lundi-vendredi), système nominal
 
 ## Today's Work Summary (2026-05-09)
 - **19:50 UTC** — **CONSOLIDATION MÉMOIRE + PARA** terminée ✅ (journée calme samedi Euromaster, aucun échange substantiel)
@@ -115,7 +123,7 @@ Consolidation mémoire quotidienne + PARA terminée ✅ (2026-05-09 19:50 UTC)
 
 ## Prochains chantiers
 1. **🔴 API Perplexity erreur d'auth récurrente** - 12+ jours consécutifs → deep dive veille IA généré avec succès malgré latence (pattern robustesse validé)
-2. **🔴 Token OpenAI-Codex expiré** - 91h sans régénération → surveillance proactive nécessaire (priorité critique)
+2. **🔴 Token OpenAI-Codex expiré** - 125h sans régénération → surveillance proactive nécessaire (priorité critique)
 3. **🔴 Scraping SIGKILL persistant** - session OOM pendant veille IA 19h → deep dive bloqué (nécessité timeout/retry robustes)
 4. **🟡 Pattern robustesse systèmes CONFIRMÉ** - systèmes simples > systèmes complexes confirmé → simplification architecture prioritaire
 5. **Correction dashboard pilotage** : corriger année `2025→2026`, sélecteur mois `AGENCE`, retirer `Objectif N` de l'historique → issue #23
@@ -131,8 +139,8 @@ Consolidation mémoire quotidienne + PARA terminée ✅ (2026-05-09 19:50 UTC)
 - ✅ Heartbeat auto-heal/auto-commit/auto-learn/auto-alert/auto-cleanup opérationnel
 - ✅ **Crons veille IA rétablis**: Flash OK (8h/12h/19h), Synthèse Mensuelle OK (fixé), Deep Dive bloqué (scraping SIGKILL)
 - ✅ **Modèles système migrés** : 38 crons + heartbeat en `zai/glm-5-turbo` → LiveSessionModelSwitchError résolu
-- ⚠️ API Perplexity en erreur d'auth récurrente 9+ jours → à surveiller et corriger
-- ⚠️ Token OpenAI-Codex expiré depuis 85h → régénération nécessaire
+- ⚠️ API Perplexity en erreur d'auth récurrente 12+ jours → à surveiller et corriger
+- ⚠️ Token OpenAI-Codex expiré depuis 125h → régénération nécessaire
 - ⚠️ Scraping SIGKILL persistant → session OOM pendant veille IA 19h → investiguer
 - ⚠️ Pattern robustesse identifié : systèmes simples (heartbeat) > systèmes complexes (scraping multi-URLs)
 
@@ -141,7 +149,7 @@ Consolidation mémoire quotidienne + PARA terminée ✅ (2026-05-09 19:50 UTC)
 - Disque stable à ~51%
 - Crons Proactive Observations actifs (07:00/12:00/17:00/21:00 Paris)
 - **⚠️ API Perplexity en erreur d'auth récurrente** (12+ jours) → deep dive veille IA bloqué → nécessité fallback système
-- **⚠️ Token OpenAI-Codex expiré** → régénération nécessaire (93h+)
+- **⚠️ Token OpenAI-Codex expiré** → régénération nécessaire (125h+)
 - **⚠️ Scraping SIGKILL persistant** → session OOM pendant veille IA 19h → investiguer timeout/retry
 - Mode tech activé (IA → web_search + Perplexity intensif)
 - Autonomie d'exécution renforcée (ne pas demander validation sauf externe/sensible)
@@ -149,4 +157,4 @@ Consolidation mémoire quotidienne + PARA terminée ✅ (2026-05-09 19:50 UTC)
 - **Heure Paris** : 21:50 → soirée
 
 ## Last Updated
-2026-05-09 19:50 UTC — consolidation mémoire quotidienne terminée, système stable
+2026-05-10 19:50 UTC — consolidation mémoire quotidienne terminée, système stable
