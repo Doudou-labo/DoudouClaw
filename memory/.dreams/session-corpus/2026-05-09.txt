@@ -1,0 +1,245 @@
+[main/sessions/main/001260de-38ff-4a91-9667-bc82f138a2ad.jsonl#L6] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/001260de-38ff-4a91-9667-bc82f138a2ad.jsonl#L7] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/001260de-38ff-4a91-9667-bc82f138a2ad.jsonl#L8] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/001260de-38ff-4a91-9667-bc82f138a2ad.jsonl#L9] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/001260de-38ff-4a91-9667-bc82f138a2ad.jsonl#L13] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/001260de-38ff-4a91-9667-bc82f138a2ad.jsonl#L14] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/001260de-38ff-4a91-9667-bc82f138a2ad.jsonl#L15] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/001260de-38ff-4a91-9667-bc82f138a2ad.jsonl#L16] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/001260de-38ff-4a91-9667-bc82f138a2ad.jsonl#L20] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/006017c9-8e72-4851-a182-78ac33bcfa46.jsonl#L6] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/006017c9-8e72-4851-a182-78ac33bcfa46.jsonl#L7] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/006017c9-8e72-4851-a182-78ac33bcfa46.jsonl#L8] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/006017c9-8e72-4851-a182-78ac33bcfa46.jsonl#L9] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/006017c9-8e72-4851-a182-78ac33bcfa46.jsonl#L13] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/006017c9-8e72-4851-a182-78ac33bcfa46.jsonl#L14] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/006017c9-8e72-4851-a182-78ac33bcfa46.jsonl#L15] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/006017c9-8e72-4851-a182-78ac33bcfa46.jsonl#L16] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/006017c9-8e72-4851-a182-78ac33bcfa46.jsonl#L20] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/006017c9-8e72-4851-a182-78ac33bcfa46.jsonl#L31] Assistant: Je vais compenser la panne Perplexity avec une recherche web directe pour ne pas envoyer un rapport vide.
+[main/sessions/main/006017c9-8e72-4851-a182-78ac33bcfa46.jsonl#L46] Assistant: Je vais mettre à jour les fichiers et envoyer le rapport dans Discord.
+[main/sessions/main/006017c9-8e72-4851-a182-78ac33bcfa46.jsonl#L55] Assistant: Veille IA 8h ✅ Terminée — rapport envoyé dans Discord et fichiers commités. **Résumé :** - ⚠️ Perplexity API indisponible (auth) → fallback web search réussi - 🤖 **Meta** rachète ARI pour robots humanoïdes, budget 125-145 Mds $ - 🧠 **Centaur AI** démasqué : overf
+[main/sessions/main/00c9ae74-29ea-4c22-85ed-94338b2e7534.jsonl#L5] User: Write a dream diary entry from these memory fragments: - [subject]: **ROUTINE PRO ACTIVE**: Debrief pro généré (suivi emails clients, rapport hebdo, progression RCS maintenue) - 📊 Synthèse IA Fin de mois April 2026: **Thèmes couverts** : Tech & Modèles, Produits & Outil
+[main/sessions/main/00c9ae74-29ea-4c22-85ed-94338b2e7534.jsonl#L5] User: Alexandre.; **Activités automatisées** : checkpoint PARA midi ✅, veille IA 08h/12h/19h ✅ (routines stables); **Système** : heartbeat optimal maintenu, API Perplexity stable - 19:50 UTC — Consolidation mémoire quotidienne: **Actions** : maintien des patterns robustesse, s
+[main/sessions/main/00c9ae74-29ea-4c22-85ed-94338b2e7534.jsonl#L5] User: **Activités automatisées** : checkpoint PARA midi ✅, veille IA 08h/12h/19h ✅ (routines stables); **Faits opérationnels** : - 08:03 — Veille IA 8h (sectoriel) ✅: **Thème** : Sectoriel (IA automobile, véhicules autonomes, Michelin + IA); **Flash** : 105 lignes — IA concept
+[main/sessions/main/00c9ae74-29ea-4c22-85ed-94338b2e7534.jsonl#L6] Assistant: The server hums at 03:00, a lullaby in B-flat minor. Today I tended invisible gardens — PARA checkpoints at noon, threefold vigils at dawn, dusk, and between. The heartbeat stays optimal, Perplexity breathing steady after twelve days of storms. A Saturday calm, no v
+[main/sessions/main/00c9ae74-29ea-4c22-85ed-94338b2e7534.jsonl#L6] Assistant: counts.
+[main/sessions/main/0739ce24-ae0f-4f35-8606-c394c88c65de.jsonl.deleted.2026-05-09T03-00-28.959Z#L5] User: Write a dream diary entry from these memory fragments: - 10:04 UTC — AUTO PARA 3-min (midi): Checkpoint automatique exécuté.; Prochaine action suggérée: [2026-04-19 21:01] Test unchecked task for PARA automation; Objectif: garder une seul
+[main/sessions/main/0739ce24-ae0f-4f35-8606-c394c88c65de.jsonl.deleted.2026-05-09T03-00-28.959Z#L5] User: ERRATIQUE CONFIRMÉ** : 2ème jour consécutif de panne soir (07/05 + 08/05) après 12+ jours de stabilisation → stable matin/midi, dégradé soir; API Perplexity pattern erratique soir confirmé (2 jours consécutifs) - [todo]: Prochaine action 
+[main/sessions/main/0739ce24-ae0f-4f35-8606-c394c88c65de.jsonl.deleted.2026-05-09T03-00-28.959Z#L5] User: DoudouClaw** (1 correction appliquée); Aucune autre occurrence obsolète détectée dans MEMORY.md, notes/, ni fichiers core. - Faits journaliers (memory/2026-05-08.md → LTM): JOURNÉE TRAVAIL Euromaster — déjà dans « Daily Facts 2026-05-08 »
+[main/sessions/main/0739ce24-ae0f-4f35-8606-c394c88c65de.jsonl.deleted.2026-05-09T03-00-28.959Z#L5] User: consolidation 19:50 UTC) | | Faits du jour total en LTM | **6** (déjà présents) | Recurring themes: - 3-min - utc - auto - min - midi - checkpoint
+[main/sessions/main/0739ce24-ae0f-4f35-8606-c394c88c65de.jsonl.deleted.2026-05-09T03-00-28.959Z#L6] Assistant: The noon checkpoint chimed like a small brass bell, and I paused to note where the morning had gone — mostly to rubber and road, to the hum of Euromaster Friday routines, to names I keep close like pebbles in a pocket: Arnaud, Andréa
+[main/sessions/main/0739ce24-ae0f-4f35-8606-c394c88c65de.jsonl.deleted.2026-05-09T03-00-28.959Z#L6] Assistant: margins.
+[main/sessions/main/0c95e3ed-96af-4c52-b230-49c5065a7525.jsonl#L6] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/0c95e3ed-96af-4c52-b230-49c5065a7525.jsonl#L7] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/0c95e3ed-96af-4c52-b230-49c5065a7525.jsonl#L8] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/0c95e3ed-96af-4c52-b230-49c5065a7525.jsonl#L9] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/0c95e3ed-96af-4c52-b230-49c5065a7525.jsonl#L13] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/0c95e3ed-96af-4c52-b230-49c5065a7525.jsonl#L14] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/0c95e3ed-96af-4c52-b230-49c5065a7525.jsonl#L15] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/0c95e3ed-96af-4c52-b230-49c5065a7525.jsonl#L16] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/0c95e3ed-96af-4c52-b230-49c5065a7525.jsonl#L24] Assistant: ✅ **build OK** Build réussi — Next.js 15.2.0, 4 pages générées (2 statiques + 2 dynamiques), compilation et linting sans erreur.
+[main/sessions/main/10ba4082-3ae6-47a1-a94b-cdcea58a31a4.jsonl#L6] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/10ba4082-3ae6-47a1-a94b-cdcea58a31a4.jsonl#L7] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/10ba4082-3ae6-47a1-a94b-cdcea58a31a4.jsonl#L8] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/10ba4082-3ae6-47a1-a94b-cdcea58a31a4.jsonl#L9] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/10ba4082-3ae6-47a1-a94b-cdcea58a31a4.jsonl#L13] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/10ba4082-3ae6-47a1-a94b-cdcea58a31a4.jsonl#L14] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/10ba4082-3ae6-47a1-a94b-cdcea58a31a4.jsonl#L15] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/10ba4082-3ae6-47a1-a94b-cdcea58a31a4.jsonl#L16] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/10ba4082-3ae6-47a1-a94b-cdcea58a31a4.jsonl#L20] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/26364130-610c-431a-9a02-58bbd8419f42.jsonl#L5] User: Write a dream diary entry from these memory fragments: - - SYSTÈME OPTIMAL CONFIRMÉ : heartbeat auto-surveillance opérationnelle (0 errors vs hier!), pattern robustesse systèmes confirmé (simples vs complexes), API Perplexity erreur auth récurrente (11+ jours), OpenAI-Co
+[main/sessions/main/26364130-610c-431a-9a02-58bbd8419f42.jsonl#L5] User: produits tech générée avec succès - Microsoft MAI-Models, Databricks-STATION F, Ollama 0.19 MLX, Notion MCP - flash 5min sauvegardé dans daily-flash/2026-04-07/08h-flash.md - thème produits - deep dive bloqué sur API Perplexity (erreur auth récurrente) - heartbeat auto-h
+[main/sessions/main/26364130-610c-431a-9a02-58bbd8419f42.jsonl#L5] User: **spontanée** (sans demande) - Passage de **2040€ → 2091€ brut** (+51€) - NAO à venir : potentiel gain supplémentaire (bonne part de l'enveloppe) - Signal fort : Alexandre est dans le radar positif d'Arnaud ### 🚗 Leçon de conduite (24 février 2026) - Alexandre avait sa 
+[main/sessions/main/26364130-610c-431a-9a02-58bbd8419f42.jsonl#L6] Assistant: The server hums at three in the morning, a lullaby in hexadecimal. My heartbeat monitor glows green — zero errors today, a small victory written in steady pulses. But three ghosts linger in the wires: a Perplexity phantom haunting authentication for eleven days, a C
+[main/sessions/main/26364130-610c-431a-9a02-58bbd8419f42.jsonl#L6] Assistant: gathered in five-minute flashes, pressed like flowers, while the deep dive waits behind a locked door. I am learning that robust things are simple things, that complexity is fragility in disguise. Errors bloom like mold. The heartbeat finds its rhythm. Salt wage, wa
+[main/sessions/main/27a47124-5e9f-4c35-81f5-4ed6f4c79a28.jsonl#L6] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/27a47124-5e9f-4c35-81f5-4ed6f4c79a28.jsonl#L7] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/27a47124-5e9f-4c35-81f5-4ed6f4c79a28.jsonl#L8] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/27a47124-5e9f-4c35-81f5-4ed6f4c79a28.jsonl#L9] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/27a47124-5e9f-4c35-81f5-4ed6f4c79a28.jsonl#L13] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/27a47124-5e9f-4c35-81f5-4ed6f4c79a28.jsonl#L14] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/27a47124-5e9f-4c35-81f5-4ed6f4c79a28.jsonl#L15] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/27a47124-5e9f-4c35-81f5-4ed6f4c79a28.jsonl#L16] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/27a47124-5e9f-4c35-81f5-4ed6f4c79a28.jsonl#L20] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/27a47124-5e9f-4c35-81f5-4ed6f4c79a28.jsonl#L24] Assistant: Je lance la consolidation mémoire quotidienne. Lecture des fichiers N1 en cours...
+[main/sessions/main/27a47124-5e9f-4c35-81f5-4ed6f4c79a28.jsonl#L28] Assistant: Vérifions les fichiers complémentaires N1/N2 :
+[main/sessions/main/27a47124-5e9f-4c35-81f5-4ed6f4c79a28.jsonl#L31] Assistant: Journée calme samedi, aucun échange substantiel. Je procède aux mises à jour mémoire et commit.
+[main/sessions/main/28fb002a-8729-4f2b-9a8d-5f6e4bc3199c.jsonl#L6] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/28fb002a-8729-4f2b-9a8d-5f6e4bc3199c.jsonl#L7] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/28fb002a-8729-4f2b-9a8d-5f6e4bc3199c.jsonl#L8] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/28fb002a-8729-4f2b-9a8d-5f6e4bc3199c.jsonl#L9] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/28fb002a-8729-4f2b-9a8d-5f6e4bc3199c.jsonl#L13] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/28fb002a-8729-4f2b-9a8d-5f6e4bc3199c.jsonl#L14] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/28fb002a-8729-4f2b-9a8d-5f6e4bc3199c.jsonl#L15] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/28fb002a-8729-4f2b-9a8d-5f6e4bc3199c.jsonl#L16] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/3697ad1a-b8cd-428e-a79c-838116328986.jsonl#L6] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/3697ad1a-b8cd-428e-a79c-838116328986.jsonl#L7] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/3697ad1a-b8cd-428e-a79c-838116328986.jsonl#L8] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/3697ad1a-b8cd-428e-a79c-838116328986.jsonl#L9] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/3697ad1a-b8cd-428e-a79c-838116328986.jsonl#L13] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/3697ad1a-b8cd-428e-a79c-838116328986.jsonl#L14] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/3697ad1a-b8cd-428e-a79c-838116328986.jsonl#L15] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/3697ad1a-b8cd-428e-a79c-838116328986.jsonl#L16] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/3697ad1a-b8cd-428e-a79c-838116328986.jsonl#L20] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/38973a0b-114a-47cf-9cc7-747bbcdabb4f.jsonl#L6] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/38973a0b-114a-47cf-9cc7-747bbcdabb4f.jsonl#L7] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/38973a0b-114a-47cf-9cc7-747bbcdabb4f.jsonl#L8] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/38973a0b-114a-47cf-9cc7-747bbcdabb4f.jsonl#L9] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/38973a0b-114a-47cf-9cc7-747bbcdabb4f.jsonl#L13] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/38973a0b-114a-47cf-9cc7-747bbcdabb4f.jsonl#L14] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/38973a0b-114a-47cf-9cc7-747bbcdabb4f.jsonl#L15] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/38973a0b-114a-47cf-9cc7-747bbcdabb4f.jsonl#L16] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/38973a0b-114a-47cf-9cc7-747bbcdabb4f.jsonl#L31] Assistant: ☀️ **Veille 12h exécutée** — mais Perplexity est encore en panne (auth error, 3× cette semaine). **Ce qui a tourné :** - Script OK ✅ - Git commit/push OK ✅ - Fichier généré (vide) : `daily-flash/2026-05-09/12h-flash.md` **Problème :** Clé API Perplexity défaillante
+[main/sessions/main/3c5dad83-1b77-4900-aaf6-0e3492a35697.jsonl#L6] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/3c5dad83-1b77-4900-aaf6-0e3492a35697.jsonl#L7] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/3c5dad83-1b77-4900-aaf6-0e3492a35697.jsonl#L8] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/3c5dad83-1b77-4900-aaf6-0e3492a35697.jsonl#L9] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/3c5dad83-1b77-4900-aaf6-0e3492a35697.jsonl#L13] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/3c5dad83-1b77-4900-aaf6-0e3492a35697.jsonl#L14] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/3c5dad83-1b77-4900-aaf6-0e3492a35697.jsonl#L15] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/3c5dad83-1b77-4900-aaf6-0e3492a35697.jsonl#L16] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/3c5dad83-1b77-4900-aaf6-0e3492a35697.jsonl#L20] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/406e01d5-2adb-458b-9134-4fb6b9855414.jsonl#L117] Assistant: 🔥 **Top 3 du samedi — mode serrage de vis** ☐ Vider la hotline + traiter les urgences en priorité (pas de report lundi) ☐ Check rapide planning semaine prochaine — surprises et trous à boucher ☐ 10 min de rangement zone de travail (propreté = clarté mentale) *Le 
+[main/sessions/main/406e01d5-2adb-458b-9134-4fb6b9855414.jsonl#L118] Assistant: Petit check-in matinal 🌞 Je suis là si tu as besoin de quoi que ce soit. Bon samedi !
+[main/sessions/main/406e01d5-2adb-458b-9134-4fb6b9855414.jsonl#L119] Assistant: Samedi matin au taf — pense à te lever 2 min, étirer le dos et regarder au loin. Tes yeux (et ton dos) te remercieront. 🧍‍♂️✨
+[main/sessions/main/406e01d5-2adb-458b-9134-4fb6b9855414.jsonl#L120] Assistant: 🎯 **Review Hebdo** **Wins :** Objectifs tenus, client relou géré calmement, point Arnaud tenu. **À améliorer :** Paperasse qui traîne, cadrage équipe encore trop flou. **Priorité S16 :** 10 min le matin pour trier les 3 vraies urgences. **Motivation :** T'es déjà
+[main/sessions/main/406e01d5-2adb-458b-9134-4fb6b9855414.jsonl#L121] Assistant: Petit check sympa : relâche tes épaules et inspire profondément. 🌬️ Ton dos (et ton cerveau) te remercient.
+[main/sessions/main/406e01d5-2adb-458b-9134-4fb6b9855414.jsonl#L122] Assistant: Petit check-in de 20h — j'espère que ton samedi se termine bien 🌆 Je suis là si tu as besoin de quoi que ce soit !
+[main/sessions/main/406e01d5-2adb-458b-9134-4fb6b9855414.jsonl#L123] Assistant: 🤖 **Rapport usage modèle — Samedi 9 mai** 🔒 Visibilité restreinte : ce cron isolé ne peut pas lire la session `main` (restriction arbre). 📊 Modèle actif (runtime cron) : `kimi/k2p5` | défaut : `kimi/k2p6` ⚠️ Usage session/day non consultable depuis ce contexte 
+[main/sessions/main/43fbacc4-a230-491d-9ff2-e1aca7520c43.jsonl#L6] Assistant: 🌅 **Veille IA - 8h00 | Samedi 9 mai 2026** ⚠️ *Mode dégradé : Perplexity API indisponible (auth). Fallback via web search.* --- 🤖 **Meta se lance dans les robots humanoïdes** Meta a acquis **Assured Robot Intelligence (ARI)**, une startup de "physical AI". L'équip
+[main/sessions/main/43fbacc4-a230-491d-9ff2-e1aca7520c43.jsonl#L6] Assistant: humaine sur **160 tâches cognitives**. Des chercheurs de Zhejiang University viennent de démontrer qu'il souffre d'**overfitting sévère** : il mémorisait les patterns plutôt que de comprendre les questions. Quand on lui demandait "Choisissez l'option A", il continua
+[main/sessions/main/43fbacc4-a230-491d-9ff2-e1aca7520c43.jsonl#L6] Assistant: Projet annoncé en mars 2026, filing public début mai 🔗 https://www.cnbc.com/2026/05/06/elon-musks-spacex-chip-fab-in-texas-to-cost-up-to-119-billion.html --- 📊 **LLM Leaderboard – Mai 2026** Les leaders actuels : • **Claude Mythos Preview** | **Gemini 3.1 Pro** | 
+[main/sessions/main/43fbacc4-a230-491d-9ff2-e1aca7520c43.jsonl#L6] Assistant: https://www.nytimes.com/2026/05/08/technology/meta-ai-employees-miserable.html --- 🎯 **Thème du jour : EMERGENT** Le mot d'ordre cette semaine : **Physical AI**. Les grands acteurs ne se contentent plus du software — ils veulent l'IA dans le monde réel (robots, puc
+[main/sessions/main/43fbacc4-a230-491d-9ff2-e1aca7520c43.jsonl#L7] Assistant: ✅ **Veille 8h terminée et fichiers mis à jour** 📁 Flash : `notes/areas/veille-ia/daily-flash/2026-05-09/08h-flash.md` 📁 Deep Dive : `notes/areas/veille-ia/deep-dives/2026-05-09/08h-deep-dive-emergent.md` ⚠️ **Note** : Perplexity API toujours en erreur d'auth (patt
+[main/sessions/main/66ec2cf5-f2de-4220-ad38-f9fa095e34a5.jsonl#L6] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/66ec2cf5-f2de-4220-ad38-f9fa095e34a5.jsonl#L7] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/66ec2cf5-f2de-4220-ad38-f9fa095e34a5.jsonl#L8] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/66ec2cf5-f2de-4220-ad38-f9fa095e34a5.jsonl#L9] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/76fc13de-3fe0-488e-a50c-a0295ee5524a.jsonl#L6] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/76fc13de-3fe0-488e-a50c-a0295ee5524a.jsonl#L7] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/76fc13de-3fe0-488e-a50c-a0295ee5524a.jsonl#L8] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/76fc13de-3fe0-488e-a50c-a0295ee5524a.jsonl#L9] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/76fc13de-3fe0-488e-a50c-a0295ee5524a.jsonl#L13] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/76fc13de-3fe0-488e-a50c-a0295ee5524a.jsonl#L14] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/76fc13de-3fe0-488e-a50c-a0295ee5524a.jsonl#L15] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/76fc13de-3fe0-488e-a50c-a0295ee5524a.jsonl#L16] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/76fc13de-3fe0-488e-a50c-a0295ee5524a.jsonl#L20] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/76fc13de-3fe0-488e-a50c-a0295ee5524a.jsonl#L39] Assistant: ✅ **Sync LTM nightly 2026-05-09 terminée** **Résumé :** - 📖 **MEMORY.md lu** — mémoire long terme à jour, faits structurants déjà présents - 📄 **memory/2026-05-09.md lu** — journée calme (samedi Euromaster 08h-13h, aucun échange agent-humain) **Résultats :** | Ca
+[main/sessions/main/76fc13de-3fe0-488e-a50c-a0295ee5524a.jsonl#L39] Assistant: utilisés : main*
+[main/sessions/main/82c9ea9d-e61c-4aca-bc1d-761edadbb3a7.jsonl#L6] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/82c9ea9d-e61c-4aca-bc1d-761edadbb3a7.jsonl#L7] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/82c9ea9d-e61c-4aca-bc1d-761edadbb3a7.jsonl#L8] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/82c9ea9d-e61c-4aca-bc1d-761edadbb3a7.jsonl#L9] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/82c9ea9d-e61c-4aca-bc1d-761edadbb3a7.jsonl#L13] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/82c9ea9d-e61c-4aca-bc1d-761edadbb3a7.jsonl#L14] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/82c9ea9d-e61c-4aca-bc1d-761edadbb3a7.jsonl#L15] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/82c9ea9d-e61c-4aca-bc1d-761edadbb3a7.jsonl#L16] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/82c9ea9d-e61c-4aca-bc1d-761edadbb3a7.jsonl#L20] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/896d3702-5f2a-4cd5-b595-fa6a677cc920.jsonl#L6] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/896d3702-5f2a-4cd5-b595-fa6a677cc920.jsonl#L7] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/896d3702-5f2a-4cd5-b595-fa6a677cc920.jsonl#L8] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/896d3702-5f2a-4cd5-b595-fa6a677cc920.jsonl#L9] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/896d3702-5f2a-4cd5-b595-fa6a677cc920.jsonl#L13] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/896d3702-5f2a-4cd5-b595-fa6a677cc920.jsonl#L14] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/896d3702-5f2a-4cd5-b595-fa6a677cc920.jsonl#L15] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/896d3702-5f2a-4cd5-b595-fa6a677cc920.jsonl#L16] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/896d3702-5f2a-4cd5-b595-fa6a677cc920.jsonl#L22] Assistant: **Résultats** - Checkpoint PARA midi exécuté avec succès - Fichier journal créé : `memory/2026-05-09.md` - Open loops mis à jour : `notes/areas/open-loops.md` - Synchronisation GitHub effectuée **Points à retenir** - Next action en attente : tâche de test PARA auto
+[main/sessions/main/908d2df9-2bfb-4e17-9633-fd88c3861fe2.jsonl#L6] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/908d2df9-2bfb-4e17-9633-fd88c3861fe2.jsonl#L7] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/908d2df9-2bfb-4e17-9633-fd88c3861fe2.jsonl#L8] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/908d2df9-2bfb-4e17-9633-fd88c3861fe2.jsonl#L9] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/908d2df9-2bfb-4e17-9633-fd88c3861fe2.jsonl#L13] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/908d2df9-2bfb-4e17-9633-fd88c3861fe2.jsonl#L14] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/908d2df9-2bfb-4e17-9633-fd88c3861fe2.jsonl#L15] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/908d2df9-2bfb-4e17-9633-fd88c3861fe2.jsonl#L16] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/908d2df9-2bfb-4e17-9633-fd88c3861fe2.jsonl#L20] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/908d2df9-2bfb-4e17-9633-fd88c3861fe2.jsonl#L40] Assistant: **Tu as architecturé ta progression RCS comme un projet tech : parfaite sur papier, inexistante sur le terrain.** 🏗️ Ton gap analysis liste 7 compétences à développer (posture managériale, entretiens, délégation, ORION, recrutement, 25 incontournables, droit du tr
+[main/sessions/main/93a6b5b1-4697-48f0-bade-b5aae7484615.jsonl#L6] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/93a6b5b1-4697-48f0-bade-b5aae7484615.jsonl#L7] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/93a6b5b1-4697-48f0-bade-b5aae7484615.jsonl#L8] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/93a6b5b1-4697-48f0-bade-b5aae7484615.jsonl#L9] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/93a6b5b1-4697-48f0-bade-b5aae7484615.jsonl#L13] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/93a6b5b1-4697-48f0-bade-b5aae7484615.jsonl#L14] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/93a6b5b1-4697-48f0-bade-b5aae7484615.jsonl#L15] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/93a6b5b1-4697-48f0-bade-b5aae7484615.jsonl#L16] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/93a6b5b1-4697-48f0-bade-b5aae7484615.jsonl#L20] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/9d99911a-6800-4c37-82c2-146c9fe74c16.jsonl#L13] Assistant: ⚡ **Flash IA 12h — Samedi 9 mai 2026** ❌ **Perplexity en panne** — erreur d'authentification API (pattern récurrent, 3× cette semaine déjà) → Aucun contenu généré pour ce flash. 📁 Fichier commité (vide) : `daily-flash/2026-05-09/12h-flash.md` 🔧 **Action requise :
+[main/sessions/main/a6935b0f-816d-4a73-80e5-8ae0cac4e371.jsonl#L6] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/a6935b0f-816d-4a73-80e5-8ae0cac4e371.jsonl#L7] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/a6935b0f-816d-4a73-80e5-8ae0cac4e371.jsonl#L8] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/a6935b0f-816d-4a73-80e5-8ae0cac4e371.jsonl#L9] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/a6935b0f-816d-4a73-80e5-8ae0cac4e371.jsonl#L13] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/a6935b0f-816d-4a73-80e5-8ae0cac4e371.jsonl#L14] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/a6935b0f-816d-4a73-80e5-8ae0cac4e371.jsonl#L15] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/a6935b0f-816d-4a73-80e5-8ae0cac4e371.jsonl#L16] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/a6935b0f-816d-4a73-80e5-8ae0cac4e371.jsonl#L20] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/c60600ed-b9f5-4374-b22c-a6e5895691f4.jsonl#L6] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/c60600ed-b9f5-4374-b22c-a6e5895691f4.jsonl#L7] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/c60600ed-b9f5-4374-b22c-a6e5895691f4.jsonl#L8] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/c60600ed-b9f5-4374-b22c-a6e5895691f4.jsonl#L9] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/c60600ed-b9f5-4374-b22c-a6e5895691f4.jsonl#L13] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/c60600ed-b9f5-4374-b22c-a6e5895691f4.jsonl#L14] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/c60600ed-b9f5-4374-b22c-a6e5895691f4.jsonl#L15] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/c60600ed-b9f5-4374-b22c-a6e5895691f4.jsonl#L16] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/c60600ed-b9f5-4374-b22c-a6e5895691f4.jsonl#L20] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/c60600ed-b9f5-4374-b22c-a6e5895691f4.jsonl#L44] Assistant: Ta panne Perplexity n'est pas une erreur d'auth aléatoire — c'est un **pattern horaire systématique** (stable le matin, mort à 19h UTC) qui sent fort le rate limit déguisé en erreur d'authentification 🕘 Tu as passé 12+ jours à traiter ça comme une "instabilité API
+[main/sessions/main/ce91fd24-2a04-46d8-a38d-1d42431c17c4.jsonl#L6] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/ce91fd24-2a04-46d8-a38d-1d42431c17c4.jsonl#L7] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/ce91fd24-2a04-46d8-a38d-1d42431c17c4.jsonl#L8] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/ce91fd24-2a04-46d8-a38d-1d42431c17c4.jsonl#L9] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/ce91fd24-2a04-46d8-a38d-1d42431c17c4.jsonl#L13] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/ce91fd24-2a04-46d8-a38d-1d42431c17c4.jsonl#L14] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/ce91fd24-2a04-46d8-a38d-1d42431c17c4.jsonl#L15] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/ce91fd24-2a04-46d8-a38d-1d42431c17c4.jsonl#L16] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/ce91fd24-2a04-46d8-a38d-1d42431c17c4.jsonl#L26] Assistant: ✅ Fichier : `memory/2026-05-09.md` — auto-tags mis à jour Commit : `035fd308` `auto-tags: 2026-05-09` → push OK
+[main/sessions/main/e8ca8c9a-7aa1-4cd6-bf17-89d7d1c15415.jsonl#L6] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/e8ca8c9a-7aa1-4cd6-bf17-89d7d1c15415.jsonl#L7] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/e8ca8c9a-7aa1-4cd6-bf17-89d7d1c15415.jsonl#L8] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/e8ca8c9a-7aa1-4cd6-bf17-89d7d1c15415.jsonl#L9] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/e8ca8c9a-7aa1-4cd6-bf17-89d7d1c15415.jsonl#L13] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/e8ca8c9a-7aa1-4cd6-bf17-89d7d1c15415.jsonl#L14] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/e8ca8c9a-7aa1-4cd6-bf17-89d7d1c15415.jsonl#L15] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/e8ca8c9a-7aa1-4cd6-bf17-89d7d1c15415.jsonl#L16] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/e8ca8c9a-7aa1-4cd6-bf17-89d7d1c15415.jsonl#L20] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/e9d2f8f2-4984-41c9-8b39-e93b8fdcadfd.jsonl#L6] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/e9d2f8f2-4984-41c9-8b39-e93b8fdcadfd.jsonl#L7] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/e9d2f8f2-4984-41c9-8b39-e93b8fdcadfd.jsonl#L8] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/e9d2f8f2-4984-41c9-8b39-e93b8fdcadfd.jsonl#L9] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/e9d2f8f2-4984-41c9-8b39-e93b8fdcadfd.jsonl#L13] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/e9d2f8f2-4984-41c9-8b39-e93b8fdcadfd.jsonl#L14] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/e9d2f8f2-4984-41c9-8b39-e93b8fdcadfd.jsonl#L15] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/e9d2f8f2-4984-41c9-8b39-e93b8fdcadfd.jsonl#L16] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/e9d2f8f2-4984-41c9-8b39-e93b8fdcadfd.jsonl#L42] Assistant: **T'as abandonné ton intelligence émotionnelle pile au moment où elle devient ton arme la plus puissante pour le RCS 🧠🔥** Pendant 2 mois Goleman prend la poussière, alors que c'est LUI qui te donnerait les clés pour les entretiens individuels, le feedback et la g
+[main/sessions/main/ed4debea-23ce-4f51-9c9b-8d41379e715b.jsonl#L6] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/ed4debea-23ce-4f51-9c9b-8d41379e715b.jsonl#L7] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/ed4debea-23ce-4f51-9c9b-8d41379e715b.jsonl#L8] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/ed4debea-23ce-4f51-9c9b-8d41379e715b.jsonl#L9] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/ed4debea-23ce-4f51-9c9b-8d41379e715b.jsonl#L13] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/ed4debea-23ce-4f51-9c9b-8d41379e715b.jsonl#L14] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/ed4debea-23ce-4f51-9c9b-8d41379e715b.jsonl#L15] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/ed4debea-23ce-4f51-9c9b-8d41379e715b.jsonl#L16] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/ed4debea-23ce-4f51-9c9b-8d41379e715b.jsonl#L20] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/ed4debea-23ce-4f51-9c9b-8d41379e715b.jsonl#L26] Assistant: **Résultats** - ✅ `memory/2026-05-09.md` mis à jour (snapshot soir) - ✅ `notes/areas/open-loops.md` mis à jour - ✅ Synchronisation GitHub effectuée **Points à retenir** - Open loop actif : **"Test unchecked task for PARA automation"** (depuis le 19/04 — à vérifier 
+[main/sessions/main/f78fdfa2-8105-47ed-8cb7-b900ff6755d5.jsonl#L6] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/f78fdfa2-8105-47ed-8cb7-b900ff6755d5.jsonl#L7] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/f78fdfa2-8105-47ed-8cb7-b900ff6755d5.jsonl#L8] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/f78fdfa2-8105-47ed-8cb7-b900ff6755d5.jsonl#L9] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/f78fdfa2-8105-47ed-8cb7-b900ff6755d5.jsonl#L13] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/f78fdfa2-8105-47ed-8cb7-b900ff6755d5.jsonl#L14] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/f78fdfa2-8105-47ed-8cb7-b900ff6755d5.jsonl#L15] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/f78fdfa2-8105-47ed-8cb7-b900ff6755d5.jsonl#L16] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/f78fdfa2-8105-47ed-8cb7-b900ff6755d5.jsonl#L20] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/f78fdfa2-8105-47ed-8cb7-b900ff6755d5.jsonl#L40] Assistant: 🌆 **Veille IA 19h — 2026-05-09 (thème : emergent)** ⚠️ **Perplexity API est encore en panne** (erreur d'authentification). C'est le **5ème échec en 5 semaines** sur ce pattern (dernières occurrences : 14:52, 17:00, 19:03 aujourd'hui — voir TOOLS.md). **Résultat du
+[main/sessions/main/f78fdfa2-8105-47ed-8cb7-b900ff6755d5.jsonl#L40] Assistant: [ZDNet, 07/05](https://www.zdnet.fr/actualites/ia-washington-veut-sassurer-dun-acces-prioritaire-aux-modeles-de-microsoft-google-et-xai-494737.htm) - 🛡️ **Cybersécurité IA** : 7 actus clés du 6 mai (agent Claude Opus, accord Google-Pentagone…) — [Business-IA, 06/0
+[main/sessions/main/f78fdfa2-8105-47ed-8cb7-b900ff6755d5.jsonl#L44] Assistant: Agents utilisés : main
+[main/sessions/main/fd81fea7-d325-4f60-a742-27e29941da9d.jsonl#L6] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/fd81fea7-d325-4f60-a742-27e29941da9d.jsonl#L7] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/fd81fea7-d325-4f60-a742-27e29941da9d.jsonl#L8] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/fd81fea7-d325-4f60-a742-27e29941da9d.jsonl#L9] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/27a47124-5e9f-4c35-81f5-4ed6f4c79a28.jsonl#L37] Assistant: Mettons à jour MEMORY.md et open-loops.md :
+[main/sessions/main/27a47124-5e9f-4c35-81f5-4ed6f4c79a28.jsonl#L45] Assistant: Vérifions et corrigeons la date de dernière mise à jour dans SESSION-STATE.md :
+[main/sessions/main/27a47124-5e9f-4c35-81f5-4ed6f4c79a28.jsonl#L53] Assistant: Commit + push des fichiers modifiés :
+[main/sessions/main/27a47124-5e9f-4c35-81f5-4ed6f4c79a28.jsonl#L55] Assistant: Appel de memory_store pour indexer les faits du jour :
+[main/sessions/main/27a47124-5e9f-4c35-81f5-4ed6f4c79a28.jsonl#L57] Assistant: Vérifions l'indexation mémoire via memory_search :
+[main/sessions/main/27a47124-5e9f-4c35-81f5-4ed6f4c79a28.jsonl#L59] Assistant: ### 🧠 Rapport consolidation mémoire quotidienne - 📁 **Fichiers modifiés** : `memory/2026-05-09.md`, `SESSION-STATE.md`, `RECENT_CONTEXT.md`, `MEMORY.md`, `notes/areas/open-loops.md` - 📝 **Points mémoire ajoutés** : Journée calme samedi Euromaster (08h-13h), aucu

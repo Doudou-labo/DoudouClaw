@@ -705,3 +705,8 @@ Quand je te demande de tester une clé API tu le fais
 - **JOURNÉE TRAVAIL EUROMASTER**: aucun échange substantiel avec Alexandre (mercredi)
 
 *Dernière mise à jour: 2026-05-09*
+
+## Promoted From Short-Term Memory (2026-05-10)
+
+<!-- openclaw-memory-promotion:memory:memory/2026-05-03.md:22:22 -->
+- *Fin du journal — 2026-05-03* [score=0.850 recalls=0 avg=0.620 source=memory/2026-05-03.md:22-22]
