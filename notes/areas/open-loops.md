@@ -63,9 +63,7 @@
 - [x] [2026-04-23 06:03] Heartbeat auto-surveillance opérationnel ✅
 
 ## Auto-checkpoints
-- [x] [AUTO 2026-05-10 midi] Checkpoint 3-min fait. Next: [2026-04-19 21:01] Test unchecked task for PARA automation
-- [x] [AUTO 2026-05-10 16:06] Weekly Review PARA effectuée
-- [x] [AUTO 2026-05-10 16:21] Self-Improving Weekly Review effectuée
+- [ ] [AUTO 2026-05-11 midi] Checkpoint 3-min fait. Next: [2026-04-19 21:01] Test unchecked task for PARA automation
 
 ## Pattern Robustesse VALIDÉ (2026-04-28)
 - **Principe** : systèmes simples résilients (heartbeat, Flash) + systèmes complexes avec retry/délai (Deep Dive)
