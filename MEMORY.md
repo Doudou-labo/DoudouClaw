@@ -444,7 +444,7 @@ Meilleure amie d'Alexandre, habite à Calais; relation amicale de longue date (e
 - **Modèle LLM par défaut**: `kimi/k2p6` (runtime 2026-05-03) — remplace `openai-codex/gpt-5.4` obsolète
 - **Impact**: alignement MEMORY.md avec runtime actuel pour éviter confusion modèle
 
-*Dernière mise à jour: 2026-05-03*
+*Dernière mise à jour: 2026-05-12*
 Quand je te demande de tester une clé API tu le fais
 
 ## API Critical Issues Evolution (2026-04-27) - Importance: 0.95
@@ -705,6 +705,15 @@ Quand je te demande de tester une clé API tu le fais
 - **JOURNÉE TRAVAIL EUROMASTER**: aucun échange substantiel avec Alexandre (mercredi)
 
 *Dernière mise à jour: 2026-05-09*
+
+## Daily Facts 2026-05-12 - Importance: 0.6-0.8
+- **JOURNÉE TRAVAIL** (mardi Euromaster) — aucun échange substantiel avec Alexandre
+- **VEILLE IA 19H GÉNÉRÉE** : Flash + Deep Dive produits (OpenAI GPT-5.5 Instant, Google I/O 2026) malgré API Perplexity en panne — fallback web_search actif
+- **API PERPLEXITY** : pattern erratique soir confirmé (panne 19h le 12/05) — stable matin/midi, panne récurrente soir
+- **TOKEN OPENAI-CODEX** : toujours expiré (~130h+) → monitoring proactif critique maintenu
+- **SYSTÈME STABLE** : heartbeat optimal (0 errors), auto-surveillance opérationnelle, auto-systèmes complets opérationnels
+- **AUTO PARA** : checkpoint midi exécuté ✅
+- **PATTERN ROBUSTESSE CONFIRMÉ** : fallback web_search efficace quand Perplexity tombe — veille IA maintenue malgré contraintes
 
 ## Promoted From Short-Term Memory (2026-05-10)
 
