@@ -1,14 +1,14 @@
 # Open Loops - Fils ouverts à suivre
 
-**Dernière mise à jour** : 2026-05-11 19:50 UTC
+**Dernière mise à jour** : 2026-05-12 19:50 UTC
 
 ## Boucles Actives
 
 ### 🔴 Priorité Haute (Critique Système)
-1. **API Perplexity — PATTERN ERRATIQUE CONFIRMÉ (2 JOURS CONSÉCUTIFS)** - Stabilisation durable cassée : panne soir 07/05 ET 08/05 après 12+ jours de fonctionnement normal
-   - **ÉVOLUTION** : API revenue normale le matin/midi, panne récurrente le soir (19h) → **pattern erratique confirmé**
-   - **RÉSULTAT** : veille IA 19h fichiers vides, mode dégradé total
-   - **SURVEILLER** : confirmer si pattern hebdomadaire récurrent ou anomalie ponctuelle isolée
+1. **API Perplexity — PATTERN ERRATIQUE CONFIRMÉ (3 JOURS + RÉCURRENT)** - Stabilisation durable cassée : panne soir 07/05, 08/05 ET 12/05 après 12+ jours de fonctionnement normal
+   - **ÉVOLUTION** : API revenue normale le matin/midi, panne récurrente le soir (19h) → **pattern erratique confirmé et récurrent**
+   - **RÉSULTAT 12/05** : veille IA 19h générée avec succès via fallback web_search (OpenAI GPT-5.5 Instant, Google I/O 2026) — pattern robustesse validé
+   - **SURVEILLER** : confirmer si pattern hebdomadaire récurrent (tous les 4-5 jours) ou anomalie temporaire
    - **ACTION** : vérifier `.credentials/perplexity-api-key.txt` ou config OpenClaw, implémenter fallback système veille IA soir
 
 2. **Token OpenAI-Codex expiré** - Expired ~125h+ → régénération URGENTE avant risque blocage total
