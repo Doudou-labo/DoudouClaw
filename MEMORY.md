@@ -726,3 +726,8 @@ Quand je te demande de tester une clé API tu le fais
 - Transactions enregistrées dans Actual Budget : [score=0.850 recalls=0 avg=0.620 source=memory/2026-05-05.md:4-4]
 <!-- openclaw-memory-promotion:memory:memory/2026-05-05.md:9:9 -->
 - **Total PERCO ce mois : +95,15 €** [score=0.850 recalls=0 avg=0.620 source=memory/2026-05-05.md:9-9]
+
+## Promoted From Short-Term Memory (2026-05-13)
+
+<!-- openclaw-memory-promotion:memory:memory/2026-05-04.md:45:50 -->
+- - [fact] Journée 2026-05-04: Alexandre chez Euromaster (lundi), aucun échange substantiel avec DoudouClaw - [decision] API Perplexity stabilisation durable confirmée 2026-05-04 après 12+ jours d'erreurs auth récurrentes - [important] Token OpenAI-Codex expiré 91h+ au 2026-05-04 — pattern expiration régulière confirmé, monitoring proactif nécessaire - [insight] Pattern robustesse système validé: heartbeat 0 errors + veille IA complète maintenue malgré contraintes API passées [score=0.874 recalls=7 avg=0.444 source=memory/2026-05-04.md:45-50]
