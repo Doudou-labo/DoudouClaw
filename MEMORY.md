@@ -54,7 +54,7 @@
 
 ### Important Dates
 - Date de naissance: 03/08/2000
-- **Visite Marc (DR) : 31/03/2026** - 5 jours (mise à jour 26/03)
+- **Visite Marc (DR) : 31/03/2026** ✅ PASSÉE — feedback positif : "Arnaud ne me parle que de toi" → soutien DR confirmé fort
 - **3 mois DoudouClaw 🎂 : 26/03/2026** - milestone agent (première session: 26/12/2025) ✅
 
 ### Règles linguistiques
@@ -301,6 +301,9 @@
 
 ### Arnaud
 N+1 d'Alexandre (poste: Responsable de Zone, RZ). Relation de confiance forte et fluide, à préserver.
+
+### Marc (DR)
+Directeur Régional Euromaster. **Soutient l'évolution RCS d'Alexandre** — visite au centre d'Arras le 31/03/2026 avec feedback explicite : "Arnaud ne me parle que de toi". Évaluation implicite passée avec succès. Relation à cultiver.
 
 ### Andréa
 Amie de longue date d'Alexandre (amour de lycée) revenue récemment dans sa vie. Alexandre ne l'a jamais oubliée et pense l'aimer encore, sans savoir si c'est réciproque ni si elle a changé depuis l'époque.
@@ -704,7 +707,7 @@ Quand je te demande de tester une clé API tu le fais
 - **AUTO PARA**: checkpoint midi exécuté
 - **JOURNÉE TRAVAIL EUROMASTER**: aucun échange substantiel avec Alexandre (mercredi)
 
-*Dernière mise à jour: 2026-05-09*
+*Dernière mise à jour: 2026-05-14*
 
 ## Daily Facts 2026-05-12 - Importance: 0.6-0.8
 - **JOURNÉE TRAVAIL** (mardi Euromaster) — aucun échange substantiel avec Alexandre
