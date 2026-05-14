@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-05-14T05:07:46.434Z",
+  "updatedAt": "2026-05-14T16:16:37.024Z",
   "entries": {
     "memory:memory/2026-04-06.md:1:21": {
       "key": "memory:memory/2026-04-06.md:1:21",
@@ -162456,16 +162456,17 @@
       "endLine": 371,
       "source": "memory",
       "snippet": "- Candidate: - **Réseau Euromaster (nouveau fichier: `notes/areas/reseau-euromaster.md`) :** - **Arnaud (RZ)** : soutien total, augmentation spontanée le 25/02 - **Marc (DR)** : pour l'évolution → **⚠️ visite au centre d'Arras le 31/03/2026**, longue discussion dans le bureau prévue (test implicite) - **Hélène (RRH)** : pour l'évolution (confirmé par Arnaud) - **Toute l'agence** : soutient Alexandre - **Technicien VI** : mutation probable à Lens comme chef d'atelier - **Léa (RCS Adjointe Lens)** : assessment à venir, pas vue d'un bon œil → scénario 6 mois probable (80%) **Fiches de poste RCS VL + VI** : envoyées par Alexandre, analysées et intégrées dans le gap analysis. --- ### 📊 Gap Analy",
-      "recallCount": 2,
+      "recallCount": 3,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 0.772754043340683,
-      "maxScore": 0.39733262956142423,
+      "totalScore": 1.1740301877260209,
+      "maxScore": 0.4012761443853378,
       "firstRecalledAt": "2026-04-29T17:10:23.152Z",
-      "lastRecalledAt": "2026-05-14T05:06:26.314Z",
+      "lastRecalledAt": "2026-05-14T16:16:30.101Z",
       "queryHashes": [
         "20ddcf1c02f2",
-        "52c645f597c3"
+        "52c645f597c3",
+        "aace3a44d06b"
       ],
       "recallDays": [
         "2026-04-29",
@@ -192422,20 +192423,22 @@
       "endLine": 34,
       "source": "memory",
       "snippet": "## Mardi 5 mai 2026 ### Finance — PERCO Natixis (mensuel le 5) Transactions enregistrées dans Actual Budget : - Débit Revolut : **-50,00 €** → versement PERCO - Crédit PERCO Natixis : **+50,00 €** (virement) - Abondement employeur Natixis : **+45,15 €** **Total PERCO ce mois : +95,15 €** --- ## 10:05 UTC — AUTO PARA 3-min (midi) - Checkpoint automatique exécuté. - Prochaine action suggérée: [2026-04-19 21:01] Test unchecked task for PARA automation - Objectif: garder une seule prochaine action claire à exécuter maintenant. --- ## 19:50 UTC — Consolidation mémoire quotidienne + PARA - **JOURNÉE TRAVAIL** (mardi Euromaster) — aucun échange substantiel avec Alexandre - **VEILLE IA COMPLÈT",
-      "recallCount": 2,
+      "recallCount": 3,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 1.0864750992415364,
+      "totalScore": 1.4660922657607014,
       "maxScore": 0.7169279646037037,
       "firstRecalledAt": "2026-05-05T20:04:18.612Z",
-      "lastRecalledAt": "2026-05-08T19:51:20.917Z",
+      "lastRecalledAt": "2026-05-14T16:16:37.024Z",
       "queryHashes": [
         "3cc0d7c85fca",
-        "eade397512bc"
+        "eade397512bc",
+        "51f08e28017e"
       ],
       "recallDays": [
         "2026-05-05",
-        "2026-05-08"
+        "2026-05-08",
+        "2026-05-14"
       ],
       "conceptTags": [
         "3-min",
@@ -265739,6 +265742,99 @@
         "nouveau",
         "fichier",
         "areas"
+      ]
+    },
+    "memory:memory/.fsxmemory/backup-20260309-215711/2026-02-25.md:110:124": {
+      "key": "memory:memory/.fsxmemory/backup-20260309-215711/2026-02-25.md:110:124",
+      "path": "memory/.fsxmemory/backup-20260309-215711/2026-02-25.md",
+      "startLine": 110,
+      "endLine": 124,
+      "source": "memory",
+      "snippet": "2. 📊 Gap analysis RCS : compétences maîtrisées (compta exploitation, réunion mensuelle) + à développer (ORION, 25 incontournables, management) 3. 🐙 GitHub RCS Evolution Projet #3 (milestones + 9 issues actives, 2 fermées) 4. 🗺️ Cartographie réseau Euromaster : Marc DR, Hélène RRH, Léa RCS Lens, Nathalie RCS Adjointe Arras, technicien VI 5. 🚗 Permis de conduire : leçon 24/02, examen blanc 26/02/2026 à 15h00 6. 💰 NAO à venir post-augmentation — potentiel gain supplémentaire 7. 👩‍💼 Nathalie (RCS Adjointe Arras) — co-animation réunions mensuelles depuis 2 mois 8. 📁 Fichier notes/areas/reseau-euromaster.md créé et commité Vérifications : augmentation salariale (✅ déjà en LTM), plan RCS 6",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.41350525021553036,
+      "maxScore": 0.41350525021553036,
+      "firstRecalledAt": "2026-05-14T16:16:30.101Z",
+      "lastRecalledAt": "2026-05-14T16:16:30.101Z",
+      "queryHashes": [
+        "aace3a44d06b"
+      ],
+      "recallDays": [
+        "2026-05-14"
+      ],
+      "conceptTags": [
+        "24/02",
+        "26/02/2026",
+        "post-augmentation",
+        "co-animation",
+        "notes/areas/reseau-euromaster.md",
+        "gap",
+        "analysis",
+        "rcs"
+      ]
+    },
+    "memory:memory/2026-02-25.md:60:96": {
+      "key": "memory:memory/2026-02-25.md:60:96",
+      "path": "memory/2026-02-25.md",
+      "startLine": 60,
+      "endLine": 96,
+      "source": "memory",
+      "snippet": "- ORION (plannings), recrutement/intégration - 25 incontournables, droit du travail de base --- ### 🐙 GitHub — Création du Projet RCS Evolution **Milestones créées :** 1. 31 mars 2026 (visite Marc DR) → deadline 31/03 2. Mois 1-2 — Ancrer les bases → deadline 15/04 3. Mois 3-4 — Monter en autonomie → deadline 15/06 4. Mois 5-6 — Posture RCS → deadline 15/08 **Labels créés :** `urgent`, `skill`, `system`, `management`, `finance` **Issues créées (#18 à #28), sans tachygraphe VI :** - #18 🔴 Préparer la visite de Marc (DR) le 31/03 ← PRIORITÉ - #19 📊 Maîtriser la lecture du compte d'exploitation → **FERMÉE** (déjà maîtrisé) - #20 🗂️ Mettre en place le parking sollicitations - #21 📋 Doc",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.39027238786220547,
+      "maxScore": 0.39027238786220547,
+      "firstRecalledAt": "2026-05-14T16:16:30.101Z",
+      "lastRecalledAt": "2026-05-14T16:16:30.101Z",
+      "queryHashes": [
+        "aace3a44d06b"
+      ],
+      "recallDays": [
+        "2026-05-14"
+      ],
+      "conceptTags": [
+        "recrutement/intégration",
+        "31/03",
+        "1-2",
+        "15/04",
+        "3-4",
+        "15/06",
+        "5-6",
+        "15/08"
+      ]
+    },
+    "memory:memory/2026-05-08.md:25:58": {
+      "key": "memory:memory/2026-05-08.md:25:58",
+      "path": "memory/2026-05-08.md",
+      "startLine": 25,
+      "endLine": 58,
+      "source": "memory",
+      "snippet": "- Prochaine action suggérée: [2026-04-19 21:01] Test unchecked task for PARA automation - Objectif: garder une seule prochaine action claire à exécuter maintenant. --- ## 22:00 UTC — Sync LTM nightly **Date sync** : 2026-05-08 22:00 UTC (Europe/Paris : 2026-05-09 00:00 CEST) ### Scan LTM (MEMORY.md) - 10 points structurants scannés — tous déjà présents en LTM. - Faits relationnels/pro : Arnaud, Andréa, Audrey, Marine — à jour. - Décisions clés : modèle `kimi/k2p6`, Agence-IA delegation, pattern robustesse — à jour. ### Corrections formulations obsolètes - `USER.md` : **DoudouBot → DoudouClaw** (1 correction appliquée) - Aucune autre occurrence obsolète détectée dans MEMORY.md, notes/, n",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.3721627026796341,
+      "maxScore": 0.3721627026796341,
+      "firstRecalledAt": "2026-05-14T16:16:37.024Z",
+      "lastRecalledAt": "2026-05-14T16:16:37.024Z",
+      "queryHashes": [
+        "51f08e28017e"
+      ],
+      "recallDays": [
+        "2026-05-14"
+      ],
+      "conceptTags": [
+        "europe/paris",
+        "memory.md",
+        "relationnels/pro",
+        "kimi/k2p6",
+        "agence-ia",
+        "user.md",
+        "prochaine",
+        "action"
       ]
     }
   }
