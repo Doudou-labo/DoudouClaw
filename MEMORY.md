@@ -734,3 +734,8 @@ Quand je te demande de tester une clé API tu le fais
 
 <!-- openclaw-memory-promotion:memory:memory/2026-05-04.md:45:50 -->
 - - [fact] Journée 2026-05-04: Alexandre chez Euromaster (lundi), aucun échange substantiel avec DoudouClaw - [decision] API Perplexity stabilisation durable confirmée 2026-05-04 après 12+ jours d'erreurs auth récurrentes - [important] Token OpenAI-Codex expiré 91h+ au 2026-05-04 — pattern expiration régulière confirmé, monitoring proactif nécessaire - [insight] Pattern robustesse système validé: heartbeat 0 errors + veille IA complète maintenue malgré contraintes API passées [score=0.874 recalls=7 avg=0.444 source=memory/2026-05-04.md:45-50]
+
+## Promoted From Short-Term Memory (2026-05-15)
+
+<!-- openclaw-memory-promotion:memory:memory/2026-05-08.md:32:32 -->
+- **Date sync** : 2026-05-08 22:00 UTC (Europe/Paris : 2026-05-09 00:00 CEST) [score=0.850 recalls=0 avg=0.620 source=memory/2026-05-08.md:32-32]
