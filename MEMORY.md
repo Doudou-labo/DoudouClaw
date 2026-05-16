@@ -739,3 +739,8 @@ Quand je te demande de tester une clé API tu le fais
 
 <!-- openclaw-memory-promotion:memory:memory/2026-05-08.md:32:32 -->
 - **Date sync** : 2026-05-08 22:00 UTC (Europe/Paris : 2026-05-09 00:00 CEST) [score=0.850 recalls=0 avg=0.620 source=memory/2026-05-08.md:32-32]
+
+## Promoted From Short-Term Memory (2026-05-16)
+
+<!-- openclaw-memory-promotion:memory:memory/2026-05-09.md:26:28 -->
+- **Date sync** : 2026-05-09 22:00 UTC **Contexte journée** : samedi Euromaster (08h-13h) — aucune interaction agent-humain **Faits opérationnels extraits** : [score=0.850 recalls=0 avg=0.620 source=memory/2026-05-09.md:26-28]
