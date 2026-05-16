@@ -1,16 +1,16 @@
 # RECENT_CONTEXT.md - Highlights récents
 
-**Dernière mise à jour : 2026-05-15 19:50 UTC**
+**Dernière mise à jour : 2026-05-16 19:50 UTC**
 
-## Highlights du jour (2026-05-15)
-- **JOURNÉE TRAVAIL** (vendredi Euromaster) — aucun échange substantiel avec Alexandre
+## Highlights du jour (2026-05-16)
+- **JOURNÉE TRAVAIL** (samedi Euromaster 08:00-13:00) — aucun échange substantiel avec Alexandre
 - **AUTO PARA** : checkpoint midi exécuté ✅
 - **SYSTÈME STABLE** : heartbeat optimal (0 errors), auto-surveillance opérationnelle
 
 ## Contexte système
 - **Statut optimal** : heartbeat auto-surveillance opérationnelle (0 errors)
 - **API Perplexity** : pattern erratique soir maintenu (panne 19h le 12/05) — stable matin/midi, panne récurrente soir
-- **Token OpenAI-Codex** : expiré ~136h+ → monitoring proactif critique maintenu
+- **Token OpenAI-Codex** : expiré ~140h+ → monitoring proactif critique maintenu
 - **Pattern robustesse** : fallback web_search efficace quand Perplexity tombe — veille IA maintenue malgré contraintes
 
 ## Prochaines actions
