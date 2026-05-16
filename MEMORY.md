@@ -707,7 +707,7 @@ Quand je te demande de tester une clé API tu le fais
 - **AUTO PARA**: checkpoint midi exécuté
 - **JOURNÉE TRAVAIL EUROMASTER**: aucun échange substantiel avec Alexandre (mercredi)
 
-*Dernière mise à jour: 2026-05-15*
+*Dernière mise à jour: 2026-05-16*
 
 ## Daily Facts 2026-05-12 - Importance: 0.6-0.8
 - **JOURNÉE TRAVAIL** (mardi Euromaster) — aucun échange substantiel avec Alexandre
@@ -717,6 +717,38 @@ Quand je te demande de tester une clé API tu le fais
 - **SYSTÈME STABLE** : heartbeat optimal (0 errors), auto-surveillance opérationnelle, auto-systèmes complets opérationnels
 - **AUTO PARA** : checkpoint midi exécuté ✅
 - **PATTERN ROBUSTESSE CONFIRMÉ** : fallback web_search efficace quand Perplexity tombe — veille IA maintenue malgré contraintes
+
+## Daily Facts 2026-05-13 - Importance: 0.6-0.8
+- **JOURNÉE TRAVAIL** (mercredi Euromaster) — aucun échange substantiel avec Alexandre
+- **AUTO PARA** : checkpoint midi exécuté ✅
+- **SYSTÈME STABLE** : heartbeat optimal (0 errors), auto-surveillance opérationnelle, auto-systèmes complets opérationnels
+- **TOKEN OPENAI-CODEX** : toujours expiré (~132h+) → monitoring proactif critique maintenu
+- **API PERPLEXITY** : pas de veille IA aujourd'hui (routine lundi-vendredi), pattern erratique soir 07-08/05 et 12/05 à surveiller
+- **AUCUN FAIT NOUVEAU STRUCTURANT** : journée sans interaction agent-humain
+
+## Daily Facts 2026-05-14 - Importance: 0.6-0.8
+- **JOURNÉE TRAVAIL** (jeudi Euromaster) — aucun échange substantiel avec Alexandre
+- **AUTO PARA** : checkpoint midi exécuté ✅
+- **SYSTÈME STABLE** : heartbeat optimal (0 errors), auto-surveillance opérationnelle, auto-systèmes complets opérationnels
+- **TOKEN OPENAI-CODEX** : toujours expiré (~134h+) → monitoring proactif critique maintenu
+- **API PERPLEXITY** : pas de veille IA aujourd'hui (routine lundi-vendredi), pattern erratique soir 07-08/05 et 12/05 à surveiller
+- **AUCUN FAIT NOUVEAU STRUCTURANT** : journée sans interaction agent
+
+## Daily Facts 2026-05-15 - Importance: 0.6-0.8
+- **JOURNÉE TRAVAIL** (vendredi Euromaster) — aucun échange substantiel avec Alexandre
+- **AUTO PARA** : checkpoint midi exécuté ✅
+- **SYSTÈME STABLE** : heartbeat optimal (0 errors), auto-surveillance opérationnelle, auto-systèmes complets opérationnels
+- **TOKEN OPENAI-CODEX** : toujours expiré (~136h+) → monitoring proactif critique maintenu
+- **API PERPLEXITY** : pas de veille IA aujourd'hui (routine lundi-vendredi), pattern erratique soir 07-08/05 et 12/05 à surveiller
+- **AUCUN FAIT NOUVEAU STRUCTURANT** : journée sans interaction agent
+
+## Daily Facts 2026-05-16 - Importance: 0.6-0.8
+- **JOURNÉE CALME** (samedi Euromaster 08:00-13:00) — aucun échange substantiel avec Alexandre
+- **AUTO PARA** : checkpoint midi exécuté ✅
+- **SYSTÈME STABLE** : heartbeat optimal (0 errors), auto-surveillance opérationnelle, auto-systèmes complets opérationnels
+- **TOKEN OPENAI-CODEX** : toujours expiré (~140h+) → monitoring proactif critique maintenu
+- **API PERPLEXITY** : pas de veille IA aujourd'hui (routine lundi-vendredi), pattern erratique soir historique à surveiller
+- **AUCUN FAIT NOUVEAU STRUCTURANT** : journée sans interaction agent-humain
 
 ## Promoted From Short-Term Memory (2026-05-10)
 
