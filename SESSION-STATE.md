@@ -1,7 +1,16 @@
 # SESSION-STATE.md — Active Working Memory
 
 ## Current Task
-Consolidation mémoire quotidienne + PARA terminée ✅ (2026-05-16 19:50 UTC)
+Consolidation mémoire quotidienne + PARA terminée ✅ (2026-05-17 19:50 UTC)
+
+## Today's Work Summary (2026-05-17)
+- **19:50 UTC** — **CONSOLIDATION MÉMOIRE + PARA** terminée ✅ (journée calme dimanche, aucun échange substantiel)
+- **AUTO PARA WEEKLY REVIEW** : exécutée à 16:06 UTC (Projects=13, Areas=25, Resources=18, Archive=9, Open loops=2) ✅
+- **AUTO SELF-IMPROVING WEEKLY REVIEW** : exécutée à 16:21 UTC (patterns erreurs détectés, traces mises à jour) ✅
+- **SYSTÈME STABLE** : heartbeat optimal (0 errors), auto-surveillance opérationnelle, auto-systèmes complets opérationnels
+- **TOKEN OPENAI-CODEX** : toujours expiré (~140h+) → monitoring proactif critique maintenu
+- **API PERPLEXITY** : pas de veille IA aujourd'hui (routine lundi-vendredi), pattern erratique soir historique à surveiller
+- **ROUTINES AUTO** : système nominal, pas de veille IA le dimanche
 
 ## Today's Work Summary (2026-05-16)
 - **19:50 UTC** — **CONSOLIDATION MÉMOIRE + PARA** terminée ✅ (journée travail samedi Euromaster, aucun échange substantiel)

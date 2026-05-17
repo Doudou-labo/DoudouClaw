@@ -1,10 +1,11 @@
 # RECENT_CONTEXT.md - Highlights récents
 
-**Dernière mise à jour : 2026-05-16 19:50 UTC**
+**Dernière mise à jour : 2026-05-17 19:50 UTC**
 
-## Highlights du jour (2026-05-16)
-- **JOURNÉE TRAVAIL** (samedi Euromaster 08:00-13:00) — aucun échange substantiel avec Alexandre
-- **AUTO PARA** : checkpoint midi exécuté ✅
+## Highlights du jour (2026-05-17)
+- **JOURNÉE CALME** (dimanche) — aucun échange substantiel avec Alexandre
+- **AUTO PARA WEEKLY REVIEW** : exécutée à 16:06 UTC (Projects=13, Areas=25, Resources=18, Archive=9, Open loops=2) ✅
+- **AUTO SELF-IMPROVING WEEKLY REVIEW** : exécutée à 16:21 UTC (patterns erreurs détectés, traces mises à jour) ✅
 - **SYSTÈME STABLE** : heartbeat optimal (0 errors), auto-surveillance opérationnelle
 
 ## Contexte système
@@ -14,7 +15,8 @@
 - **Pattern robustesse** : fallback web_search efficace quand Perplexity tombe — veille IA maintenue malgré contraintes
 
 ## Prochaines actions
-- 🔴 Régénérer token OpenAI-Codex (136h+ expiré) - monitoring proactif critique
+- 🔴 Régénérer token OpenAI-Codex (140h+ expiré) - monitoring proactif critique
 - 🔴 Corriger API Perplexity (vérifier `.credentials/perplexity-api-key.txt` ou config OpenClaw)
 - 🔴 Implémenter fallback système veille IA soir (pattern erratique confirmé sur 3+ jours)
 - 🟡 Surveiller API Perplexity pour confirmer pattern hebdomadaire récurrent ou stabilité durable
+
