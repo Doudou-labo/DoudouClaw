@@ -217,3 +217,6 @@ L'utilisateur a corrigé explicitement le rendu attendu du cron `OpenClaw Update
 
 ## 2026-05-10 16:21 UTC
 - Findings: pas de correction explicite détectée
+
+## 2026-05-17 16:21 UTC
+- Findings: pas de correction explicite détectée
