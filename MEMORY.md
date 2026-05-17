@@ -707,7 +707,16 @@ Quand je te demande de tester une clé API tu le fais
 - **AUTO PARA**: checkpoint midi exécuté
 - **JOURNÉE TRAVAIL EUROMASTER**: aucun échange substantiel avec Alexandre (mercredi)
 
-*Dernière mise à jour: 2026-05-16*
+## Daily Facts 2026-05-17 - Importance: 0.6-0.8
+- **JOURNÉE CALME** (dimanche) — aucun échange substantiel avec Alexandre
+- **AUTO PARA WEEKLY REVIEW** : exécutée automatiquement à 16:06 UTC (Projects=13, Areas=25, Resources=18, Archive=9, Open loops=2) ✅
+- **AUTO SELF-IMPROVING WEEKLY REVIEW** : exécutée automatiquement à 16:21 UTC (patterns erreurs détectés, traces mises à jour) ✅
+- **SYSTÈME STABLE** : heartbeat optimal (0 errors), auto-surveillance opérationnelle, auto-systèmes complets opérationnels
+- **TOKEN OPENAI-CODEX** : toujours expiré (~140h+) → monitoring proactif critique maintenu
+- **API PERPLEXITY** : pas de veille IA aujourd'hui (routine lundi-vendredi), pattern erratique soir historique à surveiller
+- **AUCUN FAIT NOUVEAU STRUCTURANT** : journée sans interaction agent-humain
+
+*Dernière mise à jour: 2026-05-17*
 
 ## Daily Facts 2026-05-12 - Importance: 0.6-0.8
 - **JOURNÉE TRAVAIL** (mardi Euromaster) — aucun échange substantiel avec Alexandre
