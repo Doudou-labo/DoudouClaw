@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-05-18T03:00:17.903Z",
+  "updatedAt": "2026-05-18T15:05:00.383Z",
   "entries": {
     "memory:memory/2026-04-06.md:1:21": {
       "key": "memory:memory/2026-04-06.md:1:21",
@@ -176680,18 +176680,20 @@
       "endLine": 49,
       "source": "memory",
       "snippet": "# 2026-02-16 - Entretien individuel : évolution RCS confirmée 🎯 ## 🗓️ Événements ### Entretien individuel avec Arnaud (RZ) - **Contexte** : Bilan + discussion évolution - **Résultat** : **Évolution vers RCS confirmée** ✅ - **Timeline** : - **6 mois** si RCS Adjointe Lens échoue son assessment - **2 ans** si elle réussit et prend le poste - **Ton** : Très positif, Arnaud connaît bien Alexandre et a anticipé toutes ses questions - **Pas de demande particulière** : confiance établie ### Point faible identifié - **Rigueur** : priorités qui changent, dossiers non clos, manque de suivi - **Plan** : mise en place d'un système de suivi + point régulier avec Arnaud --- ## 💰 Finance - Ac",
-      "recallCount": 1,
+      "recallCount": 2,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 0.40389966070652006,
-      "maxScore": 0.40389966070652006,
+      "totalScore": 0.8564736455678938,
+      "maxScore": 0.45257398486137385,
       "firstRecalledAt": "2026-05-02T11:20:26.834Z",
-      "lastRecalledAt": "2026-05-02T11:20:26.834Z",
+      "lastRecalledAt": "2026-05-18T15:05:00.383Z",
       "queryHashes": [
-        "625369099f15"
+        "625369099f15",
+        "845c16e8638a"
       ],
       "recallDays": [
-        "2026-05-02"
+        "2026-05-02",
+        "2026-05-18"
       ],
       "conceptTags": [
         "entretien",
@@ -299561,6 +299563,37 @@
         "failed",
         "producing",
         "content"
+      ]
+    },
+    "memory:memory/.fsxmemory/backup-20260309-215711/2026-02-16.md:40:72": {
+      "key": "memory:memory/.fsxmemory/backup-20260309-215711/2026-02-16.md:40:72",
+      "path": "memory/.fsxmemory/backup-20260309-215711/2026-02-16.md",
+      "startLine": 40,
+      "endLine": 72,
+      "source": "memory",
+      "snippet": "- [x] Entretien individuel avec Arnaud - [x] Préparation conseils pré-entretien (pitch, questions, plan) - [x] Création fichiers PARA (evolution-rcs.md, arnaud.md, mémoire du jour) --- ## 🔄 Tâches en cours - [x] Compléter les questions en suspens (19h) ✅ 1. **Assessment Léa** : pas encore passé, échec probable (pas vue d'un bon œil DR/RRH) 2. **Accompagnement** : mix formation/tutorat/immersion, déjà en cours avec Arnaud 3. **Axes précis** : posture managériale (priorité #1) + rigueur sous pression 4. **Augmentation** : pas abordé, mais script préparé pour prochain point - [ ] Lancer plan mois 1–2 (système \"parking sollicitations\" + posture) - [ ] Proposer point hebdo 15 min à Ar",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.4332701802253723,
+      "maxScore": 0.4332701802253723,
+      "firstRecalledAt": "2026-05-18T15:05:00.383Z",
+      "lastRecalledAt": "2026-05-18T15:05:00.383Z",
+      "queryHashes": [
+        "845c16e8638a"
+      ],
+      "recallDays": [
+        "2026-05-18"
+      ],
+      "conceptTags": [
+        "pré-entretien",
+        "evolution-rcs.md",
+        "arnaud.md",
+        "dr/rrh",
+        "formation/tutorat/immersion",
+        "entretien",
+        "individuel",
+        "arnaud"
       ]
     }
   }
