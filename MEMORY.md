@@ -759,6 +759,14 @@ Quand je te demande de tester une clé API tu le fais
 - **API PERPLEXITY** : pas de veille IA aujourd'hui (routine lundi-vendredi), pattern erratique soir historique à surveiller
 - **AUCUN FAIT NOUVEAU STRUCTURANT** : journée sans interaction agent-humain
 
+## Daily Facts 2026-05-18 - Importance: 0.6-0.8
+- **JOURNÉE TRAVAIL** (lundi Euromaster 08:00-12:00 / 14:00-18:00) — aucun échange substantiel avec Alexandre
+- **AUTO PARA** : checkpoint midi exécuté à 10:05 UTC ✅
+- **SYSTÈME STABLE** : heartbeat optimal (0 errors), auto-surveillance opérationnelle, auto-systèmes complets opérationnels
+- **TOKEN OPENAI-CODEX** : toujours expiré (~142h+) → monitoring proactif critique maintenu
+- **API PERPLEXITY** : veille IA lundi-vendredi opérationnelle, pattern erratique soir historique (07/05, 08/05, 12/05) à surveiller
+- **AUCUN FAIT NOUVEAU STRUCTURANT** : journée sans interaction agent-humain
+
 ## Promoted From Short-Term Memory (2026-05-10)
 
 <!-- openclaw-memory-promotion:memory:memory/2026-05-03.md:22:22 -->
