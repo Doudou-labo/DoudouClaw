@@ -269,3 +269,4 @@
 [main/sessions/main/f948d5eb-40be-4ef4-b4dc-31befeaaf12e.jsonl#L15] Assistant: [assistant turn failed before producing content]
 [main/sessions/main/f948d5eb-40be-4ef4-b4dc-31befeaaf12e.jsonl#L16] Assistant: [assistant turn failed before producing content]
 [main/sessions/main/f948d5eb-40be-4ef4-b4dc-31befeaaf12e.jsonl#L20] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/f8d6edd8-c26d-49ce-9d21-9a428ae34478.jsonl#L51] Assistant: Sync LTM nightly terminé. 🦞 **Résumé 2026-05-17 22:00 UTC :** | Action | Count | |--------|-------| | LTM structurants ajoutés | **0** (journée calme, aucun fait structurant nouveau) | | Faits journaliers ancrés | **7** (journée dimanche, AUTO PARA Weekly, AUTO Se
