@@ -1,6 +1,6 @@
 # Open Loops - Fils ouverts à suivre
 
-**Dernière mise à jour** : 2026-05-17 19:50 UTC
+**Dernière mise à jour** : 2026-05-19 19:50 UTC
 
 ## Boucles Actives
 
@@ -11,7 +11,7 @@
    - **SURVEILLER** : confirmer si pattern hebdomadaire récurrent (tous les 4-5 jours) ou anomalie temporaire
    - **ACTION** : vérifier `.credentials/perplexity-api-key.txt` ou config OpenClaw, implémenter fallback système veille IA soir
 
-2. **Token OpenAI-Codex expiré** - Expired ~125h+ → régénération URGENTE avant risque blocage total
+2. **Token OpenAI-Codex expiré** - Expired ~166h+ → régénération URGENTE avant risque blocage total
    - Impact : potentiel blocage dépendances OpenAI-Codex après expiration
    - Pattern : nécessité monitoring proactif tokens API avec alerte préventive à 48h
    - **ACTION** : régénération immédiate toujours prioritaire critique

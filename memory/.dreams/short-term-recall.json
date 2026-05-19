@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-05-19T03:00:01.139Z",
+  "updatedAt": "2026-05-19T19:51:46.070Z",
   "entries": {
     "memory:memory/2026-04-06.md:1:21": {
       "key": "memory:memory/2026-04-06.md:1:21",
@@ -146,13 +146,13 @@
       "endLine": 42,
       "source": "memory",
       "snippet": "--- title: \"2026-02-25\" date: 2026-03-09 type: daily migrated: true source: openclaw --- # Journal 2026-02-25 ## Événements importants ### 💰 Augmentation salariale d'Alexandre - Entretien individuel avec Arnaud → augmentation **spontanée** (sans demande) - Passage de **2040€ → 2091€ brut** (+51€) - NAO à venir : potentiel gain supplémentaire (bonne part de l'enveloppe) - Signal fort : Alexandre est dans le radar positif d'Arnaud ### 🚗 Leçon de conduite (24 février 2026) - Alexandre avait sa leçon de conduite ce jour-là à 18h00 - Examen blanc prévu le jeudi 26 février 2026 à 15h00 ## Notes - Alexandre est bien positionné professionnellement, la non-nécessité de demander une augmentati",
-      "recallCount": 7,
+      "recallCount": 8,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 2.877360836199567,
+      "totalScore": 3.284302622607991,
       "maxScore": 0.5547343080556846,
       "firstRecalledAt": "2026-04-07T20:00:49.078Z",
-      "lastRecalledAt": "2026-05-18T19:51:34.519Z",
+      "lastRecalledAt": "2026-05-19T19:51:46.070Z",
       "queryHashes": [
         "ad4eddb1b055",
         "de648ede0ab8",
@@ -160,7 +160,8 @@
         "979bb1d99d0d",
         "20ddcf1c02f2",
         "52c645f597c3",
-        "696d988a657c"
+        "696d988a657c",
+        "1078082310e0"
       ],
       "recallDays": [
         "2026-04-07",
@@ -168,7 +169,8 @@
         "2026-04-13",
         "2026-04-29",
         "2026-05-14",
-        "2026-05-18"
+        "2026-05-18",
+        "2026-05-19"
       ],
       "conceptTags": [
         "jour-là",
@@ -130538,20 +130540,21 @@
       "endLine": 35,
       "source": "memory",
       "snippet": "# Journal 2026-02-25 ## Événements importants ### 💰 Augmentation salariale d'Alexandre - Entretien individuel avec Arnaud → augmentation **spontanée** (sans demande) - Passage de **2040€ → 2091€ brut** (+51€) - NAO à venir : potentiel gain supplémentaire (bonne part de l'enveloppe) - Signal fort : Alexandre est dans le radar positif d'Arnaud ### 🚗 Leçon de conduite (24 février 2026) - Alexandre avait sa leçon de conduite ce jour-là à 18h00 - Examen blanc prévu le jeudi 26 février 2026 à 15h00 ## Notes - Alexandre est bien positionné professionnellement, la non-nécessité de demander une augmentation + les NAO à venir montrent une trajectoire positive vers le RCS ## 11:01 UTC — AUTO PA",
-      "recallCount": 6,
+      "recallCount": 7,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 2.4506620228290554,
+      "totalScore": 2.8575254321098322,
       "maxScore": 0.4468524545431137,
       "firstRecalledAt": "2026-04-23T14:53:26.585Z",
-      "lastRecalledAt": "2026-05-18T19:51:34.519Z",
+      "lastRecalledAt": "2026-05-19T19:51:46.070Z",
       "queryHashes": [
         "d7776f11b0ef",
         "20ddcf1c02f2",
         "625369099f15",
         "52c645f597c3",
         "8293328bcfc3",
-        "696d988a657c"
+        "696d988a657c",
+        "1078082310e0"
       ],
       "recallDays": [
         "2026-04-23",
@@ -130559,7 +130562,8 @@
         "2026-05-02",
         "2026-05-14",
         "2026-05-16",
-        "2026-05-18"
+        "2026-05-18",
+        "2026-05-19"
       ],
       "conceptTags": [
         "jour-là",
