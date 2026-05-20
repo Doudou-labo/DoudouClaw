@@ -447,7 +447,7 @@ Meilleure amie d'Alexandre, habite à Calais; relation amicale de longue date (e
 - **Modèle LLM par défaut**: `kimi/k2p6` (runtime 2026-05-03) — remplace `openai-codex/gpt-5.4` obsolète
 - **Impact**: alignement MEMORY.md avec runtime actuel pour éviter confusion modèle
 
-*Dernière mise à jour: 2026-05-12*
+*Dernière mise à jour: 2026-05-20*
 Quand je te demande de tester une clé API tu le fais
 
 ## API Critical Issues Evolution (2026-04-27) - Importance: 0.95
