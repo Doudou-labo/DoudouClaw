@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-05-20T10:12:01.905Z",
+  "updatedAt": "2026-05-20T19:03:07.736Z",
   "entries": {
     "memory:memory/2026-04-06.md:1:21": {
       "key": "memory:memory/2026-04-06.md:1:21",
@@ -299,20 +299,22 @@
       "endLine": 41,
       "source": "memory",
       "snippet": "# 2026-04-04 - Daily Notes ## Veille IA - 19h00 - Thème du jour : emergent - Flash IA généré (55 lignes) avec contenu récent 7 jours - Deep Dive IA généré (87 lignes) sur IA émergente - Contenu scrapé des sources web - Commit et push GitHub réussis - 4 fichiers modifiés, 144 insertions ## Proactive Observations - Pattern : Veille IA fonctionne bien en mode dégradé - Timing : Exécution à 19h00 fonctionne sans problème technique - Thématique : journée \"emergent\" avec focus sur paradigmes AI émergents ## Actions - ✅ Exécution veille IA hebdomadaire - ✅ Auto-commit des modifications - ⚠️ Crontab montre plusieurs jobs en erreur \"error\" (isolated mode) - à surveiller - ⚠️ Perplexity API parfo",
-      "recallCount": 2,
+      "recallCount": 3,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 0.7954555600881577,
+      "totalScore": 1.1910313278436662,
       "maxScore": 0.4334963828325271,
       "firstRecalledAt": "2026-04-08T19:50:35.610Z",
-      "lastRecalledAt": "2026-04-20T20:04:34.319Z",
+      "lastRecalledAt": "2026-05-20T19:03:07.736Z",
       "queryHashes": [
         "6a256dafbeff",
-        "9bf96b3b3ae7"
+        "9bf96b3b3ae7",
+        "09be50e2d98b"
       ],
       "recallDays": [
         "2026-04-08",
-        "2026-04-20"
+        "2026-04-20",
+        "2026-05-20"
       ],
       "conceptTags": [
         "auto-commit",
@@ -192398,13 +192400,13 @@
       "endLine": 50,
       "source": "memory",
       "snippet": "- [fact] Journée 2026-05-04: Alexandre chez Euromaster (lundi), aucun échange substantiel avec DoudouClaw - [decision] API Perplexity stabilisation durable confirmée 2026-05-04 après 12+ jours d'erreurs auth récurrentes - [important] Token OpenAI-Codex expiré 91h+ au 2026-05-04 — pattern expiration régulière confirmé, monitoring proactif nécessaire - [insight] Pattern robustesse système validé: heartbeat 0 errors + veille IA complète maintenue malgré contraintes API passées",
-      "recallCount": 9,
+      "recallCount": 10,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 3.9112015359900862,
+      "totalScore": 4.297893380453434,
       "maxScore": 0.6948699110053453,
       "firstRecalledAt": "2026-05-05T20:04:15.353Z",
-      "lastRecalledAt": "2026-05-18T20:05:31.603Z",
+      "lastRecalledAt": "2026-05-20T19:03:07.736Z",
       "queryHashes": [
         "7e346f15fb46",
         "ebcbcd2377d0",
@@ -192414,7 +192416,8 @@
         "34a43853d656",
         "fd5734df261b",
         "130473c14db7",
-        "8dc409b260a8"
+        "8dc409b260a8",
+        "09be50e2d98b"
       ],
       "recallDays": [
         "2026-05-05",
@@ -192423,7 +192426,8 @@
         "2026-05-11",
         "2026-05-12",
         "2026-05-17",
-        "2026-05-18"
+        "2026-05-18",
+        "2026-05-20"
       ],
       "conceptTags": [
         "openai",
@@ -319445,6 +319449,130 @@
         "failed",
         "producing",
         "content"
+      ]
+    },
+    "memory:memory/2026-04-15.md:11:31": {
+      "key": "memory:memory/2026-04-15.md:11:31",
+      "path": "memory/2026-04-15.md",
+      "startLine": 11,
+      "endLine": 31,
+      "source": "memory",
+      "snippet": "- **OBSERVATIONS PROACTIVES** : ping proactif utile pour décompression, reverse hebdo en préparation - **DECISION** : maintenir focus sur résolution API critiques + mécanismes robustes avant nouveaux développements - **ACTION** : implémenter monitoring proactif tokens + fallback système Perplexity + timeout/retry scraping ## Light Sleep <!-- openclaw:dreaming:light:start --> - Candidate: 21:00 UTC — AUTO PARA 3-min (soir): Checkpoint automatique exécuté.; Prochaine action suggérée: [2026-04-12 21:01] Test unchecked task for PARA automation; Objectif: garder une seule prochaine action claire à exécuter maintenant. - confidence: 0.00 - evidence: memory/2026-04-15.md:348-350 - recalls: 0",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.38605274856090543,
+      "maxScore": 0.38605274856090543,
+      "firstRecalledAt": "2026-05-20T19:03:07.736Z",
+      "lastRecalledAt": "2026-05-20T19:03:07.736Z",
+      "queryHashes": [
+        "09be50e2d98b"
+      ],
+      "recallDays": [
+        "2026-05-20"
+      ],
+      "conceptTags": [
+        "timeout/retry",
+        "3-min",
+        "0.00",
+        "memory/2026-04-15.md",
+        "348-350",
+        "observations",
+        "proactives",
+        "ping"
+      ]
+    },
+    "memory:memory/2026-04-27.md:52:76": {
+      "key": "memory:memory/2026-04-27.md:52:76",
+      "path": "memory/2026-04-27.md",
+      "startLine": 52,
+      "endLine": 76,
+      "source": "memory",
+      "snippet": "- **Deep Dive généré avec succès** après délai API Perplexity instable (12+ jours de patterns erratiques) → veille complète validée - **Pattern robustesse confirmé** : systèmes simples résilients (heartbeat, Flash) + deep dive opérationnel malgré latence API → pattern robustesse validé sur systèmes simples ET systèmes complexes avec retry/délai - ## Décisions prioritaires - ## Pattern robustesse confirmé - Systèmes simples (heartbeat, Flash) > systèmes complexes (scraping multi-URLs, API dépendantes) → simplification architecture prioritaire identifiée et validée sur 12+ jours - 📊 **SYSTÈME OPTIMAL CONFIRMÉ**: Heartbeat optimal maintenu (0 errors), auto-surveillance opérationnelle ### [tod",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.38203400671482085,
+      "maxScore": 0.38203400671482085,
+      "firstRecalledAt": "2026-05-20T19:03:07.736Z",
+      "lastRecalledAt": "2026-05-20T19:03:07.736Z",
+      "queryHashes": [
+        "09be50e2d98b"
+      ],
+      "recallDays": [
+        "2026-05-20"
+      ],
+      "conceptTags": [
+        "retry/délai",
+        "multi-urls",
+        "auto-surveillance",
+        "deep",
+        "dive",
+        "généré",
+        "succès",
+        "après"
+      ]
+    },
+    "memory:memory/2026-05-12.md:26:51": {
+      "key": "memory:memory/2026-05-12.md:26:51",
+      "path": "memory/2026-05-12.md",
+      "startLine": 26,
+      "endLine": 51,
+      "source": "memory",
+      "snippet": "- **SYSTÈME STABLE** : heartbeat optimal (0 errors), auto-surveillance opérationnelle, auto-systèmes complets opérationnels - **AUTO PARA** : checkpoint midi exécuté ✅ - **PATTERN ROBUSTESSE CONFIRMÉ** : fallback web_search efficace quand Perplexity tombe — veille IA maintenue malgré contraintes ### 🧬 Entrées LTM - Aucun fait nouveau structurant — patterns existants se confirment ### 🗂️ Mises à jour PARA - `notes/areas/open-loops.md` : pattern erratique Perplexity soir mis à jour (confirmation 12/05) - `SESSION-STATE.md` / `RECENT_CONTEXT.md` : contexte système actualisé ## 🏷️ Auto-tags (heuristique) ### [decision] - **API PERPLEXITY** : pattern erratique soir confirmé (panne 19h le 1",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.38022665977478026,
+      "maxScore": 0.38022665977478026,
+      "firstRecalledAt": "2026-05-20T19:03:07.736Z",
+      "lastRecalledAt": "2026-05-20T19:03:07.736Z",
+      "queryHashes": [
+        "09be50e2d98b"
+      ],
+      "recallDays": [
+        "2026-05-20"
+      ],
+      "conceptTags": [
+        "auto-surveillance",
+        "auto-systèmes",
+        "web-search",
+        "notes/areas/open-loops.md",
+        "12/05",
+        "session-state.md",
+        "recent-context.md",
+        "auto-tags"
+      ]
+    },
+    "memory:memory/2026-05-17.md:24:45": {
+      "key": "memory:memory/2026-05-17.md:24:45",
+      "path": "memory/2026-05-17.md",
+      "startLine": 24,
+      "endLine": 45,
+      "source": "memory",
+      "snippet": "- **TOKEN OPENAI-CODEX** : toujours expiré (~140h+) → monitoring proactif critique maintenu - **API PERPLEXITY** : pas de veille IA aujourd'hui (routine lundi-vendredi), pattern erratique soir historique à surveiller - **AUCUN FAIT NOUVEAU STRUCTURANT** : journée sans interaction agent-humain *Fin du journal — 2026-05-17* ## 🏷️ Auto-tags (heuristique) ### [todo] - Prochaine action suggérée: [2026-04-19 21:01] Test unchecked task for PARA automation - Objectif: garder une seule prochaine action claire à exécuter maintenant. --- ## 22:00 UTC — Sync LTM nightly - **Date sync** : 2026-05-17 22:00 UTC - **Contexte journée** : dimanche calme — aucune interaction agent-humain, routines auto d",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.3786876559257507,
+      "maxScore": 0.3786876559257507,
+      "firstRecalledAt": "2026-05-20T19:03:07.736Z",
+      "lastRecalledAt": "2026-05-20T19:03:07.736Z",
+      "queryHashes": [
+        "09be50e2d98b"
+      ],
+      "recallDays": [
+        "2026-05-20"
+      ],
+      "conceptTags": [
+        "openai",
+        "openai-codex",
+        "lundi-vendredi",
+        "agent-humain",
+        "auto-tags",
+        "token",
+        "codex",
+        "toujours"
       ]
     }
   }
