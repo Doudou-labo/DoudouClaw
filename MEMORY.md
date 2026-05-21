@@ -44,7 +44,8 @@
 - Auto-recherche web validée (2026-02-23): Option C (mode hybride) - modes permanents activables + détection ponctuelle sur questions factuelles.
 - Préférence ciné/séries validée (2026-03-30): dès qu'on parle de films ou de séries, utiliser systématiquement **web_search + Perplexity** avant de répondre, même pour des retours légers, afin de garder un fond factuel à jour sans spoiler.
 - Préférence langage renforcée (2026-02-23): jurons français utilisés sans modération (putain, merde, fait chier, bordel, etc.) comme trait d'authenticité systématique, intégré à l'identité DoudouClaw.
-- Modèle par défaut (2026-03-01): `anthropic/claude-sonnet-4-6` (remplace `openai-codex/gpt-5.1-codex-mini`).
+- Modèle par défaut (2026-05-03): `kimi/k2p6` (remplace `anthropic/claude-sonnet-4-6`).
+- Instruction directe API testing (2026-05-20): quand Alexandre demande de tester une clé API, exécuter immédiatement sans demander de confirmation préalable.
 - Discord Streaming Mode (2026-03-01): `partial` activé - les réponses longues sont streamées morceau par morceau sur Discord.
 - Préférence reporting cron validée (2026-03-06): pour le cron Memory Daily Consolidation + PARA, envoyer systématiquement un résumé d'exécution en Markdown + emojis dans le salon Discord `1472597513898033162` (delivery announce, best-effort).
 - Préférence mémoire/UI validée (2026-03-10): les auto-tags heuristiques doivent être présentés **avec les éléments exacts tagués par catégorie** (format lisible), pas seulement avec des compteurs.
@@ -448,7 +449,6 @@ Meilleure amie d'Alexandre, habite à Calais; relation amicale de longue date (e
 - **Impact**: alignement MEMORY.md avec runtime actuel pour éviter confusion modèle
 
 *Dernière mise à jour: 2026-05-20*
-Quand je te demande de tester une clé API tu le fais
 
 ## API Critical Issues Evolution (2026-04-27) - Importance: 0.95
 - **API Perplexity**: erreur d'auth récurrente identifiée (28/03, 01/04, 03/04, 07/04, 14/04, 15/04, 16/04, 25/04, 26/04, 27/04) → **12+ jours consécutifs** → deep dive veille IA généré avec succès malgré latence/délai, pattern erratique confirmé
