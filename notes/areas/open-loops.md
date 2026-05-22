@@ -1,17 +1,18 @@
 # Open Loops - Fils ouverts à suivre
 
-**Dernière mise à jour** : 2026-05-20 19:50 UTC
+**Dernière mise à jour** : 2026-05-22 19:50 UTC
 
 ## Boucles Actives
 
 ### 🔴 Priorité Haute (Critique Système)
-1. **API Perplexity — PATTERN ERRATIQUE CONFIRMÉ (3 JOURS + RÉCURRENT)** - Stabilisation durable cassée : panne soir 07/05, 08/05 ET 12/05 après 12+ jours de fonctionnement normal
-   - **ÉVOLUTION** : API revenue normale le matin/midi, panne récurrente le soir (19h) → **pattern erratique confirmé et récurrent**
-   - **RÉSULTAT 12/05** : veille IA 19h générée avec succès via fallback web_search (OpenAI GPT-5.5 Instant, Google I/O 2026) — pattern robustesse validé
-   - **SURVEILLER** : confirmer si pattern hebdomadaire récurrent (tous les 4-5 jours) ou anomalie temporaire
-   - **ACTION** : vérifier `.credentials/perplexity-api-key.txt` ou config OpenClaw, implémenter fallback système veille IA soir
+1. **API Perplexity — PATTERN ERRATIQUE CONFIRMÉ ET AGGRAVÉ (5 PANNES EN 3 SEMAINES)**
+   - **ÉVOLUTION** : panne à 12h ET 19h le 22/05 → pattern structurel confirmé, pas juste soir
+   - **HISTORIQUE** : panne soir 07/05, 08/05, 12/05, puis 12h+19h le 22/05 → instabilité croissante
+   - **RÉSULTAT** : veille IA maintenue via fallback web_search (Brave/Perplexity web) — pattern robustesse validé
+   - **SURVEILLER** : confirmer si panne quotidienne récurrente ou dégradation progressive clé API
+   - **ACTION** : vérifier/régénérer `.credentials/perplexity-api-key.txt` OU config OpenClaw — investigation nécessaire
 
-2. **Token OpenAI-Codex expiré** - Expired ~166h+ → régénération URGENTE avant risque blocage total
+2. **Token OpenAI-Codex expiré** - Expired ~168h+ → régénération URGENTE avant risque blocage total
    - Impact : potentiel blocage dépendances OpenAI-Codex après expiration
    - Pattern : nécessité monitoring proactif tokens API avec alerte préventive à 48h
    - **ACTION** : régénération immédiate toujours prioritaire critique

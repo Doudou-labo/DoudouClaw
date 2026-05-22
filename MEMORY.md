@@ -448,7 +448,7 @@ Meilleure amie d'Alexandre, habite à Calais; relation amicale de longue date (e
 - **Modèle LLM par défaut**: `kimi/k2p6` (runtime 2026-05-03) — remplace `openai-codex/gpt-5.4` obsolète
 - **Impact**: alignement MEMORY.md avec runtime actuel pour éviter confusion modèle
 
-*Dernière mise à jour: 2026-05-20*
+*Dernière mise à jour: 2026-05-22*
 
 ## API Critical Issues Evolution (2026-04-27) - Importance: 0.95
 - **API Perplexity**: erreur d'auth récurrente identifiée (28/03, 01/04, 03/04, 07/04, 14/04, 15/04, 16/04, 25/04, 26/04, 27/04) → **12+ jours consécutifs** → deep dive veille IA généré avec succès malgré latence/délai, pattern erratique confirmé
@@ -682,6 +682,13 @@ Meilleure amie d'Alexandre, habite à Calais; relation amicale de longue date (e
 - **IMPACT**: veille IA 19h fichiers vides, mode dégradé total, aucun contenu scrapé
 - **ACTION REQUISE**: vérifier `.credentials/perplexity-api-key.txt` ou config OpenClaw, implémenter fallback système veille IA soir
 - **SURVEILLER**: confirmer si pattern hebdomadaire récurrent ou anomalie temporaire
+
+## API Perplexity Aggravation Pattern (2026-05-22) - Importance: 0.95
+- **AGGRAVATION CONFIRMÉE**: 5ème panne en 3 semaines, avec panne à 12h ET 19h le 22/05 → pattern structurel, pas juste soir
+- **HISTORIQUE PANNES**: 07/05 (soir), 08/05 (soir), 12/05 (soir), 22/05 (midi+soir)
+- **IMPACT**: veille IA maintenue via fallback web_search (Brave/Perplexity web) mais charge accrue
+- **ACTION REQUISE**: investigation clé API (régénération `.credentials/perplexity-api-key.txt`) OU vérification config OpenClaw
+- **LEÇON**: pattern intermittent ≠ anomalie ponctuelle → monitoring continu obligatoire même après périodes stables
 
 ## Daily Facts 2026-05-09 - Importance: 0.6-0.8
 - **JOURNÉE CALME** (samedi Euromaster 08h-13h) — aucun échange substantiel avec Alexandre
