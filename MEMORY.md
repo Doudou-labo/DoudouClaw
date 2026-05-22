@@ -774,6 +774,17 @@ Meilleure amie d'Alexandre, habite à Calais; relation amicale de longue date (e
 - **API PERPLEXITY** : veille IA lundi-vendredi opérationnelle, pattern erratique soir historique (07/05, 08/05, 12/05) à surveiller
 - **AUCUN FAIT NOUVEAU STRUCTURANT** : journée sans interaction agent-humain
 
+## Daily Facts 2026-05-22 - Importance: 0.6-0.8
+- **JOURNÉE TRAVAIL** (vendredi Euromaster) — aucun échange substantiel avec Alexandre
+- **AUTO PARA** : checkpoint midi exécuté ✅
+- **SYSTÈME STABLE** : heartbeat optimal (0 errors), auto-surveillance opérationnelle
+- **API PERPLEXITY** : pattern aggravé — 5ème panne en 3 semaines, panne 12h ET 19h le 22/05, fallback web_search opérationnel
+- **TOKEN OPENAI-CODEX** : toujours expiré (~168h+) → monitoring proactif critique maintenu
+- **VEILLE IA 12H** : Google I/O 2026 (Gemini Omni, Gemini 3.5 Flash, Antigravity 2.0), Standard Chartered +7000 suppressions postes IA, alerte cyber 2026 Mythos
+- **VEILLE IA 19H** : IA résout conjecture Erdös 80 ans (Nature), Meta 8000 licenciements pivot IA, OpenAI/Anthropic IPO, Trump reporte décret sécurité IA, AI Act UE application 2 août sanctions 15M€, Semaine nationale IA France 50000 participants, Google Pics anti-Canva, Figma agent IA
+
+*Dernière mise à jour: 2026-05-22*
+
 ## Promoted From Short-Term Memory (2026-05-10)
 
 <!-- openclaw-memory-promotion:memory:memory/2026-05-03.md:22:22 -->
