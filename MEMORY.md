@@ -783,7 +783,7 @@ Meilleure amie d'Alexandre, habite à Calais; relation amicale de longue date (e
 - **VEILLE IA 12H** : Google I/O 2026 (Gemini Omni, Gemini 3.5 Flash, Antigravity 2.0), Standard Chartered +7000 suppressions postes IA, alerte cyber 2026 Mythos
 - **VEILLE IA 19H** : IA résout conjecture Erdös 80 ans (Nature), Meta 8000 licenciements pivot IA, OpenAI/Anthropic IPO, Trump reporte décret sécurité IA, AI Act UE application 2 août sanctions 15M€, Semaine nationale IA France 50000 participants, Google Pics anti-Canva, Figma agent IA
 
-*Dernière mise à jour: 2026-05-22*
+*Dernière mise à jour: 2026-05-23*
 
 ## Promoted From Short-Term Memory (2026-05-10)
 
